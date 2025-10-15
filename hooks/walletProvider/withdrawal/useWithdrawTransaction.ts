@@ -413,7 +413,7 @@ export const useWithdrawTransaction = ({
 							amount: withdrawAmount,
 							token_type: selectedToken.token_symbol,
 							token_address: selectedToken.token_address,
-							dst_wallet: withdrawAddress,
+							dst_wallet: user?.walletAddress as string,
 						},
 						authToken
 					);
