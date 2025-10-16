@@ -73,7 +73,7 @@ export const useDepositCalculations = ({
 
 			// For stablecoins, the minimum is fixed and doesn't require an API call.
 			if (
-				["USDT", "USDC", "55Swap", "USD₮0"].includes(
+				["USDT", "USDC", "55Swap", "USD₮0","USDT0"].includes(
 					selectedToken.symbol
 				)
 			) {
@@ -200,7 +200,7 @@ export const useDepositCalculations = ({
 				return;
 			}
 			if (
-				["USDT", "USDC", "55Swap", "USD₮0"].includes(
+				["USDT", "USDC", "55Swap", "USD₮0","USDT0"].includes(
 					selectedToken.symbol
 				)
 			) {
