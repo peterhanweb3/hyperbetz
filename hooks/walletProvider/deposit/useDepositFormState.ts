@@ -20,7 +20,7 @@ export const useDepositFormState = () => {
 	// --- ACTIONS ---
 	const selectToken = useCallback((token: Token) => {
 		let tokenType = token.tags?.includes("native") ? "swap" : "direct";
-		if (["USDT", "USDC", "USD₮0"].includes(token.symbol)) {
+		if (["USDT", "USDC", "USD₮0","USDT0"].includes(token.symbol)) {
 			tokenType = "direct";
 		} else {
 			tokenType = "swap";
