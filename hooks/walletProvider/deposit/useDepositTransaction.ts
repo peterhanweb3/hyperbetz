@@ -321,6 +321,7 @@ export const useDepositTransaction = ({
 					"USDC",
 					"55Swap",
 					"USD₮0",
+					"USDT0"
 				].includes(selectedToken.symbol);
 				if (isStablecoin || depositType === "direct") {
 					txResult = await transactionService.executeTokenTransfer({
