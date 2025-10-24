@@ -23,6 +23,7 @@ import {
 	SidebarMenuSub,
 	SidebarMenuSubButton,
 	SidebarMenuSubItem,
+	useSidebar,
 } from "@/components/ui/sidebar";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -114,6 +115,14 @@ export function NavMain({
 		saveToCache(PROVIDERS_CACHE_KEY, data);
 		return data;
 	}, [providers]);
+	const { toggleSidebar, open } = useSidebar();
+	const [isTrendingNowOpen, setIsTrendingNowOpen] = useState(true);
+
+	useEffect(() => {
+		if (!open) {
+			setIsTrendingNowOpen(false);
+		}
+	}, [open]);
 
 	const { providers: limitedProviders, remaining: remainingProvidersCount } =
 		useMemo(
@@ -330,7 +339,12 @@ export function NavMain({
 
 	const renderLink = (item: NavItem) => (
 		<SidebarMenuItem key={item.title}>
-			<SidebarMenuButton asChild isActive={item.isActive}>
+			<SidebarMenuButton
+				asChild
+				isActive={item.isActive}
+				tooltip={item.items ? undefined : resolveTitle(item.title)}
+				className="group-data-[collapsible=icon]:bg-accent/80"
+			>
 				<Link
 					href={item.url}
 					className="flex items-center justify-between w-full font-semibold lg:px-4 lg:py-2 tracking-wide"
@@ -340,7 +354,7 @@ export function NavMain({
 						{item.icon && (
 							<FontAwesomeIcon
 								icon={item.icon}
-								className=" text-primary"
+								className="text-foreground"
 							/>
 						)}
 						<span className="tracking-wide leading-snug">
@@ -369,8 +383,16 @@ export function NavMain({
 		>
 			<SidebarMenuItem>
 				<CollapsibleTrigger asChild>
-					<SidebarMenuButton tooltip={resolveTitle(item.title)}>
-						{item.icon && <FontAwesomeIcon icon={item.icon} />}
+					<SidebarMenuButton
+						tooltip={resolveTitle(item.title)}
+						className="group-data-[collapsible=icon]:bg-accent/80 "
+					>
+						{item.icon && (
+							<FontAwesomeIcon
+								icon={item.icon}
+								className="text-foreground"
+							/>
+						)}
 						<span>{resolveTitle(item.title)}</span>
 						<FontAwesomeIcon
 							icon={faChevronRight}
@@ -425,13 +447,14 @@ export function NavMain({
 		return (
 			<SidebarMenuItem key={category.title}>
 				<SidebarMenuButton
+					tooltip={displayTitle}
 					asChild={!isAction}
 					onClick={
 						isAction
 							? (e) => handleStaticCategoryClick(category, e)
 							: undefined
 					}
-					className="lg:px-4 lg:py-1 tracking-wide font-semibold cursor-pointer"
+					className="lg:px-4 lg:py-1 tracking-wide font-semibold cursor-pointer group-data-[collapsible=icon]:bg-accent/80 "
 				>
 					{isAction ? (
 						<div className="flex items-center tracking-wide justify-between w-full">
@@ -439,7 +462,7 @@ export function NavMain({
 								{category.icon && (
 									<FontAwesomeIcon
 										icon={category.icon}
-										className=" text-primary"
+										className="text-foreground"
 									/>
 								)}
 								<span className="leading-0">
@@ -466,7 +489,7 @@ export function NavMain({
 								{category.icon && (
 									<FontAwesomeIcon
 										icon={category.icon}
-										className=" text-primary"
+										className="text-foreground"
 									/>
 								)}
 								<span className="leading-0">
@@ -592,7 +615,7 @@ export function NavMain({
 								<SidebarMenuButton asChild>
 									<Link
 										href={category.url}
-										className="flex items-center lg:px-4 lg:py-2 tracking-wide font-semibold justify-between w-full hover:bg-muted/30 transition-all duration-200 rounded-lg"
+										className="flex items-center lg:px-4 lg:py-2 tracking-wide font-semibold justify-between w-full hover:bg-muted/30 transition-all duration-200 rounded-lg group-data-[collapsible=icon]:bg-accent/80"
 										prefetch
 										onFocus={handleTriggerFocus}
 										onBlur={handleTriggerBlur}
@@ -601,7 +624,7 @@ export function NavMain({
 											{category.icon && (
 												<FontAwesomeIcon
 													icon={category.icon}
-													className="text-primary"
+													className="text-foreground"
 												/>
 											)}
 											<span className="leading-0">
@@ -661,13 +684,13 @@ export function NavMain({
 	};
 
 	return (
-		<div className="-space-y-1">
+		<div className="group-data-[collapsible=icon]:space-y-4 -space-y-1">
 			{items.length > 0 && (
-				<SidebarGroup>
-					<SidebarGroupLabel className="text-primary font-semibold">
+				<SidebarGroup className="group-data-[collapsible=icon]:p-0!">
+					<SidebarGroupLabel className="text-primary font-semibold group-data-[collapsible=icon]:hidden">
 						{tSidebar("navigation")}
 					</SidebarGroupLabel>
-					<SidebarMenu>
+					<SidebarMenu className="group-data-[collapsible=icon]:gap-2">
 						{items.map((item) =>
 							item.items?.length
 								? renderCollapsible(item)
@@ -676,13 +699,13 @@ export function NavMain({
 					</SidebarMenu>
 				</SidebarGroup>
 			)}
-			<Separator className="!w-[90%] mx-auto my-1" />
+			<Separator className="!w-[90%] mx-auto my-1 group-data-[collapsible=icon]:mb-4" />
 			{(gameCategories.length > 0 || staticGameCategories.length > 0) && (
-				<SidebarGroup>
-					<SidebarGroupLabel className="text-primary">
+				<SidebarGroup className="group-data-[collapsible=icon]:p-0!">
+					<SidebarGroupLabel className="text-primary group-data-[collapsible=icon]:hidden">
 						{tSidebar("games")}
 					</SidebarGroupLabel>
-					<SidebarMenu>
+					<SidebarMenu className="group-data-[collapsible=icon]:gap-2">
 						{gameCategories.map((c) => (
 							<GameCategoryItem key={c.title} category={c} />
 						))}
@@ -692,18 +715,32 @@ export function NavMain({
 					</SidebarMenu>
 				</SidebarGroup>
 			)}
-			<Separator className="!w-[90%] mx-auto my-1" />
+			<Separator className="!w-[90%] mx-auto my-1 group-data-[collapsible=icon]:mb-4" />
 			{providers.length > 0 && (
-				<SidebarGroup>
+				<SidebarGroup className="group-data-[collapsible=icon]:p-0!">
 					<Collapsible
 						asChild
-						defaultOpen
+						open={isTrendingNowOpen}
+						onOpenChange={setIsTrendingNowOpen}
 						className="group/collapsible"
 					>
 						<SidebarMenuItem className="list-none">
 							<CollapsibleTrigger asChild>
-								<SidebarMenuButton tooltip="Providers">
-									<span className="text-primary text-xs font-semibold">
+								<SidebarMenuButton
+									tooltip="Trending Now"
+									onClick={() => {
+										if (!open) {
+											toggleSidebar();
+											setIsTrendingNowOpen(true);
+										} else {
+											setIsTrendingNowOpen(
+												!isTrendingNowOpen
+											);
+										}
+									}}
+									className="group-data-[collapsible=icon]:bg-accent/80"
+								>
+									<span className="group-data-[collapsible=icon]:hidden text-primary text-xs font-semibold">
 										{tSidebar("trendingNow")}
 									</span>
 									<FontAwesomeIcon

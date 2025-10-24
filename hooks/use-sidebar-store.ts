@@ -14,7 +14,7 @@ interface SidebarStore {
 // Create a persistent store for sidebar state that survives route changes
 export const useSidebarStore = create<SidebarStore>()(
 	persist(
-		(set, get) => ({
+		(set) => ({
 			isOpen: true, // Default to open
 			isMobile: false,
 			setOpen: (open: boolean) => set({ isOpen: open }),

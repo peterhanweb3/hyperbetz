@@ -1455,16 +1455,13 @@
 
 /* consistent padding x  */
 @utility consistent-padding-x {
-	@apply 3xl:px-24 2xl:px-18 xl:px-16 lg:px-12 md:px-10 sm:px-8 px-6;
+	@apply 3xl:px-16 2xl:px-18 xl:px-16 lg:px-12 md:px-10 sm:px-8 px-6;
 }
 @utility consistent-padding-l {
-	@apply 3xl:pl-24 2xl:pl-18 xl:pl-16 lg:pl-12 md:pl-10 sm:pl-8 pl-6;
-}
-@utility consistent-padding-small-l {
-	@apply 3xl:pl-15 2xl:pl-8 xl:pl-16 lg:pl-12 md:pl-10 sm:pl-8 pl-6;
+	@apply 3xl:pl-16 2xl:pl-18 xl:pl-16 lg:pl-12 md:pl-10 sm:pl-8 pl-6;
 }
 @utility consistent-padding-r {
-	@apply 3xl:pr-24 2xl:pr-18 xl:pr-16 lg:pr-12 md:pr-10 sm:pr-8 pr-6;
+	@apply 3xl:pr-16 2xl:pr-18 xl:pr-16 lg:pr-12 md:pr-10 sm:pr-8 pr-6;
 }
 
 /* consistent padding y */

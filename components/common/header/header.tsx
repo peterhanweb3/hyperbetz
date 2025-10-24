@@ -58,7 +58,7 @@ export function PageHeader({ className }: { className?: string }) {
 		messageCount,
 		isOpen: isChatOpen,
 	} = useAppStore((state) => state.uiDefinition.chat);
-	const { toggleSidebar } = useSidebar();
+	const { toggleSidebar, open } = useSidebar();
 	const router = useRouter();
 
 	const handleLogout = () => {
@@ -259,6 +259,9 @@ export function PageHeader({ className }: { className?: string }) {
 		<header
 			className={cn(
 				"flex h-16 shrink-0 mx-auto bg-sidebar/90 backdrop-blur-lg sticky top-0 items-center lg:justify-between gap-2 border-b",
+				open
+					? "md:w-[calc(100dvw-var(--sidebar-width))]"
+					: "md:w-[calc(100dvw-var(--sidebar-width-icon))]",
 				className
 			)}
 		>
@@ -268,7 +271,7 @@ export function PageHeader({ className }: { className?: string }) {
 				onClick={() => router.push("/")}
 			>
 				<Button
-					className="p-2 md:hidden !size-auto"
+					className="p-2 !size-auto"
 					variant={"outline"}
 					size="icon"
 					onClick={() => {
@@ -391,7 +394,6 @@ export function PageHeader({ className }: { className?: string }) {
 					</>
 				) : (
 					<>
-						{/* {sdfsssssssddddddddddddddssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss} */}
 						<Button
 							variant="outline"
 							size="icon"

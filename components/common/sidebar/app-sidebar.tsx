@@ -15,7 +15,8 @@ import {
 	SidebarContent,
 	SidebarFooter,
 	SidebarHeader,
-	SidebarRail,
+	// SidebarRail,
+	SidebarMenuButton,
 } from "@/components/ui/sidebar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGift, faPaperPlane } from "@fortawesome/pro-light-svg-icons";
@@ -112,7 +113,7 @@ const AppSidebarComponent = ({ ...props }: ComponentProps<typeof Sidebar>) => {
 		>
 			{/* Sidebar Header with logo and title */}
 
-			<div className="flex items-center p-4">
+			<div className="group-data-[collapsible=icon]:hidden flex items-center p-4">
 				<Link href="/" aria-label="Hyperbetz Home" className="m-auto">
 					<img
 						src="/assets/site/Hyperbetz-logo.png"
@@ -124,13 +125,14 @@ const AppSidebarComponent = ({ ...props }: ComponentProps<typeof Sidebar>) => {
 
 			<SidebarHeader className="border-b border-border/20 py-2 px-4 pr-7 bg-card/20">
 				{/* Quick Actions with enhanced styling */}
-				<ProtectedActionButtons
-					onAuthedAction={(tab) => updateUrlParams(tab)}
-					tSidebar={tSidebar}
-				/>
-
+				<div className="group-data-[collapsible=icon]:hidden">
+					<ProtectedActionButtons
+						onAuthedAction={(tab) => updateUrlParams(tab)}
+						tSidebar={tSidebar}
+					/>
+				</div>
 				{/* Telegram Button with enhanced styling */}
-				<div className="py-2">
+				<div className="py-2 group-data-[collapsible=icon]:hidden">
 					<Button
 						className="w-full shadow-lg shadow-accent/30 transition-all duration-300 text-foreground bg-sky-600"
 						asChild
@@ -163,9 +165,10 @@ const AppSidebarComponent = ({ ...props }: ComponentProps<typeof Sidebar>) => {
 
 			<SidebarFooter className="border-t border-border/20 bg-card/20">
 				{/* Daily Bonus Button with pulsing animation */}
-				<div className="px-2 py-3">
-					<Button
-						className="w-full bg-primary hover:bg-primary/90 text-foreground/80 font-bold shadow-lg shadow-primary/40 animate-daily-bonus-pulse transition-all duration-300"
+				<div className="group-data-[collapsible=icon]:px-0! px-2 py-3">
+					<SidebarMenuButton
+						tooltip={tSidebar("dailyBonus")}
+						className="w-full bg-primary hover:bg-primary/90 text-foreground/80 font-semibold shadow-lg shadow-primary/40 animate-daily-bonus-pulse transition-all duration-300"
 						asChild
 					>
 						<Link href="/bonus/daily">
@@ -176,12 +179,12 @@ const AppSidebarComponent = ({ ...props }: ComponentProps<typeof Sidebar>) => {
 							/>
 							{tSidebar("dailyBonus")}
 						</Link>
-					</Button>
+					</SidebarMenuButton>
 				</div>
 
 				{/* {isLoggedIn && <NavUser user={navData.user} />} */}
 			</SidebarFooter>
-			<SidebarRail />
+			{/* <SidebarRail /> */}
 		</Sidebar>
 	);
 };

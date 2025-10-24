@@ -13,7 +13,7 @@ import {
 	faArrowsRotate,
 	faVrCardboard,
 	faUsers,
-} from "@fortawesome/pro-light-svg-icons";
+} from "@fortawesome/pro-solid-svg-icons";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 // --- HELPER FUNCTIONS ---

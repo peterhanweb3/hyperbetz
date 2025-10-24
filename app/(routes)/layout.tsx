@@ -199,7 +199,8 @@ export default function Layout({
 										<AppSidebar />
 										{/* <SidebarInset> */}
 										<SidebarInset className="overflow-auto">
-											<PageHeader className="consistent-padding-x fixed w-full md:w-[calc(100dvw-var(--sidebar-width))] z-40" />
+											{/* Transferred the width calculation of PageHeader to the component itself */}
+											<PageHeader className="consistent-padding-x fixed w-full z-40" />
 											<BlurOverlay />
 											<LiveChatSidebar />
 											<Sonner
