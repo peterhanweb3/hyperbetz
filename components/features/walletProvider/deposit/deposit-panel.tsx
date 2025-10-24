@@ -856,13 +856,14 @@ export const DepositPanel = ({
 										<div className="text-left">
 											<span className="text-muted-foreground text-xs">
 												{t("minPrefix")}{" "}
-												{minRequiredAmount.toFixed(2)}{" "}
+												{minRequiredAmount}{" "}
 												{selectedToken.symbol}
 											</span>
 										</div>
 									)}
 									<div className="flex items-center ml-auto gap-2">
 										<span className="text-muted-foreground text-sm">
+											
 											{t("balance")}{" "}
 											{Number(formattedBalance).toFixed(
 												2

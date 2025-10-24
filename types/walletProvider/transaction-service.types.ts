@@ -303,6 +303,24 @@ export interface GetDestinationWalletResult {
 
 export type GetDestinationWalletResponse = ApiResponse<WalletAgentData>;
 
+export interface TipWalletResponse {
+	error: boolean;
+	message?: string;
+	tip_wallet?: string;
+	tip_min?: string;
+	data?: {
+		tip_wallet?: string;
+		tip_min?: string;
+	};
+}
+
+export interface GetTipWalletResult {
+	success: boolean;
+	tipWallet: string | null;
+	tipMinimum: string | null;
+	error: Error | null;
+}
+
 // --- 10. Get Destination Swap Info ---
 export interface GetDestinationSwapInfoParams {
 	network: string;

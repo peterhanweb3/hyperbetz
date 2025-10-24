@@ -19,6 +19,7 @@ import { WithdrawTransactionPending } from "@/components/features/walletProvider
 import { WithdrawalSuccessModal } from "@/components/features/walletProvider/withdraw/withdrawal-success-modal";
 import { useTranslations } from "@/lib/locale-provider";
 import { cn } from "@/lib/utils";
+import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 
 export const WithdrawPanel = ({
 	isLobbyPage = false,
@@ -29,6 +30,8 @@ export const WithdrawPanel = ({
 }) => {
 	const t = useTranslations("walletProvider.withdrawPanel");
 	const { address: walletAddress } = useWalletAddress();
+	const { user } = useDynamicAuth();
+	console.log("autowd is: " ,user?.autowd);
 
 	// --- 1. CONNECT TO THE MASTER LOGIC HOOK ---
 	const {
@@ -244,11 +247,23 @@ export const WithdrawPanel = ({
 								{/* Minimum amount indicator & Balance and Max Button */}
 								<div className="flex items-center w-full justify-between gap-2">
 									{/* Minimum amount indicator */}
-									<span className="text-muted-foreground text-left text-xs">
+									<span className="text-muted-foreground  flex items-center text-left text-xs">
 										{t("minLabel")}{" "}
 										{MINIMUM_WITHDRAWAL_AMOUNT}{" "}
 										{selectedToken?.token_symbol}
+										{user?.autowd == "ON" && (
+											<>
+												&nbsp; &nbsp;
+												<span className="text-xl">
+													•
+												</span>{" "}
+												&nbsp;&nbsp; Fee: 1 USDT
+											</>
+										)}
 									</span>
+
+									{/* transaction fee 1 usdt */}
+
 									<div className="flex gap-2 items-center ">
 										<span className="text-muted-foreground text-sm">
 											{t("balance")}{" "}

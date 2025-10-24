@@ -22,6 +22,7 @@ import { ChevronDown } from "lucide-react";
 import { DepositPanel } from "@/components/features/walletProvider/deposit/deposit-panel";
 import { SwapPanel } from "@/components/features/walletProvider/swap/swap-panel";
 import { WithdrawPanel } from "@/components/features/walletProvider/withdraw/withdraw-panel";
+import { TipPanel } from "@/components/features/walletProvider/tip/tip-panel";
 import { WalletInfoPanel } from "./wallet/wallet-info-panel";
 import { TransactionModalTab } from "@/store/slices/ui/walletProvider/modal.slice";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
@@ -55,6 +56,12 @@ const TransactionTabbedView = memo(function TransactionTabbedView({
 					isLobbyPage={isLobbyPage}
 				/>
 			),
+			tip: (
+				<TipPanel
+					isEmbeddedWallet={isEmbeddedWallet}
+					isLobbyPage={isLobbyPage}
+				/>
+			),
 			withdraw: (
 				<WithdrawPanel
 					isEmbeddedWallet={isEmbeddedWallet}
@@ -81,7 +88,7 @@ const TransactionTabbedView = memo(function TransactionTabbedView({
 				<div className="flex items-center justify-between p-4 border-b">
 					<AnimatedTabsList
 						className={`grid w-auto ${
-							isEmbeddedWallet ? "grid-cols-3" : "grid-cols-2"
+							isEmbeddedWallet ? "grid-cols-4" : "grid-cols-3"
 						}`}
 					>
 						{isEmbeddedWallet && (
@@ -94,6 +101,9 @@ const TransactionTabbedView = memo(function TransactionTabbedView({
 						</AnimatedTabsTrigger>
 						<AnimatedTabsTrigger value="withdraw">
 							{t("tabs.withdraw")}
+						</AnimatedTabsTrigger>
+						<AnimatedTabsTrigger value="tip">
+							{t("tabs.tip")}
 						</AnimatedTabsTrigger>
 						{/* <AnimatedTabsTrigger value="swap">{t("tabs.swap")}</AnimatedTabsTrigger> */}
 					</AnimatedTabsList>
@@ -131,6 +141,12 @@ const TransactionModalView = memo(function TransactionModalView({
 			walletInfo: <WalletInfoPanel onNavigate={closeModal} />,
 			deposit: (
 				<DepositPanel
+					isEmbeddedWallet={isEmbeddedWallet}
+					isLobbyPage={isLobbyPage}
+				/>
+			),
+			tip: (
+				<TipPanel
 					isEmbeddedWallet={isEmbeddedWallet}
 					isLobbyPage={isLobbyPage}
 				/>
@@ -181,6 +197,8 @@ const TransactionModalView = memo(function TransactionModalView({
 									? t("mobileDropdown.wallet")
 									: activeTab === "deposit"
 									? t("mobileDropdown.deposit")
+									: activeTab === "tip"
+									? t("mobileDropdown.tip")
 									: activeTab === "withdraw"
 									? t("mobileDropdown.withdraw")
 									: activeTab === "swap"
@@ -209,6 +227,14 @@ const TransactionModalView = memo(function TransactionModalView({
 								}
 							>
 								{t("mobileDropdown.deposit")}
+							</DropdownMenuItem>
+							<DropdownMenuItem
+								onClick={() => setActiveTab("tip")}
+								className={
+									activeTab === "tip" ? "bg-accent" : ""
+								}
+							>
+								{t("mobileDropdown.tip")}
 							</DropdownMenuItem>
 							<DropdownMenuItem
 								onClick={() => setActiveTab("withdraw")}
@@ -261,6 +287,7 @@ const TransactionModalView = memo(function TransactionModalView({
 							>
 								Deposit
 							</button>
+							
 							<button
 								onClick={() => setActiveTab("withdraw")}
 								className={`pb-3 px-1 text-sm font-medium transition-all duration-200 ${
@@ -280,6 +307,16 @@ const TransactionModalView = memo(function TransactionModalView({
 								}`}
 							>
 								Swap
+							</button>
+							<button
+								onClick={() => setActiveTab("tip")}
+								className={`pb-3 px-1 text-sm font-medium transition-all duration-200 ${
+									activeTab === "tip"
+										? "text-primary border-b-2 border-primary"
+										: "text-muted-foreground hover:text-foreground"
+								}`}
+							>
+								Tip
 							</button>
 						</div>
 					</div>

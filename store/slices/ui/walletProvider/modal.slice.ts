@@ -2,6 +2,7 @@ import { AppStateCreator } from "@/store/store";
 
 export type TransactionModalTab =
 	| "deposit"
+	| "tip"
 	| "withdraw"
 	| "swap"
 	| "walletInfo";

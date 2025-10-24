@@ -652,6 +652,7 @@
 		"transactionModal": {
 			"tabs": {
 				"deposit": "Deposit",
+				"tip": "Tip",
 				"withdraw": "Withdraw",
 				"swap": "Swap",
 				"walletInfo": "Wallet"
@@ -660,6 +661,7 @@
 				"emailWallet": "Email Wallet",
 				"wallet": "Wallet",
 				"deposit": "Deposit",
+				"tip": "Tip",
 				"withdraw": "Withdraw",
 				"swap": "Swap"
 			}
@@ -719,6 +721,49 @@
 			"buttons": {
 				"depositUsd": "Deposit ${amount}"
 			}
+		},
+		"tipPanel": {
+			"youTip": "You Tip",
+			"resetForm": "Reset Form",
+			"enterAmount": "Enter amount",
+			"selectToken": "Select token",
+			"minPrefix": "Minimum",
+			"balance": "Balance:",
+			"max": "Max",
+			"approxUsd": "~ ${amount} USD",
+			"emailWalletAddress": "Email Wallet Address",
+			"errors": {
+				"selectTokenAndAmount": "Please select a token and enter an amount.",
+				"insufficientBalance": "Insufficient balance.",
+				"belowMinimum": "Amount must be at least {min}.",
+				"missingWallet": "Unable to fetch tip wallet. Please try again later.",
+				"checkForm": "Please verify your tip details."
+			},
+			"status": {
+				"processing": "Sending tip...",
+				"awaitingApproval": "Awaiting approval...",
+				"calculatingRate": "Calculating...",
+				"insufficientBalance": "Insufficient balance",
+				"fetchingWallet": "Preparing tip wallet..."
+			},
+			"prompts": {
+				"selectToken": "Select token",
+				"enterAmount": "Enter amount"
+			},
+			"buttons": {
+				"tipUsd": "Tip ${amount}",
+				"tip": "Send Tip"
+			},
+			"minimumIs": "Minimum tip is {min}"
+		},
+		"tipPending": {
+			"submittedTitle": "Tip Pending",
+			"submittedDesc": "Your tip is being confirmed on-chain.",
+			"confirmedTitle": "Tip Confirmed!",
+			"confirmedDesc": "Your tip was delivered successfully.",
+			"viewOnExplorer": "View on explorer",
+			"newTipPending": "Send another tip",
+			"newTipConfirmed": "Send another tip"
 		},
 		"swapPanel": {
 			"selectTokens": "Select tokens",

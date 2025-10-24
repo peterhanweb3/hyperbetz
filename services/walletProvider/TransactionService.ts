@@ -49,6 +49,8 @@ import {
 	SearchTokenResponse,
 	WalletAgentApiRequest,
 	PrimaryWalletWithClient,
+	GetTipWalletResult,
+	TipWalletResponse,
 } from "@/types/walletProvider/transaction-service.types";
 import { parseAbi, parseUnits } from "viem";
 import { SendTransactionParameters } from "viem/zksync";
@@ -608,6 +610,50 @@ class TransactionService {
 			return {
 				success: false,
 				walletAddress: null,
+				error: error as Error,
+			};
+		}
+	}
+
+	async getTipWallet(
+		networkId: number | string,
+		jwtToken?: string
+	): Promise<GetTipWalletResult> {
+		try {
+			const data = {
+				api_key: this.apiKey,
+				network: networkId,
+				jwt_type: this.jwtType,
+			};
+
+			const response = (await this.makeRequest<TipWalletResponse>(
+				"/api/getTipWallet",
+				"POST",
+				data,
+				jwtToken || getAuthToken()
+			)) as unknown as TipWalletResponse;
+
+			if (response.error) {
+				throw new Error(response.message || "Failed to get tip wallet");
+			}
+
+			const tipWallet =
+				response.tip_wallet ?? response.data?.tip_wallet ?? null;
+			const tipMinimum =
+				response.tip_min ?? response.data?.tip_min ?? null;
+
+			return {
+				success: true,
+				tipWallet,
+				tipMinimum,
+				error: null,
+			};
+		} catch (error) {
+			console.error("Getting tip wallet failed:", error);
+			return {
+				success: false,
+				tipWallet: null,
+				tipMinimum: null,
 				error: error as Error,
 			};
 		}
