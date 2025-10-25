@@ -41,7 +41,7 @@ export const WithdrawPanel = () => {
 		isNetworkSupported,
 		availableTokens,
 		isLoadingTokens,
-		MINIMUM_WITHDRAWAL_AMOUNT,
+		minWithdrawAmount,
 		showReservedModal,
 		// Actions
 		handleAmountChange,
@@ -101,17 +101,14 @@ export const WithdrawPanel = () => {
 							<WithdrawAmountInput
 								amount={withdrawAmount}
 								onAmountChange={(val) =>
-									handleAmountChange(
-										val,
-										MINIMUM_WITHDRAWAL_AMOUNT
-									)
+									handleAmountChange(val, minWithdrawAmount)
 								}
 								onSetMax={setMaxAmount}
 								maxAmount={maxWithdrawAmount}
 								tokenSymbol={selectedToken?.token_symbol}
 								isInsufficient={isBalanceInsufficient}
 								isBelowMinimum={isBelowMinimum}
-								minAmount={MINIMUM_WITHDRAWAL_AMOUNT}
+								minAmount={minWithdrawAmount}
 							/>
 							{/* <WithdrawAddressInput
 								address={withdrawAddress}

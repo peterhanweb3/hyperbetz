@@ -116,9 +116,10 @@ export const useWithdraw = () => {
 	} = useWithdrawFormState();
 
 	// C. Call the "Calculator" hooks
-	const { fee, totalPayout, minWithdrawAmount } = useWithdrawCalculations({
-		withdrawAmount,
-	});
+	const { fee, totalPayout, minWithdrawAmount, isFetchingMinWithdrawAmount } =
+		useWithdrawCalculations({
+			withdrawAmount,
+		});
 
 	// D. Call the "Executor" hook
 	const {
@@ -247,7 +248,10 @@ export const useWithdraw = () => {
 		pendingStatus: isPending,
 		timeLeft,
 		timerActive: isPending && timeLeft > 0,
-		isLoading: isTransactionLoading || isLoadingTokens,
+		isLoading:
+			isTransactionLoading ||
+			isLoadingTokens ||
+			isFetchingMinWithdrawAmount,
 		isAmountValid: !isBelowMinimum && !isBalanceInsufficient,
 		isAddressValid,
 		isWithdrawalSuccessful,
@@ -261,7 +265,8 @@ export const useWithdraw = () => {
 		availableTokens,
 		isLoadingTokens,
 		tokenWD: selectedToken,
-		MINIMUM_WITHDRAWAL_AMOUNT: minWithdrawAmount,
+		minWithdrawAmount,
+		isFetchingMinWithdrawAmount,
 
 		// Actions
 		handleAmountChange,

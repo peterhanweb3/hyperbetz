@@ -19,7 +19,6 @@ import { WithdrawTransactionPending } from "@/components/features/walletProvider
 import { WithdrawalSuccessModal } from "@/components/features/walletProvider/withdraw/withdrawal-success-modal";
 import { useTranslations } from "@/lib/locale-provider";
 import { cn } from "@/lib/utils";
-import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 
 export const WithdrawPanel = ({
 	isLobbyPage = false,
@@ -30,15 +29,13 @@ export const WithdrawPanel = ({
 }) => {
 	const t = useTranslations("walletProvider.withdrawPanel");
 	const { address: walletAddress } = useWalletAddress();
-	const { user } = useDynamicAuth();
-	console.log("autowd is: " ,user?.autowd);
 
 	// --- 1. CONNECT TO THE MASTER LOGIC HOOK ---
 	const {
 		// State
 		withdrawAmount,
 		selectedToken,
-		// fee,
+		fee,
 		// totalPayout,
 		maxWithdrawAmount,
 		pendingStatus,
@@ -49,8 +46,9 @@ export const WithdrawPanel = ({
 		isBalanceInsufficient,
 		isBelowMinimum,
 		isNetworkSupported,
-		MINIMUM_WITHDRAWAL_AMOUNT,
+		minWithdrawAmount,
 		showSuccessModal,
+		isFetchingMinWithdrawAmount,
 		// Actions
 		handleAmountChange,
 		setMaxAmount,
@@ -76,26 +74,6 @@ export const WithdrawPanel = ({
 			setSuccessWithdrawAmount(withdrawAmount);
 		}
 	}, [isWithdrawalSuccessful, withdrawAmount]);
-
-	// Dynamic font size based on character length (not words since this is numeric input)
-	// const dynamicFontClass = useMemo(() => {
-	// 	const textLength = withdrawAmount.length;
-	// 	console.log(textLength);
-	// 	if (textLength >= 18) {
-	// 		// console.log("text-sm");
-	// 		return "text-sm";
-	// 	}
-	// 	if (textLength >= 16 && textLength < 18) {
-	// 		// console.log("text-base");
-	// 		return "text-base";
-	// 	}
-	// 	if (textLength >= 12 && textLength < 16) {
-	// 		// console.log("text-lg");
-	// 		return "text-lg";
-	// 	}
-	// 	// console.log("text-xl md:text-2xl");
-	// 	return "text-xl md:text-2xl";
-	// }, [withdrawAmount]);
 
 	const dynamicFontClass = useMemo(() => {
 		const textLength = withdrawAmount.length;
@@ -136,7 +114,7 @@ export const WithdrawPanel = ({
 	};
 
 	const handleAmountChangeWrapper = (value: string) => {
-		handleAmountChange(value, MINIMUM_WITHDRAWAL_AMOUNT);
+		handleAmountChange(value, minWithdrawAmount || 0);
 		setIsMaxed(false); // Reset if user changes amount manually
 	};
 
@@ -248,16 +226,20 @@ export const WithdrawPanel = ({
 								<div className="flex items-center w-full justify-between gap-2">
 									{/* Minimum amount indicator */}
 									<span className="text-muted-foreground  flex items-center text-left text-xs">
-										{t("minLabel")}{" "}
-										{MINIMUM_WITHDRAWAL_AMOUNT}{" "}
-										{selectedToken?.token_symbol}
-										{user?.autowd == "ON" && (
+										{isFetchingMinWithdrawAmount ? (
+											<span className="animate-pulse">
+												Calculating...
+											</span>
+										) : (
 											<>
+												{t("minLabel")}{" "}
+												{minWithdrawAmount}{" "}
+												{selectedToken?.token_symbol}
 												&nbsp; &nbsp;
 												<span className="text-xl">
 													•
 												</span>{" "}
-												&nbsp;&nbsp; Fee: 1 USDT
+												&nbsp;&nbsp; Fee: {fee} USDT
 											</>
 										)}
 									</span>
@@ -294,7 +276,7 @@ export const WithdrawPanel = ({
 										{isBelowMinimum && (
 											<span className="text-destructive text-sm">
 												{t("minimumIs", {
-													min: MINIMUM_WITHDRAWAL_AMOUNT,
+													min: minWithdrawAmount,
 												})}
 											</span>
 										)}

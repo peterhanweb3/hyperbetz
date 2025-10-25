@@ -5,8 +5,6 @@ import { useAppStore } from "@/store/store";
 import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import TransactionService from "@/services/walletProvider/TransactionService";
 
-const DEFAULT_MIN_WITHDRAW = 0.05; // A sensible fallback in USD
-
 // --- HOOK'S "CONTRACT" ---
 interface UseWithdrawCalculationsProps {
 	withdrawAmount: string;
@@ -28,11 +26,13 @@ export const useWithdrawCalculations = ({
 	const { authToken, isLoggedIn } = useDynamicAuth();
 
 	// --- 2. Manage the Hook's Own State ---
-	const [fee, setFee] = useState(0);
+	const [fee, setFee] = useState<number | null>(null);
 	const [totalPayout, setTotalPayout] = useState(0);
-	const [minWithdrawAmount, setMinWithdrawAmount] =
-		useState(DEFAULT_MIN_WITHDRAW);
-	const [isLoadingConfig, setIsLoadingConfig] = useState(false);
+	const [minWithdrawAmount, setMinWithdrawAmount] = useState<number | null>(
+		null
+	);
+	const [isFetchingMinWithdrawAmount, setIsFetchingMinWithdrawAmount] =
+		useState(false);
 
 	// --- 3. The Core Logic Effects ---
 
@@ -40,7 +40,7 @@ export const useWithdrawCalculations = ({
 	useEffect(() => {
 		const amount = parseFloat(withdrawAmount);
 		if (isNaN(amount) || amount <= 0) {
-			setFee(0);
+			setFee(null);
 			setTotalPayout(0);
 			return;
 		}
@@ -57,11 +57,11 @@ export const useWithdrawCalculations = ({
 		const fetchWithdrawConfig = async () => {
 			// Guard clause: Do not run if essential info is missing.
 			if (!isLoggedIn || !authToken || !chainId) {
-				setMinWithdrawAmount(DEFAULT_MIN_WITHDRAW);
+				setMinWithdrawAmount(null);
 				return;
 			}
 
-			setIsLoadingConfig(true);
+			setIsFetchingMinWithdrawAmount(true);
 			try {
 				const transactionService = TransactionService.getInstance();
 				const response = await transactionService.getWalletAgentData(
@@ -72,27 +72,32 @@ export const useWithdrawCalculations = ({
 				if (
 					isActive &&
 					!response.error &&
-					response.data?.setting?.withdraw
+					response.data?.setting?.withdraw &&
+					response.data?.setting?.fee
 				) {
 					const minAmount = parseFloat(
 						response.data.setting.withdraw
 					);
+					const feeAmount = parseFloat(response.data.setting.fee);
 					// console.log("minWithdrawalAmount from API", minAmount);
-					setMinWithdrawAmount(
-						isNaN(minAmount) ? DEFAULT_MIN_WITHDRAW : minAmount
-					);
+					setMinWithdrawAmount(isNaN(minAmount) ? null : minAmount);
+					setFee(isNaN(feeAmount) ? null : feeAmount);
 					// console.log(
 					// 	"minWithdrawalAmount set to",
 					// 	minWithdrawAmount
 					// );
 				} else {
-					setMinWithdrawAmount(DEFAULT_MIN_WITHDRAW);
+					setMinWithdrawAmount(null);
+					setFee(null);
 				}
 			} catch (error) {
-				if (isActive) setMinWithdrawAmount(DEFAULT_MIN_WITHDRAW);
+				if (isActive) {
+					setMinWithdrawAmount(null);
+					setFee(null);
+				}
 				console.error("Failed to fetch wallet agent config:", error);
 			} finally {
-				if (isActive) setIsLoadingConfig(false);
+				if (isActive) setIsFetchingMinWithdrawAmount(false);
 			}
 		};
 
@@ -105,9 +110,9 @@ export const useWithdrawCalculations = ({
 
 	// --- 4. Return the Final, Public API ---
 	return {
-		fee,
+		fee: fee as number, // Fee is now either a number or fetched from API
 		totalPayout,
-		minWithdrawAmount, // The dynamic, API-driven value
-		isLoadingConfig, // A loading state for the UI to consume
+		minWithdrawAmount: minWithdrawAmount as number, // The dynamic, API-driven value
+		isFetchingMinWithdrawAmount, // A loading state for the UI to consume
 	};
 };
