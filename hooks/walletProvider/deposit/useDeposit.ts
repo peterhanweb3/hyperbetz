@@ -6,30 +6,30 @@ import { useTranslations } from "@/lib/locale-provider";
 
 // Deposit localization accessor (no `any` or fuzzy fallbacks)
 const useDepositI18n = () => {
-  const t = useTranslations("walletProvider.depositPanel");
-  return {
-    errors: {
-      selectTokenAndAmount: () => t("errors.selectTokenAndAmount"),
-      insufficientBalance: () => t("errors.insufficientBalance"),
-      amountTooHighGas: () => t("errors.amountTooHighGas"),
-      checkForm: () => t("errors.checkForm"),
-      pendingDeposit: () => t("errors.pendingDeposit"),
-    },
-    status: {
-      processing: () => t("status.processing"),
-      awaitingApproval: () => t("status.awaitingApproval"),
-      calculatingRate: () => t("status.calculatingRate"),
-      insufficientBalance: () => t("status.insufficientBalance"),
-    },
-    prompts: {
-      selectToken: () => t("selectToken"),
-      enterAmount: () => t("enterAmount"),
-    },
-    buttons: {
-      depositUsd: (amount: string) => t("buttons.depositUsd", { amount }),
-    },
-    minimumIs: (min: string) => t("minimumIs", { min }),
-  };
+	const t = useTranslations("walletProvider.depositPanel");
+	return {
+		errors: {
+			selectTokenAndAmount: () => t("errors.selectTokenAndAmount"),
+			insufficientBalance: () => t("errors.insufficientBalance"),
+			amountTooHighGas: () => t("errors.amountTooHighGas"),
+			checkForm: () => t("errors.checkForm"),
+			pendingDeposit: () => t("errors.pendingDeposit"),
+		},
+		status: {
+			processing: () => t("status.processing"),
+			awaitingApproval: () => t("status.awaitingApproval"),
+			calculatingRate: () => t("status.calculatingRate"),
+			insufficientBalance: () => t("status.insufficientBalance"),
+		},
+		prompts: {
+			selectToken: () => t("selectToken"),
+			enterAmount: () => t("enterAmount"),
+		},
+		buttons: {
+			depositUsd: (amount: string) => t("buttons.depositUsd", { amount }),
+		},
+		minimumIs: (min: string) => t("minimumIs", { min }),
+	};
 };
 
 /*
@@ -94,269 +94,286 @@ import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import { useAppStore } from "@/store/store";
 
 export const useDeposit = () => {
-  // i18n accessors for messages and labels
-  const i18n = useDepositI18n();
-  // --- 1. COMPOSE THE CHILD HOOKS IN LOGICAL ORDER ---
+	// i18n accessors for messages and labels
+	const i18n = useDepositI18n();
+	// --- 1. COMPOSE THE CHILD HOOKS IN LOGICAL ORDER ---
 
-  // Provider hooks (data sources)
-  const { user } = useDynamicAuth(); // Get accInfo for pendingDepo checks
-  const { isTokensLoading } = useTokens();
-  const { dstSwapInfo } = useSwapInfo();
+	// Provider hooks (data sources)
+	const { user } = useDynamicAuth(); // Get accInfo for pendingDepo checks
+	const { isTokensLoading } = useTokens();
+	const { dstSwapInfo } = useSwapInfo();
 
-  // Get current chainId from store to monitor network changes
-  const chainId = useAppStore((state) => state.blockchain.network.chainId);
+	// Get current chainId from store to monitor network changes
+	const chainId = useAppStore((state) => state.blockchain.network.chainId);
 
-  // State management and calculation hooks
-  const {
-    selectedToken,
-    depositAmount,
-    depositType,
-    isBalanceInsufficient,
-    formattedBalance,
-    selectToken,
-    handleAmountChange,
-    setDepositAmount,
-    setIsBalanceInsufficient,
-    resetFormState,
-  } = useDepositFormState();
+	// State management and calculation hooks
+	const {
+		selectedToken,
+		depositAmount,
+		depositType,
+		isBalanceInsufficient,
+		formattedBalance,
+		selectToken,
+		handleAmountChange,
+		setDepositAmount,
+		setIsBalanceInsufficient,
+		resetFormState,
+	} = useDepositFormState();
 
-  const {
-    gasReservationAmount,
-    isLowBalance,
-    isNativeCurrency,
-    tooltipMessage,
-    showTooltip,
-  } = useGasManager({ selectedToken });
+	const {
+		gasReservationAmount,
+		isLowBalance,
+		isNativeCurrency,
+		tooltipMessage,
+		showTooltip,
+	} = useGasManager({ selectedToken });
 
-  const { minRequiredAmount, usdtConversionAmount, isFetchingConversion } =
-    useDepositCalculations({ selectedToken, depositAmount, dstSwapInfo });
+	const {
+		minRequiredAmount,
+		usdtConversionAmount,
+		isFetchingConversion,
+		isFetchingMinDepositAmount,
+	} = useDepositCalculations({
+		selectedToken,
+		depositAmount,
+		dstSwapInfo,
+	});
 
-  // --- 1.5. MONITOR NETWORK CHANGES AND RESET FORM ---
-  // This effect clears the selected token when the network changes
-  // to prevent the bug where a token from the previous network remains selected
-  useEffect(() => {
-    if (selectedToken && chainId) {
-      // Reset the form when network changes to prevent cross-network token selection
-      resetFormState();
-    }
-  }, [chainId]); // Only depend on chainId to trigger on network changes
+	// --- 1.5. MONITOR NETWORK CHANGES AND RESET FORM ---
+	// This effect clears the selected token when the network changes
+	// to prevent the bug where a token from the previous network remains selected
+	useEffect(() => {
+		if (selectedToken && chainId) {
+			// Reset the form when network changes to prevent cross-network token selection
+			resetFormState();
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [chainId]); // Only depend on chainId to trigger on network changes
 
-  // The final execution engine
-  const {
-    isLoading,
-    isApproving,
-    isApproved,
-    isPending,
-    transactionHash,
-    timeLeft,
-    executeTransaction,
-    resetTransactionState,
-  } = useDepositTransaction({
-    selectedToken,
-    depositAmount,
-    depositType,
-    dstSwapInfo,
-    isBalanceInsufficient,
-    minRequiredAmount,
-    onTransactionComplete: resetFormState, // Reset form when transaction completes
-  });
+	// The final execution engine
+	const {
+		isLoading,
+		isApproving,
+		isApproved,
+		isPending,
+		transactionHash,
+		timeLeft,
+		executeTransaction,
+		resetTransactionState,
+	} = useDepositTransaction({
+		selectedToken,
+		depositAmount,
+		depositType,
+		dstSwapInfo,
+		isBalanceInsufficient,
+		minRequiredAmount,
+		onTransactionComplete: resetFormState, // Reset form when transaction completes
+	});
 
-  // --- 2. IMPLEMENT THE FINAL ORCHESTRATION & HELPER LOGIC ---
+	// --- 2. IMPLEMENT THE FINAL ORCHESTRATION & HELPER LOGIC ---
 
-  /**
-   * The final, public-facing executeDeposit function. It performs the last
-   * set of checks that depend on state from multiple child hooks before
-   * calling the transaction executor.
-   */
+	/**
+	 * The final, public-facing executeDeposit function. It performs the last
+	 * set of checks that depend on state from multiple child hooks before
+	 * calling the transaction executor.
+	 */
 
-  const setMaxAmount = useCallback(() => {
-    if (!selectedToken) return;
-    if (isNativeCurrency) {
-      const balance = parseFloat(selectedToken.balance);
-      const maxAmount = Math.max(0, balance - gasReservationAmount);
-      setDepositAmount(String(maxAmount));
-    } else {
-      setDepositAmount(selectedToken.balance);
-    }
-    setIsBalanceInsufficient(false);
-  }, [
-    selectedToken,
-    isNativeCurrency,
-    gasReservationAmount,
-    setDepositAmount,
-    setIsBalanceInsufficient,
-  ]);
+	const setMaxAmount = useCallback(() => {
+		if (!selectedToken) return;
+		if (isNativeCurrency) {
+			const balance = parseFloat(selectedToken.balance);
+			const maxAmount = Math.max(0, balance - gasReservationAmount);
+			setDepositAmount(String(maxAmount));
+		} else {
+			setDepositAmount(selectedToken.balance);
+		}
+		setIsBalanceInsufficient(false);
+	}, [
+		selectedToken,
+		isNativeCurrency,
+		gasReservationAmount,
+		setDepositAmount,
+		setIsBalanceInsufficient,
+	]);
 
-  const validateDeposit = useCallback(() => {
-    if (!selectedToken || !depositAmount || parseFloat(depositAmount) <= 0) {
-      toast.error(i18n.errors.selectTokenAndAmount());
-      return false;
-    }
-    if (parseFloat(depositAmount) > parseFloat(selectedToken.balance)) {
-      setIsBalanceInsufficient(true);
-      toast.error(i18n.errors.insufficientBalance());
-      return false;
-    }
-    // if (parseFloat(depositAmount) < minRequiredAmount) {
-    // 	toast.error(
-    // 		`Minimum deposit is ${minRequiredAmount.toFixed(4)} ${
-    // 			selectedToken.symbol
-    // 		}`
-    // 	);
-    // 	return false;
-    // }
-    setIsBalanceInsufficient(false);
-    return true;
-  }, [
-    selectedToken,
-    depositAmount,
-    minRequiredAmount,
-    setIsBalanceInsufficient,
-  ]);
+	const validateDeposit = useCallback(
+		() => {
+			if (
+				!selectedToken ||
+				!depositAmount ||
+				parseFloat(depositAmount) <= 0
+			) {
+				toast.error(i18n.errors.selectTokenAndAmount());
+				return false;
+			}
+			if (parseFloat(depositAmount) > parseFloat(selectedToken.balance)) {
+				setIsBalanceInsufficient(true);
+				toast.error(i18n.errors.insufficientBalance());
+				return false;
+			}
+			// if (parseFloat(depositAmount) < minRequiredAmount) {
+			// 	toast.error(
+			// 		`Minimum deposit is ${minRequiredAmount.toFixed(4)} ${
+			// 			selectedToken.symbol
+			// 		}`
+			// 	);
+			// 	return false;
+			// }
+			setIsBalanceInsufficient(false);
+			return true;
+		},
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+		[
+			selectedToken,
+			depositAmount,
+			minRequiredAmount,
+			setIsBalanceInsufficient,
+		]
+	);
 
-  const executeDeposit = useCallback(async () => {
-    // This is the faithful implementation of your original pre-flight checks.
-    if (user && user.pendingDepo === true) {
-      toast.warning(i18n.errors.pendingDeposit());
-      return;
-    }
+	const executeDeposit = useCallback(async () => {
+		// This is the faithful implementation of your original pre-flight checks.
+		if (user && user.pendingDepo === true) {
+			toast.warning(i18n.errors.pendingDeposit());
+			return;
+		}
 
-    // Commenting out the gas reservation check as this does not exist in Dhiraj's Code
-    // if (isNativeCurrency) {
-    // 	const totalNeeded = parseFloat(depositAmount);
-    // 	// Ensure the deposit amount doesn't consume the gas reservation
+		// Commenting out the gas reservation check as this does not exist in Dhiraj's Code
+		// if (isNativeCurrency) {
+		// 	const totalNeeded = parseFloat(depositAmount);
+		// 	// Ensure the deposit amount doesn't consume the gas reservation
 
-    // 	if (
-    // 		totalNeeded >
-    // 		parseFloat(selectedToken!.balance) - gasReservationAmount
-    // 	) {
-    // 		toast.error("Amount is too high when accounting for gas fees.");
-    // 		return;
-    // 	}
-    // }
+		// 	if (
+		// 		totalNeeded >
+		// 		parseFloat(selectedToken!.balance) - gasReservationAmount
+		// 	) {
+		// 		toast.error("Amount is too high when accounting for gas fees.");
+		// 		return;
+		// 	}
+		// }
 
-    if (!validateDeposit()) {
-      toast.error(i18n.errors.checkForm());
-      return;
-    }
+		if (!validateDeposit()) {
+			toast.error(i18n.errors.checkForm());
+			return;
+		}
 
-    // If all checks pass, call the actual transaction execution logic.
-    await executeTransaction();
-  }, [
-    user,
-    isNativeCurrency,
-    depositAmount,
-    selectedToken,
-    gasReservationAmount,
-    validateDeposit,
-    minRequiredAmount,
-    executeTransaction,
-  ]);
+		// If all checks pass, call the actual transaction execution logic.
+		await executeTransaction();
+	}, [
+		user,
+		isNativeCurrency,
+		depositAmount,
+		selectedToken,
+		gasReservationAmount,
+		validateDeposit,
+		minRequiredAmount,
+		executeTransaction,
+	]);
 
-  /**
-   * Resets the state of all relevant child hooks.
-   */
-  const resetPage = useCallback(() => {
-    resetFormState();
-    resetTransactionState();
-  }, [resetFormState, resetTransactionState]);
+	/**
+	 * Resets the state of all relevant child hooks.
+	 */
+	const resetPage = useCallback(() => {
+		resetFormState();
+		resetTransactionState();
+	}, [resetFormState, resetTransactionState]);
 
-  /**
-   * A UI helper that computes the correct button text based on the
-   * combined state from multiple child hooks.
-   */
-  const getButtonText = useCallback(() => {
-    if (isLoading) return i18n.status.processing();
-    if (isApproving) return i18n.status.awaitingApproval();
-    if (!selectedToken) return i18n.prompts.selectToken();
-    if (!depositAmount || parseFloat(depositAmount) <= 0)
-      return i18n.prompts.enterAmount();
-    if (isFetchingConversion) return i18n.status.calculatingRate();
-    // if (parseFloat(depositAmount) < minRequiredAmount) {
-    // 	return `Minimum ${minRequiredAmount.toFixed(4)} ${
-    // 		selectedToken.symbol
-    // 	}`;
-    // }
-    if (isBalanceInsufficient) return i18n.status.insufficientBalance();
+	/**
+	 * A UI helper that computes the correct button text based on the
+	 * combined state from multiple child hooks.
+	 */
+	const getButtonText = useCallback(() => {
+		if (isLoading) return i18n.status.processing();
+		if (isApproving) return i18n.status.awaitingApproval();
+		if (!selectedToken) return i18n.prompts.selectToken();
+		if (!depositAmount || parseFloat(depositAmount) <= 0)
+			return i18n.prompts.enterAmount();
+		if (isFetchingConversion) return i18n.status.calculatingRate();
+		// if (parseFloat(depositAmount) < minRequiredAmount) {
+		// 	return `Minimum ${minRequiredAmount.toFixed(4)} ${
+		// 		selectedToken.symbol
+		// 	}`;
+		// }
+		if (isBalanceInsufficient) return i18n.status.insufficientBalance();
 
-    // The logic from the original reference code
-    const displayAmount =
-      usdtConversionAmount.toFixed(2) === "0.00"
-        ? "< 0.01"
-        : usdtConversionAmount.toFixed(2);
-    return i18n.buttons.depositUsd(displayAmount);
-  }, [
-    isLoading,
-    isApproving,
-    selectedToken,
-    depositAmount,
-    isBalanceInsufficient,
-    minRequiredAmount,
-    usdtConversionAmount,
-    isFetchingConversion,
-  ]);
+		// The logic from the original reference code
+		const displayAmount =
+			usdtConversionAmount.toFixed(2) === "0.00"
+				? "< 0.01"
+				: usdtConversionAmount.toFixed(2);
+		return i18n.buttons.depositUsd(displayAmount);
+	}, [
+		isLoading,
+		isApproving,
+		selectedToken,
+		depositAmount,
+		isBalanceInsufficient,
+		minRequiredAmount,
+		usdtConversionAmount,
+		isFetchingConversion,
+	]);
 
-  /**
-   * A UI helper that computes if the main action button should be disabled.
-   */
-  const isDepositDisabled = useCallback(() => {
-    return (
-      isLoading ||
-      isApproving ||
-      isPending ||
-      !selectedToken ||
-      !depositAmount ||
-      parseFloat(depositAmount) <= 0 ||
-      isBalanceInsufficient ||
-      // parseFloat(depositAmount) < minRequiredAmount ||
-      user?.pendingDepo === true
-    );
-  }, [
-    isLoading,
-    isApproving,
-    isPending,
-    selectedToken,
-    depositAmount,
-    isBalanceInsufficient,
-    minRequiredAmount,
-    user,
-  ]);
+	/**
+	 * A UI helper that computes if the main action button should be disabled.
+	 */
+	const isDepositDisabled = useCallback(() => {
+		return (
+			isLoading ||
+			isApproving ||
+			isPending ||
+			!selectedToken ||
+			!depositAmount ||
+			parseFloat(depositAmount) <= 0 ||
+			isBalanceInsufficient ||
+			// parseFloat(depositAmount) < minRequiredAmount ||
+			user?.pendingDepo === true
+		);
+	}, [
+		isLoading,
+		isApproving,
+		isPending,
+		selectedToken,
+		depositAmount,
+		isBalanceInsufficient,
+		minRequiredAmount,
+		user,
+	]);
 
-  // --- 3. RETURN THE COMPLETE, UNIFIED API ---
-  // This return object has 100% parity with your requested list.
-  return {
-    // State
-    selectedToken,
-    depositAmount,
-    depositType,
-    isLoading,
-    isApproving,
-    isApproved,
-    isPending,
-    isBalanceInsufficient,
-    formattedBalance,
-    minRequiredAmount,
-    usdtConversionAmount,
-    transactionHash,
-    timeLeft,
-    gasReservationAmount,
-    isLowBalance,
-    isNativeCurrency,
-    MINIMUM_DEPOSIT_AMOUNT: 1, // This is now sourced from a central place
-    isTokensLoading,
+	// --- 3. RETURN THE COMPLETE, UNIFIED API ---
+	// This return object has 100% parity with your requested list.
+	return {
+		// State
+		selectedToken,
+		depositAmount,
+		depositType,
+		isLoading,
+		isApproving,
+		isApproved,
+		isPending,
+		isBalanceInsufficient,
+		formattedBalance,
+		minRequiredAmount,
+		usdtConversionAmount,
+		transactionHash,
+		timeLeft,
+		gasReservationAmount,
+		isLowBalance,
+		isNativeCurrency,
+		isFetchingMinDepositAmount,
+		isTokensLoading,
 
-    // Actions
-    selectToken,
-    handleAmountChange,
-    setMaxAmount,
-    executeDeposit,
-    resetPage,
+		// Actions
+		selectToken,
+		handleAmountChange,
+		setMaxAmount,
+		executeDeposit,
+		resetPage,
 
-    // UI Helpers
-    getButtonText,
-    isDepositDisabled,
-    tooltipMessage,
-    showTooltip,
-    isFetchingConversion,
-  };
+		// UI Helpers
+		getButtonText,
+		isDepositDisabled,
+		tooltipMessage,
+		showTooltip,
+		isFetchingConversion,
+	};
 };

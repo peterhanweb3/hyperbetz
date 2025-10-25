@@ -693,6 +693,7 @@ export const DepositPanel = ({
 		usdtConversionAmount,
 		minRequiredAmount,
 		isFetchingConversion, // To show a loading state for USD value
+		isFetchingMinDepositAmount,
 	} = useDeposit();
 
 	const [isTokenModalOpen, setIsTokenModalOpen] = useState(false);
@@ -855,15 +856,22 @@ export const DepositPanel = ({
 									{selectedToken && (
 										<div className="text-left">
 											<span className="text-muted-foreground text-xs">
-												{t("minPrefix")}{" "}
-												{minRequiredAmount}{" "}
-												{selectedToken.symbol}
+												{isFetchingMinDepositAmount ? (
+													<span className="animate-pulse">
+														Calculating...
+													</span>
+												) : (
+													<>
+														{t("minPrefix")}{" "}
+														{minRequiredAmount}{" "}
+														{selectedToken.symbol}
+													</>
+												)}
 											</span>
 										</div>
 									)}
 									<div className="flex items-center ml-auto gap-2">
 										<span className="text-muted-foreground text-sm">
-											
 											{t("balance")}{" "}
 											{Number(formattedBalance).toFixed(
 												2
