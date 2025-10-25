@@ -266,10 +266,7 @@ export function PageHeader({ className }: { className?: string }) {
 			)}
 		>
 			{/* Left Side: Brand Logo & Title */}
-			<div
-				className="flex items-center gap-2 cursor-pointer"
-				onClick={() => router.push("/")}
-			>
+			<div className="flex items-center gap-2 cursor-pointer">
 				<Button
 					className="p-2 !size-auto"
 					variant={"outline"}
