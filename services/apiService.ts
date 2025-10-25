@@ -1,3 +1,11 @@
+/**
+ * @file This file defines the ApiService class, a singleton for making API requests.
+ * It centralizes all API communication, handling request creation, authorization,
+ * and error management. It includes methods for various features like authentication,
+ * games, swaps, transactions, affiliate programs, and user bonuses.
+ * @licence QbitronLabs
+ */
+
 import {
 	RegisterWalletRequestBody,
 	UserInfoApiResponse,
@@ -59,6 +67,17 @@ import {
 	ChatHistoryRequest,
 	ChatHistoryApiResponse,
 } from "@/types/features/chat-history.types";
+import {
+	ClaimMemberBonusRequest,
+	ClaimMemberBonusResponse,
+	GetBonusRateResponse,
+	GetMemberBonusDetailRequest,
+	GetMemberBonusDetailResponse,
+	GetMemberBonusRequest,
+	GetMemberBonusResponse,
+	GetMemberUnclaimedBonusRequest,
+	GetMemberUnclaimedBonusResponse,
+} from "@/types/bonus/bonus.types";
 
 // Additional types for transaction status check
 
@@ -471,6 +490,71 @@ class ApiService {
 			jwtToken
 		);
 		return response as unknown as GetDownlineResponse;
+	}
+
+	/** BONUS-RELATED API SERVICES */
+	async getBonusRate(jwtToken?: string): Promise<GetBonusRateResponse> {
+		const data = {
+			api_key: this.apiKey,
+		};
+		return this.makeRequest<GetBonusRateResponse>(
+			"/api/getBonusRate",
+			"POST",
+			data,
+			jwtToken
+		) as unknown as GetBonusRateResponse;
+	}
+
+	async getMemberBonus(
+		body: GetMemberBonusRequest,
+		jwtToken?: string
+	): Promise<GetMemberBonusResponse> {
+		const data = { ...body, api_key: this.apiKey, jwt_type: "dyn" };
+		return this.makeRequest<GetMemberBonusResponse>(
+			"/api/getMemberBonus",
+			"POST",
+			data,
+			jwtToken
+		) as unknown as GetMemberBonusResponse;
+	}
+
+	async claimMemberBonus(
+		body: ClaimMemberBonusRequest,
+		jwtToken?: string
+	): Promise<ClaimMemberBonusResponse> {
+		const data = { ...body, api_key: this.apiKey, jwt_type: "dyn" };
+		return this.makeRequest<ClaimMemberBonusResponse>(
+			"/api/claimMemberBonus",
+			"POST",
+			data,
+			jwtToken
+		) as unknown as ClaimMemberBonusResponse;
+	}
+
+	async getMemberBonusDetail(
+		body: GetMemberBonusDetailRequest,
+		jwtToken?: string
+	): Promise<GetMemberBonusDetailResponse> {
+		const data = { ...body, api_key: this.apiKey, jwt_type: "dyn" };
+		return this.makeRequest<GetMemberBonusDetailResponse>(
+			"/api/getMemberBonusDetail",
+			"POST",
+			data,
+			jwtToken
+		) as unknown as GetMemberBonusDetailResponse;
+	}
+
+	async getMemberUnclaimedBonus(
+		body: GetMemberUnclaimedBonusRequest,
+		jwtToken?: string
+	): Promise<GetMemberUnclaimedBonusResponse> {
+		const data = { ...body, api_key: this.apiKey, jwt_type: "dyn" };
+		return this.makeRequest<GetMemberUnclaimedBonusResponse>(
+			"/api/getMemberUnclaimedBonus",
+			"POST",
+			data,
+			jwtToken
+		) as unknown as GetMemberUnclaimedBonusResponse;
 	}
 
 	/** CHAT-RELATED API SERVICES */
