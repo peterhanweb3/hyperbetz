@@ -694,7 +694,12 @@ class TransactionService {
 			console.error("Getting wallet agent data failed:", error);
 			return {
 				data: {
-					setting: { deposit_min: "", withdraw: "", tip_min: "" },
+					setting: {
+						deposit_min: "",
+						withdraw: "",
+						tip_min: "",
+						fee: "",
+					},
 					wallet_address: "",
 				},
 				error: true,

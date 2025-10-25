@@ -291,6 +291,7 @@ export interface WalletAgentData {
 		deposit_min: string;
 		withdraw: string;
 		tip_min: string;
+		fee: string;
 	};
 	wallet_address: string;
 }
