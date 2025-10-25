@@ -86,9 +86,9 @@ const TransactionTabbedView = memo(function TransactionTabbedView({
 				className="w-full"
 			>
 				<div className="flex items-center justify-between p-4 border-b">
-					<AnimatedTabsList
+				<AnimatedTabsList
 						className={`grid w-auto ${
-							isEmbeddedWallet ? "grid-cols-4" : "grid-cols-3"
+							isEmbeddedWallet ? "grid-cols-5" : "grid-cols-4"
 						}`}
 					>
 						{isEmbeddedWallet && (
@@ -102,10 +102,10 @@ const TransactionTabbedView = memo(function TransactionTabbedView({
 						<AnimatedTabsTrigger value="withdraw">
 							{t("tabs.withdraw")}
 						</AnimatedTabsTrigger>
+						<AnimatedTabsTrigger value="swap">{t("tabs.swap")}</AnimatedTabsTrigger>
 						<AnimatedTabsTrigger value="tip">
 							{t("tabs.tip")}
 						</AnimatedTabsTrigger>
-						{/* <AnimatedTabsTrigger value="swap">{t("tabs.swap")}</AnimatedTabsTrigger> */}
 					</AnimatedTabsList>
 				</div>
 				<div className="p-4">

@@ -86,6 +86,14 @@ export const useDepositTransaction = ({
 			setIsApproved(true);
 			return;
 		}
+		const isDirect = ["USDT", "USDC", "55Swap", "USD₮0", "USDT0"].includes(
+			selectedToken.symbol
+		);
+
+		if (isDirect) {
+			setIsApproved(true);
+			return;
+		}
 		const check = async () => {
 			const { hasAllowance } = await transactionService.checkAllowance({
 				tokenAddress: selectedToken.address,

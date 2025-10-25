@@ -80,7 +80,7 @@ class WebSocketService {
 		this.onStatusChange("connecting");
 		// Remember the last used userId for reconnection attempts
 		this.lastUserId = userId;
-		const wsUrl = `${process.env.NEXT_PUBLIC_WS_URL}?wsKey=${process.env.NEXT_PUBLIC_WS_KEY}&userId=${userId}`;
+		const wsUrl = `${process.env.NEXT_PUBLIC_WS_URL}?wsKey=global&userId=${userId}`;
 
 		// Ensure old connection is fully terminated before creating a new one
 		this.socket?.disconnect();
@@ -115,7 +115,7 @@ class WebSocketService {
 		this.onChatStatusChange("connecting");
 		// Remember the last used chat username for reconnection attempts
 		this.lastChatUsername = username;
-		const chatWsUrl = `${process.env.NEXT_PUBLIC_CHAT_WS_URL}?wsKey=${process.env.NEXT_PUBLIC_WS_KEY}`;
+		const chatWsUrl = `${process.env.NEXT_PUBLIC_CHAT_WS_URL}?wsKey=global`;
 
 		// Ensure old chat connection is fully terminated before creating a new one
 		this.chatSocket?.disconnect();
