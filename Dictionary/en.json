@@ -752,7 +752,7 @@
 			},
 			"buttons": {
 				"tipUsd": "Tip ${amount}",
-				"tip": "Send Tip"
+				"tip": "Tip"
 			},
 			"minimumIs": "Minimum tip is {min}"
 		},

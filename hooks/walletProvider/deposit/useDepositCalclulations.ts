@@ -68,12 +68,14 @@ export const useDepositCalculations = ({
 				return;
 			}
 
+			let letsCheckApi = 1;
+
 			// For stablecoins, ask the wallet agent config for the minimum deposit.
-			if (
-				["USDT", "USDC", "55Swap", "USD₮0", "USDT0"].includes(
-					selectedToken.symbol
-				)
-			) {
+			// if (
+			// 	["USDT", "USDC", "55Swap", "USD₮0", "USDT0"].includes(
+			// 		selectedToken.symbol
+			// 	)
+			// ) {
 				setIsFetchingMinDepositAmount(true);
 				try {
 					const transactionService = TransactionService.getInstance();
@@ -91,6 +93,7 @@ export const useDepositCalculations = ({
 						const minAmount = parseFloat(
 							response.data.setting.deposit_min
 						);
+						letsCheckApi = minAmount;
 						setMinRequiredAmount(
 							isNaN(minAmount) ? null : minAmount
 						);
@@ -110,8 +113,8 @@ export const useDepositCalculations = ({
 					if (isActive) setIsFetchingMinDepositAmount(false);
 				}
 
-				return;
-			}
+			// 	return;
+			// }
 
 			// Non-stablecoin path: compute how much of the token equals our USD minimum.
 			setIsFetchingMinDepositAmount(true);
