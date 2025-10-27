@@ -46,7 +46,6 @@ export const useWithdrawCalculations = ({
 		}
 		const calculatedFee = amount * 0.01; // 1% fee
 		const calculatedPayout = amount - calculatedFee;
-		setFee(calculatedFee);
 		setTotalPayout(calculatedPayout);
 	}, [withdrawAmount]);
 

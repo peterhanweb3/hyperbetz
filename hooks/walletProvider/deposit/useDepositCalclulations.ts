@@ -76,42 +76,39 @@ export const useDepositCalculations = ({
 			// 		selectedToken.symbol
 			// 	)
 			// ) {
-				setIsFetchingMinDepositAmount(true);
-				try {
-					const transactionService = TransactionService.getInstance();
-					const response =
-						await transactionService.getWalletAgentData(
-							String(chainId),
-							authToken
-						);
+			setIsFetchingMinDepositAmount(true);
+			try {
+				const transactionService = TransactionService.getInstance();
+				const response = await transactionService.getWalletAgentData(
+					String(chainId),
+					authToken
+				);
 
-					if (
-						isActive &&
-						!response.error &&
-						response.data?.setting?.deposit_min
-					) {
-						const minAmount = parseFloat(
-							response.data.setting.deposit_min
-						);
-						letsCheckApi = minAmount;
-						setMinRequiredAmount(
-							isNaN(minAmount) ? null : minAmount
-						);
-					} else {
-						setMinRequiredAmount(null);
-					}
-				} catch (error) {
-					toast.error(
-						`Error fetching minimum deposit amount. Please try again. ${error}`
+				if (
+					isActive &&
+					!response.error &&
+					response.data?.setting?.deposit_min
+				) {
+					const minAmount = parseFloat(
+						response.data.setting.deposit_min
 					);
-					if (isActive) setMinRequiredAmount(null);
-					console.error(
-						"Failed to fetch wallet agent config for deposit:",
-						error
-					);
-				} finally {
-					if (isActive) setIsFetchingMinDepositAmount(false);
+					letsCheckApi = minAmount;
+					setMinRequiredAmount(isNaN(minAmount) ? null : minAmount);
+				} else {
+					setMinRequiredAmount(null);
 				}
+			} catch (error) {
+				toast.error(
+					`Error fetching minimum deposit amount. Please try again. ${error}`
+				);
+				if (isActive) setMinRequiredAmount(null);
+				console.error(
+					"Failed to fetch wallet agent config for deposit:",
+					error
+				);
+			} finally {
+				if (isActive) setIsFetchingMinDepositAmount(false);
+			}
 
 			// 	return;
 			// }
@@ -126,7 +123,7 @@ export const useDepositCalculations = ({
 					// Find out how much of the selected token is equal to our minimum USD deposit.
 					fromToken: dstSwapInfo.token_address,
 					toToken: selectedToken.address,
-					amount: 1,
+					amount: letsCheckApi,
 					username,
 				});
 
