@@ -38,7 +38,6 @@ export const TipPanel = ({
 		isPending,
 		transactionHash,
 		minTipAmount,
-		usdEstimate,
 		isFetchingWallet,
 		selectToken,
 		handleAmountChange,
@@ -210,7 +209,7 @@ export const TipPanel = ({
 									</div>
 								</div>
 
-								{selectedToken &&
+								{/* {selectedToken &&
 									tipAmount &&
 									usdEstimate > 0 && (
 										<div className="text-left">
@@ -222,7 +221,7 @@ export const TipPanel = ({
 												})}
 											</span>
 										</div>
-									)}
+									)} */}
 							</div>
 
 							{!isLobbyPage &&

@@ -325,7 +325,7 @@ export const useDeposit = () => {
 			!depositAmount ||
 			parseFloat(depositAmount) <= 0 ||
 			isBalanceInsufficient ||
-			// parseFloat(depositAmount) < minRequiredAmount ||
+			parseFloat(depositAmount) < minRequiredAmount ||
 			user?.pendingDepo === true
 		);
 	}, [
