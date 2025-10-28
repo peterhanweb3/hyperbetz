@@ -143,7 +143,7 @@ export const useWithdraw = () => {
 
 	// E. Manage Final UI State that is local to this hook
 	const [showingConfetti, setShowingConfetti] = useState(false);
-	const [showSuccessModal, setShowSuccessModal] = useState(false);
+	const [showSuccessModal, setShowSuccessModal] = useState(true);
 
 	// F. Effect to show success modal when withdrawal is successful
 	useEffect(() => {
@@ -255,6 +255,7 @@ export const useWithdraw = () => {
 		isAmountValid: !isBelowMinimum && !isBalanceInsufficient,
 		isAddressValid,
 		isWithdrawalSuccessful,
+		minWithdrawAmount,
 		withdrawTxHash: transactionHash,
 		showingConfetti,
 		showSuccessModal,
@@ -265,7 +266,7 @@ export const useWithdraw = () => {
 		availableTokens,
 		isLoadingTokens,
 		tokenWD: selectedToken,
-		minWithdrawAmount,
+
 		isFetchingMinWithdrawAmount,
 
 		// Actions

@@ -7,7 +7,7 @@
 		"viewAll": "모두 보기"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "Hyperbetz"
 	},
 	"header": {
 		"toggleSidebar": "사이드바 전환",
@@ -815,7 +815,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "출금 성공!",
-			"successMessage": "🎉 Meme Win에서 방금 {withdrawAmount} {tokenSymbol}을(를) 출금했습니다! 🚀 {shareUrl}에서 승리의 행진에 동참하세요",
+			"successMessage": "🎉 Hyperbetz에서 방금 {withdrawAmount} {tokenSymbol}을(를) 출금했습니다! 🚀 {shareUrl}에서 승리의 행진에 동참하세요",
 			"withdrawnAmount": "출금된 금액",
 			"shareText": "공유하기",
 			"subText": "🚀 승리의 행진에 동참하세요! 🚀",
@@ -936,7 +936,7 @@
 			"casino": {
 				"title": "카지노",
 				"badge": "590+ 게임",
-				"desc": "MemeWin 오리지널 및 상위 제공업체의 다른 카지노 게임을 즐기세요.",
+				"desc": "Hyperbetz 오리지널 및 상위 제공업체의 다른 카지노 게임을 즐기세요.",
 				"link": "카지노로 가기"
 			},
 			"slots": {

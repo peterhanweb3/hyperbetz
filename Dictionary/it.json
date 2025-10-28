@@ -7,7 +7,7 @@
 		"viewAll": "Mostra tutto"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "Hyperbetz"
 	},
 	"header": {
 		"toggleSidebar": "Mostra/Nascondi barra laterale",
@@ -815,7 +815,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Prelievo riuscito!",
-			"successMessage": "🎉 Ho appena prelevato {withdrawAmount} {tokenSymbol} da Meme Win! 🚀 Unisciti alla serie di vittorie su {shareUrl}",
+			"successMessage": "🎉 Ho appena prelevato {withdrawAmount} {tokenSymbol} da Hyperbetz! 🚀 Unisciti alla serie di vittorie su {shareUrl}",
 			"withdrawnAmount": "Importo prelevato",
 			"shareText": "Condividi",
 			"subText": "🚀 UNISCITI ALLA SERIE DI VITTORIE! 🚀",
@@ -936,7 +936,7 @@
 			"casino": {
 				"title": "Casinò",
 				"badge": "590+ GIOCHI",
-				"desc": "Goditi gli originali di MemeWin e altri giochi da casinò dei migliori fornitori.",
+				"desc": "Goditi gli originali di Hyperbetz e altri giochi da casinò dei migliori fornitori.",
 				"link": "Vai al casinò"
 			},
 			"slots": {

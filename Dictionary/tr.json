@@ -7,7 +7,7 @@
 		"viewAll": "Tümünü Gör"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "Hyperbetz"
 	},
 	"header": {
 		"toggleSidebar": "Kenar Çubuğunu Aç/Kapat",
@@ -815,7 +815,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Çekim Başarılı!",
-			"successMessage": "🎉 Meme Win'den {withdrawAmount} {tokenSymbol} çektim! 🚀 Sen de kazanma serisine katıl: {shareUrl}",
+			"successMessage": "🎉 Hyperbetz'den {withdrawAmount} {tokenSymbol} çektim! 🚀 Sen de kazanma serisine katıl: {shareUrl}",
 			"withdrawnAmount": "Çekilen Miktar",
 			"shareText": "Paylaş",
 			"subText": "🚀 KAZANMA SERİSİNE KATIL! 🚀",
@@ -936,7 +936,7 @@
 			"casino": {
 				"title": "Casino",
 				"badge": "590+ OYUN",
-				"desc": "MemeWin Orijinalleri ve diğer en iyi sağlayıcıların casino oyunlarının keyfini çıkarın.",
+				"desc": "Hyperbetz Orijinalleri ve diğer en iyi sağlayıcıların casino oyunlarının keyfini çıkarın.",
 				"link": "Casinoya Git"
 			},
 			"slots": {

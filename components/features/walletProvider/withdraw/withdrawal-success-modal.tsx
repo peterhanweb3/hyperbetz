@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import domtoimage from "dom-to-image";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Download, RotateCw, Share2 } from "lucide-react";
+import { Copy, Download, RotateCw, Share2 } from "lucide-react";
 import { useQRCode } from "next-qrcode";
 import {
 	FacebookShareButton,
@@ -20,6 +20,7 @@ import {
 	RedditIcon,
 } from "react-share";
 import { toast } from "sonner";
+import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 
 interface WithdrawalSuccessModalProps {
 	isOpen: boolean;
@@ -30,6 +31,7 @@ interface WithdrawalSuccessModalProps {
 }
 
 export const WithdrawalSuccessModal = (props: WithdrawalSuccessModalProps) => {
+	const { user } = useDynamicAuth();
 	const { isOpen, onClose, withdrawAmount, tokenSymbol } = props;
 	const t = useTranslations("walletProvider.withdrawSuccess");
 	const screenshotRef = useRef<HTMLDivElement>(null);
@@ -37,12 +39,27 @@ export const WithdrawalSuccessModal = (props: WithdrawalSuccessModalProps) => {
 	const [isGeneratingScreenshot, setIsGeneratingScreenshot] = useState(false);
 	console.log(Number(withdrawAmount).toFixed(3));
 	const { Image } = useQRCode();
-	const shareUrl = "https://hyperbetz.games";
+	const shareUrl = `${window.location.origin}/?ref=${user?.referralId}`;
 	const shareText = t("successMessage", {
 		withdrawAmount: Number(withdrawAmount).toFixed(3),
 		tokenSymbol,
 		shareUrl,
 	});
+	//eslint-disable-next-line
+	const [copiedReferral, setCopiedReferral] = useState(false);
+	const handleCopyReferral = async () => {
+		if (user?.referralId) {
+			try {
+				const referralLink = `${window.location.origin}/?ref=${user?.referralId}`;
+				await navigator.clipboard.writeText(referralLink);
+				setCopiedReferral(true);
+				toast.success("Referral link copied!");
+				setTimeout(() => setCopiedReferral(false), 2000);
+			} catch {
+				toast.error("Failed to copy referral link");
+			}
+		}
+	};
 
 	// Reset state when modal opens/closes
 	const handleClose = () => {
@@ -62,7 +79,7 @@ export const WithdrawalSuccessModal = (props: WithdrawalSuccessModalProps) => {
 				);
 				setImage(imageData);
 				const link = document.createElement("a");
-				link.download = `hyperbetz-success-${Date.now()}.png`;
+				link.download = `withdraw-success-${Date.now()}.png`;
 				link.href = URL.createObjectURL(imageData);
 				link.click();
 			} catch (error) {
@@ -135,7 +152,7 @@ export const WithdrawalSuccessModal = (props: WithdrawalSuccessModalProps) => {
 	return (
 		<Dialog open={isOpen} onOpenChange={handleClose}>
 			<DialogContent
-				className="mx-auto gap-0 max-w-[90dvw] sm:!max-w-[80dvw] lg:!max-w-0 lg:min-w-[50dvw] p-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 border-none overflow-hidden"
+				className="mx-auto gap-0 max-w-[95vw] max-h-[75vh] sm:max-w-[550px] md:max-w-[600px] p-0 bg-black border-none overflow-hidden rounded-2xl font-['Inter',_'Segoe_UI',_system-ui,_sans-serif]"
 				onPointerDownOutside={(e) => {
 					e.preventDefault();
 					return false;
@@ -144,61 +161,123 @@ export const WithdrawalSuccessModal = (props: WithdrawalSuccessModalProps) => {
 				{/* Screenshot Content */}
 				<div
 					ref={screenshotRef}
-					className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white"
+					className="relative bg-black text-white w-full overflow-hidden"
 				>
-					{/* Custom Background Image Overlay */}
-					<div className="relative h-90 w-full">
+					{/* Background Image */}
+					<div className="absolute inset-0 overflow-hidden">
 						<img
-							// ref={screenshotRef}
 							src="/assets/banners/withdraw/share.png"
-							alt="Success Background"
-							className="absolute inset-0 h-90 aspect-video bg-top w-full opacity-60 select-none"
+							alt="Withdrawal success background"
+							// sizes="(max-width: 768px) 95vw, 500px"
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+							}}
+							className="object-contain select-none"
 						/>
+						{/* Dark overlay to ensure text is readable */}
+						<div className="absolute inset-0 bg-black/40" />
+					</div>
 
-						<div className="absolute bottom-12 right-5 gap-8 flex flex-col md:flex-row items-end md:items-start justify-between">
-							<div className="flex flex-col gap-2 justify-stretch ">
-								{/* Center Column - Main Content */}
-								<div className="space-y-1 text-center">
-									<h2 className="lg:text-xl 2xl:text-3xl font-black text-white drop-shadow-lg">
-										{t("title")}
-									</h2>
-									<p className="text-[10px] max-w-3xs font-semibold text-primary drop-shadow-lg text-shadow-gray-700 text-shadow-sm">
-										{t("successMessage", {
-											withdrawAmount:
-												Number(withdrawAmount).toFixed(
-													3
-												),
-											tokenSymbol,
-											shareUrl,
+					{/* Main Content */}
+					<div className="relative w-full   flex flex-col justify-between p-6 sm:p-8">
+						{/* Middle Section - Transaction Details */}
+						<div className="z-10 space-y-6 sm:space-y-4">
+							{/* Withdrawal Type */}
+							<div>
+								<h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-2">
+									Withdrawal Success
+								</h2>
+								<div className="flex items-center gap-3">
+									<span className="text-emerald-400 text-sm sm:text-base font-semibold">
+										{t("status", {
+											defaultValue: "Completed",
 										})}
-									</p>
-								</div>
-								{/* withdraw amount */}
-								<div className="bg-black/30 basis-1/2 backdrop-blur-xl rounded-xl p-3 ">
-									<div className="text-center space-y-1">
-										<div className="text-2xl font-black text-green-400 drop-shadow-lg">
-											{Number(withdrawAmount).toFixed(3)}{" "}
-											<span className="text-sm font-semibold text-white">
-												{tokenSymbol}
-											</span>
-										</div>
-									</div>
+									</span>
+									<span className="text-gray-500">|</span>
+									<span className="text-gray-400 text-sm sm:text-base">
+										On-Chain
+									</span>
 								</div>
 							</div>
-							{/* qr-code box */}
-							<div
-								className="bg-white p-1 w-fit rounded-lg shadow-lg"
-								role="img"
-								aria-label="QR Code for sharing"
-							>
+
+							{/* Amount - Big and Bold */}
+							<div>
+								<h3 className="text-6xl sm:text-7xl md:text-8xl font-black text-emerald-400 leading-none tracking-tight">
+									+{Number(withdrawAmount).toFixed(2)}
+								</h3>
+							</div>
+
+							{/* Price Details Grid */}
+							<div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-md">
+								<div>
+									<p className="text-xs sm:text-sm text-gray-500 mb-1">
+										{t("entryPrice", {
+											defaultValue: "Withdrawal Amount",
+										})}
+									</p>
+									<p className="text-lg sm:text-xl font-bold">
+										{Number(withdrawAmount).toFixed(2)}
+									</p>
+								</div>
+								<div>
+									<p className="text-xs sm:text-sm text-gray-500 mb-1">
+										{t("lastPrice", {
+											defaultValue: "Token Symbol",
+										})}
+									</p>
+									<p className="text-lg sm:text-xl font-bold">
+										{tokenSymbol}
+									</p>
+								</div>
+							</div>
+						</div>
+
+						{/* Bottom Section - Branding and QR */}
+						<div className="z-10 mt-2 flex items-end justify-between">
+							<div className="space-y-2">
+								{/* Logo */}
+								<div className="flex items-center gap-2">
+									<img
+										src="/assets/site/hyperbetz-logo.png"
+										alt="Hyperbetz Logo"
+										width={200}
+										height={32}
+										className="object-contain"
+									/>
+								</div>
+								<p className="text-xs sm:text-sm text-gray-400 flex gap-2">
+									{t("referralCode", {
+										defaultValue: "Referral Code",
+									})}{" "}
+									<span
+										className="font-mono font-bold text-white flex gap-2"
+										onClick={handleCopyReferral}
+									>
+										{user?.referralId}
+										<Copy
+											className={`h-4 w-4 ${
+												copiedReferral
+													? "text-success"
+													: "text-purple-500"
+											}`}
+										/>
+									</span>
+								</p>
+							</div>
+
+							{/* QR Code */}
+							<div className="bg-white p-2 rounded-lg">
+								{/* eslint-disable-next-line jsx-a11y/alt-text */}
 								<Image
 									text={shareUrl}
 									options={{
 										type: "canvas",
-										width: 120,
-										margin: 1,
+										width: 80,
+										margin: 0,
 										color: {
-											dark: "#4267b2",
+											dark: "#000000",
 											light: "#ffffff",
 										},
 										quality: 1,
@@ -206,120 +285,149 @@ export const WithdrawalSuccessModal = (props: WithdrawalSuccessModalProps) => {
 								/>
 							</div>
 						</div>
-
-						{/* Bottom Banner */}
-						<div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-yellow-400 to-orange-500 h-8 flex items-center justify-center">
-							<p className="text-black font-black text-sm animate-pulse">
-								{t("subText")}
-							</p>
-						</div>
 					</div>
 				</div>
 
-				{/* Action Panel */}
-				{/* Screenshot Button */}
-				<Button
-					onClick={handleTakeScreenshot}
-					disabled={isGeneratingScreenshot}
-					className="mt-4 mx-auto bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 font-semibold"
-					size="sm"
-				>
-					{isGeneratingScreenshot ? (
-						<>
-							<RotateCw className="w-4 h-4 animate-spin mr-2" />
-							{t("generating")}
-						</>
-					) : (
-						<>
-							<Download className="w-4 h-4 mr-2" />
-							{t("download")}
-						</>
-					)}
-				</Button>
-
-				{/* Social Share Buttons */}
-				<div className="space-y-3 p-4">
-					<div className="flex items-center justify-center space-x-2">
-						<Share2 className="w-4 h-4 text-white/60" />
-						<span className="text-sm text-white/80 font-medium">
-							{t("shareText")}
-						</span>
-					</div>
-
-					{/* Share Buttons  */}
-					<div className="grid grid-rows-2 grid-cols-2 md:grid-cols-3 gap-4">
-						<TwitterShareButton
-							url={shareUrl}
-							title={shareText}
-							className="w-full"
-						>
-							<div className="flex flex-col items-center p-2 bg-black/20 rounded-lg hover:bg-black/40 transition-all">
-								<XIcon size={24} round />
-								<span className="text-xs text-white/80 mt-1">
-									X
+				{/* Action Panel - Premium Design */}
+				<div className="bg-gradient-to-br from-gray-950 via-gray-900 to-black p-4 sm:p-5 space-y-4 border-t border-white/5">
+					{/* Screenshot Button - Eye-Catching */}
+					<Button
+						onClick={handleTakeScreenshot}
+						disabled={isGeneratingScreenshot}
+						className="w-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:from-purple-500 hover:via-pink-500 hover:to-purple-500 font-black text-sm sm:text-base py-5 sm:py-6 rounded-xl shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:shadow-[0_0_35px_rgba(168,85,247,0.6)] transition-all duration-300 hover:scale-[1.02] active:scale-95 border border-purple-400/20"
+						size="lg"
+					>
+						{isGeneratingScreenshot ? (
+							<>
+								<RotateCw className="w-5 h-5 animate-spin mr-2" />
+								<span className="bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+									{t("generating", {
+										defaultValue: "Creating Magic...",
+									})}
 								</span>
-							</div>
-						</TwitterShareButton>
-
-						<FacebookShareButton
-							url={shareUrl}
-							hashtag="#Hyperbetz"
-							className="w-full"
-						>
-							<div className="flex flex-col items-center p-2 bg-black/20 rounded-lg hover:bg-black/40 transition-all">
-								<FacebookIcon size={24} round />
-								<span className="text-xs text-white/80 mt-1">
-									Facebook
+							</>
+						) : (
+							<>
+								<Download className="w-5 h-5 mr-2" />
+								<span className="bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+									{t("download", {
+										defaultValue: "Download & Share",
+									})}
 								</span>
-							</div>
-						</FacebookShareButton>
+							</>
+						)}
+					</Button>
 
-						<WhatsappShareButton
-							url={shareUrl}
-							title={shareText}
-							className="w-full"
-						>
-							<div className="flex flex-col items-center p-2 bg-black/20 rounded-lg hover:bg-black/40 transition-all">
-								<WhatsappIcon size={24} round />
-								<span className="text-xs text-white/80 mt-1">
-									WhatsApp
+					{/* Social Share Section */}
+					<div className="space-y-3">
+						<div className="flex items-center justify-center gap-2">
+							<div className="h-px w-8 bg-gradient-to-r from-transparent to-white/20" />
+							<Share2 className="w-4 h-4 text-purple-400" />
+							<span className="text-xs sm:text-sm font-bold text-white/90 tracking-wide">
+								{t("shareText", {
+									defaultValue: "SPREAD THE WIN",
+								})}
+							</span>
+							<div className="h-px w-8 bg-gradient-to-l from-transparent to-white/20" />
+						</div>
+
+						{/* Share Buttons Grid - Premium Cards */}
+						<div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+							<TwitterShareButton
+								url={shareUrl}
+								title={shareText}
+								className="w-full"
+							>
+								<div className="group relative flex flex-col items-center justify-center gap-1 p-2 sm:p-2.5 bg-gradient-to-br from-gray-800/50 to-gray-900/50 hover:from-gray-700/50 hover:to-gray-800/50 rounded-xl transition-all duration-300 hover:scale-105 border border-white/10 hover:border-blue-400/40 min-h-[60px] sm:min-h-[65px] backdrop-blur-sm shadow-lg hover:shadow-blue-500/20">
+									<XIcon
+										size={22}
+										round
+										className="sm:w-6 sm:h-6"
+									/>
+									<span className="text-[9px] sm:text-[10px] font-bold text-white/80 group-hover:text-white transition-colors">
+										X
+									</span>
+								</div>
+							</TwitterShareButton>
+
+							<FacebookShareButton
+								url={shareUrl}
+								hashtag="#Hyperbetz"
+								className="w-full"
+							>
+								<div className="group relative flex flex-col items-center justify-center gap-1 p-2 sm:p-2.5 bg-gradient-to-br from-gray-800/50 to-gray-900/50 hover:from-gray-700/50 hover:to-gray-800/50 rounded-xl transition-all duration-300 hover:scale-105 border border-white/10 hover:border-blue-500/40 min-h-[60px] sm:min-h-[65px] backdrop-blur-sm shadow-lg hover:shadow-blue-600/20">
+									<FacebookIcon
+										size={22}
+										round
+										className="sm:w-6 sm:h-6"
+									/>
+									<span className="text-[9px] sm:text-[10px] font-bold text-white/80 group-hover:text-white transition-colors truncate w-full text-center px-0.5">
+										Facebook
+									</span>
+								</div>
+							</FacebookShareButton>
+
+							<WhatsappShareButton
+								url={shareUrl}
+								title={shareText}
+								className="w-full"
+							>
+								<div className="group relative flex flex-col items-center justify-center gap-1 p-2 sm:p-2.5 bg-gradient-to-br from-gray-800/50 to-gray-900/50 hover:from-gray-700/50 hover:to-gray-800/50 rounded-xl transition-all duration-300 hover:scale-105 border border-white/10 hover:border-green-500/40 min-h-[60px] sm:min-h-[65px] backdrop-blur-sm shadow-lg hover:shadow-green-500/20">
+									<WhatsappIcon
+										size={22}
+										round
+										className="sm:w-6 sm:h-6"
+									/>
+									<span className="text-[9px] sm:text-[10px] font-bold text-white/80 group-hover:text-white transition-colors truncate w-full text-center px-0.5">
+										WhatsApp
+									</span>
+								</div>
+							</WhatsappShareButton>
+
+							<TelegramShareButton
+								url={shareUrl}
+								title={shareText}
+								className="w-full"
+							>
+								<div className="group relative flex flex-col items-center justify-center gap-1 p-2 sm:p-2.5 bg-gradient-to-br from-gray-800/50 to-gray-900/50 hover:from-gray-700/50 hover:to-gray-800/50 rounded-xl transition-all duration-300 hover:scale-105 border border-white/10 hover:border-cyan-500/40 min-h-[60px] sm:min-h-[65px] backdrop-blur-sm shadow-lg hover:shadow-cyan-500/20">
+									<TelegramIcon
+										size={22}
+										round
+										className="sm:w-6 sm:h-6"
+									/>
+									<span className="text-[9px] sm:text-[10px] font-bold text-white/80 group-hover:text-white transition-colors truncate w-full text-center px-0.5">
+										Telegram
+									</span>
+								</div>
+							</TelegramShareButton>
+
+							<RedditShareButton
+								url={shareUrl}
+								title={shareText}
+								className="w-full"
+							>
+								<div className="group relative flex flex-col items-center justify-center gap-1 p-2 sm:p-2.5 bg-gradient-to-br from-gray-800/50 to-gray-900/50 hover:from-gray-700/50 hover:to-gray-800/50 rounded-xl transition-all duration-300 hover:scale-105 border border-white/10 hover:border-orange-500/40 min-h-[60px] sm:min-h-[65px] backdrop-blur-sm shadow-lg hover:shadow-orange-500/20">
+									<RedditIcon
+										size={22}
+										round
+										className="sm:w-6 sm:h-6"
+									/>
+									<span className="text-[9px] sm:text-[10px] font-bold text-white/80 group-hover:text-white transition-colors truncate w-full text-center px-0.5">
+										Reddit
+									</span>
+								</div>
+							</RedditShareButton>
+
+							<Button
+								onClick={handleNativeShare}
+								className="group relative flex flex-col items-center justify-center gap-1 p-2 sm:p-2.5 bg-gradient-to-br from-purple-800/50 to-pink-900/50 hover:from-purple-700/50 hover:to-pink-800/50 rounded-xl transition-all duration-300 hover:scale-105 border border-purple-400/20 hover:border-purple-400/40 min-h-[60px] sm:min-h-[65px] w-full h-auto backdrop-blur-sm shadow-lg hover:shadow-purple-500/20"
+							>
+								<Share2 className="w-4 h-4 sm:w-5 sm:h-5 text-purple-300" />
+								<span className="text-[9px] sm:text-[10px] font-bold text-purple-200">
+									More
 								</span>
-							</div>
-						</WhatsappShareButton>
-
-						<TelegramShareButton
-							url={shareUrl}
-							title={shareText}
-							className="w-full"
-						>
-							<div className="flex flex-col items-center p-2 bg-black/20 rounded-lg hover:bg-black/40 transition-all">
-								<TelegramIcon size={24} round />
-								<span className="text-xs text-white/80 mt-1">
-									Telegram
-								</span>
-							</div>
-						</TelegramShareButton>
-
-						<RedditShareButton
-							url={shareUrl}
-							title={shareText}
-							className="w-full"
-						>
-							<div className="flex flex-col items-center p-2 bg-black/20 rounded-lg hover:bg-black/40 transition-all">
-								<RedditIcon size={24} round />
-								<span className="text-xs text-white/80 mt-1">
-									Reddit
-								</span>
-							</div>
-						</RedditShareButton>
-
-						<Button
-							onClick={handleNativeShare}
-							className=" h-full p-2 bg-black/20 rounded-lg hover:bg-black/40 transition-all"
-						>
-							<Share2 className="w-4 h-4 mr-2" />
-							{t("shareText")}
-						</Button>
+							</Button>
+						</div>
 					</div>
 				</div>
 			</DialogContent>

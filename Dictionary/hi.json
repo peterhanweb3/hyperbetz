@@ -7,7 +7,7 @@
 		"viewAll": "सभी देखें"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "Hyperbetz"
 	},
 	"header": {
 		"toggleSidebar": "साइडबार टॉगल करें",
@@ -815,7 +815,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "निकासी सफल!",
-			"successMessage": "🎉 अभी-अभी Meme Win से {withdrawAmount} {tokenSymbol} निकाले! 🚀 {shareUrl} पर जीतने की होड़ में शामिल हों",
+			"successMessage": "🎉 अभी-अभी Hyperbetz से {withdrawAmount} {tokenSymbol} निकाले! 🚀 {shareUrl} पर जीतने की होड़ में शामिल हों",
 			"withdrawnAmount": "निकाली गई राशि",
 			"shareText": "साझा करें",
 			"subText": "🚀 जीतने की होड़ में शामिल हों! 🚀",
@@ -936,7 +936,7 @@
 			"casino": {
 				"title": "कैसीनो",
 				"badge": "590+ गेम्स",
-				"desc": "MemeWin ओरिजिनल्स और शीर्ष प्रदाताओं के अन्य कैसीनो गेम्स का आनंद लें।",
+				"desc": "Hyperbetz ओरिजिनल्स और शीर्ष प्रदाताओं के अन्य कैसीनो गेम्स का आनंद लें।",
 				"link": "कैसीनो पर जाएं"
 			},
 			"slots": {
