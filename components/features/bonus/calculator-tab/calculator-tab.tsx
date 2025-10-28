@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { IndividualCalculator } from "@/components/common/affiliate-bonus/wager-calculator";
-import useAffiliateDashboard from "@/hooks/affiliate/useAffiliateDashboard";
+import useBonusDashboard from "@/hooks/bonus/useBonusDashboard";
 import { useAffiliateCalculator } from "@/hooks/affiliate/useAffiliateCalculator";
 // import { Calculator, TrendingUp } from "lucide-react";
 import { useTranslations } from "@/lib/locale-provider";
@@ -44,8 +44,7 @@ export const CalculatorTab = ({
 	context = "affiliate",
 }: CalculatorTabProps) => {
 	// Get the static rate data from the dashboard hook
-	const { affiliateRates, isLoading: isLoadingRates } =
-		useAffiliateDashboard();
+	const { bonusRates, isLoading: isLoadingRates } = useBonusDashboard();
 
 	// Get the interactive state and logic from the calculator hook
 	const { wagerInputs, handleWagerChange, calculateEarnings } =
@@ -98,7 +97,7 @@ export const CalculatorTab = ({
 				<CalculatorSkeleton />
 			) : (
 				<div className="grid gap-4 sm:gap-6">
-					{affiliateRates.map((rate) => (
+					{bonusRates.map((rate) => (
 						<IndividualCalculator
 							key={rate.level}
 							rate={rate}

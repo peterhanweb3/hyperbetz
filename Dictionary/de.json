@@ -7,7 +7,7 @@
 		"viewAll": "Alle ansehen"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "Seitenleiste umschalten",
@@ -526,6 +526,10 @@
 				"schedule": "Provisionszeitplan:",
 				"availableDaily": "Täglich verfügbar um",
 				"localTimeLabel": "(Deine lokale Zeit: {time})"
+			},
+			"overview": {
+				"title": "Übersicht",
+				"body": "Das Affiliate-Programm belohnt Partner basierend auf dem Wettumsatz von geworbenen Spielern in Slots, Live-Casino, Sportwetten und Lotterie. Provisionen werden alle 24 Stunden berechnet und basieren auf unterschiedlichen Umsatztarifen."
 			}
 		},
 		"calculator": {
@@ -811,7 +815,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Auszahlung erfolgreich!",
-			"successMessage": "🎉 Habe gerade {withdrawAmount} {tokenSymbol} von Hyperbetz abgehoben! 🚀 Mach mit bei der Siegesserie auf {shareUrl}",
+			"successMessage": "🎉 Habe gerade {withdrawAmount} {tokenSymbol} von Meme Win abgehoben! 🚀 Mach mit bei der Siegesserie auf {shareUrl}",
 			"withdrawnAmount": "Abgehobener Betrag",
 			"shareText": "Teilen",
 			"subText": "🚀 MACH MIT BEI DER SIEGESSTRÄHNE! 🚀",
@@ -932,7 +936,7 @@
 			"casino": {
 				"title": "Casino",
 				"badge": "590+ SPIELE",
-				"desc": "Genieße Hyperbetz Originals und andere Casinospiele von Top-Anbietern.",
+				"desc": "Genieße MemeWin Originals und andere Casinospiele von Top-Anbietern.",
 				"link": "Zum Casino"
 			},
 			"slots": {
@@ -1048,6 +1052,156 @@
 			"fontResetSuccess": "Schriftart auf Standard zurückgesetzt",
 			"invalidFileType": "Bitte lade eine gültige Schriftartdatei hoch (.woff, .woff2, .ttf, .otf)",
 			"uploadFailed": "Lesen der Schriftartdatei fehlgeschlagen"
+		}
+	},
+	"bonus": {
+		"title": "Mitgliederbonusprogramm",
+		"loginPromptTitle": "Mitglieder-Bonusprogramm",
+		"loginPromptSubtitle": "Melden Sie sich an, um Ihre Bonusstatistiken anzusehen und Ihre Belohnungen zu beanspruchen.",
+		"goHome": "Zur Startseite",
+		"tabs": {
+			"dashboard": "Dashboard",
+			"claims": "Ansprüche",
+			"rates": "Bonusraten",
+			"calculator": "Rechner"
+		},
+		"refresh": "Aktualisieren",
+		"refreshing": "Aktualisieren...",
+		"refreshAllSuccess": "Alle Daten wurden erfolgreich aktualisiert!",
+		"refreshPartial": "Teilweise aktualisiert: {success}/{total} Abschnitte aktualisiert",
+		"refreshFailed": "Daten konnten nicht aktualisiert werden. Bitte versuchen Sie es erneut.",
+		"dashboard": {
+			"title": "Bonus-Dashboard",
+			"subtitle": "Verfolgen Sie Ihre Wetten, Boni und Belohnungserträge",
+			"performanceOverview": "Bonusübersicht",
+			"bonusRatesTitle": "Bonuszinssatzstruktur",
+			"totalIncome": "Gesamter Bonus",
+			"pendingBonus": "Ausstehender Bonus",
+			"lastClaim": "Letzte Beanspruchung",
+			"unclaimedEarnings": "Verfügbar zum Einlösen",
+			"claim": {
+				"title": "Beanspruchung und Abhebung",
+				"points": {
+					"0": "Provisionen stehen nach Berechnung zur Auszahlung bereit.",
+					"1": "Es gibt kein Ablaufdatum für nicht eingeforderte Provisionen – sie sammeln sich an, bis sie eingefordert werden.",
+					"2": "Auszahlungen folgen den Standardregeln der Plattform, wie Mindestauszahlungsbeträgen und Bearbeitungszeiten."
+				}
+			},
+			"claiming": "Wird beansprucht...",
+			"section2": {
+				"title": "Berechtigung",
+				"content": "Um teilzunehmen:"
+			},
+			"section3": {
+				"title": "Landwirtschaftsstufen und -raten",
+				"content": "Boni werden basierend auf Ihren täglichen Wetteinsätzen berechnet:",
+				"noteTitle": "Hinweis",
+				"noteContent": "Stufen werden täglich um 14:00 Uhr UTC ausgewertet. Das Einsatzvolumen des Vortages bestimmt die aktuelle Bonusrate. Die Raten gelten für alle Spieltypen: Slots, Live-Casino und Sport."
+			}
+		},
+		"claims": {
+			"title": "Anspruchsverlauf",
+			"subtitle": "Verfolgen Sie Ihre Bonusansprüche und Wettaktivitäten",
+			"tableHeaders": {
+				"date": "Wettdatum",
+				"slots": "Slots",
+				"liveCasino": "Live-Casino",
+				"sports": "Sport",
+				"total": "Gesamt",
+				"tier": "Stufe",
+				"unclaimed": "Nicht beansprucht",
+				"token": "Token"
+			},
+			"tierPrefix": "Stufe",
+			"availableToClaim": "Verfügbar zum Anspruch",
+			"totalBonus": "Gesamter Bonus",
+			"claimed": "Beansprucht",
+			"progressPercentage": "Fortschritt",
+			"progressTitle": "Ihr Fortschritt",
+			"currentTier": "Aktuelle Stufe",
+			"nextTier": "Nächste Stufe",
+			"wagerProgress": "Wettschritt",
+			"totalWagered": "Heute insgesamt gesetzt",
+			"toNextTier": "um die nächste Stufe zu erreichen",
+			"empty": {
+				"title": "Noch keine Bonusansprüche",
+				"subtitle": "Beginne zu spielen, um Boni zu verdienen!"
+			}
+		},
+		"rates": {
+			"title": "Anbau-Stufen und -Raten",
+			"subtitle": "Bonus-Prozentsätze nach Einsatzhöhe und Spielkategorie",
+			"overview": {
+				"title": "Übersicht",
+				"body": "Das Bonus Farming belohnt Benutzer basierend auf ihren Wetten in Slot, Live-Casino, Sportwetten und Lotterie. Boni werden alle 24 Stunden berechnet und können am nächsten Tag nach dem Wetten beansprucht werden. Es gibt sieben Stufen, jede mit unterschiedlichen Raten, abhängig vom Einsatzbetrag."
+			},
+			"eligibility": {
+				"title": "Berechtigung",
+				"content": "Zur Teilnahme:",
+				"points": {
+					"0": "Sie müssen ein aktives Konto haben.",
+					"1": "Setzen Sie Einsätze in Slots, Live-Casino, Sportwetten und Lotterie.",
+					"2": "Erfüllen Sie die Mindestwettanforderungen für jede Stufe."
+				}
+			},
+			"calculation": {
+				"title": "Wie Boni berechnet werden",
+				"desc": "Boni werden alle 24 Stunden basierend auf Ihren Gesamteinsätzen berechnet. Beispiele:",
+				"exampleTitle": "Stufe {tier}:",
+				"wagerIn": "Setze {amount} in {gameType}"
+			},
+			"table": {
+				"tierLevel": "Stufe",
+				"wagerRange": "Einsatzbereich",
+				"slots": "Slots",
+				"liveCasino": "Live-Casino",
+				"sports": "Sportarten",
+				"tierPrefix": "STUFE",
+				"commissionLevel": "Bonuslevel",
+				"dailyWager": "Tägliches Wettvolumen"
+			},
+			"claim": {
+				"title": "Bonus einfordern und abheben",
+				"points": {
+					"0": "Boni können 24 Stunden nach dem Einsatz beansprucht werden.",
+					"1": "Nicht beanspruchte Boni werden angesammelt und verfallen nicht.",
+					"2": "Der Anspruchs- und Auszahlungsprozess kann je nach plattformspezifischen Richtlinien variieren."
+				}
+			},
+			"system": {
+				"title": "Systemzeit und -operationen",
+				"dailyTimeframeLabel": "Täglicher Zeitrahmen:",
+				"dailyTimeframeValue": "00:00 UTC bis 23:59 UTC (jeden Tag).",
+				"claimDailyLabel": "Täglich beanspruchen:",
+				"claimDailyValue": "Täglich verfügbar um 14:00 UTC (Ihre Ortszeit: {local}).",
+				"note": "Hinweis: Während wir mit Anbietern aus verschiedenen Zeitzonen arbeiten, erfolgen alle Berechnungen nach UTC, um Konsistenz zu gewährleisten und Verwirrung zu vermeiden."
+			},
+			"amendments": {
+				"title": "Änderungen und Disqualifikationen",
+				"body": "Wir können diese Bedingungen jederzeit aktualisieren, und Änderungen treten mit der Veröffentlichung in Kraft. Bei Verdacht auf Systemfehler, Fehlberechnungen oder Betrug behalten wir uns das Recht vor, Boni und Konten nach Bedarf anzupassen oder zu disqualifizieren, um Fairness zu gewährleisten"
+			},
+			"footer": {
+				"schedule": "Bonusplan:",
+				"availableDaily": "Täglich verfügbar um",
+				"localTimeLabel": "(Ihre Ortszeit: {time})"
+			}
+		},
+		"calculator": {
+			"title": "Bonusrechner",
+			"subtitle": "Schätzen Sie Ihre Bonusgewinne basierend auf Ihren Einsatzbeträgen",
+			"interactive": {
+				"title": "Interaktives Werkzeug:",
+				"body": "Geben Sie verschiedene Einsatzbeträge ein, um potenzielle Boni in allen Stufen zu sehen"
+			},
+			"potentialEarnings": "Potenzieller Bonus",
+			"basedOnRate": "Basierend auf {percentage}% Bonusrate",
+			"tier": "Stufe {level}",
+			"commissionLevel": "Bonuslevel {level}",
+			"enterWager": "Einsatzbetrag eingeben (USD)",
+			"wagerPlaceholder": "z. B., 1000",
+			"calcFor": "Bonus für ${amount} Wetteinsatz berechnen",
+			"totalPotential": "Gesamtpotenzieller Bonus:",
+			"combinedAtTier": "Kombinierter Bonus aus allen Spieltypen auf Stufe {level}"
 		}
 	}
 }

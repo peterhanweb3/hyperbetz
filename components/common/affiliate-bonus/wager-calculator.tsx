@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { AffiliateRate } from "@/types/affiliate/affiliate.types";
+import { BonusRate } from "@/types/bonus/bonus.types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faDollarSign,
@@ -13,19 +14,18 @@ import {
 	faTrophy,
 } from "@fortawesome/pro-light-svg-icons";
 import { useTranslations } from "@/lib/locale-provider";
+import {
+	formatTurnoverRange,
+	getTierColorScheme,
+} from "@/lib/utils/features/affiliate-bonus/affiliate-bonus.utils";
 
 interface IndividualCalculatorProps {
-	rate: AffiliateRate;
+	rate: AffiliateRate | BonusRate;
 	wagerAmount: string;
 	onWagerChange: (amount: string) => void;
 	calculateEarnings: (wager: number, percentage: string | null) => number;
+	context?: "affiliate" | "bonus";
 }
-
-const formatTurnover = (min: string, max: string) => {
-	const minNum = parseInt(min);
-	if (parseInt(max) > 1_000_000_000) return `> $${minNum.toLocaleString()}`;
-	return `$${minNum.toLocaleString()} - $${parseInt(max).toLocaleString()}`;
-};
 
 const GameTypeCalculator = ({
 	type,
@@ -33,6 +33,7 @@ const GameTypeCalculator = ({
 	earnings,
 	icon,
 	color,
+	context = "affiliate",
 }: {
 	type: string;
 	percentage: string | null;
@@ -40,8 +41,9 @@ const GameTypeCalculator = ({
 	earnings: number;
 	icon: React.ReactNode;
 	color: string;
+	context?: "affiliate" | "bonus";
 }) => {
-	const t = useTranslations("affiliate.calculator");
+	const t = useTranslations(`${context}.calculator`);
 	return (
 		<div
 			className={`relative overflow-hidden rounded-xl border border-border/50 bg-gradient-to-br from-card via-card to-muted/20 p-4 shadow-sm transition-all hover:shadow-md hover:border-${color}/30 group`}
@@ -91,29 +93,17 @@ const GameTypeCalculator = ({
 	);
 };
 
-const getTierColor = (level: number) => {
-	const colors = [
-		{ bg: "slate", ring: "slate" },
-		{ bg: "amber", ring: "amber" },
-		{ bg: "emerald", ring: "emerald" },
-		{ bg: "blue", ring: "blue" },
-		{ bg: "purple", ring: "purple" },
-		{ bg: "pink", ring: "pink" },
-		{ bg: "orange", ring: "orange" },
-	];
-	return colors[level - 1] || colors[0];
-};
-
 export const IndividualCalculator = ({
 	rate,
 	wagerAmount,
 	onWagerChange,
 	calculateEarnings,
+	context = "affiliate",
 }: IndividualCalculatorProps) => {
 	const wager = parseFloat(wagerAmount) || 0;
-	const tierColor = getTierColor(Number(rate.level));
-	const t = useTranslations("affiliate.calculator");
-	const tRates = useTranslations("affiliate.rates");
+	const tierColor = getTierColorScheme(Number(rate.level));
+	const t = useTranslations(`${context}.calculator`);
+	const tRates = useTranslations(`${context}.rates`);
 
 	return (
 		<Card className="relative overflow-hidden bg-gradient-to-br from-card via-card to-muted/10 border-border/50 shadow-lg hover:shadow-xl transition-all duration-300 group">
@@ -150,7 +140,7 @@ export const IndividualCalculator = ({
 							className="h-4 w-4 mr-2"
 						/>
 						{tRates("table.wagerRange")}{" "}
-						{formatTurnover(rate.min_to, rate.max_to)}
+						{formatTurnoverRange(rate.min_to, rate.max_to)}
 					</Badge>
 				</div>
 
@@ -197,6 +187,7 @@ export const IndividualCalculator = ({
 							/>
 						}
 						color="amber"
+						context={context}
 					/>
 					<GameTypeCalculator
 						type={tRates("table.liveCasino")}
@@ -210,6 +201,7 @@ export const IndividualCalculator = ({
 							/>
 						}
 						color="red"
+						context={context}
 					/>
 					<GameTypeCalculator
 						type={tRates("table.sports")}
@@ -223,6 +215,7 @@ export const IndividualCalculator = ({
 							/>
 						}
 						color="blue"
+						context={context}
 					/>
 				</div>
 

@@ -7,7 +7,7 @@
 		"viewAll": "すべて表示"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "サイドバーの切り替え",
@@ -526,6 +526,10 @@
 				"schedule": "コミッションスケジュール:",
 				"availableDaily": "毎日利用可能",
 				"localTimeLabel": "（あなたの現地時間: {time}）"
+			},
+			"overview": {
+				"title": "概要",
+				"body": "アフィリエイトプログラムは、スロット、ライブカジノ、スポーツブック、宝くじで紹介されたプレイヤーのベット売上に基づいてアフィリエイトに報酬を与えます。コミッションは24時間ごとに計算され、異なる売上階層に基づいて収益が得られます。"
 			}
 		},
 		"calculator": {
@@ -811,7 +815,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "出金成功！",
-			"successMessage": "🎉 Hyperbetzから{withdrawAmount}{tokenSymbol}を出金しました！ 🚀 {shareUrl}で勝利の連鎖に参加しよう",
+			"successMessage": "🎉 Meme Winから{withdrawAmount}{tokenSymbol}を出金しました！ 🚀 {shareUrl}で勝利の連鎖に参加しよう",
 			"withdrawnAmount": "出金額",
 			"shareText": "共有",
 			"subText": "🚀 勝利の連鎖に参加しよう！ 🚀",
@@ -932,7 +936,7 @@
 			"casino": {
 				"title": "カジノ",
 				"badge": "590+ ゲーム",
-				"desc": "Hyperbetzオリジナルやトッププロバイダーのカジノゲームをお楽しみください。",
+				"desc": "MemeWinオリジナルやトッププロバイダーのカジノゲームをお楽しみください。",
 				"link": "カジノへ行く"
 			},
 			"slots": {
@@ -1048,6 +1052,156 @@
 			"fontResetSuccess": "フォントがデフォルトにリセットされました",
 			"invalidFileType": "有効なフォントファイルをアップロードしてください (.woff, .woff2, .ttf, .otf)",
 			"uploadFailed": "フォントファイルの読み込みに失敗しました"
+		}
+	},
+	"bonus": {
+		"title": "メンバーボーナスプログラム",
+		"loginPromptTitle": "メンバーボーナスプログラム",
+		"loginPromptSubtitle": "ボーナス統計を表示して報酬を請求するにはログインしてください。",
+		"goHome": "ホームに戻る",
+		"tabs": {
+			"dashboard": "ダッシュボード",
+			"claims": "クレーム",
+			"rates": "ボーナス率",
+			"calculator": "電卓"
+		},
+		"refresh": "更新",
+		"refreshing": "更新中...",
+		"refreshAllSuccess": "すべてのデータが正常に更新されました！",
+		"refreshPartial": "部分的に更新:{success}/{total} セクションが更新されました",
+		"refreshFailed": "データの更新に失敗しました。再度お試しください。",
+		"dashboard": {
+			"title": "ボーナスダッシュボード",
+			"subtitle": "ベット、ボーナス、および報酬の収益を追跡する",
+			"performanceOverview": "ボーナス概要",
+			"bonusRatesTitle": "ボーナスレート構造",
+			"totalIncome": "合計ボーナス",
+			"pendingBonus": "保留中のボーナス",
+			"lastClaim": "最後の請求",
+			"unclaimedEarnings": "請求可能",
+			"claim": {
+				"title": "請求と引き出し",
+				"points": {
+					"0": "手数料は計算後に引き出しが可能です。",
+					"1": "未請求の手数料には有効期限がありません - 請求されるまで蓄積されます。",
+					"2": "引き出しは、最低限度額や処理時間など、プラットフォームの標準ルールに従います。"
+				}
+			},
+			"claiming": "請求中...",
+			"section2": {
+				"title": "資格",
+				"content": "参加するには:"
+			},
+			"section3": {
+				"title": "農業の階層と料金",
+				"content": "ボーナスは毎日の賭け金額に基づいて計算されます:",
+				"noteTitle": "注",
+				"noteContent": "レベルは毎日14:00 UTCに評価されます。前日の賭け額が今日のボーナス率を決定します。レートはすべてのゲームタイプに適用されます：スロット、ライブカジノ、そしてスポーツ。"
+			}
+		},
+		"claims": {
+			"title": "請求履歴",
+			"subtitle": "ボーナス請求と賭けの活動を追跡する",
+			"tableHeaders": {
+				"date": "ベッティング日",
+				"slots": "スロット",
+				"liveCasino": "ライブカジノ",
+				"sports": "スポーツ",
+				"total": "合計",
+				"tier": "階層",
+				"unclaimed": "未請求",
+				"token": "トークン"
+			},
+			"tierPrefix": "ティア",
+			"availableToClaim": "請求可能",
+			"totalBonus": "合計ボーナス",
+			"claimed": "請求済み",
+			"progressPercentage": "進捗",
+			"progressTitle": "進捗状況",
+			"currentTier": "現在のランク",
+			"nextTier": "次のレベル",
+			"wagerProgress": "賭けの進捗",
+			"totalWagered": "本日の合計賭け金",
+			"toNextTier": "次の階層に到達するために",
+			"empty": {
+				"title": "まだボーナス請求はありません",
+				"subtitle": "ボーナスを獲得するためにプレイを始めましょう！"
+			}
+		},
+		"rates": {
+			"title": "農業の階層と料金",
+			"subtitle": "賭けレベルおよびゲームカテゴリーによるボーナス割合",
+			"overview": {
+				"title": "概要",
+				"body": "ボーナスファーミングは、スロット、ライブカジノ、スポーツブック、宝くじにおけるプレイヤーの賭けに基づいてユーザーに報酬を与えます。ボーナスは24時間ごとに計算され、ユーザーは賭けの翌日にそれを請求できます。賭け金額に応じて異なるレートの7つの段階があります。"
+			},
+			"eligibility": {
+				"title": "適格性",
+				"content": "参加するには:",
+				"points": {
+					"0": "アクティブなアカウントを持っている必要があります。",
+					"1": "スロット、ライブカジノ、スポーツブック、宝くじに賭けをする。",
+					"2": "各レベルの最低賭け要件を満たしてください。"
+				}
+			},
+			"calculation": {
+				"title": "ボーナスの計算方法",
+				"desc": "ボーナスは24時間ごとにあなたの総賭け金に基づいて計算されます。例：",
+				"exampleTitle": "レベル {tier}：",
+				"wagerIn": "{gameType}で{amount}を賭けます"
+			},
+			"table": {
+				"tierLevel": "ティアレベル",
+				"wagerRange": "賭け金範囲",
+				"slots": "スロット",
+				"liveCasino": "ライブカジノ",
+				"sports": "スポーツ",
+				"tierPrefix": "階層",
+				"commissionLevel": "ボーナスレベル",
+				"dailyWager": "日次賭け金額"
+			},
+			"claim": {
+				"title": "ボーナスの請求と引き出し",
+				"points": {
+					"0": "ボーナスは賭けから24時間後に請求可能になります。",
+					"1": "請求されていないボーナスは蓄積され、有効期限が切れることはありません。",
+					"2": "請求と引き出しのプロセスは、プラットフォーム固有のポリシーに基づいて異なる場合があります。"
+				}
+			},
+			"system": {
+				"title": "システム時間と操作",
+				"dailyTimeframeLabel": "日次の時間枠:",
+				"dailyTimeframeValue": "00:00 UTCから23:59 UTCまで（毎日）。",
+				"claimDailyLabel": "デイリーを請求:",
+				"claimDailyValue": "毎日14:00 UTC（あなたの現地時間: {local}）に利用可能。",
+				"note": "注: 異なるタイムゾーンのプロバイダーと連携している間、すべての計算は一貫性を確保し、混乱を避けるためにUTCに従います。"
+			},
+			"amendments": {
+				"title": "修正および失格",
+				"body": "私たちは随時これらの条件を更新することができ、変更は掲載時に有効になります。システムエラー、計算ミス、または不正行為が疑われる場合、公平性を確保するためにボーナスとアカウントを必要に応じて調整または失格させる権利を留保します"
+			},
+			"footer": {
+				"schedule": "ボーナススケジュール:",
+				"availableDaily": "毎日利用可能：",
+				"localTimeLabel": "(あなたの現地時間: {time})"
+			}
+		},
+		"calculator": {
+			"title": "ボーナス計算機",
+			"subtitle": "あなたの賭け金額に基づいてボーナス収益を見積もります",
+			"interactive": {
+				"title": "インタラクティブツール:",
+				"body": "異なる賭け額を入力して、すべてのティアでの潜在的なボーナスを確認してください"
+			},
+			"potentialEarnings": "潜在的なボーナス",
+			"basedOnRate": "{percentage}% のボーナス率に基づく",
+			"tier": "レベル{level}",
+			"commissionLevel": "ボーナスレベル {level}",
+			"enterWager": "賭け金を入力 (USD)",
+			"wagerPlaceholder": "例: 1000",
+			"calcFor": "${amount} 賭け金のボーナスを計算中",
+			"totalPotential": "総潜在ボーナス:",
+			"combinedAtTier": "ティア{level}のすべてのゲームタイプからの合計ボーナス"
 		}
 	}
 }

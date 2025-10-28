@@ -7,7 +7,7 @@
 		"viewAll": "查看全部"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "切换侧边栏",
@@ -526,6 +526,10 @@
 				"schedule": "佣金时间表:",
 				"availableDaily": "每日可用时间为",
 				"localTimeLabel": "(您的本地时间: {time})"
+			},
+			"overview": {
+				"title": "概览",
+				"body": "联盟计划根据推荐玩家在老虎机、真人娱乐场、体育博彩和彩票中的下注营业额来奖励联盟。佣金每24小时计算一次，收入基于不同营业额层级。"
 			}
 		},
 		"calculator": {
@@ -811,7 +815,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "取款成功！",
-			"successMessage": "🎉 刚从 Hyperbetz 提取了 {withdrawAmount} {tokenSymbol}！🚀 在 {shareUrl} 加入胜利的行列",
+			"successMessage": "🎉 刚从 Meme Win 提取了 {withdrawAmount} {tokenSymbol}！🚀 在 {shareUrl} 加入胜利的行列",
 			"withdrawnAmount": "已取款金额",
 			"shareText": "分享",
 			"subText": "🚀 加入胜利的行列！🚀",
@@ -932,7 +936,7 @@
 			"casino": {
 				"title": "赌场",
 				"badge": "590+ 游戏",
-				"desc": "享受 Hyperbetz 原创和其他顶级提供商的赌场游戏。",
+				"desc": "享受 MemeWin 原创和其他顶级提供商的赌场游戏。",
 				"link": "前往赌场"
 			},
 			"slots": {
@@ -1048,6 +1052,156 @@
 			"fontResetSuccess": "字体已重置为默认",
 			"invalidFileType": "请上传有效的字体文件 (.woff, .woff2, .ttf, .otf)",
 			"uploadFailed": "读取字体文件失败"
+		}
+	},
+	"bonus": {
+		"title": "会员奖励计划",
+		"loginPromptTitle": "会员奖励计划",
+		"loginPromptSubtitle": "登录以查看您的奖金统计和领取奖励。",
+		"goHome": "返回主页",
+		"tabs": {
+			"dashboard": "仪表板",
+			"claims": "索赔",
+			"rates": "奖金率",
+			"calculator": "计算器"
+		},
+		"refresh": "刷新",
+		"refreshing": "正在刷新...",
+		"refreshAllSuccess": "所有数据刷新成功！",
+		"refreshPartial": "部分刷新：已更新 {success}/{total} 部分",
+		"refreshFailed": "无法刷新数据。请再试一次。",
+		"dashboard": {
+			"title": "奖金仪表板",
+			"subtitle": "跟踪您的投注、奖金和奖励收益",
+			"performanceOverview": "奖励概况",
+			"bonusRatesTitle": "奖金率结构",
+			"totalIncome": "总奖金",
+			"pendingBonus": "待处理奖金",
+			"lastClaim": "最后一次索赔",
+			"unclaimedEarnings": "可领取",
+			"claim": {
+				"title": "申领和提现",
+				"points": {
+					"0": "佣金在计算后即可提款。",
+					"1": "未领取的佣金没有截止日期—它们会累积直到被领取。",
+					"2": "提款遵循平台的标准规则，如最低限额和处理时间。"
+				}
+			},
+			"claiming": "正在认领...",
+			"section2": {
+				"title": "资格",
+				"content": "要参与："
+			},
+			"section3": {
+				"title": "耕作等级与费率",
+				"content": "奖励是根据您的每日投注金额计算的：",
+				"noteTitle": "注意",
+				"noteContent": "等级每天在14:00 UTC进行评估。前一天的投注量决定了当天的奖金率。该比率适用于所有游戏类型：老虎机、真人娱乐场和体育。"
+			}
+		},
+		"claims": {
+			"title": "索赔历史",
+			"subtitle": "跟踪您的奖金申领和投注活动",
+			"tableHeaders": {
+				"date": "投注日期",
+				"slots": "老虎机",
+				"liveCasino": "真人赌场",
+				"sports": "体育",
+				"total": "总计",
+				"tier": "级别",
+				"unclaimed": "未认领",
+				"token": "代币"
+			},
+			"tierPrefix": "级别",
+			"availableToClaim": "可领取",
+			"totalBonus": "总奖金",
+			"claimed": "已索取",
+			"progressPercentage": "进度",
+			"progressTitle": "您的进度",
+			"currentTier": "当前等级",
+			"nextTier": "下一阶",
+			"wagerProgress": "投注进度",
+			"totalWagered": "今日投注总额",
+			"toNextTier": "达到下一层级",
+			"empty": {
+				"title": "尚未有奖金索赔",
+				"subtitle": "开始游戏以赚取奖励！"
+			}
+		},
+		"rates": {
+			"title": "农业等级和费率",
+			"subtitle": "按投注等级和游戏类别划分的奖金百分比",
+			"overview": {
+				"title": "概览",
+				"body": "奖金农场根据用户在老虎机、真人赌场、体育博彩和彩票中的投注给予奖励。奖金每24小时计算一次，用户可以在投注后的第二天领取。共有七个等级，每个等级的费率根据投注额不同。"
+			},
+			"eligibility": {
+				"title": "资格",
+				"content": "要参与：",
+				"points": {
+					"0": "您必须拥有一个活跃的账户。",
+					"1": "在老虎机、真人娱乐场、体育博彩和彩票中投注。",
+					"2": "满足每个级别的最低投注要求。"
+				}
+			},
+			"calculation": {
+				"title": "奖金如何计算",
+				"desc": "奖金每24小时根据您的总投注额计算。示例：",
+				"exampleTitle": "等级 {tier}:",
+				"wagerIn": "在{gameType}中投注{amount}"
+			},
+			"table": {
+				"tierLevel": "层级",
+				"wagerRange": "下注范围",
+				"slots": "老虎机",
+				"liveCasino": "真人娱乐场",
+				"sports": "体育",
+				"tierPrefix": "等级",
+				"commissionLevel": "奖励等级",
+				"dailyWager": "每日下注量"
+			},
+			"claim": {
+				"title": "领取和提款奖金",
+				"points": {
+					"0": "奖金在下注后的24小时后才有资格领取。",
+					"1": "未领取的奖金将累积且不会过期。",
+					"2": "申领和提款过程可能会根据平台的具体政策而有所不同。"
+				}
+			},
+			"system": {
+				"title": "系统时间和操作",
+				"dailyTimeframeLabel": "日时间框架：",
+				"dailyTimeframeValue": "00:00 UTC 到 23:59 UTC（每天）。",
+				"claimDailyLabel": "每日领取：",
+				"claimDailyValue": "每天的14:00 UTC可用（您的本地时间：{local}）。",
+				"note": "注意：虽然我们与来自不同时区的供应商合作，但所有计算均遵循UTC，以确保一致性并避免混淆。"
+			},
+			"amendments": {
+				"title": "修正和取消资格",
+				"body": "我们可能随时更新这些条款，变更在发布时生效。如果怀疑系统错误、计算错误或作弊行为，我们保留根据需要调整或取消奖金和账户的权利，以确保公正性"
+			},
+			"footer": {
+				"schedule": "奖金计划：",
+				"availableDaily": "每天可用时间",
+				"localTimeLabel": "(您的本地时间：{time})"
+			}
+		},
+		"calculator": {
+			"title": "奖金计算器",
+			"subtitle": "根据您的投注金额估算您的奖金收入",
+			"interactive": {
+				"title": "互动工具:",
+				"body": "输入不同的赌注金额以查看所有级别的潜在奖金"
+			},
+			"potentialEarnings": "潜在奖金",
+			"basedOnRate": "基于{percentage}%的奖金率",
+			"tier": "等级 {level}",
+			"commissionLevel": "奖励关卡 {level}",
+			"enterWager": "输入投注金额 (USD)",
+			"wagerPlaceholder": "例如，1000",
+			"calcFor": "正在计算 ${amount} 投注的奖金",
+			"totalPotential": "总潜在奖金:",
+			"combinedAtTier": "在级别{level}的所有游戏类型中获得的综合奖金"
 		}
 	}
 }

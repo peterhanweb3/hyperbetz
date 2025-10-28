@@ -6,6 +6,7 @@ import { UiDefinitionSlice, createUiDefinitionSlice } from "./slices/ui";
 import { QuerySlice, createQueryControlSlice } from "./slices/query";
 import { createBlockchainSlice, BlockchainSlice } from "./slices/blockchain";
 import { createAffiliateSlice, AffiliateSliceBranch } from "./slices/affiliate";
+import { createBonusSlice, BonusSliceBranch } from "./slices/bonus";
 import {
 	TransactionSlice,
 	createTransactionSlice,
@@ -19,6 +20,7 @@ type AppStore = {
 	blockchain: BlockchainSlice;
 	transactions: TransactionSlice;
 	affiliate: AffiliateSliceBranch;
+	bonus: BonusSliceBranch;
 	dynamicLoaded: boolean;
 	history: HistorySlice;
 	setDynamicLoaded: (loaded: boolean) => void;
@@ -44,6 +46,7 @@ const useAppStore = create<AppStore>()(
 			blockchain: createBlockchainSlice(...args),
 			transactions: createTransactionSlice(...args),
 			affiliate: createAffiliateSlice(...args),
+			bonus: createBonusSlice(...args),
 			history: createHistoryBranch(...args),
 			dynamicLoaded: false, // Initial state for dynamic loading
 			setDynamicLoaded: (loaded: boolean) => {

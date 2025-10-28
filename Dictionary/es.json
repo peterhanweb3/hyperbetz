@@ -1,6 +1,6 @@
 {
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "Alternar barra lateral",
@@ -526,6 +526,10 @@
 				"schedule": "Calendario de comisiones:",
 				"availableDaily": "Disponible diariamente a las",
 				"localTimeLabel": "(Tu hora local: {time})"
+			},
+			"overview": {
+				"title": "Resumen",
+				"body": "El Programa de Afiliados recompensa a los afiliados en función de la rotación de apuestas de los jugadores referidos en tragamonedas, casino en vivo, apuestas deportivas y lotería. Las comisiones se calculan cada 24 horas, con ganancias basadas en diferentes niveles de rotación."
 			}
 		},
 		"calculator": {
@@ -811,7 +815,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "¡Retiro Exitoso!",
-			"successMessage": "🎉 ¡Acabo de retirar {withdrawAmount} {tokenSymbol} de Hyperbetz! 🚀 ¡Únete a la racha ganadora en {shareUrl}",
+			"successMessage": "🎉 ¡Acabo de retirar {withdrawAmount} {tokenSymbol} de Meme Win! 🚀 ¡Únete a la racha ganadora en {shareUrl}",
 			"withdrawnAmount": "Cantidad Retirada",
 			"shareText": "¡Comparte",
 			"subText": "🚀 ¡ÚNETE A LA RACHA GANADORA! 🚀",
@@ -932,7 +936,7 @@
 			"casino": {
 				"title": "Casino",
 				"badge": "590+ JUEGOS",
-				"desc": "Disfruta de Hyperbetz Originals y otros juegos de casino de los mejores proveedores.",
+				"desc": "Disfruta de MemeWin Originals y otros juegos de casino de los mejores proveedores.",
 				"link": "Ir al Casino"
 			},
 			"slots": {
@@ -1048,6 +1052,156 @@
 			"fontResetSuccess": "Fuente restablecida a predeterminada",
 			"invalidFileType": "Por favor sube un archivo de fuente válido (.woff, .woff2, .ttf, .otf)",
 			"uploadFailed": "Error al leer el archivo de fuente"
+		}
+	},
+	"bonus": {
+		"title": "Programa de Bonificación para Miembros",
+		"loginPromptTitle": "Programa de Bonos para Miembros",
+		"loginPromptSubtitle": "Inicia sesión para ver tus estadísticas de bonificación y reclamar tus recompensas.",
+		"goHome": "Ir a Inicio",
+		"tabs": {
+			"dashboard": "Panel de control",
+			"claims": "Reclamaciones",
+			"rates": "Tasas de bonificación",
+			"calculator": "Calculadora"
+		},
+		"refresh": "Actualizar",
+		"refreshing": "Actualizando...",
+		"refreshAllSuccess": "¡Todos los datos se actualizaron con éxito!",
+		"refreshPartial": "Actualizado parcialmente: {success}/{total} secciones actualizadas",
+		"refreshFailed": "Error al actualizar los datos. Por favor, inténtelo de nuevo.",
+		"dashboard": {
+			"title": "Panel de Bonificaciones",
+			"subtitle": "Rastrea tus apuestas, bonos y ganancias de recompensas",
+			"performanceOverview": "Resumen de bonificación",
+			"bonusRatesTitle": "Estructura de tasa de bonificación",
+			"totalIncome": "Bono Total",
+			"pendingBonus": "Bono Pendiente",
+			"lastClaim": "Última reclamación",
+			"unclaimedEarnings": "Disponible para reclamar",
+			"claim": {
+				"title": "Reclamación y Retiro",
+				"points": {
+					"0": "Las comisiones están disponibles para retiro una vez calculadas.",
+					"1": "No hay vencimiento para las comisiones no reclamadas: se acumulan hasta que se reclaman.",
+					"2": "Los retiros siguen las reglas estándar de la plataforma, como límites mínimos y tiempos de procesamiento."
+				}
+			},
+			"claiming": "Reclamando...",
+			"section2": {
+				"title": "Elegibilidad",
+				"content": "Para participar:"
+			},
+			"section3": {
+				"title": "Niveles y Tarifas de Cultivo",
+				"content": "Las bonificaciones se calculan en función de sus montos de apuesta diarios:",
+				"noteTitle": "Nota",
+				"noteContent": "Los niveles se evalúan diariamente a las 14:00 UTC. El volumen de apuestas del día anterior determina la tasa de bonificación de hoy. Las tasas se aplican a todos los tipos de juegos: Tragamonedas, Casino en vivo y Deportes."
+			}
+		},
+		"claims": {
+			"title": "Historial de reclamaciones",
+			"subtitle": "Sigue tus reclamos de bonificación y actividad de apuestas",
+			"tableHeaders": {
+				"date": "Fecha de apuesta",
+				"slots": "Tragamonedas",
+				"liveCasino": "Casino en Vivo",
+				"sports": "Deportes",
+				"total": "Total",
+				"tier": "Nivel",
+				"unclaimed": "No reclamado",
+				"token": "Token"
+			},
+			"tierPrefix": "Nivel",
+			"availableToClaim": "Disponible para reclamar",
+			"totalBonus": "Bono Total",
+			"claimed": "Reclamado",
+			"progressPercentage": "Progreso",
+			"progressTitle": "Tu progreso",
+			"currentTier": "Nivel actual",
+			"nextTier": "Siguiente nivel",
+			"wagerProgress": "Progreso de apuesta",
+			"totalWagered": "Total apostado hoy",
+			"toNextTier": "para alcanzar el siguiente nivel",
+			"empty": {
+				"title": "Aún no hay reclamaciones de bonificación",
+				"subtitle": "¡Empieza a jugar para ganar bonificaciones!"
+			}
+		},
+		"rates": {
+			"title": "Niveles y Tarifas de Agricultura",
+			"subtitle": "Porcentajes de bonificación por nivel de apuesta y categoría de juego",
+			"overview": {
+				"title": "Visión general",
+				"body": "La Agricultura de Bonos recompensa a los usuarios según sus apuestas en tragamonedas, casino en vivo, sportsbook y lotería. Los bonos se calculan cada 24 horas y los usuarios pueden reclamarlos al día siguiente después de apostar. Hay siete niveles, cada uno con diferentes tasas dependiendo del monto de la apuesta."
+			},
+			"eligibility": {
+				"title": "Elegibilidad",
+				"content": "Para participar:",
+				"points": {
+					"0": "Debe tener una cuenta activa.",
+					"1": "Haz apuestas en tragamonedas, casino en vivo, apuestas deportivas y lotería.",
+					"2": "Cumple con los requisitos mínimos de apuesta para cada nivel."
+				}
+			},
+			"calculation": {
+				"title": "Cómo se calculan los bonos",
+				"desc": "Los bonos se calculan cada 24 horas basados en tus apuestas totales. Ejemplos:",
+				"exampleTitle": "Nivel {tier}:",
+				"wagerIn": "Apuesta {amount} en {gameType}"
+			},
+			"table": {
+				"tierLevel": "Nivel de nivel",
+				"wagerRange": "Rango de Apuesta",
+				"slots": "Tragamonedas",
+				"liveCasino": "Casino en Vivo",
+				"sports": "Deportes",
+				"tierPrefix": "NIVEL",
+				"commissionLevel": "Nivel de bonificación",
+				"dailyWager": "Volumen de apuesta diaria"
+			},
+			"claim": {
+				"title": "Reclamar y retirar bonos",
+				"points": {
+					"0": "Las bonificaciones se vuelven elegibles para reclamar 24 horas después de la apuesta.",
+					"1": "Los bonos no reclamados se acumularán y no caducarán.",
+					"2": "El proceso de reclamación y retirada puede variar según las políticas específicas de la plataforma."
+				}
+			},
+			"system": {
+				"title": "Hora y operaciones del sistema",
+				"dailyTimeframeLabel": "Período diario:",
+				"dailyTimeframeValue": "00:00 UTC a 23:59 UTC (todos los días).",
+				"claimDailyLabel": "Reclamación diaria:",
+				"claimDailyValue": "Disponible diariamente a las 14:00 UTC (Tu hora local: {local}).",
+				"note": "Nota: Mientras trabajamos con proveedores de diferentes zonas horarias, todos los cálculos siguen la UTC para garantizar la coherencia y evitar confusiones."
+			},
+			"amendments": {
+				"title": "Enmiendas y descalificaciones",
+				"body": "Podemos actualizar estos términos en cualquier momento, y los cambios entran en vigor al publicarse. Si se sospecha de errores del sistema, errores de cálculo o trampas, nos reservamos el derecho de ajustar o descalificar bonificaciones y cuentas según sea necesario para garantizar la equidad"
+			},
+			"footer": {
+				"schedule": "Programa de bonificaciones:",
+				"availableDaily": "Disponible diariamente a",
+				"localTimeLabel": "(Tu hora local: {time})"
+			}
+		},
+		"calculator": {
+			"title": "Calculadora de Bonos",
+			"subtitle": "Estime sus ganancias de bonificación basadas en sus montos de apuesta",
+			"interactive": {
+				"title": "Herramienta interactiva:",
+				"body": "Ingrese diferentes montos de apuesta para ver bonos potenciales en todos los niveles"
+			},
+			"potentialEarnings": "Bono Potencial",
+			"basedOnRate": "Basado en una tasa de bonificación del {percentage}%",
+			"tier": "Nivel {level}",
+			"commissionLevel": "Nivel de bonificación {level}",
+			"enterWager": "Ingresa el monto de la apuesta (USD)",
+			"wagerPlaceholder": "p. ej., 1000",
+			"calcFor": "Calculando bono para una apuesta de ${amount}",
+			"totalPotential": "Bono Potencial Total:",
+			"combinedAtTier": "Bono combinado de todos los tipos de juego en el nivel {level}"
 		}
 	}
 }

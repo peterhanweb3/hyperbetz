@@ -7,7 +7,7 @@
 		"viewAll": "Mostra tutto"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "Mostra/Nascondi barra laterale",
@@ -526,6 +526,10 @@
 				"schedule": "Programma delle commissioni:",
 				"availableDaily": "Disponibile ogni giorno alle",
 				"localTimeLabel": "(Tua ora locale: {time})"
+			},
+			"overview": {
+				"title": "Panoramica",
+				"body": "Il Programma Affiliazione ricompensa gli affiliati in base al turnover delle scommesse dei giocatori segnalati in Slot, Casinò Live, Scommesse Sportive e Lotterie. Le commissioni vengono calcolate ogni 24 ore, con guadagni basati su diversi livelli di turnover."
 			}
 		},
 		"calculator": {
@@ -811,7 +815,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Prelievo riuscito!",
-			"successMessage": "🎉 Ho appena prelevato {withdrawAmount} {tokenSymbol} da Hyperbetz! 🚀 Unisciti alla serie di vittorie su {shareUrl}",
+			"successMessage": "🎉 Ho appena prelevato {withdrawAmount} {tokenSymbol} da Meme Win! 🚀 Unisciti alla serie di vittorie su {shareUrl}",
 			"withdrawnAmount": "Importo prelevato",
 			"shareText": "Condividi",
 			"subText": "🚀 UNISCITI ALLA SERIE DI VITTORIE! 🚀",
@@ -932,7 +936,7 @@
 			"casino": {
 				"title": "Casinò",
 				"badge": "590+ GIOCHI",
-				"desc": "Goditi gli originali di Hyperbetz e altri giochi da casinò dei migliori fornitori.",
+				"desc": "Goditi gli originali di MemeWin e altri giochi da casinò dei migliori fornitori.",
 				"link": "Vai al casinò"
 			},
 			"slots": {
@@ -1048,6 +1052,156 @@
 			"fontResetSuccess": "Carattere ripristinato a predefinito",
 			"invalidFileType": "Carica un file di caratteri valido (.woff, .woff2, .ttf, .otf)",
 			"uploadFailed": "Lettura del file del carattere fallita"
+		}
+	},
+	"bonus": {
+		"title": "Programma Bonus per i Membri",
+		"loginPromptTitle": "Programma Bonus per Membri",
+		"loginPromptSubtitle": "Accedi per visualizzare le tue statistiche sui bonus e richiedere i tuoi premi.",
+		"goHome": "Vai alla Home",
+		"tabs": {
+			"dashboard": "Cruscotto",
+			"claims": "Richieste",
+			"rates": "Tassi bonus",
+			"calculator": "Calcolatrice"
+		},
+		"refresh": "Aggiorna",
+		"refreshing": "Aggiornamento...",
+		"refreshAllSuccess": "Tutti i dati sono stati aggiornati con successo!",
+		"refreshPartial": "Parzialmente aggiornato: {success}/{total} sezioni aggiornate",
+		"refreshFailed": "Aggiornamento dei dati non riuscito. Si prega di riprovare.",
+		"dashboard": {
+			"title": "Dashboard dei Bonus",
+			"subtitle": "Tieni traccia delle tue scommesse, bonus e guadagni premi",
+			"performanceOverview": "Panoramica del bonus",
+			"bonusRatesTitle": "Struttura della tariffa bonus",
+			"totalIncome": "Bonus Totale",
+			"pendingBonus": "Bonus in Sospeso",
+			"lastClaim": "Ultima richiesta",
+			"unclaimedEarnings": "Disponibile per il ritiro",
+			"claim": {
+				"title": "Richiesta e Ritiro",
+				"points": {
+					"0": "Le commissioni sono disponibili per il prelievo una volta calcolate.",
+					"1": "Non c'è scadenza per le commissioni non reclamate: si accumulano fino al momento del reclamo.",
+					"2": "I prelievi seguono le regole standard della piattaforma, come limiti minimi e tempi di elaborazione."
+				}
+			},
+			"claiming": "Reclamando...",
+			"section2": {
+				"title": "Idoneità",
+				"content": "Per partecipare:"
+			},
+			"section3": {
+				"title": "Livelli e Tassi di Coltivazione",
+				"content": "I bonus vengono calcolati in base agli importi delle tue scommesse giornaliere:",
+				"noteTitle": "Nota",
+				"noteContent": "I livelli vengono valutati quotidianamente alle 14:00 UTC. Il volume delle scommesse del giorno precedente determina il tasso di bonus di oggi. I tassi si applicano a tutti i tipi di gioco: Slot, Casinò dal vivo e Sport."
+			}
+		},
+		"claims": {
+			"title": "Storico delle richieste",
+			"subtitle": "Traccia i tuoi reclami per bonus e l'attività di scommessa",
+			"tableHeaders": {
+				"date": "Data della scommessa",
+				"slots": "Slot",
+				"liveCasino": "Casinò Live",
+				"sports": "Sport",
+				"total": "Totale",
+				"tier": "Livello",
+				"unclaimed": "Non reclamato",
+				"token": "Token"
+			},
+			"tierPrefix": "Livello",
+			"availableToClaim": "Disponibile da richiedere",
+			"totalBonus": "Bonus Totale",
+			"claimed": "Richiesto",
+			"progressPercentage": "Avanzamento",
+			"progressTitle": "Il tuo progresso",
+			"currentTier": "Livello attuale",
+			"nextTier": "Livello successivo",
+			"wagerProgress": "Progresso della scommessa",
+			"totalWagered": "Totale scommesso oggi",
+			"toNextTier": "per raggiungere il livello successivo",
+			"empty": {
+				"title": "Nessuna richiesta di bonus ancora",
+				"subtitle": "Inizia a giocare per guadagnare bonus!"
+			}
+		},
+		"rates": {
+			"title": "Livelli e Tariffe di Coltivazione",
+			"subtitle": "Percentuali di bonus per livello di scommessa e categoria di gioco",
+			"overview": {
+				"title": "Panoramica",
+				"body": "Il Bonus Farming premia gli utenti in base alle loro scommesse su Slot, Casinò Live, Sportbook e Lotteria. I bonus vengono calcolati ogni 24 ore e gli utenti possono richiederli il giorno successivo alla scommessa. Ci sono sette livelli, ognuno con diversi tassi a seconda dell'importo della scommessa."
+			},
+			"eligibility": {
+				"title": "Idoneità",
+				"content": "Per partecipare:",
+				"points": {
+					"0": "Devi avere un account attivo.",
+					"1": "Piazza scommesse su Slot, Casinò live, Scommesse sportive e Lotteria.",
+					"2": "Soddisfa i requisiti di puntata minima per ogni livello."
+				}
+			},
+			"calculation": {
+				"title": "Come vengono calcolati i bonus",
+				"desc": "I bonus vengono calcolati ogni 24 ore in base alle tue scommesse totali. Esempi:",
+				"exampleTitle": "Livello {tier}:",
+				"wagerIn": "Scommetti {amount} in {gameType}"
+			},
+			"table": {
+				"tierLevel": "Livello del livello",
+				"wagerRange": "Intervallo di Puntata",
+				"slots": "Slot",
+				"liveCasino": "Casinò dal Vivo",
+				"sports": "Sport",
+				"tierPrefix": "LIVELLO",
+				"commissionLevel": "Livello bonus",
+				"dailyWager": "Volume di puntate giornaliere"
+			},
+			"claim": {
+				"title": "Richiesta e prelievo dei bonus",
+				"points": {
+					"0": "I bonus diventano idonei al reclamo 24 ore dopo la scommessa.",
+					"1": "I bonus non reclamati si accumuleranno e non scadranno.",
+					"2": "Il processo di richiesta e prelievo può variare in base alle politiche specifiche della piattaforma."
+				}
+			},
+			"system": {
+				"title": "Orario e operazioni di sistema",
+				"dailyTimeframeLabel": "Periodo giornaliero:",
+				"dailyTimeframeValue": "00:00 UTC a 23:59 UTC (ogni giorno).",
+				"claimDailyLabel": "Richiedi quotidiano:",
+				"claimDailyValue": "Disponibile quotidianamente alle 14:00 UTC (Il tuo orario locale: {local}).",
+				"note": "Nota: mentre lavoriamo con fornitori di diversi fusi orari, tutti i calcoli seguono l'UTC per garantire la coerenza ed evitare confusioni."
+			},
+			"amendments": {
+				"title": "Modifiche e squalifiche",
+				"body": "Possiamo aggiornare questi termini in qualsiasi momento, e le modifiche sono efficaci al momento della pubblicazione. Se si sospettano errori di sistema, errori di calcolo o imbrogli, ci riserviamo il diritto di regolare o squalificare bonus e conti come necessario per garantire l'equità"
+			},
+			"footer": {
+				"schedule": "Piano bonus:",
+				"availableDaily": "Disponibile quotidianamente alle",
+				"localTimeLabel": "(La tua ora locale: {time})"
+			}
+		},
+		"calculator": {
+			"title": "Calcolatore di Bonus",
+			"subtitle": "Stima i tuoi guadagni bonus in base ai tuoi importi di scommessa",
+			"interactive": {
+				"title": "Strumento interattivo:",
+				"body": "Inserisci diversi importi di scommessa per vedere i bonus potenziali su tutti i livelli"
+			},
+			"potentialEarnings": "Bonus Potenziale",
+			"basedOnRate": "Basato su un tasso di bonus del {percentage}%",
+			"tier": "Livello {level}",
+			"commissionLevel": "Livello Bonus {level}",
+			"enterWager": "Inserisci l'importo della scommessa (USD)",
+			"wagerPlaceholder": "ad es., 1000",
+			"calcFor": "Calcolo del bonus per una scommessa di ${amount}",
+			"totalPotential": "Bonus Potenziale Totale:",
+			"combinedAtTier": "Bonus combinato da tutti i tipi di gioco al livello {level}"
 		}
 	}
 }

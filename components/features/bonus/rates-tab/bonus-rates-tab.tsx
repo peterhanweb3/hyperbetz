@@ -1,19 +1,18 @@
 "use client";
 
-import useAffiliateDashboard from "@/hooks/affiliate/useAffiliateDashboard";
+import useBonusDashboard from "@/hooks/bonus/useBonusDashboard";
 import { RatesTable } from "@/components/features/affiliate/rates-tab/rates-table";
-// import { TrendingUp, Info } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowTrendUp, faInfo } from "@fortawesome/pro-light-svg-icons";
 import { useTranslations } from "@/lib/locale-provider";
 
 /**
- * The orchestrator for the "Rates" tab. It calls the master hook and
- * passes the affiliate rates data down to the presentation table.
+ * The orchestrator for the "Rates" tab in Bonus section.
+ * Reuses the RatesTable component from affiliate since the structure is identical.
  */
-export const RatesTab = () => {
-	const { affiliateRates, isLoading } = useAffiliateDashboard();
-	const t = useTranslations("affiliate.rates");
+export const BonusRatesTab = () => {
+	const { bonusRates, isLoading } = useBonusDashboard();
+	const t = useTranslations("bonus.rates");
 
 	return (
 		<div className="space-y-6 sm:space-y-8">
@@ -54,8 +53,12 @@ export const RatesTab = () => {
 				</div>
 			</div>
 
-			{/* Rates Table */}
-			<RatesTable affiliateRates={affiliateRates} isLoading={isLoading} />
+			{/* Rates Table - Reusing from affiliate */}
+			<RatesTable
+				affiliateRates={bonusRates}
+				isLoading={isLoading}
+				context="bonus"
+			/>
 		</div>
 	);
 };

@@ -7,7 +7,7 @@
 		"viewAll": "Lihat Semua"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "Togol Bar Sisi",
@@ -526,6 +526,10 @@
 				"schedule": "Jadual Komisen:",
 				"availableDaily": "Tersedia setiap hari pada",
 				"localTimeLabel": "(Waktu Tempatan Anda: {time})"
+			},
+			"overview": {
+				"title": "Gambaran Keseluruhan",
+				"body": "Program Affiliate memberi ganjaran kepada ahli berdasarkan perolehan pertaruhan daripada pemain yang dirujuk dalam Slot, Kasino Langsung, Buku Sukan dan Loteri. Komisen dikira setiap 24 jam, dengan pendapatan berdasarkan peringkat perolehan yang berbeza."
 			}
 		},
 		"calculator": {
@@ -811,7 +815,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Pengeluaran Berjaya!",
-			"successMessage": "🎉 Baru sahaja mengeluarkan {withdrawAmount} {tokenSymbol} dari Hyperbetz! 🚀 Sertai rentetan kemenangan di {shareUrl}",
+			"successMessage": "🎉 Baru sahaja mengeluarkan {withdrawAmount} {tokenSymbol} dari Meme Win! 🚀 Sertai rentetan kemenangan di {shareUrl}",
 			"withdrawnAmount": "Jumlah Dikeluarkan",
 			"shareText": "Kongsi",
 			"subText": "🚀 SERTAI RENTETAN KEMENANGAN! 🚀",
@@ -932,7 +936,7 @@
 			"casino": {
 				"title": "Kasino",
 				"badge": "590+ PERMAINAN",
-				"desc": "Nikmati Hyperbetz Originals dan permainan kasino lain dari penyedia teratas.",
+				"desc": "Nikmati MemeWin Originals dan permainan kasino lain dari penyedia teratas.",
 				"link": "Pergi ke Kasino"
 			},
 			"slots": {
@@ -1048,6 +1052,156 @@
 			"fontResetSuccess": "Fon ditetapkan semula ke lalai",
 			"invalidFileType": "Sila muat naik fail fon yang sah (.woff, .woff2, .ttf, .otf)",
 			"uploadFailed": "Gagal membaca fail fon"
+		}
+	},
+	"bonus": {
+		"title": "Program Bonus Ahli",
+		"loginPromptTitle": "Program Bonus Ahli",
+		"loginPromptSubtitle": "Log masuk untuk melihat statistik bonus anda dan tuntut ganjaran anda.",
+		"goHome": "Pergi ke Laman Utama",
+		"tabs": {
+			"dashboard": "Papan Pemuka",
+			"claims": "Tuntutan",
+			"rates": "Kadar Bonus",
+			"calculator": "Kalkulator"
+		},
+		"refresh": "Segar semula",
+		"refreshing": "Sedang memuat semula...",
+		"refreshAllSuccess": "Semua data berjaya disegarkan!",
+		"refreshPartial": "Dikemas kini sebahagian: {success}/{total} bahagian dikemas kini",
+		"refreshFailed": "Gagal untuk menyegarkan data. Sila cuba lagi.",
+		"dashboard": {
+			"title": "Papan Pemuka Bonus",
+			"subtitle": "Jejaki pertaruhan, bonus, dan pendapatan ganjaran anda",
+			"performanceOverview": "Gambaran Keseluruhan Bonus",
+			"bonusRatesTitle": "Struktur Kadar Bonus",
+			"totalIncome": "Jumlah Bonus",
+			"pendingBonus": "Bonus Tertunda",
+			"lastClaim": "Tuntutan Terakhir",
+			"unclaimedEarnings": "Tersedia untuk dituntut",
+			"claim": {
+				"title": "Menuntut dan Menarik",
+				"points": {
+					"0": "Komisen tersedia untuk pengeluaran sebaik sahaja dikira.",
+					"1": "Tiada tarikh luput untuk komisen yang belum dituntut—ia terkumpul sehingga dituntut.",
+					"2": "Pengeluaran mengikuti peraturan standard platform, seperti had minimum dan masa pemprosesan."
+				}
+			},
+			"claiming": "Sedang dituntut...",
+			"section2": {
+				"title": "Kelayakan",
+				"content": "Untuk menyertai:"
+			},
+			"section3": {
+				"title": "Tahap dan Kadar Pertanian",
+				"content": "Bonus dikira berdasarkan jumlah pertaruhan harian anda:",
+				"noteTitle": "Catatan",
+				"noteContent": "Tahap dinilai setiap hari pada 14:00 UTC. Jumlah pertaruhan hari sebelumnya menentukan kadar bonus hari ini. Kadar ini berlaku untuk semua jenis permainan: Slots, Kasino Langsung, dan Sukan."
+			}
+		},
+		"claims": {
+			"title": "Sejarah Tuntutan",
+			"subtitle": "Jejak tuntutan bonus dan aktiviti pertaruhan anda",
+			"tableHeaders": {
+				"date": "Tarikh Pertaruhan",
+				"slots": "Slot",
+				"liveCasino": "Kasino Langsung",
+				"sports": "Sukan",
+				"total": "Jumlah",
+				"tier": "Peringkat",
+				"unclaimed": "Belum Dituntut",
+				"token": "Token"
+			},
+			"tierPrefix": "Tahap",
+			"availableToClaim": "Tersedia untuk dituntut",
+			"totalBonus": "Jumlah Bonus",
+			"claimed": "Dituntut",
+			"progressPercentage": "Kemajuan",
+			"progressTitle": "Kemajuan Anda",
+			"currentTier": "Peringkat Semasa",
+			"nextTier": "Tahap Seterusnya",
+			"wagerProgress": "Kemajuan Pertaruhan",
+			"totalWagered": "Jumlah Dipertaruhkan Hari Ini",
+			"toNextTier": "untuk mencapai tingkatan seterusnya",
+			"empty": {
+				"title": "Tiada Tuntutan Bonus Lagi",
+				"subtitle": "Mulakan bermain untuk memperoleh bonus!"
+			}
+		},
+		"rates": {
+			"title": "Tahap dan Kadar Pertanian",
+			"subtitle": "Peratus bonus mengikut tahap pertaruhan dan kategori permainan",
+			"overview": {
+				"title": "Gambaran Keseluruhan",
+				"body": "Bonus Farming memberi ganjaran kepada pengguna berdasarkan pertaruhan mereka dalam Slot, Kasino Langsung, Buku Sukan, dan Loteri. Bonus dikira setiap 24 jam, dan pengguna boleh menuntutnya pada hari berikutnya selepas bertaruh. Terdapat tujuh peringkat, masing-masing dengan kadar yang berbeza bergantung kepada jumlah pertaruhan."
+			},
+			"eligibility": {
+				"title": "Kelayakan",
+				"content": "Untuk mengambil bahagian:",
+				"points": {
+					"0": "Anda mesti mempunyai akaun aktif.",
+					"1": "Letakkan pertaruhan di Slot, Kasino Langsung, Buku Sukan dan Loteri.",
+					"2": "Memenuhi keperluan pertaruhan minimum untuk setiap peringkat."
+				}
+			},
+			"calculation": {
+				"title": "Bagaimana Bonus Dikirakan",
+				"desc": "Bonus dikira setiap 24 jam berdasarkan jumlah pertaruhan anda. Contoh:",
+				"exampleTitle": "Tahap {tier}:",
+				"wagerIn": "Pertaruhkan {amount} dalam {gameType}"
+			},
+			"table": {
+				"tierLevel": "Tahap Tahap",
+				"wagerRange": "Julat Pertaruhan",
+				"slots": "Slot",
+				"liveCasino": "Kasino Langsung",
+				"sports": "Sukan",
+				"tierPrefix": "TINGKAT",
+				"commissionLevel": "Tahap bonus",
+				"dailyWager": "Jumlah pertaruhan harian"
+			},
+			"claim": {
+				"title": "Menuntut dan Mengeluarkan Bonus",
+				"points": {
+					"0": "Bonus layak dituntut 24 jam selepas pertaruhan.",
+					"1": "Bonus yang tidak dituntut akan terkumpul dan tidak akan luput.",
+					"2": "Proses tuntutan dan pengeluaran mungkin berbeza berdasarkan dasar khusus platform."
+				}
+			},
+			"system": {
+				"title": "Masa dan Operasi Sistem",
+				"dailyTimeframeLabel": "Rangka masa harian:",
+				"dailyTimeframeValue": "00:00 UTC hingga 23:59 UTC (setiap hari).",
+				"claimDailyLabel": "Tuntutan Harian:",
+				"claimDailyValue": "Tersedia setiap hari pada pukul 14:00 UTC (Waktu Tempatan Anda: {local}).",
+				"note": "Nota: walaupun kami bekerja dengan penyedia dari zon masa yang berbeza, semua pengiraan mengikut UTC untuk memastikan konsistensi dan mengelakkan kekeliruan."
+			},
+			"amendments": {
+				"title": "Pindaan dan Pembatalan",
+				"body": "Kami boleh mengemaskini syarat ini pada bila-bila masa, dan perubahan akan berkuatkuasa setelah disiarkan. Jika terdapat kesilapan sistem, pengiraan salah, atau penipuan yang disyaki, kami berhak untuk menyesuaikan atau membatalkan bonus dan akaun seperti yang diperlukan untuk memastikan keadilan"
+			},
+			"footer": {
+				"schedule": "Jadual Bonus:",
+				"availableDaily": "Tersedia setiap hari pada",
+				"localTimeLabel": "(Waktu Tempatan Anda: {time})"
+			}
+		},
+		"calculator": {
+			"title": "Kalkulator Bonus",
+			"subtitle": "Anggarkan pendapatan bonus anda berdasarkan jumlah pertaruhan anda",
+			"interactive": {
+				"title": "Alat Interaktif:",
+				"body": "Masukkan jumlah pertaruhan yang berbeza untuk melihat bonus yang berpotensi merentasi semua peringkat"
+			},
+			"potentialEarnings": "Bonus Berpotensi",
+			"basedOnRate": "Berdasarkan kadar bonus {percentage}%",
+			"tier": "Tahap {level}",
+			"commissionLevel": "Tahap Bonus {level}",
+			"enterWager": "Masukkan Jumlah Pertaruhan (USD)",
+			"wagerPlaceholder": "cth, 1000",
+			"calcFor": "Mengira bonus untuk pertaruhan ${amount}",
+			"totalPotential": "Jumlah Bonus Potensi:",
+			"combinedAtTier": "Bonus gabungan daripada semua jenis permainan di Tahap {level}"
 		}
 	}
 }

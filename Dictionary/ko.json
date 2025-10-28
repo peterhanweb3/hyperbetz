@@ -7,7 +7,7 @@
 		"viewAll": "모두 보기"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "사이드바 전환",
@@ -526,6 +526,10 @@
 				"schedule": "커미션 일정:",
 				"availableDaily": "매일",
 				"localTimeLabel": "에 가능 (현지 시간: {time})"
+			},
+			"overview": {
+				"title": "개요",
+				"body": "제휴 프로그램은 슬롯, 라이브 카지노, 스포츠북, 복권에서 추천된 플레이어의 베팅 매출에 따라 제휴사에 보상을 제공합니다. 수수료는 24시간마다 계산되며, 다양한 매출 층에 따른 수익을 기준으로 합니다."
 			}
 		},
 		"calculator": {
@@ -811,7 +815,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "출금 성공!",
-			"successMessage": "🎉 Hyperbetz에서 방금 {withdrawAmount} {tokenSymbol}을(를) 출금했습니다! 🚀 {shareUrl}에서 승리의 행진에 동참하세요",
+			"successMessage": "🎉 Meme Win에서 방금 {withdrawAmount} {tokenSymbol}을(를) 출금했습니다! 🚀 {shareUrl}에서 승리의 행진에 동참하세요",
 			"withdrawnAmount": "출금된 금액",
 			"shareText": "공유하기",
 			"subText": "🚀 승리의 행진에 동참하세요! 🚀",
@@ -932,7 +936,7 @@
 			"casino": {
 				"title": "카지노",
 				"badge": "590+ 게임",
-				"desc": "Hyperbetz 오리지널 및 상위 제공업체의 다른 카지노 게임을 즐기세요.",
+				"desc": "MemeWin 오리지널 및 상위 제공업체의 다른 카지노 게임을 즐기세요.",
 				"link": "카지노로 가기"
 			},
 			"slots": {
@@ -1048,6 +1052,156 @@
 			"fontResetSuccess": "글꼴이 기본값으로 재설정되었습니다",
 			"invalidFileType": "유효한 글꼴 파일을 업로드하세요 (.woff, .woff2, .ttf, .otf)",
 			"uploadFailed": "글꼴 파일 읽기 실패"
+		}
+	},
+	"bonus": {
+		"title": "멤버 보너스 프로그램",
+		"loginPromptTitle": "회원 보너스 프로그램",
+		"loginPromptSubtitle": "보너스 통계를 보고 보상을 받으려면 로그인하세요.",
+		"goHome": "홈으로 가기",
+		"tabs": {
+			"dashboard": "대시보드",
+			"claims": "청구",
+			"rates": "보너스율",
+			"calculator": "계산기"
+		},
+		"refresh": "새로 고침",
+		"refreshing": "새로 고치는 중...",
+		"refreshAllSuccess": "모든 데이터가 성공적으로 새로고침되었습니다!",
+		"refreshPartial": "부분적으로 새로 고침됨: {success}/{total} 섹션 업데이트됨",
+		"refreshFailed": "데이터 새로 고침 실패. 다시 시도해 주세요.",
+		"dashboard": {
+			"title": "보너스 대시보드",
+			"subtitle": "내기, 보너스 및 보상 수익 추적",
+			"performanceOverview": "보너스 개요",
+			"bonusRatesTitle": "보너스 요율 구조",
+			"totalIncome": "총 보너스",
+			"pendingBonus": "대기 중인 보너스",
+			"lastClaim": "마지막 청구",
+			"unclaimedEarnings": "청구 가능",
+			"claim": {
+				"title": "청구 및 출금",
+				"points": {
+					"0": "수수료는 계산 후 인출 가능합니다.",
+					"1": "청구되지 않은 커미션에는 만료 기한이 없습니다. - 청구될 때까지 누적됩니다.",
+					"2": "출금은 최소 제한 및 처리 시간과 같은 플랫폼의 표준 규칙을 따릅니다."
+				}
+			},
+			"claiming": "청구 중...",
+			"section2": {
+				"title": "자격",
+				"content": "참여하려면:"
+			},
+			"section3": {
+				"title": "농업 등급 및 요금",
+				"content": "보너스는 일일 베팅 금액을 기준으로 계산됩니다:",
+				"noteTitle": "참고",
+				"noteContent": "등급은 매일 14:00 UTC에 평가됩니다. 전날의 베팅 금액이 오늘의 보너스 비율을 결정합니다. 비율은 모든 게임 유형에 적용됩니다: 슬롯, 라이브 카지노, 스포츠."
+			}
+		},
+		"claims": {
+			"title": "청구 내역",
+			"subtitle": "보너스 청구 및 베팅 활동을 추적하세요",
+			"tableHeaders": {
+				"date": "베팅 날짜",
+				"slots": "슬롯",
+				"liveCasino": "라이브 카지노",
+				"sports": "스포츠",
+				"total": "총계",
+				"tier": "계층",
+				"unclaimed": "미청구",
+				"token": "토큰"
+			},
+			"tierPrefix": "단계",
+			"availableToClaim": "청구 가능",
+			"totalBonus": "총 보너스",
+			"claimed": "청구됨",
+			"progressPercentage": "진행",
+			"progressTitle": "진행 상황",
+			"currentTier": "현재 등급",
+			"nextTier": "다음 단계",
+			"wagerProgress": "베팅 진행",
+			"totalWagered": "오늘의 총 베팅 금액",
+			"toNextTier": "다음 등급에 도달하려면",
+			"empty": {
+				"title": "아직 보너스 클레임이 없습니다",
+				"subtitle": "보너스를 얻기 위해 게임을 시작하세요!"
+			}
+		},
+		"rates": {
+			"title": "농업 단계 및 요금",
+			"subtitle": "배팅 레벨 및 게임 카테고리별 보너스 비율",
+			"overview": {
+				"title": "개요",
+				"body": "보너스 파밍은 슬롯, 라이브 카지노, 스포츠북, 복권에 대한 사용자의 베팅을 기준으로 보상을 제공합니다. 보너스는 매 24시간마다 계산되며, 사용자는 베팅한 다음 날 그것을 청구할 수 있습니다. 베팅 금액에 따라 다른 비율을 가진 7개의 등급이 있습니다."
+			},
+			"eligibility": {
+				"title": "적격성",
+				"content": "참여하려면:",
+				"points": {
+					"0": "활성 계정이 있어야 합니다.",
+					"1": "슬롯, 라이브 카지노, 스포츠북 및 복권에 베팅하세요.",
+					"2": "각 계층에 대한 최소 베팅 요구 사항을 충족하세요."
+				}
+			},
+			"calculation": {
+				"title": "보너스 계산 방법",
+				"desc": "보너스는 총 베팅 금액을 기준으로 24시간마다 계산됩니다. 예:",
+				"exampleTitle": "등급 {tier}:",
+				"wagerIn": "{gameType}에서 {amount} 배팅하기"
+			},
+			"table": {
+				"tierLevel": "티어 레벨",
+				"wagerRange": "베팅 범위",
+				"slots": "슬롯",
+				"liveCasino": "라이브 카지노",
+				"sports": "스포츠",
+				"tierPrefix": "등급",
+				"commissionLevel": "보너스 레벨",
+				"dailyWager": "일일 베팅 금액"
+			},
+			"claim": {
+				"title": "보너스 청구 및 인출",
+				"points": {
+					"0": "보너스는 베팅 24시간 후에 청구할 수 있게 됩니다.",
+					"1": "청구되지 않은 보너스는 누적되며 만료되지 않습니다.",
+					"2": "청구 및 인출 프로세스는 플랫폼별 정책에 따라 다를 수 있습니다."
+				}
+			},
+			"system": {
+				"title": "시스템 시간 및 운영",
+				"dailyTimeframeLabel": "일일 기간:",
+				"dailyTimeframeValue": "매일 00:00 UTC부터 23:59 UTC까지.",
+				"claimDailyLabel": "매일 청구:",
+				"claimDailyValue": "매일 14:00 UTC에 이용 가능 (현지 시간: {local}).",
+				"note": "참고: 다양한 시간대를 가진 공급업체와 협력하는 동안 모든 계산은 UTC를 따르며 일관성을 유지하고 혼란을 피합니다."
+			},
+			"amendments": {
+				"title": "수정 및 실격",
+				"body": "우리는 언제든지 이 약관을 업데이트할 수 있으며, 변경 사항은 게시 시 효력을 발휘합니다. 시스템 오류, 계산 오류 또는 부정 행위가 의심될 경우, 공정성을 보장하기 위해 필요한 경우 보너스 및 계정을 조정하거나 실격시킬 권리를 보유합니다"
+			},
+			"footer": {
+				"schedule": "보너스 일정:",
+				"availableDaily": "매일 이용 가능 시간",
+				"localTimeLabel": "(당신의 현지 시간: {time})"
+			}
+		},
+		"calculator": {
+			"title": "보너스 계산기",
+			"subtitle": "당신의 베팅 금액에 기반한 보너스 수익을 추정하세요",
+			"interactive": {
+				"title": "인터랙티브 도구:",
+				"body": "다양한 베팅 금액을 입력하여 모든 티어의 잠재적 보너스를 확인하세요"
+			},
+			"potentialEarnings": "잠재적 보너스",
+			"basedOnRate": "{percentage}% 보너스 비율 기준",
+			"tier": "레벨 {level}",
+			"commissionLevel": "보너스 레벨 {level}",
+			"enterWager": "베팅 금액 입력 (USD)",
+			"wagerPlaceholder": "예: 1000",
+			"calcFor": "${amount} 베팅의 보너스를 계산 중",
+			"totalPotential": "총 잠재 보너스:",
+			"combinedAtTier": "레벨 {level}에서 모든 게임 유형의 결합 보너스"
 		}
 	}
 }

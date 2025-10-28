@@ -246,11 +246,11 @@ export default function AffiliatePage() {
 	}
 	return (
 		<div className="min-h-screen bg-background">
-			<div className="py-6 space-y-8">
+			<div className="py-4 sm:py-6 space-y-6 sm:space-y-8 px-4 sm:px-6 lg:px-8">
 				{/* Header Section with Refresh Button */}
-				<div className="flex items-center justify-between">
-					<div className="space-y-4">
-						<h1 className="text-4xl font-semibold text-foreground">
+				<div className="flex items-center justify-between flex-wrap gap-4">
+					<div className="space-y-2 sm:space-y-4">
+						<h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground">
 							{t("affiliate.title")}
 						</h1>
 					</div>
@@ -269,9 +269,11 @@ export default function AffiliatePage() {
 							fontSize={16}
 							className={` ${isRefreshing ? "animate-spin" : ""}`}
 						/>
-						{isRefreshing
-							? t("affiliate.refreshing")
-							: t("affiliate.refresh")}
+						<span className="hidden xs:inline">
+							{isRefreshing
+								? t("affiliate.refreshing")
+								: t("affiliate.refresh")}
+						</span>
 					</Button>
 				</div>
 
@@ -282,10 +284,10 @@ export default function AffiliatePage() {
 						className="w-full"
 					>
 						{/* Clean Tab Navigation with sliding indicator */}
-						<div className="flex mb-8">
+						<div className="flex mb-6 sm:mb-8 overflow-x-auto">
 							<div
 								ref={tabsRef}
-								className="relative inline-flex p-1 bg-muted/50 rounded-lg border border-border/50"
+								className="relative inline-flex p-1 bg-muted/50 rounded-lg border border-border/50 min-w-full sm:min-w-0"
 							>
 								{/* Sliding background indicator */}
 								<div
@@ -297,13 +299,13 @@ export default function AffiliatePage() {
 								/>
 
 								{/* Tab buttons */}
-								<div className="relative z-10 flex">
+								<div className="relative z-10 flex w-full sm:w-auto">
 									<button
 										data-value="dashboard"
 										onClick={() =>
 											setActiveTab("dashboard")
 										}
-										className={`px-6 py-2.5 text-sm font-medium transition-all duration-300 rounded-md relative ${
+										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
 											activeTab === "dashboard"
 												? "text-foreground"
 												: "text-muted-foreground hover:text-foreground"
@@ -314,7 +316,7 @@ export default function AffiliatePage() {
 									<button
 										data-value="rates"
 										onClick={() => setActiveTab("rates")}
-										className={`px-6 py-2.5 text-sm font-medium transition-all duration-300 rounded-md relative ${
+										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
 											activeTab === "rates"
 												? "text-foreground"
 												: "text-muted-foreground hover:text-foreground"
@@ -327,7 +329,7 @@ export default function AffiliatePage() {
 										onClick={() =>
 											setActiveTab("calculator")
 										}
-										className={`px-6 py-2.5 text-sm font-medium transition-all duration-300 rounded-md relative ${
+										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
 											activeTab === "calculator"
 												? "text-foreground"
 												: "text-muted-foreground hover:text-foreground"
@@ -340,7 +342,7 @@ export default function AffiliatePage() {
 						</div>
 
 						{/* Tab Content */}
-						<div className="min-h-[600px]">
+						<div className="min-h-[400px] sm:min-h-[600px]">
 							<TabsContent value="dashboard" className="mt-0">
 								<DashboardTab />
 							</TabsContent>

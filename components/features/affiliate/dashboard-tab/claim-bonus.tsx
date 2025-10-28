@@ -16,6 +16,7 @@ interface Props {
 	unclaimedAmount: number | undefined;
 	onClaim: () => void;
 	isClaimDisabled: boolean;
+	context?: "affiliate" | "bonus";
 }
 
 export const ClaimBonus = ({
@@ -25,8 +26,9 @@ export const ClaimBonus = ({
 	onClaim,
 	token,
 	isClaimDisabled = false,
+	context = "affiliate",
 }: Props) => {
-	const t = useTranslations("affiliate.dashboard");
+	const t = useTranslations(`${context}.dashboard`);
 	return (
 		<Card className="border-primary/70 bg-gradient-to-br from-background to-muted/15 hover:shadow-lg hover:border-primary/30 hover:bg-gradient-to-br hover:from-background hover:to-muted/25 transition-all duration-300 group">
 			<CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">

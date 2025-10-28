@@ -20,10 +20,15 @@ import {
 import { AffiliateRate } from "@/types/affiliate/affiliate.types";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTranslations } from "next-intl";
+import {
+	formatTurnoverRangeCompact,
+	getTierColorSchemeWithGradient,
+} from "@/lib/utils/features/affiliate-bonus/affiliate-bonus.utils";
 
 interface RatesTableProps {
 	affiliateRates: AffiliateRate[];
 	isLoading: boolean;
+	context?: "affiliate" | "bonus";
 }
 
 const TableSkeleton = () => (
@@ -47,61 +52,27 @@ const TableSkeleton = () => (
  * A dedicated component to display the affiliate commission rates in a clean,
  * professional data table, inspired by the reference UI.
  */
-export const RatesTable = ({ affiliateRates, isLoading }: RatesTableProps) => {
-	const t = useTranslations("affiliate.rates");
-	const formatTurnover = (min: string, max: string) => {
-		const minNum = parseInt(min);
-		const maxNum = parseInt(max);
-		if (maxNum > 1_000_000_000) return `> $${(minNum / 1000).toFixed(0)}k`;
-		return `$${(minNum / 1000).toFixed(0)}k - $${(maxNum / 1000).toFixed(
-			0
-		)}k`;
-	};
+export const RatesTable = ({
+	affiliateRates,
+	isLoading,
+	context = "affiliate",
+}: RatesTableProps) => {
+	const t = useTranslations(`${context}.rates`);
 
-	const getTierColor = (level: number) => {
-		const colors = [
-			{
-				gradient: "from-slate-500 to-slate-600",
-				bg: "slate-500",
-				light: "slate",
-			},
-			{
-				gradient: "from-amber-500 to-amber-600",
-				bg: "amber-500",
-				light: "amber",
-			},
-			{
-				gradient: "from-emerald-500 to-emerald-600",
-				bg: "emerald-500",
-				light: "emerald",
-			},
-			{
-				gradient: "from-blue-500 to-blue-600",
-				bg: "blue-500",
-				light: "blue",
-			},
-			{
-				gradient: "from-purple-500 to-purple-600",
-				bg: "purple-500",
-				light: "purple",
-			},
-			{
-				gradient: "from-pink-500 to-pink-600",
-				bg: "pink-500",
-				light: "pink",
-			},
-			{
-				gradient: "from-orange-500 to-orange-600",
-				bg: "orange-500",
-				light: "orange",
-			},
-		];
-		return colors[level - 1] || colors[0];
+	// Tier name mapping for bonus context
+	const commissionLevel: Record<number, string> = {
+		1: "Bronze",
+		2: "Silver",
+		3: "Gold",
+		4: "Platinum",
+		5: "Emerald",
+		6: "Ruby",
+		7: "Diamond",
 	};
 
 	return (
-		<Card className="overflow-hidden bg-gradient-to-br from-card via-card to-muted/10 border-border/50 shadow-xl">
-			<CardHeader className="relative bg-gradient-to-r from-muted/30 via-muted/20 to-muted/30 border-b border-border/50 pb-6">
+		<Card className="overflow-hidden bg-gradient-to-br from-card via-card to-muted/10 border-border/50 shadow-xl pt-0">
+			<CardHeader className="relative bg-gradient-to-r pt-6 from-muted/30 via-muted/20 to-muted/30 border-b border-border/50 pb-6">
 				<div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5" />
 				<div className="relative flex items-center gap-4">
 					<div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
@@ -162,9 +133,10 @@ export const RatesTable = ({ affiliateRates, isLoading }: RatesTableProps) => {
 							</TableHeader>
 							<TableBody>
 								{affiliateRates.map((tier) => {
-									const tierColor = getTierColor(
-										Number(tier.level)
-									);
+									const tierColor =
+										getTierColorSchemeWithGradient(
+											Number(tier.level)
+										);
 									return (
 										<TableRow
 											key={tier.level}
@@ -187,9 +159,13 @@ export const RatesTable = ({ affiliateRates, isLoading }: RatesTableProps) => {
 															{tier.level}
 														</div>
 														<div className="text-sm text-muted-foreground">
-															{t(
-																"table.commissionLevel"
-															)}
+															{
+																commissionLevel[
+																	Number(
+																		tier.level
+																	)
+																]
+															}
 														</div>
 													</div>
 												</div>
@@ -197,7 +173,7 @@ export const RatesTable = ({ affiliateRates, isLoading }: RatesTableProps) => {
 											<TableCell className="py-6 px-6 border-r border-border/20">
 												<div className="space-y-1">
 													<div className="font-semibold text-foreground text-base">
-														{formatTurnover(
+														{formatTurnoverRangeCompact(
 															tier.min_to,
 															tier.max_to
 														)}

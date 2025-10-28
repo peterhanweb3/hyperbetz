@@ -1,6 +1,7 @@
 "use client";
 
 import { AffiliateRate } from "@/types/affiliate/affiliate.types";
+import { BonusRate } from "@/types/bonus/bonus.types";
 import {
 	Card,
 	CardContent,
@@ -18,10 +19,18 @@ import {
 	faClock,
 	faShield,
 } from "@fortawesome/pro-light-svg-icons";
+import { formatTurnoverRange } from "@/lib/utils/features/affiliate-bonus/affiliate-bonus.utils";
 
 interface CommissionTiersProps {
-	affiliateRates: AffiliateRate[];
+	rates: AffiliateRate[] | BonusRate[];
 	isLoading: boolean;
+	context?: "affiliate" | "bonus";
+	examples?: {
+		tier: number;
+		amount: string;
+		gameKey: string;
+		commission: string;
+	}[];
 }
 
 const TierSkeleton = () => (
@@ -41,10 +50,12 @@ const TierSkeleton = () => (
  * This is a FAITHFUL implementation of the content from your reference image.
  */
 export const CommissionTiers = ({
-	affiliateRates,
+	rates,
 	isLoading,
+	context = "affiliate",
+	examples,
 }: CommissionTiersProps) => {
-	const tRates = useTranslations("affiliate.rates");
+	const tRates = useTranslations(`${context}.rates`);
 	// Strictly typed keys to avoid using `any` for translation keys
 	const claimPointKeys = [
 		"claim.points.0",
@@ -52,75 +63,10 @@ export const CommissionTiers = ({
 		"claim.points.2",
 	] as const;
 
-	const examples = [
-		{
-			tier: 1,
-			amount: "$250",
-			gameKey: "table.slots",
-			commission: "$0.25",
-		},
-		{
-			tier: 2,
-			amount: "$500",
-			gameKey: "table.liveCasino",
-			commission: "$0.75",
-		},
-		{
-			tier: 3,
-			amount: "$1,000",
-			gameKey: "table.sports",
-			commission: "$1.40",
-		},
-		{
-			tier: 4,
-			amount: "$5,000",
-			gameKey: "table.slots",
-			commission: "$9.00",
-		},
-		{
-			tier: 5,
-			amount: "$10,000",
-			gameKey: "table.liveCasino",
-			commission: "$24.00",
-		},
-		{
-			tier: 6,
-			amount: "$20,000",
-			gameKey: "table.sports",
-			commission: "$36.00",
-		},
-		{
-			tier: 7,
-			amount: "$60,000",
-			gameKey: "table.liveCasino",
-			commission: "$180.00",
-		},
-	] as const;
-	const formatTurnover = (min: string, max: string) => {
-		const minNum = parseInt(min);
-		const maxNum = parseInt(max);
-		if (maxNum > 1_000_000_000) return `> $${minNum.toLocaleString()}`;
-		return `$${minNum.toLocaleString()} - $${maxNum.toLocaleString()}`;
-	};
-
 	return (
 		<div className="mx-auto">
 			<Card className="bg-gradient-to-br pt-0 from-background via-background to-muted/20  shadow-2xl shadow-muted/20">
-				{/* <CardHeader className="relative pt-6 overflow-hidden border-b border-border/50">
-					<div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5" />
-					<CardTitle className="relative flex items-center gap-3 text-4xl font-semibold tracking-tight text-foreground">
-						<div className="p-2 rounded-xl bg-primary/10 border border-primary/20">
-							<Shield className="h-8 w-8 text-primary" />
-						</div>
-						Affiliate Terms and Conditions
-					</CardTitle>
-					<CardDescription className="relative text-base text-muted-foreground mt-2">
-						Complete guide to our affiliate program structure and
-						benefits
-					</CardDescription>
-				</CardHeader> */}
-
-				<CardContent className="space-y-12 p-8 text-foreground">
+				<CardContent className="space-y-12 p-4 sm:p-6 lg:p-8 text-foreground">
 					{/* --- Overview Section --- */}
 					<section className="space-y-4">
 						<div className="flex items-center gap-3 mb-4">
@@ -130,16 +76,42 @@ export const CommissionTiers = ({
 									className="h-6 w-6 text-blue-600 dark:text-blue-400"
 								/>
 							</div>
-							<h3 className="text-2xl font-semibold text-foreground">
-								{tRates("howItWorks.title")}
+							<h3 className="text-lg lg:text-2xl font-semibold text-foreground">
+								{tRates("overview.title")}
 							</h3>
 						</div>
 						<div className="bg-muted/30 border border-border/50 rounded-xl p-6">
-							<p className="text-muted-foreground leading-relaxed text-base">
-								{tRates("howItWorks.body")}
+							<p className="text-muted-foreground leading-relaxed text-xs md:text-base ">
+								{tRates("overview.body")}
 							</p>
 						</div>
 					</section>
+
+					{/* --- Eligibility Section --- */}
+
+					{context === "bonus" && (
+						<section className="space-y-4">
+							<div className="flex items-center gap-3 mb-4">
+								<div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
+									<FontAwesomeIcon
+										icon={faQuestionCircle}
+										className="h-6 w-6 text-blue-600 dark:text-blue-400"
+									/>
+								</div>
+								<h3 className="text-lg lg:text-2xl font-semibold text-foreground">
+									{tRates("eligibility.title")}
+								</h3>
+							</div>
+							<div className="bg-muted/30 border border-border/50 rounded-xl p-6 space-y-2">
+								<p>{tRates("eligibility.content")}</p>
+								<ul className="list-disc list-inside space-y-2 text-xs md:text-base ">
+									<li>{tRates("eligibility.points.0")}</li>
+									<li>{tRates("eligibility.points.1")}</li>
+									<li>{tRates("eligibility.points.2")}</li>
+								</ul>
+							</div>
+						</section>
+					)}
 
 					{/* --- Commission Tiers and Rates Section (Dynamic) --- */}
 					<section className="space-y-6">
@@ -150,26 +122,26 @@ export const CommissionTiers = ({
 									className="h-6 w-6 text-emerald-600 dark:text-emerald-400"
 								/>
 							</div>
-							<h3 className="text-2xl font-semibold text-foreground">
+							<h3 className="text-lg lg:text-2xl font-semibold text-foreground">
 								{tRates("title")}
 							</h3>
 						</div>
 						<div className="bg-muted/30 border border-border/50 rounded-xl p-6">
-							<p className="text-muted-foreground leading-relaxed text-base mb-6">
+							<p className="text-muted-foreground leading-relaxed text-xs md:text-base  mb-6">
 								{tRates("subtitle")}
 							</p>
 							{isLoading ? (
 								<TierSkeleton />
 							) : (
 								<div className="grid gap-4">
-									{affiliateRates.map((tier) => (
+									{rates.map((tier) => (
 										<div
 											key={tier.level}
 											className="group relative bg-card border border-border/50 rounded-xl p-6 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
 										>
 											<div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 											<div className="relative">
-												<div className="flex items-center gap-3 mb-3">
+												<div className="flex flex-col lg:flex-row items-center gap-3 mb-3">
 													<div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-foreground text-sm font-semibold">
 														{tier.level}
 													</div>
@@ -180,11 +152,11 @@ export const CommissionTiers = ({
 														{tier.level}
 													</h4>
 													<div className="px-3 py-1 bg-muted rounded-full">
-														<span className="text-sm font-medium text-muted-foreground">
+														<span className="text-[10px] lg:text-sm font-medium text-muted-foreground">
 															{tRates(
 																"table.wagerRange"
 															)}{" "}
-															{formatTurnover(
+															{formatTurnoverRange(
 																tier.min_to,
 																tier.max_to
 															)}
@@ -247,46 +219,50 @@ export const CommissionTiers = ({
 									className="h-6 w-6 text-purple-600 dark:text-purple-400"
 								/>
 							</div>
-							<h3 className="text-2xl font-semibold text-foreground">
+							<h3 className="text-lg lg:text-2xl font-semibold text-foreground">
 								{tRates("calculation.title")}
 							</h3>
 						</div>
 						<div className="bg-muted/30 border border-border/50 rounded-xl p-6">
-							<p className="text-muted-foreground leading-relaxed text-base mb-6">
+							<p className="text-muted-foreground leading-relaxed text-xs md:text-base  mb-6">
 								{tRates("calculation.desc")}
 							</p>
 							<div className="grid gap-3">
-								{examples.map((example) => (
-									<div
-										key={example.tier}
-										className="flex items-center justify-between p-4 bg-card border border-border/30 rounded-lg hover:border-primary/30 transition-colors"
-									>
-										<div className="flex items-center gap-3">
-											<div className="flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-												{example.tier}
-											</div>
-											<span className="text-foreground">
-												<span className="font-semibold">
+								{examples &&
+									examples.map((example) => (
+										<div
+											key={example.tier}
+											className="flex items-center justify-between p-4 bg-card border border-border/30 rounded-lg hover:border-primary/30 transition-colors"
+										>
+											<div className="flex items-center gap-3">
+												<div className="flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 text-primary text-sm font-semibold">
+													{example.tier}
+												</div>
+												<span className="text-xs md:text-base text-foreground">
+													<span className="font-semibold">
+														{tRates(
+															"calculation.exampleTitle",
+															{
+																tier: example.tier,
+															}
+														)}
+													</span>{" "}
 													{tRates(
-														"calculation.exampleTitle",
+														"calculation.wagerIn",
 														{
-															tier: example.tier,
+															amount: example.amount,
+															gameType: tRates(
+																example.gameKey
+															),
 														}
 													)}
-												</span>{" "}
-												{tRates("calculation.wagerIn", {
-													amount: example.amount,
-													gameType: tRates(
-														example.gameKey
-													),
-												})}
-											</span>
+												</span>
+											</div>
+											<div className="text-xs md:text-base font-semibold lg:text-lg text-primary">
+												{example.commission}
+											</div>
 										</div>
-										<div className="font-semibold text-lg text-primary">
-											{example.commission}
-										</div>
-									</div>
-								))}
+									))}
 							</div>
 						</div>
 					</section>
@@ -300,7 +276,7 @@ export const CommissionTiers = ({
 									className="h-6 w-6 text-green-600 dark:text-green-400"
 								/>
 							</div>
-							<h3 className="text-2xl font-semibold text-foreground">
+							<h3 className="text-lg  font-semibold text-foreground">
 								{tRates("claim.title")}
 							</h3>
 						</div>
@@ -312,7 +288,7 @@ export const CommissionTiers = ({
 										className="flex items-start gap-3 p-3 bg-card border border-border/30 rounded-lg"
 									>
 										<div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-										<span className="text-muted-foreground leading-relaxed">
+										<span className="text-muted-foreground leading-relaxed text-xs md:text-base">
 											{tRates(key)}
 										</span>
 									</div>
@@ -330,7 +306,7 @@ export const CommissionTiers = ({
 									className="h-6 w-6 text-orange-600 dark:text-orange-400"
 								/>
 							</div>
-							<h3 className="text-2xl font-semibold text-foreground">
+							<h3 className="text-lg lg:text-2xl font-semibold text-foreground">
 								{tRates("system.title")}
 							</h3>
 						</div>
@@ -339,12 +315,12 @@ export const CommissionTiers = ({
 								<div className="flex items-start gap-3 p-4 bg-card border border-border/30 rounded-lg">
 									<div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
 									<div>
-										<span className="font-semibold text-foreground">
+										<span className="font-semibold text-[12px] md:text-base text-foreground">
 											{tRates(
 												"system.dailyTimeframeLabel"
 											)}
 										</span>
-										<span className="text-muted-foreground ml-2">
+										<span className="text-muted-foreground ml-2 text-[12px] md:text-base">
 											{tRates(
 												"system.dailyTimeframeValue"
 											)}
@@ -354,10 +330,10 @@ export const CommissionTiers = ({
 								<div className="flex items-start gap-3 p-4 bg-card border border-border/30 rounded-lg">
 									<div className="w-2 h-2 rounded-full bg-green-500 mt-2 flex-shrink-0" />
 									<div>
-										<span className="font-semibold text-foreground">
+										<span className="font-semibold text-[12px] md:text-base text-foreground">
 											{tRates("system.claimDailyLabel")}
 										</span>
-										<span className="text-muted-foreground ml-2">
+										<span className="text-muted-foreground ml-2 text-[12px] md:text-base">
 											{tRates("system.claimDailyValue", {
 												local: "19:30",
 											})}
@@ -382,13 +358,13 @@ export const CommissionTiers = ({
 									className="h-6 w-6 text-red-600 dark:text-red-400"
 								/>
 							</div>
-							<h3 className="text-2xl font-semibold text-foreground">
+							<h3 className="text-lg lg:text-2xl font-semibold text-foreground">
 								{tRates("amendments.title")}
 							</h3>
 						</div>
 						<div className="bg-muted/30 border border-border/50 rounded-xl p-6">
 							<div className="p-4 bg-card border border-border/30 rounded-lg border-l-4 border-l-amber-500">
-								<p className="text-muted-foreground leading-relaxed">
+								<p className="text-muted-foreground leading-relaxed text-xs md:text-base">
 									{tRates("amendments.body")}
 								</p>
 							</div>

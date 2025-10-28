@@ -7,7 +7,7 @@
 		"viewAll": "Visa alla"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "Växla sidofält",
@@ -526,6 +526,10 @@
 				"schedule": "Provisionsschema:",
 				"availableDaily": "Tillgänglig dagligen kl.",
 				"localTimeLabel": "(Din lokala tid: {time})"
+			},
+			"overview": {
+				"title": "Översikt",
+				"body": "Affiliate-programmet belönar affiliates baserat på insatser från hänvisade spelare i Slots, Live Casino, Sportsbooks och Lotto. Provisioner beräknas var 24:e timme, med intäkter baserade på olika omsättningsnivåer."
 			}
 		},
 		"calculator": {
@@ -811,7 +815,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Uttag lyckades!",
-			"successMessage": "🎉 Tog precis ut {withdrawAmount} {tokenSymbol} från Hyperbetz! 🚀 Häng med på vinnarstråket på {shareUrl}",
+			"successMessage": "🎉 Tog precis ut {withdrawAmount} {tokenSymbol} från Meme Win! 🚀 Häng med på vinnarstråket på {shareUrl}",
 			"withdrawnAmount": "Uttaget belopp",
 			"shareText": "Dela",
 			"subText": "🚀 HÄNG MED PÅ VINNARSTRÅKET! 🚀",
@@ -932,7 +936,7 @@
 			"casino": {
 				"title": "Kasino",
 				"badge": "590+ SPEL",
-				"desc": "Njut av Hyperbetz Originals och andra kasinospel från toppleverantörer.",
+				"desc": "Njut av MemeWin Originals och andra kasinospel från toppleverantörer.",
 				"link": "Gå till kasinot"
 			},
 			"slots": {
@@ -1048,6 +1052,156 @@
 			"fontResetSuccess": "Teckensnittet har återställts till standard",
 			"invalidFileType": "Ladda upp en giltig teckensnittsfil (.woff, .woff2, .ttf, .otf)",
 			"uploadFailed": "Misslyckades med att läsa teckensnittsfilen"
+		}
+	},
+	"bonus": {
+		"title": "Medlemsbonusprogram",
+		"loginPromptTitle": "Medlemmars Bonusprogram",
+		"loginPromptSubtitle": "Logga in för att se dina bonusstatistik och hämta dina belöningar.",
+		"goHome": "Gå till Startsida",
+		"tabs": {
+			"dashboard": "Instrumentbräda",
+			"claims": "Anspråk",
+			"rates": "Bonusräntor",
+			"calculator": "Kalkylator"
+		},
+		"refresh": "Uppdatera",
+		"refreshing": "Uppdaterar...",
+		"refreshAllSuccess": "All data har uppdaterats framgångsrikt!",
+		"refreshPartial": "Delvis uppdaterad: {success}/{total} sektioner uppdaterade",
+		"refreshFailed": "Misslyckades med att uppdatera data. Vänligen försök igen.",
+		"dashboard": {
+			"title": "Bonustavla",
+			"subtitle": "Följ dina satsningar, bonusar och belöningsinkomster",
+			"performanceOverview": "Bonusöversikt",
+			"bonusRatesTitle": "Bonusprisstruktur",
+			"totalIncome": "Total Bonus",
+			"pendingBonus": "Väntande Bonus",
+			"lastClaim": "Senaste påståendet",
+			"unclaimedEarnings": "Tillgänglig för att göra anspråk på",
+			"claim": {
+				"title": "Krav och Uttag",
+				"points": {
+					"0": "Provisioner är tillgängliga för uttag när de har beräknats.",
+					"1": "Det finns ingen utgångsdatum för oinlösta provisioner - de samlas tills de tas ut.",
+					"2": "Uttag följer plattformens standardregler, såsom minimigränser och bearbetningstider."
+				}
+			},
+			"claiming": "Anspråk tas...",
+			"section2": {
+				"title": "Berättigande",
+				"content": "För att delta:"
+			},
+			"section3": {
+				"title": "Jordbruksnivåer och Avgifter",
+				"content": "Bonusar beräknas baserat på dina dagliga insatsbelopp:",
+				"noteTitle": "Notera",
+				"noteContent": "Nivåer utvärderas dagligen kl. 14:00 UTC. Volymen på gårdagens insatser bestämmer dagens bonussats. Satserna gäller för alla typer av spel: Slots, Livespel och Sport."
+			}
+		},
+		"claims": {
+			"title": "Anspråkshistorik",
+			"subtitle": "Spåra dina bonuskrav och spelaktiviteter",
+			"tableHeaders": {
+				"date": "Speldatum",
+				"slots": "Spelautomater",
+				"liveCasino": "Livekasino",
+				"sports": "Sport",
+				"total": "Totalt",
+				"tier": "Nivå",
+				"unclaimed": "Ej krävd",
+				"token": "Token"
+			},
+			"tierPrefix": "Nivå",
+			"availableToClaim": "Tillgänglig för anspråk",
+			"totalBonus": "Total Bonus",
+			"claimed": "Krävd",
+			"progressPercentage": "Framsteg",
+			"progressTitle": "Din framsteg",
+			"currentTier": "Aktuell nivå",
+			"nextTier": "Nästa nivå",
+			"wagerProgress": "Vadhållningsframsteg",
+			"totalWagered": "Totalt satsat idag",
+			"toNextTier": "för att nå nästa nivå",
+			"empty": {
+				"title": "Inga bonuskrav ännu",
+				"subtitle": "Börja spela för att tjäna bonusar!"
+			}
+		},
+		"rates": {
+			"title": "Odling Nivåer och Priser",
+			"subtitle": "Bonusprocent per insatsnivå och spelkategori",
+			"overview": {
+				"title": "Översikt",
+				"body": "Bonusbruk belönar användare baserat på deras satsningar i slot, livecasino, sportsbook och lotteri. Bonusar beräknas var 24:e timme och användare kan göra anspråk på dem nästa dag efter vadslagning. Det finns sju nivåer, var och en med olika räntor beroende på insatsbeloppet."
+			},
+			"eligibility": {
+				"title": "Behörighet",
+				"content": "För att delta:",
+				"points": {
+					"0": "Du måste ha ett aktivt konto.",
+					"1": "Placera vad i Slot, Live Casino, Sportsbook och Lotteri.",
+					"2": "Uppfyll minimikrav för insats för varje nivå."
+				}
+			},
+			"calculation": {
+				"title": "Hur bonusar beräknas",
+				"desc": "Bonusar beräknas varje 24 timmar baserat på dina totala insatser. Exempel:",
+				"exampleTitle": "Nivå {tier}:",
+				"wagerIn": "Satsa {amount} i {gameType}"
+			},
+			"table": {
+				"tierLevel": "Nivånivå",
+				"wagerRange": "Insatsområde",
+				"slots": "Slots",
+				"liveCasino": "Livecasino",
+				"sports": "Sport",
+				"tierPrefix": "NIVÅ",
+				"commissionLevel": "Bonusnivå",
+				"dailyWager": "Dagligt vadslagningsvolym"
+			},
+			"claim": {
+				"title": "Kräva och ta ut bonusar",
+				"points": {
+					"0": "Bonusar kan hämtas 24 timmar efter vadet.",
+					"1": "Outtagna bonusar ackumuleras och förfaller inte.",
+					"2": "Ansöknings- och uttagsprocessen kan variera beroende på plattformsspecifika riktlinjer."
+				}
+			},
+			"system": {
+				"title": "Systemtid och -operationer",
+				"dailyTimeframeLabel": "Dagligt tidsram:",
+				"dailyTimeframeValue": "00:00 UTC till 23:59 UTC (varje dag).",
+				"claimDailyLabel": "Dagens anspråk:",
+				"claimDailyValue": "Tillgänglig dagligen kl. 14:00 UTC (Din lokala tid: {local}).",
+				"note": "Observera: medan vi arbetar med leverantörer från olika tidszoner, följer alla beräkningar UTC för att säkerställa konsekvens och undvika förvirring."
+			},
+			"amendments": {
+				"title": "Ändringar och diskvalificeringar",
+				"body": "Vi kan uppdatera dessa villkor när som helst, och ändringar träder i kraft vid publicering. Vid misstanke om systemfel, felberäkningar eller fusk förbehåller vi oss rätten att justera eller diskvalificera bonusar och konton efter behov för att säkerställa rättvisa"
+			},
+			"footer": {
+				"schedule": "Bonusplan:",
+				"availableDaily": "Tillgänglig dagligen kl",
+				"localTimeLabel": "(Din lokala tid: {time})"
+			}
+		},
+		"calculator": {
+			"title": "Bonus Kalkylator",
+			"subtitle": "Beräkna dina bonusintäkter baserat på dina satsningsbelopp",
+			"interactive": {
+				"title": "Interaktivt verktyg:",
+				"body": "Ange olika insatsbelopp för att se potentiella bonusar över alla nivåer"
+			},
+			"potentialEarnings": "Potentiell Bonus",
+			"basedOnRate": "Baserat på {percentage}% bonusränta",
+			"tier": "Nivå {level}",
+			"commissionLevel": "Bonusnivå {level}",
+			"enterWager": "Ange insatsbelopp (USD)",
+			"wagerPlaceholder": "t.ex., 1000",
+			"calcFor": "Beräkning av bonus för ${amount} insats",
+			"totalPotential": "Total Potentiell Bonus:",
+			"combinedAtTier": "Kombinerad bonus från alla speltyper på nivå {level}"
 		}
 	}
 }

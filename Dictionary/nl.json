@@ -7,7 +7,7 @@
 		"viewAll": "Alles bekijken"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "Zijbalk wisselen",
@@ -526,6 +526,10 @@
 				"schedule": "Commissieschema:",
 				"availableDaily": "Dagelijks beschikbaar om",
 				"localTimeLabel": "(Jouw Lokale Tijd: {time})"
+			},
+			"overview": {
+				"title": "Overzicht",
+				"body": "Het Affiliate Programma beloont affiliates op basis van de inzetomzet van doorverwezen spelers in Slots, Live Casino, Sportweddenschappen en Loterij. Commissies worden elke 24 uur berekend, met inkomsten gebaseerd op verschillende omzetniveaus."
 			}
 		},
 		"calculator": {
@@ -811,7 +815,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Opname Geslaagd!",
-			"successMessage": "🎉 Zojuist {withdrawAmount} {tokenSymbol} opgenomen van Hyperbetz! 🚀 Sluit je aan bij de winnende reeks op {shareUrl}",
+			"successMessage": "🎉 Zojuist {withdrawAmount} {tokenSymbol} opgenomen van Meme Win! 🚀 Sluit je aan bij de winnende reeks op {shareUrl}",
 			"withdrawnAmount": "Opgenomen Bedrag",
 			"shareText": "Delen",
 			"subText": "🚀 SLUIT JE AAN BIJ DE WINNENDE REEKS! 🚀",
@@ -932,7 +936,7 @@
 			"casino": {
 				"title": "Casino",
 				"badge": "590+ SPELLEN",
-				"desc": "Geniet van Hyperbetz Originals en andere casinospellen van top providers.",
+				"desc": "Geniet van MemeWin Originals en andere casinospellen van top providers.",
 				"link": "Ga naar Casino"
 			},
 			"slots": {
@@ -1048,6 +1052,156 @@
 			"fontResetSuccess": "Lettertype hersteld naar standaard",
 			"invalidFileType": "Upload een geldig lettertypebestand (.woff, .woff2, .ttf, .otf)",
 			"uploadFailed": "Lezen van lettertypebestand mislukt"
+		}
+	},
+	"bonus": {
+		"title": "Ledenbonusprogramma",
+		"loginPromptTitle": "Ledenbonusprogramma",
+		"loginPromptSubtitle": "Log in om je bonusstatistieken te bekijken en je beloningen op te eisen.",
+		"goHome": "Ga naar Home",
+		"tabs": {
+			"dashboard": "Dashboard",
+			"claims": "Claims",
+			"rates": "Bonuspercentages",
+			"calculator": "Rekenmachine"
+		},
+		"refresh": "Vernieuwen",
+		"refreshing": "Vernieuwen...",
+		"refreshAllSuccess": "Alle gegevens zijn succesvol vernieuwd!",
+		"refreshPartial": "Gedeeltelijk vernieuwd: {success}/{total} secties bijgewerkt",
+		"refreshFailed": "Gegevens verversen mislukt. Probeer het opnieuw alstublieft.",
+		"dashboard": {
+			"title": "Bonus Dashboard",
+			"subtitle": "Volg uw weddenschappen, bonussen en beloningsverdiensten",
+			"performanceOverview": "Bonusoverzicht",
+			"bonusRatesTitle": "Bonus tariefstructuur",
+			"totalIncome": "Totale Bonus",
+			"pendingBonus": "In Afwachting van Bonus",
+			"lastClaim": "Laatste Claim",
+			"unclaimedEarnings": "Beschikbaar om te claimen",
+			"claim": {
+				"title": "Claimen en Opnemen",
+				"points": {
+					"0": "Commissies zijn beschikbaar voor opname zodra ze zijn berekend.",
+					"1": "Er is geen vervaldatum voor niet opgeëiste commissies - ze stapelen zich op totdat ze worden opgeëist.",
+					"2": "Opnames volgen de standaardregels van het platform, zoals minimumbedragen en verwerkingstijden."
+				}
+			},
+			"claiming": "Claimen...",
+			"section2": {
+				"title": "Geschiktheid",
+				"content": "Om deel te nemen:"
+			},
+			"section3": {
+				"title": "Landbouwniveaus en Tarieven",
+				"content": "Bonussen worden berekend op basis van uw dagelijkse inzetbedragen:",
+				"noteTitle": "Opmerking",
+				"noteContent": "Niveaus worden dagelijks om 14:00 UTC geëvalueerd. Het inzetvolume van de vorige dag bepaalt het bonuspercentage van vandaag. De tarieven gelden voor alle speltypes: Slots, Live Casino en Sport."
+			}
+		},
+		"claims": {
+			"title": "Claimhistorie",
+			"subtitle": "Volg je bonusclaims en gokactiviteiten",
+			"tableHeaders": {
+				"date": "Weddatum",
+				"slots": "Gleuven",
+				"liveCasino": "Live Casino",
+				"sports": "Sporten",
+				"total": "Totaal",
+				"tier": "Niveau",
+				"unclaimed": "Onopgeëist",
+				"token": "Token"
+			},
+			"tierPrefix": "Laag",
+			"availableToClaim": "Beschikbaar om te claimen",
+			"totalBonus": "Totale Bonus",
+			"claimed": "Geclaimd",
+			"progressPercentage": "Voortgang",
+			"progressTitle": "Je voortgang",
+			"currentTier": "Huidig niveau",
+			"nextTier": "Volgende niveau",
+			"wagerProgress": "Weddenschap voortgang",
+			"totalWagered": "Totaal vandaag ingezet",
+			"toNextTier": "om de volgende niveau te bereiken",
+			"empty": {
+				"title": "Nog geen bonusclaims",
+				"subtitle": "Begin met spelen om bonussen te verdienen!"
+			}
+		},
+		"rates": {
+			"title": "Landbouwniveaus en -tarieven",
+			"subtitle": "Bonuspercentages per inzethoogte en spelcategorie",
+			"overview": {
+				"title": "Overzicht",
+				"body": "De Bonus Farming beloont gebruikers op basis van hun inzetten in Slot, Live Casino, Sportsbook en Loterij. Bonussen worden elke 24 uur berekend en gebruikers kunnen ze de volgende dag na het inzetten claimen. Er zijn zeven niveaus, elk met verschillende tarieven afhankelijk van het inzetbedrag."
+			},
+			"eligibility": {
+				"title": "Geschiktheid",
+				"content": "Om deel te nemen:",
+				"points": {
+					"0": "U moet een actief account hebben.",
+					"1": "Plaats inzetten in Slot, Live Casino, Sportweddenschappen en Loterij.",
+					"2": "Voldoen aan de minimale inzetvereisten voor elk niveau."
+				}
+			},
+			"calculation": {
+				"title": "Hoe bonussen worden berekend",
+				"desc": "Bonussen worden elke 24 uur berekend op basis van je totale inzetten. Voorbeelden:",
+				"exampleTitle": "Niveau {tier}:",
+				"wagerIn": "Weddenschap van {amount} in {gameType}"
+			},
+			"table": {
+				"tierLevel": "Niveauniveau",
+				"wagerRange": "Inzetbereik",
+				"slots": "Slots",
+				"liveCasino": "Live Casino",
+				"sports": "Sporten",
+				"tierPrefix": "NIVEAU",
+				"commissionLevel": "Bonusniveau",
+				"dailyWager": "Dagelijks inzetvolume"
+			},
+			"claim": {
+				"title": "Bonussen claimen en opnemen",
+				"points": {
+					"0": "Bonussen komen 24 uur na de inzet in aanmerking voor claimen.",
+					"1": "Niet-opgeëiste bonussen zullen zich ophopen en niet vervallen.",
+					"2": "Het claim- en opnameproces kan variëren op basis van platformspecifieke beleidsregels."
+				}
+			},
+			"system": {
+				"title": "Systeemtijd en -operaties",
+				"dailyTimeframeLabel": "Dagelijkse tijdsbestek:",
+				"dailyTimeframeValue": "00:00 UTC tot 23:59 UTC (elke dag).",
+				"claimDailyLabel": "Dagelijks claimen:",
+				"claimDailyValue": "Dagelijks beschikbaar om 14:00 UTC (Uw lokale tijd: {local}).",
+				"note": "Opmerking: terwijl we samenwerken met providers uit verschillende tijdzones, volgen alle berekeningen de UTC om consistentie te waarborgen en verwarring te voorkomen."
+			},
+			"amendments": {
+				"title": "Wijzigingen en diskwalificaties",
+				"body": "Wij kunnen deze voorwaarden op elk moment bijwerken, en wijzigingen worden van kracht bij publicatie. Bij verdenking van systeemfouten, rekenfouten of fraude behouden we ons het recht voor om bonussen en accounts aan te passen of te diskwalificeren indien nodig om eerlijkheid te waarborgen"
+			},
+			"footer": {
+				"schedule": "Bonusschema:",
+				"availableDaily": "Dagelijks beschikbaar om",
+				"localTimeLabel": "(Uw lokale tijd: {time})"
+			}
+		},
+		"calculator": {
+			"title": "Bonus Calculator",
+			"subtitle": "Schat uw bonusinkomsten op basis van uw inzetbedragen",
+			"interactive": {
+				"title": "Interactieve tool:",
+				"body": "Voer verschillende inzetbedragen in om potentiële bonussen over alle niveaus te zien"
+			},
+			"potentialEarnings": "Potentiële Bonus",
+			"basedOnRate": "Gebaseerd op een bonuspercentage van {percentage}%",
+			"tier": "Niveau {level}",
+			"commissionLevel": "Bonusniveau {level}",
+			"enterWager": "Voer het inzetbedrag in (USD)",
+			"wagerPlaceholder": "bijv., 1000",
+			"calcFor": "Bonus berekenen voor ${amount} inzet",
+			"totalPotential": "Totale Potentiële Bonus:",
+			"combinedAtTier": "Gecombineerde bonus van alle spelsystemen op niveau {level}"
 		}
 	}
 }

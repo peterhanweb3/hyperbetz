@@ -7,7 +7,7 @@
 		"viewAll": "View All"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "Toggle Sidebar",
@@ -482,13 +482,13 @@
 		"rates": {
 			"title": "Commission Rate Structure",
 			"subtitle": "Earnings percentages by tier level and game category",
-			"howItWorks": {
-				"title": "How Commission Tiers Work",
-				"body": "Your commission tier is determined by your referrals' total daily wager amount. Higher tiers offer better commission rates across all game types."
+			"overview": {
+				"title": "Overview",
+				"body": "The Affiliate Program rewards affiliates based on the wager turnover from referred players in Slots , Live Casino , Sportsbooks and Lottery. Commissions are calculated every 24 hours, with earnings based on different turnover tiers."
 			},
 			"calculation": {
 				"title": "How Commissions Are Calculated",
-				"desc": "Commissions are calculated every 24 hours based on referred players' total wagers. Examples:",
+				"desc": "Commissions are calculated every 24 hours based on referred players' total wagers. \nExamples:",
 				"exampleTitle": "Tier {tier}:",
 				"wagerIn": "Wager {amount} in {gameType}"
 			},
@@ -544,6 +544,157 @@
 			"calcFor": "Calculating earnings for ${amount} wager",
 			"totalPotential": "Total Potential Earnings:",
 			"combinedAtTier": "Combined earnings from all game types at Tier {level}"
+		}
+	},
+	"bonus": {
+		"title": "Member Bonus Program",
+		"loginPromptTitle": "Member Bonus Program",
+		"loginPromptSubtitle": "Log in to view your bonus stats and claim your rewards.",
+		"goHome": "Go to Home",
+		"tabs": {
+			"dashboard": "Dashboard",
+			"claims": "Claims",
+			"rates": "Bonus Rates",
+			"calculator": "Calculator"
+		},
+		"refresh": "Refresh",
+		"refreshing": "Refreshing...",
+		"refreshAllSuccess": "All data refreshed successfully!",
+		"refreshPartial": "Partially refreshed: {success}/{total} sections updated",
+		"refreshFailed": "Failed to refresh data. Please try again.",
+		"dashboard": {
+			"title": "Bonus Dashboard",
+			"subtitle": "Track your wagers, bonuses, and reward earnings",
+			"performanceOverview": "Bonus Overview",
+			"bonusRatesTitle": "Bonus Rate Structure",
+			"totalIncome": "Total Bonus",
+			"pendingBonus": "Pending Bonus",
+			"lastClaim": "Last Claim",
+			"unclaimedEarnings": "Available to Claim",
+			"claim": {
+				"title": "Claiming and Withdrawing",
+				"points": {
+					"0": "Commissions are available for withdrawal once calculated.",
+					"1": "There is no expiration for unclaimed commissions—they accumulate until claimed.",
+					"2": "Withdrawals follow the platform's standard rules, such as minimum limits and processing times."
+				}
+			},
+			"claiming": "Claiming...",
+
+			"section2": {
+				"title": "Eligibility",
+				"content": "To participate:"
+			},
+			"section3": {
+				"title": "Farming Tiers and Rates",
+				"content": "Bonuses are calculated based on your daily wager amounts:",
+				"noteTitle": "Note",
+				"noteContent": "Tiers are evaluated daily at 14:00 UTC. Your previous day's wager volume determines today's bonus rate. Rates apply to all game types: Slots, Live Casino, and Sports."
+			}
+		},
+		"claims": {
+			"title": "Claims History",
+			"subtitle": "Track your bonus claims and wagering activity",
+			"tableHeaders": {
+				"date": "Betting Date",
+				"slots": "Slots",
+				"liveCasino": "Live Casino",
+				"sports": "Sports",
+				"total": "Total",
+				"tier": "Tier",
+				"unclaimed": "Unclaimed",
+				"token": "Token"
+			},
+			"tierPrefix": "Tier",
+			"availableToClaim": "Available to Claim",
+			"totalBonus": "Total Bonus",
+			"claimed": "Claimed",
+			"progressPercentage": "Progress",
+			"progressTitle": "Your Progress",
+			"currentTier": "Current Tier",
+			"nextTier": "Next Tier",
+			"wagerProgress": "Wager Progress",
+			"totalWagered": "Total Wagered Today",
+			"toNextTier": "to reach next tier",
+			"empty": {
+				"title": "No Bonus Claims Yet",
+				"subtitle": "Start playing to earn bonuses!"
+			}
+		},
+		"rates": {
+			"title": "Farming Tiers and Rates",
+			"subtitle": "Bonus percentages by wager level and game category",
+			"overview": {
+				"title": "Overview",
+				"body": "The Bonus Farming rewards users based on their wagers in Slot , Live Casino , Sportsbook and Lottery. Bonuses are calculated every 24 hours, and users can claim them next day after wagering. There are seven tiers, each with different rates depending on the wager amount."
+			},
+			"eligibility": {
+				"title": "Eligibility",
+				"content": "To participate:",
+				"points": {
+					"0": "You must have an active account.",
+					"1": "Place wagers in Slot, Live Casino, Sportsbook and Lottery.",
+					"2": "Meet the minimum wager requirements for each tier."
+				}
+			},
+			"calculation": {
+				"title": "How Bonuses Are Calculated",
+				"desc": "Bonuses are calculated every 24 hours based on your total wagers. Examples:",
+				"exampleTitle": "Tier {tier}:",
+				"wagerIn": "Wager {amount} in {gameType}"
+			},
+			"table": {
+				"tierLevel": "Tier Level",
+				"wagerRange": "Wager Range",
+				"slots": "Slots",
+				"liveCasino": "Live Casino",
+				"sports": "Sports",
+				"tierPrefix": "TIER",
+				"commissionLevel": "Bonus Level",
+				"dailyWager": "Daily wager volume"
+			},
+			"claim": {
+				"title": "Claiming and Withdrawing Bonuses",
+				"points": {
+					"0": "Bonuses become eligible for claiming 24 hours after the wager.",
+					"1": "Unclaimed bonuses will accumulate and do not expire.",
+					"2": "The claiming and withdrawal process may vary based on platform-specific policies."
+				}
+			},
+			"system": {
+				"title": "System Time and Operations",
+				"dailyTimeframeLabel": "Daily Timeframe:",
+				"dailyTimeframeValue": "00:00 UTC to 23:59 UTC (every day).",
+				"claimDailyLabel": "Claim Daily:",
+				"claimDailyValue": "Available daily at 14:00 UTC (Your Local Time: {local}).",
+				"note": "Note: while we work with providers from different time zones, all calculations follow UTC to ensure consistency and avoid confusion."
+			},
+			"amendments": {
+				"title": "Amendments and Disqualifications",
+				"body": "We may update these terms at any time, and changes take effect upon posting. If system errors, miscalculations, or cheating are suspected, we reserve the right to adjust or disqualify bonuses and accounts as necessary to ensure fairness"
+			},
+			"footer": {
+				"schedule": "Bonus Schedule:",
+				"availableDaily": "Available daily at",
+				"localTimeLabel": "(Your Local Time: {time})"
+			}
+		},
+		"calculator": {
+			"title": "Bonus Calculator",
+			"subtitle": "Estimate your bonus earnings based on your wager amounts",
+			"interactive": {
+				"title": "Interactive Tool:",
+				"body": "Enter different wager amounts to see potential bonuses across all tiers"
+			},
+			"potentialEarnings": "Potential Bonus",
+			"basedOnRate": "Based on {percentage}% bonus rate",
+			"tier": "Tier {level}",
+			"commissionLevel": "Bonus Level {level}",
+			"enterWager": "Enter Wager Amount (USD)",
+			"wagerPlaceholder": "e.g., 1000",
+			"calcFor": "Calculating bonus for ${amount} wager",
+			"totalPotential": "Total Potential Bonus:",
+			"combinedAtTier": "Combined bonus from all game types at Tier {level}"
 		}
 	},
 	"debug": {
@@ -856,7 +1007,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Withdrawal Successful!",
-			"successMessage": "🎉 Just withdrew {withdrawAmount} {tokenSymbol} from Hyperbetz! 🚀 Join the winning streak at {shareUrl}",
+			"successMessage": "🎉 Just withdrew {withdrawAmount} {tokenSymbol} from Meme Win! 🚀 Join the winning streak at {shareUrl}",
 			"withdrawnAmount": "Withdrawn Amount",
 			"shareText": "Share",
 			"subText": "🚀 JOIN THE WINNING STREAK! 🚀",
@@ -977,7 +1128,7 @@
 			"casino": {
 				"title": "Casino",
 				"badge": "590+ GAMES",
-				"desc": "Enjoy Hyperbetz Originals and other casino games from top providers.",
+				"desc": "Enjoy MemeWin Originals and other casino games from top providers.",
 				"link": "Go to Casino"
 			},
 			"slots": {

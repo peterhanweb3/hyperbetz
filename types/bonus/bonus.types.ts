@@ -154,9 +154,19 @@ export interface GetMemberUnclaimedBonusRequest {
  * The structure is currently unknown, so it allows any properties.
  */
 export interface UnclaimedBonus {
-	// Define structure based on expected data if available, using any for now
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	[key: string]: any;
+	date: string;
+	bet_date: string;
+	total_wager: number;
+	unclaim_amount: number;
+	tier: number;
+	max_bonus: number;
+	total_wager_slot: number;
+	total_unclaim_slot: number;
+	total_wager_lc: number;
+	total_unclaim_lc: number;
+	total_wager_sport: number;
+	total_unclaim_sport: number;
+	token: string;
 }
 
 /**
@@ -164,7 +174,9 @@ export interface UnclaimedBonus {
  */
 export interface GetMemberUnclaimedBonusSuccessResponse {
 	error: false;
-	data?: UnclaimedBonus[];
+	total_data: string;
+	page: string;
+	data: UnclaimedBonus[];
 }
 
 /**
