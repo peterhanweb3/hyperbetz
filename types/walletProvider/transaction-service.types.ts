@@ -123,6 +123,7 @@ export interface ExecuteTokenTransferParams {
 	recipientAddress: string;
 	amount: string | number;
 	decimals?: number;
+	isNative?: boolean;
 }
 
 export type ExecuteTokenTransferResult = TransactionResult;

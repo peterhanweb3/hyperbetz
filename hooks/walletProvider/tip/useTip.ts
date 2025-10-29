@@ -210,12 +210,7 @@ export const useTip = () => {
 				`${minTipAmount.toFixed(2)} ${selectedToken.symbol}`
 			);
 
-		const displayAmount = usdEstimate.toFixed(2);
-		return usdEstimate > 0
-			? i18n.buttons.tipUsd(
-					displayAmount === "0.00" ? "< 0.01" : displayAmount
-			  )
-			: i18n.buttons.tip();
+		return i18n.buttons.tip();
 	}, [
 		isLoading,
 		isApproving,
@@ -225,7 +220,7 @@ export const useTip = () => {
 		isBalanceInsufficient,
 		minTipAmount,
 		i18n,
-		usdEstimate,
+		// usdEstimate,
 	]);
 
 	const isTipDisabled = useCallback(() => {

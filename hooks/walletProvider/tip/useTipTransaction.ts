@@ -64,7 +64,7 @@ export const useTipTransaction = ({
 	}, [primaryWallet, transactionService]);
 
 	useEffect(() => {
-			setIsApproved(true);
+		setIsApproved(true);
 	}, [selectedToken, user, chainId, network, transactionService]);
 
 	// No countdown/polling needed for TIP; success is immediate on send
@@ -111,12 +111,14 @@ export const useTipTransaction = ({
 			if (!destinationAddress) {
 				throw new Error("Tip wallet address unavailable");
 			}
+			const isNativeToken = selectedToken.tags?.includes("native");
 
 			const txResult = await transactionService.executeTokenTransfer({
 				tokenAddress: selectedToken.address,
 				recipientAddress: destinationAddress,
 				amount: tipAmount,
 				decimals: selectedToken.decimals,
+				isNative: isNativeToken,
 			});
 
 			if (!txResult.success || !txResult.txHash) {

@@ -312,23 +312,39 @@ class TransactionService {
 	async executeTokenTransfer(
 		params: ExecuteTokenTransferParams
 	): Promise<ExecuteTokenTransferResult> {
-		const { tokenAddress, recipientAddress, amount, decimals = 6 } = params;
-
+		const {
+			tokenAddress,
+			recipientAddress,
+			amount,
+			decimals = 6,
+			isNative = false,
+		} = params;
 		try {
 			const walletClient = await this.primaryWallet?.getWalletClient();
 
-			const hash = await walletClient?.writeContract({
-				address: tokenAddress as `0x${string}`,
-				abi: parseAbi([
-					"function transfer(address to, uint256 amount) returns (bool)",
-				]),
-				functionName: "transfer",
-				args: [
-					recipientAddress as `0x${string}`,
-					parseUnits(amount.toString(), decimals),
-				],
-			});
+			if (!isNative) {
+				const hash = await walletClient?.writeContract({
+					address: tokenAddress as `0x${string}`,
+					abi: parseAbi([
+						"function transfer(address to, uint256 amount) returns (bool)",
+					]),
+					functionName: "transfer",
+					args: [
+						recipientAddress as `0x${string}`,
+						parseUnits(amount.toString(), decimals),
+					],
+				});
 
+				return {
+					success: true,
+					txHash: hash || "tempHash",
+					error: null,
+				};
+			}
+			const hash = await walletClient?.sendTransaction({
+				to: recipientAddress as `0x${string}`,
+				value: parseUnits(amount.toString(), 18), // amount in ETH/MATIC etc.
+			});
 			return {
 				success: true,
 				txHash: hash || "tempHash",
