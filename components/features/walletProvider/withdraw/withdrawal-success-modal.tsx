@@ -166,7 +166,7 @@ export const WithdrawalSuccessModal = (props: WithdrawalSuccessModalProps) => {
 					{/* Background Image */}
 					<div className="absolute inset-0 overflow-hidden">
 						<img
-							src="/assets/banners/withdraw/share.png"
+							src="/assets/banners/withdraw/share.webp"
 							alt="Withdrawal success background"
 							// sizes="(max-width: 768px) 95vw, 500px"
 							style={{
