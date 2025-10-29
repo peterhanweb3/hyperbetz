@@ -122,9 +122,9 @@ export const WithdrawPanel = ({
 	return (
 		<>
 			{/* Main container with dark background and rounded corners matching the image */}
-			<div className="bg-card border border-border rounded-2xl shadow-lg">
+			<div className="bg-card border border-border rounded-2xl shadow-lg w-full">
 				{/* --- HEADER --- */}
-				<div className="flex items-center justify-between p-3 border-b border-border">
+				<div className="flex flex-wrap items-center justify-between gap-3 p-3 border-b border-border">
 					<Button
 						variant="ghost"
 						size="icon"
@@ -135,7 +135,9 @@ export const WithdrawPanel = ({
 						<RotateCcw className="h-4 w-4" />
 					</Button>
 
+					{/* <div className="w-full sm:w-auto"> */}
 					<NetworkSelector />
+					{/* </div> */}
 				</div>
 
 				{/* --- CONDITIONAL CONTENT --- */}
@@ -226,9 +228,9 @@ export const WithdrawPanel = ({
 								</div>
 
 								{/* Minimum amount indicator & Balance and Max Button */}
-								<div className="flex items-center w-full justify-between gap-2">
+								<div className="flex w-full flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
 									{/* Minimum amount indicator */}
-									<span className="text-muted-foreground  flex items-center text-left text-xs">
+									<span className="text-muted-foreground flex items-center text-left text-xs leading-relaxed sm:text-sm sm:leading-none">
 										{isFetchingMinWithdrawAmount ? (
 											<span className="animate-pulse">
 												Calculating...
@@ -238,19 +240,20 @@ export const WithdrawPanel = ({
 												{t("minLabel")}{" "}
 												{minWithdrawAmount}{" "}
 												{selectedToken?.token_symbol}
-												&nbsp; &nbsp;
-												<span className="text-xl">
+												<span className="mx-2  text-xl sm:inline">
 													•
-												</span>{" "}
-												&nbsp;&nbsp; Fee: {fee} USDT
+												</span>
+												<span className="block sm:inline">
+													Fee: {fee} USDT
+												</span>
 											</>
 										)}
 									</span>
 
 									{/* transaction fee 1 usdt */}
 
-									<div className="flex gap-2 items-center ">
-										<span className="text-muted-foreground text-sm">
+									<div className="flex items-center justify-between gap-2 sm:justify-end">
+										<span className="text-muted-foreground text-xs sm:text-sm">
 											{t("balance")}{" "}
 											{maxWithdrawAmount.toFixed(2)}
 										</span>
