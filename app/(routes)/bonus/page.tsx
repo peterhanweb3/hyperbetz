@@ -156,7 +156,7 @@ export default function BonusPage() {
 
 	return (
 		<div className="min-h-screen bg-background">
-			<div className="py-4 sm:py-6 space-y-6 sm:space-y-8 px-4 sm:px-6 lg:px-8">
+			<div className="py-4 sm:py-6 space-y-6 sm:space-y-8">
 				{/* Header Section with Refresh Button */}
 				<div className="flex items-center justify-between flex-wrap gap-4">
 					<div className="space-y-2 sm:space-y-4">

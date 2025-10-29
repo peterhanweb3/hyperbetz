@@ -1,15 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import useBonusDashboard from "@/hooks/bonus/useBonusDashboard";
 import useBonusClaims from "@/hooks/bonus/usBonusClaims";
 import { ClaimBonus } from "@/components/features/affiliate/dashboard-tab/claim-bonus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faClipboardList,
-	faRefresh,
-	faGift,
-} from "@fortawesome/pro-light-svg-icons";
+import { faClipboardList, faRefresh } from "@fortawesome/pro-light-svg-icons";
 import { useTranslations } from "@/lib/locale-provider";
 import { Button } from "@/components/ui/button";
 import {
@@ -22,53 +17,6 @@ import {
 } from "@/components/ui/table";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-
-/**
- * Calculate time remaining until next 14:00 UTC
- */
-const useCountdownTimer = () => {
-	const [timeLeft, setTimeLeft] = useState("");
-
-	useEffect(() => {
-		const calculateTimeLeft = () => {
-			const now = new Date();
-			const utcNow = new Date(
-				now.getTime() + now.getTimezoneOffset() * 60000
-			);
-
-			// Get today's 14:00 UTC
-			const targetTime = new Date(utcNow);
-			targetTime.setUTCHours(14, 0, 0, 0);
-
-			// If we've passed 14:00 UTC today, target tomorrow's 14:00 UTC
-			if (utcNow >= targetTime) {
-				targetTime.setUTCDate(targetTime.getUTCDate() + 1);
-			}
-
-			const diff = targetTime.getTime() - utcNow.getTime();
-
-			const hours = Math.floor(diff / (1000 * 60 * 60));
-			const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-			const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-			return `${String(hours).padStart(2, "0")}:${String(
-				minutes
-			).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
-		};
-
-		// Initial calculation
-		setTimeLeft(calculateTimeLeft());
-
-		// Update every second
-		const interval = setInterval(() => {
-			setTimeLeft(calculateTimeLeft());
-		}, 1000);
-
-		return () => clearInterval(interval);
-	}, []);
-
-	return timeLeft;
-};
 
 /**
  * Enhanced semi-circular progress bar component showing monthly progress
@@ -96,7 +44,7 @@ const SemiCircularProgress = ({
 	const progressOffset = circumference * (1 - dayProgressPercentage / 100);
 
 	return (
-		<div className="flex flex-col items-center space-y-4 sm:space-y-6 p-4 sm:p-6 lg:p-8 bg-gradient-to-br from-card via-card to-muted/5">
+		<div className="flex flex-col items-center space-y-4 sm:space-y-6 p-4  bg-gradient-to-br from-card via-card to-muted/5">
 			{/* Semi-circular progress bar */}
 			<div className="relative w-full flex items-center justify-center">
 				<svg
@@ -145,7 +93,7 @@ const SemiCircularProgress = ({
 
 				{/* Center content - Day Progress */}
 				<div className="absolute inset-0 flex flex-col items-center justify-center mt-4 sm:mt-6 md:mt-8">
-					<div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tabular-nums tracking-tight">
+					<div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tabular-nums tracking-tight mt-auto mb-1">
 						<span className="bg-gradient-to-br from-orange-500 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
 							{currentDay}
 						</span>
@@ -172,70 +120,6 @@ const SemiCircularProgress = ({
 				</div>
 			</div>
 		</div>
-	);
-};
-
-/**
- * Unclaimed Earnings Card with Timer
- */
-const UnclaimedEarningsCard = ({
-	totalUnclaimed,
-	isLoading,
-}: {
-	totalUnclaimed: number;
-	isLoading: boolean;
-}) => {
-	const timeLeft = useCountdownTimer();
-
-	if (isLoading) {
-		return (
-			<Card className="bg-gradient-to-br from-card to-card border-2 border-primary/20">
-				<CardContent className="p-6">
-					<Skeleton className="h-24 w-full" />
-				</CardContent>
-			</Card>
-		);
-	}
-
-	return (
-		<Card className="bg-gradient-to-br from-rose-500/5 via-card to-red-500/5 border-2 border-rose-500/20 shadow-lg shadow-rose-500/5">
-			<CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
-				{/* Header with Gift Icon */}
-				<div className="flex items-center justify-between">
-					<div className="flex items-center gap-2 sm:gap-3">
-						<div className="p-1.5 sm:p-2 rounded-lg bg-rose-500/10 border border-rose-500/20">
-							<FontAwesomeIcon
-								icon={faGift}
-								className="h-4 w-4 sm:h-5 sm:w-5 text-rose-500"
-							/>
-						</div>
-						<span className="text-sm sm:text-base font-medium text-muted-foreground">
-							Unclaimed Earnings
-						</span>
-					</div>
-				</div>
-
-				{/* Amount Display */}
-				<div className="flex items-baseline gap-2 flex-wrap">
-					<span className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-rose-500 via-pink-500 to-red-500 bg-clip-text text-transparent tabular-nums">
-						${totalUnclaimed.toFixed(2)}
-					</span>
-					<span className="text-base sm:text-lg font-semibold text-muted-foreground/60">
-						USD
-					</span>
-				</div>
-
-				{/* Timer Section */}
-				<div className="pt-3 sm:pt-4 border-t border-border/50">
-					<div className="text-xs font-medium text-muted-foreground/70 mb-1 tracking-wide">
-						Next Unlock:
-					</div>
-					<div className="text-xl sm:text-2xl font-mono font-bold text-foreground tabular-nums tracking-wider">
-						{timeLeft}
-					</div>
-				</div>
-			</CardContent>
-		</Card>
 	);
 };
 
@@ -326,10 +210,9 @@ export const BonusClaimsTab = () => {
 				</div>
 			</div>
 
-			{/* Content Layout: Table on left, Claim card on right */}
-			<div className="flex flex-col lg:flex-row gap-4 sm:gap-6">
+			<div className="flex flex-col  lg:flex-row gap-4 lg:gap-6">
 				{/* Table Section */}
-				<div className="flex-1 min-w-0">
+				<div className="flex-1 min-w-0 lg:sticky lg:top-4">
 					<Card className="overflow-hidden pt-0">
 						{isLoading ? (
 							<div className="p-3 sm:p-4 md:p-6 space-y-4">
@@ -342,7 +225,7 @@ export const BonusClaimsTab = () => {
 							</div>
 						) : (
 							<div className="overflow-x-auto">
-								<Table>
+								<Table className="lg:min-h-100 min-h-40">
 									<TableHeader>
 										<TableRow className="bg-muted/50 hover:bg-muted/50">
 											<TableHead className="font-semibold text-foreground/80 py-2 sm:py-3 md:py-4 px-2 sm:px-3 md:px-4 text-xs sm:text-sm">
@@ -466,10 +349,10 @@ export const BonusClaimsTab = () => {
 				</div>
 
 				{/* Claim Card Section */}
-				<div className="lg:w-80 xl:w-96 flex-shrink-0">
+				<div className="lg:w-70 xl:w-86 flex-shrink-0">
 					<div className="space-y-3 sm:space-y-4 lg:sticky lg:top-4">
 						{/* Semi-Circular Progress Card */}
-						<Card className="overflow-hidden">
+						<Card className="overflow-hidden border-primary/70 p-0">
 							<CardContent className="p-0">
 								{isLoading ? (
 									<div className="p-4 sm:p-6 space-y-4">
@@ -483,12 +366,6 @@ export const BonusClaimsTab = () => {
 								)}
 							</CardContent>
 						</Card>
-
-						{/* Unclaimed Earnings Card */}
-						<UnclaimedEarningsCard
-							totalUnclaimed={totalUnclaimed}
-							isLoading={isLoading}
-						/>
 
 						{/* Claim Button */}
 						<ClaimBonus
