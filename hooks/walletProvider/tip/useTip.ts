@@ -211,11 +211,11 @@ export const useTip = () => {
 			);
 
 		const displayAmount = usdEstimate.toFixed(2);
-		return usdEstimate > 0
-			? i18n.buttons.tipUsd(
-					displayAmount === "0.00" ? "< 0.01" : displayAmount
-			  )
-			: i18n.buttons.tip();
+		// return usdEstimate > 0
+		// 	? i18n.buttons.tipUsd(
+		// 			displayAmount === "0.00" ? "< 0.01" : displayAmount
+		// 	  )
+		return i18n.buttons.tip();
 	}, [
 		isLoading,
 		isApproving,

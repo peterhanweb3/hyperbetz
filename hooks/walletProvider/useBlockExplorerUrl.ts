@@ -52,7 +52,7 @@ export const useBlockExplorerUrl = () => {
 	 */
 	const getTransactionUrl = (transactionHash: string) => {
 		if (!blockExplorerUrl || !transactionHash) return null;
-		return `${blockExplorerUrl}tx/${transactionHash}`;
+		return `${blockExplorerUrl}/tx/${transactionHash}`;
 	};
 
 	/**
