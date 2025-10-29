@@ -4,6 +4,7 @@ import { Token } from "@/types/blockchain/swap.types";
 import { SearchTokenResult } from "@/types/walletProvider/transaction-service.types";
 import { faPlusCircle } from "@fortawesome/pro-light-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 // import { PlusCircle } from "lucide-react";
 
 // --- Helper Functions ---
@@ -13,6 +14,7 @@ const truncateAddress = (address: string) =>
 
 // --- TokenRow for Owned Tokens ---
 interface TokenRowProps {
+	hideTopSection?: boolean;
 	token: Token;
 	onSelect: (token: Token) => void;
 	onAddToWallet: (token: Token) => void;
@@ -20,6 +22,7 @@ interface TokenRowProps {
 }
 
 export const TokenRow = ({
+	hideTopSection = false,
 	token,
 	onSelect,
 	onAddToWallet,
@@ -37,13 +40,13 @@ export const TokenRow = ({
 		>
 			<div className="flex justify-between items-center gap-4 w-full">
 				{token.icon && (
-					<img
-						src={token.icon || ""}
-						// src={token.icon || "/fallback-icon.png"}
+					<Image
+						src={token.icon}
 						alt={token.name}
 						width={40}
 						height={40}
 						className="rounded-full"
+						unoptimized
 					/>
 				)}
 				<div className="flex-grow">
@@ -84,9 +87,24 @@ export const TokenRow = ({
 					</div>
 				</div>
 				<div className="text-right">
-					<p className={`font-semibold text-lg`}>
-						${fiatValue.toFixed(4)}
-					</p>
+					{!hideTopSection ? (
+						<p className={`font-semibold text-lg`}>
+							${fiatValue.toFixed(4)}
+						</p>
+					) : (
+						<p className={"text-muted-foreground"}>
+							<span
+								className={`${
+									isTokenOwned
+										? "text-blue-500"
+										: "text-muted-foreground"
+								}`}
+							>
+								{balance.toFixed(6)}
+							</span>{" "}
+							{token.symbol}{" "}
+						</p>
+					)}
 				</div>
 			</div>
 		</CommandItem>
@@ -108,12 +126,13 @@ export const SearchResultRow = ({ token, onSelect }: SearchResultRowProps) => {
 		>
 			<div className="flex items-center gap-4 w-full">
 				{token.logoURI && (
-					<img
-						src={token.logoURI || ""}
+					<Image
+						src={token.logoURI}
 						alt={token.name}
 						width={40}
 						height={40}
 						className="rounded-full"
+						unoptimized
 					/>
 				)}
 				<div className="flex-grow">
