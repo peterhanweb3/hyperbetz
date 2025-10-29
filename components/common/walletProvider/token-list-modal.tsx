@@ -147,9 +147,9 @@ TokenListModalProps) => {
 											<Image
 												src={token.icon}
 												alt={token.symbol}
-												width={16}
-												height={16}
-												className="mr-2"
+												width={25}
+												height={25}
+												className=""
 											/>
 											{token.symbol}
 										</Button>

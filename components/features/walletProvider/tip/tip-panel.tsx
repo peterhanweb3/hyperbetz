@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 import { ChevronDown, Loader2, RotateCcw } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLock } from "@fortawesome/pro-light-svg-icons";
+import { faInfoCircle, faLock } from "@fortawesome/pro-light-svg-icons";
 
 import { useTip } from "@/hooks/walletProvider/tip/useTip";
 import { Button } from "@/components/ui/button";
@@ -18,6 +18,7 @@ import { useTranslations } from "@/lib/locale-provider";
 import { CopyWalletAddressButton } from "@/components/common/walletProvider/copy-wallet-address-button";
 import { useWalletAddress } from "@/hooks/walletProvider/useWalletAddress";
 import { cn } from "@/lib/utils";
+import { sanitizeDecimalInput } from "@/lib/utils";
 
 export const TipPanel = ({
 	isLobbyPage = false,
@@ -131,7 +132,9 @@ export const TipPanel = ({
 										value={tipAmount}
 										onChange={(e) =>
 											handleAmountChangeWrapper(
-												e.target.value
+												sanitizeDecimalInput(
+													e.target.value
+												)
 											)
 										}
 										className={cn(
@@ -179,6 +182,13 @@ export const TipPanel = ({
 								</div>
 
 								<div className="flex items-center justify-between w-full">
+									<div className="text-left text-xs text-muted-foreground">
+										<FontAwesomeIcon
+											icon={faInfoCircle}
+											className="mr-1"
+										/>
+										Tips are voluntary and non-refundable.
+									</div>
 									{selectedToken && minTipAmount > 0 && (
 										<div className="text-left">
 											<span className="text-muted-foreground text-xs">
@@ -293,6 +303,7 @@ export const TipPanel = ({
 					}
 					setIsTokenModalOpen(false);
 				}}
+				hideTopSection
 			/>
 		</>
 	);

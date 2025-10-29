@@ -219,7 +219,7 @@ const StableSidebarComponent = ({
 						className="w-full bg-primary hover:bg-primary/90 text-foreground/80 font-bold shadow-lg shadow-primary/40 animate-daily-bonus-pulse transition-all duration-300"
 						asChild
 					>
-						<a href="/bonus/daily">
+						<a href="/bonus">
 							<FontAwesomeIcon
 								icon={faGift}
 								fontSize={16}

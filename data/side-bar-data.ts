@@ -306,7 +306,7 @@ export const getNavData = ({
 		// --- Static Daily Bonus Section ---
 		dailyBonus: {
 			title: "sidebar.dailyBonus",
-			url: "/bonus/daily",
+			url: "/bonus",
 			icon: faGift,
 			variant: "default" as const,
 		},

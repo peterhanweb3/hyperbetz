@@ -171,7 +171,7 @@ const AppSidebarComponent = ({ ...props }: ComponentProps<typeof Sidebar>) => {
 						className="w-full bg-primary hover:bg-primary/90 text-foreground/80 font-semibold shadow-lg shadow-primary/40 animate-daily-bonus-pulse transition-all duration-300"
 						asChild
 					>
-						<Link href="/bonus/daily">
+						<Link href="/bonus">
 							<FontAwesomeIcon
 								icon={faGift}
 								fontSize={16}
