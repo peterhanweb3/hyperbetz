@@ -7,7 +7,7 @@
 		"viewAll": "مشاهده همه"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "تغییر نوار کناری",
@@ -33,7 +33,8 @@
 		"promotions": "تخفیف‌ها",
 		"affiliate": "همکاری",
 		"providers": "ارائه‌دهندگان",
-		"lobby": "لابی"
+		"lobby": "لابی",
+		"bonus": "پاداش گردش مالی"
 	},
 	"profile": {
 		"language": "زبان",
@@ -815,7 +816,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "برداشت موفق!",
-			"successMessage": "🎉 همین الان {withdrawAmount} {tokenSymbol} از Hyperbetz برداشت کردم! 🚀 در {shareUrl} به زنجیره پیروزی بپیوندید",
+			"successMessage": "🎉 همین الان {withdrawAmount} {tokenSymbol} از Meme Win برداشت کردم! 🚀 در {shareUrl} به زنجیره پیروزی بپیوندید",
 			"withdrawnAmount": "مبلغ برداشت شده",
 			"shareText": "اشتراک‌گذاری",
 			"subText": "🚀 به زنجیره پیروزی بپیوندید! 🚀",
@@ -936,7 +937,7 @@
 			"casino": {
 				"title": "کازینو",
 				"badge": "+۵۹۰ بازی",
-				"desc": "از بازی‌های اصلی Hyperbetz و سایر بازی‌های کازینو از ارائه‌دهندگان برتر لذت ببرید.",
+				"desc": "از بازی‌های اصلی MemeWin و سایر بازی‌های کازینو از ارائه‌دهندگان برتر لذت ببرید.",
 				"link": "رفتن به کازینو"
 			},
 			"slots": {

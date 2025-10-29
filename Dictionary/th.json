@@ -7,7 +7,7 @@
 		"viewAll": "ดูทั้งหมด"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "สลับแถบด้านข้าง",
@@ -33,7 +33,8 @@
 		"promotions": "โปรโมชั่น",
 		"affiliate": "พันธมิตร",
 		"providers": "ผู้ให้บริการ",
-		"lobby": "ล็อบบี้"
+		"lobby": "ล็อบบี้",
+		"bonus": "โบนัสหมุนเวียน"
 	},
 	"profile": {
 		"language": "ภาษา",
@@ -815,7 +816,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "การถอนเงินสำเร็จ!",
-			"successMessage": "🎉 เพิ่งถอน {withdrawAmount} {tokenSymbol} จาก Hyperbetz! 🚀 เข้าร่วมเส้นทางแห่งชัยชนะได้ที่ {shareUrl}",
+			"successMessage": "🎉 เพิ่งถอน {withdrawAmount} {tokenSymbol} จาก Meme Win! 🚀 เข้าร่วมเส้นทางแห่งชัยชนะได้ที่ {shareUrl}",
 			"withdrawnAmount": "จำนวนเงินที่ถอน",
 			"shareText": "แชร์",
 			"subText": "🚀 เข้าร่วมเส้นทางแห่งชัยชนะ! 🚀",
@@ -936,7 +937,7 @@
 			"casino": {
 				"title": "คาสิโน",
 				"badge": "590+ เกม",
-				"desc": "สนุกกับเกมดั้งเดิมของ Hyperbetz และเกมคาสิโนอื่นๆ จากผู้ให้บริการชั้นนำ",
+				"desc": "สนุกกับเกมดั้งเดิมของ MemeWin และเกมคาสิโนอื่นๆ จากผู้ให้บริการชั้นนำ",
 				"link": "ไปที่คาสิโน"
 			},
 			"slots": {

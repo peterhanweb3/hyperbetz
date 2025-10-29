@@ -7,7 +7,7 @@
 		"viewAll": "查看全部"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "切换侧边栏",
@@ -33,7 +33,8 @@
 		"promotions": "促销活动",
 		"affiliate": "联盟",
 		"providers": "提供商",
-		"lobby": "大厅"
+		"lobby": "大厅",
+		"bonus": "营业额奖励"
 	},
 	"profile": {
 		"language": "语言",
@@ -815,7 +816,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "取款成功！",
-			"successMessage": "🎉 刚从 Hyperbetz 提取了 {withdrawAmount} {tokenSymbol}！🚀 在 {shareUrl} 加入胜利的行列",
+			"successMessage": "🎉 刚从 Meme Win 提取了 {withdrawAmount} {tokenSymbol}！🚀 在 {shareUrl} 加入胜利的行列",
 			"withdrawnAmount": "已取款金额",
 			"shareText": "分享",
 			"subText": "🚀 加入胜利的行列！🚀",
@@ -936,7 +937,7 @@
 			"casino": {
 				"title": "赌场",
 				"badge": "590+ 游戏",
-				"desc": "享受 Hyperbetz 原创和其他顶级提供商的赌场游戏。",
+				"desc": "享受 MemeWin 原创和其他顶级提供商的赌场游戏。",
 				"link": "前往赌场"
 			},
 			"slots": {

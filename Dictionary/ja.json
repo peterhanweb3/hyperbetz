@@ -7,7 +7,7 @@
 		"viewAll": "すべて表示"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "サイドバーの切り替え",
@@ -33,7 +33,8 @@
 		"promotions": "プロモーション",
 		"affiliate": "アフィリエイト",
 		"providers": "プロバイダー",
-		"lobby": "ロビー"
+		"lobby": "ロビー",
+		"bonus": "売上ボーナス"
 	},
 	"profile": {
 		"language": "言語",
@@ -815,7 +816,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "出金成功！",
-			"successMessage": "🎉 Hyperbetzから{withdrawAmount}{tokenSymbol}を出金しました！ 🚀 {shareUrl}で勝利の連鎖に参加しよう",
+			"successMessage": "🎉 Meme Winから{withdrawAmount}{tokenSymbol}を出金しました！ 🚀 {shareUrl}で勝利の連鎖に参加しよう",
 			"withdrawnAmount": "出金額",
 			"shareText": "共有",
 			"subText": "🚀 勝利の連鎖に参加しよう！ 🚀",
@@ -936,7 +937,7 @@
 			"casino": {
 				"title": "カジノ",
 				"badge": "590+ ゲーム",
-				"desc": "Hyperbetzオリジナルやトッププロバイダーのカジノゲームをお楽しみください。",
+				"desc": "MemeWinオリジナルやトッププロバイダーのカジノゲームをお楽しみください。",
 				"link": "カジノへ行く"
 			},
 			"slots": {

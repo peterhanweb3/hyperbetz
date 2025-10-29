@@ -7,7 +7,7 @@
 		"viewAll": "Посмотреть все"
 	},
 	"app": {
-		"name": "Hyperbetz"
+		"name": "Meme Win"
 	},
 	"header": {
 		"toggleSidebar": "Переключить боковую панель",
@@ -33,7 +33,8 @@
 		"promotions": "Акции",
 		"affiliate": "Партнерка",
 		"providers": "Провайдеры",
-		"lobby": "Лобби"
+		"lobby": "Лобби",
+		"bonus": "Бонус за оборот"
 	},
 	"profile": {
 		"language": "Язык",
@@ -815,7 +816,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Вывод успешен!",
-			"successMessage": "🎉 Только что вывел(а) {withdrawAmount} {tokenSymbol} из Hyperbetz! 🚀 Присоединяйтесь к победной серии на {shareUrl}",
+			"successMessage": "🎉 Только что вывел(а) {withdrawAmount} {tokenSymbol} из Meme Win! 🚀 Присоединяйтесь к победной серии на {shareUrl}",
 			"withdrawnAmount": "Выведенная сумма",
 			"shareText": "Поделиться",
 			"subText": "🚀 ПРИСОЕДИНЯЙТЕСЬ К ПОБЕДНОЙ СЕРИИ! 🚀",
@@ -936,7 +937,7 @@
 			"casino": {
 				"title": "Казино",
 				"badge": "590+ ИГР",
-				"desc": "Наслаждайтесь оригинальными играми Hyperbetz и другими играми казино от лучших провайдеров.",
+				"desc": "Наслаждайтесь оригинальными играми MemeWin и другими играми казино от лучших провайдеров.",
 				"link": "Перейти в казино"
 			},
 			"slots": {
