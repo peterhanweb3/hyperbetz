@@ -22,7 +22,6 @@ import TransactionService from "@/services/walletProvider/TransactionService";
 interface UseWithdrawTransactionProps {
 	selectedToken: WithdrawToken | null;
 	withdrawAmount: string;
-	withdrawAddress: string;
 	onTransactionComplete?: () => void; // Callback when transaction completes (success or failure)
 }
 
@@ -33,7 +32,6 @@ interface UseWithdrawTransactionProps {
 export const useWithdrawTransaction = ({
 	selectedToken,
 	withdrawAmount,
-	withdrawAddress,
 	onTransactionComplete,
 }: UseWithdrawTransactionProps) => {
 	// --- Withdrawal Transaction State ---
@@ -420,6 +418,33 @@ export const useWithdrawTransaction = ({
 
 				if (manualResult.error) throw new Error(manualResult.message);
 				toast.success("Withdrawal submitted for manual approval.");
+				
+				// Fire confetti for manual withdrawal submission
+				confetti({
+					spread: 360,
+					ticks: 70,
+					gravity: 0,
+					decay: 0.94,
+					startVelocity: 30,
+					particleCount: 50,
+					scalar: 1.2,
+					shapes: ["star"],
+				});
+				setTimeout(
+					() =>
+						confetti({
+							spread: 360,
+							ticks: 70,
+							gravity: 0,
+							decay: 0.94,
+							startVelocity: 30,
+							particleCount: 70,
+							scalar: 2,
+							shapes: ["circle"],
+						}),
+					200
+				);
+
 				finalTxHash = "manual_approval_pending";
 			}
 
@@ -430,8 +455,16 @@ export const useWithdrawTransaction = ({
 				);
 
 			setTransactionHash(finalTxHash);
-			setIsPending(true);
-			startTimer(); // Start the countdown timer
+			if (finalTxHash !== "manual_approval_pending") {
+				setIsPending(true);
+				startTimer(); // Start the countdown timer
+			} else {
+				setIsPending(false);
+				setTimeLeft(0);
+				resetTransactionState();
+				onTransactionComplete?.();
+			}
+			
 			addTransaction({
 				hash: finalTxHash,
 				type: TransactionType.WITHDRAW,
@@ -464,7 +497,6 @@ export const useWithdrawTransaction = ({
 	}, [
 		selectedToken,
 		withdrawAmount,
-		withdrawAddress,
 		user,
 		authToken,
 		chainId,
@@ -475,6 +507,7 @@ export const useWithdrawTransaction = ({
 		handleSpecialMessages,
 		processWithdraw,
 		startTimer,
+		onTransactionComplete,
 	]);
 
 	/**
@@ -488,6 +521,7 @@ export const useWithdrawTransaction = ({
 		setTimeLeft(0);
 		setIsWithdrawalSuccessful(false);
 		setPreWithdrawData(null);
+		setShowReservedModal(false);
 		if (pollingIntervalRef.current)
 			clearInterval(pollingIntervalRef.current);
 	}, []);

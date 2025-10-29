@@ -183,7 +183,7 @@ export const WithdrawalSuccessModal = (props: WithdrawalSuccessModalProps) => {
 					{/* Main Content */}
 					<div className="relative w-full   flex flex-col justify-between p-6 sm:p-8">
 						{/* Middle Section - Transaction Details */}
-						<div className="z-10 space-y-6 sm:space-y-4">
+						<div className="z-10 space-y-4 sm:space-y-2">
 							{/* Withdrawal Type */}
 							<div>
 								<h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-2">
@@ -240,49 +240,45 @@ export const WithdrawalSuccessModal = (props: WithdrawalSuccessModalProps) => {
 								{/* Logo */}
 								<div className="flex items-center gap-2">
 									<img
-										src="/assets/site/hyperbetz-logo.png"
-										alt="Hyperbetz Logo"
+										src="/assets/site/Hyperbetz-logo.png"
+										alt="HyperBetz Logo"
 										width={200}
 										height={32}
 										className="object-contain"
 									/>
 								</div>
-								<p className="text-xs sm:text-sm text-gray-400 flex gap-2">
-									{t("referralCode", {
-										defaultValue: "Referral Code",
-									})}{" "}
-									<span
-										className="font-mono font-bold text-white flex gap-2"
-										onClick={handleCopyReferral}
-									>
-										{user?.referralId}
-										<Copy
-											className={`h-4 w-4 ${
-												copiedReferral
-													? "text-success"
-													: "text-purple-500"
-											}`}
-										/>
-									</span>
-								</p>
+								<hr className="border-white/10" />
+								{/* ref link */}
+								<div className="text-xs sm:text-sm text-gray-400 max-w-xs w-full">
+									{`${window.location.origin}/?ref=${user?.referralId}`}
+									<Copy className="inline-block h-3 w-3 text-purple-500 ml-1 cursor-pointer" onClick={handleCopyReferral} />
+								</div>
+
 							</div>
 
 							{/* QR Code */}
-							<div className="bg-white p-2 rounded-lg">
-								{/* eslint-disable-next-line jsx-a11y/alt-text */}
-								<Image
-									text={shareUrl}
-									options={{
-										type: "canvas",
-										width: 80,
-										margin: 0,
-										color: {
-											dark: "#000000",
-											light: "#ffffff",
-										},
-										quality: 1,
-									}}
-								/>
+							<div className="items-center justify-center flex flex-col">
+								<div className="bg-white p-2 rounded-lg aspect-square w-20 h-20 sm:w-24 sm:h-24">
+									{/* eslint-disable-next-line jsx-a11y/alt-text */}
+									<Image
+										text={shareUrl}
+										options={{
+											type: "canvas",
+											width: 80,
+											margin: 0,
+											color: {
+												dark: "#000000",
+												light: "#ffffff",
+											},
+											quality: 1,
+										}}
+									/>
+									{/* show ref under qr */}
+								</div>
+								<div className="text-sm text-center text-white mt-1" onClick={handleCopyReferral}>
+									{user?.referralId} <Copy className="inline-block h-3 w-3 text-purple-500 ml-1" />
+
+								</div>
 							</div>
 						</div>
 					</div>
@@ -352,7 +348,7 @@ export const WithdrawalSuccessModal = (props: WithdrawalSuccessModalProps) => {
 
 							<FacebookShareButton
 								url={shareUrl}
-								hashtag="#Hyperbetz"
+								hashtag="#HyperBetz"
 								className="w-full"
 							>
 								<div className="group relative flex flex-col items-center justify-center gap-1 p-2 sm:p-2.5 bg-gradient-to-br from-gray-800/50 to-gray-900/50 hover:from-gray-700/50 hover:to-gray-800/50 rounded-xl transition-all duration-300 hover:scale-105 border border-white/10 hover:border-blue-500/40 min-h-[60px] sm:min-h-[65px] backdrop-blur-sm shadow-lg hover:shadow-blue-600/20">

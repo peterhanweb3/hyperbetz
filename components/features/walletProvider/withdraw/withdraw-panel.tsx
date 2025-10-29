@@ -19,6 +19,7 @@ import { WithdrawTransactionPending } from "@/components/features/walletProvider
 import { WithdrawalSuccessModal } from "@/components/features/walletProvider/withdraw/withdrawal-success-modal";
 import { useTranslations } from "@/lib/locale-provider";
 import { cn } from "@/lib/utils";
+import { sanitizeDecimalInput } from "@/lib/utils";
 
 export const WithdrawPanel = ({
 	isLobbyPage = false,
@@ -177,7 +178,7 @@ export const WithdrawPanel = ({
 								{/* Large Amount Input with Token Display Overlay */}
 								<div
 									className={cn(
-										"placeholder:text-muted-foreground dark:bg-input/30 flex h-full w-full rounded-md bg-transparent",
+										"placeholder:text-muted-foreground dark:bg-input/30 flex h-full w-full  rounded-md bg-transparent",
 										"px-5 py-2.5 shadow-xs outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50",
 										"focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
 										"aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive"
@@ -190,11 +191,13 @@ export const WithdrawPanel = ({
 										value={withdrawAmount}
 										onChange={(e) =>
 											handleAmountChangeWrapper(
-												e.target.value
+												sanitizeDecimalInput(
+													e.target.value
+												)
 											)
 										}
 										className={cn(
-											"!p-0  font-light !bg-transparent !border-none !pr-2 !shadow-none focus-visible:ring-0 placeholder:text-muted-foreground/40",
+											"!p-0  font-light !bg-transparent !border-none !pr-2 !shadow-none focus-visible:ring-0 placeholder:text-muted-foreground/40 ",
 											isBalanceInsufficient ||
 												isBelowMinimum
 												? "text-destructive"
@@ -205,7 +208,7 @@ export const WithdrawPanel = ({
 									/>
 
 									{/* Token Display - Positioned absolutely on the right */}
-									<div className="flex items-center gap-2 !py-1 px-2 rounded-full">
+									<div className="flex items-center  gap-2 !py-1 px-2 rounded-full">
 										{selectedToken && (
 											<Image
 												src={selectedToken.token_icon}
@@ -215,7 +218,7 @@ export const WithdrawPanel = ({
 												className="rounded-full"
 											/>
 										)}
-										<span className="font-semibold text-[11px] md:text-xs">
+										<span className="font-semibold text-[11px] md:text-xs text-nowrap">
 											{selectedToken?.token_symbol ||
 												t("loading")}
 										</span>
@@ -276,7 +279,7 @@ export const WithdrawPanel = ({
 										{isBelowMinimum && (
 											<span className="text-destructive text-sm">
 												{t("minimumIs", {
-													min: minWithdrawAmount,
+													min: MINIMUM_WITHDRAWAL_AMOUNT,
 												})}
 											</span>
 										)}

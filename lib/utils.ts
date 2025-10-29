@@ -32,6 +32,63 @@ export function truncateNumber(number: string, decimals: number) {
 }
 
 /**
+ * Utility functions for sanitizing user input across the application
+ */
+
+/**
+ * Sanitizes decimal input by replacing commas with dots and removing invalid characters
+ * @param value - The input value to sanitize
+ * @returns Sanitized value that only contains valid decimal characters
+ */
+export const sanitizeDecimalInput = (value: string): string => {
+	// Replace comma with dot
+	let sanitized = value.replace(/,/g, ".");
+
+	// Remove all characters except digits, dots, and minus sign at the start
+	sanitized = sanitized.replace(/[^\d.-]/g, "");
+
+	// Ensure only one dot exists
+	const parts = sanitized.split(".");
+	if (parts.length > 2) {
+		sanitized = parts[0] + "." + parts.slice(1).join("");
+	}
+
+	// Ensure minus sign only appears at the start
+	if (sanitized.includes("-")) {
+		const isNegative = sanitized.startsWith("-");
+		sanitized = sanitized.replace(/-/g, "");
+		if (isNegative) {
+			sanitized = "-" + sanitized;
+		}
+	}
+
+	return sanitized;
+};
+
+/**
+ * Sanitizes nickname input by removing special characters
+ * Only allows alphanumeric characters and underscores
+ * @param value - The input value to sanitize
+ * @returns Sanitized value with only valid characters
+ */
+export const sanitizeNicknameInput = (value: string): string => {
+	// Remove special characters, only allow alphanumeric and underscore
+	return value.replace(/[^a-zA-Z0-9_]/g, "");
+};
+
+/**
+ * Sanitizes referral ID input by removing special characters and spaces
+ * Only allows alphanumeric characters
+ * @param value - The input value to sanitize
+ * @returns Sanitized value with only valid characters
+ */
+export const sanitizeReferralIdInput = (value: string): string => {
+	// Remove all non-alphanumeric characters
+	return value.replace(/[^a-zA-Z0-9]/g, "");
+};
+
+
+/**
  * Sanitizes a string to allow only valid numeric input for amounts.
  * Handles decimal points, precision, and leading zeros.
  */

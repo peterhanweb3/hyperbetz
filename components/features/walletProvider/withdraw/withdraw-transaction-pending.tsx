@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import confetti from "canvas-confetti";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Loader2 } from "lucide-react";
@@ -24,10 +24,12 @@ export const WithdrawTransactionPending = ({
 }: WithdrawTransactionPendingProps) => {
 	const t = useTranslations("walletProvider.withdrawPending");
 	const { getTransactionUrl } = useBlockExplorerUrl();
+	const hasTriggeredConfetti = useRef(false);
 
 	// This useEffect faithfully triggers the confetti effect on success.
 	useEffect(() => {
-		if (isSuccessful) {
+		if (isSuccessful && !hasTriggeredConfetti.current) {
+			hasTriggeredConfetti.current = true;
 			setShowingConfetti(true);
 			const defaults = {
 				spread: 360,
@@ -56,7 +58,12 @@ export const WithdrawTransactionPending = ({
 			// setShowingConfetti(false);
 			setTimeout(() => setShowingConfetti(false), 500);
 		}
-	}, [isSuccessful]);
+
+		// Reset the ref when component unmounts or when isSuccessful becomes false
+		if (!isSuccessful) {
+			hasTriggeredConfetti.current = false;
+		}
+	}, [isSuccessful, setShowingConfetti]);
 
 	return (
 		<div className="text-center space-y-4 py-8">

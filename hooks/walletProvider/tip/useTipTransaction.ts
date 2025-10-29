@@ -38,7 +38,6 @@ export const useTipTransaction = ({
 	const [isApproved, setIsApproved] = useState(false);
 	const [isPending, setIsPending] = useState(false);
 	const [transactionHash, setTransactionHash] = useState<string | null>(null);
-	const [timeLeft, setTimeLeft] = useState(0);
 
 	const { addTransaction, _updateTransaction } = useAppStore(
 		(state) => state.blockchain.transaction
@@ -65,28 +64,7 @@ export const useTipTransaction = ({
 	}, [primaryWallet, transactionService]);
 
 	useEffect(() => {
-		if (
-			!selectedToken ||
-			!user?.walletAddress ||
-			selectedToken.tags?.includes("native")
-		) {
 			setIsApproved(true);
-			return;
-		}
-
-		const checkAllowance = async () => {
-			const { hasAllowance } = await transactionService.checkAllowance({
-				tokenAddress: selectedToken.address,
-				ownerAddress: user.walletAddress!,
-				spenderAddress,
-				network: network?.name || String(chainId),
-				username: user.username,
-			});
-
-			setIsApproved(hasAllowance);
-		};
-
-		checkAllowance();
 	}, [selectedToken, user, chainId, network, transactionService]);
 
 	// No countdown/polling needed for TIP; success is immediate on send
@@ -227,7 +205,6 @@ export const useTipTransaction = ({
 		setIsApproving(false);
 		setIsPending(false);
 		setTransactionHash(null);
-		setTimeLeft(0);
 		retryCountRef.current = 0;
 		if (pollingIntervalRef.current) {
 			clearInterval(pollingIntervalRef.current);

@@ -137,13 +137,12 @@ export const useWithdraw = () => {
 	} = useWithdrawTransaction({
 		selectedToken,
 		withdrawAmount,
-		withdrawAddress,
 		onTransactionComplete: resetFormState, // Reset form when transaction completes
 	});
 
 	// E. Manage Final UI State that is local to this hook
 	const [showingConfetti, setShowingConfetti] = useState(false);
-	const [showSuccessModal, setShowSuccessModal] = useState(true);
+	const [showSuccessModal, setShowSuccessModal] = useState(false);
 
 	// F. Effect to show success modal when withdrawal is successful
 	useEffect(() => {
