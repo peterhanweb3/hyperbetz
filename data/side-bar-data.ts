@@ -72,6 +72,14 @@ const isLobbyActive = (pathname: string) => {
 const isAffiliateActive = (pathname: string) => {
 	return pathname === "/affiliate";
 };
+/**
+ * Checks if the current path is the promotions page.
+ * @param pathname - The current pathname from usePathname()
+ * @returns True if the current path is "/promotions", false otherwise.
+ */
+const isBonusActive = (pathname: string) => {
+	return pathname === "/bonus";
+};
 
 /**
  * A helper to create a URL with a specific query parameter for the /games page.
@@ -168,6 +176,14 @@ export const getNavData = ({
 				// badge: "Hot",
 				// badgeVariant: "destructive" as const,
 				isActive: isAffiliateActive(pathname),
+			},
+			{
+				title: "navigation.bonus",
+				url: "/bonus",
+				icon: faGift,
+				// badge: "Hot",
+				// badgeVariant: "destructive" as const,
+				isActive: isBonusActive(pathname),
 			},
 		],
 
