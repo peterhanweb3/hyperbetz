@@ -1056,8 +1056,8 @@
 		}
 	},
 	"bonus": {
-		"title": "Programa de Bônus para Membros",
-		"loginPromptTitle": "Programa de Bônus para Membros",
+		"title": "Programa de bônus de rotatividade",
+		"loginPromptTitle": "Programa de bônus de rotatividade",
 		"loginPromptSubtitle": "Faça login para ver suas estatísticas de bônus e reivindicar suas recompensas.",
 		"goHome": "Ir para Início",
 		"tabs": {
@@ -1098,7 +1098,8 @@
 				"content": "Os bônus são calculados com base nos seus valores de aposta diários:",
 				"noteTitle": "Nota",
 				"noteContent": "Os níveis são avaliados diariamente às 14:00 UTC. O volume de apostas do dia anterior determina a taxa de bônus de hoje. As taxas aplicam-se a todos os tipos de jogos: Caça-níqueis, Cassino ao vivo e Esportes."
-			}
+			},
+			"claimButtonTitle": "Reivindicar"
 		},
 		"claims": {
 			"title": "Histórico de Reclamações",

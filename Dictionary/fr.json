@@ -1056,8 +1056,8 @@
 		}
 	},
 	"bonus": {
-		"title": "Programme de Bonus pour Membres",
-		"loginPromptTitle": "Programme de Bonus pour Membres",
+		"title": "Programme de bonus de chiffre d'affaires",
+		"loginPromptTitle": "Programme de bonus de chiffre d'affaires",
 		"loginPromptSubtitle": "Connectez-vous pour afficher vos statistiques de bonus et réclamer vos récompenses.",
 		"goHome": "Aller à l'accueil",
 		"tabs": {
@@ -1098,7 +1098,8 @@
 				"content": "Les bonus sont calculés en fonction de vos montants de pari quotidiens :",
 				"noteTitle": "Remarque",
 				"noteContent": "Les niveaux sont évalués quotidiennement à 14:00 UTC. Le volume des mises du jour précédent détermine le taux de bonus du jour. Les taux s'appliquent à tous les types de jeux : Machines à sous, Casino en direct, et Sports."
-			}
+			},
+			"claimButtonTitle": "Réclamer"
 		},
 		"claims": {
 			"title": "Historique des réclamations",

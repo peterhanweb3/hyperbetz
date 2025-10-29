@@ -1056,8 +1056,8 @@
 		}
 	},
 	"bonus": {
-		"title": "Medlemsbonusprogram",
-		"loginPromptTitle": "Medlemmars Bonusprogram",
+		"title": "Omsättningsbonusprogram",
+		"loginPromptTitle": "Omsättningsbonusprogram",
 		"loginPromptSubtitle": "Logga in för att se dina bonusstatistik och hämta dina belöningar.",
 		"goHome": "Gå till Startsida",
 		"tabs": {
@@ -1098,7 +1098,8 @@
 				"content": "Bonusar beräknas baserat på dina dagliga insatsbelopp:",
 				"noteTitle": "Notera",
 				"noteContent": "Nivåer utvärderas dagligen kl. 14:00 UTC. Volymen på gårdagens insatser bestämmer dagens bonussats. Satserna gäller för alla typer av spel: Slots, Livespel och Sport."
-			}
+			},
+			"claimButtonTitle": "Begär"
 		},
 		"claims": {
 			"title": "Anspråkshistorik",

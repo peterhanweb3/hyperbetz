@@ -84,7 +84,7 @@ export const ClaimBonus = ({
 									fontSize={16}
 									className="mr-2"
 								/>
-								{t("claim")}
+								{t("claimButtonTitle")}
 							</>
 						)}
 					</Button>

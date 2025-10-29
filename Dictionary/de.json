@@ -1056,8 +1056,8 @@
 		}
 	},
 	"bonus": {
-		"title": "Mitgliederbonusprogramm",
-		"loginPromptTitle": "Mitglieder-Bonusprogramm",
+		"title": "Umsatzbonusprogramm",
+		"loginPromptTitle": "Umsatzbonusprogramm",
 		"loginPromptSubtitle": "Melden Sie sich an, um Ihre Bonusstatistiken anzusehen und Ihre Belohnungen zu beanspruchen.",
 		"goHome": "Zur Startseite",
 		"tabs": {
@@ -1098,7 +1098,8 @@
 				"content": "Boni werden basierend auf Ihren täglichen Wetteinsätzen berechnet:",
 				"noteTitle": "Hinweis",
 				"noteContent": "Stufen werden täglich um 14:00 Uhr UTC ausgewertet. Das Einsatzvolumen des Vortages bestimmt die aktuelle Bonusrate. Die Raten gelten für alle Spieltypen: Slots, Live-Casino und Sport."
-			}
+			},
+			"claimButtonTitle": "Beanspruchen"
 		},
 		"claims": {
 			"title": "Anspruchsverlauf",

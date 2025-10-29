@@ -210,10 +210,10 @@ export const BonusClaimsTab = () => {
 				</div>
 			</div>
 
-			<div className="flex flex-col  lg:flex-row gap-4 lg:gap-6">
+			<div className="flex flex-col lg:flex-row gap-4 lg:gap-6 lg:items-stretch">
 				{/* Table Section */}
-				<div className="flex-1 min-w-0 lg:sticky lg:top-4">
-					<Card className="overflow-hidden pt-0">
+				<div className="flex-1 min-w-0 flex flex-col">
+					<Card className="overflow-hidden pt-0 flex flex-col flex-1">
 						{isLoading ? (
 							<div className="p-3 sm:p-4 md:p-6 space-y-4">
 								{[...Array(5)].map((_, i) => (
@@ -224,8 +224,8 @@ export const BonusClaimsTab = () => {
 								))}
 							</div>
 						) : (
-							<div className="overflow-x-auto">
-								<Table className="lg:min-h-100 min-h-40">
+							<div className="overflow-x-auto flex-1 flex flex-col">
+								<Table>
 									<TableHeader>
 										<TableRow className="bg-muted/50 hover:bg-muted/50">
 											<TableHead className="font-semibold text-foreground/80 py-2 sm:py-3 md:py-4 px-2 sm:px-3 md:px-4 text-xs sm:text-sm">
@@ -349,10 +349,10 @@ export const BonusClaimsTab = () => {
 				</div>
 
 				{/* Claim Card Section */}
-				<div className="lg:w-70 xl:w-86 flex-shrink-0">
-					<div className="space-y-3 sm:space-y-4 lg:sticky lg:top-4">
+				<div className="lg:w-70 xl:w-86 flex-shrink-0 flex flex-col">
+					<div className="space-y-3 sm:space-y-4 lg:sticky lg:top-4 flex-1 flex flex-col">
 						{/* Semi-Circular Progress Card */}
-						<Card className="overflow-hidden border-primary/70 p-0">
+						<Card className="overflow-hidden border-primary/70 p-0 flex-1 flex flex-col justify-center">
 							<CardContent className="p-0">
 								{isLoading ? (
 									<div className="p-4 sm:p-6 space-y-4">
@@ -377,6 +377,7 @@ export const BonusClaimsTab = () => {
 							onClaim={handleClaim}
 							token="USD"
 							isClaimDisabled={isClaimDisabled}
+							context="bonus"
 						/>
 					</div>
 				</div>

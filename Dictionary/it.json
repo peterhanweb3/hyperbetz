@@ -1056,8 +1056,8 @@
 		}
 	},
 	"bonus": {
-		"title": "Programma Bonus per i Membri",
-		"loginPromptTitle": "Programma Bonus per Membri",
+		"title": "Programma bonus sul fatturato",
+		"loginPromptTitle": "Programma bonus sul fatturato",
 		"loginPromptSubtitle": "Accedi per visualizzare le tue statistiche sui bonus e richiedere i tuoi premi.",
 		"goHome": "Vai alla Home",
 		"tabs": {
@@ -1098,7 +1098,8 @@
 				"content": "I bonus vengono calcolati in base agli importi delle tue scommesse giornaliere:",
 				"noteTitle": "Nota",
 				"noteContent": "I livelli vengono valutati quotidianamente alle 14:00 UTC. Il volume delle scommesse del giorno precedente determina il tasso di bonus di oggi. I tassi si applicano a tutti i tipi di gioco: Slot, Casinò dal vivo e Sport."
-			}
+			},
+			"claimButtonTitle": "Richiedi"
 		},
 		"claims": {
 			"title": "Storico delle richieste",

@@ -176,7 +176,7 @@ export const GiftTiers = ({ rates, isLoading }: GiftTiersProps) => {
 
 								{/* Tier Name Button */}
 								<div
-									className={`w-full py-1.5 sm:py-2 px-3 sm:px-4 ${tierConfig.buttonBg} text-white text-center rounded-lg font-semibold text-xs sm:text-sm shadow-md`}
+									className={`w-full mt-auto py-1.5 sm:py-2 px-3 sm:px-4 ${tierConfig.buttonBg} text-white text-center rounded-lg font-semibold text-xs sm:text-sm shadow-md`}
 								>
 									{tierConfig.name}
 								</div>

@@ -1056,8 +1056,8 @@
 		}
 	},
 	"bonus": {
-		"title": "Program Premii dla Członków",
-		"loginPromptTitle": "Program Bonusowy dla Członków",
+		"title": "Program premii za obrót",
+		"loginPromptTitle": "Program premii za obrót",
 		"loginPromptSubtitle": "Zaloguj się, aby zobaczyć swoje statystyki bonusowe i odebrać nagrody.",
 		"goHome": "Przejdź do strony głównej",
 		"tabs": {
@@ -1098,7 +1098,8 @@
 				"content": "Premie obliczane są na podstawie dziennych kwot zakładów:",
 				"noteTitle": "Notatka",
 				"noteContent": "Poziomy są oceniane codziennie o 14:00 UTC. Objętość zakładów z poprzedniego dnia określa dzisiejszą stawkę bonusową. Stawki obowiązują dla wszystkich rodzajów gier: Automaty, Kasyno na żywo i Sport."
-			}
+			},
+			"claimButtonTitle": "Odbierz"
 		},
 		"claims": {
 			"title": "Historia roszczeń",

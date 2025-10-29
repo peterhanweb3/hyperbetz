@@ -1056,8 +1056,8 @@
 		}
 	},
 	"bonus": {
-		"title": "멤버 보너스 프로그램",
-		"loginPromptTitle": "회원 보너스 프로그램",
+		"title": "이직 보너스 프로그램",
+		"loginPromptTitle": "이직 보너스 프로그램",
 		"loginPromptSubtitle": "보너스 통계를 보고 보상을 받으려면 로그인하세요.",
 		"goHome": "홈으로 가기",
 		"tabs": {
@@ -1098,7 +1098,8 @@
 				"content": "보너스는 일일 베팅 금액을 기준으로 계산됩니다:",
 				"noteTitle": "참고",
 				"noteContent": "등급은 매일 14:00 UTC에 평가됩니다. 전날의 베팅 금액이 오늘의 보너스 비율을 결정합니다. 비율은 모든 게임 유형에 적용됩니다: 슬롯, 라이브 카지노, 스포츠."
-			}
+			},
+			"claimButtonTitle": "받기"
 		},
 		"claims": {
 			"title": "청구 내역",

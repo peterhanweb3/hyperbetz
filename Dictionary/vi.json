@@ -1056,8 +1056,8 @@
 		}
 	},
 	"bonus": {
-		"title": "Chương Trình Thưởng Cho Thành Viên",
-		"loginPromptTitle": "Chương trình Thưởng Thành viên",
+		"title": "Chương trình thưởng doanh thu",
+		"loginPromptTitle": "Chương trình thưởng doanh thu",
 		"loginPromptSubtitle": "Đăng nhập để xem thống kê tiền thưởng của bạn và nhận phần thưởng.",
 		"goHome": "Về Trang Chủ",
 		"tabs": {
@@ -1098,7 +1098,8 @@
 				"content": "Tiền thưởng được tính dựa trên số tiền cược hàng ngày của bạn:",
 				"noteTitle": "Ghi chú",
 				"noteContent": "Các cấp bậc được đánh giá hàng ngày vào lúc 14:00 UTC. Khối lượng đặt cược của ngày hôm trước xác định tỷ lệ tiền thưởng của ngày hôm nay. Các tỷ lệ áp dụng cho tất cả các loại trò chơi: Slots, Sòng Bạc Trực Tiếp và Thể Thao."
-			}
+			},
+			"claimButtonTitle": "Nhận"
 		},
 		"claims": {
 			"title": "Lịch sử yêu cầu",

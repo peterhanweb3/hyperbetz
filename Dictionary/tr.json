@@ -1056,8 +1056,8 @@
 		}
 	},
 	"bonus": {
-		"title": "Üye Bonus Programı",
-		"loginPromptTitle": "Üye Bonus Programı",
+		"title": "Ciro Bonus Programı",
+		"loginPromptTitle": "Ciro Bonus Programı",
 		"loginPromptSubtitle": "Bonus istatistiklerinizi görmek ve ödüllerinizi talep etmek için giriş yapın.",
 		"goHome": "Ana Sayfaya Git",
 		"tabs": {
@@ -1098,7 +1098,8 @@
 				"content": "Bonuslar, günlük bahis miktarlarınıza göre hesaplanır:",
 				"noteTitle": "Not",
 				"noteContent": "Kademe değerlendirmesi her gün saat 14:00 UTC'de yapılmaktadır. Önceki günün bahis hacmi, bugünün bonus oranını belirler. Oranlar tüm oyun türleri için uygulanır: Slotlar, Canlı Casino ve Spor."
-			}
+			},
+			"claimButtonTitle": "Talep Et"
 		},
 		"claims": {
 			"title": "Talep Geçmişi",

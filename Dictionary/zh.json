@@ -1056,8 +1056,8 @@
 		}
 	},
 	"bonus": {
-		"title": "会员奖励计划",
-		"loginPromptTitle": "会员奖励计划",
+		"title": "营业额奖金计划",
+		"loginPromptTitle": "营业额奖金计划",
 		"loginPromptSubtitle": "登录以查看您的奖金统计和领取奖励。",
 		"goHome": "返回主页",
 		"tabs": {
@@ -1098,7 +1098,8 @@
 				"content": "奖励是根据您的每日投注金额计算的：",
 				"noteTitle": "注意",
 				"noteContent": "等级每天在14:00 UTC进行评估。前一天的投注量决定了当天的奖金率。该比率适用于所有游戏类型：老虎机、真人娱乐场和体育。"
-			}
+			},
+			"claimButtonTitle": "领取"
 		},
 		"claims": {
 			"title": "索赔历史",

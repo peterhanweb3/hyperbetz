@@ -1063,8 +1063,8 @@
 		}
 	},
 	"bonus": {
-		"title": "Programa de Bonificación para Miembros",
-		"loginPromptTitle": "Programa de Bonos para Miembros",
+		"title": "Programa de bonificación por facturación",
+		"loginPromptTitle": "Programa de bonificación por facturación",
 		"loginPromptSubtitle": "Inicia sesión para ver tus estadísticas de bonificación y reclamar tus recompensas.",
 		"goHome": "Ir a Inicio",
 		"tabs": {
@@ -1105,7 +1105,8 @@
 				"content": "Las bonificaciones se calculan en función de sus montos de apuesta diarios:",
 				"noteTitle": "Nota",
 				"noteContent": "Los niveles se evalúan diariamente a las 14:00 UTC. El volumen de apuestas del día anterior determina la tasa de bonificación de hoy. Las tasas se aplican a todos los tipos de juegos: Tragamonedas, Casino en vivo y Deportes."
-			}
+			},
+			"claimButtonTitle": "Reclamar"
 		},
 		"claims": {
 			"title": "Historial de reclamaciones",

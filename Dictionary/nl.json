@@ -1056,8 +1056,8 @@
 		}
 	},
 	"bonus": {
-		"title": "Ledenbonusprogramma",
-		"loginPromptTitle": "Ledenbonusprogramma",
+		"title": "Omzetbonusprogramma",
+		"loginPromptTitle": "Omzetbonusprogramma",
 		"loginPromptSubtitle": "Log in om je bonusstatistieken te bekijken en je beloningen op te eisen.",
 		"goHome": "Ga naar Home",
 		"tabs": {
@@ -1098,7 +1098,8 @@
 				"content": "Bonussen worden berekend op basis van uw dagelijkse inzetbedragen:",
 				"noteTitle": "Opmerking",
 				"noteContent": "Niveaus worden dagelijks om 14:00 UTC geëvalueerd. Het inzetvolume van de vorige dag bepaalt het bonuspercentage van vandaag. De tarieven gelden voor alle speltypes: Slots, Live Casino en Sport."
-			}
+			},
+			"claimButtonTitle": "Claimen"
 		},
 		"claims": {
 			"title": "Claimhistorie",

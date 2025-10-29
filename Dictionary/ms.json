@@ -1056,8 +1056,8 @@
 		}
 	},
 	"bonus": {
-		"title": "Program Bonus Ahli",
-		"loginPromptTitle": "Program Bonus Ahli",
+		"title": "Program Bonus Perolehan",
+		"loginPromptTitle": "Program Bonus Perolehan",
 		"loginPromptSubtitle": "Log masuk untuk melihat statistik bonus anda dan tuntut ganjaran anda.",
 		"goHome": "Pergi ke Laman Utama",
 		"tabs": {
@@ -1098,7 +1098,8 @@
 				"content": "Bonus dikira berdasarkan jumlah pertaruhan harian anda:",
 				"noteTitle": "Catatan",
 				"noteContent": "Tahap dinilai setiap hari pada 14:00 UTC. Jumlah pertaruhan hari sebelumnya menentukan kadar bonus hari ini. Kadar ini berlaku untuk semua jenis permainan: Slots, Kasino Langsung, dan Sukan."
-			}
+			},
+			"claimButtonTitle": "Tuntut"
 		},
 		"claims": {
 			"title": "Sejarah Tuntutan",

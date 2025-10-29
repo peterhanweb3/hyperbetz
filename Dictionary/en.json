@@ -548,8 +548,8 @@
 		}
 	},
 	"bonus": {
-		"title": "Member Bonus Program",
-		"loginPromptTitle": "Member Bonus Program",
+		"title": "Turnover Bonus Program",
+		"loginPromptTitle": "Turnover Bonus Program",
 		"loginPromptSubtitle": "Log in to view your bonus stats and claim your rewards.",
 		"goHome": "Go to Home",
 		"tabs": {
@@ -566,6 +566,7 @@
 		"dashboard": {
 			"title": "Bonus Dashboard",
 			"subtitle": "Track your wagers, bonuses, and reward earnings",
+			"claimButtonTitle": "Claim",
 			"performanceOverview": "Bonus Overview",
 			"bonusRatesTitle": "Bonus Rate Structure",
 			"totalIncome": "Total Bonus",
@@ -581,7 +582,6 @@
 				}
 			},
 			"claiming": "Claiming...",
-
 			"section2": {
 				"title": "Eligibility",
 				"content": "To participate:"
