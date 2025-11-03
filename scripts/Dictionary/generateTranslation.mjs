@@ -23,7 +23,7 @@ const icons = {
 	info: "ℹ️ ",
 	success: "✅ ",
 	warn: "⚠️ ",
-	error: "❌ "
+	error: "❌ ",
 };
 
 function logWithStyle(type, message) {
@@ -55,7 +55,7 @@ function createSpinner(message) {
 			succeed: (text) => logSuccess(text ?? message),
 			fail: (text) => logError(text ?? message),
 			stop: () => {},
-			start: () => {}
+			start: () => {},
 		};
 	}
 	return ora({ text: color.cyan(message) }).start();
@@ -72,7 +72,7 @@ function parseArgs(argv) {
 		strictPlaceholders: false,
 		languages: undefined,
 		model: DEFAULT_MODEL,
-		inputFile: undefined
+		inputFile: undefined,
 	};
 
 	for (let i = 0; i < args.length; i++) {
@@ -145,9 +145,22 @@ function printBanner() {
 
 	console.log("");
 	console.log(accent("╭────────────────────────────────────╮"));
-	console.log(`${accent("│")}  ${color.bold("AI Dictionary Translator").padEnd(32, " ")} ${accent("│")}`);
-	console.log(`${accent("│")}  ${subtle("Fill in a few prompts and we’ll handle").padEnd(32, " ")} ${accent("│")}`);
-	console.log(`${accent("│")}  ${subtle("translations across every language.").padEnd(32, " ")} ${accent("│")}`);
+	console.log(
+		`${accent("│")}  ${color
+			.bold("AI Dictionary Translator")
+			.padEnd(32, " ")} ${accent("│")}`
+	);
+	console.log(
+		`${accent("│")}  ${subtle(
+			"Fill in a few prompts and we’ll handle"
+		).padEnd(32, " ")} ${accent("│")}`
+	);
+	console.log(
+		`${accent("│")}  ${subtle("translations across every language.").padEnd(
+			32,
+			" "
+		)} ${accent("│")}`
+	);
 	console.log(accent("╰────────────────────────────────────╯"));
 	console.log("");
 }
@@ -204,8 +217,8 @@ async function promptForConfiguration(config, availableLanguages) {
 				initial: 0,
 				choices: [
 					{ title: "Translate a single key", value: "single" },
-					{ title: "Process a JSON batch file", value: "batch" }
-				]
+					{ title: "Process a JSON batch file", value: "batch" },
+				],
 			},
 			{ onCancel }
 		);
@@ -216,8 +229,11 @@ async function promptForConfiguration(config, availableLanguages) {
 					type: "text",
 					name: "inputFile",
 					message: "Path to the JSON batch file",
-					validate: (value) => (value && value.trim().length > 0 ? true : "Please provide a file path."),
-					format: (value) => value.trim()
+					validate: (value) =>
+						value && value.trim().length > 0
+							? true
+							: "Please provide a file path.",
+					format: (value) => value.trim(),
 				},
 				{ onCancel }
 			);
@@ -232,8 +248,11 @@ async function promptForConfiguration(config, availableLanguages) {
 				type: "text",
 				name: "key",
 				message: "Translation key (dot notation)",
-				validate: (value) => (value && value.trim().length > 0 ? true : "Key is required."),
-				format: (value) => value.trim()
+				validate: (value) =>
+					value && value.trim().length > 0
+						? true
+						: "Key is required.",
+				format: (value) => value.trim(),
 			},
 			{ onCancel }
 		);
@@ -246,8 +265,11 @@ async function promptForConfiguration(config, availableLanguages) {
 				type: "text",
 				name: "text",
 				message: "English source text",
-				validate: (value) => (value && value.trim().length > 0 ? true : "Source text is required."),
-				format: (value) => value.trim()
+				validate: (value) =>
+					value && value.trim().length > 0
+						? true
+						: "Source text is required.",
+				format: (value) => value.trim(),
 			},
 			{ onCancel }
 		);
@@ -264,7 +286,7 @@ async function promptForConfiguration(config, availableLanguages) {
 				format: (value) => {
 					const trimmed = value?.trim?.() ?? "";
 					return trimmed.length > 0 ? trimmed : undefined;
-				}
+				},
 			},
 			{ onCancel }
 		);
@@ -281,13 +303,13 @@ async function promptForConfiguration(config, availableLanguages) {
 				choices: [
 					{
 						title: `All languages (${availableLanguages.length})`,
-						value: "all"
+						value: "all",
 					},
 					{
 						title: "Choose specific languages",
-						value: "custom"
-					}
-				]
+						value: "custom",
+					},
+				],
 			},
 			{ onCancel }
 		);
@@ -298,10 +320,13 @@ async function promptForConfiguration(config, availableLanguages) {
 					type: "multiselect",
 					name: "selectedLanguages",
 					message: "Select target languages",
-					choices: availableLanguages.map((lang) => ({ title: lang, value: lang })),
+					choices: availableLanguages.map((lang) => ({
+						title: lang,
+						value: lang,
+					})),
 					min: 1,
 					instructions: false,
-					hint: "Space to toggle, enter to confirm"
+					hint: "Space to toggle, enter to confirm",
 				},
 				{ onCancel }
 			);
@@ -319,14 +344,22 @@ async function promptForConfiguration(config, availableLanguages) {
 			instructions: false,
 			hint: "Dry run, overwrite, placeholder safety",
 			choices: [
-				{ title: "Dry run (preview only)", value: "dryRun", selected: config.dryRun },
-				{ title: "Overwrite existing keys", value: "overwrite", selected: config.overwrite },
+				{
+					title: "Dry run (preview only)",
+					value: "dryRun",
+					selected: config.dryRun,
+				},
+				{
+					title: "Overwrite existing keys",
+					value: "overwrite",
+					selected: config.overwrite,
+				},
 				{
 					title: "Enforce placeholder counts",
 					value: "strictPlaceholders",
-					selected: config.strictPlaceholders
-				}
-			]
+					selected: config.strictPlaceholders,
+				},
+			],
 		},
 		{ onCancel }
 	);
@@ -334,7 +367,8 @@ async function promptForConfiguration(config, availableLanguages) {
 	const advancedSelections = Array.isArray(advanced) ? advanced : [];
 	config.dryRun = advancedSelections.includes("dryRun");
 	config.overwrite = advancedSelections.includes("overwrite");
-	config.strictPlaceholders = advancedSelections.includes("strictPlaceholders");
+	config.strictPlaceholders =
+		advancedSelections.includes("strictPlaceholders");
 
 	const { model } = await prompts(
 		{
@@ -342,7 +376,7 @@ async function promptForConfiguration(config, availableLanguages) {
 			name: "model",
 			message: "OpenAI model (press enter to keep default)",
 			initial: config.model,
-			format: (value) => value?.trim?.() ?? ""
+			format: (value) => value?.trim?.() ?? "",
 		},
 		{ onCancel }
 	);
@@ -356,7 +390,9 @@ async function promptForConfiguration(config, availableLanguages) {
 	}
 
 	logInfo(
-		`Ready to translate '${config.key}' into ${config.languages.length} language${config.languages.length === 1 ? "" : "s"}.`
+		`Ready to translate '${config.key}' into ${
+			config.languages.length
+		} language${config.languages.length === 1 ? "" : "s"}.`
 	);
 
 	return config;
@@ -400,7 +436,8 @@ function ensureNestedAssignment(target, segments, value, { overwrite }) {
 }
 
 function extractPlaceholderMap(text) {
-	const matches = typeof text === "string" ? text.match(/{[^{}]+}/g) ?? [] : [];
+	const matches =
+		typeof text === "string" ? text.match(/{[^{}]+}/g) ?? [] : [];
 	const map = new Map();
 	for (const placeholder of matches) {
 		map.set(placeholder, (map.get(placeholder) ?? 0) + 1);
@@ -416,21 +453,27 @@ function comparePlaceholders(sourceText, translatedText) {
 	for (const [placeholder, expectedCount] of sourceMap.entries()) {
 		const actualCount = translatedMap.get(placeholder) ?? 0;
 		if (actualCount !== expectedCount) {
-			missing.push({ placeholder, expected: expectedCount, actual: actualCount });
+			missing.push({
+				placeholder,
+				expected: expectedCount,
+				actual: actualCount,
+			});
 		}
 		translatedMap.delete(placeholder);
 	}
 
-	const extras = Array.from(translatedMap.entries()).map(([placeholder, actual]) => ({
-		placeholder,
-		expected: 0,
-		actual
-	}));
+	const extras = Array.from(translatedMap.entries()).map(
+		([placeholder, actual]) => ({
+			placeholder,
+			expected: 0,
+			actual,
+		})
+	);
 
 	return {
 		valid: missing.length === 0 && extras.length === 0,
 		missing,
-		extras
+		extras,
 	};
 }
 
@@ -463,8 +506,11 @@ function createBatchEntry({ key, text, context, languages }, origin = "entry") {
 	return {
 		key: trimmedKey,
 		text: trimmedText,
-		context: typeof context === "string" && context.trim().length > 0 ? context.trim() : undefined,
-		languages: normalizeLanguageList(languages)
+		context:
+			typeof context === "string" && context.trim().length > 0
+				? context.trim()
+				: undefined,
+		languages: normalizeLanguageList(languages),
 	};
 }
 
@@ -472,26 +518,29 @@ function normalizeJsonBatch(data) {
 	if (Array.isArray(data)) {
 		return data.map((entry, index) => {
 			if (typeof entry === "string") {
-				const [rawKey, rawText, rawContext, rawLanguages] = entry.split("|");
+				const [rawKey, rawText, rawContext, rawLanguages] =
+					entry.split("|");
 				return createBatchEntry(
 					{
 						key: rawKey,
 						text: rawText,
 						context: rawContext,
-						languages: rawLanguages
+						languages: rawLanguages,
 					},
 					`entry[${index}]`
 				);
 			}
 			if (!entry || typeof entry !== "object") {
-				throw new Error(`Entry at index ${index} must be an object or a pipe-delimited string.`);
+				throw new Error(
+					`Entry at index ${index} must be an object or a pipe-delimited string.`
+				);
 			}
 			return createBatchEntry(
 				{
 					key: entry.key,
 					text: entry.text,
 					context: entry.context,
-					languages: entry.languages
+					languages: entry.languages,
 				},
 				`entry[${index}]`
 			);
@@ -504,14 +553,16 @@ function normalizeJsonBatch(data) {
 				return createBatchEntry({ key, text: value }, `key '${key}'`);
 			}
 			if (!value || typeof value !== "object") {
-				throw new Error(`Value for key '${key}' must be a string or object.`);
+				throw new Error(
+					`Value for key '${key}' must be a string or object.`
+				);
 			}
 			return createBatchEntry(
 				{
 					key,
 					text: value.text,
 					context: value.context,
-					languages: value.languages
+					languages: value.languages,
 				},
 				`key '${key}'`
 			);
@@ -522,12 +573,16 @@ function normalizeJsonBatch(data) {
 }
 
 async function loadBatchEntries(inputPath) {
-	const absolutePath = path.isAbsolute(inputPath) ? inputPath : path.resolve(process.cwd(), inputPath);
+	const absolutePath = path.isAbsolute(inputPath)
+		? inputPath
+		: path.resolve(process.cwd(), inputPath);
 	let raw;
 	try {
 		raw = await readFile(absolutePath, "utf8");
 	} catch (error) {
-		throw new Error(`Failed to read input file '${inputPath}': ${error.message}`);
+		throw new Error(
+			`Failed to read input file '${inputPath}': ${error.message}`
+		);
 	}
 
 	if (absolutePath.toLowerCase().endsWith(".json")) {
@@ -535,12 +590,16 @@ async function loadBatchEntries(inputPath) {
 		try {
 			data = JSON.parse(raw);
 		} catch (error) {
-			throw new Error(`Failed to parse JSON input '${inputPath}': ${error.message}`);
+			throw new Error(
+				`Failed to parse JSON input '${inputPath}': ${error.message}`
+			);
 		}
 		return normalizeJsonBatch(data);
 	}
 
-	throw new Error("Unsupported input format. Provide a .json file containing the batch entries.");
+	throw new Error(
+		"Unsupported input format. Provide a .json file containing the batch entries."
+	);
 }
 
 function buildPrompt({ text, context, languages }) {
@@ -557,7 +616,9 @@ function buildPrompt({ text, context, languages }) {
 		})
 		.join(", ");
 
-	let instructions = `Translate the provided user interface text into the following target languages: ${formattedLanguages || "(none)"}.`;
+	let instructions = `Translate the provided user interface text into the following target languages: ${
+		formattedLanguages || "(none)"
+	}.`;
 	instructions +=
 		" Always preserve placeholders such as {name}, {amount}, {currency}, {total}, etc., exactly as they appear in the source text.";
 
@@ -566,7 +627,7 @@ function buildPrompt({ text, context, languages }) {
 	}
 
 	instructions +=
-		"\nReturn a strict JSON object using double quotes with the exact shape: {\"translations\": [{\"language\": \"<code>\", \"translation\": \"<text>\"}]}";
+		'\nReturn a strict JSON object using double quotes with the exact shape: {"translations": [{"language": "<code>", "translation": "<text>"}]}';
 	instructions +=
 		"\nInclude every requested language exactly once. Do not include any additional commentary or Markdown.";
 
@@ -574,12 +635,12 @@ function buildPrompt({ text, context, languages }) {
 		{
 			role: "system",
 			content:
-				"You are a localization specialist for a global gaming platform. Respond only with valid JSON that can be parsed directly without extra text."
+				"You are a localization specialist for a global gaming platform. Respond only with valid JSON that can be parsed directly without extra text.",
 		},
 		{
 			role: "user",
-			content: `${instructions}\n\nEnglish source text:\n${text}`
-		}
+			content: `${instructions}\n\nEnglish source text:\n${text}`,
+		},
 	];
 }
 
@@ -605,7 +666,9 @@ async function fetchTranslations({ client, model, text, context, languages }) {
 	try {
 		parsed = JSON.parse(content);
 	} catch (error) {
-		throw new Error(`Failed to parse OpenAI response as JSON: ${error.message}\n${content}`);
+		throw new Error(
+			`Failed to parse OpenAI response as JSON: ${error.message}\n${content}`
+		);
 	}
 
 	if (!Array.isArray(parsed.translations)) {
@@ -614,7 +677,7 @@ async function fetchTranslations({ client, model, text, context, languages }) {
 
 	return parsed.translations.map((entry) => ({
 		language: entry.language,
-		translation: entry.translation
+		translation: entry.translation,
 	}));
 }
 
@@ -623,31 +686,44 @@ function describeChange(result) {
 		return { status: "updated", detail: "Value updated" };
 	}
 	const reason = result.reason ?? "skipped";
-	const detail = reason === "exists" ? "Already existed" : `Skipped (${reason})`;
+	const detail =
+		reason === "exists" ? "Already existed" : `Skipped (${reason})`;
 	return { status: reason, detail };
 }
 
-async function updateLanguageFile({ language, keySegments, value, overwrite, dryRun }) {
+async function updateLanguageFile({
+	language,
+	keySegments,
+	value,
+	overwrite,
+	dryRun,
+}) {
 	const filePath = path.join(dictionaryDir, `${language}.json`);
 	let content;
 	try {
 		content = await readFile(filePath, "utf8");
 	} catch (error) {
-		throw new Error(`Failed to read dictionary file for ${language}: ${error.message}`);
+		throw new Error(
+			`Failed to read dictionary file for ${language}: ${error.message}`
+		);
 	}
 
 	let data;
 	try {
 		data = JSON.parse(content);
 	} catch (error) {
-		throw new Error(`Dictionary file ${language}.json contains invalid JSON: ${error.message}`);
+		throw new Error(
+			`Dictionary file ${language}.json contains invalid JSON: ${error.message}`
+		);
 	}
 
-	const result = ensureNestedAssignment(data, keySegments, value, { overwrite });
+	const result = ensureNestedAssignment(data, keySegments, value, {
+		overwrite,
+	});
 
 	if (result.changed && !dryRun) {
 		const payload = `${JSON.stringify(data, null, "\t")}\n`;
-	 await writeFile(filePath, payload, "utf8");
+		await writeFile(filePath, payload, "utf8");
 	}
 
 	return result;
@@ -655,25 +731,33 @@ async function updateLanguageFile({ language, keySegments, value, overwrite, dry
 
 function renderSummary(rows, stats, { dryRun, startTime }) {
 	const table = new Table({
-		head: [color.bold("Key"), color.bold("Lang"), color.bold("Status"), color.bold("Detail"), color.bold("Mode")],
-		style: { head: [], border: [] }
+		head: [
+			color.bold("Key"),
+			color.bold("Lang"),
+			color.bold("Status"),
+			color.bold("Detail"),
+			color.bold("Mode"),
+		],
+		style: { head: [], border: [] },
 	});
 
 	for (const row of rows) {
-		const statusColor = row.status === "updated"
-			? color.green
-			: row.status === "error"
+		const statusColor =
+			row.status === "updated"
+				? color.green
+				: row.status === "error"
 				? color.red
-				: row.status === "placeholder-mismatch" || row.status === "missing-translation"
-					? color.yellow
-					: color.gray;
+				: row.status === "placeholder-mismatch" ||
+				  row.status === "missing-translation"
+				? color.yellow
+				: color.gray;
 
 		table.push([
 			row.key,
 			row.language,
 			statusColor(row.status),
 			row.detail,
-			row.dryRun ? "dry-run" : "write"
+			row.dryRun ? "dry-run" : "write",
 		]);
 	}
 
@@ -682,12 +766,14 @@ function renderSummary(rows, stats, { dryRun, startTime }) {
 		color.bold("Summary"),
 		table.toString(),
 		color.bold("Stats"),
-		`  ${icons.success} Updated: ${stats.updated}${dryRun ? " (would write)" : ""}`,
+		`  ${icons.success} Updated: ${stats.updated}${
+			dryRun ? " (would write)" : ""
+		}`,
 		`  ${icons.warn} Skipped: ${stats.skipped}`,
 		`  ${icons.warn} Placeholder skips: ${stats.placeholderSkipped}`,
 		`  ${icons.warn} Missing translations: ${stats.missing}`,
 		`  ${icons.error} Errors: ${stats.errors}`,
-		`  ${icons.info} Duration: ${(durationMs / 1000).toFixed(1)}s`
+		`  ${icons.info} Duration: ${(durationMs / 1000).toFixed(1)}s`,
 	];
 
 	if (dryRun) {
@@ -698,21 +784,21 @@ function renderSummary(rows, stats, { dryRun, startTime }) {
 }
 
 async function main() {
-	
-
 	let config;
 	try {
 		config = parseArgs(process.argv);
 	} catch (error) {
 		logError(error.message);
 		logInfo(
-			"Usage: npm run i18n:add -- --key profile.newLabel --text \"Example text\" [--context \"Where it appears\"] [--languages en,fr,de] [--overwrite] [--dry-run] [--model gpt-4o]"
+			'Usage: npm run i18n:add -- --key profile.newLabel --text "Example text" [--context "Where it appears"] [--languages en,fr,de] [--overwrite] [--dry-run] [--model gpt-4o]'
 		);
 		process.exit(1);
 	}
 
 	const startTime = Date.now();
-	const client = new OpenAI({ apiKey: "OPEN_AI_API_KEY" });
+	const client = new OpenAI({
+		apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+	});
 	const availableLanguages = await getAvailableLanguages(dictionaryDir);
 
 	try {
@@ -747,10 +833,10 @@ async function main() {
 						key: config.key,
 						text: config.text,
 						context: config.context,
-						languages: config.languages
+						languages: config.languages,
 					},
 					"CLI arguments"
-				)
+				),
 			];
 		} catch (error) {
 			logError(error.message);
@@ -768,15 +854,23 @@ async function main() {
 		: availableLanguages;
 
 	if (config.languages) {
-		const missingDefaults = config.languages.filter((lang) => !availableLanguages.includes(lang));
+		const missingDefaults = config.languages.filter(
+			(lang) => !availableLanguages.includes(lang)
+		);
 		if (missingDefaults.length > 0) {
 			logWarn(
-				`Ignoring unknown languages from CLI defaults: ${missingDefaults.join(", ")}. Available: ${availableLanguages.join(", ")}`
+				`Ignoring unknown languages from CLI defaults: ${missingDefaults.join(
+					", "
+				)}. Available: ${availableLanguages.join(", ")}`
 			);
 		}
 	}
 
-	logInfo(`Processing ${entries.length} entr${entries.length === 1 ? "y" : "ies"} with model '${config.model}'.`);
+	logInfo(
+		`Processing ${entries.length} entr${
+			entries.length === 1 ? "y" : "ies"
+		} with model '${config.model}'.`
+	);
 
 	const summaryRows = [];
 	const stats = {
@@ -784,7 +878,7 @@ async function main() {
 		skipped: 0,
 		placeholderSkipped: 0,
 		missing: 0,
-		errors: 0
+		errors: 0,
 	};
 
 	for (const entry of entries) {
@@ -794,31 +888,41 @@ async function main() {
 			.filter(Boolean);
 
 		if (keySegments.length === 0) {
-			logWarn(`Skipping '${entry.key}' because it is not a valid dotted path.`);
+			logWarn(
+				`Skipping '${entry.key}' because it is not a valid dotted path.`
+			);
 			summaryRows.push({
 				key: entry.key,
 				language: "-",
 				status: "invalid-key",
 				detail: "Invalid translation key path",
 				changed: false,
-				dryRun: config.dryRun
+				dryRun: config.dryRun,
 			});
 			stats.skipped += 1;
 			continue;
 		}
 
 		const entryLanguagesRaw = entry.languages ?? defaultRequestedLanguages;
-		const entryLanguages = entryLanguagesRaw.filter((lang) => availableLanguages.includes(lang));
-		const missingEntryLanguages = entryLanguagesRaw.filter((lang) => !availableLanguages.includes(lang));
+		const entryLanguages = entryLanguagesRaw.filter((lang) =>
+			availableLanguages.includes(lang)
+		);
+		const missingEntryLanguages = entryLanguagesRaw.filter(
+			(lang) => !availableLanguages.includes(lang)
+		);
 		if (missingEntryLanguages.length > 0) {
 			logWarn(
-				`Entry '${entry.key}' has unknown languages: ${missingEntryLanguages.join(", ")}. They will be ignored.`
+				`Entry '${
+					entry.key
+				}' has unknown languages: ${missingEntryLanguages.join(
+					", "
+				)}. They will be ignored.`
 			);
 		}
 
-		const languagesToProcess = Array.from(new Set([...entryLanguages, "en"])).filter((lang) =>
-			availableLanguages.includes(lang)
-		);
+		const languagesToProcess = Array.from(
+			new Set([...entryLanguages, "en"])
+		).filter((lang) => availableLanguages.includes(lang));
 
 		let translations = [];
 		if (languagesToProcess.some((lang) => lang !== "en")) {
@@ -833,42 +937,50 @@ async function main() {
 					model: config.model,
 					text: entry.text,
 					context: entry.context ?? config.context,
-					languages: languagesToProcess
+					languages: languagesToProcess,
 				});
 				spinner.succeed(`Translated '${entry.key}'.`);
 			} catch (error) {
 				spinner.fail(`Failed to translate '${entry.key}'.`);
-				logError(`Failed to fetch translations for '${entry.key}': ${error.message}`);
+				logError(
+					`Failed to fetch translations for '${entry.key}': ${error.message}`
+				);
 				summaryRows.push({
 					key: entry.key,
-					language: languagesToProcess
-						.filter((lang) => lang !== "en")
-						.join(", ") || "-",
+					language:
+						languagesToProcess
+							.filter((lang) => lang !== "en")
+							.join(", ") || "-",
 					status: "error",
 					detail: error.message,
 					changed: false,
-					dryRun: config.dryRun
+					dryRun: config.dryRun,
 				});
 				stats.errors += 1;
 				continue;
 			}
 		}
 
-		const translationMap = new Map(translations.map((item) => [item.language, item.translation]));
+		const translationMap = new Map(
+			translations.map((item) => [item.language, item.translation])
+		);
 
 		for (const language of languagesToProcess) {
-			const value = language === "en" ? entry.text : translationMap.get(language);
+			const value =
+				language === "en" ? entry.text : translationMap.get(language);
 			if (!value) {
-				logWarn(`Missing translation for '${entry.key}' in ${language}; skipping.`);
+				logWarn(
+					`Missing translation for '${entry.key}' in ${language}; skipping.`
+				);
 				summaryRows.push({
 					key: entry.key,
 					language,
 					status: "missing-translation",
 					detail: "No translation returned by model",
 					changed: false,
-					dryRun: config.dryRun
+					dryRun: config.dryRun,
 				});
-			stats.missing += 1;
+				stats.missing += 1;
 				continue;
 			}
 
@@ -876,24 +988,37 @@ async function main() {
 				const placeholderCheck = comparePlaceholders(entry.text, value);
 				if (!placeholderCheck.valid) {
 					const missing = placeholderCheck.missing
-						.map((item) => `${item.placeholder} (expected ${item.expected}, got ${item.actual})`)
+						.map(
+							(item) =>
+								`${item.placeholder} (expected ${item.expected}, got ${item.actual})`
+						)
 						.join(", ");
 					const extras = placeholderCheck.extras
-						.map((item) => `${item.placeholder} (unexpected ${item.actual})`)
+						.map(
+							(item) =>
+								`${item.placeholder} (unexpected ${item.actual})`
+						)
 						.join(", ");
-					const details = [missing && `missing: ${missing}`, extras && `extras: ${extras}`]
+					const details = [
+						missing && `missing: ${missing}`,
+						extras && `extras: ${extras}`,
+					]
 						.filter(Boolean)
 						.join("; ");
-					const message = `Placeholder mismatch for '${entry.key}' in ${language}${details ? ` (${details})` : ""}.`;
+					const message = `Placeholder mismatch for '${
+						entry.key
+					}' in ${language}${details ? ` (${details})` : ""}.`;
 					if (config.strictPlaceholders) {
-						logWarn(`${message} Skipping due to --strict-placeholders.`);
+						logWarn(
+							`${message} Skipping due to --strict-placeholders.`
+						);
 						summaryRows.push({
 							key: entry.key,
 							language,
 							status: "placeholder-mismatch",
 							detail: "Skipped due to placeholder mismatch",
 							changed: false,
-							dryRun: config.dryRun
+							dryRun: config.dryRun,
 						});
 						stats.placeholderSkipped += 1;
 						continue;
@@ -908,7 +1033,7 @@ async function main() {
 					keySegments,
 					value,
 					overwrite: config.overwrite,
-					dryRun: config.dryRun
+					dryRun: config.dryRun,
 				});
 				const change = describeChange(result);
 				summaryRows.push({
@@ -917,7 +1042,7 @@ async function main() {
 					status: change.status,
 					detail: change.detail,
 					changed: result.changed,
-					dryRun: config.dryRun
+					dryRun: config.dryRun,
 				});
 				if (result.changed) {
 					stats.updated += 1;
@@ -925,17 +1050,21 @@ async function main() {
 					logSuccess(`${verb} '${entry.key}' for ${language}.`);
 				} else {
 					stats.skipped += 1;
-					logInfo(`Skipped '${entry.key}' for ${language}: ${change.detail}.`);
+					logInfo(
+						`Skipped '${entry.key}' for ${language}: ${change.detail}.`
+					);
 				}
 			} catch (error) {
-				logError(`Failed to update ${language}.json for key '${entry.key}': ${error.message}`);
+				logError(
+					`Failed to update ${language}.json for key '${entry.key}': ${error.message}`
+				);
 				summaryRows.push({
 					key: entry.key,
 					language,
 					status: "error",
 					detail: error.message,
 					changed: false,
-					dryRun: config.dryRun
+					dryRun: config.dryRun,
 				});
 				stats.errors += 1;
 			}
