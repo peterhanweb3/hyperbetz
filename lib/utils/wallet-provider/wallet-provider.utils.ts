@@ -1,10 +1,12 @@
+import { sanitizeAmountInput } from "@/lib/utils";
+
 // Helper functions
 const formatAmount = (amount: string) => {
 	if (!amount) return "0.00";
 	const num = parseFloat(amount);
 	if (num === 0) return "0.00";
 	if (num < 0.001) return "< 0.001";
-	return num.toFixed(6);
+	return sanitizeAmountInput(num.toString(), 6);
 };
 
 const formatUSD = (amount: string, price: string) => {

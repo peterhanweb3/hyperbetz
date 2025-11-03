@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useRef } from "react";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useAppStore } from "@/store/store";
 import { ReferralsSortOrder } from "@/store/slices/affiliate/referrals.slice";
 import {
@@ -9,7 +9,6 @@ import {
 	DownlineEntry,
 } from "@/types/affiliate/affiliate.types";
 
-// Export the sort order type for backward compatibility
 export type { ReferralsSortOrder } from "@/store/slices/affiliate/referrals.slice";
 
 export interface UseAffiliateReferralsResult {
@@ -27,86 +26,124 @@ export const useAffiliateReferrals = (): UseAffiliateReferralsResult => {
 	const pathname = usePathname();
 	const searchParams = useSearchParams();
 
+	// Track if we're currently syncing to prevent loops
+	const isSyncingRef = useRef(false);
+	const isInitializedRef = useRef(false);
+
+	// Select the entire slice and individual actions for stability.
 	const referralsSlice = useAppStore((state) => state.affiliate.referrals);
+	const {
+		setPage: setPageStore,
+		setSortOrder: setSortOrderStore,
+		initialize,
+		fetchReferrals,
+	} = useAppStore((state) => state.affiliate.referrals);
 
-	// Select actions once
-	const setPage = useAppStore((state) => state.affiliate.referrals.setPage);
-	const setSortOrder = useAppStore(
-		(state) => state.affiliate.referrals.setSortOrder
-	);
-	const initialize = useAppStore(
-		(state) => state.affiliate.referrals.initialize
-	);
-
-	// Initialize from URL parameters
+	/**
+	 * EFFECT 1: Initialize from URL on mount
+	 */
 	useEffect(() => {
+		if (isInitializedRef.current) return;
+
 		const urlPage = Number(searchParams.get("page")) || 1;
 		const urlSort = searchParams.get("sort");
 
-		let sortOrder: ReferralsSortOrder = "last_login";
+		let sortOrder: ReferralsSortOrder = "last_login"; // default
 
-		// Map URL parameters back to sort order
+		// Map URL sort param to store sort order
 		if (urlSort === "Z-A") {
 			sortOrder = "nickname_desc";
-		} else if (
-			urlSort &&
-			["last_login", "unclaimed_amount", "nickname_asc"].includes(urlSort)
-		) {
-			sortOrder = urlSort as ReferralsSortOrder;
+		} else if (urlSort === "A-Z") {
+			sortOrder = "nickname_asc";
+		} else if (urlSort === "unclaimed_amount") {
+			sortOrder = "unclaimed_amount";
+		} else if (urlSort === "last_login") {
+			sortOrder = "last_login";
 		}
 
-		// Update store if URL params differ from current state
-		if (urlPage !== referralsSlice.currentPage) {
-			setPage(urlPage);
-		}
-		if (sortOrder !== referralsSlice.sortOrder) {
-			setSortOrder(sortOrder);
-		}
+		// Initialize the store with URL values without triggering effects
+		isSyncingRef.current = true;
+		setPageStore(urlPage);
+		setSortOrderStore(sortOrder);
+		initialize(false);
+		isInitializedRef.current = true;
 
-		// Initialize the slice if not already done
-		if (!referralsSlice.isInitialized) {
-			initialize(false);
-		}
-	}, [
-		searchParams,
-		referralsSlice.currentPage,
-		referralsSlice.sortOrder,
-		referralsSlice.isInitialized,
-		setPage,
-		setSortOrder,
-		initialize,
-	]);
+		// Allow effects to run after a brief delay
+		setTimeout(() => {
+			isSyncingRef.current = false;
+		}, 100);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []); // Only run once on mount
 
-	// URL synchronization when state changes
+	/**
+	 * EFFECT 2: Sync URL when store state changes (from user interaction)
+	 */
 	useEffect(() => {
-		const params = new URLSearchParams();
+		if (!isInitializedRef.current || isSyncingRef.current) return;
 
+		const params = new URLSearchParams(searchParams.toString());
+
+		// Update page param
 		if (referralsSlice.currentPage > 1) {
 			params.set("page", String(referralsSlice.currentPage));
+		} else {
+			params.delete("page");
 		}
 
-		// Map sort order to URL parameter
-		if (referralsSlice.sortOrder === "nickname_desc") {
+		// Update sort param
+		const currentSort = referralsSlice.sortOrder;
+		if (currentSort === "nickname_desc") {
 			params.set("sort", "Z-A");
-		} else if (
-			referralsSlice.sortOrder !== "last_login" &&
-			referralsSlice.sortOrder !== "nickname_asc"
-		) {
-			params.set("sort", referralsSlice.sortOrder);
+		} else if (currentSort === "nickname_asc") {
+			params.set("sort", "A-Z");
+		} else if (currentSort === "unclaimed_amount") {
+			params.set("sort", "unclaimed_amount");
+		} else {
+			params.delete("sort"); // default is last_login
 		}
 
-		router.replace(`${pathname}?${params.toString()}`);
+		const newQueryString = params.toString();
+		const currentQueryString = searchParams.toString();
+
+		if (newQueryString !== currentQueryString) {
+			const newUrl = newQueryString
+				? `${pathname}?${newQueryString}`
+				: pathname;
+			router.replace(newUrl, { scroll: false });
+		}
 	}, [
 		referralsSlice.currentPage,
 		referralsSlice.sortOrder,
 		pathname,
+		searchParams,
 		router,
 	]);
 
-	// Get sorted data using the slice's method
+	/**
+	 * EFFECT 3: Fetch data when page or sort changes
+	 * Only fetch when:
+	 * - Page changes
+	 * - Sort changes to/from API-based sorts (last_login, unclaimed_amount)
+	 * Do NOT fetch when switching between client-side nickname sorts
+	 */
+	useEffect(() => {
+		if (!isInitializedRef.current) return;
+
+		const isClientSideSort =
+			referralsSlice.sortOrder === "nickname_asc" ||
+			referralsSlice.sortOrder === "nickname_desc";
+
+		// Only fetch if it's not a client-side sort
+		// Client-side sorts will just re-sort existing data via getSortedData()
+		if (!isClientSideSort) {
+			fetchReferrals(true);
+		}
+	}, [referralsSlice.currentPage, referralsSlice.sortOrder, fetchReferrals]);
+
+	// Memoize sorted data to prevent re-computation on every render.
 	const sortedData = referralsSlice.getSortedData() as DownlineEntry[];
 
-	// Create wrapped data object with sorted data
+	// Construct the final data object to be returned.
 	const dataWithSortedResults = referralsSlice.data
 		? {
 				...referralsSlice.data,
@@ -114,13 +151,26 @@ export const useAffiliateReferrals = (): UseAffiliateReferralsResult => {
 		  }
 		: null;
 
+	// Wrapper functions that prevent syncing loops
+	const setPage = (page: number) => {
+		if (page !== referralsSlice.currentPage) {
+			setPageStore(page);
+		}
+	};
+
+	const setSortOrder = (order: ReferralsSortOrder) => {
+		if (order !== referralsSlice.sortOrder) {
+			setSortOrderStore(order);
+		}
+	};
+
 	return {
 		data: dataWithSortedResults,
 		isLoading: referralsSlice.status === "loading",
 		currentPage: referralsSlice.currentPage,
 		sortOrder: referralsSlice.sortOrder,
-		setPage: referralsSlice.setPage,
-		setSortOrder: referralsSlice.setSortOrder,
+		setPage,
+		setSortOrder,
 		sortedData,
 	};
 };

@@ -7,7 +7,7 @@
 		"viewAll": "مشاهده همه"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "تغییر نوار کناری",
@@ -22,7 +22,8 @@
 		"winLoss": "برد/باخت",
 		"affiliate": "همکاری در فروش",
 		"logout": "خروج",
-		"balance": "موجودی"
+		"balance": "موجودی",
+		"turnoverBonus": "پاداش گردش مالی"
 	},
 	"navigation": {
 		"home": "خانه",
@@ -447,7 +448,8 @@
 			"yourReferralId": "شناسه ارجاع شما",
 			"referralIdHelp": "این کد را برای کاربرانی که می‌خواهند به صورت دستی در هنگام ثبت‌نام وارد کنند، به اشتراک بگذارید",
 			"copyFullSuccess": "لینک کامل ارجاع در کلیپ‌بورد کپی شد!",
-			"copyIdSuccess": "شناسه ارجاع در کلیپ‌بورد کپی شد!"
+			"copyIdSuccess": "شناسه ارجاع در کلیپ‌بورد کپی شد!",
+			"claimButtonTitle": "مطالبه جایزه"
 		},
 		"referrals": {
 			"title": "ارجاعات من",
@@ -659,15 +661,20 @@
 				"deposit": "واریز",
 				"withdraw": "برداشت",
 				"swap": "تبدیل",
-				"walletInfo": "کیف پول"
+				"walletInfo": "کیف پول",
+				"tip": "انعام",
+				"emailWallet": "کیف پول ایمیل",
+				"wallet": "کیف پول"
 			},
 			"mobileDropdown": {
 				"emailWallet": "کیف پول ایمیل",
 				"wallet": "کیف پول",
 				"deposit": "واریز",
 				"withdraw": "برداشت",
-				"swap": "تبدیل"
-			}
+				"swap": "تبدیل",
+				"tip": "انعام"
+			},
+			"title": "کیف پول"
 		},
 		"networkSelector": {
 			"placeholder": "انتخاب شبکه",
@@ -723,7 +730,8 @@
 			},
 			"buttons": {
 				"depositUsd": "واریز ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} برای پوشش هزینه های گاز و جلوگیری از شکست تراکنش رزرو شده است"
 		},
 		"swapPanel": {
 			"selectTokens": "انتخاب توکن‌ها",
@@ -773,7 +781,8 @@
 			},
 			"buttons": {
 				"depositUsd": "واریز ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} برای پوشش هزینه‌های گاز و جلوگیری از شکست تراکنش رزرو شده است"
 		},
 		"depositPending": {
 			"confirmedTitle": "واریز تایید شد!",
@@ -782,7 +791,10 @@
 			"submittedDesc": "در انتظار تایید بلاک‌چین. این ممکن است چند دقیقه طول بکشد.",
 			"viewOnExplorer": "مشاهده در اکسپلورر",
 			"newDepositConfirmed": "انجام یک واریز دیگر",
-			"newDepositPending": "شروع یک واریز جدید"
+			"newDepositPending": "شروع یک واریز جدید",
+			"failedTitle": "تراکنش ناموفق بود",
+			"failedDesc": "تراکنش شما ناموفق بوده است. ",
+			"newDepositFailed": "دوباره امتحان کنید"
 		},
 		"withdrawPanel": {
 			"resetForm": "بازنشانی فرم",
@@ -812,11 +824,12 @@
 			"buttons": {
 				"withdraw": "برداشت {amount} {symbol}",
 				"minimum": "حداقل {amount} {symbol}"
-			}
+			},
+			"calculating": "در حال محاسبه"
 		},
 		"withdrawSuccess": {
 			"title": "برداشت موفق!",
-			"successMessage": "🎉 همین الان {withdrawAmount} {tokenSymbol} از Meme Win برداشت کردم! 🚀 در {shareUrl} به زنجیره پیروزی بپیوندید",
+			"successMessage": "🎉 همین الان {withdrawAmount} {tokenSymbol} از HyperBetz برداشت کردم! 🚀 در {shareUrl} به زنجیره پیروزی بپیوندید",
 			"withdrawnAmount": "مبلغ برداشت شده",
 			"shareText": "اشتراک‌گذاری",
 			"subText": "🚀 به زنجیره پیروزی بپیوندید! 🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "گرفتن اسکرین‌شات",
 			"download": "دانلود تصویر",
 			"close": "بستن",
-			"copiedToClipboard": "لینک اشتراک‌گذاری با موفقیت کپی شد"
+			"copiedToClipboard": "لینک اشتراک‌گذاری با موفقیت کپی شد",
+			"entryPrice": "مبلغ برداشت",
+			"lastPrice": "نماد توکن",
+			"referralCode": "کد ارجاع",
+			"screenshotFailed": "گرفتن اسکرین‌شات با شکست مواجه شد. لطفاً دوباره تلاش کنید یا مرورگر دیگری استفاده کنید.",
+			"shareFailed": "اشتراک‌گذاری ناموفق بود. لطفا دوباره تلاش کنید.",
+			"status": "کامل شد",
+			"userName": "بازیکن HyperBetz"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "برداشت تایید شد!",
@@ -838,6 +858,51 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "شما دریافت خواهید کرد"
+		},
+		"tipPanel": {
+			"approxUsd": "~  دلار آمریکا",
+			"balance": "موجودی:",
+			"buttons": {
+				"tip": "انعام",
+				"tipUsd": "انعام"
+			},
+			"emailWalletAddress": "آدرس کیف پول ایمیل",
+			"enterAmount": "مقدار را وارد کنید",
+			"errors": {
+				"belowMinimum": "مبلغ باید حداقل {min} باشد.",
+				"checkForm": "لطفاً جزئیات انعام خود را بررسی کنید.",
+				"insufficientBalance": "موجودی کافی نیست.",
+				"missingWallet": "امکان دریافت کیف پول انعام نیست. لطفاً بعداً دوباره امتحان کنید.",
+				"selectTokenAndAmount": "لطفاً یک توکن را انتخاب کرده و مقداری وارد کنید."
+			},
+			"max": "حداکثر",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} برای پوشش هزینه‌های گاز و جلوگیری از شکست تراکنش رزرو شده است",
+			"minimumIs": "حداقل مبلغ انعام {min} است",
+			"minPrefix": "حداقل",
+			"prompts": {
+				"enterAmount": "مبلغ را وارد کنید",
+				"selectToken": "انتخاب توکن"
+			},
+			"resetForm": "بازنشانی فرم",
+			"selectToken": "انتخاب توکن",
+			"status": {
+				"awaitingApproval": "در انتظار تأیید...",
+				"calculatingRate": "در حال محاسبه...",
+				"fetchingWallet": "در حال آماده‌سازی کیف پول انعام...",
+				"insufficientBalance": "موجودی ناکافی",
+				"processing": "در حال ارسال انعام..."
+			},
+			"tipPanelWarningText": "انعام‌ها داوطلبانه و غیرقابل بازپرداخت هستند.",
+			"youTip": "انعام شما"
+		},
+		"tipPending": {
+			"confirmedDesc": "پیشنهاد شما با موفقیت ارسال شد.",
+			"confirmedTitle": "انعام تایید شد!",
+			"newTipConfirmed": "نکته دیگری ارسال کنید",
+			"newTipPending": "ارسال انعام دیگر",
+			"submittedDesc": "نکته شما در حال تأیید در زنجیره است.",
+			"submittedTitle": "انعام در انتظار",
+			"viewOnExplorer": "مشاهده در کاوشگر"
 		}
 	},
 	"navUser": {
@@ -937,7 +1002,7 @@
 			"casino": {
 				"title": "کازینو",
 				"badge": "+۵۹۰ بازی",
-				"desc": "از بازی‌های اصلی MemeWin و سایر بازی‌های کازینو از ارائه‌دهندگان برتر لذت ببرید.",
+				"desc": "از بازی‌های اصلی HyperBetz و سایر بازی‌های کازینو از ارائه‌دهندگان برتر لذت ببرید.",
 				"link": "رفتن به کازینو"
 			},
 			"slots": {
@@ -1204,6 +1269,29 @@
 			"calcFor": "محاسبه جایزه برای شرط ${amount}",
 			"totalPotential": "کل امتیاز بالقوه:",
 			"combinedAtTier": "پاداش ترکیبی از تمام انواع بازی‌ها در سطح {level}"
+		},
+		"claimSuccessModal": {
+			"title": "ادعای موفقیت",
+			"statusCompleted": "تکمیل",
+			"statusOnChain": "درون زنجیره‌ای",
+			"claimAmount": "مبلغ مطالبه",
+			"logoAlt": "لوگو میم وین",
+			"backgroundAlt": "پیشینه موفقیت ادعا",
+			"creatingMagic": "خلق جادو...",
+			"downloadShare": "دانلود و اشتراک‌گذاری",
+			"spreadTheWin": "برد را گسترش دهید",
+			"socialX": "X",
+			"socialFacebook": "فیس‌بوک",
+			"socialWhatsApp": "واتس اپ - عنوان بلوک",
+			"socialTelegram": "تلگرام",
+			"socialReddit": "ردیت",
+			"socialMore": ".",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "لینک ارجاع کپی شد",
+			"referralLinkCopyFailed": "کپی کردن لینک ارجاع ناموفق بود",
+			"screenshotFailed": "اسکرین شات ناموفق بود. لطفا دوباره امتحان کنید یا از مرورگر دیگری استفاده کنید.",
+			"shareTextCopied": "متن کپی شده در کلیپ بورد را به اشتراک بگذارید!",
+			"shareFailed": "اشتراک‌گذاری ناموفق بود. لطفاً دوباره امتحان کنید."
 		}
 	}
 }

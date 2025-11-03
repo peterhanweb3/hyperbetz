@@ -10,7 +10,7 @@ export interface BonusClaimState {
 }
 
 export interface BonusClaimActions {
-	claimBonus: () => Promise<void>;
+	claimBonus: () => Promise<number | null>;
 	clearClaimState: () => void;
 }
 
@@ -39,14 +39,8 @@ export const createBonusClaimSlice: AppStateCreator<BonusClaimSlice> = (
 		const bonusData = get().bonus.dashboard.bonusData;
 
 		// Validation checks
-		if (
-			!username ||
-			!token ||
-			claimState.isClaiming ||
-			!bonusData ||
-			bonusData.data.available_bonus <= 0
-		) {
-			return;
+		if (!username || !token || claimState.isClaiming || !bonusData) {
+			return null;
 		}
 
 		set((state) => {
@@ -73,12 +67,16 @@ export const createBonusClaimSlice: AppStateCreator<BonusClaimSlice> = (
 
 			// Refresh bonus data to reflect new available amount
 			await get().bonus.dashboard.fetchData(true);
+
+			// Return the claimed amount so caller can use it
+			return response.amount_claimed;
 		} catch (e) {
 			const msg = e instanceof Error ? e.message : "Claim failed";
 			set((state) => {
 				state.bonus.claim.error = msg;
 			});
 			toast.error(msg);
+			return null;
 		} finally {
 			set((state) => {
 				state.bonus.claim.isClaiming = false;

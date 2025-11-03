@@ -87,12 +87,11 @@ export const sanitizeReferralIdInput = (value: string): string => {
 	return value.replace(/[^a-zA-Z0-9]/g, "");
 };
 
-
 /**
  * Sanitizes a string to allow only valid numeric input for amounts.
  * Handles decimal points, precision, and leading zeros.
  */
-export const sanitizeAmountInput = (value: string): string => {
+export const sanitizeAmountInput = (value: string, decimalPlaces = 6): string => {
 	let sanitized = value.replace(/[^0-9.]/g, "");
 
 	if ((sanitized.match(/\./g) || []).length > 1) {
@@ -101,7 +100,7 @@ export const sanitizeAmountInput = (value: string): string => {
 
 	if (sanitized.includes(".")) {
 		const parts = sanitized.split(".");
-		sanitized = `${parts[0]}.${parts[1].substring(0, 6)}`;
+		sanitized = `${parts[0]}.${parts[1].substring(0, decimalPlaces)}`;
 	}
 
 	if (

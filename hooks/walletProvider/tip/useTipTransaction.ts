@@ -148,17 +148,13 @@ export const useTipTransaction = ({
 					status: TransactionStatus.CONFIRMED,
 				});
 			}
+			// wait 3 seconds before refreshing
+			await new Promise((resolve) => setTimeout(resolve, 3000));
 
-			// Success feedback and data refresh
+			refreshUserData();
+			await fetchTokens(true, { user, authToken });
 			toast.success("Tip sent successfully!");
 			confetti();
-			refreshUserData();
-			try {
-				await fetchTokens(true, { user, authToken });
-			} catch (error) {
-				console.warn("Failed to refresh tokens after tip:", error);
-			}
-
 			if (onTransactionComplete) {
 				onTransactionComplete();
 			}

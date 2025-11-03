@@ -7,14 +7,14 @@
 		"viewAll": "查看全部"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "切换侧边栏",
 		"searchPlaceholder": "搜索游戏、提供商...",
 		"liveChat": "在线聊天",
 		"player": "玩家",
-		"vip": "VIP",
+		"vip": "贵宾",
 		"profile": "个人资料",
 		"statistics": "统计数据",
 		"wallet": "存款/取款",
@@ -22,7 +22,8 @@
 		"winLoss": "盈亏",
 		"affiliate": "联盟",
 		"logout": "登出",
-		"balance": "余额"
+		"balance": "余额",
+		"turnoverBonus": "营业额奖金"
 	},
 	"navigation": {
 		"home": "首页",
@@ -300,7 +301,7 @@
 		"message": {
 			"you": "您",
 			"winTitle": "在“{game}”中大获全胜！🎰",
-			"gifAlt": "GIF",
+			"gifAlt": "动图",
 			"imageAlt": "已上传的图片",
 			"rainTitle": "天降财运！🌧️💰",
 			"recipients": "→ {count} 位接收者",
@@ -447,7 +448,8 @@
 			"yourReferralId": "您的推荐ID",
 			"referralIdHelp": "分享此代码供用户在注册时手动输入",
 			"copyFullSuccess": "完整推荐链接已复制到剪贴板！",
-			"copyIdSuccess": "推荐ID已复制到剪贴板！"
+			"copyIdSuccess": "推荐ID已复制到剪贴板！",
+			"claimButtonTitle": "领取奖励"
 		},
 		"referrals": {
 			"title": "我的推荐",
@@ -601,7 +603,7 @@
 			"title": "邮箱登录",
 			"description": "我们将向您发送一个6位数的验证码",
 			"emailLabel": "电子邮件地址",
-			"emailPlaceholder": "name@email.com",
+			"emailPlaceholder": "姓名@email.com",
 			"cancel": "取消",
 			"sending": "发送中",
 			"continue": "继续",
@@ -659,15 +661,20 @@
 				"deposit": "存款",
 				"withdraw": "取款",
 				"swap": "兑换",
-				"walletInfo": "钱包"
+				"walletInfo": "钱包",
+				"tip": "小费",
+				"emailWallet": "电子邮件钱包",
+				"wallet": "钱包"
 			},
 			"mobileDropdown": {
 				"emailWallet": "邮箱钱包",
 				"wallet": "钱包",
 				"deposit": "存款",
 				"withdraw": "取款",
-				"swap": "兑换"
-			}
+				"swap": "兑换",
+				"tip": "小费"
+			},
+			"title": "钱包"
 		},
 		"networkSelector": {
 			"placeholder": "选择网络",
@@ -723,7 +730,8 @@
 			},
 			"buttons": {
 				"depositUsd": "存款 ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} 保留用于支付汽油费并避免交易失败"
 		},
 		"swapPanel": {
 			"selectTokens": "选择代币",
@@ -773,7 +781,8 @@
 			},
 			"buttons": {
 				"depositUsd": "存款 ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "预留{gasReservationAmount} {selectedTokenSymbol}以支付燃气费，避免交易失败"
 		},
 		"depositPending": {
 			"confirmedTitle": "存款已确认！",
@@ -782,7 +791,10 @@
 			"submittedDesc": "等待区块链确认。这可能需要几分钟。",
 			"viewOnExplorer": "在浏览器上查看",
 			"newDepositConfirmed": "进行另一笔存款",
-			"newDepositPending": "开始新的存款"
+			"newDepositPending": "开始新的存款",
+			"failedTitle": "交易失败",
+			"failedDesc": "您的交易失败。",
+			"newDepositFailed": "再试一次"
 		},
 		"withdrawPanel": {
 			"resetForm": "重置表单",
@@ -812,11 +824,12 @@
 			"buttons": {
 				"withdraw": "取款 {amount} {symbol}",
 				"minimum": "最小 {amount} {symbol}"
-			}
+			},
+			"calculating": "计算"
 		},
 		"withdrawSuccess": {
 			"title": "取款成功！",
-			"successMessage": "🎉 刚从 Meme Win 提取了 {withdrawAmount} {tokenSymbol}！🚀 在 {shareUrl} 加入胜利的行列",
+			"successMessage": "🎉 刚从 HyperBetz 提取了 {withdrawAmount} {tokenSymbol}！🚀 在 {shareUrl} 加入胜利的行列",
 			"withdrawnAmount": "已取款金额",
 			"shareText": "分享",
 			"subText": "🚀 加入胜利的行列！🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "截屏",
 			"download": "下载图片",
 			"close": "关闭",
-			"copiedToClipboard": "分享链接已成功复制"
+			"copiedToClipboard": "分享链接已成功复制",
+			"entryPrice": "提款金额",
+			"lastPrice": "代币符号",
+			"referralCode": "推荐码",
+			"screenshotFailed": "截图失败。请重试或使用其他浏览器。",
+			"shareFailed": "分享失败。请再试一次。",
+			"status": "已完成",
+			"userName": "HyperBetz 玩家"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "取款已确认！",
@@ -838,6 +858,51 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "您将收到"
+		},
+		"tipPanel": {
+			"approxUsd": "~  USD",
+			"balance": "余额：",
+			"buttons": {
+				"tip": "小费",
+				"tipUsd": "小费"
+			},
+			"emailWalletAddress": "电子邮件钱包地址",
+			"enterAmount": "输入金额",
+			"errors": {
+				"belowMinimum": "金额必须至少为 {min}。",
+				"checkForm": "请核实您的小费详情。",
+				"insufficientBalance": "余额不足。",
+				"missingWallet": "无法获取小费钱包。请稍后再试。",
+				"selectTokenAndAmount": "请选择一个代币并输入金额。"
+			},
+			"max": "最大",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} 被保留用于支付燃气费用及避免交易失败",
+			"minimumIs": "最低小费为{min}",
+			"minPrefix": "最小值",
+			"prompts": {
+				"enterAmount": "输入金额",
+				"selectToken": "选择代币"
+			},
+			"resetForm": "重置表单",
+			"selectToken": "选择代币",
+			"status": {
+				"awaitingApproval": "等待批准中...",
+				"calculatingRate": "正在计算...",
+				"fetchingWallet": "正在准备小费钱包...",
+				"insufficientBalance": "余额不足",
+				"processing": "正在发送小费..."
+			},
+			"tipPanelWarningText": "小费是自愿的且不可退还。",
+			"youTip": "您的小费"
+		},
+		"tipPending": {
+			"confirmedDesc": "您的小费已成功送达。",
+			"confirmedTitle": "小费已确认!",
+			"newTipConfirmed": "发送另一个提示",
+			"newTipPending": "发送另一个小费",
+			"submittedDesc": "您的小费正在链上确认。",
+			"submittedTitle": "小费待处理",
+			"viewOnExplorer": "在浏览器中查看"
 		}
 	},
 	"navUser": {
@@ -862,7 +927,7 @@
 		"poker": "扑克",
 		"lottery": "彩票",
 		"futures": "期货",
-		"vr": "VR",
+		"vr": "虚拟现实",
 		"swap": "兑换",
 		"slotsDescription": "旋转卷轴，赢取巨额头奖",
 		"liveCasinoDescription": "与真人荷官一起体验实时赌场行动",
@@ -929,7 +994,7 @@
 		},
 		"jackpot": {
 			"title1": "巨额头奖",
-			"title2": "$1,000,000",
+			"title2": "1,000,000 美元",
 			"subtitle": "立即游戏，赢取大奖",
 			"cta": "立即游戏"
 		},
@@ -937,7 +1002,7 @@
 			"casino": {
 				"title": "赌场",
 				"badge": "590+ 游戏",
-				"desc": "享受 MemeWin 原创和其他顶级提供商的赌场游戏。",
+				"desc": "享受 HyperBetz 原创和其他顶级提供商的赌场游戏。",
 				"link": "前往赌场"
 			},
 			"slots": {
@@ -1204,6 +1269,29 @@
 			"calcFor": "正在计算 ${amount} 投注的奖金",
 			"totalPotential": "总潜在奖金:",
 			"combinedAtTier": "在级别{level}的所有游戏类型中获得的综合奖金"
+		},
+		"claimSuccessModal": {
+			"title": "领取成功",
+			"statusCompleted": "已完成",
+			"statusOnChain": "上链",
+			"claimAmount": "报销金额",
+			"logoAlt": "HyperBetz徽标",
+			"backgroundAlt": "领取成功背景",
+			"creatingMagic": "创造魔术",
+			"downloadShare": "下载和分享",
+			"spreadTheWin": "传播胜利",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "什么APP",
+			"socialTelegram": "电报",
+			"socialReddit": "保存此",
+			"socialMore": "更多",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "推荐链接已复制",
+			"referralLinkCopyFailed": "复制邀请链接失败",
+			"screenshotFailed": "屏幕截图失败。请重试或使用其他浏览器。",
+			"shareTextCopied": "共享复制到剪贴板的文本！",
+			"shareFailed": "分享失败，请重试"
 		}
 	}
 }

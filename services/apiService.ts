@@ -105,7 +105,8 @@ class ApiService {
 		this.jwtType = process.env.NEXT_PUBLIC_JWT_TYPE as string;
 		this.password = process.env.NEXT_PUBLIC_GAME_URL_API_PASSWORD as string;
 		this.chatHistoryApiKey = process.env.NEXT_PUBLIC_API_KEY as string;
-		this.wsKey = process.env.NEXT_PUBLIC_WS_KEY as string;
+		// this.wsKey = process.env.NEXT_PUBLIC_WS_KEY as string;
+		this.wsKey = "global" as string;
 	}
 
 	static getInstance(): ApiService {
@@ -154,7 +155,6 @@ class ApiService {
 			const result = await response.json();
 			return result;
 		} catch (error) {
-			console.error("API request failed:", error);
 			throw error;
 		}
 	}
@@ -166,7 +166,7 @@ class ApiService {
 	): Promise<ApiResponse<UserInfoApiResponse>> {
 		const data = {
 			api_key: this.apiKey,
-			network: chainId || this.networkId,
+			network: chainId || localStorage.getItem("app_chainId") || this.networkId,
 			jwt_type: this.jwtType,
 		};
 
@@ -567,26 +567,13 @@ class ApiService {
 			ws_key: this.wsKey,
 		};
 
-		console.log("🔑 Chat history request data:", {
-			hasApiKey: !!this.chatHistoryApiKey,
-			hasWsKey: !!this.wsKey,
-			apiKeyLength: this.chatHistoryApiKey?.length || 0,
-			wsKeyLength: this.wsKey?.length || 0,
-		});
-
 		try {
-			console.log(
-				"📤 Making chat history API request to /api/getHistoryChat"
-			);
 			const response = await this.makeRequest<
 				ChatHistoryApiResponse["data"]
 			>("/api/getHistoryChat", "POST", data);
 
-			console.log("📥 Raw API response:", response);
-
 			// The API returns data directly, but we need to match the expected format
 			if (response.error) {
-				console.warn("⚠️ API returned error:", response);
 				return {
 					error: true,
 					data: [],
@@ -597,20 +584,12 @@ class ApiService {
 			// But our makeRequest wrapper might be adding another layer
 			const actualData = response.data || response;
 
-			console.log("✅ Processing chat history data:", {
-				dataType: typeof actualData,
-				isArray: Array.isArray(actualData),
-				length: Array.isArray(actualData)
-					? actualData.length
-					: "not array",
-			});
-
 			return {
 				error: false,
 				data: Array.isArray(actualData) ? actualData : [],
 			};
 		} catch (error) {
-			console.error("❌ Error fetching chat history:", error);
+			console.error("Error fetching chat history:", error);
 			return {
 				error: true,
 				data: [],

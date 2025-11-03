@@ -7,7 +7,7 @@
 		"viewAll": "Посмотреть все"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "Переключить боковую панель",
@@ -22,7 +22,8 @@
 		"winLoss": "Выигрыши/Проигрыши",
 		"affiliate": "Партнерка",
 		"logout": "Выйти",
-		"balance": "Баланс"
+		"balance": "Баланс",
+		"turnoverBonus": "Бонус за объем продаж"
 	},
 	"navigation": {
 		"home": "Главная",
@@ -300,7 +301,7 @@
 		"message": {
 			"you": "Вы",
 			"winTitle": "Крупный выигрыш в \"{game}\"! 🎰",
-			"gifAlt": "GIF",
+			"gifAlt": "гифка",
 			"imageAlt": "Загруженное изображение",
 			"rainTitle": "Денежный дождь! 🌧️💰",
 			"recipients": "→ {count, plural, one {получатель} few {получателя} many {получателей} other {получателя}}",
@@ -447,7 +448,8 @@
 			"yourReferralId": "Ваш реферальный ID",
 			"referralIdHelp": "Поделитесь этим кодом, чтобы пользователи могли ввести его вручную при регистрации",
 			"copyFullSuccess": "Полная реферальная ссылка скопирована в буфер обмена!",
-			"copyIdSuccess": "Реферальный ID скопирован в буфер обмена!"
+			"copyIdSuccess": "Реферальный ID скопирован в буфер обмена!",
+			"claimButtonTitle": "ПРЕТЕНЗИЯ БОНУС"
 		},
 		"referrals": {
 			"title": "Мои рефералы",
@@ -586,7 +588,7 @@
 		"balance": "Баланс",
 		"max": "Макс.",
 		"deposit": "Депозит",
-		"ethereum": "Ethereum"
+		"ethereum": "Эфириум"
 	},
 	"modalsSmall": {
 		"close": "Закрыть",
@@ -601,7 +603,7 @@
 			"title": "Вход по почте",
 			"description": "Мы отправим вам 6-значный код",
 			"emailLabel": "Адрес электронной почты",
-			"emailPlaceholder": "name@email.com",
+			"emailPlaceholder": "имя@email.com",
 			"cancel": "Отмена",
 			"sending": "Отправка",
 			"continue": "Продолжить",
@@ -659,15 +661,20 @@
 				"deposit": "Депозит",
 				"withdraw": "Вывод",
 				"swap": "Обмен",
-				"walletInfo": "Кошелек"
+				"walletInfo": "Кошелек",
+				"tip": "Чаевые",
+				"emailWallet": "Электронный кошелек",
+				"wallet": "Кошелек"
 			},
 			"mobileDropdown": {
 				"emailWallet": "Email-кошелек",
 				"wallet": "Кошелек",
 				"deposit": "Депозит",
 				"withdraw": "Вывод",
-				"swap": "Обмен"
-			}
+				"swap": "Обмен",
+				"tip": "Чаевые"
+			},
+			"title": "КОШЕЛЕК"
 		},
 		"networkSelector": {
 			"placeholder": "Выберите сеть",
@@ -702,7 +709,7 @@
 			"max": "Макс.",
 			"balance": "Баланс:",
 			"calculating": "Расчет...",
-			"approxUsd": "~ ${amount} USD",
+			"approxUsd": "~ ${amount} долларов США",
 			"minPrefix": "Мин.:",
 			"ratesMayVary": "Курсы могут отличаться",
 			"emailWalletAddress": "Адрес Email-кошелька",
@@ -723,7 +730,8 @@
 			},
 			"buttons": {
 				"depositUsd": "Внести ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} зарезервировано для покрытия комиссий за газ и предотвращения сбоя транзакции."
 		},
 		"swapPanel": {
 			"selectTokens": "Выберите токены",
@@ -773,7 +781,8 @@
 			},
 			"buttons": {
 				"depositUsd": "Внести ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} зарезервировано для покрытия комиссий на газ и предотвращения неудачи транзакции"
 		},
 		"depositPending": {
 			"confirmedTitle": "Депозит подтвержден!",
@@ -782,7 +791,10 @@
 			"submittedDesc": "Ожидание подтверждения блокчейна. Это может занять несколько минут.",
 			"viewOnExplorer": "Посмотреть в обозревателе",
 			"newDepositConfirmed": "Сделать еще один депозит",
-			"newDepositPending": "Начать новый депозит"
+			"newDepositPending": "Начать новый депозит",
+			"failedTitle": "Транзакция не удалась",
+			"failedDesc": "Ваша транзакция не удалась. ",
+			"newDepositFailed": "Попробуйте еще раз"
 		},
 		"withdrawPanel": {
 			"resetForm": "Сбросить форму",
@@ -812,11 +824,12 @@
 			"buttons": {
 				"withdraw": "Вывести {amount} {symbol}",
 				"minimum": "Минимум {amount} {symbol}"
-			}
+			},
+			"calculating": "Расчет"
 		},
 		"withdrawSuccess": {
 			"title": "Вывод успешен!",
-			"successMessage": "🎉 Только что вывел(а) {withdrawAmount} {tokenSymbol} из Meme Win! 🚀 Присоединяйтесь к победной серии на {shareUrl}",
+			"successMessage": "🎉 Только что вывел(а) {withdrawAmount} {tokenSymbol} из HyperBetz! 🚀 Присоединяйтесь к победной серии на {shareUrl}",
 			"withdrawnAmount": "Выведенная сумма",
 			"shareText": "Поделиться",
 			"subText": "🚀 ПРИСОЕДИНЯЙТЕСЬ К ПОБЕДНОЙ СЕРИИ! 🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "Сделать скриншот",
 			"download": "Скачать изображение",
 			"close": "Закрыть",
-			"copiedToClipboard": "Ссылка для paylaşma успешно скопирована"
+			"copiedToClipboard": "Ссылка для paylaşma успешно скопирована",
+			"entryPrice": "Сумма снятия",
+			"lastPrice": "Символ токена",
+			"referralCode": "Реферальный код",
+			"screenshotFailed": "Не удалось сделать снимок экрана. Пожалуйста, попробуйте еще раз или используйте другой браузер.",
+			"shareFailed": "Не удалось поделиться. Пожалуйста, попробуйте еще раз.",
+			"status": "Завершено",
+			"userName": "Игрок HyperBetz"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "Вывод подтвержден!",
@@ -838,6 +858,51 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "Вы получите"
+		},
+		"tipPanel": {
+			"approxUsd": "~  USD",
+			"balance": "Баланс:",
+			"buttons": {
+				"tip": "Чаевые",
+				"tipUsd": "Чаевые"
+			},
+			"emailWalletAddress": "Адрес электронной почты кошелька",
+			"enterAmount": "Введите сумму",
+			"errors": {
+				"belowMinimum": "Сумма должна быть не менее {min}.",
+				"checkForm": "Пожалуйста, проверьте детали вашего чаевые.",
+				"insufficientBalance": "Недостаточно средств.",
+				"missingWallet": "Не удалось получить кошелек для чаевых. Пожалуйста, попробуйте позже.",
+				"selectTokenAndAmount": "Пожалуйста, выберите токен и введите сумму."
+			},
+			"max": "Макс",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} зарезервировано для покрытия комиссий за газ и предотвращения отказа транзакции",
+			"minimumIs": "Минимальная сумма чаевых составляет {min}",
+			"minPrefix": "Минимум",
+			"prompts": {
+				"enterAmount": "Введите сумму",
+				"selectToken": "Выберите токен"
+			},
+			"resetForm": "Сбросить форму",
+			"selectToken": "Выберите токен",
+			"status": {
+				"awaitingApproval": "Ожидание одобрения...",
+				"calculatingRate": "Вычисление...",
+				"fetchingWallet": "Подготовка кошелька для чаевых...",
+				"insufficientBalance": "Недостаточно средств",
+				"processing": "Отправка чаевых..."
+			},
+			"tipPanelWarningText": "Чаевые являются добровольными и не подлежат возврату.",
+			"youTip": "Ваши чаевые"
+		},
+		"tipPending": {
+			"confirmedDesc": "Ваш чаевые были успешно доставлены.",
+			"confirmedTitle": "Чаевые подтверждены!",
+			"newTipConfirmed": "Отправить ещё один совет",
+			"newTipPending": "Отправить ещё один совет",
+			"submittedDesc": "Ваш совет подтверждается в блокчейне.",
+			"submittedTitle": "Ожидается чаевые",
+			"viewOnExplorer": "Посмотреть в проводнике"
 		}
 	},
 	"navUser": {
@@ -851,7 +916,7 @@
 		"pageTitle": "Все игры",
 		"playNow": "Играть сейчас",
 		"byProvider": "От {name}",
-		"count": "{count, plural, one {Игра} few {Игры} many {Игр} other {Игры}}",
+		"count": "{count} Игры",
 		"noResults": "Не найдено игр, соответствующих вашим критериям.",
 		"errorLoading": "Не удалось загрузить игры. Пожалуйста, попробуйте позже.",
 		"slots": "Слоты",
@@ -929,7 +994,7 @@
 		},
 		"jackpot": {
 			"title1": "Мега-джекпот",
-			"title2": "$1,000,000",
+			"title2": "1 000 000 долларов США",
 			"subtitle": "Играйте сейчас и выигрывайте по-крупному",
 			"cta": "Играть сейчас"
 		},
@@ -937,7 +1002,7 @@
 			"casino": {
 				"title": "Казино",
 				"badge": "590+ ИГР",
-				"desc": "Наслаждайтесь оригинальными играми MemeWin и другими играми казино от лучших провайдеров.",
+				"desc": "Наслаждайтесь оригинальными играми HyperBetz и другими играми казино от лучших провайдеров.",
 				"link": "Перейти в казино"
 			},
 			"slots": {
@@ -1204,6 +1269,29 @@
 			"calcFor": "Расчет бонуса для ставки на ${amount}",
 			"totalPotential": "Общий потенциальный бонус:",
 			"combinedAtTier": "Совокупный бонус от всех типов игр на уровне {level}"
+		},
+		"claimSuccessModal": {
+			"title": "Претензия успешна",
+			"statusCompleted": "Завершено",
+			"statusOnChain": "Ончейн",
+			"claimAmount": "Сумма претензии",
+			"logoAlt": "Логотип HyperBetz",
+			"backgroundAlt": "Справочная информация об успехе заявки",
+			"creatingMagic": "Создание магии...",
+			"downloadShare": "Скачать или поделиться",
+			"spreadTheWin": "РАСПРЕДЕЛИТЕ ВЫИГРЫШ",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "Telegram",
+			"socialReddit": "Reddit",
+			"socialMore": "Еще",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "Реферальная ссылка скопирована",
+			"referralLinkCopyFailed": "Не удалось скопировать реферальную ссылку",
+			"screenshotFailed": "Сбой снимка экрана. Повторите попытку или используйте другой браузер.",
+			"shareTextCopied": "Поделитесь текстом, скопированным в буфер обмена!",
+			"shareFailed": "Сбой. Повторите попытку."
 		}
 	}
 }

@@ -71,9 +71,9 @@ const tierGiftMapping = [
 	},
 ];
 
-const GiftTierSkeleton = () => (
+const GiftTierSkeleton = ({ total }: { total: number }) => (
 	<div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-7 gap-3 sm:gap-4">
-		{[...Array(6)].map((_, i) => (
+		{[...Array(total)].map((_, i) => (
 			<div
 				key={i}
 				className="flex flex-col items-center space-y-3 p-3 sm:p-4 bg-card border border-border rounded-xl"
@@ -93,7 +93,7 @@ const GiftTierSkeleton = () => (
  */
 export const GiftTiers = ({ rates, isLoading }: GiftTiersProps) => {
 	if (isLoading) {
-		return <GiftTierSkeleton />;
+		return <GiftTierSkeleton total={rates.length} />;
 	}
 
 	return (

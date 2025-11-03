@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ChevronDown, Info, X } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
 	DropdownMenu,
@@ -92,7 +92,7 @@ export function ChatHeader({
 			</div>
 
 			<div className="flex items-center gap-2 relative z-10">
-				<Button
+				{/* <Button
 					variant="ghost"
 					size="sm"
 					className="h-8 w-8 p-0 text-muted-foreground hover:text-primary
@@ -100,7 +100,7 @@ export function ChatHeader({
                    casino-icon-button"
 				>
 					<Info className="h-4 w-4" />
-				</Button>
+				</Button> */}
 
 				<Button
 					variant="ghost"

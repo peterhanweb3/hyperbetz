@@ -54,6 +54,7 @@ import {
 } from "@/types/walletProvider/transaction-service.types";
 import { parseAbi, parseUnits } from "viem";
 import { SendTransactionParameters } from "viem/zksync";
+import { waitForTransactionReceipt } from "viem/actions";
 
 interface ApiResponse<T> {
 	error: boolean;
@@ -546,7 +547,7 @@ class TransactionService {
 				network,
 				fromToken,
 				toToken,
-				amount: 1,
+				amount,
 				username,
 			};
 

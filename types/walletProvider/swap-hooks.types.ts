@@ -161,9 +161,11 @@ export interface UseSwapTransactionReturn {
 	transactionSuccess: boolean;
 	successPop: boolean;
 	txHash: string;
-	// Completed transaction amounts (stored before reset)
+	// Completed transaction amounts and tokens (stored before reset)
 	completedExchangeAmount: string;
 	completedReceivedAmount: string;
+	completedFromToken: Token | null;
+	completedToToken: Token | null;
 
 	// Actions
 	executeSwap: () => Promise<SwapTransactionResult>;
@@ -197,9 +199,11 @@ export interface UseSwapReturn {
 	transactionSuccess: boolean;
 	successPop: boolean;
 	txHash: string;
-	// Completed transaction amounts (stored before reset)
+	// Completed transaction amounts and tokens (stored before reset)
 	completedExchangeAmount: string;
 	completedReceivedAmount: string;
+	completedFromToken: Token | null;
+	completedToToken: Token | null;
 	showGasFee: boolean;
 	isLowBalance: boolean;
 	gasReservationAmount: number;

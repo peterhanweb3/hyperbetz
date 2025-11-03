@@ -7,7 +7,7 @@
 		"viewAll": "عرض الكل"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "تبديل الشريط الجانبي",
@@ -22,7 +22,8 @@
 		"winLoss": "الأرباح/الخسائر",
 		"affiliate": "التابعين",
 		"logout": "تسجيل الخروج",
-		"balance": "الرصيد"
+		"balance": "الرصيد",
+		"turnoverBonus": "مكافأة دوران رأس المال"
 	},
 	"navigation": {
 		"home": "الرئيسية",
@@ -259,7 +260,7 @@
 			"searchGifs": "ابحث عن GIFs...",
 			"tabs": {
 				"emojis": "إيموجي",
-				"gifs": "GIFs"
+				"gifs": "صور GIF"
 			},
 			"loadingEmojis": "جار تحميل الإيموجي...",
 			"loadingGifs": "جار تحميل GIFs...",
@@ -447,7 +448,8 @@
 			"yourReferralId": "معرف الإحالة الخاص بك",
 			"referralIdHelp": "شارك هذا الرمز ليقوم المستخدمون بإدخاله يدويًا أثناء التسجيل",
 			"copyFullSuccess": "تم نسخ رابط الإحالة الكامل إلى الحافظة!",
-			"copyIdSuccess": "تم نسخ معرف الإحالة إلى الحافظة!"
+			"copyIdSuccess": "تم نسخ معرف الإحالة إلى الحافظة!",
+			"claimButtonTitle": "مطالبة المكافأة"
 		},
 		"referrals": {
 			"title": "إحالاتي",
@@ -659,15 +661,20 @@
 				"deposit": "إيداع",
 				"withdraw": "سحب",
 				"swap": "تبديل",
-				"walletInfo": "المحفظة"
+				"walletInfo": "المحفظة",
+				"tip": "إكرامية",
+				"emailWallet": "محفظة البريد الإلكتروني",
+				"wallet": "محفظة"
 			},
 			"mobileDropdown": {
 				"emailWallet": "محفظة البريد الإلكتروني",
 				"wallet": "المحفظة",
 				"deposit": "إيداع",
 				"withdraw": "سحب",
-				"swap": "تبديل"
-			}
+				"swap": "تبديل",
+				"tip": "إكرامية"
+			},
+			"title": "محفظة"
 		},
 		"networkSelector": {
 			"placeholder": "اختر الشبكة",
@@ -723,7 +730,8 @@
 			},
 			"buttons": {
 				"depositUsd": "إيداع ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} محجوز لتغطية رسوم الغاز وتجنب فشل المعاملة"
 		},
 		"swapPanel": {
 			"selectTokens": "اختر العملات",
@@ -773,7 +781,8 @@
 			},
 			"buttons": {
 				"depositUsd": "إيداع ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} محجوز لتغطية رسوم الغاز وتجنب فشل المعاملة"
 		},
 		"depositPending": {
 			"confirmedTitle": "تم تأكيد الإيداع!",
@@ -782,7 +791,10 @@
 			"submittedDesc": "في انتظار تأكيد البلوك تشين. قد يستغرق هذا بضع دقائق.",
 			"viewOnExplorer": "عرض على المستكشف",
 			"newDepositConfirmed": "قم بإيداع آخر",
-			"newDepositPending": "ابدأ إيداعًا جديدًا"
+			"newDepositPending": "ابدأ إيداعًا جديدًا",
+			"failedTitle": "فشلت الصفقة",
+			"failedDesc": "لقد فشلت معاملتك. ",
+			"newDepositFailed": "حاول ثانية"
 		},
 		"withdrawPanel": {
 			"resetForm": "إعادة تعيين النموذج",
@@ -812,11 +824,12 @@
 			"buttons": {
 				"withdraw": "سحب {amount} {symbol}",
 				"minimum": "الحد الأدنى {amount} {symbol}"
-			}
+			},
+			"calculating": "حساب"
 		},
 		"withdrawSuccess": {
 			"title": "تم السحب بنجاح!",
-			"successMessage": "🎉 لقد سحبت للتو {withdrawAmount} {tokenSymbol} من Meme Win! 🚀 انضم إلى سلسلة الانتصارات على {shareUrl}",
+			"successMessage": "🎉 لقد سحبت للتو {withdrawAmount} {tokenSymbol} من HyperBetz! 🚀 انضم إلى سلسلة الانتصارات على {shareUrl}",
 			"withdrawnAmount": "المبلغ المسحوب",
 			"shareText": "مشاركة",
 			"subText": "🚀 انضم إلى سلسلة الانتصارات! 🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "التقاط لقطة شاشة",
 			"download": "تنزيل الصورة",
 			"close": "إغلاق",
-			"copiedToClipboard": "تم نسخ رابط المشاركة بنجاح"
+			"copiedToClipboard": "تم نسخ رابط المشاركة بنجاح",
+			"entryPrice": "مبلغ السحب",
+			"lastPrice": "رمز العملة",
+			"referralCode": "كود الإحالة",
+			"screenshotFailed": "فشل التقاط الشاشة. يرجى المحاولة مرة أخرى أو استخدام متصفح مختلف.",
+			"shareFailed": "فشل المشاركة. حاول مرة أخرى.",
+			"status": "مكتمل",
+			"userName": "لاعب HyperBetz"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "تم تأكيد السحب!",
@@ -838,6 +858,51 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "سوف تستلم"
+		},
+		"tipPanel": {
+			"approxUsd": "~  دولار أمريكي",
+			"balance": "الرصيد:",
+			"buttons": {
+				"tip": "إكرامية",
+				"tipUsd": "إكرامية"
+			},
+			"emailWalletAddress": "عنوان محفظة البريد الإلكتروني",
+			"enterAmount": "أدخل المبلغ",
+			"errors": {
+				"belowMinimum": "يجب أن يكون المبلغ على الأقل {min}.",
+				"checkForm": "يرجى التحقق من تفاصيل الإكرامية الخاصة بك.",
+				"insufficientBalance": "الرصيد غير كافٍ.",
+				"missingWallet": "تعذر جلب محفظة الإكراميات. يرجى المحاولة مرة أخرى لاحقًا.",
+				"selectTokenAndAmount": "يرجى اختيار رمز وإدخال مبلغ."
+			},
+			"max": "الأقصى",
+			"maxButtonToolTipText": "يتم حجز {gasReservationAmount} {selectedTokenSymbol} لتغطية رسوم الغاز وتجنب فشل المعاملة",
+			"minimumIs": "أقل إكرامية هي {min}",
+			"minPrefix": "الحد الأدنى",
+			"prompts": {
+				"enterAmount": "أدخل المبلغ",
+				"selectToken": "اختر الرمز"
+			},
+			"resetForm": "إعادة تعيين النموذج",
+			"selectToken": "اختر رمز",
+			"status": {
+				"awaitingApproval": "في انتظار الموافقة...",
+				"calculatingRate": "جارٍ الحساب...",
+				"fetchingWallet": "جارٍ تحضير محفظة الإكرامية...",
+				"insufficientBalance": "الرصيد غير كافٍ",
+				"processing": "جارٍ إرسال البقشيش..."
+			},
+			"tipPanelWarningText": "الإكراميات طوعية وغير قابلة للاسترداد.",
+			"youTip": "إكراميتك"
+		},
+		"tipPending": {
+			"confirmedDesc": "تم توصيل نصيحتك بنجاح.",
+			"confirmedTitle": "تم تأكيد البقشيش!",
+			"newTipConfirmed": "أرسل تلميحًا آخر",
+			"newTipPending": "إرسال بقشيش آخر",
+			"submittedDesc": "يتم تأكيد نصيحتك على السلسلة.",
+			"submittedTitle": "إكرامية معلقة",
+			"viewOnExplorer": "عرض على المستكشف"
 		}
 	},
 	"navUser": {
@@ -851,7 +916,7 @@
 		"pageTitle": "كل الألعاب",
 		"playNow": "العب الآن",
 		"byProvider": "بواسطة {name}",
-		"count": "{count, plural, one {لعبة} other {ألعاب}}",
+		"count": "{count} ألعاب",
 		"noResults": "لم يتم العثور على ألعاب تطابق معاييرك.",
 		"errorLoading": "تعذر تحميل الألعاب. يرجى المحاولة مرة أخرى لاحقًا.",
 		"slots": "سلوتس",
@@ -929,7 +994,7 @@
 		},
 		"jackpot": {
 			"title1": "الجائزة الكبرى",
-			"title2": "$1,000,000",
+			"title2": "1,000,000 دولار",
 			"subtitle": "العب الآن واربح الكثير",
 			"cta": "العب الآن"
 		},
@@ -937,7 +1002,7 @@
 			"casino": {
 				"title": "كازينو",
 				"badge": "+590 لعبة",
-				"desc": "استمتع بألعاب MemeWin الأصلية وألعاب كازينو أخرى من أفضل المزودين.",
+				"desc": "استمتع بألعاب HyperBetz الأصلية وألعاب كازينو أخرى من أفضل المزودين.",
 				"link": "اذهب إلى الكازينو"
 			},
 			"slots": {
@@ -954,7 +1019,7 @@
 			},
 			"crypto": {
 				"title": "العملات الرقمية والكسب",
-				"badge": "60% APR",
+				"badge": "60% أبريل",
 				"desc": "خزّن وتداول واكسب مع العملات المشفرة بأسعار جذابة.",
 				"link": "اذهب إلى العملات الرقمية"
 			}
@@ -1204,6 +1269,29 @@
 			"calcFor": "حساب المكافأة لـ ${amount} رهان",
 			"totalPotential": "إجمالي المكافأة المحتملة:",
 			"combinedAtTier": "المكافأة المجتمعة من جميع أنواع الألعاب في المستوى {level}"
+		},
+		"claimSuccessModal": {
+			"title": "تمت المطالبة بنجاح",
+			"statusCompleted": "مكتمل",
+			"statusOnChain": "في السلسلة",
+			"claimAmount": "مبلغ المطالبة",
+			"logoAlt": "شعار HyperBetz",
+			"backgroundAlt": "خلفية نجاح المطالبة",
+			"creatingMagic": "جارٍ إنشاء السحر...",
+			"downloadShare": "تنزيل ومشاركة",
+			"spreadTheWin": "انشر الربح",
+			"socialX": "X",
+			"socialFacebook": "شبكة فيسبوك",
+			"socialWhatsApp": "واتساب",
+			"socialTelegram": "تيلغرام",
+			"socialReddit": "ريديت (Reddit)",
+			"socialMore": "مور",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "تم نسخ رابط الإحالة!",
+			"referralLinkCopyFailed": "تعذر نسخ رابط الإحالة",
+			"screenshotFailed": "فشلت لقطة الشاشة. يرجى المحاولة مرة أخرى أو استخدام متصفح مختلف.",
+			"shareTextCopied": "مشاركة النص المنسوخ إلى الحافظة!",
+			"shareFailed": "فشلت المشاركة. يرجى المحاولة مرة أخرى."
 		}
 	}
 }

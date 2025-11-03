@@ -89,7 +89,9 @@ class LocalStorageService {
 	static getInstance(): LocalStorageService {
 		if (!LocalStorageService.instance) {
 			LocalStorageService.instance = new LocalStorageService();
-			console.warn("LocalStorageService initialized");
+			if (typeof window !== "undefined") {
+				console.log("LocalStorageService initialized");
+			}
 		}
 		return LocalStorageService.instance;
 	}

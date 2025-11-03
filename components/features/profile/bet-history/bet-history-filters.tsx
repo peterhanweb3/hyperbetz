@@ -41,6 +41,39 @@ export function BetHistoryFilters({
 }: BetHistoryFiltersProps) {
 	const t = useTranslations("profile.betHistory");
 
+	// Validate date inputs to prevent future dates
+	const handleDateChangeFrom = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const selectedDate = e.target.value;
+		const today = new Date().toISOString().split("T")[0];
+		if (selectedDate > today) {
+			setLocalFilters((prev) => ({
+				...prev,
+				customDateFrom: today,
+			}));
+			return;
+		}
+		setLocalFilters((prev) => ({
+			...prev,
+			customDateFrom: selectedDate,
+		}));
+	};
+
+	const handleDateChangeTo = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const selectedDate = e.target.value;
+		const today = new Date().toISOString().split("T")[0];
+		if (selectedDate > today) {
+			setLocalFilters((prev) => ({
+				...prev,
+				customDateTo: today,
+			}));
+			return;
+		}
+		setLocalFilters((prev) => ({
+			...prev,
+			customDateTo: selectedDate,
+		}));
+	};
+
 	// Calculate date range for display
 	const getDateRange = useCallback(
 		(range: string, customFrom?: string, customTo?: string) => {
@@ -317,12 +350,8 @@ export function BetHistoryFilters({
 							<Input
 								type="date"
 								value={localFilters.customDateFrom}
-								onChange={(e) =>
-									setLocalFilters((prev) => ({
-										...prev,
-										customDateFrom: e.target.value,
-									}))
-								}
+								onChange={handleDateChangeFrom}
+								max={new Date().toISOString().split("T")[0]}
 								className="h-9 bg-background/50 border-border/50 focus:border-primary/50 focus:ring-1 focus:ring-primary/20"
 							/>
 						</div>
@@ -333,12 +362,8 @@ export function BetHistoryFilters({
 							<Input
 								type="date"
 								value={localFilters.customDateTo}
-								onChange={(e) =>
-									setLocalFilters((prev) => ({
-										...prev,
-										customDateTo: e.target.value,
-									}))
-								}
+								onChange={handleDateChangeTo}
+								max={new Date().toISOString().split("T")[0]}
 								className="h-9 bg-background/50 border-border/50 focus:border-primary/50 focus:ring-1 focus:ring-primary/20"
 							/>
 						</div>

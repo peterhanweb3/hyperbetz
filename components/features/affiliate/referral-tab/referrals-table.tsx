@@ -20,7 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { DownlineEntry } from "@/types/affiliate/affiliate.types";
 import { ReferralsSortOrder } from "@/hooks/affiliate/useAffiliateReferrals";
-import { ArrowUpDown, Users, TrendingUp, Calendar, Coins } from "lucide-react";
+import { Users, TrendingUp, Calendar, Coins } from "lucide-react";
 import { useTranslations } from "@/lib/locale-provider";
 
 interface ReferralsTableProps {
@@ -154,7 +154,6 @@ export default function ReferralsTable({
 						}
 					>
 						<SelectTrigger className="w-[220px] bg-card border-border hover:bg-accent/50 transition-colors">
-							<ArrowUpDown className="mr-2 h-4 w-4 text-muted-foreground" />
 							<SelectValue placeholder={t("sort.placeholder")} />
 						</SelectTrigger>
 						<SelectContent className="bg-popover border-border">

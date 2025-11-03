@@ -19,7 +19,7 @@ import { useAppStore } from "@/store/store";
 import { getGamesByCategory } from "@/lib/utils/games/games.utils";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 
 // --- Layout8 Skeleton Component ---
 const Layout8Skeleton = () => (
@@ -75,6 +75,9 @@ const CasinoCategory = ({
 					alt={title}
 					fill
 					className="object-cover"
+					sizes="64px"
+					loading="lazy"
+					quality={70}
 				/>
 			</div>
 		</div>
@@ -104,6 +107,10 @@ const PromoBanner = ({
 				alt={title}
 				fill
 				className="object-cover transition-transform duration-700 group-hover:scale-110"
+				sizes="(max-width: 1024px) 100vw, 50vw"
+				priority
+				quality={72}
+				fetchPriority="high"
 			/>
 		</div>
 		<div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300 rounded-2xl" />
@@ -112,9 +119,12 @@ const PromoBanner = ({
 				{title}
 			</h2>
 			<p className="text-lg mb-4 opacity-90">{subtitle}</p>
-			<Link href={link}>
+			<Link href={link} className="inline-block">
 				<Button
-					onClick={onButtonClick}
+					onClick={(event) => {
+						event.stopPropagation();
+						onButtonClick();
+					}}
 					className="bg-white text-gray-900 hover:bg-gray-100 font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
 				>
 					{buttonText}
@@ -149,6 +159,9 @@ const SidePromo = ({
 				alt={title}
 				fill
 				className="object-cover transition-transform duration-700 group-hover:scale-110"
+				sizes="(max-width: 1024px) 100vw, 25vw"
+				loading="lazy"
+				quality={70}
 			/>
 		</div>
 		<div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300" />
@@ -187,7 +200,7 @@ const LiveCasinoAndSlotsSection = () => {
 	const [slotGames, setSlotGames] = useState<Game[]>([]);
 
 	// Helper: sample unique random games from a pool
-	const sampleGames = (pool: Game[], count: number): Game[] => {
+	const sampleGames = useCallback((pool: Game[], count: number): Game[] => {
 		if (!pool || pool.length === 0) return [];
 		if (pool.length <= count) return pool.slice(0, count);
 		const indices = new Set<number>();
@@ -195,7 +208,7 @@ const LiveCasinoAndSlotsSection = () => {
 			indices.add(Math.floor(Math.random() * pool.length));
 		}
 		return Array.from(indices).map((i) => pool[i]);
-	};
+	}, []);
 
 	// Initialize visible lists when data is ready or pools change
 	useEffect(() => {
@@ -203,13 +216,12 @@ const LiveCasinoAndSlotsSection = () => {
 			setLiveCasinoGames(sampleGames(liveCasinoPool, 4));
 			setSlotGames(sampleGames(slotPool, 4));
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [status, liveCasinoPool, slotPool]);
+	}, [sampleGames, status, liveCasinoPool, slotPool]);
 
 	// Periodically reshuffle visible games
 	useEffect(() => {
 		if (status !== "success") return;
-		const intervalMs = 8000; // 8s; adjust as needed
+		const intervalMs = 12000;
 		const id = setInterval(() => {
 			// Avoid updating when tab is hidden to save resources
 			if (typeof document !== "undefined" && document.hidden) return;
@@ -217,8 +229,7 @@ const LiveCasinoAndSlotsSection = () => {
 			setSlotGames(sampleGames(slotPool, 4));
 		}, intervalMs);
 		return () => clearInterval(id);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [status, liveCasinoPool, slotPool]);
+	}, [sampleGames, status, liveCasinoPool, slotPool]);
 
 	if (status === "loading" || status === "idle") {
 		return (
@@ -280,6 +291,8 @@ const LiveCasinoAndSlotsSection = () => {
 						alt={game.game_name}
 						fill
 						className="object-cover transition-transform duration-700 group-hover:scale-110"
+						sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
+						loading="lazy"
 					/>
 					<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all duration-300" />
 					<div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

@@ -498,10 +498,6 @@ export function ProfilePage() {
 								</div>
 							</div>
 							<div className="space-y-2">
-								<p className="text-xs text-muted-foreground">
-									Invite friends and earn rewards for every
-									successful referral!
-								</p>
 								<Button
 									variant="outline"
 									size="sm"

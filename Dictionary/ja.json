@@ -7,7 +7,7 @@
 		"viewAll": "すべて表示"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "サイドバーの切り替え",
@@ -22,7 +22,8 @@
 		"winLoss": "勝敗",
 		"affiliate": "アフィリエイト",
 		"logout": "ログアウト",
-		"balance": "残高"
+		"balance": "残高",
+		"turnoverBonus": "売上高ボーナス"
 	},
 	"navigation": {
 		"home": "ホーム",
@@ -447,7 +448,8 @@
 			"yourReferralId": "あなたの紹介ID",
 			"referralIdHelp": "このコードを共有して、ユーザーが登録時に手動で入力できるようにします",
 			"copyFullSuccess": "完全な紹介リンクをクリップボードにコピーしました！",
-			"copyIdSuccess": "紹介IDをクリップボードにコピーしました！"
+			"copyIdSuccess": "紹介IDをクリップボードにコピーしました！",
+			"claimButtonTitle": "ボーナスの請求"
 		},
 		"referrals": {
 			"title": "私の紹介",
@@ -601,7 +603,7 @@
 			"title": "メールログイン",
 			"description": "6桁のコードを送信します",
 			"emailLabel": "メールアドレス",
-			"emailPlaceholder": "name@email.com",
+			"emailPlaceholder": "名前@email.com",
 			"cancel": "キャンセル",
 			"sending": "送信中",
 			"continue": "続ける",
@@ -659,15 +661,20 @@
 				"deposit": "入金",
 				"withdraw": "出金",
 				"swap": "スワップ",
-				"walletInfo": "ウォレット"
+				"walletInfo": "ウォレット",
+				"tip": "チップ",
+				"emailWallet": "メールウォレット",
+				"wallet": "財布"
 			},
 			"mobileDropdown": {
 				"emailWallet": "メールウォレット",
 				"wallet": "ウォレット",
 				"deposit": "入金",
 				"withdraw": "出金",
-				"swap": "スワップ"
-			}
+				"swap": "スワップ",
+				"tip": "チップ"
+			},
+			"title": "財布"
 		},
 		"networkSelector": {
 			"placeholder": "ネットワークを選択",
@@ -723,7 +730,8 @@
 			},
 			"buttons": {
 				"depositUsd": "${amount}を入金"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} は、ガス料金をカバーし、トランザクションの失敗を避けるために予約されています"
 		},
 		"swapPanel": {
 			"selectTokens": "トークンを選択",
@@ -773,7 +781,8 @@
 			},
 			"buttons": {
 				"depositUsd": "${amount}を入金"
-			}
+			},
+			"maxButtonToolTipText": "ガス料金をカバーし、取引の失敗を避けるために{gasReservationAmount} {selectedTokenSymbol}が予約されています"
 		},
 		"depositPending": {
 			"confirmedTitle": "入金が確認されました！",
@@ -782,7 +791,10 @@
 			"submittedDesc": "ブロックチェーンの確認を待っています。これには数分かかる場合があります。",
 			"viewOnExplorer": "エクスプローラーで表示",
 			"newDepositConfirmed": "別の入金を行う",
-			"newDepositPending": "新しい入金を開始する"
+			"newDepositPending": "新しい入金を開始する",
+			"failedTitle": "トランザクションが失敗しました",
+			"failedDesc": "トランザクションは失敗しました。",
+			"newDepositFailed": "もう一度やり直してください"
 		},
 		"withdrawPanel": {
 			"resetForm": "フォームをリセット",
@@ -812,11 +824,12 @@
 			"buttons": {
 				"withdraw": "{amount}{symbol}を出金",
 				"minimum": "最小{amount}{symbol}"
-			}
+			},
+			"calculating": "計算中"
 		},
 		"withdrawSuccess": {
 			"title": "出金成功！",
-			"successMessage": "🎉 Meme Winから{withdrawAmount}{tokenSymbol}を出金しました！ 🚀 {shareUrl}で勝利の連鎖に参加しよう",
+			"successMessage": "🎉 HyperBetzから{withdrawAmount}{tokenSymbol}を出金しました！ 🚀 {shareUrl}で勝利の連鎖に参加しよう",
 			"withdrawnAmount": "出金額",
 			"shareText": "共有",
 			"subText": "🚀 勝利の連鎖に参加しよう！ 🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "スクリーンショットを撮る",
 			"download": "画像をダウンロード",
 			"close": "閉じる",
-			"copiedToClipboard": "共有リンクが正常にコピーされました"
+			"copiedToClipboard": "共有リンクが正常にコピーされました",
+			"entryPrice": "引き出し金額",
+			"lastPrice": "トークンのシンボル",
+			"referralCode": "紹介コード",
+			"screenshotFailed": "スクリーンショットが失敗しました。再試行するか、別のブラウザを使用してください。",
+			"shareFailed": "共有に失敗しました。もう一度お試しください。",
+			"status": "完了",
+			"userName": "HyperBetzプレイヤー"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "出金が確認されました！",
@@ -838,6 +858,51 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "あなたが受け取る金額"
+		},
+		"tipPanel": {
+			"approxUsd": "~  USD",
+			"balance": "残高:",
+			"buttons": {
+				"tip": "チップ",
+				"tipUsd": "チップ"
+			},
+			"emailWalletAddress": "メールウォレットアドレス",
+			"enterAmount": "金額を入力してください",
+			"errors": {
+				"belowMinimum": "金額は少なくとも {min} でなければなりません。",
+				"checkForm": "チップの詳細を確認してください。",
+				"insufficientBalance": "残高が不足しています。",
+				"missingWallet": "チップウォレットを取得できません。後でもう一度お試しください。",
+				"selectTokenAndAmount": "トークンを選択し、金額を入力してください。"
+			},
+			"max": "最大",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} はガス料金をカバーし、取引失敗を回避するために予約されています",
+			"minimumIs": "最低チップは{min}です",
+			"minPrefix": "最小限",
+			"prompts": {
+				"enterAmount": "金額を入力",
+				"selectToken": "トークンを選択"
+			},
+			"resetForm": "フォームをリセット",
+			"selectToken": "トークンを選択",
+			"status": {
+				"awaitingApproval": "承認待ち...",
+				"calculatingRate": "計算中...",
+				"fetchingWallet": "チップウォレットを準備中...",
+				"insufficientBalance": "残高不足",
+				"processing": "チップを送信中..."
+			},
+			"tipPanelWarningText": "チップは自発的なものであり、返金不可です。",
+			"youTip": "あなたのチップ"
+		},
+		"tipPending": {
+			"confirmedDesc": "あなたのチップは正常に送信されました。",
+			"confirmedTitle": "チップが確認されました！",
+			"newTipConfirmed": "別のチップを送る",
+			"newTipPending": "別のチップを送る",
+			"submittedDesc": "あなたのチップはチェーン上で確認中です。",
+			"submittedTitle": "チップ保留中",
+			"viewOnExplorer": "エクスプローラーで表示"
 		}
 	},
 	"navUser": {
@@ -929,7 +994,7 @@
 		},
 		"jackpot": {
 			"title1": "メガジャックポット",
-			"title2": "$1,000,000",
+			"title2": "100万ドル",
 			"subtitle": "今すぐプレイして大勝利",
 			"cta": "今すぐプレイ"
 		},
@@ -937,7 +1002,7 @@
 			"casino": {
 				"title": "カジノ",
 				"badge": "590+ ゲーム",
-				"desc": "MemeWinオリジナルやトッププロバイダーのカジノゲームをお楽しみください。",
+				"desc": "HyperBetzオリジナルやトッププロバイダーのカジノゲームをお楽しみください。",
 				"link": "カジノへ行く"
 			},
 			"slots": {
@@ -954,7 +1019,7 @@
 			},
 			"crypto": {
 				"title": "暗号資産＆収益",
-				"badge": "60% APR",
+				"badge": "年率60%",
 				"desc": "魅力的なレートで暗号通貨をステーク、取引、獲得しましょう。",
 				"link": "暗号資産へ行く"
 			}
@@ -1015,7 +1080,7 @@
 		"quickUploadFontFile": "フォントファイルをクイックアップロード",
 		"resetToDefault": "デフォルトにリセット",
 		"googleFonts": {
-			"title": "Google Fonts",
+			"title": "Google フォント",
 			"searchFonts": "フォントを検索...",
 			"preview": "プレビュー",
 			"previewText": "いろはにほへとちりぬるを。わかよたれそつねならむ。",
@@ -1204,6 +1269,29 @@
 			"calcFor": "${amount} 賭け金のボーナスを計算中",
 			"totalPotential": "総潜在ボーナス:",
 			"combinedAtTier": "ティア{level}のすべてのゲームタイプからの合計ボーナス"
+		},
+		"claimSuccessModal": {
+			"title": "申請が完了しました",
+			"statusCompleted": "完了",
+			"statusOnChain": "オンチェーン",
+			"claimAmount": "請求額",
+			"logoAlt": "HyperBetzロゴ",
+			"backgroundAlt": "クレーム成功の背景",
+			"creatingMagic": "魔法を作成しています...",
+			"downloadShare": "ダウンロードして共有",
+			"spreadTheWin": "勝利を広める",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "テレグラム",
+			"socialReddit": "レディット",
+			"socialMore": "増加",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "紹介リンクをコピーしました！",
+			"referralLinkCopyFailed": "紹介リンクをコピーできませんでした",
+			"screenshotFailed": "スクリーンショットに失敗しました。もう一度やり直すか、別のブラウザを使用してください。",
+			"shareTextCopied": "クリップボードにコピーされたテキストを共有！",
+			"shareFailed": "共有に失敗しました。もう一度お試しください。"
 		}
 	}
 }

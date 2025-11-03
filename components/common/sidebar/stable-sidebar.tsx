@@ -15,6 +15,7 @@ import { selectNavDataForGames } from "@/store/selectors/query/query.selectors";
 import { Button } from "@/components/ui/button";
 import { NavMain } from "@/components/common/sidebar/nav-main";
 import { useTranslations } from "@/lib/locale-provider";
+import Image from "next/image";
 import {
 	Sidebar,
 	SidebarContent,
@@ -100,13 +101,13 @@ const StableSidebarComponent = ({
 	const dynamicContext = useDynamicContext();
 	const primaryWallet = useMemo(
 		() => dynamicContext.primaryWallet,
-		[dynamicContext.primaryWallet?.address]
+		[dynamicContext.primaryWallet]
 	);
 	const setShowAuthFlow = useMemo(
 		() => dynamicContext.setShowAuthFlow,
 		[dynamicContext.setShowAuthFlow]
 	);
-	const isLoggedIn = useMemo(() => !!primaryWallet, [primaryWallet?.address]);
+	const isLoggedIn = useMemo(() => !!primaryWallet, [primaryWallet]);
 
 	// Track dynamic context changes
 	const prevContextRef = useRef(dynamicContext);
@@ -145,7 +146,7 @@ const StableSidebarComponent = ({
 			const newUrl = `${window.location.pathname}?${params.toString()}`;
 			window.history.pushState({}, "", newUrl);
 		},
-		[primaryWallet?.address, setShowAuthFlow]
+		[primaryWallet, setShowAuthFlow]
 	);
 
 	return (
@@ -156,10 +157,13 @@ const StableSidebarComponent = ({
 		>
 			{/* Sidebar Header with logo and title */}
 			<div className="flex items-center p-4">
-				<img
+				<Image
 					src="/assets/site/Hyperbetz-logo.png"
 					alt="Hyperbetz Logo"
-					className="h-12 m-auto"
+					width={192}
+					height={48}
+					priority={false}
+					className="h-12 w-auto m-auto"
 				/>
 			</div>
 
@@ -216,7 +220,7 @@ const StableSidebarComponent = ({
 				{/* Daily Bonus Button with pulsing animation */}
 				<div className="px-2 py-3">
 					<Button
-						className="w-full bg-primary hover:bg-primary/90 text-foreground/80 font-bold shadow-lg shadow-primary/40 animate-daily-bonus-pulse transition-all duration-300"
+						className="w-full bg-primary hover:bg-primary/90 text-foreground/80 font-semibold shadow-lg shadow-primary/40 animate-daily-bonus-pulse transition-all duration-300"
 						asChild
 					>
 						<a href="/bonus">

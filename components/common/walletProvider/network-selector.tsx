@@ -11,11 +11,11 @@ import {
 } from "@/components/ui/select";
 import { EvmNetwork, useDynamicContext } from "@dynamic-labs/sdk-react-core";
 import { toast } from "sonner";
-// import { Loader2, CheckCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "@/lib/locale-provider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck, faSpinner } from "@fortawesome/pro-light-svg-icons";
+import Image from "next/image";
 
 // Helper type to safely access evmNetworks from the generic connector
 interface EvmWalletConnector {
@@ -34,13 +34,11 @@ export const NetworkSelector = ({
 	onSwitchingChange,
 }: NetworkSelectorProps) => {
 	const t = useTranslations("walletProvider.networkSelector");
-	// --- 1. Get Global State and Context ---
 	const { chainId, chainLogo, setChainLogo } = useAppStore(
 		(state) => state.blockchain.network
 	);
 	const { primaryWallet } = useDynamicContext();
 
-	// --- 2. Manage Local UI State for the Switching Process ---
 	const [isSwitching, setIsSwitching] = useState(false);
 	const [switchSuccess, setSwitchSuccess] = useState(false);
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -51,7 +49,11 @@ export const NetworkSelector = ({
 		null
 	);
 
-	// Find the currently selected network object - moved before early return
+	const connector = primaryWallet?.connector as
+		| EvmWalletConnector
+		| undefined;
+	const supportedNetworks = connector?.evmNetworks || [];
+
 	useEffect(() => {
 		if (primaryWallet?.connector) {
 			const connector =
@@ -63,10 +65,7 @@ export const NetworkSelector = ({
 		}
 	}, [chainId, primaryWallet?.connector]);
 
-	// --- THE CRITICAL FIX: The `useEffect` to report status changes ---
 	useEffect(() => {
-		// Whenever our internal `isSwitching` state changes, we call the prop
-		// to inform the parent component.
 		onSwitchingChange?.(isSwitching);
 	}, [isSwitching, onSwitchingChange]);
 
@@ -79,34 +78,48 @@ export const NetworkSelector = ({
 		// Prevent action if already on the selected network
 		if (chainId === newChainId) return;
 
-		// get data for new chain and instantly update it
-		const newNetwork = supportedNetworks.find(
-			(net) => net.chainId === newChainId
+		// 1. Keep the record of the previous selected network.
+		const previousNetwork = supportedNetworks.find(
+			(net) => net.chainId === chainId
 		);
 
-		setCurrentNetwork(newNetwork || null);
-		setChainLogo(newNetwork?.iconUrls?.[0] || "");
-
+		// Start the switching process
 		setIsSwitching(true);
 		setSwitchSuccess(false);
 		setSwitchingOnChain(newChainId);
+
+		// Optimistically update UI
+		const newNetwork = supportedNetworks.find(
+			(net) => net.chainId === newChainId
+		);
+		setCurrentNetwork(newNetwork || null);
+		setChainLogo(newNetwork?.iconUrls?.[0] || "");
 
 		try {
 			await primaryWallet.connector.switchNetwork({
 				networkChainId: newChainId,
 			});
-
-			// If switchNetwork resolves without error, the switch was successful.
+			// On success, show the checkmark. The global state will update separately.
 			setSwitchSuccess(true);
-			setIsSwitching(false);
 		} catch (error) {
 			console.error("Failed to switch network:", error);
-			toast.error(t("failedToSwitch"));
+			// toast.error(t("failedToSwitch"));
+
+			// 2. If the code reaches the catch block, set the network to the previous selected network.
+			if (previousNetwork) {
+				setCurrentNetwork(previousNetwork);
+				setChainLogo(previousNetwork.iconUrls?.[0] || "");
+			}
+			// Also set both loading states to false.
+			setIsSwitching(false);
+			setSwitchSuccess(false);
 		} finally {
-			// Reset state after a delay, regardless of outcome.
+			// Ensure the loading states are always reset.
+			// The timeout gives the success checkmark a moment to be visible.
 			setTimeout(() => {
-				// setIsSwitching(false);
+				setIsSwitching(false);
 				setSwitchSuccess(false);
+				setSwitchingOnChain(null);
 			}, 1000);
 		}
 	};
@@ -114,26 +127,26 @@ export const NetworkSelector = ({
 	if (!primaryWallet?.connector) {
 		return null;
 	}
-	const connector = primaryWallet.connector as unknown as EvmWalletConnector;
-	const supportedNetworks = connector.evmNetworks || [];
 
 	return (
 		<Select
 			value={String(chainId)}
 			onValueChange={handleNetworkChange}
-			open={isSwitching || isDropdownOpen}
-			onOpenChange={setIsDropdownOpen}
-			disabled={isSwitching} // Disable the trigger while a switch is in progress
+			open={isDropdownOpen}
+			onOpenChange={(open) => !isSwitching && setIsDropdownOpen(open)}
+			disabled={isSwitching}
 		>
 			<SelectTrigger className={cn("w-[180px]", className)}>
 				<SelectValue placeholder={t("placeholder")}>
 					<div className="flex items-center gap-2">
 						{chainLogo && (
-							<img
+							<Image
 								src={chainLogo}
 								alt={t("altLogo")}
 								width={20}
 								height={20}
+								className="h-5 w-5 rounded-full object-cover"
+								unoptimized
 							/>
 						)}
 						<span className="flex-grow truncate">
@@ -141,9 +154,7 @@ export const NetworkSelector = ({
 								currentNetwork?.name ||
 								t("switching")}
 						</span>
-						{/* --- 3. The Visual Feedback --- */}
 						{switchSuccess && (
-							// <CheckCircle className="h-4 w-4 text-green-500" />
 							<FontAwesomeIcon
 								icon={faCircleCheck}
 								fontSize={16}
@@ -161,27 +172,30 @@ export const NetworkSelector = ({
 						disabled={isSwitching}
 						className="!w-full !block"
 					>
-						<div className="flex items-center w-full gap-2">
-							{net.iconUrls?.[0] && (
-								<img
-									src={net.iconUrls[0]}
-									alt={net.name}
-									width={20}
-									height={20}
-								/>
-							)}
-							<p>{net.vanityName || net.name}</p>
+						<div className="flex items-center justify-between w-full">
+							<div className="flex items-center w-full gap-2">
+								{net.iconUrls?.[0] && (
+									<Image
+										src={net.iconUrls[0]}
+										alt={net.name}
+										width={20}
+										height={20}
+										className="h-5 w-5 rounded-full object-cover"
+										unoptimized
+									/>
+								)}
+								<p>{net.vanityName || net.name}</p>
+							</div>
+							{isSwitching &&
+								!switchSuccess &&
+								net.chainId === switchingOnChain && (
+									<FontAwesomeIcon
+										icon={faSpinner}
+										fontSize={16}
+										className="animate-spin text-muted-foreground"
+									/>
+								)}
 						</div>
-						{isSwitching &&
-							!switchSuccess &&
-							net.chainId === switchingOnChain && (
-								// <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
-								<FontAwesomeIcon
-									icon={faSpinner}
-									fontSize={16}
-									className="animate-spin text-muted-foreground"
-								/>
-							)}
 					</SelectItem>
 				))}
 			</SelectContent>

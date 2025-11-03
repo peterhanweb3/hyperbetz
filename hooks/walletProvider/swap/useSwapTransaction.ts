@@ -15,6 +15,7 @@ import {
 	SwapTransactionResult,
 } from "@/types/walletProvider/swap-hooks.types";
 import { PrimaryWalletWithClient } from "@/types/walletProvider/transaction-service.types";
+import { Token } from "@/types/blockchain/swap.types";
 
 export const useSwapTransaction = ({
 	fromToken,
@@ -31,11 +32,17 @@ export const useSwapTransaction = ({
 		useState<boolean>(false);
 	const [successPop, setSuccessPop] = useState<boolean>(false);
 	const [txHash, setTxHash] = useState<string>("");
-	// Store transaction amounts before they get reset
+	// Store transaction amounts and tokens before they get reset
 	const [completedExchangeAmount, setCompletedExchangeAmount] =
 		useState<string>("");
 	const [completedReceivedAmount, setCompletedReceivedAmount] =
 		useState<string>("");
+	const [completedFromToken, setCompletedFromToken] = useState<Token | null>(
+		null
+	);
+	const [completedToToken, setCompletedToToken] = useState<Token | null>(
+		null
+	);
 
 	// --- DEPENDENCIES ---
 	const { user, authToken } = useDynamicAuth();
@@ -95,9 +102,11 @@ export const useSwapTransaction = ({
 				const result = await transactionService.executeSwap(swapParams);
 
 				if (result.success && result.txHash) {
-					// Store transaction amounts before they get reset
+					// Store transaction amounts and tokens before they get reset
 					setCompletedExchangeAmount(exchangeAmount);
 					setCompletedReceivedAmount(receivedAmount);
+					setCompletedFromToken(fromToken);
+					setCompletedToToken(toToken);
 
 					setTxHash(result.txHash);
 					setCheckSuccess(true);
@@ -117,16 +126,8 @@ export const useSwapTransaction = ({
 						toToken: toToken!.symbol,
 					});
 
-					// Refresh token list after successful swap
-					try {
-						await fetchTokens(true, { user, authToken });
-					} catch (error) {
-						console.warn(
-							"Failed to refresh tokens after swap:",
-							error
-						);
-					}
-
+					await new Promise((resolve) => setTimeout(resolve, 3000));
+					await fetchTokens(true, { user, authToken });
 					// Call completion callback
 					if (onTransactionComplete) {
 						onTransactionComplete();
@@ -170,6 +171,8 @@ export const useSwapTransaction = ({
 		setTxHash("");
 		setCompletedExchangeAmount("");
 		setCompletedReceivedAmount("");
+		setCompletedFromToken(null);
+		setCompletedToToken(null);
 		setIsLoading(false);
 	}, []);
 
@@ -182,6 +185,8 @@ export const useSwapTransaction = ({
 		txHash,
 		completedExchangeAmount,
 		completedReceivedAmount,
+		completedFromToken,
+		completedToToken,
 
 		// Actions
 		executeSwap,

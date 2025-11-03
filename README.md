@@ -48,20 +48,20 @@ npm run i18n:add -- --key profile.gettingStarted.startTutorial --text "Start tut
 
 Available flags:
 
-- `--languages` (optional) limits the update to a comma-separated subset; all known languages are used by default.
-- `--context` (optional) supplies extra detail for higher-quality translations.
-- `--dry-run` previews the diff without touching files.
-- `--overwrite` replaces an existing value rather than skipping it.
-- `--model` overrides the default model for a single run.
-- `--strict-placeholders` refuses to write translations when placeholder counts don’t line up with the English source.
-- `--input <file>` loads a batch of items from JSON (see below).
+-   `--languages` (optional) limits the update to a comma-separated subset; all known languages are used by default.
+-   `--context` (optional) supplies extra detail for higher-quality translations.
+-   `--dry-run` previews the diff without touching files.
+-   `--overwrite` replaces an existing value rather than skipping it.
+-   `--model` overrides the default model for a single run.
+-   `--strict-placeholders` refuses to write translations when placeholder counts don’t line up with the English source.
+-   `--input <file>` loads a batch of items from JSON (see below).
 
 ### 3. Review changes
 
 Every run ends with a formatted report that includes:
 
-- A table showing the key, language, status, and whether it was a real write or a dry-run.
-- Aggregated stats (updates, skips, placeholder mismatches, errors) and the elapsed time.
+-   A table showing the key, language, status, and whether it was a real write or a dry-run.
+-   Aggregated stats (updates, skips, placeholder mismatches, errors) and the elapsed time.
 
 ### Batch mode
 
@@ -93,12 +93,18 @@ Each entry may specify its own languages override; otherwise the CLI defaults (o
 
 The helper automatically compares placeholder tokens like `{amount}` or `{name}` between the English source and every translation. With `--strict-placeholders` it will skip writing mismatched rows; without it, the row still lands but the summary highlights the discrepancy so you can follow up manually.
 
+### To update the locale key value
+
+```bash
+node scripts/Dictionary/updateTranslation.mjs "key.path" "New English Value"
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) – learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) – an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs) – learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) – an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) – your feedback and contributions are welcome!
 

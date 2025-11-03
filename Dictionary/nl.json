@@ -7,12 +7,12 @@
 		"viewAll": "Alles bekijken"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "Zijbalk wisselen",
 		"searchPlaceholder": "Zoek spellen, providers...",
-		"liveChat": "Live Chat",
+		"liveChat": "Livechat",
 		"player": "Speler",
 		"vip": "VIP",
 		"profile": "Profiel",
@@ -22,17 +22,18 @@
 		"winLoss": "Winst/Verlies",
 		"affiliate": "Partner",
 		"logout": "Uitloggen",
-		"balance": "Saldo"
+		"balance": "Saldo",
+		"turnoverBonus": "Omzetbonus"
 	},
 	"navigation": {
-		"home": "Home",
+		"home": "Thuis",
 		"games": "Spellen",
 		"profile": "Profiel",
 		"wallet": "Portemonnee",
 		"settings": "Instellingen",
 		"promotions": "Promoties",
 		"affiliate": "Partner",
-		"providers": "Providers",
+		"providers": "Aanbieders",
 		"lobby": "Lobby",
 		"bonus": "Omzetbonus"
 	},
@@ -144,7 +145,7 @@
 			"customRange": "Aangepast Bereik",
 			"fromDate": "Vanaf Datum",
 			"toDate": "Tot Datum",
-			"provider": "Provider",
+			"provider": "Aanbieder",
 			"allProviders": "Alle Providers",
 			"status": "Status",
 			"allStatuses": "Alle Statussen",
@@ -159,7 +160,7 @@
 			"applyFilters": "Filters Toepassen",
 			"activeFilters": "Actieve Filters",
 			"statusLabel": "Status",
-			"providerLabel": "Provider",
+			"providerLabel": "Aanbieder",
 			"dateLabel": "Datum",
 			"totalBets": "Totaal Weddenschappen",
 			"totalProfitLoss": "Totaal Winst/Verlies",
@@ -179,7 +180,7 @@
 			"tableHeaders": {
 				"date": "Datum",
 				"game": "Spel",
-				"provider": "Provider",
+				"provider": "Aanbieder",
 				"type": "Type",
 				"status": "Status",
 				"betAmount": "Inzetbedrag",
@@ -219,7 +220,7 @@
 		}
 	},
 	"chat": {
-		"title": "Live Chat",
+		"title": "Livechat",
 		"placeholder": "Typ je bericht...",
 		"send": "Verstuur",
 		"input": {
@@ -247,7 +248,7 @@
 			"description": "Klaar om de chatroom te laten zien?",
 			"previewLabel": "Voorbeeld",
 			"statusReady": "Klaar om te delen",
-			"roomLabel": "🎰 Casino Chat",
+			"roomLabel": "🎰 Casinochat",
 			"shareNotice": "Je afbeelding wordt gedeeld met alle spelers in de chatroom",
 			"closeAria": "Sluit dialoogvenster",
 			"cancelAria": "Annuleer afbeelding uploaden",
@@ -269,9 +270,9 @@
 			"noGifs": "Geen GIF's gevonden",
 			"tryDifferent": "Probeer een andere zoekterm",
 			"gifCategories": {
-				"trending": "Trending",
+				"trending": "Populair",
 				"reactions": "Reacties",
-				"gaming": "Gaming",
+				"gaming": "Gamen",
 				"casino": "Casino",
 				"celebration": "Viering",
 				"sports": "Sport"
@@ -318,19 +319,19 @@
 		}
 	},
 	"sidebar": {
-		"quest": "QUEST",
-		"spin": "SPIN",
+		"quest": "SPEURTOCHT",
+		"spin": "DRAAI",
 		"deposit": "STORTEN",
 		"withdraw": "OPNEMEN",
 		"playOnTelegram": "Speel op Telegram",
 		"dailyBonus": "Dagelijkse Bonus",
 		"navigation": "Navigatie",
 		"games": "Spellen",
-		"providers": "Providers",
+		"providers": "Aanbieders",
 		"trendingNow": "Nu Trending",
 		"allProviders": "Alle Providers",
 		"allTopProviders": "Alle Top Providers",
-		"hotBadge": "Hot"
+		"hotBadge": "Heet"
 	},
 	"search": {
 		"title": "Zoek spellen",
@@ -346,14 +347,14 @@
 		"filterApplied": "Gefilterd op {count} {count, plural, one {provider} other {providers}}",
 		"suggestions": {
 			"category": "Categorie",
-			"provider": "Provider"
+			"provider": "Aanbieder"
 		},
 		"sections": {
-			"topProviders": "Top Providers",
+			"topProviders": "Topaanbieders",
 			"selectedProviders": "Geselecteerde Providers",
 			"categories": "Categorieën",
 			"games": "Spellen",
-			"providers": "Providers"
+			"providers": "Aanbieders"
 		},
 		"results": {
 			"found": "{games} spellen, {categories} categorieën en {providers} providers gevonden"
@@ -378,7 +379,7 @@
 		},
 		"searchPlaceholderGeneric": "Zoeken...",
 		"providersDropdown": {
-			"title": "Providers",
+			"title": "Aanbieders",
 			"selected": "{count} geselecteerd",
 			"searchPlaceholder": "Zoek providers...",
 			"empty": "Geen provider gevonden.",
@@ -419,7 +420,7 @@
 		"tabs": {
 			"dashboard": "Dashboard",
 			"rates": "Commissietarieven",
-			"calculator": "Calculator"
+			"calculator": "Rekenmachine"
 		},
 		"refresh": "Vernieuwen",
 		"refreshing": "Vernieuwen...",
@@ -447,7 +448,8 @@
 			"yourReferralId": "Jouw verwijzings-ID",
 			"referralIdHelp": "Deel deze code zodat gebruikers deze handmatig kunnen invoeren bij registratie",
 			"copyFullSuccess": "Volledige verwijzingslink gekopieerd naar klembord!",
-			"copyIdSuccess": "Verwijzings-ID gekopieerd naar klembord!"
+			"copyIdSuccess": "Verwijzings-ID gekopieerd naar klembord!",
+			"claimButtonTitle": "Claim Bonus"
 		},
 		"referrals": {
 			"title": "Mijn Verwijzingen",
@@ -497,7 +499,7 @@
 				"tierLevel": "Niveau",
 				"wagerRange": "Inzetbereik",
 				"slots": "Gokkasten",
-				"liveCasino": "Live Casino",
+				"liveCasino": "Livecasino",
 				"sports": "Sport",
 				"tierPrefix": "NIVEAU",
 				"commissionLevel": "Commissieniveau",
@@ -659,15 +661,20 @@
 				"deposit": "Storten",
 				"withdraw": "Opnemen",
 				"swap": "Wisselen",
-				"walletInfo": "Wallet"
+				"walletInfo": "Portemonnee",
+				"tip": "Fooi",
+				"emailWallet": "E-mailportemonnee",
+				"wallet": "Portemonnee"
 			},
 			"mobileDropdown": {
 				"emailWallet": "E-mail Wallet",
-				"wallet": "Wallet",
+				"wallet": "Portemonnee",
 				"deposit": "Storten",
 				"withdraw": "Opnemen",
-				"swap": "Wisselen"
-			}
+				"swap": "Wisselen",
+				"tip": "Fooi"
+			},
+			"title": "PORTEMONNEE"
 		},
 		"networkSelector": {
 			"placeholder": "Selecteer Netwerk",
@@ -688,7 +695,7 @@
 			"otherResults": "Andere Resultaten"
 		},
 		"tabsSidebar": {
-			"walletInfo": "Wallet",
+			"walletInfo": "Portemonnee",
 			"emailWallet": "E-mail Wallet",
 			"deposit": "Storten",
 			"withdraw": "Opnemen",
@@ -723,7 +730,8 @@
 			},
 			"buttons": {
 				"depositUsd": "Stort ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} is gereserveerd om de gaskosten te dekken en het mislukken van transacties te voorkomen"
 		},
 		"swapPanel": {
 			"selectTokens": "Selecteer tokens",
@@ -741,7 +749,7 @@
 			"currentSlippage": "Huidige slippage",
 			"swapSuccessful": "Wissel Geslaagd!",
 			"transactionConfirmed": "Je transactie is bevestigd",
-			"hash": "Hash",
+			"hash": "Hasj",
 			"newSwap": "Nieuwe Wissel",
 			"youPay": "Je betaalt",
 			"max": "Max",
@@ -773,7 +781,8 @@
 			},
 			"buttons": {
 				"depositUsd": "Stort ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} is gereserveerd om gaskosten te dekken en transactie mislukkingen te voorkomen"
 		},
 		"depositPending": {
 			"confirmedTitle": "Storting Bevestigd!",
@@ -782,7 +791,10 @@
 			"submittedDesc": "Wachten op blockchain bevestiging. Dit kan enkele minuten duren.",
 			"viewOnExplorer": "Bekijk op Explorer",
 			"newDepositConfirmed": "Doe nog een storting",
-			"newDepositPending": "Start een nieuwe storting"
+			"newDepositPending": "Start een nieuwe storting",
+			"failedTitle": "Transactie mislukt",
+			"failedDesc": "Uw transactie is mislukt. ",
+			"newDepositFailed": "Probeer het opnieuw"
 		},
 		"withdrawPanel": {
 			"resetForm": "Formulier Resetten",
@@ -811,12 +823,13 @@
 			},
 			"buttons": {
 				"withdraw": "Neem {amount} {symbol} op",
-				"minimum": "Minimum {amount} {symbol}"
-			}
+				"minimum": "Minimaal {amount} {symbol}"
+			},
+			"calculating": "Berekenen"
 		},
 		"withdrawSuccess": {
 			"title": "Opname Geslaagd!",
-			"successMessage": "🎉 Zojuist {withdrawAmount} {tokenSymbol} opgenomen van Meme Win! 🚀 Sluit je aan bij de winnende reeks op {shareUrl}",
+			"successMessage": "🎉 Zojuist {withdrawAmount} {tokenSymbol} opgenomen van HyperBetz! 🚀 Sluit je aan bij de winnende reeks op {shareUrl}",
 			"withdrawnAmount": "Opgenomen Bedrag",
 			"shareText": "Delen",
 			"subText": "🚀 SLUIT JE AAN BIJ DE WINNENDE REEKS! 🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "Maak Schermafbeelding",
 			"download": "Download Afbeelding",
 			"close": "Sluiten",
-			"copiedToClipboard": "Deellink succesvol gekopieerd"
+			"copiedToClipboard": "Deellink succesvol gekopieerd",
+			"entryPrice": "Opnamebedrag",
+			"lastPrice": "Tokensymbool",
+			"referralCode": "Een verwijzingscode",
+			"screenshotFailed": "Schermafbeelding mislukt. Probeer het opnieuw of gebruik een andere browser.",
+			"shareFailed": "Delen mislukt. Probeer het alstublieft opnieuw.",
+			"status": "Voltooid",
+			"userName": "HyperBetz-speler"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "Opname Bevestigd!",
@@ -838,11 +858,56 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "Je Zult Ontvangen"
+		},
+		"tipPanel": {
+			"approxUsd": "~  USD",
+			"balance": "Balans:",
+			"buttons": {
+				"tip": "Fooi",
+				"tipUsd": "Fooi"
+			},
+			"emailWalletAddress": "E-mail portemonnee-adres",
+			"enterAmount": "Voer bedrag in",
+			"errors": {
+				"belowMinimum": "Het bedrag moet minstens {min} zijn.",
+				"checkForm": "Controleer a.u.b. uw fooigegevens.",
+				"insufficientBalance": "Onvoldoende saldo.",
+				"missingWallet": "Kan fooi-portemonnee niet ophalen. Probeer het later opnieuw.",
+				"selectTokenAndAmount": "Selecteer alstublieft een token en voer een bedrag in."
+			},
+			"max": "Max",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} is gereserveerd om gasvergoedingen te dekken en transactiefouten te voorkomen",
+			"minimumIs": "De minimale fooi is {min}",
+			"minPrefix": "Minimum",
+			"prompts": {
+				"enterAmount": "Voer bedrag in",
+				"selectToken": "Kies token"
+			},
+			"resetForm": "Formulier resetten",
+			"selectToken": "Token selecteren",
+			"status": {
+				"awaitingApproval": "In afwachting van goedkeuring...",
+				"calculatingRate": "Bezig met berekenen...",
+				"fetchingWallet": "Fooienportefeuille aan het voorbereiden...",
+				"insufficientBalance": "Onvoldoende saldo",
+				"processing": "Fooi wordt verzonden..."
+			},
+			"tipPanelWarningText": "Fooien zijn vrijwillig en niet-terugbetaalbaar.",
+			"youTip": "Uw fooi"
+		},
+		"tipPending": {
+			"confirmedDesc": "Uw fooi is succesvol bezorgd.",
+			"confirmedTitle": "Fooi bevestigd!",
+			"newTipConfirmed": "Nog een tip sturen",
+			"newTipPending": "Stuur nog een fooi",
+			"submittedDesc": "Je fooi wordt bevestigd op de blockchain.",
+			"submittedTitle": "Fooi in afwachting",
+			"viewOnExplorer": "Bekijken in de verkenner"
 		}
 	},
 	"navUser": {
 		"upgradeToPro": "Upgrade naar Pro",
-		"account": "Account",
+		"account": "Rekening",
 		"billing": "Facturering",
 		"notifications": "Notificaties",
 		"logout": "Uitloggen"
@@ -851,17 +916,17 @@
 		"pageTitle": "Alle Spellen",
 		"playNow": "Speel Nu",
 		"byProvider": "Door {name}",
-		"count": "{count, plural, one {Spel} other {Spellen}}",
+		"count": "{count} Spellen",
 		"noResults": "Geen spellen gevonden die aan je criteria voldoen.",
 		"errorLoading": "Kon spellen niet laden. Probeer het later opnieuw.",
 		"slots": "Gokkasten",
 		"sports": "Sport",
-		"liveCasino": "Live Casino",
+		"liveCasino": "Livecasino",
 		"explore": "Verkennen",
 		"exploreSubtitle": "Ontdek geweldige spelervaringen",
 		"poker": "Poker",
 		"lottery": "Loterij",
-		"futures": "Futures",
+		"futures": "Toekomsten",
 		"vr": "VR",
 		"swap": "Wisselen",
 		"slotsDescription": "Draai aan de rollen en win enorme jackpots",
@@ -894,7 +959,7 @@
 		"pageTitle": "Alle Spelproviders",
 		"searchPlaceholder": "Zoek naar een provider...",
 		"empty": "Geen providers gevonden die overeenkomen met je zoekopdracht.",
-		"logoAlt": "{name} logo",
+		"logoAlt": "{name}-logo",
 		"filteredBy": "Gefilterd op categorie:",
 		"clearFilter": "Filter wissen",
 		"categories": {
@@ -902,7 +967,7 @@
 				"title": "Gokkast Providers"
 			},
 			"liveCasino": {
-				"title": "Live Casino Providers"
+				"title": "Live casino-aanbieders"
 			},
 			"sports": {
 				"title": "Sportweddenschappen Providers"
@@ -928,7 +993,7 @@
 			"cta": "Stort & Ontvang"
 		},
 		"jackpot": {
-			"title1": "Mega Jackpot",
+			"title1": "Mega-jackpot",
 			"title2": "$1.000.000",
 			"subtitle": "Speel Nu & Win Groots",
 			"cta": "Speel Nu"
@@ -937,7 +1002,7 @@
 			"casino": {
 				"title": "Casino",
 				"badge": "590+ SPELLEN",
-				"desc": "Geniet van MemeWin Originals en andere casinospellen van top providers.",
+				"desc": "Geniet van HyperBetz Originals en andere casinospellen van top providers.",
 				"link": "Ga naar Casino"
 			},
 			"slots": {
@@ -954,7 +1019,7 @@
 			},
 			"crypto": {
 				"title": "Crypto & Verdien",
-				"badge": "60% APR",
+				"badge": "60% april",
 				"desc": "Stake, handel en verdien met cryptocurrency tegen aantrekkelijke tarieven.",
 				"link": "Ga naar Crypto"
 			}
@@ -965,7 +1030,7 @@
 			"slider1Title": "Uitgelichte Spellen",
 			"slider1Badge": "Keuzes van het personeel",
 			"slider2Title": "Meer te Ontdekken",
-			"slider2Badge": "Trending",
+			"slider2Badge": "Populair",
 			"featuredGameLabel": "Uitgelicht Spel"
 		},
 		"ctaExploreGames": "Verken Spellen",
@@ -997,7 +1062,7 @@
 			"table": {
 				"game": "Spelnaam",
 				"time": "Tijd",
-				"provider": "Provider",
+				"provider": "Aanbieder",
 				"nickname": "Bijnaam",
 				"bet": "Inzet",
 				"multiplier": "Vermenigvuldiger",
@@ -1015,7 +1080,7 @@
 		"quickUploadFontFile": "Snel Lettertypebestand Uploaden",
 		"resetToDefault": "Herstel naar Standaard",
 		"googleFonts": {
-			"title": "Google Fonts",
+			"title": "Google-lettertypen",
 			"searchFonts": "Zoek lettertypen...",
 			"preview": "Voorbeeld",
 			"previewText": "De snelle bruine vos springt over de luie hond",
@@ -1072,7 +1137,7 @@
 		"refreshPartial": "Gedeeltelijk vernieuwd: {success}/{total} secties bijgewerkt",
 		"refreshFailed": "Gegevens verversen mislukt. Probeer het opnieuw alstublieft.",
 		"dashboard": {
-			"title": "Bonus Dashboard",
+			"title": "Bonusdashboard",
 			"subtitle": "Volg uw weddenschappen, bonussen en beloningsverdiensten",
 			"performanceOverview": "Bonusoverzicht",
 			"bonusRatesTitle": "Bonus tariefstructuur",
@@ -1107,7 +1172,7 @@
 			"tableHeaders": {
 				"date": "Weddatum",
 				"slots": "Gleuven",
-				"liveCasino": "Live Casino",
+				"liveCasino": "Livecasino",
 				"sports": "Sporten",
 				"total": "Totaal",
 				"tier": "Niveau",
@@ -1156,7 +1221,7 @@
 				"tierLevel": "Niveauniveau",
 				"wagerRange": "Inzetbereik",
 				"slots": "Slots",
-				"liveCasino": "Live Casino",
+				"liveCasino": "Livecasino",
 				"sports": "Sporten",
 				"tierPrefix": "NIVEAU",
 				"commissionLevel": "Bonusniveau",
@@ -1189,7 +1254,7 @@
 			}
 		},
 		"calculator": {
-			"title": "Bonus Calculator",
+			"title": "Bonuscalculator",
 			"subtitle": "Schat uw bonusinkomsten op basis van uw inzetbedragen",
 			"interactive": {
 				"title": "Interactieve tool:",
@@ -1204,6 +1269,29 @@
 			"calcFor": "Bonus berekenen voor ${amount} inzet",
 			"totalPotential": "Totale Potentiële Bonus:",
 			"combinedAtTier": "Gecombineerde bonus van alle spelsystemen op niveau {level}"
+		},
+		"claimSuccessModal": {
+			"title": "Claim geslaagd",
+			"statusCompleted": "Voltooid",
+			"statusOnChain": "On-Chain",
+			"claimAmount": "Claimbedrag",
+			"logoAlt": "HyperBetz-logo",
+			"backgroundAlt": "Claim succes achtergrond",
+			"creatingMagic": "Magie maken...",
+			"downloadShare": "Downloaden en delen",
+			"spreadTheWin": "VERSPREID DE WINST",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "Telegram",
+			"socialReddit": "Reddit",
+			"socialMore": "Meer",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "Doorverwijzingslink gekopieerd!",
+			"referralLinkCopyFailed": "Kon doorverwijzingslink niet kopiëren",
+			"screenshotFailed": "Screenshot mislukt. Probeer het opnieuw of gebruik een andere browser.",
+			"shareTextCopied": "Deel tekst gekopieerd naar klembord!",
+			"shareFailed": "Delen mislukt. Probeer het opnieuw."
 		}
 	}
 }

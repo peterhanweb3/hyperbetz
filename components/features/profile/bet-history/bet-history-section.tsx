@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useTranslations } from "@/lib/locale-provider";
 import { useBetHistory } from "@/hooks/useBetHistory";
+import { useRefreshLimiter } from "@/hooks/use-refresh-limiter";
 import { BetStatus } from "@/types/games/betHistory.types";
 import type { BetHistoryFilters as BetHistoryFiltersType } from "@/store/slices/history/betHistory.slice";
 
@@ -23,6 +24,13 @@ export interface LocalFilters {
 
 export default function BetHistorySection() {
 	const t = useTranslations("profile.betHistory");
+
+	// Initialize refresh limiter with 10 second cooldown
+	const {
+		isRefreshing,
+		canRefresh,
+		handleRefresh: handleRefreshWithLimit,
+	} = useRefreshLimiter(10);
 
 	const {
 		filteredBets,
@@ -87,9 +95,11 @@ export default function BetHistorySection() {
 		setPage(1);
 	};
 
-	const handleRefresh = () => {
-		clearBetHistoryCache();
-		fetchHistory(true);
+	const handleRefresh = async () => {
+		await handleRefreshWithLimit(async () => {
+			clearBetHistoryCache();
+			await fetchHistory(true);
+		});
 	};
 
 	const handlePageChange = (newPage: number) => setPage(newPage);
@@ -114,6 +124,8 @@ export default function BetHistorySection() {
 					filters={filters}
 					isLoading={isLoading}
 					onRefresh={handleRefresh}
+					canRefresh={canRefresh}
+					isRefreshing={isRefreshing}
 				/>
 				<div className="p-2">
 					{showFilters && (

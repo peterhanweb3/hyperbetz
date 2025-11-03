@@ -1,145 +1,3 @@
-// v1
-// "use client";
-
-// import { useState, useEffect, useCallback } from "react";
-// import { useDynamicAuth } from "@/hooks/useDynamicAuth";
-// import ApiService from "@/services/apiService";
-// import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
-// import { Loader2, CheckCircle, XCircle, LogOut } from "lucide-react";
-
-// type NicknameStatus = "idle" | "checking" | "available" | "taken" | "error";
-
-// export const SetNicknameModal = () => {
-//   const { onRegisterSubmit, logout, authToken } = useDynamicAuth();
-//   const [nickname, setNickname] = useState("");
-//   const [debouncedNickname, setDebouncedNickname] = useState("");
-//   const [status, setStatus] = useState<NicknameStatus>("idle");
-//   const [isRegistering, setIsRegistering] = useState(false);
-//   const [apiError, setApiError] = useState<string | null>(null);
-
-//   // Extract and memoize the checkNickname function
-//   const checkNickname = useCallback(async () => {
-//     setStatus("checking");
-//     setApiError(null);
-//     try {
-//       const api = ApiService.getInstance();
-//       const response = await api.checkNickName(debouncedNickname, authToken);
-//       setStatus(response.error ? "taken" : "available");
-//     } catch (err) {
-//       setStatus("error");
-//       if (err instanceof Error) {
-//         setApiError(` ${err.message}`);
-//         return;
-//       }
-//       setApiError(`Could not verify nickname. Please try again.`);
-//     }
-//   }, [debouncedNickname, authToken]);
-
-//   // Debounce effect for nickname checking
-//   useEffect(() => {
-//     const handler = setTimeout(() => {
-//       if (nickname.length >= 3) {
-//         setDebouncedNickname(nickname);
-//       } else {
-//         setStatus("idle");
-//       }
-//     }, 500); // 500ms delay after user stops typing
-
-//     return () => clearTimeout(handler);
-//   }, [nickname]);
-
-//   // API call effect for checking nickname
-//   useEffect(() => {
-//     if (debouncedNickname.length < 3) return;
-//     checkNickname();
-//   }, [debouncedNickname, authToken, checkNickname]);
-
-//   const handleRegister = async () => {
-//     setIsRegistering(true);
-//     setApiError(null);
-//     try {
-//       await onRegisterSubmit(nickname);
-//       // On success, the AuthProvider will handle closing the modal by updating the state.
-//     } catch (err) {
-//       const message = err instanceof Error ? err.message : "An unknown error occurred.";
-//       setApiError(`Registration failed: ${message}`);
-//     } finally {
-//       setIsRegistering(false);
-//     }
-//   };
-
-//   const getStatusMessage = () => {
-//     switch (status) {
-//       case "checking":
-//         return (
-//           <p className="flex items-center text-sm text-muted-foreground">
-//             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-//             Checking availability...
-//           </p>
-//         );
-//       case "available":
-//         return (
-//           <p className="flex items-center text-sm text-green-500">
-//             <CheckCircle className="mr-2 h-4 w-4" />
-//             Nickname is available!
-//           </p>
-//         );
-//       case "taken":
-//         return (
-//           <p className="flex items-center text-sm text-destructive">
-//             <XCircle className="mr-2 h-4 w-4" />
-//             This nickname is already taken.
-//           </p>
-//         );
-//       default:
-//         return <p className="h-5"> </p>; // Placeholder to prevent layout shift
-//     }
-//   };
-
-//   return (
-//     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-//       <div className="w-full max-w-md p-8 space-y-6 rounded-lg shadow-xl border border-white/20 bg-primary/20 backdrop-blur-xl text-foreground">
-//         <div className="flex justify-between items-start">
-//           <h2 className="text-2xl font-semibold">Set Your Nickname</h2>
-//           <Button variant="destructive" size="icon" onClick={logout} aria-label="Log Out">
-//             <LogOut className="h-5 w-5" />
-//           </Button>
-//         </div>
-
-//         <p className="text-sm text-foreground/80">
-//           Your Nickname is a one-time setup and <span className="font-semibold">cannot be changed</span>.
-//         </p>
-
-//         <div className="space-y-2">
-//           <Input
-//             placeholder="Choose your unique nickname"
-//             value={nickname}
-//             onChange={e => setNickname(e.target.value.replace(/\s/g, ""))} // Disallow spaces
-//             disabled={isRegistering}
-//             className="text-lg bg-background/20 placeholder:text-muted-foreground/60"
-//           />
-//           <div className="h-5">{getStatusMessage()}</div>
-//         </div>
-
-//         {apiError && <p className="text-sm text-center text-destructive bg-destructive/20 p-2 rounded-md">{apiError}</p>}
-
-//         <Button onClick={handleRegister} disabled={status !== "available" || isRegistering} className="w-full text-lg">
-//           {isRegistering ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : null}
-//           Register and Play
-//         </Button>
-
-//         <p className="text-xs text-muted-foreground/70 leading-relaxed">
-//           <strong>Message:</strong> By signing this document with your Wallet and/or continuing to use this Web3 Application, you accept the application&apos;s terms of use. Signing your consent to
-//           the Terms of Use is not a blockchain transaction and incurs no cost.
-//         </p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// v2 more visually appealing
-
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
@@ -156,6 +14,7 @@ import {
 } from "@fortawesome/pro-light-svg-icons";
 import { useTranslations } from "@/lib/locale-provider";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
+import { sanitizeNicknameInput, sanitizeReferralIdInput } from "@/lib/utils";
 
 type NicknameStatus = "idle" | "checking" | "available" | "taken" | "error";
 
@@ -200,7 +59,7 @@ export const SetNicknameModal = () => {
 				setReferrerId(referralId);
 			}
 		}
-	}, []);
+	}, [setShowAuthFlow]);
 
 	// Extract and memoize the checkNickname function
 	const checkNickname = useCallback(async () => {
@@ -350,11 +209,14 @@ export const SetNicknameModal = () => {
 									value={nickname}
 									onChange={(e) =>
 										setNickname(
-											e.target.value.replace(/\s/g, "")
+											sanitizeNicknameInput(
+												e.target.value
+											)
 										)
 									}
 									disabled={isRegistering}
 									className="h-14 text-lg font-medium bg-background/30 border-white/20 placeholder:text-muted-foreground focus:border-primary/50 focus:ring-2 focus:ring-primary/20 rounded-xl"
+									maxLength={20}
 								/>
 								{/* Input accent border
 								<div className="absolute inset-0 rounded-xl border border-gradient-to-r from-primary/20 via-transparent to-primary/20 pointer-events-none" /> */}
@@ -382,14 +244,14 @@ export const SetNicknameModal = () => {
 											value={referrerId}
 											onChange={(e) =>
 												setReferrerId(
-													e.target.value.replace(
-														/\s/g,
-														""
+													sanitizeReferralIdInput(
+														e.target.value
 													)
 												)
 											}
 											disabled={isRegistering}
 											className="h-12 text-sm font-medium bg-background/30 border-white/20 placeholder:text-muted-foreground focus:border-primary/50 focus:ring-2 focus:ring-primary/20 rounded-xl"
+											maxLength={30}
 										/>
 										<p className="text-xs text-muted-foreground/70">
 											{t("referrerHelp")}

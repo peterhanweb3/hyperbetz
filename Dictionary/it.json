@@ -7,7 +7,7 @@
 		"viewAll": "Mostra tutto"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "Mostra/Nascondi barra laterale",
@@ -22,10 +22,11 @@
 		"winLoss": "Vincite/Perdite",
 		"affiliate": "Affiliato",
 		"logout": "Esci",
-		"balance": "Saldo"
+		"balance": "Saldo",
+		"turnoverBonus": "Bonus fatturato"
 	},
 	"navigation": {
-		"home": "Home",
+		"home": "Casa",
 		"games": "Giochi",
 		"profile": "Profilo",
 		"wallet": "Portafoglio",
@@ -33,7 +34,7 @@
 		"promotions": "Promozioni",
 		"affiliate": "Affiliato",
 		"providers": "Fornitori",
-		"lobby": "Lobby",
+		"lobby": "Hall",
 		"bonus": "Bonus sul volume d'affari"
 	},
 	"profile": {
@@ -110,7 +111,7 @@
 			"dateLabel": "Data",
 			"statsTotalTransactions": "{total} transazioni totali",
 			"pageOf": "Pagina {current} di {total}",
-			"live": "Live",
+			"live": "Vivere",
 			"tabs": {
 				"all": "Tutte",
 				"deposits": "Depositi",
@@ -164,7 +165,7 @@
 			"totalBets": "Scommesse totali",
 			"totalProfitLoss": "Profitto/Perdita totale",
 			"pageOf": "Pagina {current} di {total}",
-			"live": "Live",
+			"live": "Vivere",
 			"errorLoadingBets": "Errore nel caricamento della cronologia scommesse",
 			"failedToLoadBetHistory": "Caricamento della cronologia scommesse fallito. Riprova.",
 			"tryAgain": "Riprova",
@@ -330,7 +331,7 @@
 		"trendingNow": "Di tendenza ora",
 		"allProviders": "Tutti i fornitori",
 		"allTopProviders": "Tutti i migliori fornitori",
-		"hotBadge": "Hot"
+		"hotBadge": "Caldo"
 	},
 	"search": {
 		"title": "Cerca giochi",
@@ -361,7 +362,7 @@
 		"gameTypes": {
 			"blackjack": "Blackjack",
 			"roulette": "Roulette",
-			"crash": "Crash"
+			"crash": "Incidente"
 		}
 	},
 	"query": {
@@ -396,8 +397,8 @@
 	},
 	"commonExtra": {
 		"connecting": "Connessione...",
-		"offline": "Offline",
-		"online": "Online",
+		"offline": "Non in linea",
+		"online": "In linea",
 		"clear": "Cancella"
 	},
 	"home": {
@@ -417,7 +418,7 @@
 		"loginPromptSubtitle": "Accedi per visualizzare le tue statistiche di riferimento, i bonus e richiedere i premi.",
 		"goHome": "Vai alla Home",
 		"tabs": {
-			"dashboard": "Dashboard",
+			"dashboard": "Pannello di controllo",
 			"rates": "Tassi di commissione",
 			"calculator": "Calcolatore"
 		},
@@ -447,7 +448,8 @@
 			"yourReferralId": "Il tuo ID di riferimento",
 			"referralIdHelp": "Condividi questo codice affinché gli utenti lo inseriscano manualmente durante la registrazione",
 			"copyFullSuccess": "Link di riferimento completo copiato negli appunti!",
-			"copyIdSuccess": "ID di riferimento copiato negli appunti!"
+			"copyIdSuccess": "ID di riferimento copiato negli appunti!",
+			"claimButtonTitle": "RICHIEDI IL BONUS"
 		},
 		"referrals": {
 			"title": "I miei riferimenti",
@@ -456,13 +458,13 @@
 			"monitorHelp": "Monitora l'attività, i depositi e i modelli di gioco dei tuoi riferimenti",
 			"sort": {
 				"placeholder": "Ordina per...",
-				"nicknameAsc": "Nickname (A-Z)",
-				"nicknameDesc": "Nickname (Z-A)",
+				"nicknameAsc": "Soprannome (A-Z)",
+				"nicknameDesc": "Soprannome (Z-A)",
 				"lastLogin": "Ultimo accesso",
 				"unclaimedAmount": "Importo non riscosso"
 			},
 			"table": {
-				"nickname": "Nickname",
+				"nickname": "Soprannome",
 				"totalWager": "Puntata totale",
 				"lastLogin": "Ultimo accesso",
 				"registered": "Registrato",
@@ -584,7 +586,7 @@
 		"ctaOk": "Collega portafoglio e inizia a scommettere",
 		"enterAmount": "Inserisci importo",
 		"balance": "Saldo",
-		"max": "Max",
+		"max": "Massimo",
 		"deposit": "Deposita",
 		"ethereum": "Ethereum"
 	},
@@ -592,8 +594,8 @@
 		"close": "Chiudi",
 		"firstDepositBoost": "Potenziamento bonus 1° deposito",
 		"bonus": "Bonus",
-		"min": "Min",
-		"sec": "Sec",
+		"min": "minimo",
+		"sec": "Sez",
 		"deposit": "Deposita"
 	},
 	"auth": {
@@ -659,15 +661,20 @@
 				"deposit": "Deposita",
 				"withdraw": "Preleva",
 				"swap": "Scambia",
-				"walletInfo": "Portafoglio"
+				"walletInfo": "Portafoglio",
+				"tip": "Mancia",
+				"emailWallet": "Portafoglio e-mail",
+				"wallet": "Portafoglio"
 			},
 			"mobileDropdown": {
 				"emailWallet": "Portafoglio email",
 				"wallet": "Portafoglio",
 				"deposit": "Deposita",
 				"withdraw": "Preleva",
-				"swap": "Scambia"
-			}
+				"swap": "Scambia",
+				"tip": "Mancia"
+			},
+			"title": "PORTAFOGLIO"
 		},
 		"networkSelector": {
 			"placeholder": "Seleziona rete",
@@ -699,11 +706,11 @@
 			"resetForm": "Reimposta modulo",
 			"enterAmount": "Inserisci importo",
 			"selectToken": "Seleziona token",
-			"max": "Max",
+			"max": "Massimo",
 			"balance": "Saldo:",
 			"calculating": "Calcolo in corso...",
 			"approxUsd": "~ ${amount} USD",
-			"minPrefix": "Min:",
+			"minPrefix": "Minimo:",
 			"ratesMayVary": "I tassi possono variare",
 			"emailWalletAddress": "Indirizzo portafoglio email",
 			"walletAddress": "Indirizzo portafoglio",
@@ -723,7 +730,8 @@
 			},
 			"buttons": {
 				"depositUsd": "Deposita ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} è riservato per coprire le tariffe del gas ed evitare errori di transazione"
 		},
 		"swapPanel": {
 			"selectTokens": "Seleziona token",
@@ -744,7 +752,7 @@
 			"hash": "Hash",
 			"newSwap": "Nuovo scambio",
 			"youPay": "Tu paghi",
-			"max": "Max",
+			"max": "Massimo",
 			"low": "Basso",
 			"amountPlaceholder": "0",
 			"selectToken": "Seleziona token",
@@ -773,7 +781,8 @@
 			},
 			"buttons": {
 				"depositUsd": "Deposita ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} è riservato per coprire le spese del gas ed evitare il fallimento della transazione"
 		},
 		"depositPending": {
 			"confirmedTitle": "Deposito confermato!",
@@ -782,7 +791,10 @@
 			"submittedDesc": "In attesa di conferma dalla blockchain. Potrebbero volerci alcuni minuti.",
 			"viewOnExplorer": "Visualizza su Explorer",
 			"newDepositConfirmed": "Effettua un altro deposito",
-			"newDepositPending": "Inizia un nuovo deposito"
+			"newDepositPending": "Inizia un nuovo deposito",
+			"failedTitle": "Transazione non riuscita",
+			"failedDesc": "La tua transazione non è riuscita. ",
+			"newDepositFailed": "Riprova"
 		},
 		"withdrawPanel": {
 			"resetForm": "Reimposta modulo",
@@ -790,12 +802,12 @@
 			"youWithdraw": "Tu prelevi",
 			"loading": "Caricamento...",
 			"amount": "Importo",
-			"max": "Max",
+			"max": "Massimo",
 			"balance": "Saldo:",
 			"available": "Disponibile:",
 			"insufficientBalance": "Saldo insufficiente",
 			"minimumIs": "Il minimo è {min}",
-			"minLabel": "Min:",
+			"minLabel": "Minimo:",
 			"emailWalletAddress": "Indirizzo portafoglio email",
 			"walletAddress": "Indirizzo portafoglio",
 			"errors": {
@@ -812,11 +824,12 @@
 			"buttons": {
 				"withdraw": "Preleva {amount} {symbol}",
 				"minimum": "Minimo {amount} {symbol}"
-			}
+			},
+			"calculating": "Calcolo"
 		},
 		"withdrawSuccess": {
 			"title": "Prelievo riuscito!",
-			"successMessage": "🎉 Ho appena prelevato {withdrawAmount} {tokenSymbol} da Meme Win! 🚀 Unisciti alla serie di vittorie su {shareUrl}",
+			"successMessage": "🎉 Ho appena prelevato {withdrawAmount} {tokenSymbol} da HyperBetz! 🚀 Unisciti alla serie di vittorie su {shareUrl}",
 			"withdrawnAmount": "Importo prelevato",
 			"shareText": "Condividi",
 			"subText": "🚀 UNISCITI ALLA SERIE DI VITTORIE! 🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "Fai uno screenshot",
 			"download": "Scarica immagine",
 			"close": "Chiudi",
-			"copiedToClipboard": "Link di condivisione copiato con successo"
+			"copiedToClipboard": "Link di condivisione copiato con successo",
+			"entryPrice": "Importo di Prelievo",
+			"lastPrice": "Simbolo del token",
+			"referralCode": "Codice di riferimento",
+			"screenshotFailed": "Cattura dello schermo non riuscita. Riprova o utilizza un altro browser.",
+			"shareFailed": "Condivisione fallita. Per favore riprova.",
+			"status": "Completato",
+			"userName": "Giocatore HyperBetz"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "Prelievo confermato!",
@@ -838,6 +858,51 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "Riceverai"
+		},
+		"tipPanel": {
+			"approxUsd": "~  USD",
+			"balance": "Saldo:",
+			"buttons": {
+				"tip": "Mancia",
+				"tipUsd": "Mancia"
+			},
+			"emailWalletAddress": "Indirizzo del portafoglio email",
+			"enterAmount": "Inserisci importo",
+			"errors": {
+				"belowMinimum": "L'importo deve essere almeno {min}.",
+				"checkForm": "Per favore verifica i dettagli della tua mancia.",
+				"insufficientBalance": "Saldo insufficiente.",
+				"missingWallet": "Impossibile recuperare il portafoglio delle mance. Per favore riprova più tardi.",
+				"selectTokenAndAmount": "Si prega di selezionare un token e inserire un importo."
+			},
+			"max": "Massimo",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} è riservato per coprire le spese del gas e evitare il fallimento della transazione",
+			"minimumIs": "La mancia minima è {min}",
+			"minPrefix": "Minimo",
+			"prompts": {
+				"enterAmount": "Inserisci importo",
+				"selectToken": "Seleziona token"
+			},
+			"resetForm": "Ripristina modulo",
+			"selectToken": "Seleziona token",
+			"status": {
+				"awaitingApproval": "In attesa di approvazione...",
+				"calculatingRate": "Calcolando...",
+				"fetchingWallet": "Preparazione del portafoglio mance...",
+				"insufficientBalance": "Saldo insufficiente",
+				"processing": "Invio della mancia..."
+			},
+			"tipPanelWarningText": "Le mance sono volontarie e non rimborsabili.",
+			"youTip": "La tua mancia"
+		},
+		"tipPending": {
+			"confirmedDesc": "La tua mancia è stata consegnata con successo.",
+			"confirmedTitle": "Mancia confermata!",
+			"newTipConfirmed": "Invia un altro suggerimento",
+			"newTipPending": "Invia un'altra mancia",
+			"submittedDesc": "La tua mancia è in fase di conferma sulla blockchain.",
+			"submittedTitle": "Mancia in sospeso",
+			"viewOnExplorer": "Visualizza nell'esplora"
 		}
 	},
 	"navUser": {
@@ -851,7 +916,7 @@
 		"pageTitle": "Tutti i giochi",
 		"playNow": "Gioca ora",
 		"byProvider": "Di {name}",
-		"count": "{count, plural, one {Gioco} other {Giochi}}",
+		"count": "{count} Giochi",
 		"noResults": "Nessun gioco trovato che corrisponda ai tuoi criteri.",
 		"errorLoading": "Impossibile caricare i giochi. Riprova più tardi.",
 		"slots": "Slot",
@@ -861,8 +926,8 @@
 		"exploreSubtitle": "Scopri incredibili esperienze di gioco",
 		"poker": "Poker",
 		"lottery": "Lotteria",
-		"futures": "Futures",
-		"vr": "VR",
+		"futures": "Futuri",
+		"vr": "realtà virtuale",
 		"swap": "Scambia",
 		"slotsDescription": "Gira i rulli e vinci jackpot enormi",
 		"liveCasinoDescription": "Vivi l'azione del casinò in tempo reale con croupier dal vivo",
@@ -928,7 +993,7 @@
 			"cta": "Deposita e ottieni"
 		},
 		"jackpot": {
-			"title1": "Mega Jackpot",
+			"title1": "Mega jackpot",
 			"title2": "1.000.000 $",
 			"subtitle": "Gioca ora e vinci alla grande",
 			"cta": "Gioca ora"
@@ -937,7 +1002,7 @@
 			"casino": {
 				"title": "Casinò",
 				"badge": "590+ GIOCHI",
-				"desc": "Goditi gli originali di MemeWin e altri giochi da casinò dei migliori fornitori.",
+				"desc": "Goditi gli originali di HyperBetz e altri giochi da casinò dei migliori fornitori.",
 				"link": "Vai al casinò"
 			},
 			"slots": {
@@ -954,7 +1019,7 @@
 			},
 			"crypto": {
 				"title": "Cripto e guadagna",
-				"badge": "60% APR",
+				"badge": "TAEG 60%.",
 				"desc": "Metti in stake, fai trading e guadagna con le criptovalute a tassi interessanti.",
 				"link": "Vai a Cripto"
 			}
@@ -982,7 +1047,7 @@
 				"subtitle": "Attività di scommesse in tempo reale • {count} giochi caricati"
 			},
 			"status": {
-				"live": "LIVE",
+				"live": "VIVERE",
 				"paused": "In pausa"
 			},
 			"actions": {
@@ -998,7 +1063,7 @@
 				"game": "Nome del gioco",
 				"time": "Ora",
 				"provider": "Fornitore",
-				"nickname": "Nickname",
+				"nickname": "Soprannome",
 				"bet": "Puntata",
 				"multiplier": "Moltiplicatore",
 				"profit": "Profitto"
@@ -1112,7 +1177,7 @@
 				"total": "Totale",
 				"tier": "Livello",
 				"unclaimed": "Non reclamato",
-				"token": "Token"
+				"token": "Gettone"
 			},
 			"tierPrefix": "Livello",
 			"availableToClaim": "Disponibile da richiedere",
@@ -1204,6 +1269,29 @@
 			"calcFor": "Calcolo del bonus per una scommessa di ${amount}",
 			"totalPotential": "Bonus Potenziale Totale:",
 			"combinedAtTier": "Bonus combinato da tutti i tipi di gioco al livello {level}"
+		},
+		"claimSuccessModal": {
+			"title": "Riscossione riuscita",
+			"statusCompleted": "Completato",
+			"statusOnChain": "On-chain",
+			"claimAmount": "Importo richiesto",
+			"logoAlt": "Logo HyperBetz",
+			"backgroundAlt": "Background del successo del reclamo",
+			"creatingMagic": "Creazione della magia in corso...",
+			"downloadShare": "Scarica e condividi",
+			"spreadTheWin": "DIFFONDI LA VITTORIA",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "Telegram",
+			"socialReddit": "Reddit",
+			"socialMore": "Altro",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "Link di invito copiato!",
+			"referralLinkCopyFailed": "Impossibile copiare il link di invito",
+			"screenshotFailed": "Screenshot non riuscito. Riprova o utilizza un altro browser.",
+			"shareTextCopied": "Condividi il link copiato negli appunti",
+			"shareFailed": "Condivisione non riuscita. Riprova."
 		}
 	}
 }

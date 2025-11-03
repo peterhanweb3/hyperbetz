@@ -1,12 +1,11 @@
 "use client";
 
 import useBonusDashboard from "@/hooks/bonus/useBonusDashboard";
-import useBonusClaims from "@/hooks/bonus/usBonusClaims";
+import useBonusClaims from "@/hooks/bonus/useBonusClaims";
 import { ClaimBonus } from "@/components/features/affiliate/dashboard-tab/claim-bonus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClipboardList, faRefresh } from "@fortawesome/pro-light-svg-icons";
+import { faClipboardList } from "@fortawesome/pro-light-svg-icons";
 import { useTranslations } from "@/lib/locale-provider";
-import { Button } from "@/components/ui/button";
 import {
 	Table,
 	TableBody,
@@ -17,6 +16,9 @@ import {
 } from "@/components/ui/table";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useDynamicAuth } from "@/hooks/useDynamicAuth";
+import { ClaimSuccessModal } from "./claim-success-modal";
+import { useState } from "react";
 
 /**
  * Enhanced semi-circular progress bar component showing monthly progress
@@ -128,7 +130,9 @@ const SemiCircularProgress = ({
  */
 export const BonusClaimsTab = () => {
 	const t = useTranslations("bonus.claims");
-	const tCommon = useTranslations("bonus");
+	const { refreshUserData } = useDynamicAuth();
+	const [showSuccessModal, setShowSuccessModal] = useState(false);
+	const [claimedAmount, setClaimedAmount] = useState(0);
 
 	const {
 		bonusData,
@@ -136,16 +140,26 @@ export const BonusClaimsTab = () => {
 		isClaiming,
 		handleClaim,
 		isClaimDisabled,
+		refresh,
 	} = useBonusDashboard();
 
-	const {
-		unclaimedBonusData,
-		isLoading: isClaimsLoading,
-		isRefreshing,
-		refresh,
-	} = useBonusClaims();
+	const { unclaimedBonusData, isLoading: isClaimsLoading } = useBonusClaims();
 
 	const isLoading = isDashboardLoading || isClaimsLoading;
+
+	const handleClaimBonus = async () => {
+		try {
+			// const amountClaimed = 300;
+			const amountClaimed = await handleClaim();
+
+			if (!amountClaimed || amountClaimed <= 0) return;
+
+			setClaimedAmount(amountClaimed);
+			setShowSuccessModal(true);
+		} catch (err) {
+			console.error("Claim bonus failed:", err);
+		}
+	};
 
 	// Calculate totals from the data
 	const totalUnclaimed = unclaimedBonusData.reduce(
@@ -172,41 +186,21 @@ export const BonusClaimsTab = () => {
 		<div className="space-y-6">
 			{/* Header Section */}
 			<div className="space-y-4">
-				<div className="flex items-center justify-between flex-wrap gap-4">
-					<div className="flex items-center gap-2 sm:gap-3">
-						<div className="p-1.5 sm:p-2 rounded-xl bg-primary/10 border border-primary/20">
-							<FontAwesomeIcon
-								icon={faClipboardList}
-								className="h-5 w-5 sm:h-6 sm:w-6 text-primary"
-							/>
-						</div>
-						<div>
-							<h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground tracking-tight">
-								{t("title")}
-							</h1>
-							<p className="text-sm sm:text-base text-muted-foreground mt-1">
-								{t("subtitle")}
-							</p>
-						</div>
-					</div>
-					<Button
-						onClick={refresh}
-						disabled={isRefreshing}
-						variant="outline"
-						size="sm"
-						className="flex items-center gap-2"
-					>
+				<div className="flex items-center gap-2 sm:gap-3">
+					<div className="p-1.5 sm:p-2 rounded-xl bg-primary/10 border border-primary/20">
 						<FontAwesomeIcon
-							icon={faRefresh}
-							fontSize={16}
-							className={isRefreshing ? "animate-spin" : ""}
+							icon={faClipboardList}
+							className="h-5 w-5 sm:h-6 sm:w-6 text-primary"
 						/>
-						<span className="hidden xs:inline">
-							{isRefreshing
-								? tCommon("refreshing")
-								: tCommon("refresh")}
-						</span>
-					</Button>
+					</div>
+					<div>
+						<h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground tracking-tight">
+							{t("title")}
+						</h1>
+						<p className="text-sm sm:text-base text-muted-foreground mt-1">
+							{t("subtitle")}
+						</p>
+					</div>
 				</div>
 			</div>
 
@@ -374,14 +368,25 @@ export const BonusClaimsTab = () => {
 							unclaimedAmount={
 								bonusData?.data.available_bonus || 0
 							}
-							onClaim={handleClaim}
+							onClaim={handleClaimBonus}
 							token="USD"
+							// isClaimDisabled={false}
 							isClaimDisabled={isClaimDisabled}
 							context="bonus"
 						/>
 					</div>
 				</div>
 			</div>
+
+			<ClaimSuccessModal
+				isOpen={showSuccessModal}
+				onClose={() => {
+					setShowSuccessModal(false);
+					refreshUserData();
+					refresh();
+				}}
+				claimedBonusAmount={claimedAmount}
+			/>
 		</div>
 	);
 };

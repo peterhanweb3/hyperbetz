@@ -7,7 +7,7 @@
 		"viewAll": "Visa alla"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "Växla sidofält",
@@ -20,9 +20,10 @@
 		"wallet": "Insättning/Uttag",
 		"cashier": "Kassa",
 		"winLoss": "Vinster/Förluster",
-		"affiliate": "Affiliate",
+		"affiliate": "Dotterbolag",
 		"logout": "Logga ut",
-		"balance": "Saldo"
+		"balance": "Saldo",
+		"turnoverBonus": "Omsättningsbonus"
 	},
 	"navigation": {
 		"home": "Hem",
@@ -31,7 +32,7 @@
 		"wallet": "Plånbok",
 		"settings": "Inställningar",
 		"promotions": "Kampanjer",
-		"affiliate": "Affiliate",
+		"affiliate": "Dotterbolag",
 		"providers": "Leverantörer",
 		"lobby": "Lobby",
 		"bonus": "Omsättningsbonus"
@@ -110,7 +111,7 @@
 			"dateLabel": "Datum",
 			"statsTotalTransactions": "{total} transaktioner totalt",
 			"pageOf": "Sida {current} av {total}",
-			"live": "Live",
+			"live": "Bo",
 			"tabs": {
 				"all": "Alla",
 				"deposits": "Insättningar",
@@ -164,7 +165,7 @@
 			"totalBets": "Totalt antal spel",
 			"totalProfitLoss": "Total vinst/förlust",
 			"pageOf": "Sida {current} av {total}",
-			"live": "Live",
+			"live": "Bo",
 			"errorLoadingBets": "Fel vid inläsning av spelhistorik",
 			"failedToLoadBetHistory": "Misslyckades med att ladda spelhistorik. Försök igen.",
 			"tryAgain": "Försök igen",
@@ -324,7 +325,7 @@
 		"withdraw": "UTTAG",
 		"playOnTelegram": "Spela på Telegram",
 		"dailyBonus": "Daglig bonus",
-		"navigation": "Navigation",
+		"navigation": "Navigering",
 		"games": "Spel",
 		"providers": "Leverantörer",
 		"trendingNow": "Trendar nu",
@@ -360,8 +361,8 @@
 		},
 		"gameTypes": {
 			"blackjack": "Blackjack",
-			"roulette": "Roulette",
-			"crash": "Crash"
+			"roulette": "Roulett",
+			"crash": "Krascha"
 		}
 	},
 	"query": {
@@ -371,7 +372,7 @@
 			"z-a": "Ö-A"
 		},
 		"filters": {
-			"filter": "Filter",
+			"filter": "Filtrera",
 			"optionsTitle": "Filteralternativ",
 			"clearAll": "Rensa alla filter",
 			"activeLabel": "Aktiva:"
@@ -396,7 +397,7 @@
 	},
 	"commonExtra": {
 		"connecting": "Ansluter...",
-		"offline": "Offline",
+		"offline": "Off-line",
 		"online": "Online",
 		"clear": "Rensa"
 	},
@@ -447,7 +448,8 @@
 			"yourReferralId": "Ditt värvnings-ID",
 			"referralIdHelp": "Dela denna kod så att användare kan ange den manuellt vid registrering",
 			"copyFullSuccess": "Fullständig värvningslänk har kopierats!",
-			"copyIdSuccess": "Värvnings-ID har kopierats!"
+			"copyIdSuccess": "Värvnings-ID har kopierats!",
+			"claimButtonTitle": "Hämta bonus"
 		},
 		"referrals": {
 			"title": "Mina värvningar",
@@ -659,15 +661,20 @@
 				"deposit": "Insättning",
 				"withdraw": "Uttag",
 				"swap": "Växla",
-				"walletInfo": "Plånbok"
+				"walletInfo": "Plånbok",
+				"tip": "Dricks",
+				"emailWallet": "E-postplånbok",
+				"wallet": "Plånbok"
 			},
 			"mobileDropdown": {
 				"emailWallet": "E-postplånbok",
 				"wallet": "Plånbok",
 				"deposit": "Insättning",
 				"withdraw": "Uttag",
-				"swap": "Växla"
-			}
+				"swap": "Växla",
+				"tip": "Dricks"
+			},
+			"title": "PLÅNBOK"
 		},
 		"networkSelector": {
 			"placeholder": "Välj nätverk",
@@ -723,7 +730,8 @@
 			},
 			"buttons": {
 				"depositUsd": "Sätt in ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} är reserverad för att täcka gasavgifter och undvika transaktionsmisslyckanden"
 		},
 		"swapPanel": {
 			"selectTokens": "Välj tokens",
@@ -741,7 +749,7 @@
 			"currentSlippage": "Nuvarande slippage",
 			"swapSuccessful": "Växling lyckades!",
 			"transactionConfirmed": "Din transaktion har bekräftats",
-			"hash": "Hash",
+			"hash": "Hasch",
 			"newSwap": "Ny växling",
 			"youPay": "Du betalar",
 			"max": "Max",
@@ -773,7 +781,8 @@
 			},
 			"buttons": {
 				"depositUsd": "Sätt in ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} är reserverad för att täcka gaskostnader och undvika transaktionsfel"
 		},
 		"depositPending": {
 			"confirmedTitle": "Insättning bekräftad!",
@@ -782,7 +791,10 @@
 			"submittedDesc": "Väntar på blockkedjebekräftelse. Detta kan ta några minuter.",
 			"viewOnExplorer": "Visa på Explorer",
 			"newDepositConfirmed": "Gör en ny insättning",
-			"newDepositPending": "Starta en ny insättning"
+			"newDepositPending": "Starta en ny insättning",
+			"failedTitle": "Transaktionen misslyckades",
+			"failedDesc": "Din transaktion har misslyckats. ",
+			"newDepositFailed": "Försök igen"
 		},
 		"withdrawPanel": {
 			"resetForm": "Återställ formulär",
@@ -811,12 +823,13 @@
 			},
 			"buttons": {
 				"withdraw": "Ta ut {amount} {symbol}",
-				"minimum": "Minimum {amount} {symbol}"
-			}
+				"minimum": "Minsta {amount} {symbol}"
+			},
+			"calculating": "Beräknande"
 		},
 		"withdrawSuccess": {
 			"title": "Uttag lyckades!",
-			"successMessage": "🎉 Tog precis ut {withdrawAmount} {tokenSymbol} från Meme Win! 🚀 Häng med på vinnarstråket på {shareUrl}",
+			"successMessage": "🎉 Tog precis ut {withdrawAmount} {tokenSymbol} från HyperBetz! 🚀 Häng med på vinnarstråket på {shareUrl}",
 			"withdrawnAmount": "Uttaget belopp",
 			"shareText": "Dela",
 			"subText": "🚀 HÄNG MED PÅ VINNARSTRÅKET! 🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "Ta skärmdump",
 			"download": "Ladda ner bild",
 			"close": "Stäng",
-			"copiedToClipboard": "Delningslänken har kopierats"
+			"copiedToClipboard": "Delningslänken har kopierats",
+			"entryPrice": "Uttagsbelopp",
+			"lastPrice": "Tokensymbol",
+			"referralCode": "Rekommendationskod",
+			"screenshotFailed": "Skärmdumpen misslyckades. Vänligen försök igen eller använd en annan webbläsare.",
+			"shareFailed": "Delning misslyckades. Försök igen.",
+			"status": "Avslutad",
+			"userName": "HyperBetz-spelare"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "Uttag bekräftat!",
@@ -838,6 +858,51 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "Du kommer att få"
+		},
+		"tipPanel": {
+			"approxUsd": "~  USD",
+			"balance": "Saldo:",
+			"buttons": {
+				"tip": "Dricks",
+				"tipUsd": "Dricks"
+			},
+			"emailWalletAddress": "E-post plånboksadress",
+			"enterAmount": "Ange belopp",
+			"errors": {
+				"belowMinimum": "Beloppet måste vara minst {min}.",
+				"checkForm": "Vänligen kontrollera dina dricksdetaljer.",
+				"insufficientBalance": "Otillräckligt saldo.",
+				"missingWallet": "Det gick inte att hämta drickskassan. Försök igen senare.",
+				"selectTokenAndAmount": "Vänligen välj en token och ange ett belopp."
+			},
+			"max": "Max",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} är reserverat för att täcka gasavgifter och undvika transaktionsfel",
+			"minimumIs": "Minimum dricks är {min}",
+			"minPrefix": "Minimum",
+			"prompts": {
+				"enterAmount": "Ange belopp",
+				"selectToken": "Välj token"
+			},
+			"resetForm": "Återställ formulär",
+			"selectToken": "Välj token",
+			"status": {
+				"awaitingApproval": "Väntar på godkännande...",
+				"calculatingRate": "Beräknar...",
+				"fetchingWallet": "Förbereder drickaplånbok...",
+				"insufficientBalance": "Otillräckligt saldo",
+				"processing": "Skickar dricks..."
+			},
+			"tipPanelWarningText": "Dricks är frivilligt och ej återbetalningsbart.",
+			"youTip": "Din dricks"
+		},
+		"tipPending": {
+			"confirmedDesc": "Din dricks har levererats framgångsrikt.",
+			"confirmedTitle": "Dricks bekräftad!",
+			"newTipConfirmed": "Skicka en till dricks",
+			"newTipPending": "Skicka ytterligare ett dricks",
+			"submittedDesc": "Din dricks bekräftas på blockkedjan.",
+			"submittedTitle": "Dricks väntar",
+			"viewOnExplorer": "Visa i utforskaren"
 		}
 	},
 	"navUser": {
@@ -851,7 +916,7 @@
 		"pageTitle": "Alla spel",
 		"playNow": "Spela nu",
 		"byProvider": "Av {name}",
-		"count": "{count} {count, plural, one {Spel} other {Spel}}",
+		"count": "{count} Spel",
 		"noResults": "Inga spel hittades som matchar dina kriterier.",
 		"errorLoading": "Kunde inte ladda spelen. Försök igen senare.",
 		"slots": "Slots",
@@ -937,7 +1002,7 @@
 			"casino": {
 				"title": "Kasino",
 				"badge": "590+ SPEL",
-				"desc": "Njut av MemeWin Originals och andra kasinospel från toppleverantörer.",
+				"desc": "Njut av HyperBetz Originals och andra kasinospel från toppleverantörer.",
 				"link": "Gå till kasinot"
 			},
 			"slots": {
@@ -954,7 +1019,7 @@
 			},
 			"crypto": {
 				"title": "Krypto och tjäna",
-				"badge": "60% APR",
+				"badge": "60 % APR",
 				"desc": "Satsa, handla och tjäna med kryptovaluta till attraktiva räntor.",
 				"link": "Gå till krypto"
 			}
@@ -982,7 +1047,7 @@
 				"subtitle": "Spelaktivitet i realtid • {count} spel laddade"
 			},
 			"status": {
-				"live": "LIVE",
+				"live": "BO",
 				"paused": "Pausad"
 			},
 			"actions": {
@@ -1076,7 +1141,7 @@
 			"subtitle": "Följ dina satsningar, bonusar och belöningsinkomster",
 			"performanceOverview": "Bonusöversikt",
 			"bonusRatesTitle": "Bonusprisstruktur",
-			"totalIncome": "Total Bonus",
+			"totalIncome": "Total bonus",
 			"pendingBonus": "Väntande Bonus",
 			"lastClaim": "Senaste påståendet",
 			"unclaimedEarnings": "Tillgänglig för att göra anspråk på",
@@ -1112,11 +1177,11 @@
 				"total": "Totalt",
 				"tier": "Nivå",
 				"unclaimed": "Ej krävd",
-				"token": "Token"
+				"token": "Tecken"
 			},
 			"tierPrefix": "Nivå",
 			"availableToClaim": "Tillgänglig för anspråk",
-			"totalBonus": "Total Bonus",
+			"totalBonus": "Total bonus",
 			"claimed": "Krävd",
 			"progressPercentage": "Framsteg",
 			"progressTitle": "Din framsteg",
@@ -1204,6 +1269,29 @@
 			"calcFor": "Beräkning av bonus för ${amount} insats",
 			"totalPotential": "Total Potentiell Bonus:",
 			"combinedAtTier": "Kombinerad bonus från alla speltyper på nivå {level}"
+		},
+		"claimSuccessModal": {
+			"title": "Anspråksfram",
+			"statusCompleted": "Klar",
+			"statusOnChain": "On-Chain",
+			"claimAmount": "Anspråksbelopp",
+			"logoAlt": "HyperBetz-logotyp",
+			"backgroundAlt": "Bakgrund för anspråk på framgång",
+			"creatingMagic": "Skapar magi...",
+			"downloadShare": "Ladda ner och dela",
+			"spreadTheWin": "SPRID VINSTEN",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "Telegram",
+			"socialReddit": "Reddit",
+			"socialMore": "Mer",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "Värvningslänk kopierad!",
+			"referralLinkCopyFailed": "Kunde inte kopiera värvningslänk",
+			"screenshotFailed": "Skärmdumpen misslyckades. Försök igen eller använd en annan webbläsare.",
+			"shareTextCopied": "Dela text kopierad till urklipp!",
+			"shareFailed": "Delningen misslyckades. Försök igen."
 		}
 	}
 }

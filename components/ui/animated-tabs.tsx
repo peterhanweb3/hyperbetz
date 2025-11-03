@@ -85,31 +85,17 @@ function AnimatedTabs({
 function AnimatedTabsList({ className, children }: TabsListProps) {
 	const context = React.useContext(AnimatedTabsContext);
 
-	// Pre-calculated widths for typical wallet tabs
-	const getTabStyle = (tab: string) => {
-		switch (tab) {
-			case "walletInfo":
-				return { width: 95, left: 4 }; // "Wallet Info" button width
-			case "deposit":
-				return { width: 80, left: 4 }; // "Deposit" button width
-			case "withdraw":
-				return { width: 88, left: 88 }; // "Withdraw" button width
-			case "swap":
-				return { width: 65, left: 180 }; // "Swap" button width
-			default:
-				return { width: 80, left: 4 }; // Default to deposit size
-		}
-	};
-
 	if (!context) {
 		throw new Error("AnimatedTabsList must be used within AnimatedTabs");
 	}
 
 	const { activeTab } = context;
-	const [indicatorStyle, setIndicatorStyle] = React.useState(
-		getTabStyle(activeTab)
-	);
+	const [indicatorStyle, setIndicatorStyle] = React.useState({
+		width: 0,
+		left: 0,
+	});
 	const listRef = React.useRef<HTMLDivElement>(null);
+	const [isInitialized, setIsInitialized] = React.useState(false);
 
 	React.useEffect(() => {
 		const updateIndicator = () => {
@@ -126,20 +112,24 @@ function AnimatedTabsList({ className, children }: TabsListProps) {
 					width: activeRect.width,
 					left: activeRect.left - listRect.left,
 				});
+				setIsInitialized(true);
 			}
 		};
 
-		// Only update on tab change (not initial load since we have defaults)
-		if (activeTab) {
+		// Use requestAnimationFrame to ensure DOM is ready
+		const rafId = requestAnimationFrame(() => {
 			updateIndicator();
-		}
+		});
 
+		// Update on resize
 		window.addEventListener("resize", updateIndicator);
 
 		return () => {
+			cancelAnimationFrame(rafId);
 			window.removeEventListener("resize", updateIndicator);
 		};
-	}, [activeTab]);
+	}, [activeTab, children]); // Add children to deps to recalc on language change
+
 	return (
 		<div
 			ref={listRef}
@@ -148,14 +138,16 @@ function AnimatedTabsList({ className, children }: TabsListProps) {
 				className
 			)}
 		>
-			{/* Sliding indicator */}
-			<div
-				className="absolute h-8 rounded-md shadow-sm transition-all duration-300 ease-out bg-background border border-border"
-				style={{
-					width: indicatorStyle.width,
-					transform: `translateX(${indicatorStyle.left}px)`,
-				}}
-			/>
+			{/* Sliding indicator - only show after initialization to prevent flash */}
+			{isInitialized && (
+				<div
+					className="absolute h-8 rounded-md shadow-sm transition-all duration-300 ease-out bg-background border border-border"
+					style={{
+						width: indicatorStyle.width,
+						transform: `translateX(${indicatorStyle.left}px)`,
+					}}
+				/>
+			)}
 			{children}
 		</div>
 	);

@@ -146,7 +146,6 @@ export const heroBannerPropsFactory: Record<
 		};
 	},
 
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	layout8: (deps: HeroPropsFactoryDependencies): HeroBannerSectionProps => {
 		const { isLoggedIn, login, router } = deps;
 

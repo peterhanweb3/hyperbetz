@@ -2,7 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 // import { Mail, Loader2, AlertCircle, CheckCircle2, Clock } from "lucide-react";
-import { useConnectWithOtp, useSignInWithPasskey } from "@dynamic-labs/sdk-react-core";
+import {
+	useConnectWithOtp,
+	useSignInWithPasskey,
+} from "@dynamic-labs/sdk-react-core";
 
 // Shadcn UI Components
 import { Button } from "@/components/ui/button";

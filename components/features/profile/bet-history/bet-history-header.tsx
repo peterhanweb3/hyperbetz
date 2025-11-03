@@ -16,6 +16,8 @@ interface BetHistoryHeaderProps {
 	filters: BetHistoryFilters;
 	isLoading: boolean;
 	onRefresh: () => void;
+	canRefresh?: boolean;
+	isRefreshing?: boolean;
 }
 
 export function BetHistoryHeader({
@@ -24,6 +26,8 @@ export function BetHistoryHeader({
 	filters,
 	isLoading,
 	onRefresh,
+	canRefresh = true,
+	isRefreshing = false,
 }: BetHistoryHeaderProps) {
 	const t = useTranslations("profile.betHistory");
 
@@ -91,13 +95,15 @@ export function BetHistoryHeader({
 							variant="outline"
 							size="sm"
 							onClick={onRefresh}
-							disabled={isLoading}
+							disabled={isLoading || !canRefresh || isRefreshing}
 							className="rounded-lg border-border/50 bg-background/50 text-muted-foreground backdrop-blur-sm transition-all duration-300 hover:border-border hover:bg-primary/10"
 						>
 							<FontAwesomeIcon
 								icon={faRotateRight}
 								className={`mr-1.5 h-3 w-3 transition-transform duration-500 ${
-									isLoading ? "animate-spin" : ""
+									isLoading || isRefreshing
+										? "animate-spin"
+										: ""
 								}`}
 							/>
 							{t("refresh")}

@@ -4,7 +4,7 @@
  */
 
 import { useState, useEffect, useCallback } from "react";
-import { useAccount } from "wagmi";
+import { useAccount, usePublicClient } from "wagmi";
 import TransactionService from "@/services/walletProvider/TransactionService";
 import LocalStorageService from "@/services/localStorageService";
 import {
@@ -83,8 +83,23 @@ export const useSwapAllowance = ({
 			if (success) {
 				setIsApproveSuccess(true);
 				setIsTokenAllowed(true);
-				// Re-check allowance to be sure
-				await checkTokenAllowance();
+
+				await new Promise<boolean>((resolve) => {
+					let maxAttempts = 15;
+					let attempts = 0;
+					const interval = setInterval(async () => {
+						const hasAllowance = await checkTokenAllowance();
+						if (hasAllowance) {
+							clearInterval(interval);
+							resolve(true);
+						}
+						attempts++;
+						if (attempts >= maxAttempts) {
+							clearInterval(interval);
+							resolve(false);
+						}
+					}, 2000);
+				});
 				return true;
 			} else {
 				setIsApproveError(true);

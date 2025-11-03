@@ -621,6 +621,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
 									firstRowFilter="live casino"
 									secondRowFilter="slot"
 									providers={providersForCarousel}
+									onViewAllClick={() => onOpenChange(false)}
 								/>
 							</div>
 						)}

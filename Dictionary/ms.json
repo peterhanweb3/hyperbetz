@@ -7,7 +7,7 @@
 		"viewAll": "Lihat Semua"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "Togol Bar Sisi",
@@ -22,7 +22,8 @@
 		"winLoss": "Menang/Kalah",
 		"affiliate": "Afiliasi",
 		"logout": "Log Keluar",
-		"balance": "Baki"
+		"balance": "Baki",
+		"turnoverBonus": "Bonus Perolehan"
 	},
 	"navigation": {
 		"home": "Laman Utama",
@@ -269,7 +270,7 @@
 			"noGifs": "Tiada GIF ditemui",
 			"tryDifferent": "Cuba istilah carian yang berbeza",
 			"gifCategories": {
-				"trending": "Trending",
+				"trending": "Trend",
 				"reactions": "Reaksi",
 				"gaming": "Permainan",
 				"casino": "Kasino",
@@ -300,7 +301,7 @@
 		"message": {
 			"you": "Anda",
 			"winTitle": "Kemenangan besar dalam \"{game}\"! 🎰",
-			"gifAlt": "GIF",
+			"gifAlt": "Gif",
 			"imageAlt": "Imej yang dimuat naik",
 			"rainTitle": "Hujan Wang! 🌧️💰",
 			"recipients": "→ {count} {count, plural, one {penerima} other {penerima}}",
@@ -320,7 +321,7 @@
 	"sidebar": {
 		"quest": "MISI",
 		"spin": "PUTAR",
-		"deposit": "DEPOSIT",
+		"deposit": "Deposit",
 		"withdraw": "PENGELUARAN",
 		"playOnTelegram": "Main di Telegram",
 		"dailyBonus": "Bonus Harian",
@@ -361,7 +362,7 @@
 		"gameTypes": {
 			"blackjack": "Blackjack",
 			"roulette": "Rolet",
-			"crash": "Crash"
+			"crash": "Kemalangan"
 		}
 	},
 	"query": {
@@ -447,7 +448,8 @@
 			"yourReferralId": "ID rujukan anda",
 			"referralIdHelp": "Kongsi kod ini untuk pengguna masukkan secara manual semasa pendaftaran",
 			"copyFullSuccess": "Pautan rujukan penuh disalin ke papan keratan!",
-			"copyIdSuccess": "ID rujukan disalin ke papan keratan!"
+			"copyIdSuccess": "ID rujukan disalin ke papan keratan!",
+			"claimButtonTitle": "Tuntut Bonus anda"
 		},
 		"referrals": {
 			"title": "Rujukan Saya",
@@ -659,15 +661,20 @@
 				"deposit": "Deposit",
 				"withdraw": "Pengeluaran",
 				"swap": "Tukar",
-				"walletInfo": "Dompet"
+				"walletInfo": "Dompet",
+				"tip": "Petua",
+				"emailWallet": "Dompet e -mel",
+				"wallet": "Dompet"
 			},
 			"mobileDropdown": {
 				"emailWallet": "Dompet E-mel",
 				"wallet": "Dompet",
 				"deposit": "Deposit",
 				"withdraw": "Pengeluaran",
-				"swap": "Tukar"
-			}
+				"swap": "Tukar",
+				"tip": "Petua"
+			},
+			"title": "Dompet"
 		},
 		"networkSelector": {
 			"placeholder": "Pilih Rangkaian",
@@ -702,7 +709,7 @@
 			"max": "Maks",
 			"balance": "Baki:",
 			"calculating": "Mengira...",
-			"approxUsd": "~ ${amount} USD",
+			"approxUsd": "~ $ __ ph_0__ usd",
 			"minPrefix": "Min:",
 			"ratesMayVary": "Kadar mungkin berbeza",
 			"emailWalletAddress": "Alamat Dompet E-mel",
@@ -722,8 +729,9 @@
 				"insufficientBalance": "Baki Tidak Mencukupi"
 			},
 			"buttons": {
-				"depositUsd": "Deposit ${amount}"
-			}
+				"depositUsd": "Deposit $ __ ph_0__"
+			},
+			"maxButtonToolTipText": "__Ph_0__ __ph_1__ dikhaskan untuk menampung yuran gas dan elakkan kegagalan transaksi"
 		},
 		"swapPanel": {
 			"selectTokens": "Pilih token",
@@ -772,8 +780,9 @@
 				"insufficientBalance": "Baki Tidak Mencukupi"
 			},
 			"buttons": {
-				"depositUsd": "Deposit ${amount}"
-			}
+				"depositUsd": "Deposit $ __ ph_0__"
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} adalah dijadikan sandaran untuk menampung yuran gas dan mengelakkan kegagalan transaksi"
 		},
 		"depositPending": {
 			"confirmedTitle": "Deposit Disahkan!",
@@ -782,7 +791,10 @@
 			"submittedDesc": "Menunggu pengesahan blockchain. Ini mungkin mengambil masa beberapa minit.",
 			"viewOnExplorer": "Lihat di Explorer",
 			"newDepositConfirmed": "Buat Deposit Lain",
-			"newDepositPending": "Mulakan deposit baru"
+			"newDepositPending": "Mulakan deposit baru",
+			"failedTitle": "Transaksi gagal",
+			"failedDesc": "Urus niaga anda telah gagal. ",
+			"newDepositFailed": "Cuba lagi"
 		},
 		"withdrawPanel": {
 			"resetForm": "Set Semula Borang",
@@ -811,12 +823,13 @@
 			},
 			"buttons": {
 				"withdraw": "Keluarkan {amount} {symbol}",
-				"minimum": "Minimum {amount} {symbol}"
-			}
+				"minimum": "Minimum __ph_0__ __ph_1__"
+			},
+			"calculating": "Mengira"
 		},
 		"withdrawSuccess": {
 			"title": "Pengeluaran Berjaya!",
-			"successMessage": "🎉 Baru sahaja mengeluarkan {withdrawAmount} {tokenSymbol} dari Meme Win! 🚀 Sertai rentetan kemenangan di {shareUrl}",
+			"successMessage": "🎉 Baru sahaja mengeluarkan {withdrawAmount} {tokenSymbol} dari HyperBetz! 🚀 Sertai rentetan kemenangan di {shareUrl}",
 			"withdrawnAmount": "Jumlah Dikeluarkan",
 			"shareText": "Kongsi",
 			"subText": "🚀 SERTAI RENTETAN KEMENANGAN! 🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "Ambil Tangkapan Skrin",
 			"download": "Muat Turun Imej",
 			"close": "Tutup",
-			"copiedToClipboard": "Pautan Kongsi berjaya disalin"
+			"copiedToClipboard": "Pautan Kongsi berjaya disalin",
+			"entryPrice": "Jumlah Pengeluaran",
+			"lastPrice": "Simbol Token",
+			"referralCode": "Kod Rujukan",
+			"screenshotFailed": "Tangkapan layar gagal. Sila cuba lagi atau guna pelayar yang lain.",
+			"shareFailed": "Perkongsian gagal. Sila cuba lagi.",
+			"status": "Selesai",
+			"userName": "Pemain HyperBetz"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "Pengeluaran Disahkan!",
@@ -838,6 +858,51 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "Anda Akan Terima"
+		},
+		"tipPanel": {
+			"approxUsd": "~  USD",
+			"balance": "Baki:",
+			"buttons": {
+				"tip": "Petua",
+				"tipUsd": "Tip"
+			},
+			"emailWalletAddress": "Alamat Dompet E-mel",
+			"enterAmount": "Masukkan jumlah",
+			"errors": {
+				"belowMinimum": "Jumlah mestilah sekurang-kurangnya {min}.",
+				"checkForm": "Sila semak butiran tip anda.",
+				"insufficientBalance": "Baki tidak mencukupi.",
+				"missingWallet": "Tidak dapat mengambil dompet tip. Sila cuba lagi nanti.",
+				"selectTokenAndAmount": "Sila pilih token dan masukkan jumlah."
+			},
+			"max": "Maks",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} ditempah untuk menampung yuran gas dan mengelakkan kegagalan transaksi",
+			"minimumIs": "Jumlah tip minima ialah {min}",
+			"minPrefix": "Minimum",
+			"prompts": {
+				"enterAmount": "Masukkan jumlah",
+				"selectToken": "Pilih token"
+			},
+			"resetForm": "Tetapkan semula borang",
+			"selectToken": "Pilih token",
+			"status": {
+				"awaitingApproval": "Menunggu kelulusan...",
+				"calculatingRate": "Mengira...",
+				"fetchingWallet": "Menyiapkan dompet tip...",
+				"insufficientBalance": "Baki tidak mencukupi",
+				"processing": "Menghantar tip..."
+			},
+			"tipPanelWarningText": "Tip adalah sukarela dan tidak boleh dikembalikan.",
+			"youTip": "Tip anda"
+		},
+		"tipPending": {
+			"confirmedDesc": "Petua anda berjaya dihantar.",
+			"confirmedTitle": "Tip Disahkan!",
+			"newTipConfirmed": "Hantar petua lain",
+			"newTipPending": "Hantar tip lain",
+			"submittedDesc": "Tip anda sedang disahkan pada rantaian.",
+			"submittedTitle": "Tip Belum Selesai",
+			"viewOnExplorer": "Lihat pada peneroka"
 		}
 	},
 	"navUser": {
@@ -851,7 +916,7 @@
 		"pageTitle": "Semua Permainan",
 		"playNow": "Main Sekarang",
 		"byProvider": "Oleh {name}",
-		"count": "{count} {count, plural, one {Permainan} other {Permainan}}",
+		"count": "{count} Permainan",
 		"noResults": "Tiada permainan yang sepadan dengan kriteria anda ditemui.",
 		"errorLoading": "Tidak dapat memuatkan permainan. Sila cuba lagi nanti.",
 		"slots": "Slot",
@@ -862,7 +927,7 @@
 		"poker": "Poker",
 		"lottery": "Loteri",
 		"futures": "Niaga Hadapan",
-		"vr": "VR",
+		"vr": "Vr",
 		"swap": "Tukar",
 		"slotsDescription": "Putar gelendong dan menangi jackpot besar",
 		"liveCasinoDescription": "Alami aksi kasino masa nyata dengan pengedar langsung",
@@ -929,7 +994,7 @@
 		},
 		"jackpot": {
 			"title1": "Jackpot Mega",
-			"title2": "$1,000,000",
+			"title2": "$ 1,000,000",
 			"subtitle": "Main Sekarang & Menang Besar",
 			"cta": "Main Sekarang"
 		},
@@ -937,7 +1002,7 @@
 			"casino": {
 				"title": "Kasino",
 				"badge": "590+ PERMAINAN",
-				"desc": "Nikmati MemeWin Originals dan permainan kasino lain dari penyedia teratas.",
+				"desc": "Nikmati HyperBetz Originals dan permainan kasino lain dari penyedia teratas.",
 				"link": "Pergi ke Kasino"
 			},
 			"slots": {
@@ -954,7 +1019,7 @@
 			},
 			"crypto": {
 				"title": "Kripto & Jana",
-				"badge": "60% APR",
+				"badge": "60% Apr",
 				"desc": "Staking, berdagang, dan jana pendapatan dengan mata wang kripto pada kadar yang menarik.",
 				"link": "Pergi ke Kripto"
 			}
@@ -965,7 +1030,7 @@
 			"slider1Title": "Permainan Pilihan",
 			"slider1Badge": "Pilihan Staf",
 			"slider2Title": "Lebih Banyak untuk Diterokai",
-			"slider2Badge": "Trending",
+			"slider2Badge": "Trend",
 			"featuredGameLabel": "Permainan Pilihan"
 		},
 		"ctaExploreGames": "Terokai Permainan",
@@ -1015,11 +1080,11 @@
 		"quickUploadFontFile": "Muat Naik Fail Fon Pantas",
 		"resetToDefault": "Tetapkan Semula ke Lalai",
 		"googleFonts": {
-			"title": "Google Fonts",
+			"title": "Fon Google",
 			"searchFonts": "Cari fon...",
 			"preview": "Pratonton",
 			"previewText": "Harimau tangkas itu melompat ke atas anjing pemalas.",
-			"alphabetPreview": "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 1234567890",
+			"alphabetPreview": "ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890",
 			"applyFont": "Gunakan Fon",
 			"clearPreview": "Kosongkan Pratonton",
 			"previewWith": "Pratonton teks dengan {font}",
@@ -1204,6 +1269,29 @@
 			"calcFor": "Mengira bonus untuk pertaruhan ${amount}",
 			"totalPotential": "Jumlah Bonus Potensi:",
 			"combinedAtTier": "Bonus gabungan daripada semua jenis permainan di Tahap {level}"
+		},
+		"claimSuccessModal": {
+			"title": "Tuntut Kejayaan",
+			"statusCompleted": "Selesai",
+			"statusOnChain": "On-Chain",
+			"claimAmount": "Jumlah Tuntutan",
+			"logoAlt": "Logo HyperBetz",
+			"backgroundAlt": "Tuntut latar belakang kejayaan",
+			"creatingMagic": "Mencipta Sihir...",
+			"downloadShare": "Muat Turun & Kongsi",
+			"spreadTheWin": "SEBARKAN KEMENANGAN",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "Telegram",
+			"socialReddit": "Reddit",
+			"socialMore": "More",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "Pautan rujukan disalin!",
+			"referralLinkCopyFailed": "Gagal menyalin pautan rujukan",
+			"screenshotFailed": "Tangkapan skrin gagal. Sila cuba lagi atau gunakan penyemak imbas lain.",
+			"shareTextCopied": "Kongsi teks yang disalin ke papan klip!",
+			"shareFailed": "Kongsi gagal. Sila cuba lagi."
 		}
 	}
 }

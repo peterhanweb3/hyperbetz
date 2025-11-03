@@ -12,6 +12,7 @@ import {
 } from "@/types/walletProvider/swap-hooks.types";
 import LocalStorageService from "@/services/localStorageService";
 import { useAppStore } from "@/store/store";
+import { useDebounce } from "../useDebounce";
 
 export const useSwapQuote = ({
 	fromToken,
@@ -22,6 +23,11 @@ export const useSwapQuote = ({
 	_setExchangeAmount,
 	_setReceivedAmount,
 }: UseSwapQuoteParams): UseSwapQuoteReturn => {
+	// --- DEBOUNCING FOR PERFORMANCE ---
+	// Debounce amounts to prevent excessive API calls while user is typing (500ms)
+	const debouncedExchangeAmount = useDebounce(exchangeAmount, 500);
+	const debouncedReceivedAmount = useDebounce(receivedAmount, 500);
+
 	// --- STATE ---
 	const [conversion, setConversion] = useState<SwapConversion | null>(null);
 	const [isFetching, setIsFetching] = useState<boolean>(false);
@@ -53,7 +59,7 @@ export const useSwapQuote = ({
 	}, [fromToken, toToken, exchangeAmount, receivedAmount]);
 
 	/**
-	 * Fetch quote from the conversion service
+	 * Fetch quote from the conversion service (using debounced amounts)
 	 */
 	const fetchQuote = useCallback(async (): Promise<void> => {
 		if (!fromToken || !toToken || !username) {
@@ -61,13 +67,13 @@ export const useSwapQuote = ({
 		}
 
 		// If both amounts are empty, do nothing
-		if (!exchangeAmount && !receivedAmount) {
+		if (!debouncedExchangeAmount && !debouncedReceivedAmount) {
 			return;
 		}
 
 		// If isReversedQuote is true, the receivedAmount should be used as the source
 		// If isReversedQuote is false, the exchangeAmount should be used as the source
-		const sourceAmount = isReversedQuote ? receivedAmount : exchangeAmount;
+		const sourceAmount = isReversedQuote ? debouncedReceivedAmount : debouncedExchangeAmount;
 
 		// Check if we have a valid source amount
 		if (!sourceAmount || parseFloat(sourceAmount) <= 0) {
@@ -116,7 +122,7 @@ export const useSwapQuote = ({
 				}
 			}
 		} catch (error) {
-			console.error("Failed to fetch quote:", error);
+			console.error("Error fetching swap quote:", error);
 			setConversion(null);
 		} finally {
 			setIsFetching(false);
@@ -124,8 +130,8 @@ export const useSwapQuote = ({
 	}, [
 		fromToken,
 		toToken,
-		exchangeAmount,
-		receivedAmount,
+		debouncedExchangeAmount,
+		debouncedReceivedAmount,
 		isReversedQuote,
 		_setExchangeAmount,
 		_setReceivedAmount,

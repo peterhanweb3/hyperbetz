@@ -6,6 +6,7 @@ import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import { useAppStore } from "@/store/store";
 import TransactionService from "@/services/walletProvider/TransactionService";
 import { toast } from "sonner";
+import { sanitizeAmountInput } from "@/lib/utils";
 
 // A simple utility for basic address format validation.
 const validateAddress = (address: string): boolean => {
@@ -212,14 +213,14 @@ export const useWithdrawFormState = () => {
 	/**
 	 * Set maximum withdrawal amount
 	 */
-	const setMaxAmount = useCallback(() => {
-		if (maxWithdrawAmount > 0) {
-			setWithdrawAmount(maxWithdrawAmount.toString());
-			// Also update validation state when setting max
-			// setIsBalanceInsufficient(false);
-			// setIsBelowMinimum(false); // Assuming max is always > min
-		}
-	}, [maxWithdrawAmount]);
+	const setMaxAmount = useCallback(
+		(minAmount: number) => {
+			const maxAmount = maxWithdrawAmount.toString();
+
+			handleAmountChange(maxAmount, minAmount);
+		},
+		[maxWithdrawAmount, handleAmountChange]
+	);
 
 	/**
 	 * Change the withdrawal token

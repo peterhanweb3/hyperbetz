@@ -27,13 +27,12 @@ import {
 } from "@/components/ui/sidebar";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Game, GameType } from "@/types/games/gameList.types";
+import { Game } from "@/types/games/gameList.types";
 import {
 	HoverCard,
 	HoverCardContent,
 	HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { getProvidersForCategory } from "@/lib/utils/games/games.utils";
 import { getShuffledTopProviders } from "@/lib/utils/top-providers.utils";
 import { saveToCache, loadFromCache, cn } from "@/lib/utils";
 import { useTranslations } from "@/lib/locale-provider";
@@ -70,6 +69,9 @@ interface NavMainProps {
 
 const PROVIDERS_CACHE_KEY = "nav-main-shuffled-providers";
 const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24h
+const MAX_CATEGORY_PROVIDERS = 48; // keep hover card DOM manageable
+
+const normalizeCategoryKey = (value: string) => value.trim().toUpperCase();
 
 export function NavMain({
 	items,
@@ -115,7 +117,7 @@ export function NavMain({
 		saveToCache(PROVIDERS_CACHE_KEY, data);
 		return data;
 	}, [providers]);
-	const { toggleSidebar, open } = useSidebar();
+	const { toggleSidebar, open, isMobile, setOpenMobile } = useSidebar();
 	const [isTrendingNowOpen, setIsTrendingNowOpen] = useState(true);
 
 	useEffect(() => {
@@ -123,6 +125,13 @@ export function NavMain({
 			setIsTrendingNowOpen(false);
 		}
 	}, [open]);
+
+	// Close sidebar on mobile when navigating
+	const handleMobileNavigation = useCallback(() => {
+		if (isMobile) {
+			setOpenMobile(false);
+		}
+	}, [isMobile, setOpenMobile]);
 
 	const { providers: limitedProviders, remaining: remainingProvidersCount } =
 		useMemo(
@@ -134,6 +143,7 @@ export function NavMain({
 		);
 
 	const launchSpecificGame = (name: string) => {
+		handleMobileNavigation();
 		const game = allGames.find(
 			(g) => g.game_name.toLowerCase() === name.toLowerCase()
 		);
@@ -162,25 +172,74 @@ export function NavMain({
 		e: React.MouseEvent
 	) => {
 		e.preventDefault();
+		handleMobileNavigation();
 		const k = c.title.toLowerCase();
-		if (k === "swap") {
+		if (k === "games.swap") {
 			if (isLoggedIn) {
 				openModal("swap");
 			} else {
 				login();
 			}
-		} else if (k === "vr") launchSpecificGame("Gonzo's Quest Megaways");
-		else if (k === "futures") launchSpecificGame("Stock Market");
-		else if (k === "poker") router.push("/games?q=poker");
-		else if (k === "lottery") router.push("/games?q=lottery");
+		} else if (k === "games.vr")
+			launchSpecificGame("Gonzo's Quest Megaways");
+		else if (k === "games.futures") launchSpecificGame("Stock Market");
+		else if (k === "games.poker") router.push("/games?q=poker");
+		else if (k === "games.lottery") router.push("/games?q=lottery");
 		else router.push(c.url);
 	};
 
-	const getProvidersForCategoryHelper = (title: string) =>
-		getProvidersForCategory(
-			allGames,
-			title.toUpperCase().trim() as GameType
-		);
+	const providersByCategory = useMemo(() => {
+		if (!allGames?.length)
+			return {} as Record<
+				string,
+				{
+					list: Array<{ provider_name: string; count: number }>;
+					total: number;
+				}
+			>;
+
+		const lookup = new Map<string, Map<string, number>>();
+
+		for (const game of allGames) {
+			if (!game) continue;
+			const rawCategory = game.category ? String(game.category) : "";
+			const providerName = game.provider_name?.trim();
+			if (!rawCategory || !providerName) continue;
+
+			const categoryKey = normalizeCategoryKey(rawCategory);
+			let categoryProviders = lookup.get(categoryKey);
+			if (!categoryProviders) {
+				categoryProviders = new Map();
+				lookup.set(categoryKey, categoryProviders);
+			}
+
+			categoryProviders.set(
+				providerName,
+				(categoryProviders.get(providerName) || 0) + 1
+			);
+		}
+
+		const result: Record<
+			string,
+			{
+				list: Array<{ provider_name: string; count: number }>;
+				total: number;
+			}
+		> = {};
+
+		lookup.forEach((providerMap, categoryKey) => {
+			const sorted = Array.from(providerMap.entries())
+				.map(([provider_name, count]) => ({ provider_name, count }))
+				.sort((a, b) => b.count - a.count);
+
+			result[categoryKey] = {
+				list: sorted.slice(0, MAX_CATEGORY_PROVIDERS),
+				total: sorted.length,
+			};
+		});
+
+		return result;
+	}, [allGames]);
 
 	// Suppress hover cards from auto-opening until the user moves the mouse (used after launching a game)
 	const [suppressHoverCards, setSuppressHoverCards] = useState(false);
@@ -209,11 +268,13 @@ export function NavMain({
 
 	const CategoryProvidersList = ({
 		providers,
+		totalProviders,
 		categoryTitle,
 		onClose,
 		onGameTrigger,
 	}: {
 		providers: Array<{ provider_name: string; count: number }>;
+		totalProviders?: number;
 		categoryTitle: string;
 		onClose?: () => void;
 		onGameTrigger?: (e: React.MouseEvent) => void;
@@ -224,6 +285,7 @@ export function NavMain({
 		) => {
 			e.preventDefault();
 			onGameTrigger?.(e);
+			handleMobileNavigation();
 			if (categoryTitle.toUpperCase() === "LIVE CASINO") {
 				if (!isLoggedIn) {
 					onClose?.();
@@ -239,6 +301,8 @@ export function NavMain({
 				);
 			}
 		};
+		const providerCount = totalProviders ?? providers.length;
+		const isTruncated = providerCount > providers.length;
 		return (
 			<div
 				className={cn(
@@ -251,9 +315,14 @@ export function NavMain({
 					</h4>
 					<div className="flex justify-between items-center mb-1">
 						<p className="text-xs text-muted-foreground mt-1">
-							{providers.length} provider
-							{providers.length !== 1 ? "s" : ""} available
+							{providerCount} provider
+							{providerCount !== 1 ? "s" : ""} available
 						</p>
+						{isTruncated && (
+							<p className="text-[11px] text-muted-foreground/80">
+								Showing top {providers.length}
+							</p>
+						)}
 						<Link
 							href={
 								gameCategories.find(
@@ -262,6 +331,8 @@ export function NavMain({
 										categoryTitle.toUpperCase()
 								)?.url || "/"
 							}
+							prefetch={false}
+							onClick={handleMobileNavigation}
 						>
 							<span className="border rounded-2xl text-[11px] px-2 py-1 hover:bg-muted/40 hover:text-foreground">
 								View all
@@ -348,7 +419,8 @@ export function NavMain({
 				<Link
 					href={item.url}
 					className="flex items-center justify-between w-full font-semibold lg:px-4 lg:py-2 tracking-wide"
-					prefetch
+					prefetch={false}
+					onClick={handleMobileNavigation}
 				>
 					<div className="flex items-center gap-5">
 						{item.icon && (
@@ -408,7 +480,8 @@ export function NavMain({
 									<Link
 										href={sub.url}
 										className="flex justify-between items-center w-full"
-										prefetch
+										prefetch={false}
+										onClick={handleMobileNavigation}
 									>
 										<span>{sub.title}</span>
 										{sub.players && (
@@ -441,7 +514,7 @@ export function NavMain({
 			if (k === "VR") return tGames("vr");
 			return category.title;
 		})();
-		const isAction = ["swap", "vr", "futures"].includes(
+		const isAction = ["games.swap", "games.vr", "games.futures"].includes(
 			category.title.toLowerCase()
 		);
 		return (
@@ -451,7 +524,9 @@ export function NavMain({
 					asChild={!isAction}
 					onClick={
 						isAction
-							? (e) => handleStaticCategoryClick(category, e)
+							? (e) => {
+									handleStaticCategoryClick(category, e);
+							  }
 							: undefined
 					}
 					className="lg:px-4 lg:py-1 tracking-wide font-semibold cursor-pointer group-data-[collapsible=icon]:bg-accent/80 "
@@ -483,7 +558,8 @@ export function NavMain({
 						<Link
 							href={category.url}
 							className="flex items-center tracking-wide justify-between w-full"
-							prefetch
+							prefetch={false}
+							onClick={handleMobileNavigation}
 						>
 							<div className="flex items-center gap-5">
 								{category.icon && (
@@ -513,9 +589,11 @@ export function NavMain({
 	};
 
 	const GameCategoryItem = ({ category }: { category: GameCategory }) => {
-		const providersForCategory = getProvidersForCategoryHelper(
-			category.title
-		);
+		const categoryProviders =
+			providersByCategory[normalizeCategoryKey(category.title)];
+		const providersForCategory = categoryProviders?.list ?? [];
+		const totalProviders =
+			categoryProviders?.total ?? providersForCategory.length;
 		// Controlled open state so clicking inside does NOT instantly close
 		const [open, setOpen] = useState(false);
 		const triggerRef = useRef<HTMLDivElement | null>(null);
@@ -589,9 +667,9 @@ export function NavMain({
 		const displayTitle = (() => {
 			const k = category.title.toUpperCase();
 			if (k === "SLOT") return tGames("slots");
-			if (k === "SPORT BOOK" || k === "SPORTSBOOK")
-				return tGames("sports");
+			if (k === "SPORTS") return tGames("sports");
 			if (k === "LIVE CASINO") return tGames("liveCasino");
+			if (k === "-") return tGames("sports"); // Handle API's "-" category as Sports
 			return category.title;
 		})();
 		return (
@@ -616,9 +694,10 @@ export function NavMain({
 									<Link
 										href={category.url}
 										className="flex items-center lg:px-4 lg:py-2 tracking-wide font-semibold justify-between w-full hover:bg-muted/30 transition-all duration-200 rounded-lg group-data-[collapsible=icon]:bg-accent/80"
-										prefetch
+										prefetch={false}
 										onFocus={handleTriggerFocus}
 										onBlur={handleTriggerBlur}
+										onClick={handleMobileNavigation}
 									>
 										<div className="flex items-center gap-5">
 											{category.icon && (
@@ -658,17 +737,16 @@ export function NavMain({
 							align="start"
 							className="w-auto p-0 bg-transparent border-none shadow-none"
 							sideOffset={0}
-							// alignOffset={0}
 							ref={contentRef}
 							onMouseDown={preventCloseOnMouseDown}
 							onMouseEnter={() => setOpen(true)}
 						>
 							<CategoryProvidersList
 								providers={providersForCategory}
+								totalProviders={totalProviders}
 								categoryTitle={category.title}
 								onClose={() => setOpen(false)}
 								onGameTrigger={(e) => {
-									// When a game/provider is triggered, suppress auto-open until movement
 									lastSuppressPositionRef.current = {
 										x: e.clientX,
 										y: e.clientY,
@@ -767,7 +845,12 @@ export function NavMain({
 																<Link
 																	href={p.url}
 																	className="flex font-medium tracking-wider items-center justify-between w-full hover:bg-muted/30 transition-all duration-300"
-																	prefetch
+																	prefetch={
+																		false
+																	}
+																	onClick={
+																		handleMobileNavigation
+																	}
 																>
 																	<span className="text-sm text-foreground">
 																		{
@@ -798,7 +881,10 @@ export function NavMain({
 														<Link
 															href="/providers?filter=top"
 															className="flex items-center justify-between w-full hover:bg-primary/20 transition-all duration-300 border-t border-border/50 py-2 mt-4 gap-2"
-															prefetch
+															prefetch={false}
+															onClick={
+																handleMobileNavigation
+															}
 														>
 															<span className="text-sm text-foreground font-medium leading-tight flex-1 break-words">
 																{tSidebar(

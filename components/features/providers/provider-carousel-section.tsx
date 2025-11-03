@@ -150,6 +150,7 @@ interface ProviderCarouselSectionProps {
 	firstRowFilter: string;
 	secondRowFilter: string;
 	providers?: Array<{ name: string; count: number; icon_url?: string }>; // Optional override for providers
+	onViewAllClick?: () => void;
 }
 
 export const ProviderCarouselSection = memo(function ProviderCarouselSection({
@@ -160,8 +161,11 @@ export const ProviderCarouselSection = memo(function ProviderCarouselSection({
 	firstRowFilter,
 	secondRowFilter,
 	providers: overrideProviders,
+	onViewAllClick,
 }: ProviderCarouselSectionProps) {
 	const tCommon = useTranslations("common");
+	const enableAutoscroll =
+		process.env.NEXT_PUBLIC_ENABLE_PROVIDER_ANIMATION === "true";
 
 	// Selectors for each row
 	const firstRowSelector = useMemo(
@@ -201,8 +205,8 @@ export const ProviderCarouselSection = memo(function ProviderCarouselSection({
 
 	// For infinite scroll, duplicate
 	const shouldUseInfiniteScroll = useMemo(
-		() => !overrideProviders,
-		[overrideProviders]
+		() => enableAutoscroll && !overrideProviders,
+		[enableAutoscroll, overrideProviders]
 	);
 	const displayFirstRow = useMemo(
 		() =>
@@ -229,6 +233,19 @@ export const ProviderCarouselSection = memo(function ProviderCarouselSection({
 		[shouldUseInfiniteScroll, secondRowProviders]
 	);
 
+	const combinedProviders = useMemo(() => {
+		const providerMap = new Map<
+			string,
+			(typeof firstRowProviders)[number]
+		>();
+		[...firstRowProviders, ...secondRowProviders].forEach((provider) => {
+			if (!providerMap.has(provider.name)) {
+				providerMap.set(provider.name, provider);
+			}
+		});
+		return Array.from(providerMap.values()).slice(0, maxProviders);
+	}, [firstRowProviders, secondRowProviders, maxProviders]);
+
 	if (
 		(!firstRowProviders || firstRowProviders.length === 0) &&
 		(!secondRowProviders || secondRowProviders.length === 0)
@@ -238,117 +255,120 @@ export const ProviderCarouselSection = memo(function ProviderCarouselSection({
 
 	return (
 		<>
-			<style jsx>{`
-				@keyframes scroll-right-to-left {
-					0% {
-						transform: translateX(0);
+			{shouldUseInfiniteScroll && (
+				<style jsx>{`
+					@keyframes scroll-right-to-left {
+						0% {
+							transform: translateX(0);
+						}
+						100% {
+							transform: translateX(-50%);
+						}
 					}
-					100% {
-						transform: translateX(-50%);
+
+					@keyframes scroll-left-to-right {
+						0% {
+							transform: translateX(-50%);
+						}
+						100% {
+							transform: translateX(0);
+						}
 					}
-				}
 
-				@keyframes scroll-left-to-right {
-					0% {
-						transform: translateX(-50%);
+					.infinite-scroll-container {
+						overflow: hidden;
+						position: relative;
+						width: 100%;
+						padding: 2px 0px;
 					}
-					100% {
-						transform: translateX(0);
+
+					.infinite-scroll-track {
+						display: flex;
+						width: max-content;
+						animation-timing-function: linear;
+						animation-iteration-count: infinite;
 					}
-				}
 
-				.infinite-scroll-container {
-					overflow: hidden;
-					position: relative;
-					width: 100%;
-				}
+					/* Slower speed: increase duration to 120s and 130s */
+					.scroll-right-to-left {
+						animation: scroll-right-to-left 120s linear infinite;
+					}
 
-				.infinite-scroll-track {
-					display: flex;
-					width: max-content;
-					animation-timing-function: linear;
-					animation-iteration-count: infinite;
-				}
+					.scroll-left-to-right {
+						animation: scroll-left-to-right 130s linear infinite;
+					}
 
-				/* Slower speed: increase duration to 120s and 130s */
-				.scroll-right-to-left {
-					animation: scroll-right-to-left 120s linear infinite;
-				}
-
-				.scroll-left-to-right {
-					animation: scroll-left-to-right 130s linear infinite;
-				}
-
-				.provider-item {
-					flex-shrink: 0;
-					width: 200px;
-					margin-right: 12px;
-				}
-
-				@media (min-width: 640px) {
 					.provider-item {
-						margin-right: 16px;
+						flex-shrink: 0;
+						width: 200px;
+						margin-right: 12px;
 					}
-				}
 
-				.infinite-scroll-track:hover {
-					animation-play-state: paused;
-				}
+					@media (min-width: 640px) {
+						.provider-item {
+							margin-right: 16px;
+						}
+					}
 
-				.infinite-scroll-container:hover .infinite-scroll-track {
-					animation-play-state: paused;
-				}
+					.infinite-scroll-track:hover {
+						animation-play-state: paused;
+					}
 
-				/* Disable all transitions and animations on moving cards to prevent pulse effect */
-				.infinite-scroll-track * {
-					transition: none !important;
-					animation: none !important;
-				}
+					.infinite-scroll-container:hover .infinite-scroll-track {
+						animation-play-state: paused;
+					}
 
-				.infinite-scroll-track .group > div {
-					transform: none !important;
-					scale: 1 !important;
-					box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
-					border-color: hsl(var(--border) / 0.5) !important;
-				}
+					/* Disable all transitions and animations on moving cards to prevent pulse effect */
+					.infinite-scroll-track * {
+						transition: none !important;
+						animation: none !important;
+					}
 
-				.infinite-scroll-track .group img {
-					transform: none !important;
-					scale: 1 !important;
-				}
+					.infinite-scroll-track .group > div {
+						transform: none !important;
+						scale: 1 !important;
+						box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
+						border-color: hsl(var(--border) / 0.5) !important;
+					}
 
-				.infinite-scroll-track .group h3 {
-					color: hsl(var(--foreground)) !important;
-				}
+					.infinite-scroll-track .group img {
+						transform: none !important;
+						scale: 1 !important;
+					}
 
-				.infinite-scroll-track .group .absolute {
-					opacity: 0 !important;
-				}
+					.infinite-scroll-track .group h3 {
+						color: hsl(var(--foreground)) !important;
+					}
 
-				/* Re-enable effects only when carousel is paused */
-				.infinite-scroll-track:hover * {
-					transition: all 0.3s ease !important;
-				}
+					.infinite-scroll-track .group .absolute {
+						opacity: 0 !important;
+					}
 
-				.infinite-scroll-track:hover .group:hover > div {
-					transform: scale(1.02) !important;
-					box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-						0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
-					border-color: hsl(var(--primary) / 0.3) !important;
-				}
+					/* Re-enable effects only when carousel is paused */
+					.infinite-scroll-track:hover * {
+						transition: all 0.3s ease !important;
+					}
 
-				.infinite-scroll-track:hover .group:hover img {
-					transform: scale(1.05) !important;
-				}
+					.infinite-scroll-track:hover .group:hover > div {
+						transform: scale(1.02) !important;
+						box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+							0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+						border-color: hsl(var(--primary) / 0.3) !important;
+					}
 
-				.infinite-scroll-track:hover .group:hover h3 {
-					color: hsl(var(--primary)) !important;
-				}
+					.infinite-scroll-track:hover .group:hover img {
+						transform: scale(1.05) !important;
+					}
 
-				.infinite-scroll-track:hover .group:hover .absolute {
-					opacity: 1 !important;
-				}
-			`}</style>
+					.infinite-scroll-track:hover .group:hover h3 {
+						color: hsl(var(--primary)) !important;
+					}
+
+					.infinite-scroll-track:hover .group:hover .absolute {
+						opacity: 1 !important;
+					}
+				`}</style>
+			)}
 			<div className="w-full mb-6 mt-2">
 				{/* SECTION HEADER */}
 				<div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-3 sm:gap-0">
@@ -370,7 +390,12 @@ export const ProviderCarouselSection = memo(function ProviderCarouselSection({
 							size="sm"
 							className="text-xs sm:text-sm"
 						>
-							<Link href={viewAllUrl}>{tCommon("viewAll")}</Link>
+							<Link
+								href={viewAllUrl}
+								onClick={() => onViewAllClick?.()}
+							>
+								{tCommon("viewAll")}
+							</Link>
 						</Button>
 					</div>
 				</div>
@@ -415,19 +440,10 @@ export const ProviderCarouselSection = memo(function ProviderCarouselSection({
 							</div>
 						</>
 					) : (
-						/* SEARCH RESULTS - Static Grid Layout */
 						<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3 sm:gap-4">
-							{firstRowProviders.map((provider, index) => (
+							{combinedProviders.map((provider, index) => (
 								<ProviderGridCard
-									key={`search-row1-${provider.name}-${index}`}
-									name={provider.name}
-									gameCount={provider.count}
-									iconUrl={provider.icon_url}
-								/>
-							))}
-							{secondRowProviders.map((provider, index) => (
-								<ProviderGridCard
-									key={`search-row2-${provider.name}-${index}`}
+									key={`provider-${provider.name}-${index}`}
 									name={provider.name}
 									gameCount={provider.count}
 									iconUrl={provider.icon_url}

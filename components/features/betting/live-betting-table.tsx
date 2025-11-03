@@ -235,6 +235,9 @@ interface BettingRecord {
 	timestamp: number;
 }
 
+const MAX_TABLE_RECORDS = 36;
+const INITIAL_RECORD_COUNT = 12;
+
 // Enhanced bet amounts with NO 0.00 bets - only real money bets for motivation
 const BASE_BET_AMOUNTS = [
 	{ value: 0.2, weight: 12 },
@@ -550,13 +553,13 @@ export function LiveBettingTable({ className }: LiveBettingTableProps) {
 	const t = useTranslations("betting.live");
 	const [bettingData, setBettingData] = useState<BettingRecord[]>([]);
 	const [activeTab, setActiveTab] = useState<"all" | "win" | "lose">("all");
-	const [isLive, setIsLive] = useState(true);
+	const [isLive, setIsLive] = useState(false);
 
 	// Load preferences on mount
 	useEffect(() => {
 		const prefs = loadBettingPreferences();
 		if (prefs) {
-			setIsLive(prefs.isLive);
+			setIsLive(Boolean(prefs.isLive));
 			setActiveTab(prefs.activeTab as "all" | "win" | "lose");
 		}
 
@@ -576,7 +579,7 @@ export function LiveBettingTable({ className }: LiveBettingTableProps) {
 		if (bettingData.length > 0) {
 			const cacheInterval = setInterval(() => {
 				cacheBettingData(bettingData);
-			}, 30000);
+			}, 60000);
 
 			return () => clearInterval(cacheInterval);
 		}
@@ -648,7 +651,7 @@ export function LiveBettingTable({ className }: LiveBettingTableProps) {
 
 	// Initialize with some data
 	useEffect(() => {
-		const initialData = Array.from({ length: 50 }, () =>
+		const initialData = Array.from({ length: INITIAL_RECORD_COUNT }, () =>
 			generateBettingRecord(gamesList)
 		).sort((a, b) => b.timestamp - a.timestamp);
 		setBettingData(initialData);
@@ -660,31 +663,26 @@ export function LiveBettingTable({ className }: LiveBettingTableProps) {
 
 		const getUpdateInterval = () => {
 			const hour = new Date().getHours();
-			if (hour >= 22 || hour <= 2) return 700; // Faster during late night
-			if (hour >= 18 && hour <= 21) return 500; // Fastest during evening peak
-			if (hour >= 9 && hour <= 17) return 1000; // Slower during business hours
-			return 800;
+			if (hour >= 22 || hour <= 2) return 1600; // Faster during late night
+			if (hour >= 18 && hour <= 21) return 1800; // Evening peak
+			if (hour >= 9 && hour <= 17) return 2200; // Business hours
+			return 2000;
 		};
 
 		const interval = setInterval(() => {
-			// Enhanced burst activity simulation
 			const burstChance = Math.random();
 			let recordsToAdd = 1;
 
-			// More frequent bursts for excitement
-			if (burstChance < 0.15)
-				recordsToAdd = 4; // 15% chance for 4 records
-			else if (burstChance < 0.3)
-				recordsToAdd = 3; // 15% chance for 3 records
-			else if (burstChance < 0.5) recordsToAdd = 2; // 20% chance for 2 records
+			if (burstChance < 0.05) recordsToAdd = 3;
+			else if (burstChance < 0.15) recordsToAdd = 2;
 
 			const newRecords = Array.from({ length: recordsToAdd }, () =>
 				generateBettingRecord(gamesList)
 			);
 
 			setBettingData((prev) => {
-				const updated = [...newRecords, ...prev].slice(0, 100);
-				return updated;
+				const updated = [...newRecords, ...prev];
+				return updated.slice(0, MAX_TABLE_RECORDS);
 			});
 		}, getUpdateInterval());
 

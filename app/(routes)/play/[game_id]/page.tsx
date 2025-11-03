@@ -96,7 +96,7 @@ export default function PlayGamePage() {
 		launchGame();
 
 		// The dependency array is empty because this effect should only run once on mount.
-	}, [params.game_id, searchParams]);
+	}, [params.game_id, searchParams, t]);
 
 	// --- Render UI ---
 	if (error) {

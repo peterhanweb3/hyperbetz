@@ -75,7 +75,7 @@ export const DynamicGameCarouselList = () => {
 				const gamesForCategory = getGamesByCategory(
 					allGames,
 					category,
-					20
+					12
 				);
 				const categoryName = (() => {
 					if (category === "SLOT") return t("slots");

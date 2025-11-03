@@ -4,6 +4,7 @@ import * as React from "react";
 import { createPortal } from "react-dom";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "@/lib/locale-provider";
+import Image from "next/image";
 
 interface ImageUploadDialogProps {
 	imageUrl: string;
@@ -164,15 +165,18 @@ export function ImageUploadDialog({
 						<div className="mb-6 relative group">
 							<div className="absolute -inset-2 bg-gradient-to-br from-chart-1/30 via-primary/20 to-chart-2/30 rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition-all duration-500 animate-pulse-slow" />
 							<div className="absolute -inset-1 bg-gradient-to-br from-chart-1 via-primary to-chart-2 rounded-xl opacity-20 group-hover:opacity-30 transition-all duration-300" />
-							<div className="relative bg-background/90 backdrop-blur-sm rounded-xl border border-primary/30 overflow-hidden shadow-2xl">
-								<img
+							<div className="relative h-64 bg-background/90 backdrop-blur-sm rounded-xl border border-primary/30 overflow-hidden shadow-2xl">
+								<Image
 									src={imageUrl || "/placeholder.svg"}
 									alt={
 										imageUrl
 											? t("imageDialog.previewLabel")
 											: "Placeholder"
 									}
-									className="w-full max-h-64 object-contain bg-background/50 hover:scale-105 transition-transform duration-300"
+									fill
+									sizes="(max-width: 768px) 90vw, 640px"
+									className="object-contain bg-background/50 hover:scale-105 transition-transform duration-300"
+									unoptimized
 								/>
 								<div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent pointer-events-none" />
 								<div className="absolute top-2 right-2 px-2 py-1 bg-background/80 backdrop-blur-sm rounded-full text-xs text-muted-foreground border border-border/50">

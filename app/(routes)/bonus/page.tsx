@@ -1,5 +1,6 @@
 "use client";
 import { Suspense, useState, useRef, useEffect } from "react";
+import { BonusDashboardTab } from "@/components/features/bonus/dashboard-tab/bonus-dashboard-tab";
 import { BonusClaimsTab } from "@/components/features/bonus/claims-tab/bonus-claims-tab";
 import { BonusFallback } from "@/components/features/bonus/bonus-fallback";
 import { useDynamicAuth } from "@/hooks/useDynamicAuth";
@@ -9,17 +10,18 @@ import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { BonusRatesTab } from "@/components/features/bonus/rates-tab/bonus-rates-tab";
 import { CalculatorTab } from "@/components/features/bonus/calculator-tab/calculator-tab";
 import { useAppStore } from "@/store/store";
-import { toast } from "sonner";
 import { useT } from "@/hooks/useI18n";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRefresh } from "@fortawesome/pro-light-svg-icons";
-import { BonusDashboardTab } from "@/components/features/bonus/dashboard-tab/bonus-dahboard-tab";
+import useBonusClaims from "@/hooks/bonus/useBonusClaims";
 
 export default function BonusPage() {
 	const t = useT();
 	const { user, isLoading } = useDynamicAuth();
 	const [isRefreshing, setIsRefreshing] = useState(false);
+	const [refreshCooldown, setRefreshCooldown] = useState(0);
 	const [activeTab, setActiveTab] = useState<string>("dashboard");
+	const cooldownTimerRef = useRef<NodeJS.Timeout | null>(null);
 
 	// Pre-calculated widths for each tab
 	const getTabStyle = (tab: string) => {
@@ -79,13 +81,44 @@ export default function BonusPage() {
 	);
 	const fetchRates = useAppStore((state) => state.bonus.rates.fetchRates);
 
-	// Manual refresh function
+	// Get claims refresh function from hook
+	const { refresh: refreshClaims } = useBonusClaims();
+
+	// Cleanup cooldown timer on unmount
+	useEffect(() => {
+		return () => {
+			if (cooldownTimerRef.current) {
+				clearInterval(cooldownTimerRef.current);
+			}
+		};
+	}, []);
+
+	// Manual refresh function with cooldown
 	const handleRefresh = async () => {
+		// If already refreshing or in cooldown, do nothing
+		if (isRefreshing || refreshCooldown > 0) return;
+
 		setIsRefreshing(true);
+		setRefreshCooldown(10); // Start 10 second cooldown
+
+		// Start countdown timer
+		cooldownTimerRef.current = setInterval(() => {
+			setRefreshCooldown((prev) => {
+				if (prev <= 1) {
+					if (cooldownTimerRef.current) {
+						clearInterval(cooldownTimerRef.current);
+						cooldownTimerRef.current = null;
+					}
+					return 0;
+				}
+				return prev - 1;
+			});
+		}, 1000);
 
 		const results = {
 			dashboard: false,
 			rates: false,
+			claims: false,
 		};
 
 		try {
@@ -102,20 +135,11 @@ export default function BonusPage() {
 			console.error("Failed to refresh rates data:", error);
 		}
 
-		const successCount = Object.values(results).filter(Boolean).length;
-		const totalCount = Object.keys(results).length;
-
-		if (successCount === totalCount) {
-			toast.success(t("bonus.refreshAllSuccess"));
-		} else if (successCount > 0) {
-			toast.success(
-				t("bonus.refreshPartial", {
-					success: successCount,
-					total: totalCount,
-				})
-			);
-		} else {
-			toast.error(t("bonus.refreshFailed"));
+		try {
+			await refreshClaims();
+			results.claims = true;
+		} catch (error) {
+			console.error("Failed to refresh claims data:", error);
 		}
 
 		setIsRefreshing(false);
@@ -166,10 +190,10 @@ export default function BonusPage() {
 					</div>
 					<Button
 						onClick={handleRefresh}
-						disabled={isRefreshing}
+						disabled={isRefreshing || refreshCooldown > 0}
 						variant="outline"
 						size="sm"
-						className="flex items-center gap-2 hover:bg-primary/10 hover:border-primary/30 transition-colors"
+						className="flex items-center gap-2 hover:bg-primary/10 hover:border-primary/30 transition-colors disabled:opacity-50"
 					>
 						<FontAwesomeIcon
 							icon={faRefresh}
@@ -179,6 +203,8 @@ export default function BonusPage() {
 						<span className="hidden xs:inline">
 							{isRefreshing
 								? t("bonus.refreshing")
+								: refreshCooldown > 0
+								? `${refreshCooldown}s`
 								: t("bonus.refresh")}
 						</span>
 					</Button>

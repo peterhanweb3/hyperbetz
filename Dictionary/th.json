@@ -7,14 +7,14 @@
 		"viewAll": "ดูทั้งหมด"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "สลับแถบด้านข้าง",
 		"searchPlaceholder": "ค้นหาเกม, ผู้ให้บริการ...",
 		"liveChat": "แชทสด",
 		"player": "ผู้เล่น",
-		"vip": "VIP",
+		"vip": "วีไอพี",
 		"profile": "โปรไฟล์",
 		"statistics": "สถิติ",
 		"wallet": "ฝาก/ถอน",
@@ -22,7 +22,8 @@
 		"winLoss": "ชนะ/แพ้",
 		"affiliate": "พันธมิตร",
 		"logout": "ออกจากระบบ",
-		"balance": "ยอดคงเหลือ"
+		"balance": "ยอดคงเหลือ",
+		"turnoverBonus": "โบนัสผลประกอบการ"
 	},
 	"navigation": {
 		"home": "หน้าหลัก",
@@ -300,7 +301,7 @@
 		"message": {
 			"you": "คุณ",
 			"winTitle": "ชนะรางวัลใหญ่ใน \"{game}\"! 🎰",
-			"gifAlt": "GIF",
+			"gifAlt": "กิฟ",
 			"imageAlt": "รูปภาพที่อัปโหลด",
 			"rainTitle": "ฝนเงิน! 🌧️💰",
 			"recipients": "→ ผู้รับ {count} คน",
@@ -367,8 +368,8 @@
 	"query": {
 		"sort": {
 			"label": "เรียงตาม",
-			"a-z": "A-Z",
-			"z-a": "Z-A"
+			"a-z": "ก-ฮ",
+			"z-a": "ซี-เอ"
 		},
 		"filters": {
 			"filter": "ตัวกรอง",
@@ -447,7 +448,8 @@
 			"yourReferralId": "รหัสแนะนำของคุณ",
 			"referralIdHelp": "แชร์รหัสนี้เพื่อให้ผู้ใช้ป้อนด้วยตนเองระหว่างการลงทะเบียน",
 			"copyFullSuccess": "คัดลอกลิงก์แนะนำฉบับเต็มไปยังคลิปบอร์ดแล้ว!",
-			"copyIdSuccess": "คัดลอกรหัสแนะนำไปยังคลิปบอร์ดแล้ว!"
+			"copyIdSuccess": "คัดลอกรหัสแนะนำไปยังคลิปบอร์ดแล้ว!",
+			"claimButtonTitle": "แลกรับโบนัส"
 		},
 		"referrals": {
 			"title": "การแนะนำของฉัน",
@@ -586,7 +588,7 @@
 		"balance": "ยอดคงเหลือ",
 		"max": "สูงสุด",
 		"deposit": "ฝากเงิน",
-		"ethereum": "Ethereum"
+		"ethereum": "อีเธอเรียม"
 	},
 	"modalsSmall": {
 		"close": "ปิด",
@@ -659,15 +661,20 @@
 				"deposit": "ฝากเงิน",
 				"withdraw": "ถอนเงิน",
 				"swap": "แลกเปลี่ยน",
-				"walletInfo": "กระเป๋าเงิน"
+				"walletInfo": "กระเป๋าเงิน",
+				"tip": "เงินบำเหน็จ",
+				"emailWallet": "กระเป๋าเงินอีเมล",
+				"wallet": "กระเป๋าสตางค์"
 			},
 			"mobileDropdown": {
 				"emailWallet": "กระเป๋าเงินอีเมล",
 				"wallet": "กระเป๋าเงิน",
 				"deposit": "ฝากเงิน",
 				"withdraw": "ถอนเงิน",
-				"swap": "แลกเปลี่ยน"
-			}
+				"swap": "แลกเปลี่ยน",
+				"tip": "ทิป"
+			},
+			"title": "กระเป๋าสตางค์"
 		},
 		"networkSelector": {
 			"placeholder": "เลือกเครือข่าย",
@@ -702,7 +709,7 @@
 			"max": "สูงสุด",
 			"balance": "ยอดคงเหลือ:",
 			"calculating": "กำลังคำนวณ...",
-			"approxUsd": "~ ${amount} USD",
+			"approxUsd": "~ ${amount} ดอลลาร์สหรัฐ",
 			"minPrefix": "ขั้นต่ำ:",
 			"ratesMayVary": "อัตราอาจมีการเปลี่ยนแปลง",
 			"emailWalletAddress": "ที่อยู่กระเป๋าเงินอีเมล",
@@ -723,7 +730,8 @@
 			},
 			"buttons": {
 				"depositUsd": "ฝาก ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} สงวนไว้เพื่อครอบคลุมค่าธรรมเนียมน้ำมันและหลีกเลี่ยงความล้มเหลวในการทำธุรกรรม"
 		},
 		"swapPanel": {
 			"selectTokens": "เลือกโทเค็น",
@@ -773,7 +781,8 @@
 			},
 			"buttons": {
 				"depositUsd": "ฝาก ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} ถูกจองไว้เพื่อครอบคลุมค่าธรรมเนียมแก๊สและหลีกเลี่ยงความล้มเหลวในการทำธุรกรรม"
 		},
 		"depositPending": {
 			"confirmedTitle": "การฝากเงินได้รับการยืนยันแล้ว!",
@@ -782,7 +791,10 @@
 			"submittedDesc": "กำลังรอการยืนยันจากบล็อกเชน อาจใช้เวลาสักครู่",
 			"viewOnExplorer": "ดูบน Explorer",
 			"newDepositConfirmed": "ทำการฝากเงินอีกครั้ง",
-			"newDepositPending": "เริ่มการฝากเงินใหม่"
+			"newDepositPending": "เริ่มการฝากเงินใหม่",
+			"failedTitle": "การทำธุรกรรมล้มเหลว",
+			"failedDesc": "ธุรกรรมของคุณล้มเหลว ",
+			"newDepositFailed": "ลองอีกครั้ง"
 		},
 		"withdrawPanel": {
 			"resetForm": "รีเซ็ตฟอร์ม",
@@ -812,11 +824,12 @@
 			"buttons": {
 				"withdraw": "ถอน {amount} {symbol}",
 				"minimum": "ขั้นต่ำ {amount} {symbol}"
-			}
+			},
+			"calculating": "กำลังคำนวณ"
 		},
 		"withdrawSuccess": {
 			"title": "การถอนเงินสำเร็จ!",
-			"successMessage": "🎉 เพิ่งถอน {withdrawAmount} {tokenSymbol} จาก Meme Win! 🚀 เข้าร่วมเส้นทางแห่งชัยชนะได้ที่ {shareUrl}",
+			"successMessage": "🎉 เพิ่งถอน {withdrawAmount} {tokenSymbol} จาก HyperBetz! 🚀 เข้าร่วมเส้นทางแห่งชัยชนะได้ที่ {shareUrl}",
 			"withdrawnAmount": "จำนวนเงินที่ถอน",
 			"shareText": "แชร์",
 			"subText": "🚀 เข้าร่วมเส้นทางแห่งชัยชนะ! 🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "ถ่ายภาพหน้าจอ",
 			"download": "ดาวน์โหลดรูปภาพ",
 			"close": "ปิด",
-			"copiedToClipboard": "คัดลอกลิงก์แชร์สำเร็จแล้ว"
+			"copiedToClipboard": "คัดลอกลิงก์แชร์สำเร็จแล้ว",
+			"entryPrice": "จำนวนเงินที่ถอน",
+			"lastPrice": "สัญลักษณ์โทเค็น",
+			"referralCode": "รหัสอ้างอิง",
+			"screenshotFailed": "การจับภาพหน้าจอล้มเหลว กรุณาลองใหม่อีกครั้งหรือใช้เบราว์เซอร์อื่น",
+			"shareFailed": "การแชร์ล้มเหลว กรุณาลองใหม่อีกครั้ง",
+			"status": "เสร็จสมบูรณ์",
+			"userName": "ผู้เล่น HyperBetz"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "การถอนเงินได้รับการยืนยันแล้ว!",
@@ -838,6 +858,51 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "คุณจะได้รับ"
+		},
+		"tipPanel": {
+			"approxUsd": "~  USD",
+			"balance": "ยอดคงเหลือ:",
+			"buttons": {
+				"tip": "ทิป",
+				"tipUsd": "ทิป"
+			},
+			"emailWalletAddress": "ที่อยู่อีเมลกระเป๋าสตางค์",
+			"enterAmount": "ใส่จำนวนเงิน",
+			"errors": {
+				"belowMinimum": "จำนวนเงินต้องไม่น้อยกว่า {min}.",
+				"checkForm": "กรุณาตรวจสอบรายละเอียดทิปของคุณ",
+				"insufficientBalance": "ยอดเงินคงเหลือไม่เพียงพอ",
+				"missingWallet": "ไม่สามารถเรียกดูวอลเล็ทที่ทิปได้ กรุณาลองใหม่ในภายหลัง",
+				"selectTokenAndAmount": "กรุณาเลือกโทเค็นและป้อนจำนวนเงิน"
+			},
+			"max": "สูงสุด",
+			"maxButtonToolTipText": "สงวน {gasReservationAmount} {selectedTokenSymbol} เพื่อครอบคลุมค่าธรรมเนียมก๊าซและหลีกเลี่ยงความล้มเหลวของธุรกรรม",
+			"minimumIs": "จำนวนทิปขั้นต่ำคือ {min}",
+			"minPrefix": "ขั้นต่ำ",
+			"prompts": {
+				"enterAmount": "กรุณากรอกจำนวนเงิน",
+				"selectToken": "เลือกโทเค็น"
+			},
+			"resetForm": "รีเซ็ตแบบฟอร์ม",
+			"selectToken": "เลือกโทเคน",
+			"status": {
+				"awaitingApproval": "รอการอนุมัติ...",
+				"calculatingRate": "กำลังคำนวณ...",
+				"fetchingWallet": "กำลังเตรียมกระเป๋าเงินทิป...",
+				"insufficientBalance": "ยอดเงินคงเหลือไม่เพียงพอ",
+				"processing": "กำลังส่งทิป..."
+			},
+			"tipPanelWarningText": "ทิปเป็นการให้โดยสมัครใจและไม่สามารถคืนได้",
+			"youTip": "ทิปของคุณ"
+		},
+		"tipPending": {
+			"confirmedDesc": "คำแนะนำของคุณถูกส่งเรียบร้อยแล้ว",
+			"confirmedTitle": "ยืนยันการให้ทิป!",
+			"newTipConfirmed": "ส่งทิปอีกครั้ง",
+			"newTipPending": "ส่งทิปอีกครั้ง",
+			"submittedDesc": "คำแนะนำของคุณกำลังอยู่ในระหว่างการยืนยันบนเครือข่าย",
+			"submittedTitle": "ทิปที่รอดำเนินการ",
+			"viewOnExplorer": "ดูในเว็บสำรวจ"
 		}
 	},
 	"navUser": {
@@ -862,7 +927,7 @@
 		"poker": "โป๊กเกอร์",
 		"lottery": "ลอตเตอรี่",
 		"futures": "ฟิวเจอร์ส",
-		"vr": "VR",
+		"vr": "วีอาร์",
 		"swap": "แลกเปลี่ยน",
 		"slotsDescription": "หมุนวงล้อและลุ้นแจ็คพอตใหญ่",
 		"liveCasinoDescription": "สัมผัสประสบการณ์คาสิโนแบบเรียลไทม์กับดีลเลอร์สด",
@@ -929,7 +994,7 @@
 		},
 		"jackpot": {
 			"title1": "เมกะแจ็คพอต",
-			"title2": "$1,000,000",
+			"title2": "1,000,000 ดอลลาร์",
 			"subtitle": "เล่นตอนนี้และชนะรางวัลใหญ่",
 			"cta": "เล่นตอนนี้"
 		},
@@ -937,7 +1002,7 @@
 			"casino": {
 				"title": "คาสิโน",
 				"badge": "590+ เกม",
-				"desc": "สนุกกับเกมดั้งเดิมของ MemeWin และเกมคาสิโนอื่นๆ จากผู้ให้บริการชั้นนำ",
+				"desc": "สนุกกับเกมดั้งเดิมของ HyperBetz และเกมคาสิโนอื่นๆ จากผู้ให้บริการชั้นนำ",
 				"link": "ไปที่คาสิโน"
 			},
 			"slots": {
@@ -954,7 +1019,7 @@
 			},
 			"crypto": {
 				"title": "คริปโตและสร้างรายได้",
-				"badge": "60% APR",
+				"badge": "เมษายน 60%",
 				"desc": "วางเดิมพัน, ซื้อขาย และสร้างรายได้ด้วยสกุลเงินดิจิทัลในอัตราที่น่าสนใจ",
 				"link": "ไปที่คริปโต"
 			}
@@ -1015,7 +1080,7 @@
 		"quickUploadFontFile": "อัปโหลดไฟล์แบบอักษรอย่างรวดเร็ว",
 		"resetToDefault": "รีเซ็ตเป็นค่าเริ่มต้น",
 		"googleFonts": {
-			"title": "Google Fonts",
+			"title": "Google แบบอักษร",
 			"searchFonts": "ค้นหาแบบอักษร...",
 			"preview": "ตัวอย่าง",
 			"previewText": "ในน้ำมีปลา ในนามีข้าว",
@@ -1204,6 +1269,29 @@
 			"calcFor": "คำนวณโบนัสสำหรับการเดิมพัน ${amount}",
 			"totalPotential": "รวมโบนัสที่เป็นไปได้ทั้งหมด:",
 			"combinedAtTier": "โบนัสรวมจากประเภทเกมทั้งหมดที่ระดับ {level}"
+		},
+		"claimSuccessModal": {
+			"title": "การรับสำเร็จ",
+			"statusCompleted": "ชำระเงินสำเร็จ",
+			"statusOnChain": "ออนเชน",
+			"claimAmount": "จำนวนการเคลม",
+			"logoAlt": "โลโก้ HyperBetz",
+			"backgroundAlt": "อ้างสิทธิ์ภูมิหลังความสำเร็จ",
+			"creatingMagic": "กำลังสร้างเวทมนตร์...",
+			"downloadShare": "ดาวน์โหลดและแชร์",
+			"spreadTheWin": "กระจายชัยชนะ",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "เทเลแกรม",
+			"socialReddit": "Reddit",
+			"socialMore": "มีอีก",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "คัดลอกลิงค์แนะนำแล้ว!",
+			"referralLinkCopyFailed": "คัดลอกลิงค์แนะนำไม่สำเร็จ",
+			"screenshotFailed": "ภาพหน้าจอล้มเหลวโปรดลองอีกครั้งหรือใช้เบราว์เซอร์อื่น",
+			"shareTextCopied": "คัดลอกข้อความแชร์ไปยังคลิปบอร์ดแล้ว!",
+			"shareFailed": "การแชร์ล้มเหลวโปรดลองอีกครั้ง"
 		}
 	}
 }

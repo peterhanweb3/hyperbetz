@@ -7,7 +7,7 @@
 		"viewAll": "Xem tất cả"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "Chuyển đổi thanh bên",
@@ -22,7 +22,8 @@
 		"winLoss": "Thắng/Thua",
 		"affiliate": "Tiếp thị liên kết",
 		"logout": "Đăng xuất",
-		"balance": "Số dư"
+		"balance": "Số dư",
+		"turnoverBonus": "Thưởng doanh thu"
 	},
 	"navigation": {
 		"home": "Trang chủ",
@@ -272,7 +273,7 @@
 				"trending": "Thịnh hành",
 				"reactions": "Phản ứng",
 				"gaming": "Trò chơi",
-				"casino": "Casino",
+				"casino": "Sòng bạc",
 				"celebration": "Chúc mừng",
 				"sports": "Thể thao"
 			},
@@ -330,7 +331,7 @@
 		"trendingNow": "Đang thịnh hành",
 		"allProviders": "Tất cả nhà cung cấp",
 		"allTopProviders": "Tất cả nhà cung cấp hàng đầu",
-		"hotBadge": "Hot"
+		"hotBadge": "Nóng"
 	},
 	"search": {
 		"title": "Tìm kiếm trò chơi",
@@ -359,9 +360,9 @@
 			"found": "Tìm thấy {games} trò chơi, {categories} danh mục và {providers} nhà cung cấp"
 		},
 		"gameTypes": {
-			"blackjack": "Blackjack",
-			"roulette": "Roulette",
-			"crash": "Crash"
+			"blackjack": "Xì dách",
+			"roulette": "trò chơi quay vòng",
+			"crash": "Tai nạn"
 		}
 	},
 	"query": {
@@ -407,7 +408,7 @@
 		"yourFavorites": "Mục yêu thích của bạn",
 		"featuredCasinoGames": "Trò chơi casino nổi bật",
 		"hotPicks": "Lựa chọn hot",
-		"slots": "Slots",
+		"slots": "Máy đánh bạc",
 		"sports": "Thể thao",
 		"realTimeScoreboard": "Bảng điểm thời gian thực"
 	},
@@ -447,7 +448,8 @@
 			"yourReferralId": "Mã giới thiệu của bạn",
 			"referralIdHelp": "Chia sẻ mã này để người dùng nhập thủ công trong quá trình đăng ký",
 			"copyFullSuccess": "Đã sao chép liên kết giới thiệu đầy đủ vào bộ nhớ tạm!",
-			"copyIdSuccess": "Đã sao chép mã giới thiệu vào bộ nhớ tạm!"
+			"copyIdSuccess": "Đã sao chép mã giới thiệu vào bộ nhớ tạm!",
+			"claimButtonTitle": "Nhận Thưởng"
 		},
 		"referrals": {
 			"title": "Lượt giới thiệu của tôi",
@@ -496,7 +498,7 @@
 			"table": {
 				"tierLevel": "Cấp độ",
 				"wagerRange": "Phạm vi cược",
-				"slots": "Slots",
+				"slots": "Máy đánh bạc",
 				"liveCasino": "Casino trực tiếp",
 				"sports": "Thể thao",
 				"tierPrefix": "CẤP",
@@ -659,15 +661,20 @@
 				"deposit": "Nạp tiền",
 				"withdraw": "Rút tiền",
 				"swap": "Hoán đổi",
-				"walletInfo": "Ví"
+				"walletInfo": "Ví",
+				"tip": "Tiền boa",
+				"emailWallet": "Ví email",
+				"wallet": "Cái ví"
 			},
 			"mobileDropdown": {
 				"emailWallet": "Ví Email",
 				"wallet": "Ví",
 				"deposit": "Nạp tiền",
 				"withdraw": "Rút tiền",
-				"swap": "Hoán đổi"
-			}
+				"swap": "Hoán đổi",
+				"tip": "Tiền boa"
+			},
+			"title": "CÁI VÍ"
 		},
 		"networkSelector": {
 			"placeholder": "Chọn mạng",
@@ -723,7 +730,8 @@
 			},
 			"buttons": {
 				"depositUsd": "Nạp ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} được dành riêng để trang trải phí gas và tránh giao dịch thất bại"
 		},
 		"swapPanel": {
 			"selectTokens": "Chọn tokens",
@@ -741,7 +749,7 @@
 			"currentSlippage": "Trượt giá hiện tại",
 			"swapSuccessful": "Hoán đổi thành công!",
 			"transactionConfirmed": "Giao dịch của bạn đã được xác nhận",
-			"hash": "Hash",
+			"hash": "Băm",
 			"newSwap": "Hoán đổi mới",
 			"youPay": "Bạn trả",
 			"max": "Tối đa",
@@ -773,7 +781,8 @@
 			},
 			"buttons": {
 				"depositUsd": "Nạp ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} được dự trữ để chi trả phí gas và tránh thất bại giao dịch"
 		},
 		"depositPending": {
 			"confirmedTitle": "Nạp tiền đã được xác nhận!",
@@ -782,7 +791,10 @@
 			"submittedDesc": "Đang chờ xác nhận từ blockchain. Quá trình này có thể mất vài phút.",
 			"viewOnExplorer": "Xem trên Explorer",
 			"newDepositConfirmed": "Thực hiện một lần nạp khác",
-			"newDepositPending": "Bắt đầu một lần nạp mới"
+			"newDepositPending": "Bắt đầu một lần nạp mới",
+			"failedTitle": "Giao dịch không thành công",
+			"failedDesc": "Giao dịch của bạn đã thất bại. ",
+			"newDepositFailed": "Thử lại"
 		},
 		"withdrawPanel": {
 			"resetForm": "Đặt lại biểu mẫu",
@@ -812,11 +824,12 @@
 			"buttons": {
 				"withdraw": "Rút {amount} {symbol}",
 				"minimum": "Tối thiểu {amount} {symbol}"
-			}
+			},
+			"calculating": "Tính toán"
 		},
 		"withdrawSuccess": {
 			"title": "Rút tiền thành công!",
-			"successMessage": "🎉 Vừa rút {withdrawAmount} {tokenSymbol} từ Meme Win! 🚀 Hãy tham gia chuỗi thắng tại {shareUrl}",
+			"successMessage": "🎉 Vừa rút {withdrawAmount} {tokenSymbol} từ HyperBetz! 🚀 Hãy tham gia chuỗi thắng tại {shareUrl}",
 			"withdrawnAmount": "Số tiền đã rút",
 			"shareText": "Chia sẻ",
 			"subText": "🚀 HÃY THAM GIA CHUỖI THẮNG! 🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "Chụp ảnh màn hình",
 			"download": "Tải xuống hình ảnh",
 			"close": "Đóng",
-			"copiedToClipboard": "Đã sao chép liên kết chia sẻ thành công"
+			"copiedToClipboard": "Đã sao chép liên kết chia sẻ thành công",
+			"entryPrice": "Số tiền Rút",
+			"lastPrice": "Ký hiệu mã thông báo",
+			"referralCode": "Mã giới thiệu",
+			"screenshotFailed": "Chụp màn hình không thành công. Vui lòng thử lại hoặc sử dụng trình duyệt khác.",
+			"shareFailed": "Không thể chia sẻ. Vui lòng thử lại.",
+			"status": "Hoàn thành",
+			"userName": "Người chơi HyperBetz"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "Rút tiền đã được xác nhận!",
@@ -838,6 +858,51 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "Bạn sẽ nhận được"
+		},
+		"tipPanel": {
+			"approxUsd": "~  USD",
+			"balance": "Số dư:",
+			"buttons": {
+				"tip": "Tiền boa",
+				"tipUsd": "Tiền boa"
+			},
+			"emailWalletAddress": "Địa chỉ ví Email",
+			"enterAmount": "Nhập số tiền",
+			"errors": {
+				"belowMinimum": "Số tiền phải ít nhất là {min}.",
+				"checkForm": "Vui lòng kiểm tra chi tiết tiền tip của bạn.",
+				"insufficientBalance": "Số dư không đủ.",
+				"missingWallet": "Không thể lấy ví tiền boa. Vui lòng thử lại sau.",
+				"selectTokenAndAmount": "Vui lòng chọn một token và nhập số tiền."
+			},
+			"max": "Tối đa",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} được dành riêng để trang trải phí gas và tránh thất bại giao dịch",
+			"minimumIs": "Tiền bo tối thiểu là {min}",
+			"minPrefix": "Tối thiểu",
+			"prompts": {
+				"enterAmount": "Nhập số tiền",
+				"selectToken": "Chọn token"
+			},
+			"resetForm": "Đặt lại biểu mẫu",
+			"selectToken": "Chọn token",
+			"status": {
+				"awaitingApproval": "Đang chờ phê duyệt...",
+				"calculatingRate": "Đang tính toán...",
+				"fetchingWallet": "Đang chuẩn bị ví tiền boa...",
+				"insufficientBalance": "Số dư không đủ",
+				"processing": "Đang gửi tiền tip..."
+			},
+			"tipPanelWarningText": "Tiền boa là tự nguyện và không hoàn lại.",
+			"youTip": "Tiền boa của bạn"
+		},
+		"tipPending": {
+			"confirmedDesc": "Tiền boa của bạn đã được gửi thành công.",
+			"confirmedTitle": "Tiền boa đã được xác nhận!",
+			"newTipConfirmed": "Gửi một tiền tip khác",
+			"newTipPending": "Gửi một mẹo khác",
+			"submittedDesc": "Tiền tip của bạn đang được xác nhận trên chuỗi.",
+			"submittedTitle": "Tiền boa đang chờ",
+			"viewOnExplorer": "Xem trên trình khám phá"
 		}
 	},
 	"navUser": {
@@ -854,15 +919,15 @@
 		"count": "{count} Trò chơi",
 		"noResults": "Không tìm thấy trò chơi nào phù hợp với tiêu chí của bạn.",
 		"errorLoading": "Không thể tải trò chơi. Vui lòng thử lại sau.",
-		"slots": "Slots",
+		"slots": "Máy đánh bạc",
 		"sports": "Thể thao",
 		"liveCasino": "Casino trực tiếp",
 		"explore": "Khám phá",
 		"exploreSubtitle": "Khám phá những trải nghiệm chơi game tuyệt vời",
-		"poker": "Poker",
+		"poker": "bài xì phé",
 		"lottery": "Xổ số",
 		"futures": "Hợp đồng tương lai",
-		"vr": "VR",
+		"vr": "thực tế ảo",
 		"swap": "Hoán đổi",
 		"slotsDescription": "Quay các cuộn và giành những giải jackpot khổng lồ",
 		"liveCasinoDescription": "Trải nghiệm hành động casino thời gian thực với các dealer trực tiếp",
@@ -935,13 +1000,13 @@
 		},
 		"cards": {
 			"casino": {
-				"title": "Casino",
+				"title": "Sòng bạc",
 				"badge": "Hơn 590 TRÒ CHƠI",
-				"desc": "Thưởng thức các trò chơi gốc của MemeWin và các trò chơi casino khác từ các nhà cung cấp hàng đầu.",
+				"desc": "Thưởng thức các trò chơi gốc của HyperBetz và các trò chơi casino khác từ các nhà cung cấp hàng đầu.",
 				"link": "Đến Casino"
 			},
 			"slots": {
-				"title": "Slots",
+				"title": "Máy đánh bạc",
 				"badge": "5292 TRÒ CHƠI",
 				"desc": "Quay các cuộn và trúng những giải jackpot khổng lồ với bộ sưu tập slot cao cấp của chúng tôi.",
 				"link": "Đến Slots"
@@ -1015,7 +1080,7 @@
 		"quickUploadFontFile": "Tải lên Nhanh tệp Phông chữ",
 		"resetToDefault": "Đặt lại về Mặc định",
 		"googleFonts": {
-			"title": "Google Fonts",
+			"title": "Phông chữ của Google",
 			"searchFonts": "Tìm kiếm phông chữ...",
 			"preview": "Xem trước",
 			"previewText": "Con cáo nâu nhanh nhẹn nhảy qua con chó lười biếng.",
@@ -1204,6 +1269,29 @@
 			"calcFor": "Tính toán tiền thưởng cho số tiền cược ${amount}",
 			"totalPotential": "Tổng Tiền Thưởng Tiềm Năng:",
 			"combinedAtTier": "Tiền thưởng kết hợp từ tất cả các loại trò chơi tại Cấp độ {level}"
+		},
+		"claimSuccessModal": {
+			"title": "Yêu cầu thành công",
+			"statusCompleted": "Hoàn thành",
+			"statusOnChain": "trên chuỗi",
+			"claimAmount": "Số tiền yêu cầu bồi thường",
+			"logoAlt": "Logo HyperBetz",
+			"backgroundAlt": "Xác nhận nền tảng thành công",
+			"creatingMagic": "Đang tạo phép thuật...",
+			"downloadShare": "Tải xuống & chia sẻ",
+			"spreadTheWin": "CHIẾN THẮNG CHÊNH LỆCH",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "Telegram",
+			"socialReddit": "Reddit",
+			"socialMore": "Chi tiết",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "Đã sao chép liên kết giới thiệu!",
+			"referralLinkCopyFailed": "Không thể sao chép liên kết giới thiệu",
+			"screenshotFailed": "Ảnh chụp màn hình không thành công. Vui lòng thử lại hoặc sử dụng trình duyệt khác.",
+			"shareTextCopied": "Chia sẻ văn bản đã sao chép vào khay nhớ tạm!",
+			"shareFailed": "Không thành công, vui lòng thử lại"
 		}
 	}
 }

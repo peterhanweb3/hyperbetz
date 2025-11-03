@@ -1,6 +1,6 @@
 "use client";
 
-import { memo, useMemo, useState } from "react";
+import { memo, useMemo, useState, Suspense, lazy } from "react";
 import { useTranslations } from "@/lib/locale-provider";
 import { useTransactionModal } from "@/hooks/walletProvider/use-transaction-modal";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
@@ -17,15 +17,45 @@ import {
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
-// Sidebar removed: using top header tabs in both views
-import { DepositPanel } from "@/components/features/walletProvider/deposit/deposit-panel";
-import { SwapPanel } from "@/components/features/walletProvider/swap/swap-panel";
-import { WithdrawPanel } from "@/components/features/walletProvider/withdraw/withdraw-panel";
-import { TipPanel } from "@/components/features/walletProvider/tip/tip-panel";
-import { WalletInfoPanel } from "./wallet/wallet-info-panel";
+import { ChevronDown, Loader2 } from "lucide-react";
 import { TransactionModalTab } from "@/store/slices/ui/walletProvider/modal.slice";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
+import { SwapPanel } from "./swap/swap-panel";
+// import { Deposit } from "./swap/swap-panel";
+
+// Code splitting: Lazy load wallet panels to reduce initial bundle size
+const DepositPanel = lazy(() =>
+	import("@/components/features/walletProvider/deposit/deposit-panel").then(
+		(mod) => ({ default: mod.DepositPanel })
+	)
+);
+// const SwapPanel = lazy(() =>
+// 	import("@/components/features/walletProvider/swap/swap-panel").then(
+// 		(mod) => ({ default: mod.SwapPanel })
+// 	)
+// );
+const WithdrawPanel = lazy(() =>
+	import("@/components/features/walletProvider/withdraw/withdraw-panel").then(
+		(mod) => ({ default: mod.WithdrawPanel })
+	)
+);
+const TipPanel = lazy(() =>
+	import("@/components/features/walletProvider/tip/tip-panel").then(
+		(mod) => ({ default: mod.TipPanel })
+	)
+);
+const WalletInfoPanel = lazy(() =>
+	import("./wallet/wallet-info-panel").then((mod) => ({
+		default: mod.WalletInfoPanel,
+	}))
+);
+
+// Loading fallback component for lazy-loaded panels
+const PanelLoadingFallback = () => (
+	<div className="flex items-center justify-center h-64">
+		<Loader2 className="w-8 h-8 animate-spin text-primary" />
+	</div>
+);
 
 type DisplayType = "modal-view" | "tabbed-view";
 
@@ -49,30 +79,42 @@ const TransactionTabbedView = memo(function TransactionTabbedView({
 
 	const tabContent = useMemo(
 		() => ({
-			walletInfo: <WalletInfoPanel />,
+			walletInfo: (
+				<Suspense fallback={<PanelLoadingFallback />}>
+					<WalletInfoPanel />
+				</Suspense>
+			),
 			deposit: (
-				<DepositPanel
-					isEmbeddedWallet={isEmbeddedWallet}
-					isLobbyPage={isLobbyPage}
-				/>
+				<Suspense fallback={<PanelLoadingFallback />}>
+					<DepositPanel
+						isEmbeddedWallet={isEmbeddedWallet}
+						isLobbyPage={isLobbyPage}
+					/>
+				</Suspense>
 			),
 			tip: (
-				<TipPanel
-					isEmbeddedWallet={isEmbeddedWallet}
-					isLobbyPage={isLobbyPage}
-				/>
+				<Suspense fallback={<PanelLoadingFallback />}>
+					<TipPanel
+						isEmbeddedWallet={isEmbeddedWallet}
+						isLobbyPage={isLobbyPage}
+					/>
+				</Suspense>
 			),
 			withdraw: (
-				<WithdrawPanel
-					isEmbeddedWallet={isEmbeddedWallet}
-					isLobbyPage={isLobbyPage}
-				/>
+				<Suspense fallback={<PanelLoadingFallback />}>
+					<WithdrawPanel
+						isEmbeddedWallet={isEmbeddedWallet}
+						isLobbyPage={isLobbyPage}
+					/>
+				</Suspense>
 			),
 			swap: (
+				// <Suspense fallback={<PanelLoadingFallback />}>
 				<SwapPanel
 					isEmbeddedWallet={isEmbeddedWallet}
 					isLobbyPage={isLobbyPage}
 				/>
+				// </Suspense>
 			),
 		}),
 		[isEmbeddedWallet, isLobbyPage]
@@ -85,25 +127,42 @@ const TransactionTabbedView = memo(function TransactionTabbedView({
 				onValueChange={(v) => setLocalActiveTab(v as AllowedTab)}
 				className="w-full"
 			>
-				<div className="flex items-center justify-between p-4 border-b">
-				<AnimatedTabsList
-						className={`grid w-auto ${
+				<div className="flex items-center justify-between p-4 border-b overflow-x-auto">
+					<AnimatedTabsList
+						className={`grid w-full sm:w-auto ${
 							isEmbeddedWallet ? "grid-cols-5" : "grid-cols-4"
-						}`}
+						} min-w-fit`}
 					>
 						{isEmbeddedWallet && (
-							<AnimatedTabsTrigger value="walletInfo">
+							<AnimatedTabsTrigger
+								value="walletInfo"
+								className="text-xs sm:text-sm whitespace-nowrap px-2 sm:px-3"
+							>
 								{t("tabs.walletInfo")}
 							</AnimatedTabsTrigger>
 						)}
-						<AnimatedTabsTrigger value="deposit">
+						<AnimatedTabsTrigger
+							value="deposit"
+							className="text-xs sm:text-sm whitespace-nowrap px-2 sm:px-3"
+						>
 							{t("tabs.deposit")}
 						</AnimatedTabsTrigger>
-						<AnimatedTabsTrigger value="withdraw">
+						<AnimatedTabsTrigger
+							value="withdraw"
+							className="text-xs sm:text-sm whitespace-nowrap px-2 sm:px-3"
+						>
 							{t("tabs.withdraw")}
 						</AnimatedTabsTrigger>
-						<AnimatedTabsTrigger value="swap">{t("tabs.swap")}</AnimatedTabsTrigger>
-						<AnimatedTabsTrigger value="tip">
+						<AnimatedTabsTrigger
+							value="swap"
+							className="text-xs sm:text-sm whitespace-nowrap px-2 sm:px-3"
+						>
+							{t("tabs.swap")}
+						</AnimatedTabsTrigger>
+						<AnimatedTabsTrigger
+							value="tip"
+							className="text-xs sm:text-sm whitespace-nowrap px-2 sm:px-3"
+						>
 							{t("tabs.tip")}
 						</AnimatedTabsTrigger>
 					</AnimatedTabsList>
@@ -138,24 +197,34 @@ const TransactionModalView = memo(function TransactionModalView({
 
 	const tabContent = useMemo(
 		() => ({
-			walletInfo: <WalletInfoPanel onNavigate={closeModal} />,
+			walletInfo: (
+				<Suspense fallback={<PanelLoadingFallback />}>
+					<WalletInfoPanel onNavigate={closeModal} />
+				</Suspense>
+			),
 			deposit: (
-				<DepositPanel
-					isEmbeddedWallet={isEmbeddedWallet}
-					isLobbyPage={isLobbyPage}
-				/>
+				<Suspense fallback={<PanelLoadingFallback />}>
+					<DepositPanel
+						isEmbeddedWallet={isEmbeddedWallet}
+						isLobbyPage={isLobbyPage}
+					/>
+				</Suspense>
 			),
 			tip: (
-				<TipPanel
-					isEmbeddedWallet={isEmbeddedWallet}
-					isLobbyPage={isLobbyPage}
-				/>
+				<Suspense fallback={<PanelLoadingFallback />}>
+					<TipPanel
+						isEmbeddedWallet={isEmbeddedWallet}
+						isLobbyPage={isLobbyPage}
+					/>
+				</Suspense>
 			),
 			withdraw: (
-				<WithdrawPanel
-					isEmbeddedWallet={isEmbeddedWallet}
-					isLobbyPage={isLobbyPage}
-				/>
+				<Suspense fallback={<PanelLoadingFallback />}>
+					<WithdrawPanel
+						isEmbeddedWallet={isEmbeddedWallet}
+						isLobbyPage={isLobbyPage}
+					/>
+				</Suspense>
 			),
 			swap: (
 				<SwapPanel
@@ -262,7 +331,7 @@ const TransactionModalView = memo(function TransactionModalView({
 				<div className="hidden md:block w-full">
 					<div className="px-6 pt-6 pb-3">
 						<h1 className="text-2xl font-bold text-foreground tracking-tight">
-							WALLET
+							{t("title")}
 						</h1>
 					</div>
 					<div className="px-6 border-b border-border">
@@ -275,7 +344,9 @@ const TransactionModalView = memo(function TransactionModalView({
 										: "text-muted-foreground hover:text-foreground"
 								}`}
 							>
-								Wallet
+								{isEmbeddedWallet
+									? t("tabs.emailWallet")
+									: t("tabs.wallet")}
 							</button>
 							<button
 								onClick={() => setActiveTab("deposit")}
@@ -285,9 +356,9 @@ const TransactionModalView = memo(function TransactionModalView({
 										: "text-muted-foreground hover:text-foreground"
 								}`}
 							>
-								Deposit
+								{t("tabs.deposit")}
 							</button>
-							
+
 							<button
 								onClick={() => setActiveTab("withdraw")}
 								className={`pb-3 px-1 text-sm font-medium transition-all duration-200 ${
@@ -296,7 +367,7 @@ const TransactionModalView = memo(function TransactionModalView({
 										: "text-muted-foreground hover:text-foreground"
 								}`}
 							>
-								Withdraw
+								{t("tabs.withdraw")}
 							</button>
 							<button
 								onClick={() => setActiveTab("swap")}
@@ -306,7 +377,7 @@ const TransactionModalView = memo(function TransactionModalView({
 										: "text-muted-foreground hover:text-foreground"
 								}`}
 							>
-								Swap
+								{t("tabs.swap")}
 							</button>
 							<button
 								onClick={() => setActiveTab("tip")}
@@ -316,7 +387,7 @@ const TransactionModalView = memo(function TransactionModalView({
 										: "text-muted-foreground hover:text-foreground"
 								}`}
 							>
-								Tip
+								{t("tabs.tip")}
 							</button>
 						</div>
 					</div>

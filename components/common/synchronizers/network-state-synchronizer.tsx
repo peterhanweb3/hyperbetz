@@ -115,7 +115,7 @@ export const NetworkStateSynchronizer = () => {
 				handleNetworkChange
 			);
 		};
-	}, [primaryWallet, setNetworkData]);
+	}, [primaryWallet, refreshUserData, setNetworkData]);
 
 	return null;
 };

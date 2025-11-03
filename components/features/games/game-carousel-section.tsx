@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/carousel";
 import { GameCard } from "./game-carousel-card";
 // import { Flame } from "lucide-react";
-import Autoplay from "embla-carousel-autoplay";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faFireFlameCurved } from "@fortawesome/pro-light-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -95,7 +94,9 @@ export const GameCarouselSection = ({
 	};
 
 	// Normalize all games to Game format
-	const normalizedGames = games.map(normalizeGame);
+	const MAX_VISIBLE_GAMES = 12;
+	const limitedGames = games.slice(0, MAX_VISIBLE_GAMES);
+	const normalizedGames = limitedGames.map(normalizeGame);
 
 	// Group games into batches of 4 for mobile 2x2 grid
 	const groupGamesForMobile = (games: Game[]) => {
@@ -118,13 +119,6 @@ export const GameCarouselSection = ({
 						align: "start",
 						loop: true,
 					}}
-					plugins={[
-						Autoplay({
-							delay: 4000,
-							stopOnInteraction: true,
-							stopOnMouseEnter: true,
-						}),
-					]}
 					className="w-full"
 				>
 					{/* SECTION HEADER WITH CONTROLS */}
@@ -187,13 +181,6 @@ export const GameCarouselSection = ({
 						align: "start",
 						loop: true,
 					}}
-					plugins={[
-						Autoplay({
-							delay: 3000,
-							stopOnInteraction: true,
-							stopOnMouseEnter: true,
-						}),
-					]}
 					className="w-full"
 				>
 					{/* SECTION HEADER WITH CONTROLS */}

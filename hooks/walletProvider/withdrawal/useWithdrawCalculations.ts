@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useAppStore } from "@/store/store";
 import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import TransactionService from "@/services/walletProvider/TransactionService";
+import { useDebounce } from "../useDebounce";
 
 // --- HOOK'S "CONTRACT" ---
 interface UseWithdrawCalculationsProps {
@@ -23,22 +24,23 @@ export const useWithdrawCalculations = ({
 }: UseWithdrawCalculationsProps) => {
 	// --- 1. Get Dependencies from State and Context ---
 	const { chainId } = useAppStore((state) => state.blockchain.network);
-	const { authToken, isLoggedIn } = useDynamicAuth();
+	const { authToken } = useDynamicAuth();
+
+	// Debounce the withdrawal amount to prevent excessive calculations (300ms)
+	const debouncedWithdrawAmount = useDebounce(withdrawAmount, 300);
 
 	// --- 2. Manage the Hook's Own State ---
-	const [fee, setFee] = useState<number | null>(null);
+	const [fee, setFee] = useState<number>(0);
 	const [totalPayout, setTotalPayout] = useState(0);
-	const [minWithdrawAmount, setMinWithdrawAmount] = useState<number | null>(
-		null
-	);
+	const [minWithdrawAmount, setMinWithdrawAmount] = useState<number>(0);
 	const [isFetchingMinWithdrawAmount, setIsFetchingMinWithdrawAmount] =
 		useState(false);
 
 	// --- 3. The Core Logic Effects ---
 
-	// Effect 1: Synchronous Fee and Payout calculation
+	// Effect 1: Synchronous Fee and Payout calculation (debounced)
 	useEffect(() => {
-		const amount = parseFloat(withdrawAmount);
+		const amount = parseFloat(debouncedWithdrawAmount);
 		if (isNaN(amount) || amount <= 0) {
 			setTotalPayout(0);
 			return;
@@ -46,20 +48,11 @@ export const useWithdrawCalculations = ({
 		const calculatedFee = amount * 0.01; // 1% fee
 		const calculatedPayout = amount - calculatedFee;
 		setTotalPayout(calculatedPayout);
-	}, [withdrawAmount]);
+	}, [debouncedWithdrawAmount]);
 
 	// Effect 2: Asynchronous fetching of the DYNAMIC Minimum Withdrawal Amount
 	useEffect(() => {
-		let isActive = true;
-
 		const fetchWithdrawConfig = async () => {
-			// Guard clause: Do not run if essential info is missing.
-			if (!isLoggedIn || !authToken || !chainId) {
-				setMinWithdrawAmount(null);
-				return;
-			}
-
-			setIsFetchingMinWithdrawAmount(true);
 			try {
 				const transactionService = TransactionService.getInstance();
 				const response = await transactionService.getWalletAgentData(
@@ -68,7 +61,6 @@ export const useWithdrawCalculations = ({
 				);
 
 				if (
-					isActive &&
 					!response.error &&
 					response.data?.setting?.withdraw &&
 					response.data?.setting?.fee
@@ -77,38 +69,24 @@ export const useWithdrawCalculations = ({
 						response.data.setting.withdraw
 					);
 					const feeAmount = parseFloat(response.data.setting.fee);
-					// console.log("minWithdrawalAmount from API", minAmount);
-					setMinWithdrawAmount(isNaN(minAmount) ? null : minAmount);
-					setFee(isNaN(feeAmount) ? null : feeAmount);
-					// console.log(
-					// 	"minWithdrawalAmount set to",
-					// 	minWithdrawAmount
-					// );
-				} else {
-					setMinWithdrawAmount(null);
-					setFee(null);
+
+					setMinWithdrawAmount(Number(minAmount));
+					setFee(Number(feeAmount));
 				}
+				setIsFetchingMinWithdrawAmount(false);
 			} catch (error) {
-				if (isActive) {
-					setMinWithdrawAmount(null);
-					setFee(null);
-				}
+				setIsFetchingMinWithdrawAmount(false);
 				console.error("Failed to fetch wallet agent config:", error);
-			} finally {
-				if (isActive) setIsFetchingMinWithdrawAmount(false);
 			}
 		};
 
+		setIsFetchingMinWithdrawAmount(true);
 		fetchWithdrawConfig();
-
-		return () => {
-			isActive = false;
-		};
-	}, [chainId, authToken, isLoggedIn]);
+	}, [chainId]);
 
 	// --- 4. Return the Final, Public API ---
 	return {
-		fee: fee as number, // Fee is now either a number or fetched from API
+		fee: fee as number, // The calculated fee
 		totalPayout,
 		minWithdrawAmount: minWithdrawAmount as number, // The dynamic, API-driven value
 		isFetchingMinWithdrawAmount, // A loading state for the UI to consume

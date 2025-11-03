@@ -93,7 +93,6 @@ import { RatesTab } from "@/components/features/affiliate/rates-tab/rates-tab";
 import { CalculatorTab } from "@/components/features/affiliate/calculator-tab/calculator-tab";
 // import { RefreshCw } from "lucide-react";
 import { useAppStore } from "@/store/store";
-import { toast } from "sonner";
 import { useT } from "@/hooks/useI18n";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRefresh } from "@fortawesome/pro-light-svg-icons";
@@ -103,7 +102,9 @@ export default function AffiliatePage() {
 	const t = useT();
 	const { user, isLoading } = useDynamicAuth();
 	const [isRefreshing, setIsRefreshing] = useState(false);
+	const [refreshCooldown, setRefreshCooldown] = useState(0);
 	const [activeTab, setActiveTab] = useState<string>("dashboard");
+	const cooldownTimerRef = useRef<NodeJS.Timeout | null>(null);
 
 	// Pre-calculated widths for each tab (approximate, will be refined by useEffect)
 	const getTabStyle = (tab: string) => {
@@ -163,7 +164,25 @@ export default function AffiliatePage() {
 
 	// Manual refresh function
 	const handleRefresh = async () => {
+		// If already refreshing or in cooldown, do nothing
+		if (isRefreshing || refreshCooldown > 0) return;
+
 		setIsRefreshing(true);
+		setRefreshCooldown(10); // Start 10 second cooldown
+
+		// Start countdown timer
+		cooldownTimerRef.current = setInterval(() => {
+			setRefreshCooldown((prev) => {
+				if (prev <= 1) {
+					if (cooldownTimerRef.current) {
+						clearInterval(cooldownTimerRef.current);
+						cooldownTimerRef.current = null;
+					}
+					return 0;
+				}
+				return prev - 1;
+			});
+		}, 1000);
 
 		// Track success/failure for each refresh operation
 		const results = {
@@ -192,23 +211,6 @@ export default function AffiliatePage() {
 			results.referrals = true;
 		} catch (error) {
 			console.error("Failed to refresh referrals data:", error);
-		}
-
-		// Show appropriate feedback based on results
-		const successCount = Object.values(results).filter(Boolean).length;
-		const totalCount = Object.keys(results).length;
-
-		if (successCount === totalCount) {
-			toast.success(t("affiliate.refreshAllSuccess"));
-		} else if (successCount > 0) {
-			toast.success(
-				t("affiliate.refreshPartial", {
-					success: successCount,
-					total: totalCount,
-				})
-			);
-		} else {
-			toast.error(t("affiliate.refreshFailed"));
 		}
 
 		setIsRefreshing(false);
@@ -256,7 +258,7 @@ export default function AffiliatePage() {
 					</div>
 					<Button
 						onClick={handleRefresh}
-						disabled={isRefreshing}
+						disabled={isRefreshing || refreshCooldown > 0}
 						variant="outline"
 						size="sm"
 						className="flex items-center gap-2 hover:bg-primary/10 hover:border-primary/30 transition-colors"
@@ -272,6 +274,8 @@ export default function AffiliatePage() {
 						<span className="hidden xs:inline">
 							{isRefreshing
 								? t("affiliate.refreshing")
+								: refreshCooldown > 0
+								? `${refreshCooldown}s`
 								: t("affiliate.refresh")}
 						</span>
 					</Button>

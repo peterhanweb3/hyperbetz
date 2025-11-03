@@ -4,6 +4,7 @@ import {
 	useState,
 	useEffect,
 	useCallback,
+	useMemo,
 	ReactNode,
 } from "react";
 import {
@@ -30,6 +31,7 @@ import { TokenStateSynchronizer } from "@/components/common/synchronizers/token-
 import { TransactionStateSynchronizer } from "@/components/common/synchronizers/transactions-state-synchronizer";
 import { WebSocketStateSynchronizer } from "@/components/common/synchronizers/websocket-state-synchronizer";
 import { generateUserAvatarAsync } from "@/lib/utils/features/live-chat/avatar-generator";
+import { broadcastLogout } from "@/hooks/use-cross-tab-logout";
 
 // 1. CREATE THE CONTEXT
 // The context is created with an undefined initial value.
@@ -52,8 +54,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 	const [isAuthCheckComplete, setIsAuthCheckComplete] = useState(false);
 	const [showLoginModal, setShowLoginModal] = useState(false);
 	const [accountStatus, setAccountStatus] = useState<AccountStatus>("guest");
-	const storageService = LocalStorageService.getInstance();
-	const apiService = ApiService.getInstance();
+	const storageService = useMemo(() => LocalStorageService.getInstance(), []);
+	const apiService = useMemo(() => ApiService.getInstance(), []);
 
 	const initializeGameList = useAppStore(
 		(state) => state.game.list.initializeGameList
@@ -175,28 +177,14 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 			// 	setIsAuthCheckComplete(true);
 			// }
 		},
-		[primaryWallet]
+		[primaryWallet, handleFetchOrSetTemporaryUser]
 		// [isLoggedIn, user]
 	);
 
-	const onRegisterSubmit = async (nickname: string, referrer_id?: string) => {
-		if (!primaryWallet?.address || !authToken) {
-			throw new Error("Wallet address or auth token is not available.");
-		}
-		const requestBody: RegisterWalletRequestBody = {
-			wallet_address: primaryWallet.address,
-			nickname: nickname,
-			referrer_id: referrer_id ? referrer_id : "",
-			login_type: "wallet", //this is faulty for now, I have to ask dhiraj from where shoud login_type be taken
-		};
-		await apiService.registerWallet(requestBody, authToken);
-		await refreshUserData(); // Re-fetch will update status to 'authenticated' and close modal
-	};
-
-	const login = () => {
+	const login = useCallback(() => {
 		setShowAuthFlow(true);
 		setShowLoginModal(false);
-	};
+	}, [setShowAuthFlow, setShowLoginModal]);
 
 	const clearTransactions = useAppStore(
 		(state) => state.blockchain.transaction._updateAndPersist
@@ -206,6 +194,15 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 		console.log("Logging out user");
 
 		try {
+			if (typeof window === "undefined") {
+				await handleLogOut();
+				clearTransactions([]);
+				return;
+			}
+
+			// Broadcast logout to all tabs BEFORE clearing data
+			broadcastLogout();
+
 			// Clear specific user data from localStorage
 			const userDataKeys = [
 				"referralId",
@@ -238,37 +235,72 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
 			// Clear transaction store
 			clearTransactions([]);
-
-			console.log(
-				"User logged out successfully and localStorage cleared"
-			);
 		} catch (error) {
 			console.error("Error during logout:", error);
 		}
 	}, [handleLogOut, clearTransactions]);
-	const refreshUserData = async (chainId?: number) => {
-		if (isLoggedIn) {
-			await handleFetchOrSetTemporaryUser(chainId);
-		}
-	};
+	const refreshUserData = useCallback(
+		async (chainId?: number) => {
+			if (isLoggedIn) {
+				await handleFetchOrSetTemporaryUser(chainId);
+			}
+		},
+		[handleFetchOrSetTemporaryUser, isLoggedIn]
+	);
+
+	const onRegisterSubmit = useCallback(
+		async (nickname: string, referrer_id?: string) => {
+			if (!primaryWallet?.address || !authToken) {
+				throw new Error(
+					"Wallet address or auth token is not available."
+				);
+			}
+			const requestBody: RegisterWalletRequestBody = {
+				wallet_address: primaryWallet.address,
+				nickname: nickname,
+				referrer_id: referrer_id ? referrer_id : "",
+				login_type: "wallet", //this is faulty for now, I have to ask dhiraj from where shoud login_type be taken
+			};
+			await apiService.registerWallet(requestBody, authToken);
+			await refreshUserData(); // Re-fetch will update status to 'authenticated' and close modal
+		},
+		[apiService, authToken, primaryWallet?.address, refreshUserData]
+	);
 
 	// The value object passed to the provider
-	const value: AuthContextType = {
-		user,
-		userData,
-		isLoggedIn,
-		isWalletConnected: isLoggedIn,
-		isLoading,
-		isAuthCheckComplete,
-		authToken: authToken as string,
-		login,
-		logout,
-		refreshUserData,
-		showLoginModal,
-		setShowLoginModal,
-		accountStatus,
-		onRegisterSubmit,
-	};
+	const value: AuthContextType = useMemo(
+		() => ({
+			user,
+			userData,
+			isLoggedIn,
+			isWalletConnected: isLoggedIn,
+			isLoading,
+			isAuthCheckComplete,
+			authToken: authToken as string,
+			login,
+			logout,
+			refreshUserData,
+			showLoginModal,
+			setShowLoginModal,
+			accountStatus,
+			onRegisterSubmit,
+		}),
+		[
+			accountStatus,
+			authToken,
+			isAuthCheckComplete,
+			isLoading,
+			isLoggedIn,
+			login,
+			logout,
+			onRegisterSubmit,
+			refreshUserData,
+			setShowLoginModal,
+			showLoginModal,
+			user,
+			userData,
+		]
+	);
 
 	return (
 		<AuthContext.Provider value={value}>

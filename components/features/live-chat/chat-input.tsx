@@ -26,8 +26,8 @@ interface ChatInputProps {
 	onInputChange: (value: string) => void;
 	onSendMessage: () => void;
 	onEmojiSelect: (emoji: string) => void;
-	onGifSelect: (gif: { url: string; title: string }) => void;
-	onImageUpload: (file: File, caption: string) => void;
+	onGifSelect?: (gif: { url: string; title: string }) => void;
+	onImageUpload?: (file: File, caption: string) => void;
 	messages: Message[];
 	replyingTo: Message | null;
 	onCancelReply: () => void;
@@ -53,6 +53,21 @@ export function ChatInput({
 	const t = useTranslations("chat");
 	const fileInputRef = React.useRef<HTMLInputElement>(null);
 	const tagSuggestionsRef = React.useRef<HTMLDivElement>(null);
+
+	const featureFlags = React.useMemo(
+		() => ({
+			imageUpload: process.env.NEXT_PUBLIC_ENABLE_CHAT_IMAGE === "true",
+			gifSending: process.env.NEXT_PUBLIC_ENABLE_CHAT_GIFS === "true",
+		}),
+		[]
+	);
+
+	const handleGifSelectSafe = React.useCallback(
+		(gif: { url: string; title: string }) => {
+			onGifSelect?.(gif);
+		},
+		[onGifSelect]
+	);
 
 	// Tag suggestion states
 	const [showTagSuggestions, setShowTagSuggestions] = React.useState(false);
@@ -244,6 +259,9 @@ export function ChatInput({
 	};
 
 	const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+		if (!featureFlags.imageUpload || !onImageUpload) {
+			return;
+		}
 		const file = e.target.files?.[0];
 		if (!file || disabled) return;
 
@@ -259,7 +277,7 @@ export function ChatInput({
 	};
 
 	const confirmImageUpload = () => {
-		if (!pendingImage) return;
+		if (!pendingImage || !onImageUpload) return;
 		onImageUpload(pendingImage.file, inputValue);
 		onInputChange("");
 		setShowImageConfirm(false);
@@ -338,26 +356,31 @@ export function ChatInput({
 
 						<div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
 							{/* File Upload */}
-							<input
-								ref={fileInputRef}
-								type="file"
-								accept="image/*"
-								onChange={handleFileUpload}
-								className="hidden"
-							/>
-							<Button
-								variant="ghost"
-								size="sm"
-								className="h-6 w-6 p-0 text-muted-foreground hover:text-primary 
-                           hover:bg-primary/10 rounded-full transition-all duration-200 
-                           casino-input-button"
-								onClick={() =>
-									!disabled && fileInputRef.current?.click()
-								}
-								disabled={disabled}
-							>
-								<Upload className="h-4 w-4" />
-							</Button>
+							{featureFlags.imageUpload && (
+								<>
+									<input
+										ref={fileInputRef}
+										type="file"
+										accept="image/*"
+										onChange={handleFileUpload}
+										className="hidden"
+									/>
+									<Button
+										variant="ghost"
+										size="sm"
+										className="h-6 w-6 p-0 text-muted-foreground hover:text-primary 
+		                           hover:bg-primary/10 rounded-full transition-all duration-200 
+		                           casino-input-button"
+										onClick={() =>
+											!disabled &&
+											fileInputRef.current?.click()
+										}
+										disabled={disabled}
+									>
+										<Upload className="h-4 w-4" />
+									</Button>
+								</>
+							)}
 
 							{/* Emoji / GIF Picker */}
 							<Popover>
@@ -381,7 +404,8 @@ export function ChatInput({
 								>
 									<EmojiGifPicker
 										onEmojiSelect={onEmojiSelect}
-										onGifSelect={onGifSelect}
+										onGifSelect={handleGifSelectSafe}
+										enableGifs={featureFlags.gifSending}
 									/>
 								</PopoverContent>
 							</Popover>
@@ -402,12 +426,14 @@ export function ChatInput({
 				</div>
 
 				{/* Image Upload Dialog */}
-				<ImageUploadDialog
-					imageUrl={pendingImage?.url || ""}
-					onConfirm={confirmImageUpload}
-					onCancel={cancelImageUpload}
-					visible={showImageConfirm}
-				/>
+				{featureFlags.imageUpload && (
+					<ImageUploadDialog
+						imageUrl={pendingImage?.url || ""}
+						onConfirm={confirmImageUpload}
+						onCancel={cancelImageUpload}
+						visible={showImageConfirm}
+					/>
+				)}
 			</div>
 		</div>
 	);

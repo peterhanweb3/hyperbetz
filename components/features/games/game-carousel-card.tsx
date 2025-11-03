@@ -104,6 +104,9 @@ const GameCardComponent = ({
 						alt={game.game_name}
 						fill
 						className="transition-transform duration-700 ease-out group-hover:scale-110"
+						sizes="(max-width: 640px) 45vw, (max-width: 1024px) 25vw, (max-width: 1280px) 18vw, 240px"
+						loading="lazy"
+						quality={70}
 					/>
 
 					{/* Gradient overlay for better text readability */}

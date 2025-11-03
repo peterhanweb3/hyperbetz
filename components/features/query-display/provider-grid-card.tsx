@@ -55,7 +55,7 @@ export const ProviderGridCard = ({
 						{name}
 					</h3>
 					<div className="text-xs text-muted-foreground">
-						{gameCount} {tGames("count", { count: gameCount })}
+						{tGames("count", { count: gameCount })}
 					</div>
 				</div>
 

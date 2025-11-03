@@ -29,6 +29,7 @@ import {
 	faTv,
 } from "@fortawesome/pro-light-svg-icons";
 import { LobbySlider } from "@/components/common/banners/slider/lobby-slider";
+import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 
 // Mock data for hero banner
 const heroImages = [
@@ -40,18 +41,21 @@ const heroReferralLinks = ["deposit", "affiliate"];
 
 export default function LobbyPage() {
 	const t = useT();
-	// Get primary wallet address from store
-	const { primaryWallet } = useDynamicContext();
 	const router = useRouter();
+	const { primaryWallet } = useDynamicContext();
+	const { isLoggedIn, isLoading: isAuthLoading } = useDynamicAuth();
 
 	const primaryWalletAddress = primaryWallet?.address || "";
 
-	// if user not logged in redirect to home
+	// Redirect guests back to home once auth state is resolved
 	useEffect(() => {
-		if (!primaryWalletAddress) {
-			router.push("/");
+		if (isAuthLoading) {
+			return;
 		}
-	}, [primaryWalletAddress, router]);
+		if (!isLoggedIn) {
+			router.replace("/");
+		}
+	}, [isAuthLoading, isLoggedIn, router]);
 
 	// Get game data from store
 	const allGames = useAppStore((state) => state.game.list.games);

@@ -37,7 +37,6 @@ export const WithdrawalSuccessModal = (props: WithdrawalSuccessModalProps) => {
 	const screenshotRef = useRef<HTMLDivElement>(null);
 	const [image, setImage] = useState<Blob | null>(null);
 	const [isGeneratingScreenshot, setIsGeneratingScreenshot] = useState(false);
-	console.log(Number(withdrawAmount).toFixed(3));
 	const { Image } = useQRCode();
 	const shareUrl = `${window.location.origin}/?ref=${user?.referralId}`;
 	const shareText = t("successMessage", {
@@ -251,9 +250,11 @@ export const WithdrawalSuccessModal = (props: WithdrawalSuccessModalProps) => {
 								{/* ref link */}
 								<div className="text-xs sm:text-sm text-gray-400 max-w-xs w-full">
 									{`${window.location.origin}/?ref=${user?.referralId}`}
-									<Copy className="inline-block h-3 w-3 text-purple-500 ml-1 cursor-pointer" onClick={handleCopyReferral} />
+									<Copy
+										className="inline-block h-3 w-3 text-purple-500 ml-1 cursor-pointer"
+										onClick={handleCopyReferral}
+									/>
 								</div>
-
 							</div>
 
 							{/* QR Code */}
@@ -275,9 +276,12 @@ export const WithdrawalSuccessModal = (props: WithdrawalSuccessModalProps) => {
 									/>
 									{/* show ref under qr */}
 								</div>
-								<div className="text-sm text-center text-white mt-1" onClick={handleCopyReferral}>
-									{user?.referralId} <Copy className="inline-block h-3 w-3 text-purple-500 ml-1" />
-
+								<div
+									className="text-sm text-center text-white mt-1"
+									onClick={handleCopyReferral}
+								>
+									{user?.referralId}{" "}
+									<Copy className="inline-block h-3 w-3 text-purple-500 ml-1" />
 								</div>
 							</div>
 						</div>

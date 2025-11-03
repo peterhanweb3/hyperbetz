@@ -13,8 +13,9 @@ export interface UseBonusDashboardResult {
 	isLoading: boolean;
 	isClaiming: boolean;
 	isClaimDisabled: boolean;
-	handleClaim: () => Promise<void>;
+	handleClaim: () => Promise<number | null>;
 	refresh: (force?: boolean) => Promise<void>;
+	lastClaimAmount: number | null;
 }
 
 export default function useBonusDashboard(): UseBonusDashboardResult {
@@ -55,8 +56,13 @@ export default function useBonusDashboard(): UseBonusDashboardResult {
 		dashboardSlice.status === "loading" || ratesSlice.status === "loading";
 	const isClaiming = claimSlice.isClaiming;
 	const handleClaim = claimSlice.claimBonus;
-	const refresh = async (force?: boolean) => {
-		await Promise.all([fetchDashboard(force), fetchRates(force)]);
+	const lastClaimAmount = claimSlice.lastClaimAmount;
+	const refresh = async (force: boolean = true) => {
+		try {
+			await Promise.all([fetchDashboard(force), fetchRates(force)]);
+		} catch (error) {
+			console.error("Failed to refresh bonus data:", error);
+		}
 	};
 	const isClaimDisabled =
 		isClaiming ||
@@ -71,6 +77,7 @@ export default function useBonusDashboard(): UseBonusDashboardResult {
 		isClaiming,
 		isClaimDisabled,
 		handleClaim,
+		lastClaimAmount,
 		refresh,
 	};
 }

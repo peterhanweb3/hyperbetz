@@ -70,7 +70,7 @@ const initialState: BetHistorySliceState = {
 	status: "idle",
 	lastFetched: null,
 	page: 1,
-	pageSize: 10,
+	pageSize: 20,
 	grandTotalBet: 0,
 	grandTotalWinLose: 0,
 };
@@ -182,7 +182,7 @@ export const createBetHistorySlice: AppStateCreator<
 			const requestBody: GetBetHistoryRequestBody = {
 				username: user.username,
 				from_date: currentState.filters.fromDate,
-				to_date: currentState.filters.toDate,
+				to_date: `${currentState.filters.toDate} 23:59:59`,
 				vendor_name: currentState.filters.vendorName || "", // Ensure empty string if not set
 				limit: currentState.pageSize,
 				page_number: currentState.page,

@@ -7,7 +7,7 @@
 		"viewAll": "View All"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "Toggle Sidebar",
@@ -22,7 +22,8 @@
 		"winLoss": "Win/Loss",
 		"affiliate": "Affiliate",
 		"logout": "Log out",
-		"balance": "Balance"
+		"balance": "Balance",
+		"turnoverBonus": "Turnover Bonus"
 	},
 	"navigation": {
 		"home": "Home",
@@ -428,6 +429,7 @@
 		"refreshFailed": "Failed to refresh data. Please try again.",
 		"dashboard": {
 			"title": "Affiliate Dashboard",
+			"claimButtonTitle": "Claim",
 			"subtitle": "Track your referrals, earnings, and commission performance",
 			"performanceOverview": "Performance Overview",
 			"referralManagement": "Referral Management",
@@ -436,6 +438,7 @@
 			"claim": "Claim",
 			"claiming": "Claiming...",
 			"totalIncome": "Total Income",
+			"claimButtonTitle": "Claim Bonus",
 			"totalReferrals": "Total Referrals",
 			"usersUnit": "users",
 			"yourReferralLinks": "Your Referral Links",
@@ -696,6 +699,29 @@
 			"calcFor": "Calculating bonus for ${amount} wager",
 			"totalPotential": "Total Potential Bonus:",
 			"combinedAtTier": "Combined bonus from all game types at Tier {level}"
+		},
+		"claimSuccessModal": {
+			"title": "Claim Success",
+			"statusCompleted": "Completed",
+			"statusOnChain": "On-Chain",
+			"claimAmount": "Claim Amount",
+			"logoAlt": "HyperBetz Logo",
+			"backgroundAlt": "Claim success background",
+			"creatingMagic": "Creating Magic...",
+			"downloadShare": "Download & Share",
+			"spreadTheWin": "SPREAD THE WIN",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "Telegram",
+			"socialReddit": "Reddit",
+			"socialMore": "More",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "Referral link copied!",
+			"referralLinkCopyFailed": "Failed to copy referral link",
+			"screenshotFailed": "Screenshot failed. Please try again or use a different browser.",
+			"shareTextCopied": "Share text copied to clipboard!",
+			"shareFailed": "Share failed. Please try again."
 		}
 	},
 	"debug": {
@@ -802,12 +828,15 @@
 	},
 	"walletProvider": {
 		"transactionModal": {
+			"title": "WALLET",
 			"tabs": {
 				"deposit": "Deposit",
 				"tip": "Tip",
 				"withdraw": "Withdraw",
 				"swap": "Swap",
-				"walletInfo": "Wallet"
+				"walletInfo": "Wallet",
+				"emailWallet": "Email Wallet",
+				"wallet": "Wallet"
 			},
 			"mobileDropdown": {
 				"emailWallet": "Email Wallet",
@@ -849,6 +878,7 @@
 			"enterAmount": "Enter Amount",
 			"selectToken": "Select token",
 			"max": "Max",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} is reserved to cover gas fees and avoid transaction failure",
 			"balance": "Balance:",
 			"calculating": "Calculating...",
 			"approxUsd": "~ ${amount} USD",
@@ -882,7 +912,9 @@
 			"minPrefix": "Minimum",
 			"balance": "Balance:",
 			"max": "Max",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} is reserved to cover gas fees and avoid transaction failure",
 			"approxUsd": "~ ${amount} USD",
+			"tipPanelWarningText": "Tips are voluntary and non-refundable.",
 			"emailWalletAddress": "Email Wallet Address",
 			"errors": {
 				"selectTokenAndAmount": "Please select a token and enter an amount.",
@@ -932,11 +964,12 @@
 			"set": "Set",
 			"currentSlippage": "Current slippage",
 			"swapSuccessful": "Swap Successful!",
-			"transactionConfirmed": "Your transaction has been confirmed",
+			"transactionConfirmed": "Your transaction has been submitted",
 			"hash": "Hash",
 			"newSwap": "New Swap",
 			"youPay": "You pay",
 			"max": "Max",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} is reserved to cover gas fees and avoid transaction failure",
 			"low": "Low",
 			"amountPlaceholder": "0",
 			"selectToken": "Select Token",
@@ -970,11 +1003,14 @@
 		"depositPending": {
 			"confirmedTitle": "Deposit Confirmed!",
 			"submittedTitle": "Transaction Submitted",
+			"failedTitle": "Transaction Failed",
 			"confirmedDesc": "Your balance has been updated.",
 			"submittedDesc": "Waiting for blockchain confirmation. This can take a few minutes.",
+			"failedDesc": "Your transaction has failed. Please try again.",
 			"viewOnExplorer": "View on Explorer",
 			"newDepositConfirmed": "Make Another Deposit",
-			"newDepositPending": "Start a new deposit"
+			"newDepositPending": "Start a new deposit",
+			"newDepositFailed": "Try Again"
 		},
 		"withdrawPanel": {
 			"resetForm": "Reset Form",
@@ -988,6 +1024,7 @@
 			"insufficientBalance": "Insufficient balance",
 			"minimumIs": "Minimum is {min}",
 			"minLabel": "Min:",
+			"calculating": "Calculating",
 			"emailWalletAddress": "Email Wallet Address",
 			"walletAddress": "Wallet Address",
 			"errors": {
@@ -1008,7 +1045,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Withdrawal Successful!",
-			"successMessage": "🎉 Just withdrew {withdrawAmount} {tokenSymbol} from Meme Win! 🚀 Join the winning streak at {shareUrl}",
+			"successMessage": "🎉 Just withdrew {withdrawAmount} {tokenSymbol} from HyperBetz! 🚀 Join the winning streak at {shareUrl}",
 			"withdrawnAmount": "Withdrawn Amount",
 			"shareText": "Share",
 			"subText": "🚀 JOIN THE WINNING STREAK! 🚀",
@@ -1017,7 +1054,7 @@
 			"download": "Download Image",
 			"close": "Close",
 			"copiedToClipboard": "Share Link Copied successfully",
-			"userName": "MemeWin Player",
+			"userName": "HyperBetz Player",
 			"status": "Completed",
 			"entryPrice": "Withdrawal Amount",
 			"lastPrice": "Token Symbol",
@@ -1050,7 +1087,7 @@
 		"pageTitle": "All Games",
 		"playNow": "Play Now",
 		"byProvider": "By {name}",
-		"count": "{count, plural, one {Game} other {Games}}",
+		"count": "{count} Games",
 		"noResults": "No games found matching your criteria.",
 		"errorLoading": "Could not load games. Please try again later.",
 		"slots": "Slots",
@@ -1136,7 +1173,7 @@
 			"casino": {
 				"title": "Casino",
 				"badge": "590+ GAMES",
-				"desc": "Enjoy MemeWin Originals and other casino games from top providers.",
+				"desc": "Enjoy HyperBetz Originals and other casino games from top providers.",
 				"link": "Go to Casino"
 			},
 			"slots": {

@@ -151,8 +151,8 @@ export const ProviderPageLayout = () => {
 	return (
 		<div className="space-y-6">
 			<div className="flex sticky top-16 flex-col  items-start gap-4 p-4 mb-8 border w-full rounded-lg bg-card">
-				<div className="flex items-center justify-between gap-2 w-full">
-					<h1 className="text-2xl lg:text-3xl tracking-tight ">
+				<div className="md:flex block items-center justify-between gap-2 w-full">
+					<h1 className="text-2xl lg:text-3xl text-center md:text-start mb-4 md:mb-0 tracking-tight ">
 						{getHeaderConfig.title}
 					</h1>
 

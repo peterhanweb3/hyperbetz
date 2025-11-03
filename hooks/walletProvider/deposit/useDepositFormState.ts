@@ -13,15 +13,14 @@ export const useDepositFormState = () => {
 
 	// --- DERIVED STATE ---
 	const formattedBalance = useMemo(() => {
-		console.log(selectedToken?.balance, "selectedToken?.balance");
 		if (!selectedToken?.balance) return "0.00";
-		return parseFloat(formatFullAmount(selectedToken.balance)).toFixed(6);
+		return sanitizeAmountInput(parseFloat(formatFullAmount(selectedToken.balance)).toString());
 	}, [selectedToken]);
 
 	// --- ACTIONS ---
 	const selectToken = useCallback((token: Token) => {
 		let tokenType = token.tags?.includes("native") ? "swap" : "direct";
-		if (["USDT", "USDC", "USD₮0","USDT0"].includes(token.symbol)) {
+		if (["USDT", "USDC", "USD₮0", "USDT0"].includes(token.symbol)) {
 			tokenType = "direct";
 		} else {
 			tokenType = "swap";

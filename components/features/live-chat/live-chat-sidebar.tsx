@@ -29,7 +29,7 @@ import {
 	convertWebSocketMessageToMessage,
 	validateChatMessage,
 } from "@/lib/utils/features/live-chat/websocket-message-converter";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import { useTranslations } from "@/lib/locale-provider";
 import LocalStorageService from "@/services/localStorageService";
 import { useDynamicAuth } from "@/hooks/useDynamicAuth";
@@ -71,7 +71,10 @@ export function LiveChatSidebar() {
 		useState<string>("disconnected");
 
 	// Get localStorage service instance
-	const localStorageService = LocalStorageService.getInstance();
+	const localStorageService = useMemo(
+		() => LocalStorageService.getInstance(),
+		[]
+	);
 	const sidebarRef = useRef<HTMLDivElement>(null);
 	const inputRef = useRef<HTMLInputElement>(null);
 	const [isHovering, setIsHovering] = useState(false);
@@ -348,22 +351,9 @@ export function LiveChatSidebar() {
 
 	// Load chat history when chat opens or component mounts
 	useEffect(() => {
-		console.log("💬 Chat history effect triggered:", {
-			isOpen,
-			historyLoaded,
-			messagesLength: messages.length,
-			currentUsername,
-		});
-
 		if (isOpen && !historyLoaded && messages.length === 0) {
-			console.log("🚀 Starting chat history load...");
 			loadChatHistory()
 				.then((historyMessages) => {
-					console.log(
-						"📥 Chat history loaded with",
-						historyMessages.length,
-						"messages"
-					);
 					if (historyMessages.length > 0) {
 						setMessages(historyMessages);
 					}
@@ -374,7 +364,13 @@ export function LiveChatSidebar() {
 					setHistoryLoaded(true); // Mark as loaded even on error to prevent retries
 				});
 		}
-	}, [isOpen, loadChatHistory, messages.length, historyLoaded]);
+	}, [
+		currentUsername,
+		historyLoaded,
+		isOpen,
+		loadChatHistory,
+		messages.length,
+	]);
 
 	// Clear history error when it exists
 	useEffect(() => {

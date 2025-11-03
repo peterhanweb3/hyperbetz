@@ -1,7 +1,6 @@
 "use client";
-
 import { Button } from "@/components/ui/button";
-import { Loader2, CheckCircle } from "lucide-react";
+import { Loader2, CheckCircle, XCircle } from "lucide-react";
 import { useAppStore } from "@/store/store";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 import { useEffect, useState } from "react";
@@ -31,7 +30,10 @@ export const DepositTransactionPending = ({
 	);
 
 	const { primaryWallet } = useDynamicContext();
+
 	const isConfirmed = tx?.status === "confirmed";
+	const isFailed = tx?.status === "failed";
+	const showFailedMessage = isFailed || timeLeft === 0;
 
 	useEffect(() => {
 		primaryWallet?.connector
@@ -43,31 +45,40 @@ export const DepositTransactionPending = ({
 			});
 	}, [primaryWallet]);
 
-	console.log("Block Explorer URL:", blockExplorerUrl);
-
 	return (
 		<div className="text-center space-y-4">
-			{isConfirmed ? (
+			{showFailedMessage ? (
+				<XCircle className="mx-auto h-12 w-12 text-red-500" />
+			) : isConfirmed ? (
 				<CheckCircle className="mx-auto h-12 w-12 text-green-500" />
 			) : (
 				<Loader2 className="mx-auto h-12 w-12 animate-spin text-primary" />
 			)}
 
 			<h4 className="font-semibold text-lg">
-				{isConfirmed ? t("confirmedTitle") : t("submittedTitle")}
+				{showFailedMessage
+					? t("failedTitle")
+					: isConfirmed
+					? t("confirmedTitle")
+					: t("submittedTitle")}
 			</h4>
+
 			<p className="text-sm text-muted-foreground">
-				{isConfirmed ? t("confirmedDesc") : t("submittedDesc")}
+				{showFailedMessage
+					? t("failedDesc")
+					: isConfirmed
+					? t("confirmedDesc")
+					: t("submittedDesc")}
 			</p>
 
 			{/* Countdown timer is only shown while pending */}
-			{!isConfirmed && (
+			{!isConfirmed && !showFailedMessage && (
 				<p className="text-2xl font-semibold">{timeLeft}s</p>
 			)}
 
 			{transactionHash && (
 				<a
-					href={`${blockExplorerUrl}/tx/${transactionHash}`} // This should be dynamic based on network
+					href={`${blockExplorerUrl}/tx/${transactionHash}`}
 					target="_blank"
 					rel="noopener noreferrer"
 					className="text-xs text-primary underline break-all block"
@@ -82,7 +93,9 @@ export const DepositTransactionPending = ({
 				size="sm"
 				className="mt-4"
 			>
-				{isConfirmed
+				{showFailedMessage
+					? t("newDepositFailed")
+					: isConfirmed
 					? t("newDepositConfirmed")
 					: t("newDepositPending")}
 			</Button>

@@ -180,7 +180,7 @@ export const useWithdraw = () => {
 		if (user?.pendingWd) return i18n.status.pendingWithdrawal();
 		if (isTransactionLoading || isLoadingTokens)
 			return i18n.status.processing();
-		if (!withdrawAmount || parseFloat(withdrawAmount) <= 0)
+		if (!withdrawAmount || Number(withdrawAmount) <= 0)
 			return i18n.errors.enterAmount();
 		if (isBelowMinimum)
 			return i18n.buttons.minimum(

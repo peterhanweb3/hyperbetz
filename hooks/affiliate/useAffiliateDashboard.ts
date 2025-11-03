@@ -55,8 +55,18 @@ export default function useAffiliateDashboard(): UseAffiliateDashboardResult {
 		downlineSlice.status === "loading" || ratesSlice.status === "loading";
 	const isClaiming = claimSlice.isClaiming;
 	const handleClaim = claimSlice.claimBonus;
-	const refresh = async (force?: boolean) => {
-		await Promise.all([fetchDownline(force), fetchRates(force)]);
+	const refresh = async (force: boolean = true) => {
+		try {
+			await fetchDownline(force);
+		} catch (error) {
+			console.error("Failed to fetch downline:", error);
+		}
+
+		try {
+			await fetchRates(force);
+		} catch (error) {
+			console.error("Failed to fetch rates:", error);
+		}
 	};
 	const isClaimDisabled =
 		isClaiming ||

@@ -798,7 +798,7 @@ async function main() {
 	const startTime = Date.now();
 	const client = new OpenAI({
 		apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
-	});
+        });
 	const availableLanguages = await getAvailableLanguages(dictionaryDir);
 
 	try {

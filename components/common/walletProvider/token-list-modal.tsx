@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import {
 	Command,
@@ -30,6 +30,7 @@ interface TokenListModalProps {
 	onSelectToken: (token: Token | SearchTokenResult) => void;
 	showAllTokens?: boolean; // New optional prop
 	hideTopSection?: boolean;
+	// enableNetworkLogoIcon?: boolean;
 	// isTokenAllowed: boolean;
 }
 
@@ -39,7 +40,8 @@ export const TokenListModal = ({
 	onSelectToken,
 	showAllTokens = false, // Set default value to false
 	hideTopSection = false,
-}: // isTokenAllowed,
+}: // enableNetworkLogoIcon=false,
+// isTokenAllowed,
 TokenListModalProps) => {
 	const t = useTranslations("walletProvider.tokenList");
 	const { tokens, isTokensLoading, refreshTokens } = useTokens();
@@ -47,6 +49,22 @@ TokenListModalProps) => {
 	const [searchQuery, setSearchQuery] = useState("");
 	const { searchResults, isSearching } = useTokenSearch(searchQuery);
 	const { addTokenToMetamask } = useTokenActions();
+	const [isRefreshedDisabled, setIsRefreshedDisabled] = useState(false);
+
+	// Reset search query on close
+	useEffect(() => {
+		if (!isOpen) {
+			setSearchQuery("");
+		}
+	}, [isOpen]);
+
+	const handleRefreshTokens = async () => {
+		setIsRefreshedDisabled(true);
+		refreshTokens();
+		setTimeout(() => {
+			setIsRefreshedDisabled(false);
+		}, 10000);
+	};
 
 	const { ownedTokens, otherTokens } = useMemo(() => {
 		const lowerCaseQuery = searchQuery.toLowerCase();
@@ -71,28 +89,45 @@ TokenListModalProps) => {
 
 			return { ownedTokens: owned, otherTokens: other };
 		}
-
+		// console.log({ showAllTokens });
 		// If showAllTokens is true and there's no search query, show all tokens
 		if (showAllTokens) {
 			const owned = tokens.filter((t) => parseFloat(t.balance) > 0);
 			const other = tokens.filter((t) => parseFloat(t.balance) <= 0);
 
-			// Sort OWNED tokens by their balance in DESCENDING order.
-			owned.sort((a, b) => parseFloat(b.balance) - parseFloat(a.balance));
+			// short by balance x usd_price
+			owned.sort((a, b) => {
+				const aValue = parseFloat(a.balance) * parseFloat(a.usd_price);
+				const bValue = parseFloat(b.balance) * parseFloat(b.usd_price);
+				return bValue - aValue;
+			});
 
-			// Sort OTHER tokens alphabetically by their symbol.
 			other.sort((a, b) => a.symbol.localeCompare(b.symbol));
 
 			return { ownedTokens: owned, otherTokens: other };
 		}
 
-		// Default behavior: If no search query and showAllTokens is false, only show owned tokens
-		const ownedOnly = tokens.filter((t) => parseFloat(t.balance) > 0);
+		const owned = tokens.filter((t) => parseFloat(t.balance) > 0.000001);
+		// IF DEPOSIT
+		if (!hideTopSection) {
+			// remove usd_price = unavailable
+			owned.sort((a, b) => {
+				if (a.usd_price == "Unavailable") return 1;
+				if (b.usd_price == "Unavailable") return -1;
+				return 0;
+			});
+			// Sort by balance * usd_price
+			owned.sort((a, b) => {
+				const aValue = parseFloat(a.balance) * parseFloat(a.usd_price);
+				const bValue = parseFloat(b.balance) * parseFloat(b.usd_price);
+				return bValue - aValue;
+			});
+		} else {
+			// Sort by balance.
+			owned.sort((a, b) => parseFloat(b.balance) - parseFloat(a.balance));
+		}
 
-		// Sort by balance value in DESCENDING order
-		ownedOnly.sort((a, b) => parseFloat(b.balance) - parseFloat(a.balance));
-
-		return { ownedTokens: ownedOnly, otherTokens: [] };
+		return { ownedTokens: owned, otherTokens: [] };
 	}, [tokens, searchQuery, showAllTokens]);
 
 	const instantDepositTokens = useMemo(() => {
@@ -149,7 +184,6 @@ TokenListModalProps) => {
 												alt={token.symbol}
 												width={25}
 												height={25}
-												className=""
 											/>
 											{token.symbol}
 										</Button>
@@ -166,7 +200,8 @@ TokenListModalProps) => {
 										variant="ghost"
 										size="icon"
 										className="h-6 w-6"
-										onClick={refreshTokens}
+										onClick={handleRefreshTokens}
+										disabled={isRefreshedDisabled}
 									>
 										<FontAwesomeIcon
 											icon={faRefresh}
@@ -205,8 +240,20 @@ TokenListModalProps) => {
 
 						{isLoading ? (
 							<div className="space-y-2 p-2">
-								{[...Array(5)].map((_, i) => (
-									<Skeleton key={i} className="h-16 w-full" />
+								{[...Array(10)].map((_, i) => (
+									<div
+										key={i}
+										className="flex items-center justify-between p-2 rounded-md animate-pulse bg-secondary/10 h-16"
+									>
+										<div className="flex items-center gap-3">
+											<Skeleton className="w-8 h-8 rounded-full" />
+											<div className="space-y-1">
+												<Skeleton className="w-20 h-4 rounded-md" />
+												<Skeleton className="w-12 h-3 rounded-md" />
+											</div>
+										</div>
+										<Skeleton className="w-16 h-4 rounded-md" />
+									</div>
 								))}
 							</div>
 						) : showSearchResults ? (
@@ -214,7 +261,11 @@ TokenListModalProps) => {
 								{searchResults.map((token) => (
 									<SearchResultRow
 										key={token.address}
+										onAddToWallet={addTokenToMetamask}
 										token={token}
+										// enableNetworkLogoIcon={
+										// 	enableNetworkLogoIcon
+										// }
 										onSelect={onSelectToken}
 									/>
 								))}
@@ -238,6 +289,9 @@ TokenListModalProps) => {
 												onAddToWallet={
 													addTokenToMetamask
 												}
+												// enableNetworkLogoIcon={
+												// 	enableNetworkLogoIcon
+												// }
 												isTokenOwned={true}
 											/>
 										))}
@@ -257,6 +311,9 @@ TokenListModalProps) => {
 													onAddToWallet={
 														addTokenToMetamask
 													}
+													// enableNetworkLogoIcon={
+													// 	enableNetworkLogoIcon
+													// }
 													isTokenOwned={false}
 												/>
 											))}

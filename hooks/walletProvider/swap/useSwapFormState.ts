@@ -7,6 +7,7 @@ import { useState, useCallback } from "react";
 import React from "react";
 import { Token } from "@/types/blockchain/swap.types";
 import { UseSwapFormStateReturn } from "@/types/walletProvider/swap-hooks.types";
+import { sanitizeAmountInput } from "@/lib/utils";
 
 export const useSwapFormState = (): UseSwapFormStateReturn => {
 	// --- STATE ---
@@ -19,40 +20,6 @@ export const useSwapFormState = (): UseSwapFormStateReturn => {
 	// --- DERIVED STATE ---
 	const isValidSwap = Boolean(
 		fromToken && toToken && fromToken.address !== toToken.address
-	);
-
-	// --- ACTIONS ---
-
-	/**
-	 * Set the 'from' token with special handling to prevent same token selection
-	 */
-	const updateFromToken = useCallback(
-		(token: Token | null) => {
-			if (toToken && token && toToken.address === token.address) {
-				// If selecting the same token as 'to', swap them
-				// setFromToken(token);
-				setToToken(fromToken);
-			} else {
-				setFromToken(token);
-			}
-		},
-		[toToken, fromToken]
-	);
-
-	/**
-	 * Set the 'to' token with special handling to prevent same token selection
-	 */
-	const updateToToken = useCallback(
-		(token: Token | null) => {
-			if (fromToken && token && fromToken.address === token.address) {
-				// If selecting the same token as 'from', swap them
-				// setToToken(token);
-				setFromToken(toToken);
-			} else {
-				setToToken(token);
-			}
-		},
-		[fromToken, toToken]
 	);
 
 	/**
@@ -165,7 +132,8 @@ export const useSwapFormState = (): UseSwapFormStateReturn => {
 				if (maxAmount <= 0) {
 					setExchangeAmount("0");
 				} else {
-					setExchangeAmount(maxAmount.toString());
+					// setExchangeAmount(maxAmount.toString());
+					setExchangeAmount(sanitizeAmountInput(String(maxAmount), 6));
 				}
 				setReceivedAmount("");
 				setIsReversedQuote(false);
@@ -215,8 +183,8 @@ export const useSwapFormState = (): UseSwapFormStateReturn => {
 		isValidSwap,
 
 		// Actions
-		setFromToken: updateFromToken,
-		setToToken: updateToToken,
+		setFromToken,
+		setToToken,
 		switchTokens,
 		handleExchangeAmountChange,
 		handleReceivedAmountChange,

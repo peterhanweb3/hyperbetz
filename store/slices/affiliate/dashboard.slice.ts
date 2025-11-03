@@ -2,33 +2,33 @@ import { AppStateCreator } from "@/store/store";
 import ApiService from "@/services/apiService";
 import LocalStorageService from "@/services/localStorageService";
 import {
-  AffiliateRate,
-  GetDownlineResponse,
+	AffiliateRate,
+	GetDownlineResponse,
 } from "@/types/affiliate/affiliate.types";
 
 export type AffiliateLoadingStatus = "idle" | "loading" | "success" | "error";
 
 export interface AffiliateDashboardState {
-  downline: GetDownlineResponse | null;
-  rates: AffiliateRate[];
-  status: AffiliateLoadingStatus;
-  error: string | null;
-  lastFetched: number | null;
-  isClaiming: boolean;
-  isInitialized: boolean;
+	downline: GetDownlineResponse | null;
+	rates: AffiliateRate[];
+	status: AffiliateLoadingStatus;
+	error: string | null;
+	lastFetched: number | null;
+	isClaiming: boolean;
+	isInitialized: boolean;
 }
 
 export interface AffiliateDashboardActions {
-  initialize: (force?: boolean) => void;
-  fetchData: (force?: boolean) => Promise<void>;
-  claim: () => Promise<void>;
-  setDownline: (data: GetDownlineResponse) => void;
-  setRates: (rates: AffiliateRate[]) => void;
-  clear: () => void;
+	initialize: (force?: boolean) => void;
+	fetchData: (force?: boolean) => Promise<void>;
+	claim: () => Promise<void>;
+	setDownline: (data: GetDownlineResponse) => void;
+	setRates: (rates: AffiliateRate[]) => void;
+	clear: () => void;
 }
 
 export type AffiliateDashboardSlice = AffiliateDashboardState &
-  AffiliateDashboardActions;
+	AffiliateDashboardActions;
 
 const STALE_MS = 5 * 60 * 1000;
 const DOWNLINE_KEY = "affiliate_downline_cache_v1";
@@ -39,210 +39,224 @@ const META_KEY = "affiliate_meta_cache_v1";
 let fetchPromise: Promise<void> | null = null;
 
 interface CachedMeta {
-  downlineFetched?: number;
-  ratesFetched?: number;
+	downlineFetched?: number;
+	ratesFetched?: number;
 }
 
 const initialState: AffiliateDashboardState = {
-  downline: null,
-  rates: [],
-  status: "idle",
-  error: null,
-  lastFetched: null,
-  isClaiming: false,
-  isInitialized: false,
+	downline: null,
+	rates: [],
+	status: "idle",
+	error: null,
+	lastFetched: null,
+	isClaiming: false,
+	isInitialized: false,
 };
 
 export const createAffiliateDashboardSlice: AppStateCreator<
-  AffiliateDashboardSlice
-> = (set, get) => {
-  const slice = {
-    ...initialState,
+	AffiliateDashboardSlice
+> = (set, get) => ({
+	...initialState,
 
-    setDownline: (data: GetDownlineResponse) => {
-      set((state: any) => {
-        // This slice would be mounted as state.affiliate.dashboard if used
-        state.downline = data;
-        state.status = "success";
-        state.error = null;
-      });
-      const storage = LocalStorageService.getInstance();
-      const meta: CachedMeta = storage.getItem<CachedMeta>(META_KEY) || {};
-      meta.downlineFetched = Date.now();
-      storage.setItem(DOWNLINE_KEY, data);
-      storage.setItem(META_KEY, meta);
-    },
+	setDownline: (data: GetDownlineResponse) => {
+		set((state) => {
+			state.affiliate.dashboard.downline = data;
+			state.affiliate.dashboard.status = "success";
+			state.affiliate.dashboard.error = null;
+		});
+		const storage = LocalStorageService.getInstance();
+		const meta: CachedMeta = storage.getItem<CachedMeta>(META_KEY) || {};
+		meta.downlineFetched = Date.now();
+		storage.setItem(DOWNLINE_KEY, data);
+		storage.setItem(META_KEY, meta);
+	},
 
-    setRates: (rates: AffiliateRate[]) => {
-      set((state: any) => {
-        state.rates = rates;
-      });
-      const storage = LocalStorageService.getInstance();
-      const meta: CachedMeta = storage.getItem<CachedMeta>(META_KEY) || {};
-      meta.ratesFetched = Date.now();
-      storage.setItem(RATES_KEY, rates);
-      storage.setItem(META_KEY, meta);
-    },
+	setRates: (rates: AffiliateRate[]) => {
+		set((state) => {
+			state.affiliate.dashboard.rates = rates;
+		});
+		const storage = LocalStorageService.getInstance();
+		const meta: CachedMeta = storage.getItem<CachedMeta>(META_KEY) || {};
+		meta.ratesFetched = Date.now();
+		storage.setItem(RATES_KEY, rates);
+		storage.setItem(META_KEY, meta);
+	},
 
-    fetchData: async (force = false) => {
-      // Return existing promise if already fetching (deduplication)
-      if (fetchPromise && !force) {
-        return fetchPromise;
-      }
+	fetchData: async (force = false) => {
+		// Return existing promise if already fetching (deduplication)
+		if (fetchPromise && !force) {
+			return fetchPromise;
+		}
 
-      const currentSlice = get() as any;
-      if (currentSlice.status === "loading" && !force) return;
+		const currentSlice = get().affiliate.dashboard;
+		if (currentSlice.status === "loading" && !force) return;
 
-      const storage = LocalStorageService.getInstance();
-      const api = ApiService.getInstance();
-      const user = storage.getUserData();
-      const token = storage.getAuthToken();
-      const username = user?.username;
+		const storage = LocalStorageService.getInstance();
+		const api = ApiService.getInstance();
+		const user = storage.getUserData();
+		const token = storage.getAuthToken();
+		const username = user?.username;
 
-      if (!username || !token) return;
+		if (!username || !token) return;
 
-      const meta = storage.getItem<CachedMeta>(META_KEY) || {};
-      const now = Date.now();
-      const stale =
-        force ||
-        !meta.downlineFetched ||
-        !meta.ratesFetched ||
-        now - (meta.downlineFetched || 0) > STALE_MS ||
-        now - (meta.ratesFetched || 0) > STALE_MS;
+		const meta = storage.getItem<CachedMeta>(META_KEY) || {};
+		const now = Date.now();
+		const stale =
+			force ||
+			!meta.downlineFetched ||
+			!meta.ratesFetched ||
+			now - (meta.downlineFetched || 0) > STALE_MS ||
+			now - (meta.ratesFetched || 0) > STALE_MS;
 
-      if (!stale) return;
+		if (!stale) return;
 
-      // Create and store the fetch promise
-      fetchPromise = (async () => {
-        set((state: any) => {
-          state.status = "loading";
-          state.error = null;
-        });
+		// Create and store the fetch promise
+		fetchPromise = (async () => {
+			set((state) => {
+				state.affiliate.dashboard.status = "loading";
+				state.affiliate.dashboard.error = null;
+			});
 
-        try {
-          const [downlineResponse, ratesResponse] = await Promise.all([
-            api.getDownline(
-              {
-                username,
-                page_number: 1,
-                limit: 10,
-                order: "unclaimed_amount",
-              },
-              token
-            ),
-            api.getAffiliateRate(
-              { username, jwt_type: "dyn", api_key: token },
-              token
-            ),
-          ]);
+			try {
+				// Fetch downline first
+				const downlineResponse = await api.getDownline(
+					{
+						username,
+						page_number: 1,
+						limit: 10,
+						order: "unclaimed_amount",
+					},
+					token
+				);
 
-          if (!downlineResponse.error) slice.setDownline(downlineResponse);
-          if (!ratesResponse.error) slice.setRates(ratesResponse.data);
+				if (!downlineResponse.error) {
+					get().affiliate.dashboard.setDownline(downlineResponse);
+				}
 
-          set((state: any) => {
-            state.lastFetched = Date.now();
-          });
-        } catch (e) {
-          const msg =
-            e instanceof Error ? e.message : "Failed to load affiliate data";
-          set((state: any) => {
-            state.status = "error";
-            state.error = msg;
-          });
-        } finally {
-          // Clear the promise when done
-          fetchPromise = null;
-        }
-      })();
+				// Then fetch rates
+				const ratesResponse = await api.getAffiliateRate(
+					{ username, jwt_type: "dyn", api_key: token },
+					token
+				);
 
-      return fetchPromise;
-    },
+				if (!ratesResponse.error) {
+					get().affiliate.dashboard.setRates(ratesResponse.data);
+				}
 
-    initialize: (force = false) => {
-      const currentSlice = get() as any;
+				set((state) => {
+					state.affiliate.dashboard.lastFetched = Date.now();
+				});
+			} catch (e) {
+				const msg =
+					e instanceof Error
+						? e.message
+						: "Failed to load affiliate data";
+				set((state) => {
+					state.affiliate.dashboard.status = "error";
+					state.affiliate.dashboard.error = msg;
+				});
+			} finally {
+				// Clear the promise when done
+				fetchPromise = null;
+			}
+		})();
 
-      // Prevent multiple initializations
-      if (currentSlice.isInitialized && !force) return;
+		return fetchPromise;
+	},
 
-      set((state: any) => {
-        state.isInitialized = true;
-      });
+	initialize: (force = false) => {
+		const currentSlice = get().affiliate.dashboard;
 
-      const storage = LocalStorageService.getInstance();
-      try {
-        const cachedDownline =
-          storage.getItem<GetDownlineResponse>(DOWNLINE_KEY);
-        const cachedRates = storage.getItem<AffiliateRate[]>(RATES_KEY) || [];
-        const meta = storage.getItem<CachedMeta>(META_KEY);
+		// Prevent multiple initializations
+		if (currentSlice.isInitialized && !force) return;
 
-        if (cachedDownline) slice.setDownline(cachedDownline);
-        if (cachedRates.length) slice.setRates(cachedRates);
+		set((state) => {
+			state.affiliate.dashboard.isInitialized = true;
+		});
 
-        if (meta?.downlineFetched || meta?.ratesFetched) {
-          set((state: any) => {
-            state.lastFetched = Math.min(
-              meta.downlineFetched || Date.now(),
-              meta.ratesFetched || Date.now()
-            );
-          });
-        }
-      } catch {
-        /* ignore */
-      }
+		const storage = LocalStorageService.getInstance();
+		try {
+			const cachedDownline =
+				storage.getItem<GetDownlineResponse>(DOWNLINE_KEY);
+			const cachedRates =
+				storage.getItem<AffiliateRate[]>(RATES_KEY) || [];
+			const meta = storage.getItem<CachedMeta>(META_KEY);
 
-      // Only fetch if we don't have cached data or if it's stale
-      const hasValidCache =
-        currentSlice.downline && currentSlice.rates?.length > 0;
-      if (!hasValidCache || force) {
-        slice.fetchData(force);
-      }
-    },
+			if (cachedDownline) {
+				get().affiliate.dashboard.setDownline(cachedDownline);
+			}
+			if (cachedRates.length) {
+				get().affiliate.dashboard.setRates(cachedRates);
+			}
 
-    claim: async () => {
-      const storage = LocalStorageService.getInstance();
-      const api = ApiService.getInstance();
-      const user = storage.getUserData();
-      const token = storage.getAuthToken();
-      const username = user?.username;
-      const currentSlice = get() as any;
-      const { downline, isClaiming } = currentSlice;
-      if (
-        !username ||
-        !token ||
-        isClaiming ||
-        !downline ||
-        downline.total_unclaim <= 0
-      )
-        return;
-      set((state: any) => {
-        state.isClaiming = true;
-      });
-      try {
-        const res = await api.claimAffiliateBonus({ username }, token);
-        if (!res.error) await slice.fetchData(true);
-      } catch {
-        /* swallow */
-      } finally {
-        set((state: any) => {
-          state.isClaiming = false;
-        });
-      }
-    },
+			if (meta?.downlineFetched || meta?.ratesFetched) {
+				set((state) => {
+					state.affiliate.dashboard.lastFetched = Math.min(
+						meta.downlineFetched || Date.now(),
+						meta.ratesFetched || Date.now()
+					);
+				});
+			}
+		} catch {
+			/* ignore */
+		}
 
-    clear: () => {
-      set((state: any) => {
-        state.downline = initialState.downline;
-        state.rates = initialState.rates;
-        state.status = initialState.status;
-        state.error = initialState.error;
-        state.lastFetched = initialState.lastFetched;
-        state.isClaiming = initialState.isClaiming;
-        state.isInitialized = initialState.isInitialized;
-      });
-      // Also clear the fetch promise
-      fetchPromise = null;
-    },
-  };
+		// Only fetch if we don't have cached data or if it's stale
+		const hasValidCache =
+			currentSlice.downline && currentSlice.rates?.length > 0;
+		if (!hasValidCache || force) {
+			get().affiliate.dashboard.fetchData(force);
+		}
+	},
 
-  return slice;
-};
+	claim: async () => {
+		const storage = LocalStorageService.getInstance();
+		const api = ApiService.getInstance();
+		const user = storage.getUserData();
+		const token = storage.getAuthToken();
+		const username = user?.username;
+		const currentSlice = get().affiliate.dashboard;
+		const { downline, isClaiming } = currentSlice;
+
+		if (
+			!username ||
+			!token ||
+			isClaiming ||
+			!downline ||
+			downline.total_unclaim <= 0
+		)
+			return;
+
+		set((state) => {
+			state.affiliate.dashboard.isClaiming = true;
+		});
+
+		try {
+			const res = await api.claimAffiliateBonus({ username }, token);
+			if (!res.error) {
+				await get().affiliate.dashboard.fetchData(true);
+			}
+		} catch {
+			/* swallow */
+		} finally {
+			set((state) => {
+				state.affiliate.dashboard.isClaiming = false;
+			});
+		}
+	},
+
+	clear: () => {
+		set((state) => {
+			state.affiliate.dashboard.downline = initialState.downline;
+			state.affiliate.dashboard.rates = initialState.rates;
+			state.affiliate.dashboard.status = initialState.status;
+			state.affiliate.dashboard.error = initialState.error;
+			state.affiliate.dashboard.lastFetched = initialState.lastFetched;
+			state.affiliate.dashboard.isClaiming = initialState.isClaiming;
+			state.affiliate.dashboard.isInitialized =
+				initialState.isInitialized;
+		});
+		// Also clear the fetch promise
+		fetchPromise = null;
+	},
+});

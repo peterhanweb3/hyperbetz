@@ -8,6 +8,7 @@ import { useTipTransaction } from "./useTipTransaction";
 import { useGasManager } from "@/hooks/walletProvider/deposit/useGasManger";
 import { useAppStore } from "@/store/store";
 import TransactionService from "@/services/walletProvider/TransactionService";
+import { sanitizeAmountInput } from "@/lib/utils";
 
 const useTipI18n = () => {
 	const t = useTranslations("walletProvider.tipPanel");
@@ -58,9 +59,10 @@ export const useTip = () => {
 		setIsBalanceInsufficient,
 	} = useTipFormState();
 
-	const { gasReservationAmount, isNativeCurrency } = useGasManager({
-		selectedToken,
-	});
+	const { gasReservationAmount, isNativeCurrency, showTooltip } =
+		useGasManager({
+			selectedToken,
+		});
 
 	const [tipWalletAddress, setTipWalletAddress] = useState<string | null>(
 		null
@@ -97,6 +99,17 @@ export const useTip = () => {
 		fetchTipWallet();
 	}, [fetchTipWallet]);
 
+	// --- 1.5. MONITOR NETWORK CHANGES AND RESET FORM ---
+	// This effect clears the selected token when the network changes
+	// to prevent the bug where a token from the previous network remains selected
+	useEffect(() => {
+		if (selectedToken && chainId) {
+			// Reset the form when network changes to prevent cross-network token selection
+			resetFormState();
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [chainId]); // Only depend on chainId to trigger on network changes
+
 	const {
 		isLoading,
 		isApproving,
@@ -114,22 +127,27 @@ export const useTip = () => {
 	});
 
 	const setMaxAmount = useCallback(() => {
-		if (!selectedToken) return;
-		if (isNativeCurrency) {
-			const balance = parseFloat(selectedToken.balance);
-			const maxAmount = Math.max(0, balance - gasReservationAmount);
-			setTipAmount(String(maxAmount));
-		} else {
-			setTipAmount(selectedToken.balance);
-		}
-		setIsBalanceInsufficient(false);
-	}, [
-		selectedToken,
-		isNativeCurrency,
-		gasReservationAmount,
-		setTipAmount,
-		setIsBalanceInsufficient,
-	]);
+			if (!selectedToken) return;
+			if (isNativeCurrency) {
+				const balance = parseFloat(selectedToken.balance);
+				const maxAmount = Math.max(0, balance - gasReservationAmount);
+				const sanitizedValue = sanitizeAmountInput(String(maxAmount));
+				setTipAmount(sanitizedValue);
+			} else {
+				const sanitizedValue = sanitizeAmountInput(
+					String(selectedToken.balance)
+				);
+				setTipAmount(sanitizedValue);
+				// setTipAmount();
+			}
+			setIsBalanceInsufficient(false);
+		}, [
+			selectedToken,
+			isNativeCurrency,
+			gasReservationAmount,
+			setTipAmount,
+			setIsBalanceInsufficient,
+		]);
 
 	const validateTip = useCallback(() => {
 		if (!selectedToken || !tipAmount || parseFloat(tipAmount) <= 0) {
@@ -264,6 +282,8 @@ export const useTip = () => {
 		minTipAmount,
 		usdEstimate,
 		isFetchingWallet,
+		gasReservationAmount,
+		showTooltip,
 		selectToken,
 		handleAmountChange,
 		setMaxAmount,

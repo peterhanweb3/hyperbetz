@@ -145,7 +145,7 @@ import { InfoCardData } from "@/types/features/hero-banner-section.types";
 import { useTranslations } from "@/lib/locale-provider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/pro-light-svg-icons";
-// import Image from "next/image";
+import Image from "next/image";
 
 interface InfoCardProps {
 	data: InfoCardData;
@@ -176,12 +176,13 @@ export const InfoCard = ({
 			{/* Side Image Section - Now appears first on smaller screens */}
 			<div className="w-full lg:w-20 xl:w-26 2xl:w-32 3xl:w-40 h-32 mx-auto xl:mr-[23px] xl:h-full relative flex items-center justify-center flex-shrink-0 xl:order-2">
 				{imageSource ? (
-					<img
+					<Image
 						src={imageSource}
 						alt={data.title || "Card image"}
-						className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200
-                           max-w-full max-h-full"
-						loading="lazy"
+						fill
+						className="object-contain group-hover:scale-105 transition-transform duration-200 max-w-full max-h-full"
+						sizes="(max-width: 1024px) 100vw, 160px"
+						priority={false}
 					/>
 				) : (
 					<div className="w-full h-full bg-primary/10 flex items-center justify-center text-muted-foreground text-sm">

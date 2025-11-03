@@ -17,6 +17,7 @@ import confetti from "canvas-confetti";
 import pandaABI from "@/abi/pandaByteCore.json";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 import TransactionService from "@/services/walletProvider/TransactionService";
+import { ethers } from "ethers";
 
 // --- HOOK'S "CONTRACT" (What it needs to receive) ---
 interface UseWithdrawTransactionProps {
@@ -237,8 +238,10 @@ export const useWithdrawTransaction = ({
 
 				const decimals = data.decimal || 6;
 
-				const finalWdAmountFun =
-					parseFloat(withdrawAmount) * Math.pow(10, decimals);
+				const finalWdAmountFun = ethers.parseUnits(
+					withdrawAmount.toString(),
+					decimals
+				);
 
 				const walletClient = await (
 					primaryWallet as unknown as PrimaryWalletWithClient
@@ -418,7 +421,7 @@ export const useWithdrawTransaction = ({
 
 				if (manualResult.error) throw new Error(manualResult.message);
 				toast.success("Withdrawal submitted for manual approval.");
-				
+
 				// Fire confetti for manual withdrawal submission
 				confetti({
 					spread: 360,
@@ -464,7 +467,7 @@ export const useWithdrawTransaction = ({
 				resetTransactionState();
 				onTransactionComplete?.();
 			}
-			
+
 			addTransaction({
 				hash: finalTxHash,
 				type: TransactionType.WITHDRAW,
@@ -472,7 +475,6 @@ export const useWithdrawTransaction = ({
 				tokenSymbol: selectedToken.token_symbol,
 				network: chainId,
 			});
-			refreshUserData();
 		} catch (error) {
 			let message = "Withdrawal failed.";
 			if (typeof error === "object" && error !== null) {
@@ -489,9 +491,16 @@ export const useWithdrawTransaction = ({
 					message = (error as { message: string }).message;
 				}
 			}
-			toast.error(message);
+			if (message == "User rejected the request.") {
+				toast.error(
+					"Request declined. Any deducted amount will be refunded within 5 minutes"
+				);
+			} else {
+				toast.error(message);
+			}
 			console.error("Withdrawal execution failed:", error);
 		} finally {
+			refreshUserData();
 			setIsLoading(false);
 		}
 	}, [

@@ -11,7 +11,8 @@ export const useTipFormState = () => {
 
 	const formattedBalance = useMemo(() => {
 		if (!selectedToken?.balance) return "0.00";
-		return parseFloat(formatFullAmount(selectedToken.balance)).toFixed(6);
+		// return parseFloat(formatFullAmount(selectedToken.balance)).toFixed(6);
+		return sanitizeAmountInput(parseFloat(formatFullAmount(selectedToken.balance)).toString());
 	}, [selectedToken]);
 
 	const selectToken = useCallback((token: Token) => {

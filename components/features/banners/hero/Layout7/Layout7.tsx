@@ -29,10 +29,13 @@ import {
 } from "@fortawesome/pro-light-svg-icons";
 import Image from "next/image";
 import { ExploreSection } from "@/components/features/games/explore-section";
-import { DynamicProviderCarousel } from "@/components/features/providers/dynamic-provider-carousel";
+// import { DynamicProviderCarousel } from "@/components/features/providers/dynamic-provider-carousel";
+import { ProviderGridCard } from "@/components/features/query-display/provider-grid-card";
 import { useAppStore } from "@/store/store";
 import { getGamesByCategory } from "@/lib/utils/games/games.utils";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { selectAllProviders } from "@/store/selectors/query/query.selectors";
+import Link from "next/link";
 
 const Layout7Skeleton = () => (
 	<div className="space-y-6">
@@ -318,6 +321,59 @@ const LiveCasinoAndSlotsSection = () => {
 	);
 };
 
+// --- Top Providers Section for Layout7 ---
+const TopProvidersSection = () => {
+	const allProviders = useAppStore(selectAllProviders);
+	const tCommon = useTranslations("common");
+
+	// Get top 3 providers
+	const topProviders = allProviders.slice(0, 3);
+
+	if (topProviders.length === 0) {
+		return null;
+	}
+
+	return (
+		<div className="w-full">
+			{/* SECTION HEADER */}
+			<div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-3 sm:gap-0">
+				<div className="flex items-center gap-3">
+					<FontAwesomeIcon
+						icon={faBuilding}
+						fontSize={24}
+						className="h-5 w-5 sm:h-6 sm:w-6 text-primary"
+					/>
+					<h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
+						Top Providers
+					</h2>
+				</div>
+				<div className="flex items-center gap-2">
+					<Button
+						asChild
+						variant="outline"
+						size="sm"
+						className="text-xs sm:text-sm"
+					>
+						<Link href="/providers">{tCommon("viewAll")}</Link>
+					</Button>
+				</div>
+			</div>
+
+			{/* PROVIDERS GRID - 3 columns for 3 providers */}
+			<div className="grid grid-cols-3 gap-4">
+				{topProviders.map((provider, index) => (
+					<ProviderGridCard
+						key={`provider-${provider.name}-${index}`}
+						name={provider.name}
+						gameCount={provider.count}
+						iconUrl={provider.icon_url}
+					/>
+				))}
+			</div>
+		</div>
+	);
+};
+
 // --- Main Layout7 Component ---
 interface Layout7Props {
 	slides: HeroSlideData[];
@@ -431,7 +487,7 @@ export const Layout7 = ({
 			<section className="relative">
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
 					{/* Left Side: ExploreSection with Fixed Height Container */}
-					<div className="h-full min-h-[300px] lg:h-[300px]">
+					<div className="min-h-[300px]">
 						<div className="h-full bg-gradient-to-br from-primary/5 via-background to-accent/5 rounded-3xl px-6 border border-border/50 shadow-xl backdrop-blur-sm overflow-hidden relative">
 							<div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl -translate-y-16 translate-x-16" />
 							<div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-secondary/20 to-primary/20 rounded-full blur-2xl translate-y-12 -translate-x-12" />
@@ -442,18 +498,11 @@ export const Layout7 = ({
 						</div>
 					</div>
 
-					{/* Right Side: DynamicProviderCarousel with Matching Height */}
-					<div className="h-full min-h-[300px] lg:h-[300px]">
-						<div className="h-full bg-gradient-to-br from-primary/5 via-background to-accent/5 rounded-3xl px-6 py-4 border border-border/50 shadow-xl backdrop-blur-sm overflow-hidden relative">
-							<div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl -translate-y-16 translate-x-16" />
-							<div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-secondary/20 to-primary/20 rounded-full blur-2xl translate-y-12 -translate-x-12" />
-
-							<div className="relative z-10 h-full">
-								<DynamicProviderCarousel
-									title="Top Providers"
-									Icon={faBuilding}
-									maxProviders={16}
-								/>
+					{/* Right Side: DynamicProviderCarousel with Flexible Height */}
+					<div className="min-h-[300px]">
+						<div className="bg-gradient-to-br from-primary/5 via-background to-accent/5 rounded-3xl px-6 border border-border/50 shadow-xl backdrop-blur-sm relative">
+							<div className="relative z-10 mb-6 mt-6">
+								<TopProvidersSection />
 							</div>
 						</div>
 					</div>

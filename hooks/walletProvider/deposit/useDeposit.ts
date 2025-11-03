@@ -92,6 +92,7 @@ import { useDepositCalculations } from "@/hooks/walletProvider/deposit/useDeposi
 import { useDepositTransaction } from "./useDepositTransaction";
 import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import { useAppStore } from "@/store/store";
+import { sanitizeAmountInput } from "@/lib/utils";
 
 export const useDeposit = () => {
 	// i18n accessors for messages and labels
@@ -183,9 +184,14 @@ export const useDeposit = () => {
 		if (isNativeCurrency) {
 			const balance = parseFloat(selectedToken.balance);
 			const maxAmount = Math.max(0, balance - gasReservationAmount);
-			setDepositAmount(String(maxAmount));
+			const sanitizedValue = sanitizeAmountInput(String(maxAmount));
+			setDepositAmount(sanitizedValue);
 		} else {
-			setDepositAmount(selectedToken.balance);
+			const sanitizedValue = sanitizeAmountInput(
+				String(selectedToken.balance)
+			);
+			setDepositAmount(sanitizedValue);
+			// setDepositAmount();
 		}
 		setIsBalanceInsufficient(false);
 	}, [

@@ -77,7 +77,7 @@ export default function GetLobbyPage() {
 		};
 
 		launchLobby();
-	}, [provider_name]);
+	}, [provider_name, t]);
 
 	if (error) {
 		console.error("Error launching lobby:", error);

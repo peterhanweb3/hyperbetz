@@ -7,7 +7,7 @@
 		"viewAll": "Alle ansehen"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "Seitenleiste umschalten",
@@ -22,13 +22,14 @@
 		"winLoss": "Gewinn/Verlust",
 		"affiliate": "Partnerprogramm",
 		"logout": "Abmelden",
-		"balance": "Guthaben"
+		"balance": "Guthaben",
+		"turnoverBonus": "Umsatzbonus"
 	},
 	"navigation": {
 		"home": "Startseite",
 		"games": "Spiele",
 		"profile": "Profil",
-		"wallet": "Wallet",
+		"wallet": "Geldbörse",
 		"settings": "Einstellungen",
 		"promotions": "Aktionen",
 		"affiliate": "Partnerprogramm",
@@ -269,10 +270,10 @@
 			"noGifs": "Keine GIFs gefunden",
 			"tryDifferent": "Versuche einen anderen Suchbegriff",
 			"gifCategories": {
-				"trending": "Trending",
+				"trending": "Im Trend",
 				"reactions": "Reaktionen",
-				"gaming": "Gaming",
-				"casino": "Casino",
+				"gaming": "Spielen",
+				"casino": "Kasino",
 				"celebration": "Feier",
 				"sports": "Sport"
 			},
@@ -318,8 +319,8 @@
 		}
 	},
 	"sidebar": {
-		"quest": "QUEST",
-		"spin": "SPIN",
+		"quest": "SUCHE",
+		"spin": "DREHEN",
 		"deposit": "EINZAHLEN",
 		"withdraw": "AUSZAHLEN",
 		"playOnTelegram": "Auf Telegram spielen",
@@ -361,7 +362,7 @@
 		"gameTypes": {
 			"blackjack": "Blackjack",
 			"roulette": "Roulette",
-			"crash": "Crash"
+			"crash": "Absturz"
 		}
 	},
 	"query": {
@@ -417,7 +418,7 @@
 		"loginPromptSubtitle": "Melde dich an, um deine Empfehlungsstatistiken, Boni und Belohnungen einzusehen.",
 		"goHome": "Zur Startseite",
 		"tabs": {
-			"dashboard": "Dashboard",
+			"dashboard": "Armaturenbrett",
 			"rates": "Provisionssätze",
 			"calculator": "Rechner"
 		},
@@ -447,7 +448,8 @@
 			"yourReferralId": "Deine Empfehlungs-ID",
 			"referralIdHelp": "Teile diesen Code, damit Benutzer ihn bei der Registrierung manuell eingeben können",
 			"copyFullSuccess": "Vollständiger Empfehlungslink in die Zwischenablage kopiert!",
-			"copyIdSuccess": "Empfehlungs-ID in die Zwischenablage kopiert!"
+			"copyIdSuccess": "Empfehlungs-ID in die Zwischenablage kopiert!",
+			"claimButtonTitle": "Bonus beanspruchen"
 		},
 		"referrals": {
 			"title": "Meine Empfehlungen",
@@ -659,15 +661,20 @@
 				"deposit": "Einzahlen",
 				"withdraw": "Auszahlen",
 				"swap": "Tauschen",
-				"walletInfo": "Wallet"
+				"walletInfo": "Geldbörse",
+				"tip": "Trinkgeld",
+				"emailWallet": "E-Mail-Wallet",
+				"wallet": "Geldbörse"
 			},
 			"mobileDropdown": {
 				"emailWallet": "E-Mail-Wallet",
-				"wallet": "Wallet",
+				"wallet": "Geldbörse",
 				"deposit": "Einzahlen",
 				"withdraw": "Auszahlen",
-				"swap": "Tauschen"
-			}
+				"swap": "Tauschen",
+				"tip": "Trinkgeld"
+			},
+			"title": "GELDBÖRSE"
 		},
 		"networkSelector": {
 			"placeholder": "Netzwerk auswählen",
@@ -688,7 +695,7 @@
 			"otherResults": "Andere Ergebnisse"
 		},
 		"tabsSidebar": {
-			"walletInfo": "Wallet",
+			"walletInfo": "Geldbörse",
 			"emailWallet": "E-Mail-Wallet",
 			"deposit": "Einzahlen",
 			"withdraw": "Auszahlen",
@@ -703,7 +710,7 @@
 			"balance": "Guthaben:",
 			"calculating": "Wird berechnet...",
 			"approxUsd": "~ ${amount} USD",
-			"minPrefix": "Min:",
+			"minPrefix": "Min.:",
 			"ratesMayVary": "Kurse können variieren",
 			"emailWalletAddress": "E-Mail-Wallet-Adresse",
 			"walletAddress": "Wallet-Adresse",
@@ -723,7 +730,8 @@
 			},
 			"buttons": {
 				"depositUsd": "${amount} einzahlen"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} ist reserviert, um die Gasgebühren zu decken und Transaktionsfehler zu vermeiden"
 		},
 		"swapPanel": {
 			"selectTokens": "Tokens auswählen",
@@ -773,7 +781,8 @@
 			},
 			"buttons": {
 				"depositUsd": "${amount} einzahlen"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} ist reserviert, um Gasgebühren zu decken und Transaktionsfehler zu vermeiden"
 		},
 		"depositPending": {
 			"confirmedTitle": "Einzahlung bestätigt!",
@@ -782,7 +791,10 @@
 			"submittedDesc": "Warte auf Blockchain-Bestätigung. Dies kann einige Minuten dauern.",
 			"viewOnExplorer": "Im Explorer ansehen",
 			"newDepositConfirmed": "Weitere Einzahlung tätigen",
-			"newDepositPending": "Eine neue Einzahlung starten"
+			"newDepositPending": "Eine neue Einzahlung starten",
+			"failedTitle": "Transaktion fehlgeschlagen",
+			"failedDesc": "Ihre Transaktion ist fehlgeschlagen. ",
+			"newDepositFailed": "Versuchen Sie es erneut"
 		},
 		"withdrawPanel": {
 			"resetForm": "Formular zurücksetzen",
@@ -795,7 +807,7 @@
 			"available": "Verfügbar:",
 			"insufficientBalance": "Unzureichendes Guthaben",
 			"minimumIs": "Minimum ist {min}",
-			"minLabel": "Min:",
+			"minLabel": "Min.:",
 			"emailWalletAddress": "E-Mail-Wallet-Adresse",
 			"walletAddress": "Wallet-Adresse",
 			"errors": {
@@ -811,12 +823,13 @@
 			},
 			"buttons": {
 				"withdraw": "{amount} {symbol} auszahlen",
-				"minimum": "Minimum {amount} {symbol}"
-			}
+				"minimum": "Mindestens {amount} {symbol}"
+			},
+			"calculating": "Berechnen"
 		},
 		"withdrawSuccess": {
 			"title": "Auszahlung erfolgreich!",
-			"successMessage": "🎉 Habe gerade {withdrawAmount} {tokenSymbol} von Meme Win abgehoben! 🚀 Mach mit bei der Siegesserie auf {shareUrl}",
+			"successMessage": "🎉 Habe gerade {withdrawAmount} {tokenSymbol} von HyperBetz abgehoben! 🚀 Mach mit bei der Siegesserie auf {shareUrl}",
 			"withdrawnAmount": "Abgehobener Betrag",
 			"shareText": "Teilen",
 			"subText": "🚀 MACH MIT BEI DER SIEGESSTRÄHNE! 🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "Screenshot machen",
 			"download": "Bild herunterladen",
 			"close": "Schließen",
-			"copiedToClipboard": "Link zum Teilen erfolgreich kopiert"
+			"copiedToClipboard": "Link zum Teilen erfolgreich kopiert",
+			"entryPrice": "Abhebungsbetrag",
+			"lastPrice": "Token-Symbol",
+			"referralCode": "Empfehlungscode",
+			"screenshotFailed": "Screenshot fehlgeschlagen. Bitte versuchen Sie es erneut oder verwenden Sie einen anderen Browser.",
+			"shareFailed": "Teilen fehlgeschlagen. Bitte versuche es erneut.",
+			"status": "Abgeschlossen",
+			"userName": "HyperBetz-Spieler"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "Auszahlung bestätigt!",
@@ -838,6 +858,51 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "Du wirst erhalten"
+		},
+		"tipPanel": {
+			"approxUsd": "~  USD",
+			"balance": "Kontostand:",
+			"buttons": {
+				"tip": "Trinkgeld",
+				"tipUsd": "Trinkgeld"
+			},
+			"emailWalletAddress": "E-Mail-Wallet-Adresse",
+			"enterAmount": "Betrag eingeben",
+			"errors": {
+				"belowMinimum": "Der Betrag muss mindestens {min} betragen.",
+				"checkForm": "Bitte überprüfen Sie Ihre Tipp-Details.",
+				"insufficientBalance": "Unzureichendes Guthaben.",
+				"missingWallet": "Trinkgeld-Wallet kann nicht abgerufen werden. Bitte versuchen Sie es später erneut.",
+				"selectTokenAndAmount": "Bitte wählen Sie ein Token und geben Sie einen Betrag ein."
+			},
+			"max": "Max",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} werden reserviert, um die Gasgebühren zu decken und einen Transaktionsfehler zu vermeiden",
+			"minimumIs": "Das Mindesttrinkgeld beträgt {min}",
+			"minPrefix": "Minimum",
+			"prompts": {
+				"enterAmount": "Betrag eingeben",
+				"selectToken": "Token auswählen"
+			},
+			"resetForm": "Formular zurücksetzen",
+			"selectToken": "Token auswählen",
+			"status": {
+				"awaitingApproval": "Warten auf Genehmigung...",
+				"calculatingRate": "Wird berechnet...",
+				"fetchingWallet": "Trinkgeld-Wallet wird vorbereitet...",
+				"insufficientBalance": "Unzureichendes Guthaben",
+				"processing": "Trinkgeld wird gesendet..."
+			},
+			"tipPanelWarningText": "Trinkgelder sind freiwillig und nicht rückerstattbar.",
+			"youTip": "Ihr Trinkgeld"
+		},
+		"tipPending": {
+			"confirmedDesc": "Ihr Tipp wurde erfolgreich übermittelt.",
+			"confirmedTitle": "Trinkgeld bestätigt!",
+			"newTipConfirmed": "Noch einen Tipp senden",
+			"newTipPending": "Weiteres Trinkgeld senden",
+			"submittedDesc": "Ihr Tipp wird in der Blockchain bestätigt.",
+			"submittedTitle": "Trinkgeld ausstehend",
+			"viewOnExplorer": "Im Explorer ansehen"
 		}
 	},
 	"navUser": {
@@ -851,7 +916,7 @@
 		"pageTitle": "Alle Spiele",
 		"playNow": "Jetzt spielen",
 		"byProvider": "Von {name}",
-		"count": "{count, plural, one {Spiel} other {Spiele}}",
+		"count": "{count} Spiele",
 		"noResults": "Keine Spiele gefunden, die deinen Kriterien entsprechen.",
 		"errorLoading": "Spiele konnten nicht geladen werden. Bitte versuche es später erneut.",
 		"slots": "Spielautomaten",
@@ -935,9 +1000,9 @@
 		},
 		"cards": {
 			"casino": {
-				"title": "Casino",
+				"title": "Kasino",
 				"badge": "590+ SPIELE",
-				"desc": "Genieße MemeWin Originals und andere Casinospiele von Top-Anbietern.",
+				"desc": "Genieße HyperBetz Originals und andere Casinospiele von Top-Anbietern.",
 				"link": "Zum Casino"
 			},
 			"slots": {
@@ -954,7 +1019,7 @@
 			},
 			"crypto": {
 				"title": "Krypto & Verdienen",
-				"badge": "60% APR",
+				"badge": "60 % effektiver Jahreszins",
 				"desc": "Setze, handle und verdiene mit Kryptowährungen zu attraktiven Raten.",
 				"link": "Zu Krypto"
 			}
@@ -965,7 +1030,7 @@
 			"slider1Title": "Empfohlene Spiele",
 			"slider1Badge": "Auswahl der Mitarbeiter",
 			"slider2Title": "Mehr zu entdecken",
-			"slider2Badge": "Trending",
+			"slider2Badge": "Im Trend",
 			"featuredGameLabel": "Empfohlenes Spiel"
 		},
 		"ctaExploreGames": "Spiele entdecken",
@@ -1015,7 +1080,7 @@
 		"quickUploadFontFile": "Schriftartdatei schnell hochladen",
 		"resetToDefault": "Auf Standard zurücksetzen",
 		"googleFonts": {
-			"title": "Google Fonts",
+			"title": "Google-Schriftarten",
 			"searchFonts": "Schriftarten suchen...",
 			"preview": "Vorschau",
 			"previewText": "Der schnelle braune Fuchs springt über den faulen Hund",
@@ -1061,7 +1126,7 @@
 		"loginPromptSubtitle": "Melden Sie sich an, um Ihre Bonusstatistiken anzusehen und Ihre Belohnungen zu beanspruchen.",
 		"goHome": "Zur Startseite",
 		"tabs": {
-			"dashboard": "Dashboard",
+			"dashboard": "Armaturenbrett",
 			"claims": "Ansprüche",
 			"rates": "Bonusraten",
 			"calculator": "Rechner"
@@ -1106,7 +1171,7 @@
 			"subtitle": "Verfolgen Sie Ihre Bonusansprüche und Wettaktivitäten",
 			"tableHeaders": {
 				"date": "Wettdatum",
-				"slots": "Slots",
+				"slots": "Spielautomaten",
 				"liveCasino": "Live-Casino",
 				"sports": "Sport",
 				"total": "Gesamt",
@@ -1155,7 +1220,7 @@
 			"table": {
 				"tierLevel": "Stufe",
 				"wagerRange": "Einsatzbereich",
-				"slots": "Slots",
+				"slots": "Spielautomaten",
 				"liveCasino": "Live-Casino",
 				"sports": "Sportarten",
 				"tierPrefix": "STUFE",
@@ -1204,6 +1269,29 @@
 			"calcFor": "Bonus für ${amount} Wetteinsatz berechnen",
 			"totalPotential": "Gesamtpotenzieller Bonus:",
 			"combinedAtTier": "Kombinierter Bonus aus allen Spieltypen auf Stufe {level}"
+		},
+		"claimSuccessModal": {
+			"title": "Beanspruchung erfolgreich",
+			"statusCompleted": "Abgeschlossen",
+			"statusOnChain": "On-Chain",
+			"claimAmount": "Beanspruchter Betrag",
+			"logoAlt": "HyperBetz-Logo",
+			"backgroundAlt": "Anspruchserfolgshintergrund",
+			"creatingMagic": "Magie wird erstellt...",
+			"downloadShare": "Herunterladen & Teilen",
+			"spreadTheWin": "SPREAD THE WIN",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "Telegram",
+			"socialReddit": "Reddit",
+			"socialMore": "Mehr",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "Referral Link kopiert",
+			"referralLinkCopyFailed": "Empfehlungslink konnte nicht kopiert werden",
+			"screenshotFailed": "Screenshot fehlgeschlagen. Bitte versuchen Sie es erneut oder verwenden Sie einen anderen Browser.",
+			"shareTextCopied": "Teilen Sie Text, der in die Zwischenablage kopiert wurde!",
+			"shareFailed": "Teilen fehlgeschlagen. Bitte versuchen Sie es erneut."
 		}
 	}
 }

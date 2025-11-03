@@ -7,7 +7,7 @@
 		"viewAll": "सभी देखें"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "साइडबार टॉगल करें",
@@ -22,7 +22,8 @@
 		"winLoss": "जीत/हार",
 		"affiliate": "एफिलिएट",
 		"logout": "लॉग आउट",
-		"balance": "शेष राशि"
+		"balance": "शेष राशि",
+		"turnoverBonus": "टर्नओवर बोनस"
 	},
 	"navigation": {
 		"home": "होम",
@@ -259,7 +260,7 @@
 			"searchGifs": "GIFs खोजें...",
 			"tabs": {
 				"emojis": "इमोजी",
-				"gifs": "GIFs"
+				"gifs": "जीआईएफ"
 			},
 			"loadingEmojis": "इमोजी लोड हो रहे हैं...",
 			"loadingGifs": "GIFs लोड हो रहे हैं...",
@@ -367,8 +368,8 @@
 	"query": {
 		"sort": {
 			"label": "इसके अनुसार क्रमबद्ध करें",
-			"a-z": "A-Z",
-			"z-a": "Z-A"
+			"a-z": "ए-जेड",
+			"z-a": "जेड-ए"
 		},
 		"filters": {
 			"filter": "फ़िल्टर",
@@ -447,7 +448,8 @@
 			"yourReferralId": "आपकी रेफरल आईडी",
 			"referralIdHelp": "इस कोड को साझा करें ताकि उपयोगकर्ता पंजीकरण के दौरान इसे मैन्युअल रूप से दर्ज कर सकें",
 			"copyFullSuccess": "पूरा रेफरल लिंक क्लिपबोर्ड पर कॉपी किया गया!",
-			"copyIdSuccess": "रेफरल आईडी क्लिपबोर्ड पर कॉपी की गई!"
+			"copyIdSuccess": "रेफरल आईडी क्लिपबोर्ड पर कॉपी की गई!",
+			"claimButtonTitle": "इस बोनस का दावा करें"
 		},
 		"referrals": {
 			"title": "मेरे रेफरल",
@@ -659,15 +661,20 @@
 				"deposit": "जमा करें",
 				"withdraw": "निकालें",
 				"swap": "स्वैप करें",
-				"walletInfo": "वॉलेट"
+				"walletInfo": "वॉलेट",
+				"tip": "टिप",
+				"emailWallet": "ईमेल वॉलेट",
+				"wallet": "बटुआ"
 			},
 			"mobileDropdown": {
 				"emailWallet": "ईमेल वॉलेट",
 				"wallet": "वॉलेट",
 				"deposit": "जमा करें",
 				"withdraw": "निकालें",
-				"swap": "स्वैप करें"
-			}
+				"swap": "स्वैप करें",
+				"tip": "बख्शीश"
+			},
+			"title": "बटुआ"
 		},
 		"networkSelector": {
 			"placeholder": "नेटवर्क चुनें",
@@ -702,7 +709,7 @@
 			"max": "अधिकतम",
 			"balance": "शेष राशि:",
 			"calculating": "गणना हो रही है...",
-			"approxUsd": "~ ${amount} USD",
+			"approxUsd": "~${amount} USD",
 			"minPrefix": "न्यूनतम:",
 			"ratesMayVary": "दरें भिन्न हो सकती हैं",
 			"emailWalletAddress": "ईमेल वॉलेट पता",
@@ -723,7 +730,8 @@
 			},
 			"buttons": {
 				"depositUsd": "${amount} जमा करें"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} गैस शुल्क को कवर करने और लेनदेन विफलता से बचने के लिए आरक्षित है"
 		},
 		"swapPanel": {
 			"selectTokens": "टोकन चुनें",
@@ -773,7 +781,8 @@
 			},
 			"buttons": {
 				"depositUsd": "${amount} जमा करें"
-			}
+			},
+			"maxButtonToolTipText": "गैस शुल्क को कवर करने और लेनदेन विफलता से बचने के लिए {gasReservationAmount} {selectedTokenSymbol} आरक्षित है"
 		},
 		"depositPending": {
 			"confirmedTitle": "जमा की पुष्टि हुई!",
@@ -782,7 +791,10 @@
 			"submittedDesc": "ब्लॉकचेन पुष्टि की प्रतीक्षा है। इसमें कुछ मिनट लग सकते हैं।",
 			"viewOnExplorer": "एक्सप्लोरर पर देखें",
 			"newDepositConfirmed": "एक और जमा करें",
-			"newDepositPending": "एक नई जमा शुरू करें"
+			"newDepositPending": "एक नई जमा शुरू करें",
+			"failedTitle": "लेन - देन विफल",
+			"failedDesc": "आपका लेनदेन विफल हो गया है. ",
+			"newDepositFailed": "पुनः प्रयास करें"
 		},
 		"withdrawPanel": {
 			"resetForm": "फ़ॉर्म रीसेट करें",
@@ -812,11 +824,12 @@
 			"buttons": {
 				"withdraw": "{amount} {symbol} निकालें",
 				"minimum": "न्यूनतम {amount} {symbol}"
-			}
+			},
+			"calculating": "गिना जा रहा है"
 		},
 		"withdrawSuccess": {
 			"title": "निकासी सफल!",
-			"successMessage": "🎉 अभी-अभी Meme Win से {withdrawAmount} {tokenSymbol} निकाले! 🚀 {shareUrl} पर जीतने की होड़ में शामिल हों",
+			"successMessage": "🎉 अभी-अभी HyperBetz से {withdrawAmount} {tokenSymbol} निकाले! 🚀 {shareUrl} पर जीतने की होड़ में शामिल हों",
 			"withdrawnAmount": "निकाली गई राशि",
 			"shareText": "साझा करें",
 			"subText": "🚀 जीतने की होड़ में शामिल हों! 🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "स्क्रीनशॉट लें",
 			"download": "छवि डाउनलोड करें",
 			"close": "बंद करें",
-			"copiedToClipboard": "शेयर लिंक सफलतापूर्वक कॉपी किया गया"
+			"copiedToClipboard": "शेयर लिंक सफलतापूर्वक कॉपी किया गया",
+			"entryPrice": "निकासी राशि",
+			"lastPrice": "टोकन प्रतीक",
+			"referralCode": "रेफ़रल कोड",
+			"screenshotFailed": "स्क्रीनशॉट असफल हुआ। कृपया फिर से प्रयास करें या एक अलग ब्राउज़र का उपयोग करें।",
+			"shareFailed": "साझा करना असफल रहा। कृपया पुनः प्रयास करें।",
+			"status": "सम्पन्न",
+			"userName": "HyperBetz खिलाड़ी"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "निकासी की पुष्टि हुई!",
@@ -838,6 +858,51 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "आप प्राप्त करेंगे"
+		},
+		"tipPanel": {
+			"approxUsd": "~  अमेरिकी डॉलर",
+			"balance": "शेष:",
+			"buttons": {
+				"tip": "टिप",
+				"tipUsd": "टिप"
+			},
+			"emailWalletAddress": "ईमेल वॉलेट पता",
+			"enterAmount": "राशि दर्ज करें",
+			"errors": {
+				"belowMinimum": "राशि कम से कम {min} होनी चाहिए।",
+				"checkForm": "कृपया अपनी टिप विवरण की जाँच करें।",
+				"insufficientBalance": "अपर्याप्त शेषराशि।",
+				"missingWallet": "टिप वॉलेट प्राप्त करने में असमर्थ। कृपया बाद में पुन: प्रयास करें।",
+				"selectTokenAndAmount": "कृपया एक टोकन चुनें और एक राशि दर्ज करें।"
+			},
+			"max": "अधिकतम",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} गैस शुल्क को कवर करने और लेनदेन विफलता से बचने के लिए आरक्षित है",
+			"minimumIs": "न्यूनतम टिप {min} है",
+			"minPrefix": "न्यूनतम",
+			"prompts": {
+				"enterAmount": "राशि दर्ज करें",
+				"selectToken": "टोकन चुनें"
+			},
+			"resetForm": "प्रपत्र रीसेट करें",
+			"selectToken": "टोकन चुनें",
+			"status": {
+				"awaitingApproval": "मंजूरी की प्रतीक्षा कर रहा है...",
+				"calculatingRate": "गणना की जा रही है...",
+				"fetchingWallet": "टिप वॉलेट तैयार किया जा रहा है...",
+				"insufficientBalance": "अपर्याप्त शेष राशि",
+				"processing": "टिप भेजी जा रही है..."
+			},
+			"tipPanelWarningText": "टिप्स स्वैच्छिक और गैर-वापसी योग्य हैं।",
+			"youTip": "आपकी टिप"
+		},
+		"tipPending": {
+			"confirmedDesc": "आपकी टिप सफलतापूर्वक भेज दी गई है।",
+			"confirmedTitle": "बख़्शीश की पुष्टि हुई!",
+			"newTipConfirmed": "एक और टिप भेजें",
+			"newTipPending": "एक और टिप भेजें",
+			"submittedDesc": "आपकी टिप चेन पर पुष्टि की जा रही है।",
+			"submittedTitle": "टिप लंबित",
+			"viewOnExplorer": "एक्सप्लोरर पर देखें"
 		}
 	},
 	"navUser": {
@@ -937,7 +1002,7 @@
 			"casino": {
 				"title": "कैसीनो",
 				"badge": "590+ गेम्स",
-				"desc": "MemeWin ओरिजिनल्स और शीर्ष प्रदाताओं के अन्य कैसीनो गेम्स का आनंद लें।",
+				"desc": "HyperBetz ओरिजिनल्स और शीर्ष प्रदाताओं के अन्य कैसीनो गेम्स का आनंद लें।",
 				"link": "कैसीनो पर जाएं"
 			},
 			"slots": {
@@ -954,7 +1019,7 @@
 			},
 			"crypto": {
 				"title": "क्रिप्टो और कमाएं",
-				"badge": "60% APR",
+				"badge": "60% अप्रैल",
 				"desc": "आकर्षक दरों पर क्रिप्टोकरेंसी के साथ दांव लगाएं, व्यापार करें और कमाएं।",
 				"link": "क्रिप्टो पर जाएं"
 			}
@@ -1204,6 +1269,29 @@
 			"calcFor": "${amount} की शर्त के लिए बोनस गणना",
 			"totalPotential": "कुल संभावित बोनस:",
 			"combinedAtTier": "सभी खेल प्रकारों से संयोजित बोनस स्तर {level} पर"
+		},
+		"claimSuccessModal": {
+			"title": "सफल होने का दावा करें",
+			"statusCompleted": "समाप्त/पूरा हुआ",
+			"statusOnChain": "ऑन - चेन",
+			"claimAmount": "दावा राशि",
+			"logoAlt": "HyperBetz का लोगो",
+			"backgroundAlt": "सफलता का बैकग्राउंड क्लेम करें",
+			"creatingMagic": "जादू बनाया जा रहा है...",
+			"downloadShare": "डाउनलोड करें और शेयर करें",
+			"spreadTheWin": "जीत को फैलाएँ",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "वाट्सऐप",
+			"socialTelegram": "Telegram ",
+			"socialReddit": "Reddit",
+			"socialMore": "अधिक",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "रेफ़रल लिंक कॉपी किया गया!",
+			"referralLinkCopyFailed": "रेफ़रल लिंक कॉपी नहीं किया जा सका",
+			"screenshotFailed": "स्क्रीनशॉट नहीं मिल सका। कृपया फिर से कोशिश करें या किसी दूसरे ब्राउज़र का इस्तेमाल करें।",
+			"shareTextCopied": "क्लिपबोर्ड पर कॉपी किया गया टेक्स्ट शेयर करें!",
+			"shareFailed": "शेयर नहीं हो सका। कृपया फिर से कोशिश करें।"
 		}
 	}
 }

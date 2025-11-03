@@ -151,7 +151,6 @@ export interface GetMemberUnclaimedBonusRequest {
 
 /**
  * Represents the structure of an unclaimed bonus item.
- * The structure is currently unknown, so it allows any properties.
  */
 export interface UnclaimedBonus {
 	date: string;

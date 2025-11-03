@@ -7,7 +7,7 @@ import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import TransactionService from "@/services/walletProvider/TransactionService";
 import { SwapInfo } from "@/types/walletProvider/transaction-service.types";
 import { toast } from "sonner";
-// import { useDebounce } from "../useDebounce";
+import { useDebounce } from "../useDebounce";
 
 // --- HOOK'S "CONTRACT" ---
 // We define the props this hook needs to receive from the main useDeposit hook.
@@ -37,6 +37,10 @@ export const useDepositCalculations = ({
 	const { user, authToken } = useDynamicAuth();
 	const username = user?.username;
 
+	// --- DEBOUNCING FOR PERFORMANCE ---
+	// Debounce the deposit amount to prevent API spam while user is typing (500ms)
+	const debouncedDepositAmount = useDebounce(depositAmount, 500);
+
 	// --- 2. Manage the Hook's Own State ---
 	const [minRequiredAmount, setMinRequiredAmount] = useState<number | null>(
 		null
@@ -46,37 +50,42 @@ export const useDepositCalculations = ({
 		useState(false);
 	const [isFetchingConversion, setIsFetchingConversion] = useState(false);
 
-	// --- DEBOUNCING FOR PERFORMANCE ---
-	// We debounce the user's input to prevent API spam while they are typing.
-	// Lightweight inline debounce via a ref/timer to avoid extra hook churn
-	const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
 	// Deduplication refs to avoid firing the same request repeatedly
 	const lastUsdDepsRef = useRef<string>("");
 	const lastMinDepsRef = useRef<string>("");
 
-	// --- 3. The Core Logic Effects ---
+	const only2Decimals = (value: string) => {
+		const regex = /^\d+(\.\d{0,2})?/;
+		const match = value.match(regex);
+		return match ? match[0] : "0";
+	}
 
 	// Effect for calculating the minimum required deposit amount.
 	useEffect(() => {
 		// This effect handles its own state and dependencies.
-		let isActive = true;
 
 		const calculateMinAmount = async () => {
 			// Guard clause: Don't run if the necessary data isn't available.
 			if (!selectedToken || !username || !chainId || !dstSwapInfo) {
 				setMinRequiredAmount(null); // Reset to default
+				setIsFetchingMinDepositAmount(false);
 				return;
 			}
 
 			let letsCheckApi = 1;
 
 			// For stablecoins, ask the wallet agent config for the minimum deposit.
-			// if (
-			// 	["USDT", "USDC", "55Swap", "USD₮0", "USDT0"].includes(
-			// 		selectedToken.symbol
-			// 	)
-			// ) {
+
 			setIsFetchingMinDepositAmount(true);
+
+			// Safety timeout: Force loading to false after 10 seconds
+			// timeoutId = setTimeout(() => {
+			// 	if (isActive) {
+			// 		setIsFetchingMinDepositAmount(false);
+			// 		setMinRequiredAmount(1); // Default fallback
+			// 	}
+			// }, 10000);
+
 			try {
 				const transactionService = TransactionService.getInstance();
 				const response = await transactionService.getWalletAgentData(
@@ -84,11 +93,7 @@ export const useDepositCalculations = ({
 					authToken
 				);
 
-				if (
-					isActive &&
-					!response.error &&
-					response.data?.setting?.deposit_min
-				) {
+				if (!response.error && response.data?.setting?.deposit_min) {
 					const minAmount = parseFloat(
 						response.data.setting.deposit_min
 					);
@@ -101,23 +106,23 @@ export const useDepositCalculations = ({
 				toast.error(
 					`Error fetching minimum deposit amount. Please try again. ${error}`
 				);
-				if (isActive) setMinRequiredAmount(null);
-				console.error(
-					"Failed to fetch wallet agent config for deposit:",
-					error
-				);
 			} finally {
-				if (isActive) setIsFetchingMinDepositAmount(false);
+				setIsFetchingMinDepositAmount(false);
 			}
 
-			// 	return;
-			// }
+			if (
+				["USDT", "USDC", "55Swap", "USD₮0", "USDT0"].includes(
+					selectedToken.symbol
+				)
+			) {
+				setMinRequiredAmount(letsCheckApi);
+				return;
+			}
 
 			// Non-stablecoin path: compute how much of the token equals our USD minimum.
 			setIsFetchingMinDepositAmount(true);
 			try {
 				const transactionService = TransactionService.getInstance();
-
 				const result = await transactionService.getTokenConversion({
 					network: chainId,
 					// Find out how much of the selected token is equal to our minimum USD deposit.
@@ -127,22 +132,25 @@ export const useDepositCalculations = ({
 					username,
 				});
 
-				if (isActive && result.success && result.conversion) {
-					// The API tells us the equivalent `fromAmount` needed.
-					setMinRequiredAmount(result.conversion.toAmount);
+				if (result.success && result.conversion) {
+					const finalAmountShow = only2Decimals(
+						result.conversion.toAmount.toString()
+					);
+					setMinRequiredAmount(
+						finalAmountShow.toString() as unknown as number
+					);
 				}
 			} catch (error) {
 				toast.error(
 					`Error fetching minimum deposit amount. Please try again. ${error}`
 				);
 
-				if (isActive) setMinRequiredAmount(null); // Fallback on error
 				console.error(
 					"Failed to calculate minimum deposit amount:",
 					error
 				);
 			} finally {
-				if (isActive) setIsFetchingMinDepositAmount(false);
+				setIsFetchingMinDepositAmount(false);
 			}
 		};
 
@@ -158,23 +166,18 @@ export const useDepositCalculations = ({
 			calculateMinAmount();
 		}
 
-		return () => {
-			isActive = false;
-		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [selectedToken, chainId, username, depositAmount]);
+	}, [selectedToken, chainId, username, dstSwapInfo]);
 
 	useEffect(() => {
-		let isActive = true;
-
 		const calculateUsdValue = async () => {
 			if (
 				!selectedToken ||
-				!depositAmount ||
+				!debouncedDepositAmount ||
 				!username ||
 				!chainId ||
 				!dstSwapInfo ||
-				parseFloat(depositAmount) <= 0
+				parseFloat(debouncedDepositAmount) <= 0
 			) {
 				setUsdtConversionAmount(0);
 				return;
@@ -184,7 +187,8 @@ export const useDepositCalculations = ({
 					selectedToken.symbol
 				)
 			) {
-				setUsdtConversionAmount(parseFloat(depositAmount));
+				setUsdtConversionAmount(parseFloat(debouncedDepositAmount));
+				setIsFetchingConversion(false);
 				return;
 			}
 
@@ -195,49 +199,37 @@ export const useDepositCalculations = ({
 					network: chainId,
 					fromToken: selectedToken.address,
 					toToken: dstSwapInfo.token_address,
-					amount: parseFloat(depositAmount),
+					amount: parseFloat(debouncedDepositAmount),
 					username,
 				});
 
-				if (isActive && result.success && result.conversion) {
+				if (result.success && result.conversion) {
 					setUsdtConversionAmount(result.conversion.toAmount);
 				}
 			} catch (error) {
-				if (isActive) setUsdtConversionAmount(0);
 				console.error(
-					"Failed to calculate USDT conversion value:",
+					"Failed to calculate USDT conversion amount:",
 					error
 				);
+				setUsdtConversionAmount(0);
 			} finally {
-				if (isActive) setIsFetchingConversion(false);
+				setIsFetchingConversion(false);
 			}
 		};
 
-		// Debounce and dedupe: only call when inputs settle and actually change
+		// Dedupe: only call when inputs actually change
 		const usdKey = JSON.stringify({
 			chainId,
 			username,
 			selected: selectedToken?.address,
 			dst: dstSwapInfo?.token_address,
-			amount: depositAmount,
+			amount: debouncedDepositAmount,
 		});
 		if (lastUsdDepsRef.current !== usdKey) {
 			lastUsdDepsRef.current = usdKey;
-			if (debounceTimerRef.current)
-				clearTimeout(debounceTimerRef.current);
-			debounceTimerRef.current = setTimeout(() => {
-				calculateUsdValue();
-			}, 400);
+			calculateUsdValue();
 		}
-
-		return () => {
-			isActive = false;
-			if (debounceTimerRef.current) {
-				clearTimeout(debounceTimerRef.current);
-				debounceTimerRef.current = null;
-			}
-		};
-	}, [selectedToken, depositAmount, chainId, username]);
+	}, [selectedToken, debouncedDepositAmount, chainId, username, dstSwapInfo]);
 
 	// --- 4. Return the Final API ---
 	return {

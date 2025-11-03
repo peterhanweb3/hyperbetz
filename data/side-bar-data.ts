@@ -14,6 +14,7 @@ import {
 	faVrCardboard,
 	faUsers,
 } from "@fortawesome/pro-solid-svg-icons";
+// } from "@fortawesome/pro-solid-svg-icons";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 // --- HELPER FUNCTIONS ---
@@ -100,6 +101,10 @@ const createGamesLink = (filterType: string, filterValue: string) => {
  * @returns A URL string like "/providers?category=LIVE+CASINO".
  */
 const createProvidersLink = (filterType: string, filterValue: string) => {
+	// if (filterType === "category" && filterValue === "SPORTS") THEN REDIRECT IT TO "games?provider_name={params/toString()}"
+	if (filterType === "category" && filterValue === "SPORTS") {
+		return `/games?provider_name=SBO`;
+	}
 	const params = new URLSearchParams();
 	params.set(filterType, filterValue);
 	return `/providers?${params.toString()}`;
@@ -235,6 +240,11 @@ export const getNavData = ({
 		// --- STATIC Game Categories ---
 		// These are always available regardless of API data
 		staticGameCategories: [
+			// {
+			// 	title: "games.sports",
+			// 	url: "/providers?category=SPORT+BOOK",
+			// 	icon: faFutbol,
+			// },
 			{
 				title: "games.poker",
 				url: "/games?q=poker",

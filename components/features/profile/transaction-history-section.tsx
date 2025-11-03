@@ -1,7 +1,8 @@
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, ChangeEvent } from "react";
 import { useTransactionStore } from "@/store/transactionStore";
 import { useTranslations, useLocaleContext } from "@/lib/locale-provider";
 import { useDynamicAuth } from "@/hooks/useDynamicAuth";
+import { useRefreshLimiter } from "@/hooks/use-refresh-limiter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -217,6 +218,9 @@ export function TransactionHistorySection() {
 	const [customDateFrom, setCustomDateFrom] = useState("");
 	const [customDateTo, setCustomDateTo] = useState("");
 
+	// Initialize refresh limiter with 10 second cooldown
+	const { isRefreshing, canRefresh, handleRefresh } = useRefreshLimiter(10);
+
 	// Get auth token from auth context
 	const { authToken, user } = useDynamicAuth();
 
@@ -341,6 +345,25 @@ export function TransactionHistorySection() {
 		setPage(1); // Reset to first page when clearing filters
 	}, [setPage]);
 
+	const handleDateChangeFrom = (e: ChangeEvent<HTMLInputElement>) => {
+		const selectedDate = e.target.value;
+		const today = new Date().toISOString().split("T")[0];
+		if (selectedDate > today) {
+			setCustomDateFrom(today);
+			return;
+		}
+		setCustomDateFrom(selectedDate);
+	};
+	const handleDateChangeTo = (e: ChangeEvent<HTMLInputElement>) => {
+		const selectedDate = e.target.value;
+		const today = new Date().toISOString().split("T")[0];
+		if (selectedDate > today) {
+			setCustomDateTo(today);
+			return;
+		}
+		setCustomDateTo(selectedDate);
+	};
+
 	const handleApplyFilters = useCallback(() => {
 		// Filters are applied automatically through client-side filtering
 		closeFilters();
@@ -403,24 +426,19 @@ export function TransactionHistorySection() {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [transactionHistoryParams, authToken, user?.username]);
 
-	// Refetch function
-	const refetch = useCallback(() => {
+	// Refetch function with DDoS protection
+	const refetch = useCallback(async () => {
 		// Only refetch if we have authToken
 		if (authToken) {
-			// console.log(
-			// 	"Refetching transactions with params:",
-			// 	transactionHistoryParams
-			// );
-			const fetchData = async () => {
+			await handleRefresh(async () => {
 				await fetchTransactionHistory(
 					transactionHistoryParams,
 					authToken
 				);
-			};
-			fetchData();
+			});
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [transactionHistoryParams, authToken]); // Intentionally excluding fetchTransactionHistory to prevent infinite loop
+	}, [transactionHistoryParams, authToken, handleRefresh]); // Intentionally excluding fetchTransactionHistory to prevent infinite loop
 
 	// Server-side filtered transactions (no client-side filtering for search as it should be handled by API)
 	const transactions = allTransactions || [];
@@ -610,12 +628,16 @@ export function TransactionHistorySection() {
 									variant="outline"
 									size="sm"
 									onClick={refetch}
-									disabled={isLoading}
+									disabled={
+										isLoading || !canRefresh || isRefreshing
+									}
 									className="rounded-lg border-border/50 bg-background/50 text-muted-foreground backdrop-blur-sm transition-all duration-300 hover:border-border hover:bg-primary/10"
 								>
 									<RefreshCw
 										className={`mr-1.5 h-3 w-3 transition-transform duration-500 ${
-											isLoading ? "animate-spin" : ""
+											isLoading || isRefreshing
+												? "animate-spin"
+												: ""
 										}`}
 									/>
 									{t("refresh")}
@@ -734,7 +756,7 @@ export function TransactionHistorySection() {
 													<SelectItem value="all">
 														{t("allStatuses")}
 													</SelectItem>
-													<SelectItem value="SUCCESS">
+													<SelectItem value="CONFIRMED">
 														<div className="flex items-center gap-2">
 															<div className="h-2 w-2 rounded-full bg-success" />
 															{t("success")}
@@ -767,10 +789,18 @@ export function TransactionHistorySection() {
 												<Input
 													type="date"
 													value={customDateFrom}
-													onChange={(e) =>
-														setCustomDateFrom(
-															e.target.value
-														)
+													onChange={
+														handleDateChangeFrom
+													}
+													// onChange={(e) =>
+													// 	setCustomDateTo(
+													// 		e.target.value
+													// 	)
+													// }
+													max={
+														new Date()
+															.toISOString()
+															.split("T")[0]
 													}
 													className="h-9 bg-background/50 border-border/50 focus:border-primary/50 focus:ring-1 focus:ring-primary/20"
 												/>
@@ -782,10 +812,18 @@ export function TransactionHistorySection() {
 												<Input
 													type="date"
 													value={customDateTo}
-													onChange={(e) =>
-														setCustomDateTo(
-															e.target.value
-														)
+													onChange={
+														handleDateChangeTo
+													}
+													// onChange={(e) =>
+													// 	setCustomDateTo(
+													// 		e.target.value
+													// 	)
+													// }
+													max={
+														new Date()
+															.toISOString()
+															.split("T")[0]
 													}
 													className="h-9 bg-background/50 border-border/50 focus:border-primary/50 focus:ring-1 focus:ring-primary/20"
 												/>
@@ -846,7 +884,7 @@ export function TransactionHistorySection() {
 											transactionStatus !== "all" && (
 												<span className="px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20">
 													{t("statusLabel")}:{" "}
-													{transactionStatus ===
+													{transactionStatus.toLocaleUpperCase() ==
 													"SUCCESS"
 														? t("success")
 														: transactionStatus ===

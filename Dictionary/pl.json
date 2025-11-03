@@ -7,14 +7,14 @@
 		"viewAll": "Zobacz wszystko"
 	},
 	"app": {
-		"name": "Meme Win"
+		"name": "HyperBetz"
 	},
 	"header": {
 		"toggleSidebar": "Przełącz pasek boczny",
 		"searchPlaceholder": "Szukaj gier, dostawców...",
 		"liveChat": "Czat na żywo",
 		"player": "Gracz",
-		"vip": "VIP",
+		"vip": "VIP-a",
 		"profile": "Profil",
 		"statistics": "Statystyki",
 		"wallet": "Wpłata/Wypłata",
@@ -22,7 +22,8 @@
 		"winLoss": "Wygrane/Straty",
 		"affiliate": "Partner",
 		"logout": "Wyloguj",
-		"balance": "Saldo"
+		"balance": "Saldo",
+		"turnoverBonus": "Premia obrotowa"
 	},
 	"navigation": {
 		"home": "Strona główna",
@@ -300,7 +301,7 @@
 		"message": {
 			"you": "Ty",
 			"winTitle": "Wielka wygrana w \"{game}\"! 🎰",
-			"gifAlt": "GIF",
+			"gifAlt": "GIF-y",
 			"imageAlt": "Przesłany obraz",
 			"rainTitle": "Deszcz pieniędzy! 🌧️💰",
 			"recipients": "→ {count} {count, plural, one {odbiorca} other {odbiorców}}",
@@ -359,9 +360,9 @@
 			"found": "Znaleziono {games} gier, {categories} kategorii i {providers} dostawców"
 		},
 		"gameTypes": {
-			"blackjack": "Blackjack",
+			"blackjack": "Maczuga",
 			"roulette": "Ruletka",
-			"crash": "Crash"
+			"crash": "Rozbić się"
 		}
 	},
 	"query": {
@@ -396,8 +397,8 @@
 	},
 	"commonExtra": {
 		"connecting": "Łączenie...",
-		"offline": "Offline",
-		"online": "Online",
+		"offline": "Nieaktywny",
+		"online": "W Internecie",
 		"clear": "Wyczyść"
 	},
 	"home": {
@@ -447,7 +448,8 @@
 			"yourReferralId": "Twój ID polecającego",
 			"referralIdHelp": "Udostępnij ten kod, aby użytkownicy mogli go wprowadzić ręcznie podczas rejestracji",
 			"copyFullSuccess": "Pełny link polecający skopiowany do schowka!",
-			"copyIdSuccess": "ID polecającego skopiowane do schowka!"
+			"copyIdSuccess": "ID polecającego skopiowane do schowka!",
+			"claimButtonTitle": "Reklamy TV"
 		},
 		"referrals": {
 			"title": "Moje polecenia",
@@ -586,13 +588,13 @@
 		"balance": "Saldo",
 		"max": "Maks.",
 		"deposit": "Wpłata",
-		"ethereum": "Ethereum"
+		"ethereum": "Eter"
 	},
 	"modalsSmall": {
 		"close": "Zamknij",
 		"firstDepositBoost": "Bonus do pierwszej wpłaty",
-		"bonus": "Bonus",
-		"min": "min",
+		"bonus": "Premia",
+		"min": "Min",
 		"sec": "s",
 		"deposit": "Wpłata"
 	},
@@ -659,15 +661,20 @@
 				"deposit": "Wpłata",
 				"withdraw": "Wypłata",
 				"swap": "Wymiana",
-				"walletInfo": "Portfel"
+				"walletInfo": "Portfel",
+				"tip": "Napiwek",
+				"emailWallet": "Portfel e-mailowy",
+				"wallet": "Portfel"
 			},
 			"mobileDropdown": {
 				"emailWallet": "Portfel e-mail",
 				"wallet": "Portfel",
 				"deposit": "Wpłata",
 				"withdraw": "Wypłata",
-				"swap": "Wymiana"
-			}
+				"swap": "Wymiana",
+				"tip": "Napiwek"
+			},
+			"title": "PORTFEL"
 		},
 		"networkSelector": {
 			"placeholder": "Wybierz sieć",
@@ -703,7 +710,7 @@
 			"balance": "Saldo:",
 			"calculating": "Obliczanie...",
 			"approxUsd": "~ ${amount} USD",
-			"minPrefix": "Min:",
+			"minPrefix": "Min.:",
 			"ratesMayVary": "Kursy mogą się różnić",
 			"emailWalletAddress": "Adres portfela e-mail",
 			"walletAddress": "Adres portfela",
@@ -723,7 +730,8 @@
 			},
 			"buttons": {
 				"depositUsd": "Wpłać ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} jest zarezerwowane na pokrycie opłat za gaz i uniknięcie niepowodzenia transakcji"
 		},
 		"swapPanel": {
 			"selectTokens": "Wybierz tokeny",
@@ -741,7 +749,7 @@
 			"currentSlippage": "Aktualny poślizg",
 			"swapSuccessful": "Wymiana udana!",
 			"transactionConfirmed": "Twoja transakcja została potwierdzona",
-			"hash": "Hash",
+			"hash": "Haszysz",
 			"newSwap": "Nowa wymiana",
 			"youPay": "Płacisz",
 			"max": "Maks.",
@@ -773,7 +781,8 @@
 			},
 			"buttons": {
 				"depositUsd": "Wpłać ${amount}"
-			}
+			},
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} jest zarezerwowane na pokrycie opłat za gaz i uniknięcie niepowodzenia transakcji"
 		},
 		"depositPending": {
 			"confirmedTitle": "Wpłata potwierdzona!",
@@ -782,7 +791,10 @@
 			"submittedDesc": "Oczekiwanie na potwierdzenie blockchain. Może to potrwać kilka minut.",
 			"viewOnExplorer": "Zobacz w eksploratorze",
 			"newDepositConfirmed": "Dokonaj kolejnej wpłaty",
-			"newDepositPending": "Rozpocznij nową wpłatę"
+			"newDepositPending": "Rozpocznij nową wpłatę",
+			"failedTitle": "Transakcja nie powiodła się",
+			"failedDesc": "Twoja transakcja nie powiodła się. ",
+			"newDepositFailed": "Spróbuj ponownie"
 		},
 		"withdrawPanel": {
 			"resetForm": "Zresetuj formularz",
@@ -795,7 +807,7 @@
 			"available": "Dostępne:",
 			"insufficientBalance": "Niewystarczające saldo",
 			"minimumIs": "Minimum to {min}",
-			"minLabel": "Min:",
+			"minLabel": "Min.:",
 			"emailWalletAddress": "Adres portfela e-mail",
 			"walletAddress": "Adres portfela",
 			"errors": {
@@ -812,11 +824,12 @@
 			"buttons": {
 				"withdraw": "Wypłać {amount} {symbol}",
 				"minimum": "Minimum {amount} {symbol}"
-			}
+			},
+			"calculating": "Obliczenie"
 		},
 		"withdrawSuccess": {
 			"title": "Wypłata udana!",
-			"successMessage": "🎉 Właśnie wypłaciłem(am) {withdrawAmount} {tokenSymbol} z Meme Win! 🚀 Dołącz do zwycięskiej passy na {shareUrl}",
+			"successMessage": "🎉 Właśnie wypłaciłem(am) {withdrawAmount} {tokenSymbol} z HyperBetz! 🚀 Dołącz do zwycięskiej passy na {shareUrl}",
 			"withdrawnAmount": "Wypłacona kwota",
 			"shareText": "Udostępnij",
 			"subText": "🚀 DOŁĄCZ DO ZWYCIĘSKIEJ PASSY! 🚀",
@@ -824,7 +837,14 @@
 			"screenshot": "Zrób zrzut ekranu",
 			"download": "Pobierz obraz",
 			"close": "Zamknij",
-			"copiedToClipboard": "Link do udostępniania został pomyślnie skopiowany"
+			"copiedToClipboard": "Link do udostępniania został pomyślnie skopiowany",
+			"entryPrice": "Kwota Wypłaty",
+			"lastPrice": "Symbol tokena",
+			"referralCode": "Kod polecający",
+			"screenshotFailed": "Nie udało się wykonać zrzutu ekranu. Spróbuj ponownie lub użyj innej przeglądarki.",
+			"shareFailed": "Udostępnianie nie powiodło się. Proszę spróbować ponownie.",
+			"status": "Zakończono",
+			"userName": "Gracz HyperBetz"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "Wypłata potwierdzona!",
@@ -838,6 +858,51 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "Otrzymasz"
+		},
+		"tipPanel": {
+			"approxUsd": "~  USD",
+			"balance": "Saldo:",
+			"buttons": {
+				"tip": "Napiwek",
+				"tipUsd": "Napiwek"
+			},
+			"emailWalletAddress": "Adres portfela e-mail",
+			"enterAmount": "Wprowadź kwotę",
+			"errors": {
+				"belowMinimum": "Kwota musi wynosić co najmniej {min}.",
+				"checkForm": "Proszę zweryfikować szczegóły napiwku.",
+				"insufficientBalance": "Niewystarczające środki.",
+				"missingWallet": "Nie można pobrać portfela z napiwkami. Proszę spróbować ponownie później.",
+				"selectTokenAndAmount": "Proszę wybrać token i wprowadzić kwotę."
+			},
+			"max": "Maks",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} jest zarezerwowany na pokrycie opłat za gaz i uniknięcie niepowodzenia transakcji",
+			"minimumIs": "Minimalny napiwek to {min}",
+			"minPrefix": "Minimalna",
+			"prompts": {
+				"enterAmount": "Wprowadź kwotę",
+				"selectToken": "Wybierz token"
+			},
+			"resetForm": "Zresetuj formularz",
+			"selectToken": "Wybierz token",
+			"status": {
+				"awaitingApproval": "Oczekiwanie na zatwierdzenie...",
+				"calculatingRate": "Obliczanie...",
+				"fetchingWallet": "Przygotowywanie portfela na napiwki...",
+				"insufficientBalance": "Niewystarczające saldo",
+				"processing": "Wysyłanie napiwku..."
+			},
+			"tipPanelWarningText": "Napiwki są dobrowolne i bezzwrotne.",
+			"youTip": "Twoja napiwek"
+		},
+		"tipPending": {
+			"confirmedDesc": "Twoja napiwek został pomyślnie dostarczony.",
+			"confirmedTitle": "Napiwek potwierdzony!",
+			"newTipConfirmed": "Wyślij kolejną poradę",
+			"newTipPending": "Wyślij kolejną napiwek",
+			"submittedDesc": "Twoja wskazówka jest potwierdzana w łańcuchu.",
+			"submittedTitle": "Napiwek oczekuje",
+			"viewOnExplorer": "Zobacz w eksploratorze"
 		}
 	},
 	"navUser": {
@@ -851,7 +916,7 @@
 		"pageTitle": "Wszystkie gry",
 		"playNow": "Graj teraz",
 		"byProvider": "Od {name}",
-		"count": "{count} {count, plural, one {gra} other {gier}}",
+		"count": "{count} Gry",
 		"noResults": "Nie znaleziono gier spełniających Twoje kryteria.",
 		"errorLoading": "Nie można załadować gier. Spróbuj ponownie później.",
 		"slots": "Sloty",
@@ -937,7 +1002,7 @@
 			"casino": {
 				"title": "Kasyno",
 				"badge": "590+ GIER",
-				"desc": "Ciesz się oryginalnymi grami MemeWin i innymi grami kasynowymi od najlepszych dostawców.",
+				"desc": "Ciesz się oryginalnymi grami HyperBetz i innymi grami kasynowymi od najlepszych dostawców.",
 				"link": "Przejdź do kasyna"
 			},
 			"slots": {
@@ -954,7 +1019,7 @@
 			},
 			"crypto": {
 				"title": "Krypto i zarabianie",
-				"badge": "60% APR",
+				"badge": "60% RRSO",
 				"desc": "Stakuj, handluj i zarabiaj na kryptowalutach po atrakcyjnych stopach.",
 				"link": "Przejdź do krypto"
 			}
@@ -1112,7 +1177,7 @@
 				"total": "Łącznie",
 				"tier": "Poziom",
 				"unclaimed": "Nieodebrane",
-				"token": "Token"
+				"token": "Znak"
 			},
 			"tierPrefix": "Poziom",
 			"availableToClaim": "Dostępne do zgłoszenia",
@@ -1204,6 +1269,29 @@
 			"calcFor": "Obliczanie bonusu dla zakładu za ${amount}",
 			"totalPotential": "Całkowity Potencjalny Bonus:",
 			"combinedAtTier": "Połączony bonus ze wszystkich typów gier na poziomie {level}"
+		},
+		"claimSuccessModal": {
+			"title": "Zgłoszenie powiodło się",
+			"statusCompleted": "Zakończone",
+			"statusOnChain": "Na łańcuchu",
+			"claimAmount": "Kwota Roszczenia",
+			"logoAlt": "Logo HyperBetz",
+			"backgroundAlt": "Tło sukcesu wniosku",
+			"creatingMagic": "Tworzenie magii...",
+			"downloadShare": "Pobierz i udostępnij",
+			"spreadTheWin": "ROZŁÓŻ WYGRANĄ",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "Telegram",
+			"socialReddit": "Reddit",
+			"socialMore": "Więcej",
+			"shareText": "I just claimed {amount} bonus! Join me: {url}",
+			"referralLinkCopied": "Skopiowany link do odesłania",
+			"referralLinkCopyFailed": "Nie udało się skopiować linku polecającego",
+			"screenshotFailed": "Zrzut ekranu nie powiódł się. Spróbuj ponownie lub użyj innej przeglądarki.",
+			"shareTextCopied": "Udostępnij tekst skopiowany do schowka!",
+			"shareFailed": "Zapis się nie powiódł. Spróbuj ponownie."
 		}
 	}
 }

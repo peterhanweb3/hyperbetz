@@ -6,6 +6,7 @@ import {
 	useEffect,
 	useCallback,
 	useMemo,
+	useRef,
 } from "react";
 import { createConfig, http, WagmiProvider } from "wagmi";
 import { EthereumWalletConnectors } from "@dynamic-labs/ethereum";
@@ -40,11 +41,28 @@ import { LiveChatSidebar } from "@/components/features/live-chat/live-chat-sideb
 import LocalStorageService from "@/services/localStorageService";
 import { MobileBottomNavigation } from "@/components/common/mobile-bottom-navigation";
 import { AppSidebar } from "@/components/common/sidebar/app-sidebar";
+import { useCrossTabLogout } from "@/hooks/use-cross-tab-logout";
+import { OfflineDetector } from "@/components/common/offline-detector";
 
 const queryClient = new QueryClient();
 
+const SUPPORTED_NETWORKS = [
+	polygon,
+	arbitrum,
+	mainnet,
+	optimism,
+	base,
+	avalanche,
+	bsc,
+	linea,
+	zksync,
+] as const;
+
 const AppContent = ({ children }: { children: ReactNode }) => {
 	const { accountStatus, user, isLoggedIn } = useDynamicAuth();
+
+	// Enable cross-tab logout detection
+	useCrossTabLogout(isLoggedIn);
 
 	return (
 		<>
@@ -66,41 +84,39 @@ export default function Layout({
 }>) {
 	// Load debug helper in development
 
-	const networks = [
-		polygon,
-		arbitrum,
-		mainnet,
-		optimism,
-		base,
-		avalanche,
-		bsc,
-		linea,
-		zksync,
-	] as const;
-
-	const config = createConfig({
-		chains: networks,
-		multiInjectedProviderDiscovery: false,
-		transports: {
-			[polygon.id]: http(),
-			[arbitrum.id]: http(),
-			[mainnet.id]: http(),
-			[optimism.id]: http(),
-			[base.id]: http(),
-			[avalanche.id]: http(),
-			[bsc.id]: http(),
-			[linea.id]: http(),
-			[zksync.id]: http(),
-		},
-	});
+	const config = useMemo(
+		() =>
+			createConfig({
+				chains: SUPPORTED_NETWORKS,
+				multiInjectedProviderDiscovery: false,
+				transports: {
+					[polygon.id]: http(),
+					[arbitrum.id]: http(),
+					[mainnet.id]: http(),
+					[optimism.id]: http(),
+					[base.id]: http(),
+					[avalanche.id]: http(),
+					[bsc.id]: http(),
+					[linea.id]: http(),
+					[zksync.id]: http(),
+				},
+			}),
+		[]
+	);
 
 	const [isLoggedInOneTime, setIsLoggedInOneTime] = useState(false);
 	const [showSmallModal, setShowSmallModal] = useState(false);
 	const dynamicLoaded = useAppStore((state) => state.dynamicLoaded);
+	const authSuccessTimerRef = useRef<ReturnType<typeof setTimeout> | null>(
+		null
+	);
 
 	// OPTIMIZED: Memoize handlers to prevent recreation on every render
 	const handleClose = useCallback(() => {
 		setIsLoggedInOneTime(false);
+		if (typeof window === "undefined") {
+			return;
+		}
 		// Always refresh countdown end time when closing idle modal
 		localStorage.setItem(
 			"smallModalTime",
@@ -113,6 +129,9 @@ export default function Layout({
 
 	// OPTIMIZED: Memoize modal opener to prevent recreation
 	const openMiniModal = useCallback(() => {
+		if (typeof window === "undefined") {
+			return;
+		}
 		const storedTime = localStorage.getItem("smallModalTime");
 		const storedStatus = localStorage.getItem("smallModalStatus");
 
@@ -134,7 +153,7 @@ export default function Layout({
 	// show small modal from localstorage get time and status
 	useEffect(() => {
 		openMiniModal();
-	}, [dynamicLoaded]);
+	}, [dynamicLoaded, openMiniModal]);
 
 	// Get the modal action from store
 	const openTransactionModal = useAppStore(
@@ -156,58 +175,82 @@ export default function Layout({
 	// OPTIMIZED: Memoize storage service to prevent recreation
 	const storageService = useMemo(() => LocalStorageService.getInstance(), []);
 
+	useEffect(() => {
+		return () => {
+			if (authSuccessTimerRef.current) {
+				clearTimeout(authSuccessTimerRef.current);
+			}
+		};
+	}, []);
+
+	const dynamicSettings = useMemo(
+		() => ({
+			environmentId: process.env
+				.NEXT_PUBLIC_DYNAMIC_ENVIRONMENT_ID as string,
+			walletConnectors: [EthereumWalletConnectors],
+			mobileExperience: "redirect" as const,
+			social: {
+				strategy: "popup" as const,
+			},
+			events: {
+				onAuthSuccess: () => {
+					if (authSuccessTimerRef.current) {
+						clearTimeout(authSuccessTimerRef.current);
+					}
+					authSuccessTimerRef.current = setTimeout(() => {
+						setIsLoggedInOneTime(true);
+					}, 30000);
+				},
+				onLogout: () => {
+					if (authSuccessTimerRef.current) {
+						clearTimeout(authSuccessTimerRef.current);
+					}
+					setIsLoggedInOneTime(false);
+					setShowSmallModal(false);
+					storageService.clearUserData();
+					if (typeof window !== "undefined") {
+						// Clear any user balance cache keys from live chat
+						Object.keys(localStorage).forEach((key) => {
+							if (key.startsWith("userBalance_")) {
+								localStorage.removeItem(key);
+							}
+						});
+					}
+				},
+			},
+		}),
+		[
+			authSuccessTimerRef,
+			setIsLoggedInOneTime,
+			setShowSmallModal,
+			storageService,
+		]
+	);
+
 	return (
 		// Keep your top-level providers
-		<DynamicContextProvider
-			settings={{
-				environmentId: process.env
-					.NEXT_PUBLIC_DYNAMIC_ENVIRONMENT_ID as string,
-				walletConnectors: [EthereumWalletConnectors],
-				mobileExperience: "redirect",
-				social: {
-					strategy: "popup",
-				},
-				events: {
-					onAuthSuccess: () => {
-						// setIsLoggedInOneTime(true);
-						setTimeout(() => {
-							setIsLoggedInOneTime(true);
-						}, 30000);
-					},
-					onLogout: () => {
-						storageService.clearUserData();
-						if (typeof window !== "undefined") {
-							// Clear any user balance cache keys from live chat
-							Object.keys(localStorage).forEach((key) => {
-								if (key.startsWith("userBalance_")) {
-									localStorage.removeItem(key);
-								}
-							});
-						}
-					},
-				},
-			}}
-		>
+		<DynamicContextProvider settings={dynamicSettings}>
 			<WagmiProvider config={config}>
 				<QueryClientProvider client={queryClient}>
 					<DynamicWagmiConnector>
 						<TooltipProvider>
+							<Sonner
+								position="top-center"
+								richColors
+								closeButton
+							/>
 							<AuthProvider>
 								<BlurOverlayProvider>
 									{/* <SidebarProvider> */}
 									<SidebarProvider className="overflow-x-clip">
 										<AppSidebar />
 										{/* <SidebarInset> */}
-										<SidebarInset className="overflow-auto">
-											{/* Transferred the width calculation of PageHeader to the component itself */}
-											<PageHeader className="consistent-padding-x fixed w-full z-40" />
-											<BlurOverlay />
-											<LiveChatSidebar />
-											<Sonner
-												position="top-center"
-												richColors
-												closeButton
-											/>
+									<SidebarInset className="overflow-auto">
+										{/* Transferred the width calculation of PageHeader to the component itself */}
+										<PageHeader className="consistent-padding-x fixed w-full z-40" />
+										<OfflineDetector />
+										<BlurOverlay />
+										<LiveChatSidebar />
 											<IdleModal
 												open={isLoggedInOneTime}
 												onClose={handleClose}
