@@ -1,0 +1,26 @@
+name: 🚀 Auto Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 2222 
+          script: |
+            cd /var/www/html/production/Live/hyperbetz/
+            GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_leon -o IdentitiesOnly=yes' \
+            git pull origin main
+            npm i
+            npm run build
+            pm2 restart web_hyperbetz
