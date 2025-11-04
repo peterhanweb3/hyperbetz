@@ -114,20 +114,40 @@ export default function HomePage() {
 		}
 	}, [primaryWallet, setDynamicLoaded]);
 
-	const handleReferralRedirect = useCallback(() => {
-		if (typeof window === "undefined") {
-			return;
-		}
-		const params = new URLSearchParams(window.location.search);
-		const referralParam =
-			params.get("r") ||
-			params.get("referrer") ||
-			params.get("referralId");
-		if (referralParam) {
-			localStorage.setItem("referralId", referralParam);
-		}
-		router.replace("/lobby");
-	}, [router]);
+	const [hasHandledLoginRedirect, setHasHandledLoginRedirect] =
+	useState(false);
+
+const handleReferralRedirect = useCallback(() => {
+	if (typeof window === "undefined") {
+		return;
+	}
+	const params = new URLSearchParams(window.location.search);
+	const referralParam =
+		params.get("r") ||
+		params.get("referrer") ||
+		params.get("referralId");
+	if (referralParam) {
+		localStorage.setItem("referralId", referralParam);
+	}
+	router.replace("/lobby");
+}, [router]);
+
+useEffect(() => {
+	if (!isLoggedIn || hasHandledLoginRedirect) {
+		return;
+	}
+
+	// Check if dynamic_authentication_token exists in localStorage
+	// This token is set when user successfully logs in
+	const authToken = localStorage.getItem("dynamic_authentication_token");
+
+	if (authToken) {
+		// User is logged in and has valid token
+		// Mark that we've handled the redirect to prevent loops
+		setHasHandledLoginRedirect(true);
+		handleReferralRedirect();
+	}
+}, [handleReferralRedirect, isLoggedIn, hasHandledLoginRedirect]);
 
 	useEffect(() => {
 		if (!isLoggedIn) {
