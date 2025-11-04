@@ -17,7 +17,7 @@ import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 // 	Heart,
 // 	Tv,
 // } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import favoritesService from "@/services/favoritesService";
 import type { Game } from "@/types/games/gameList.types";
 import { DynamicProviderCarousel } from "@/components/features/providers/dynamic-provider-carousel";
@@ -43,19 +43,65 @@ export default function LobbyPage() {
 	const t = useT();
 	const router = useRouter();
 	const { primaryWallet } = useDynamicContext();
-	const { isLoggedIn, isLoading: isAuthLoading } = useDynamicAuth();
+	const {
+		isLoggedIn,
+		isLoading: isAuthLoading,
+		isAuthCheckComplete,
+	} = useDynamicAuth();
 
 	const primaryWalletAddress = primaryWallet?.address || "";
 
+	// Use ref to track if redirect is in progress to prevent multiple redirects
+	const redirectInProgress = useRef(false);
+	const redirectTimerRef = useRef<NodeJS.Timeout | null>(null);
+
 	// Redirect guests back to home once auth state is resolved
+	// CRITICAL FIX: Wait for both auth loading AND auth check to complete
+	// This prevents false redirects during rapid page refreshes
 	useEffect(() => {
-		if (isAuthLoading) {
+		// Cleanup timer on unmount
+		return () => {
+			if (redirectTimerRef.current) {
+				clearTimeout(redirectTimerRef.current);
+			}
+		};
+	}, []);
+
+	useEffect(() => {
+		// Don't make any routing decisions until auth is fully initialized
+		if (isAuthLoading || !isAuthCheckComplete) {
+			// Clear any pending redirect if auth state changes
+			if (redirectTimerRef.current) {
+				clearTimeout(redirectTimerRef.current);
+				redirectTimerRef.current = null;
+			}
 			return;
 		}
-		if (!isLoggedIn) {
-			router.replace("/");
+
+		// If user is logged in, ensure redirect flag is cleared
+		if (isLoggedIn) {
+			redirectInProgress.current = false;
+			if (redirectTimerRef.current) {
+				clearTimeout(redirectTimerRef.current);
+				redirectTimerRef.current = null;
+			}
+			return;
 		}
-	}, [isAuthLoading, isLoggedIn, router]);
+
+		// Only redirect if user is definitively NOT logged in
+		// AND we haven't already started a redirect
+		if (!isLoggedIn && !redirectInProgress.current) {
+			redirectInProgress.current = true;
+
+			// Add small delay to ensure auth state is stable (prevents false positives during rapid refreshes)
+			redirectTimerRef.current = setTimeout(() => {
+				// Double-check auth state before actually redirecting
+				if (!isLoggedIn) {
+					router.replace("/");
+				}
+			}, 100);
+		}
+	}, [isAuthLoading, isAuthCheckComplete, isLoggedIn, router]);
 
 	// Get game data from store
 	const allGames = useAppStore((state) => state.game.list.games);
