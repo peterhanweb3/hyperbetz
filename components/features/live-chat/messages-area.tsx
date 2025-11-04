@@ -64,10 +64,10 @@ export function MessagesArea({
 		<div className="h-full flex flex-col bg-gradient-to-b from-background/50 to-card/30 overflow-hidden">
 			<ScrollArea
 				ref={scrollAreaRef}
-				className="flex-1 h-full messages-scrollable scrollbar-thin overflow-auto"
+				className="flex-1 h-full messages-scrollable scrollbar-hide overflow-auto"
 				style={{ maxHeight: "100%" }}
 			>
-				<div className="py-2 px-1 min-h-full max-w-full overflow-hidden">
+				<div className="py-2 px-1 min-h-full overflow-hidden">
 					{isLoadingHistory ? (
 						<div className="text-center text-muted-foreground py-8 relative min-h-[200px] flex flex-col justify-center">
 							{/* Background decoration */}
@@ -117,7 +117,7 @@ export function MessagesArea({
 							</div>
 						</div>
 					) : (
-						<div className="space-y-1 w-full max-w-full overflow-hidden">
+						<div className="space-y-1 overflow-hidden">
 							{messages.map((message) => (
 								<MessageItem
 									key={message.id}

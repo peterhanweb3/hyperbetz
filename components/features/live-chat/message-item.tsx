@@ -13,7 +13,6 @@ import {
 import {
 	formatTime,
 	processMessageContent,
-	// getCountryFlagStyles, // Commented out - no longer using country flags
 } from "@/lib/utils/features/live-chat/live-chat.utils";
 import { generateUserAvatarAsync } from "@/lib/utils/features/live-chat/avatar-generator";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -50,17 +49,9 @@ export function MessageItem({
 		if (typeof window !== "undefined") {
 			generateUserAvatarAsync(message.username, 40)
 				.then((url) => {
-					// console.log(
-					// 	`Avatar generated for ${message.username}:`,
-					// 	url ? "Success" : "Failed"
-					// );
 					setAvatarUrl(url);
 				})
 				.catch(() => {
-					// console.error(
-					// 	`Avatar generation failed for ${message.username}:`,
-					// 	error
-					// );
 					setAvatarUrl("");
 				});
 		}
@@ -72,10 +63,6 @@ export function MessageItem({
 			const replyMessage = message as ReplyMessage;
 			generateUserAvatarAsync(replyMessage.referencedMessage.username, 16)
 				.then((url) => {
-					// console.log(
-					// 	`Reply avatar generated for ${replyMessage.referencedMessage.username}:`,
-					// 	url ? "Success" : "Failed"
-					// );
 					setReplyAvatarUrl(url);
 				})
 				.catch((error) => {
@@ -103,13 +90,12 @@ export function MessageItem({
 		switch (ref.type) {
 			case "win":
 				return (
-					<div className="flex items-center gap-2">
-						{/* <Crown className="h-3 w-3 text-yellow-400" /> */}
+					<div className="flex items-center gap-2 break-words">
 						<FontAwesomeIcon
 							icon={faCrown}
-							className="h-3 w-3 text-yellow-400"
+							className="h-3 w-3 text-yellow-400 flex-shrink-0"
 						/>
-						<span className="text-xs text-green-400">
+						<span className="text-xs text-green-400 break-words">
 							Won {ref.amount?.toFixed(2)} {ref.currency} in{" "}
 							{ref.game}
 						</span>
@@ -117,26 +103,26 @@ export function MessageItem({
 				);
 			case "gif":
 				return (
-					<div className="flex items-center gap-2">
-						{/* eslint-disable-next-line @next/next/no-img-element */}
+					<div className="flex items-center gap-2 min-w-0">
 						<img
 							src={ref.gifUrl || "/placeholder.svg"}
 							alt="GIF preview"
-							className="w-8 h-6 rounded object-cover"
+							className="w-8 h-6 rounded object-cover flex-shrink-0"
 						/>
-						<span className="text-xs">{ref.content}</span>
+						<span className="text-xs break-words min-w-0">
+							{ref.content}
+						</span>
 					</div>
 				);
 			case "image":
 				return (
-					<div className="flex items-center gap-2">
-						{/* eslint-disable-next-line @next/next/no-img-element */}
+					<div className="flex items-center gap-2 min-w-0">
 						<img
 							src={ref.imageUrl || "/placeholder.svg"}
 							alt="Image preview"
-							className="w-8 h-6 rounded object-cover"
+							className="w-8 h-6 rounded object-cover flex-shrink-0"
 						/>
-						<span className="text-xs">
+						<span className="text-xs break-words min-w-0">
 							{ref.content || "Image"}
 						</span>
 					</div>
@@ -150,37 +136,39 @@ export function MessageItem({
 				);
 			case "share":
 				return (
-					<div className="flex items-center gap-2">
-						{/* <Coins className="h-3 w-3 text-yellow-400" /> */}
+					<div className="flex items-center gap-2 break-words">
 						<FontAwesomeIcon
 							icon={faCoin}
-							className="h-3 w-3 text-yellow-400"
+							className="h-3 w-3 text-yellow-400 flex-shrink-0"
 						/>
-						<span className="text-xs">{ref.content}</span>
+						<span className="text-xs break-words">
+							{ref.content}
+						</span>
 					</div>
 				);
 			case "rain":
 				return (
-					<div className="flex items-center gap-2">
-						{/* <CloudRain className="h-3 w-3 text-blue-400" /> */}
+					<div className="flex items-center gap-2 break-words">
 						<FontAwesomeIcon
 							icon={faCloudShowersHeavy}
-							className="h-3 w-3 text-blue-400"
+							className="h-3 w-3 text-blue-400 flex-shrink-0"
 						/>
-						<span className="text-xs">
+						<span className="text-xs break-words">
 							Rain: {ref.amount} {ref.currency}
 						</span>
 					</div>
 				);
 			case "system":
 				return (
-					<div className="flex items-center gap-2">
-						<span className="text-xs">System: {ref.content}</span>
+					<div className="flex items-center gap-2 break-words">
+						<span className="text-xs break-words">
+							System: {ref.content}
+						</span>
 					</div>
 				);
 			default:
 				return (
-					<p className="text-xs text-[hsl(var(--muted-foreground))]/80 leading-relaxed line-clamp-2">
+					<p className="text-xs text-[hsl(var(--muted-foreground))]/80 leading-relaxed line-clamp-2 break-words overflow-hidden">
 						{ref.content}
 					</p>
 				);
@@ -196,13 +184,13 @@ export function MessageItem({
 	return (
 		<div
 			className={cn(
-				"relative px-4 py-2 transition-colors duration-150",
+				"relative px-4 py-2 transition-colors duration-150 w-full max-w-full overflow-hidden",
 				isAnimating && "animate-message-slide-in",
 				message.isCurrentUser && "",
 				isFocused && "bg-accent/30"
 			)}
 		>
-			<div className="flex items-start gap-4">
+			<div className="flex items-start gap-4 w-full max-w-full">
 				{/* Modern Avatar with Badge Integration */}
 				<div className="relative flex-shrink-0 mt-1">
 					<Avatar className="h-10 w-10">
@@ -247,19 +235,19 @@ export function MessageItem({
 				{/* Message Content Container */}
 				<div className="flex-1 min-w-0 group">
 					{/* Header with username and timestamp */}
-					<div className="flex items-center justify-between gap-2 mb-1">
-						<div className="flex gap-3 items-center">
-							<span className="font-semibold text-xs text-foreground hover:underline cursor-pointer">
+					<div className="flex items-center justify-between gap-2 mb-1 max-w-full">
+						<div className="flex gap-3 items-center min-w-0 flex-1">
+							<span className="font-semibold text-xs text-foreground hover:underline cursor-pointer truncate">
 								{message.isCurrentUser
 									? "You"
 									: message.username}
 							</span>
 
-							<span className="text-xs text-muted-foreground">
+							<span className="text-xs text-muted-foreground flex-shrink-0">
 								{formatTime(message.timestamp)}
 							</span>
 						</div>
-						<div className="flex items-center justify-between gap-0.5">
+						<div className="flex items-center justify-between gap-0.5 flex-shrink-0">
 							<Button
 								variant="ghost"
 								size="sm"
@@ -276,7 +264,7 @@ export function MessageItem({
 								<Button
 									variant="ghost"
 									size="sm"
-									className="h-7text-xs lg:opacity-0 lg:group-hover:opacity-100 duration-300 transition-opacity text-primary lg:group-hover:bg-secondary  "
+									className="h-7text-xs lg:opacity-0 lg:group-hover:opacity-100 duration-300 transition-opacity text-primary lg:group-hover:bg-secondary"
 									onClick={handleTip}
 								>
 									{/* <Coins className="h-3 w-3 mr-1" /> */}
@@ -290,12 +278,12 @@ export function MessageItem({
 					</div>
 
 					{/* Message Content */}
-					<div className="space-y-2">
+					<div className="space-y-2 w-full max-w-full overflow-hidden">
 						{message.type === "reply" && (
 							<>
 								{/* Reply Reference Bar */}
-								<div className="flex items-start gap-2 p-2 rounded-md bg-muted/40 border-l-4 border-primary">
-									<Avatar className="h-4 w-4 mt-0.5">
+								<div className="flex items-start gap-2 p-2 rounded-md bg-muted/40 border-l-4 border-primary w-full max-w-full overflow-hidden">
+									<Avatar className="h-4 w-4 mt-0.5 flex-shrink-0">
 										<AvatarImage
 											src={replyAvatarUrl}
 											alt={`${message.referencedMessage.username}'s avatar`}
@@ -312,11 +300,11 @@ export function MessageItem({
 														.toUpperCase()}
 										</AvatarFallback>
 									</Avatar>
-									<div className="flex-1 min-w-0">
-										<span className="text-xs font-medium text-muted-foreground">
+									<div className="flex-1 min-w-0 overflow-hidden">
+										<span className="text-xs font-medium text-muted-foreground block truncate">
 											{message.referencedMessage.username}
 										</span>
-										<div className="text-xs text-muted-foreground/80 text-wrap">
+										<div className="text-xs text-muted-foreground/80 break-words overflow-wrap-anywhere">
 											{renderReferencedPreview(
 												message.referencedMessage
 											)}
@@ -325,7 +313,7 @@ export function MessageItem({
 								</div>
 								{/* Reply Message */}
 								<div
-									className="text-sm text-foreground leading-relaxed p-3 rounded-lg bg-muted/30 border border-border/20"
+									className="text-sm text-foreground leading-relaxed p-3 rounded-lg bg-muted/30 border border-border/20 break-words overflow-wrap-anywhere w-full max-w-full [&_*]:break-words [&_*]:overflow-wrap-anywhere"
 									dangerouslySetInnerHTML={{
 										__html: processMessageContent(
 											message.content,
@@ -338,7 +326,7 @@ export function MessageItem({
 
 						{message.type === "text" && message.content && (
 							<div
-								className="text-sm text-foreground leading-relaxed p-3 rounded-lg bg-muted/30 border border-border/20"
+								className="text-sm text-foreground leading-relaxed p-3 rounded-lg bg-muted/30 border border-border/20 break-words overflow-wrap-anywhere w-full max-w-full [&_*]:break-words [&_*]:overflow-wrap-anywhere"
 								dangerouslySetInnerHTML={{
 									__html: processMessageContent(
 										message.content,
@@ -349,16 +337,15 @@ export function MessageItem({
 						)}
 
 						{message.type === "gif" && (
-							<div className="space-y-1">
-								{/* eslint-disable-next-line @next/next/no-img-element */}
+							<div className="space-y-1 w-full max-w-full overflow-hidden">
 								<img
 									src={message.gifUrl || "/placeholder.svg"}
 									alt="GIF"
-									className="rounded-lg max-w-sm h-auto"
+									className="rounded-lg max-w-full h-auto"
 								/>
 								{message.caption && (
 									<div
-										className="text-sm text-foreground"
+										className="text-sm text-foreground break-words overflow-wrap-anywhere [&_*]:break-words [&_*]:overflow-wrap-anywhere"
 										dangerouslySetInnerHTML={{
 											__html: processMessageContent(
 												message.caption,
@@ -371,16 +358,15 @@ export function MessageItem({
 						)}
 
 						{message.type === "image" && (
-							<div className="space-y-1">
-								{/* eslint-disable-next-line @next/next/no-img-element */}
+							<div className="space-y-1 w-full max-w-full overflow-hidden">
 								<img
 									src={message.imageUrl || "/placeholder.svg"}
 									alt="Uploaded image"
-									className="rounded-lg max-w-sm h-auto cursor-pointer hover:opacity-90 transition-opacity"
+									className="rounded-lg max-w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
 								/>
 								{message.caption && (
 									<div
-										className="text-sm text-foreground"
+										className="text-sm text-foreground break-words overflow-wrap-anywhere [&_*]:break-words [&_*]:overflow-wrap-anywhere"
 										dangerouslySetInnerHTML={{
 											__html: processMessageContent(
 												message.caption,
@@ -393,32 +379,30 @@ export function MessageItem({
 						)}
 
 						{message.type === "win" && (
-							<div className="bg-gradient-to-r from-green-500/10 to-yellow-500/10 border border-green-500/20 rounded-lg p-3">
-								<div className="flex items-center gap-2 mb-2">
-									<div className="p-1.5 bg-yellow-500 rounded-full">
-										{/* <Crown className="h-3 w-3 text-white" /> */}
+							<div className="bg-gradient-to-r from-green-500/10 to-yellow-500/10 border border-green-500/20 rounded-lg p-3 w-full max-w-full overflow-hidden">
+								<div className="flex items-center gap-2 mb-2 flex-wrap">
+									<div className="p-1.5 bg-yellow-500 rounded-full flex-shrink-0">
 										<FontAwesomeIcon
 											icon={faCrown}
 											className="h-3 w-3 text-white"
 										/>
 									</div>
-									<span className="text-sm font-semibold text-green-600 dark:text-green-400">
+									<span className="text-sm font-semibold text-green-600 dark:text-green-400 break-words">
 										🎰 Big Win in &quot;{message.game}
 										&quot;!
 									</span>
 								</div>
-								<div className="flex items-center gap-2">
-									{/* <Coins className="h-4 w-4 text-yellow-500" /> */}
+								<div className="flex items-center gap-2 flex-wrap">
 									<FontAwesomeIcon
 										icon={faCoin}
-										className="h-4 w-4 text-yellow-500"
+										className="h-4 w-4 text-yellow-500 flex-shrink-0"
 									/>
-									<span className="font-semibold text-lg text-foreground">
+									<span className="font-semibold text-lg text-foreground break-all">
 										{message.amount.toFixed(7)}{" "}
 										{message.currency}
 									</span>
 									{message.multiplier && (
-										<Badge className="bg-red-500 text-white text-xs">
+										<Badge className="bg-red-500 text-white text-xs flex-shrink-0">
 											{message.multiplier}x
 										</Badge>
 									)}
@@ -427,17 +411,16 @@ export function MessageItem({
 						)}
 
 						{message.type === "share" && (
-							<div className="space-y-1">
-								<p className="text-sm text-foreground">
+							<div className="space-y-1 w-full max-w-full overflow-hidden">
+								<p className="text-sm text-foreground break-words overflow-wrap-anywhere">
 									{message.content}
 								</p>
-								<div className="flex items-center gap-1">
-									{/* <Coins className="h-4 w-4 text-yellow-500" /> */}
+								<div className="flex items-center gap-1 flex-wrap">
 									<FontAwesomeIcon
 										icon={faCoin}
-										className="h-4 w-4 text-yellow-500"
+										className="h-4 w-4 text-yellow-500 flex-shrink-0"
 									/>
-									<span className="text-sm font-semibold text-primary">
+									<span className="text-sm font-semibold text-primary break-all">
 										{message.sharedAmount}{" "}
 										{message.sharedCurrency}
 									</span>
@@ -452,25 +435,23 @@ export function MessageItem({
 						)}
 
 						{message.type === "rain" && (
-							<div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-lg p-3">
-								<div className="flex items-center gap-2 mb-2">
-									{/* <CloudRain className="h-4 w-4 text-blue-500" /> */}
+							<div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-lg p-3 w-full max-w-full overflow-hidden">
+								<div className="flex items-center gap-2 mb-2 flex-wrap">
 									<FontAwesomeIcon
 										icon={faCloudShowersHeavy}
-										className="h-4 w-4 text-blue-500"
+										className="h-4 w-4 text-blue-500 flex-shrink-0"
 									/>
 									<span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
 										🌧️ Money Rain!
 									</span>
 								</div>
-								<div className="space-y-2">
-									<div className="flex items-center gap-2">
-										{/* <Coins className="h-4 w-4 text-yellow-500" /> */}
+								<div className="space-y-2 w-full max-w-full overflow-hidden">
+									<div className="flex items-center gap-2 flex-wrap">
 										<FontAwesomeIcon
 											icon={faCoin}
-											className="h-4 w-4 text-yellow-500"
+											className="h-4 w-4 text-yellow-500 flex-shrink-0"
 										/>
-										<span className="font-semibold text-foreground">
+										<span className="font-semibold text-foreground break-all">
 											{message.amount} {message.currency}
 										</span>
 										<span className="text-xs text-muted-foreground">
@@ -481,7 +462,7 @@ export function MessageItem({
 												: ""}
 										</span>
 									</div>
-									<div className="text-xs text-muted-foreground">
+									<div className="text-xs text-muted-foreground break-words overflow-wrap-anywhere">
 										{message.distributedAmount.toFixed(2)}{" "}
 										{message.currency} each:{" "}
 										{message.recipients.join(", ")}
@@ -493,7 +474,7 @@ export function MessageItem({
 						{message.type === "system" && (
 							<div
 								className={cn(
-									"rounded-lg p-2 text-center text-sm italic",
+									"rounded-lg p-2 text-center text-sm italic break-words overflow-wrap-anywhere",
 									message.systemType === "error" &&
 										"bg-red-500/10 text-red-600 dark:text-red-400",
 									message.systemType === "rain" &&
