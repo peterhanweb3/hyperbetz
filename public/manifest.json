@@ -1,0 +1,26 @@
+{
+	"name": "Meme Win - Your Gateway to Fun and Rewards",
+	"short_name": "Meme Win",
+	"description": "Join Meme Win for an exciting gaming experience with amazing rewards!",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#000000",
+	"theme_color": "#000000",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "/assets/site/meme-win-logo.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "/assets/site/meme-win-logo.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	],
+	"categories": ["gaming", "entertainment"],
+	"prefer_related_applications": false
+}
