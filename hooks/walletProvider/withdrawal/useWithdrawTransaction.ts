@@ -250,7 +250,7 @@ export const useWithdrawTransaction = ({
 				const hash = await walletClient.writeContract({
 					address: data.contractAddress as `0x${string}`,
 					abi: pandaABI,
-					functionName: "GmGame_WD",
+					functionName: "executePayout",
 					args: [
 						data.tokenAddress,
 						finalWdAmountFun,

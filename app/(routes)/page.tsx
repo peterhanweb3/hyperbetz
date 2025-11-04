@@ -77,7 +77,12 @@ export default function HomePage() {
 	const router = useRouter();
 
 	// --- 1. Get Authentication and UI State ---
-	const { isLoggedIn, login } = useDynamicAuth();
+	const {
+		isLoggedIn,
+		login,
+		isLoading: isAuthLoading,
+		isAuthCheckComplete,
+	} = useDynamicAuth();
 	const { heroBanner, initializeHeroBanner } = useAppStore(
 		(state) => state.uiDefinition.heroBanner
 	);
@@ -115,48 +120,55 @@ export default function HomePage() {
 	}, [primaryWallet, setDynamicLoaded]);
 
 	const [hasHandledLoginRedirect, setHasHandledLoginRedirect] =
-	useState(false);
+		useState(false);
 
-const handleReferralRedirect = useCallback(() => {
-	if (typeof window === "undefined") {
-		return;
-	}
-	const params = new URLSearchParams(window.location.search);
-	const referralParam =
-		params.get("r") ||
-		params.get("referrer") ||
-		params.get("referralId");
-	if (referralParam) {
-		localStorage.setItem("referralId", referralParam);
-	}
-	router.replace("/lobby");
-}, [router]);
-
-useEffect(() => {
-	if (!isLoggedIn || hasHandledLoginRedirect) {
-		return;
-	}
-
-	// Check if dynamic_authentication_token exists in localStorage
-	// This token is set when user successfully logs in
-	const authToken = localStorage.getItem("dynamic_authentication_token");
-
-	if (authToken) {
-		// User is logged in and has valid token
-		// Mark that we've handled the redirect to prevent loops
-		setHasHandledLoginRedirect(true);
-		handleReferralRedirect();
-	}
-}, [handleReferralRedirect, isLoggedIn, hasHandledLoginRedirect]);
-
-	useEffect(() => {
-		if (!isLoggedIn) {
+	const handleReferralRedirect = useCallback(() => {
+		if (typeof window === "undefined") {
 			return;
 		}
-		handleReferralRedirect();
-	}, [handleReferralRedirect, isLoggedIn]);
+		const params = new URLSearchParams(window.location.search);
+		const referralParam =
+			params.get("r") ||
+			params.get("referrer") ||
+			params.get("referralId");
+		if (referralParam) {
+			localStorage.setItem("referralId", referralParam);
+		}
+		router.replace("/lobby");
+	}, [router]);
 
-	// --- 3. Assemble the Page ---
+	// AUTO-REDIRECT: When user logs in on home page, redirect to lobby
+	// Wait for auth to be fully initialized before making redirect decision
+	useEffect(() => {
+		// Wait for auth to complete initialization
+		if (isAuthLoading || !isAuthCheckComplete) {
+			return;
+		}
+
+		// Don't redirect if already handled
+		if (hasHandledLoginRedirect) {
+			return;
+		}
+
+		// If user is logged in, redirect to lobby
+		if (isLoggedIn) {
+			const authToken = localStorage.getItem(
+				"dynamic_authentication_token"
+			);
+
+			if (authToken) {
+				// Mark as handled BEFORE redirect to prevent race conditions
+				setHasHandledLoginRedirect(true);
+				handleReferralRedirect();
+			}
+		}
+	}, [
+		isAuthLoading,
+		isAuthCheckComplete,
+		isLoggedIn,
+		hasHandledLoginRedirect,
+		handleReferralRedirect,
+	]); // --- 3. Assemble the Page ---
 	const isLoading = gameStatus !== "success";
 	const [isClient, setIsClient] = useState(false);
 	const deferredSecondary = useDeferredRender({ delay: 250, timeout: 1400 });
