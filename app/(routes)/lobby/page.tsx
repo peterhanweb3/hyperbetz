@@ -184,7 +184,7 @@ export default function LobbyPage() {
 				)}
 
 				{/* Favorite Games Section */}
-				<section className="px-4 md:px-6">
+				<section>
 					<div className=" mx-auto">
 						{gameStatus === "loading" || gameStatus === "idle" ? (
 							<GameCarouselSkeleton showTitle={true} />
