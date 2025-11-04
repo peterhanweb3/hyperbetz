@@ -54,7 +54,7 @@ import {
 } from "@/types/walletProvider/transaction-service.types";
 import { parseAbi, parseUnits } from "viem";
 import { SendTransactionParameters } from "viem/zksync";
-import { waitForTransactionReceipt } from "viem/actions";
+import { toast } from "sonner";
 
 interface ApiResponse<T> {
 	error: boolean;
@@ -581,6 +581,17 @@ class TransactionService {
 				fromCache: false,
 			};
 		} catch (error) {
+			if (
+				error &&
+				(error as GetTokenConversionResult["error"] as Error).message
+					.toLowerCase()
+					.includes("not supported")
+			) {
+				toast.error(
+					(error as GetTokenConversionResult["error"] as Error)
+						.message as string
+				);
+			}
 			console.error("Getting token conversion failed:", error);
 			return {
 				success: false,

@@ -248,6 +248,9 @@ export interface UseSwapReturn {
 	toTokenUsdPrice: string;
 	isFetchingPrices: boolean;
 	fetchTokenPrices: () => Promise<void>;
+
+	// UI Helpers
+	getSwapButtonText: () => string;
 }
 
 // --- useSwapTokenPrices Types ---

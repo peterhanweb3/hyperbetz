@@ -113,11 +113,13 @@ export const useDeposit = () => {
 		depositAmount,
 		depositType,
 		isBalanceInsufficient,
+		isBelowMinimum,
 		formattedBalance,
 		selectToken,
 		handleAmountChange,
 		setDepositAmount,
 		setIsBalanceInsufficient,
+		setIsBelowMinimum,
 		resetFormState,
 	} = useDepositFormState();
 
@@ -139,6 +141,17 @@ export const useDeposit = () => {
 		depositAmount,
 		dstSwapInfo,
 	});
+
+	// --- CALCULATE isBelowMinimum ---
+	// Update isBelowMinimum whenever depositAmount or minRequiredAmount changes
+	useEffect(() => {
+		if (selectedToken && depositAmount && minRequiredAmount) {
+			const amount = Number(sanitizeAmountInput(depositAmount));
+			setIsBelowMinimum(amount > 0 && amount < minRequiredAmount);
+		} else {
+			setIsBelowMinimum(false);
+		}
+	}, [depositAmount, minRequiredAmount, selectedToken, setIsBelowMinimum]);
 
 	// --- 1.5. MONITOR NETWORK CHANGES AND RESET FORM ---
 	// This effect clears the selected token when the network changes
@@ -357,6 +370,7 @@ export const useDeposit = () => {
 		isApproved,
 		isPending,
 		isBalanceInsufficient,
+		isBelowMinimum,
 		formattedBalance,
 		minRequiredAmount,
 		usdtConversionAmount,

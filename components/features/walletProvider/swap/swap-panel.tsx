@@ -134,6 +134,9 @@ export const SwapPanel = memo(
 
 			// Validation
 			validateSwap,
+
+			// UI Helpers
+			getSwapButtonText,
 		} = useSwap();
 
 		// Local UI state
@@ -199,20 +202,6 @@ export const SwapPanel = memo(
 				}
 			}
 		}, [chainId, isTokensLoading, txHash]);
-
-		const getSwapButtonText = () => {
-			if (!fromToken || !toToken) return t("selectTokens");
-			if (!exchangeAmount && !receivedAmount) return t("enterAmount");
-			if (isFetching) return t("gettingQuote");
-			if (isLoading) return t("confirming");
-			if (isApproveLoading) return t("approving");
-			if (!isTokenAllowed) return t("approveAndSwap");
-			if (validateSwap()) return t("swap");
-			if (parseFloat(exchangeAmount) > parseFloat(fromToken.balance))
-				return t("insufficientBalance");
-			if (fromToken.address === toToken.address) return t("sameToken");
-			return t("enterAmount");
-		};
 
 		const isSwapDisabled = () => {
 			return (
@@ -624,7 +613,11 @@ export const SwapPanel = memo(
 									}
 									className={cn(
 										"bg-transparent  font-semibold text-foreground placeholder:text-muted-foreground/50 border-none outline-none flex-1 min-w-0",
-										dynamicExchangeFontClass
+										dynamicExchangeFontClass,
+										fromToken &&
+											exchangeAmount > fromToken.balance
+											? "text-destructive"
+											: "" // Red text if over balance
 									)}
 									disabled={!fromToken}
 								/>

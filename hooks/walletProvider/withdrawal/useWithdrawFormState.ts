@@ -6,7 +6,6 @@ import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import { useAppStore } from "@/store/store";
 import TransactionService from "@/services/walletProvider/TransactionService";
 import { toast } from "sonner";
-import { sanitizeAmountInput } from "@/lib/utils";
 
 // A simple utility for basic address format validation.
 const validateAddress = (address: string): boolean => {
@@ -77,6 +76,7 @@ export const useWithdrawFormState = () => {
 			} else {
 				setAvailableTokens([]);
 				const errorMessage =
+					// eslint-disable-next-line @typescript-eslint/no-explicit-any
 					(response as any).message ||
 					"Could not load withdrawal tokens for this network.";
 				toast.error(errorMessage);

@@ -38,6 +38,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useTokens } from "@/hooks/walletProvider/useTokens";
 import { Token } from "@/types/blockchain/swap.types";
 import { useAppStore } from "@/store/store";
+import { useTranslations } from "@/lib/locale-provider";
 
 // Import all specialized child hooks
 import { useSwapFormState } from "./useSwapFormState";
@@ -54,7 +55,26 @@ import {
 	SwapTransactionResult,
 } from "@/types/walletProvider/swap-hooks.types";
 
+// Swap localization accessor
+const useSwapI18n = () => {
+	const t = useTranslations("walletProvider.swapPanel");
+	return {
+		selectTokens: () => t("selectTokens"),
+		enterAmount: () => t("enterAmount"),
+		gettingQuote: () => t("gettingQuote"),
+		confirming: () => t("confirming"),
+		approving: () => t("approving"),
+		approveAndSwap: () => t("approveAndSwap"),
+		swap: () => t("swap"),
+		insufficientBalance: () => t("insufficientBalance"),
+		sameToken: () => t("sameToken"),
+	};
+};
+
 const useSwap = (options: UseSwapOptions = {}): UseSwapReturn => {
+	// i18n accessors for messages and labels
+	const i18n = useSwapI18n();
+
 	// --- 1. COMPOSE THE CHILD HOOKS IN LOGICAL ORDER ---
 
 	// Get chainId from store to listen for network changes
@@ -321,6 +341,35 @@ const useSwap = (options: UseSwapOptions = {}): UseSwapReturn => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [chainId]);
 
+	/**
+	 * A UI helper that computes the correct button text based on the
+	 * combined state from multiple child hooks.
+	 */
+	const getSwapButtonText = useCallback(() => {
+		if (!fromToken || !toToken) return i18n.selectTokens();
+		if (!exchangeAmount && !receivedAmount) return i18n.enterAmount();
+		if (isFetching) return i18n.gettingQuote();
+		if (isLoading) return i18n.confirming();
+		if (isApproveLoading) return i18n.approving();
+		if (!isTokenAllowed) return i18n.approveAndSwap();
+		if (validateSwap()) return i18n.swap();
+		if (parseFloat(exchangeAmount) > parseFloat(fromToken.balance))
+			return i18n.insufficientBalance();
+		if (fromToken.address === toToken.address) return i18n.sameToken();
+		return i18n.enterAmount();
+	}, [
+		fromToken,
+		toToken,
+		exchangeAmount,
+		receivedAmount,
+		isFetching,
+		isLoading,
+		isApproveLoading,
+		isTokenAllowed,
+		validateSwap,
+		i18n,
+	]);
+
 	// --- 3. RETURN THE COMPLETE, UNIFIED API ---
 	// This maintains 100% compatibility with the original useSwap hook interface
 	return {
@@ -390,6 +439,9 @@ const useSwap = (options: UseSwapOptions = {}): UseSwapReturn => {
 		toTokenUsdPrice,
 		isFetchingPrices,
 		fetchTokenPrices,
+
+		// UI Helpers
+		getSwapButtonText,
 	};
 };
 

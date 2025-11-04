@@ -54,6 +54,8 @@ export const DepositPanel = memo(
 			getButtonText,
 			isDepositDisabled,
 			resetPage,
+			isBalanceInsufficient,
+			isBelowMinimum,
 			// --- NEWLY ADDED STATE FOR UI ---
 			formattedBalance,
 			// usdtConversionAmount,
@@ -176,7 +178,11 @@ export const DepositPanel = memo(
 											}
 											className={cn(
 												"!p-0 font-light !bg-transparent !border-none !pr-2 !shadow-none focus-visible:ring-0 placeholder:text-muted-foreground/40",
-												dynamicFontClass
+												dynamicFontClass,
+												isBalanceInsufficient ||
+													isBelowMinimum
+													? "text-destructive"
+													: ""
 											)}
 											disabled={
 												!selectedToken ||
@@ -238,9 +244,12 @@ export const DepositPanel = memo(
 															{minRequiredAmount}{" "}
 															{
 																selectedToken.symbol
-															}
-															{" "}
-															<span className="italic text-[9px]">{" Rates may vary"}</span>
+															}{" "}
+															<span className="italic text-[9px]">
+																{
+																	" Rates may vary"
+																}
+															</span>
 														</>
 													)}
 												</span>
