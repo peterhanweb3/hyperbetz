@@ -824,7 +824,7 @@ export function LiveChatSidebar() {
 	return (
 		<div
 			ref={sidebarRef}
-			className="fixed right-0 top-16 bottom-0 w-full sm:w-fit z-50 shadow-2xl flex flex-col bg-sidebar border-l border-sidebar-border backdrop-blur-xl overflow-hidden ios-chat-sidebar"
+			className="fixed right-0 top-16 bottom-0 w-full sm:w-96 z-50 shadow-2xl flex flex-col bg-sidebar border-l border-sidebar-border backdrop-blur-xl overflow-hidden ios-chat-sidebar"
 			style={{
 				background: `linear-gradient(to bottom, 
 					oklch(from var(--sidebar) l c h / 0.95), 
