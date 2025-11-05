@@ -55,7 +55,7 @@ export const DepositPanel = memo(
 			isDepositDisabled,
 			resetPage,
 			isBalanceInsufficient,
-			isBelowMinimum,
+
 			// --- NEWLY ADDED STATE FOR UI ---
 			formattedBalance,
 			// usdtConversionAmount,
@@ -179,8 +179,7 @@ export const DepositPanel = memo(
 											className={cn(
 												"!p-0 font-light !bg-transparent !border-none !pr-2 !shadow-none focus-visible:ring-0 placeholder:text-muted-foreground/40",
 												dynamicFontClass,
-												isBalanceInsufficient ||
-													isBelowMinimum
+												isBalanceInsufficient
 													? "text-destructive"
 													: ""
 											)}
