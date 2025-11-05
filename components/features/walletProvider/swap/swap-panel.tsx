@@ -688,7 +688,7 @@ export const SwapPanel = memo(
 									size="icon"
 									onClick={switchTokens}
 									className="rounded-lg bg-card/20 hover:bg-muted/40 w-8 h-8 border border-border/20"
-									disabled={!fromToken || !toToken}
+									// disabled={!fromToken || !toToken}
 								>
 									<ArrowDownUp className="h-4 w-4" />
 								</Button>
