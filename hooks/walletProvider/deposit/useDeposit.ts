@@ -344,7 +344,10 @@ export const useDeposit = () => {
 			!depositAmount ||
 			parseFloat(depositAmount) <= 0 ||
 			isBalanceInsufficient ||
-			parseFloat(depositAmount) < minRequiredAmount ||
+			(["USDT", "USDC", "55Swap", "USD₮0", "USDT0"].includes(
+				selectedToken.symbol
+			) &&
+				parseFloat(depositAmount) < minRequiredAmount) ||
 			user?.pendingDepo === true
 		);
 	}, [
