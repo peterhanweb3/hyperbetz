@@ -6,6 +6,7 @@ import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import { useAppStore } from "@/store/store";
 import TransactionService from "@/services/walletProvider/TransactionService";
 import { toast } from "sonner";
+import { sanitizeAmountInput } from "@/lib/utils";
 
 // A simple utility for basic address format validation.
 const validateAddress = (address: string): boolean => {
@@ -152,34 +153,7 @@ export const useWithdrawFormState = () => {
 	const handleAmountChange = useCallback(
 		(value: string, minAmount: number) => {
 			// This is a faithful implementation of your original sanitization logic.
-			let sanitizedValue = value.replace(/[^0-9.]/g, "");
-
-			// Handle decimal point logic
-			const decimalCount = (sanitizedValue.match(/\./g) || []).length;
-			if (decimalCount > 1) {
-				sanitizedValue = sanitizedValue.substring(
-					0,
-					sanitizedValue.lastIndexOf(".")
-				);
-			}
-
-			// handle decimal precision
-			if (sanitizedValue.includes(".")) {
-				const parts = sanitizedValue.split(".");
-				sanitizedValue = `${parts[0]}.${parts[1].slice(0, 2)}`; // only 2 decimal places for withdrawals
-			}
-
-			if (
-				sanitizedValue.startsWith("0") &&
-				sanitizedValue !== "0" &&
-				!sanitizedValue.startsWith("0.")
-			) {
-				sanitizedValue = sanitizedValue.replace(/^0+/, ""); // Remove leading zeros
-			}
-
-			if (sanitizedValue.startsWith(".")) {
-				sanitizedValue = `0${sanitizedValue}`;
-			}
+			const sanitizedValue = sanitizeAmountInput(value);
 
 			//  Check amount validity
 			const amount = parseFloat(sanitizedValue) || 0;
