@@ -244,11 +244,21 @@ export const DepositPanel = memo(
 															{
 																selectedToken.symbol
 															}{" "}
-															<span className="italic text-[9px]">
-																{
-																	" Rates may vary"
-																}
-															</span>
+															{![
+																"USDT",
+																"USDC",
+																"55Swap",
+																"USD₮0",
+																"USDT0",
+															].includes(
+																selectedToken.symbol
+															) && (
+																<span className="italic text-[9px]">
+																	{
+																		" Rates may vary"
+																	}
+																</span>
+															)}
 														</>
 													)}
 												</span>
