@@ -59,12 +59,19 @@ export type GameCategory = {
 	badgeVariant?: "default" | "secondary" | "destructive" | "outline";
 };
 export type Provider = { title: string; url: string; count?: number };
+export type AboutSection = {
+	title: string;
+	url: string;
+	icon?: IconDefinition;
+	isActive: boolean;
+};
 interface NavMainProps {
 	items: NavItem[];
 	gameCategories?: GameCategory[];
 	staticGameCategories?: GameCategory[];
 	providers?: Provider[];
 	allGames?: Game[];
+	aboutSection?: AboutSection;
 }
 
 const PROVIDERS_CACHE_KEY = "nav-main-shuffled-providers";
@@ -79,6 +86,7 @@ export function NavMain({
 	staticGameCategories = [],
 	providers = [],
 	allGames = [],
+	aboutSection,
 }: NavMainProps) {
 	const tSidebar = useTranslations("sidebar");
 	const tNav = useTranslations("navigation");
@@ -301,8 +309,18 @@ export function NavMain({
 				);
 			}
 		};
-		const providerCount = totalProviders ?? providers.length;
-		const isTruncated = providerCount > providers.length;
+		// Add custom Evolution provider for Live Casino category
+		const isLiveCasino = categoryTitle.toUpperCase() === "LIVE CASINO";
+		const hasEvolution = providers.some(
+			(p) => p.provider_name.toLowerCase() === "evolution"
+		);
+		const displayProviders =
+			isLiveCasino && !hasEvolution
+				? [{ provider_name: "Evolution", count: 0 }, ...providers]
+				: providers;
+
+		const providerCount = totalProviders ?? displayProviders.length;
+		const isTruncated = providerCount > displayProviders.length;
 		return (
 			<div
 				className={cn(
@@ -320,7 +338,7 @@ export function NavMain({
 						</p>
 						{isTruncated && (
 							<p className="text-[11px] text-muted-foreground/80">
-								Showing top {providers.length}
+								Showing top {displayProviders.length}
 							</p>
 						)}
 						<Link
@@ -342,10 +360,10 @@ export function NavMain({
 					</div>
 				</div>
 				<div className="flex-1 overflow-hidden">
-					{providers.length ? (
+					{displayProviders.length ? (
 						<ScrollArea className="flex-1 h-full">
 							<div className="space-y-1.5 p-2 pr-2 pb-6">
-								{providers.map((p) => (
+								{displayProviders.map((p) => (
 									<div
 										key={p.provider_name}
 										onClick={(e) =>
@@ -919,6 +937,42 @@ export function NavMain({
 						</SidebarMenuItem>
 					</Collapsible>
 				</SidebarGroup>
+			)}
+			{aboutSection && (
+				<>
+					<Separator className="!w-[90%] mx-auto my-1 group-data-[collapsible=icon]:mb-4" />
+					<SidebarGroup className="group-data-[collapsible=icon]:p-0!">
+						<SidebarMenu>
+							<SidebarMenuItem>
+								<SidebarMenuButton
+									asChild
+									isActive={aboutSection.isActive}
+									tooltip={tNav("about")}
+									className="group-data-[collapsible=icon]:bg-accent/80 font-semibold lg:px-4 lg:py-2 tracking-wide"
+								>
+									<Link
+										href={aboutSection.url}
+										className="flex items-center justify-between w-full"
+										prefetch={false}
+										onClick={handleMobileNavigation}
+									>
+										<div className="flex items-center gap-5">
+											{aboutSection.icon && (
+												<FontAwesomeIcon
+													icon={aboutSection.icon}
+													className="text-foreground"
+												/>
+											)}
+											<span className="tracking-wide leading-snug">
+												{tNav("about")}
+											</span>
+										</div>
+									</Link>
+								</SidebarMenuButton>
+							</SidebarMenuItem>
+						</SidebarMenu>
+					</SidebarGroup>
+				</>
 			)}
 		</div>
 	);

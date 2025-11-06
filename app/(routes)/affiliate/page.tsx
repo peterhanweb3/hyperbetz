@@ -87,7 +87,6 @@ import { DashboardTab } from "@/components/features/affiliate/dashboard-tab/dash
 import { AffiliateFallback } from "@/components/features/affiliate/affiliate-fallback";
 import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import { Button } from "@/components/ui/button";
-import { DynamicWidget } from "@dynamic-labs/sdk-react-core";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { RatesTab } from "@/components/features/affiliate/rates-tab/rates-tab";
 import { CalculatorTab } from "@/components/features/affiliate/calculator-tab/calculator-tab";
@@ -96,6 +95,7 @@ import { useAppStore } from "@/store/store";
 import { useT } from "@/hooks/useI18n";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRefresh } from "@fortawesome/pro-light-svg-icons";
+import { ClientSEO } from "@/components/seo/client-seo";
 // import { ReferralsTab } from "@/components/features/affiliate/referral-tab";
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function AffiliatePage() {
@@ -103,7 +103,9 @@ export default function AffiliatePage() {
 	const { user, isLoading } = useDynamicAuth();
 	const [isRefreshing, setIsRefreshing] = useState(false);
 	const [refreshCooldown, setRefreshCooldown] = useState(0);
-	const [activeTab, setActiveTab] = useState<string>("dashboard");
+	const [activeTab, setActiveTab] = useState<string>(
+		user ? "dashboard" : "rates"
+	);
 	const cooldownTimerRef = useRef<NodeJS.Timeout | null>(null);
 
 	// Pre-calculated widths for each tab (approximate, will be refined by useEffect)
@@ -226,28 +228,102 @@ export default function AffiliatePage() {
 	}
 	if (!user) {
 		return (
-			<div className="container mx-auto py-16 max-w-3xl">
-				<div className="flex flex-col items-center justify-center text-center gap-6">
-					<div className="space-y-2">
-						<h1 className="text-3xl font-semibold tracking-tight bg-gradient-to-r from-foreground via-primary to-secondary bg-clip-text text-transparent">
-							{t("affiliate.loginPromptTitle")}
-						</h1>
-						<p className="text-muted-foreground text-sm">
-							{t("affiliate.loginPromptSubtitle")}
-						</p>
+			<div className="min-h-screen bg-background">
+				<ClientSEO
+					title="Affiliate Program - Earn Commissions | HyperBetz"
+					description="Join the HyperBetz affiliate program and earn up to 50% commission on player wagers. Track referrals, bonuses, and claim rewards."
+					keywords="affiliate program hyperbetz, casino affiliate, betting commissions, referral rewards, earn money online, hyperbetz"
+					ogImage="/assets/site/Hyperbetz-logo.png"
+				/>
+				<div className="py-4 sm:py-6 space-y-6 sm:space-y-8 px-4 sm:px-6 lg:px-8">
+					{/* Header Section */}
+					<div className="flex items-center justify-between flex-wrap gap-4">
+						<div className="space-y-2 sm:space-y-4">
+							<h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground">
+								{t("affiliate.title")}
+							</h1>
+						</div>
 					</div>
-					<div className="flex flex-col sm:flex-row items-center gap-4">
-						<Button onClick={() => (window.location.href = "/")}>
-							{t("affiliate.goHome")}
-						</Button>
-						<DynamicWidget />
-					</div>
+
+					<Suspense fallback={<AffiliateFallback />}>
+						<Tabs
+							value={activeTab}
+							onValueChange={setActiveTab}
+							className="w-full"
+						>
+							{/* Tab Navigation - Only show Rates and Calculator */}
+							<div className="flex mb-6 sm:mb-8 overflow-x-auto">
+								<div
+									ref={tabsRef}
+									className="relative inline-flex p-1 bg-muted/50 rounded-lg border border-border/50 min-w-full sm:min-w-0"
+								>
+									{/* Sliding background indicator */}
+									<div
+										className="absolute h-[calc(100%-8px)] top-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
+										style={{
+											width: indicatorStyle.width,
+											transform: `translateX(${indicatorStyle.left}px)`,
+										}}
+									/>
+
+									{/* Tab buttons - Only Rates and Calculator visible */}
+									<div className="relative z-10 flex w-full sm:w-auto">
+										<button
+											data-value="rates"
+											onClick={() =>
+												setActiveTab("rates")
+											}
+											className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+												activeTab === "rates"
+													? "text-foreground"
+													: "text-muted-foreground hover:text-foreground"
+											}`}
+										>
+											{t("affiliate.tabs.rates")}
+										</button>
+										<button
+											data-value="calculator"
+											onClick={() =>
+												setActiveTab("calculator")
+											}
+											className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+												activeTab === "calculator"
+													? "text-foreground"
+													: "text-muted-foreground hover:text-foreground"
+											}`}
+										>
+											{t("affiliate.tabs.calculator")}
+										</button>
+									</div>
+								</div>
+							</div>
+
+							{/* Tab Content */}
+							<div className="min-h-[400px] sm:min-h-[600px]">
+								<TabsContent value="rates" className="mt-0">
+									<RatesTab />
+								</TabsContent>
+								<TabsContent
+									value="calculator"
+									className="mt-0"
+								>
+									<CalculatorTab />
+								</TabsContent>
+							</div>
+						</Tabs>
+					</Suspense>
 				</div>
 			</div>
 		);
 	}
 	return (
 		<div className="min-h-screen bg-background">
+			<ClientSEO
+				title="Affiliate Program - Earn Commissions | HyperBetz"
+				description="Join the HyperBetz affiliate program and earn up to 50% commission on player wagers. Track referrals, bonuses, and claim rewards."
+				keywords="affiliate program, casino affiliate, betting commissions, referral rewards, earn money online"
+				ogImage="/assets/site/Hyperbetz-logo.png"
+			/>
 			<div className="py-4 sm:py-6 space-y-6 sm:space-y-8 px-4 sm:px-6 lg:px-8">
 				{/* Header Section with Refresh Button */}
 				<div className="flex items-center justify-between flex-wrap gap-4">

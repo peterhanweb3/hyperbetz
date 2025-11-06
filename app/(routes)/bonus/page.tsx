@@ -5,7 +5,6 @@ import { BonusClaimsTab } from "@/components/features/bonus/claims-tab/bonus-cla
 import { BonusFallback } from "@/components/features/bonus/bonus-fallback";
 import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import { Button } from "@/components/ui/button";
-import { DynamicWidget } from "@dynamic-labs/sdk-react-core";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { BonusRatesTab } from "@/components/features/bonus/rates-tab/bonus-rates-tab";
 import { CalculatorTab } from "@/components/features/bonus/calculator-tab/calculator-tab";
@@ -14,13 +13,16 @@ import { useT } from "@/hooks/useI18n";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRefresh } from "@fortawesome/pro-light-svg-icons";
 import useBonusClaims from "@/hooks/bonus/useBonusClaims";
+import { ClientSEO } from "@/components/seo/client-seo";
 
 export default function BonusPage() {
 	const t = useT();
 	const { user, isLoading } = useDynamicAuth();
 	const [isRefreshing, setIsRefreshing] = useState(false);
 	const [refreshCooldown, setRefreshCooldown] = useState(0);
-	const [activeTab, setActiveTab] = useState<string>("dashboard");
+	const [activeTab, setActiveTab] = useState<string>(
+		user ? "dashboard" : "rates"
+	);
 	const cooldownTimerRef = useRef<NodeJS.Timeout | null>(null);
 
 	// Pre-calculated widths for each tab
@@ -157,22 +159,90 @@ export default function BonusPage() {
 
 	if (!user) {
 		return (
-			<div className="container mx-auto py-16 max-w-3xl">
-				<div className="flex flex-col items-center justify-center text-center gap-6">
-					<div className="space-y-2">
-						<h1 className="text-3xl font-semibold tracking-tight bg-gradient-to-r from-foreground via-primary to-secondary bg-clip-text text-transparent">
-							{t("bonus.loginPromptTitle")}
-						</h1>
-						<p className="text-muted-foreground text-sm">
-							{t("bonus.loginPromptSubtitle")}
-						</p>
+			<div className="min-h-screen bg-background">
+				<ClientSEO
+					title="Turnover Bonus Program - Earn Rewards | HyperBetz"
+					description="Get up to 20% bonus on your wagers with HyperBetz turnover bonus program. Earn rewards on slots, live casino, and sports betting."
+					keywords="turnover bonus, casino bonus, wager rewards, betting bonus, loyalty program"
+					ogImage="/assets/site/Hyperbetz-logo.png"
+				/>
+				<div className="py-4 sm:py-6 space-y-6 sm:space-y-8">
+					{/* Header Section */}
+					<div className="flex items-center justify-between flex-wrap gap-4">
+						<div className="space-y-2 sm:space-y-4">
+							<h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground">
+								{t("bonus.title")}
+							</h1>
+						</div>
 					</div>
-					<div className="flex flex-col sm:flex-row items-center gap-4">
-						<Button onClick={() => (window.location.href = "/")}>
-							{t("bonus.goHome")}
-						</Button>
-						<DynamicWidget />
-					</div>
+
+					<Suspense fallback={<BonusFallback />}>
+						<Tabs
+							value={activeTab}
+							onValueChange={setActiveTab}
+							className="w-full"
+						>
+							{/* Tab Navigation - Only show Rates and Calculator */}
+							<div className="flex mb-6 sm:mb-8 overflow-x-auto">
+								<div
+									ref={tabsRef}
+									className="relative inline-flex p-1 bg-muted/50 rounded-lg border border-border/50 min-w-full sm:min-w-0"
+								>
+									{/* Sliding background indicator */}
+									<div
+										className="absolute h-[calc(100%-8px)] top-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
+										style={{
+											width: indicatorStyle.width,
+											transform: `translateX(${indicatorStyle.left}px)`,
+										}}
+									/>
+
+									{/* Tab buttons - Only Rates and Calculator visible */}
+									<div className="relative z-10 flex w-full sm:w-auto">
+										<button
+											data-value="rates"
+											onClick={() =>
+												setActiveTab("rates")
+											}
+											className={`px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+												activeTab === "rates"
+													? "text-foreground"
+													: "text-muted-foreground hover:text-foreground"
+											}`}
+										>
+											{t("bonus.tabs.rates")}
+										</button>
+										<button
+											data-value="calculator"
+											onClick={() =>
+												setActiveTab("calculator")
+											}
+											className={`px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+												activeTab === "calculator"
+													? "text-foreground"
+													: "text-muted-foreground hover:text-foreground"
+											}`}
+										>
+											{t("bonus.tabs.calculator")}
+										</button>
+									</div>
+								</div>
+							</div>
+
+							{/* Tab Content */}
+							<div className="min-h-[400px] sm:min-h-[600px]">
+								<TabsContent value="rates" className="mt-0">
+									<BonusRatesTab />
+								</TabsContent>
+								<TabsContent
+									value="calculator"
+									className="mt-0"
+								>
+									<CalculatorTab context="bonus" />
+								</TabsContent>
+							</div>
+						</Tabs>
+					</Suspense>
 				</div>
 			</div>
 		);
@@ -180,6 +250,12 @@ export default function BonusPage() {
 
 	return (
 		<div className="min-h-screen bg-background">
+			<ClientSEO
+				title="Turnover Bonus Program - Earn Rewards | HyperBetz"
+				description="Get up to 20% bonus on your wagers with HyperBetz turnover bonus program. Earn rewards on slots, live casino, and sports betting."
+				keywords="turnover bonus, casino bonus, wager rewards, betting bonus, loyalty program"
+				ogImage="/assets/site/Hyperbetz-logo.png"
+			/>
 			<div className="py-4 sm:py-6 space-y-6 sm:space-y-8">
 				{/* Header Section with Refresh Button */}
 				<div className="flex items-center justify-between flex-wrap gap-4">

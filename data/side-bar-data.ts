@@ -313,6 +313,14 @@ export const getNavData = ({
 			count: provider.count, // Use the real, calculated count
 		})),
 
+		// --- About Section ---
+		aboutSection: {
+			title: "navigation.about",
+			url: "/about",
+			icon: faUsers,
+			isActive: pathname === "/about",
+		},
+
 		// --- Static Daily Bonus Section ---
 		dailyBonus: {
 			title: "sidebar.dailyBonus",

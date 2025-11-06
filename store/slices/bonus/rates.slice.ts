@@ -27,6 +27,46 @@ const RATES_KEY = "bonus_rates_cache_v1";
 const RATES_META_KEY = "bonus_rates_meta_v1";
 const STALE_MS = 5 * 60 * 1000; // 5 minutes
 
+// Default static rates for non-logged-in users
+const DEFAULT_BONUS_RATES: BonusRate[] = [
+	{
+		level: "1",
+		min_to: "0",
+		max_to: "1000",
+		slot_percent: "0.10",
+		lc_percent: "0.15",
+		sport_percent: "0.00",
+		lottery_percent: null,
+	},
+	{
+		level: "2",
+		min_to: "1000",
+		max_to: "10000",
+		slot_percent: "0.15",
+		lc_percent: "0.20",
+		sport_percent: "0.00",
+		lottery_percent: null,
+	},
+	{
+		level: "3",
+		min_to: "10000",
+		max_to: "50000",
+		slot_percent: "0.25",
+		lc_percent: "0.30",
+		sport_percent: "0.00",
+		lottery_percent: null,
+	},
+	{
+		level: "4",
+		min_to: "50000",
+		max_to: "999999999",
+		slot_percent: "0.35",
+		lc_percent: "0.40",
+		sport_percent: "0.00",
+		lottery_percent: null,
+	},
+];
+
 // Global variable to prevent multiple simultaneous API calls
 let ratesFetchPromise: Promise<void> | null = null;
 
@@ -35,7 +75,7 @@ interface RatesMeta {
 }
 
 const initialState: BonusRatesState = {
-	data: [],
+	data: DEFAULT_BONUS_RATES,
 	status: "idle",
 	error: null,
 	lastFetched: null,
@@ -75,7 +115,17 @@ export const createBonusRatesSlice: AppStateCreator<BonusRatesSlice> = (
 		const api = ApiService.getInstance();
 		const token = storage.getAuthToken();
 
-		if (!token) return;
+		// If no token, ensure default rates are set and return early
+		if (!token) {
+			// Make sure we have default rates loaded
+			if (slice.data.length === 0) {
+				set((state) => {
+					state.bonus.rates.data = DEFAULT_BONUS_RATES;
+					state.bonus.rates.status = "success";
+				});
+			}
+			return;
+		}
 
 		// Check if data is stale
 		const meta = storage.getItem<RatesMeta>(RATES_META_KEY);

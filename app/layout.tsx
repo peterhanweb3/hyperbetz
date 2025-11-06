@@ -5,6 +5,7 @@ import { ThemeColorProvider } from "@/components/theme/theme-color-provider";
 import { LocaleProvider } from "@/lib/locale-provider";
 import { IOSViewportFix } from "@/components/common/ios-viewport-fix";
 import { ServiceWorkerRegister } from "@/components/common/service-worker-register";
+import { SEOTemplates } from "@/lib/seo/seo-provider";
 // Avoid bundling public images via import to skip sharp at build time
 import "./globals.css";
 
@@ -18,56 +19,8 @@ const poppins = Poppins({
 	adjustFontFallback: true, // Reduce layout shift
 });
 
-export const metadata: Metadata = {
-	metadataBase: new URL("https://hyperbetz.games"),
-	title: "Hyperbetz - Your Gateway to Fun and Rewards",
-	description:
-		"Join Hyperbetz for an exciting gaming experience with amazing rewards!",
-	keywords: [
-		"gaming",
-		"rewards",
-		"fun",
-		"crypto",
-		"slots",
-		"live casino",
-		"sports betting",
-		"online gaming",
-		"betting",
-		"jackpots",
-	],
-	authors: [
-		{
-			name: "Hyperbetz",
-			url: "https://hyperbetz.games",
-		},
-	],
-	openGraph: {
-		title: "Hyperbetz - Your Gateway to Fun and Rewards",
-		description:
-			"Join Hyperbetz for an exciting gaming experience with amazing rewards!",
-		url: "https://hyperbetz.games",
-		siteName: "Hyperbetz",
-		images: [
-			{
-				url: "/assets/site/Hyperbetz-logo.png",
-				width: 1200,
-				height: 630,
-				alt: "Hyperbetz - Your Gateway to Fun and Rewards",
-			},
-		],
-	},
-	twitter: {
-		card: "summary_large_image",
-		title: "Hyperbetz - Your Gateway to Fun and Rewards",
-		description:
-			"Join Hyperbetz for an exciting gaming experience with amazing rewards!",
-	},
-	icons: {
-		icon: "/assets/site/Hyperbetz-logo.png",
-		shortcut: "/assets/site/Hyperbetz-logo.png",
-		apple: "/assets/site/Hyperbetz-logo.png",
-	},
-};
+// Global SEO metadata from centralized SEO system
+export const metadata: Metadata = SEOTemplates.home().metadata;
 
 export default function RootLayout({
 	children,
@@ -77,6 +30,21 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head>
+				<script
+					async
+					src="https://www.googletagmanager.com/gtag/js?id=G-CM98Y8Y7K3"
+				></script>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+	  						window.dataLayer = window.dataLayer || [];
+	  						function gtag(){dataLayer.push(arguments);}
+	  						gtag('js', new Date());
+	  						gtag('config', 'G-CM98Y8Y7K3');
+						`,
+					}}
+				/>
+
 				{/* Viewport optimization for mobile */}
 				<meta
 					name="viewport"

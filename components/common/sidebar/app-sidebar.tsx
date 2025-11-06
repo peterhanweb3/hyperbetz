@@ -183,7 +183,6 @@ const AppSidebarComponent = ({ ...props }: ComponentProps<typeof Sidebar>) => {
 					</Button>
 				</div>
 			</SidebarHeader>
-
 			<SidebarContent className="px-2 scrollbar-thin overflow-y-auto">
 				<NavMain
 					items={navData.navMain}
@@ -191,9 +190,9 @@ const AppSidebarComponent = ({ ...props }: ComponentProps<typeof Sidebar>) => {
 					staticGameCategories={navData.staticGameCategories}
 					providers={navData.providers}
 					allGames={allGames}
+					aboutSection={navData.aboutSection}
 				/>
-			</SidebarContent>
-
+			</SidebarContent>{" "}
 			<SidebarFooter className="border-t border-border/20 bg-card/20">
 				{/* Daily Bonus Button with pulsing animation */}
 				<div className="group-data-[collapsible=icon]:px-0! px-2 py-3">

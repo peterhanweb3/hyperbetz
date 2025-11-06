@@ -35,7 +35,8 @@
 		"affiliate": "Affiliate",
 		"bonus": "Turnover Bonus",
 		"providers": "Providers",
-		"lobby": "Lobby"
+		"lobby": "Lobby",
+		"about": "About Us"
 	},
 	"profile": {
 		"language": "Language",
@@ -429,7 +430,6 @@
 		"refreshFailed": "Failed to refresh data. Please try again.",
 		"dashboard": {
 			"title": "Affiliate Dashboard",
-			"claimButtonTitle": "Claim",
 			"subtitle": "Track your referrals, earnings, and commission performance",
 			"performanceOverview": "Performance Overview",
 			"referralManagement": "Referral Management",
@@ -1289,6 +1289,211 @@
 			"fontResetSuccess": "Font reset to default",
 			"invalidFileType": "Please upload a valid font file (.woff, .woff2, .ttf, .otf)",
 			"uploadFailed": "Failed to read font file"
+		}
+	},
+	"about": {
+		"title": "About HyperBetz",
+		"subtitle": "A global online gaming platform connecting players to high-quality casino and betting games",
+		"stats": [
+			{
+				"label": "Total Games",
+				"value": "5,000+"
+			},
+			{
+				"label": "Active Players",
+				"value": "100K+"
+			},
+			{
+				"label": "Countries Served",
+				"value": "50+"
+			},
+			{
+				"label": "Uptime",
+				"value": "99.9%"
+			}
+		],
+		"features": [
+			{
+				"title": "5,000+ Premium Games",
+				"description": "Access to slots, poker, sports betting, and live casino games from top providers"
+			},
+			{
+				"title": "Instant Transactions",
+				"description": "Lightning-fast deposits and withdrawals with secure blockchain technology"
+			},
+			{
+				"title": "Verified Fair Play",
+				"description": "All games are RNG-certified and tested for fairness and transparency"
+			},
+			{
+				"title": "24/7 Support",
+				"description": "Dedicated customer support team available round the clock"
+			}
+		],
+		"sections": {
+			"whoWeAre": {
+				"title": "Who We Are",
+				"paragraph1": "HyperBetz is a global online gaming platform that connects players to thousands of high-quality casino and betting games. We work with the industry's most respected providers to deliver a seamless experience on every device.",
+				"paragraph2": "Every feature, every spin, and every card dealt is designed to bring you closer to the thrill of real gaming while keeping everything transparent and fair."
+			},
+			"whatMakesUsDifferent": {
+				"title": "What Makes Us Different"
+			},
+			"providers": {
+				"title": "Trusted Gaming Providers",
+				"seeAllButton": "See All Providers",
+				"exploreGamesButton": "Explore Games"
+			},
+			"missionVisionValues": {
+				"title": "Our Mission, Vision & Values",
+				"items": [
+					{
+						"title": "Mission",
+						"content": "To make online gaming simple, safe, and rewarding for everyone. We believe gaming should feel personal — not mechanical."
+					},
+					{
+						"title": "Vision",
+						"content": "To set a new standard for online gaming platforms built on trust, innovation, and real value for players."
+					},
+					{
+						"title": "Values",
+						"content": "Player-first approach, transparent operations, responsible gaming, and continuous innovation."
+					}
+				]
+			},
+			"responsibleGaming": {
+				"title": "Fair & Responsible Gaming",
+				"description": "We believe that gaming should always be responsible and transparent. That's why HyperBetz follows strict international gaming standards and age policies.",
+				"points": [
+					{
+						"title": "18+ Only",
+						"description": "Only players aged 18 or older can register and play"
+					},
+					{
+						"title": "Secure & Fair",
+						"description": "All games tested for fairness with encryption"
+					}
+				]
+			},
+			"ourPromise": {
+				"title": "Our Promise",
+				"paragraph1": "We're not here to be another casino site — we're here to set a new standard for online gaming. When you play on HyperBetz, you play on a platform built on trust, innovation, and real value.",
+				"paragraph2": "Every update, every feature, and every partnership we add is focused on one goal: giving players the best gaming experience possible."
+			},
+			"description": {
+				"title": "About HyperBetz - Your Premier Online Gaming Destination",
+				"intro": {
+					"heading": "Welcome to HyperBetz",
+					"brand": "HyperBetz",
+					"paragraph1": "is a leading global online casino and betting platform that has revolutionized the way players experience online gaming. Launched with a vision to create the most comprehensive, secure, and entertaining gaming platform, HyperBetz has quickly become the go-to destination for players seeking premium casino games, live dealer experiences, sports betting, and much more.",
+					"paragraph2": "Our platform combines cutting-edge technology with an extensive game library, partnering with the world's most trusted gaming providers to deliver an unparalleled entertainment experience. Whether you're a seasoned player or new to online gaming, HyperBetz offers something for everyone.",
+					"paragraph3": "At HyperBetz, we believe that online gaming should be more than just placing bets—it should be an immersive, secure, and rewarding experience that puts players first. This philosophy drives everything we do, from our game selection to our customer support."
+				},
+				"games": {
+					"heading": "Massive Game Collection - Over 5,000 Premium Titles",
+					"paragraph1": "HyperBetz boasts an impressive library of",
+					"count": "over 5,000 premium games",
+					"paragraph2": " from the industry's leading software providers. Our extensive collection ensures that every type of player finds their perfect game, whether you prefer classic slots, modern video slots, table games, live casino, or sports betting.",
+					"slots": {
+						"title": "Slots & Video Slots:",
+						"description": "From classic 3-reel slots to feature-packed 5-reel video slots with stunning graphics, bonus rounds, and progressive jackpots. Enjoy popular titles from providers like Pragmatic Play, NetEnt, Play'n GO, and Microgaming."
+					},
+					"liveCasino": {
+						"title": "Live Casino Games:",
+						"description": "Experience the thrill of real casino action with our live dealer games powered by Evolution Gaming. Play live blackjack, roulette, baccarat, and game shows with professional dealers in real-time HD streaming."
+					},
+					"sports": {
+						"title": "Sports Betting:",
+						"description": "Comprehensive sportsbook covering major sports leagues worldwide including football, basketball, tennis, cricket, and esports. Enjoy competitive odds, live betting, and in-play markets."
+					},
+					"poker": {
+						"title": "Poker & Table Games:",
+						"description": "Multiple poker variants including Texas Hold'em, Caribbean Stud, and video poker. Plus classic table games like blackjack, roulette, and baccarat with various rule sets and betting limits."
+					}
+				},
+				"technology": {
+					"heading": "Next-Generation Blockchain Technology",
+					"paragraph1": "What sets HyperBetz apart is our implementation of",
+					"blockchain": "advanced blockchain technology",
+					"paragraph2": " that ensures complete transparency, security, and fairness in every transaction and game outcome. Our blockchain-powered platform provides instant verification of game results, making it impossible for anyone—including us—to manipulate outcomes.",
+					"paragraph3": "This technology enables lightning-fast cryptocurrency deposits and withdrawals, often completed in minutes rather than days. Players can deposit and withdraw using various cryptocurrencies including Bitcoin, Ethereum, USDT, and more, with minimal fees and maximum security.",
+					"paragraph4": "Our infrastructure is built on redundant servers across multiple locations, ensuring",
+					"uptime": "99.9% uptime",
+					"paragraph5": " and uninterrupted gaming experience. Even during peak traffic or maintenance, our load-balancing systems ensure smooth gameplay without lag or downtime."
+				},
+				"security": {
+					"heading": "Security & Fair Play - Certified and Verified",
+					"paragraph1": "Player security and fair play are non-negotiable at HyperBetz. All our games undergo rigorous testing and are certified by independent testing agencies. Every slot, table game, and random outcome is powered by",
+					"rng": "certified Random Number Generators (RNG)",
+					"paragraph2": " ensuring completely fair and unpredictable results.",
+					"paragraph3": "We employ military-grade SSL encryption to protect all data transmissions between your device and our servers. Your personal information, financial details, and gaming activity are encrypted and stored securely, meeting international data protection standards including GDPR compliance.",
+					"paragraph4": "Our platform undergoes regular security audits by third-party cybersecurity firms to identify and address any potential vulnerabilities. We also implement two-factor authentication (2FA) for all user accounts, adding an extra layer of protection against unauthorized access."
+				},
+				"global": {
+					"heading": "Global Reach - Serving Players Worldwide",
+					"paragraph1": "HyperBetz is proud to serve a diverse community of",
+					"players": "over 100,000 active players",
+					"paragraph2": " from",
+					"countries": "more than 50 countries",
+					"paragraph3": " around the world. Our platform supports multiple languages and currencies, making it accessible and convenient for players regardless of their location.",
+					"paragraph4": "We understand that gaming preferences vary by region, which is why we've curated our game selection to include titles popular in different markets. From Asian-themed slots to Western classics, sports betting on local leagues, and regionally preferred payment methods, we cater to global tastes while maintaining local relevance."
+				},
+				"payments": {
+					"heading": "Flexible Payment Methods",
+					"paragraph1": "HyperBetz supports a wide range of payment methods to ensure convenient deposits and withdrawals for players worldwide. We accept major cryptocurrencies (Bitcoin, Ethereum, Litecoin, USDT, and more), traditional payment methods, and various e-wallets.",
+					"paragraph2": "Our blockchain-powered payment system enables",
+					"instant": "instant deposits and near-instant withdrawals",
+					"paragraph3": ", eliminating the long waiting periods associated with traditional banking methods. Most cryptocurrency withdrawals are processed within minutes, while other payment methods are completed within 24 hours."
+				},
+				"mobile": {
+					"heading": "Mobile-Optimized Gaming Experience",
+					"paragraph1": "In today's mobile-first world, HyperBetz delivers a fully optimized mobile gaming experience. Our platform is built with responsive design technology, ensuring seamless gameplay on any device—whether you're using a smartphone, tablet, or desktop computer.",
+					"paragraph2": "No app download is required. Simply access HyperBetz through your mobile browser and enjoy the full range of games, betting options, and account features. The mobile interface is intuitive, fast-loading, and designed for touch navigation, making it easy to browse games, place bets, manage your account, and contact support on the go."
+				},
+				"support": {
+					"heading": "24/7 Customer Support",
+					"paragraph1": "Our dedicated customer support team is available",
+					"availability": "24 hours a day, 7 days a week",
+					"paragraph2": " to assist you with any questions or issues. Whether you need help with deposits, game rules, account verification, or technical issues, our multilingual support staff is ready to help via live chat, email, or support ticket system.",
+					"paragraph3": "We pride ourselves on fast response times and effective problem resolution. Most live chat inquiries are answered within minutes, and we strive to resolve all issues on first contact. Our comprehensive FAQ and help center also provide instant answers to common questions."
+				},
+				"responsible": {
+					"heading": "Commitment to Responsible Gaming",
+					"paragraph1": "HyperBetz is committed to promoting responsible gaming practices. We provide various tools to help players maintain control over their gaming activities, including deposit limits, session time reminders, self-exclusion options, and reality check features.",
+					"paragraph2": "We strictly enforce age verification procedures to ensure that only players aged 18 and above can access our platform. Our staff is trained to identify problem gaming behaviors and provide support resources, including links to professional organizations that offer gambling addiction counseling and treatment."
+				},
+				"whyChoose": {
+					"heading": "Why Choose HyperBetz?",
+					"point1": {
+						"title": "Largest Game Selection:",
+						"description": "Over 5,000 games from 50+ premium providers including Pragmatic Play, Evolution Gaming, NetEnt, Microgaming, Play'n GO, Hacksaw Gaming, and more."
+					},
+					"point2": {
+						"title": "Instant Transactions:",
+						"description": "Blockchain-powered deposits and withdrawals completed in minutes, not days. No more waiting for your winnings."
+					},
+					"point3": {
+						"title": "Provably Fair Gaming:",
+						"description": "RNG-certified games with blockchain verification. Every game outcome can be independently verified for fairness."
+					},
+					"point4": {
+						"title": "Industry-Best Security:",
+						"description": "Military-grade encryption, 2FA authentication, and regular security audits ensure your data and funds are always protected."
+					},
+					"point5": {
+						"title": "Generous Bonuses & Promotions:",
+						"description": "Regular promotions, welcome bonuses, cashback offers, free spins, and a rewarding VIP program for loyal players."
+					},
+					"point6": {
+						"title": "Superior User Experience:",
+						"description": "Intuitive interface, fast loading times, mobile optimization, and 24/7 multilingual customer support."
+					}
+				},
+				"closing": {
+					"paragraph1": "Whether you're looking for the excitement of slots, the strategy of poker, the thrill of live dealers, or the action of sports betting, HyperBetz provides a premium gaming experience that combines entertainment, security, and real value. Join thousands of players who have already discovered why HyperBetz is the future of online gaming.",
+					"tagline": "HyperBetz: Where Real Gaming Meets Real Trust"
+				}
+			}
 		}
 	}
 }

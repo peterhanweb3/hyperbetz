@@ -116,9 +116,32 @@ export const IndividualCalculator = ({
 				<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 					<div className="flex items-center gap-4">
 						<div
-							className={`flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-${tierColor.bg}-500 to-${tierColor.bg}-600 text-white shadow-lg`}
+							className={`flex items-center justify-center w-12 h-12 rounded-xl shadow-lg border border-white/20`}
+							style={{
+								background: `linear-gradient(135deg, ${
+									tierColor.bg === "amber"
+										? "#f59e0b"
+										: tierColor.bg === "slate"
+										? "#64748b"
+										: tierColor.bg === "yellow"
+										? "#eab308"
+										: tierColor.bg === "gray"
+										? "#6b7280"
+										: "#8b5cf6"
+								} 0%, ${
+									tierColor.bg === "amber"
+										? "#d97706"
+										: tierColor.bg === "slate"
+										? "#475569"
+										: tierColor.bg === "yellow"
+										? "#ca8a04"
+										: tierColor.bg === "gray"
+										? "#4b5563"
+										: "#7c3aed"
+								} 100%)`,
+							}}
 						>
-							<span className="text-xl font-semibold">
+							<span className="text-xl font-semibold text-white">
 								{rate.level}
 							</span>
 						</div>

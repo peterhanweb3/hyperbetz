@@ -35,7 +35,8 @@
 		"affiliate": "Partnerprogramm",
 		"providers": "Anbieter",
 		"lobby": "Lobby",
-		"bonus": "Umsatzbonus"
+		"bonus": "Umsatzbonus",
+		"about": "Über uns"
 	},
 	"profile": {
 		"language": "Sprache",
@@ -1292,6 +1293,155 @@
 			"screenshotFailed": "Screenshot fehlgeschlagen. Bitte versuchen Sie es erneut oder verwenden Sie einen anderen Browser.",
 			"shareTextCopied": "Teilen Sie Text, der in die Zwischenablage kopiert wurde!",
 			"shareFailed": "Teilen fehlgeschlagen. Bitte versuchen Sie es erneut."
+		}
+	},
+	"about": {
+		"title": "Über HyperBetz",
+		"subtitle": "Eine globale Online-Gaming-Plattform, die Spieler mit hochwertigen Casino- und Wettspielen verbindet",
+		"stats": "[Objekt-Objekt],[Objekt-Objekt],[Objekt-Objekt],[Objekt-Objekt]",
+		"features": "[Objekt-Objekt],[Objekt-Objekt],[Objekt-Objekt],[Objekt-Objekt]",
+		"sections": {
+			"whoWeAre": {
+				"title": "Über uns",
+				"paragraph1": "HyperBetz ist eine globale Online-Gaming-Plattform, die Spieler mit Tausenden von hochwertigen Casino- und Wettspielen verbindet. Wir arbeiten mit den angesehensten Anbietern der Branche zusammen, um ein nahtloses Erlebnis auf jedem Gerät zu bieten.",
+				"paragraph2": "Jedes Feature, jede Drehung und jede ausgeteilte Karte wurde entwickelt, um Sie dem Nervenkitzel des echten Spiels näher zu bringen und gleichzeitig alles transparent und fair zu halten."
+			},
+			"whatMakesUsDifferent": {
+				"title": "Was uns einzigartig macht"
+			},
+			"providers": {
+				"title": "Vertrauenswürdige Spieleanbieter",
+				"seeAllButton": "Alle Anbieter",
+				"exploreGamesButton": "Spiele entdecken"
+			},
+			"missionVisionValues": {
+				"title": "UNSERE MISSION, VISION &amp; WERTE",
+				"items": "[Objekt Objekt],[Objekt Objekt],[Objekt Objekt]"
+			},
+			"responsibleGaming": {
+				"title": "Verantwortungsvolles Spielen",
+				"description": "Wir glauben, dass Spielen immer verantwortungsbewusst und transparent sein sollte. Aus diesem Grund befolgt HyperBetz strenge internationale Glücksspielstandards und Altersrichtlinien.",
+				"points": "[Objekt Objekt],[Objekt Objekt]"
+			},
+			"ourPromise": {
+				"title": "Unser Versprechen,",
+				"paragraph1": "Wir sind nicht hier, um eine weitere Casino-Website zu sein — wir sind hier, um einen neuen Standard für Online-Glücksspiele zu setzen. Wenn Sie auf HyperBetz spielen, spielen Sie auf einer Plattform, die auf Vertrauen, Innovation und echtem Wert basiert.",
+				"paragraph2": "Jedes Update, jede Funktion und jede Partnerschaft, die wir hinzufügen, konzentriert sich auf ein Ziel: den Spielern das bestmögliche Spielerlebnis zu bieten."
+			},
+			"description": {
+				"title": "Über HyperBetz - Ihr erstklassiges Online-Gaming-Ziel",
+				"intro": {
+					"heading": "Willkommen bei HyperBetz",
+					"brand": "HyperBetz",
+					"paragraph1": "ist eine führende globale Online-Casino- und Wettplattform, die die Art und Weise, wie Spieler Online-Glücksspiele erleben, revolutioniert hat. Mit der Vision, die umfassendste, sicherste und unterhaltsamste Spieleplattform zu schaffen, hat sich HyperBetz schnell zum Anlaufpunkt für Spieler entwickelt, die Premium-Casinospiele, Live-Dealer-Erlebnisse, Sportwetten und vieles mehr suchen.",
+					"paragraph2": "Unsere Plattform kombiniert modernste Technologie mit einer umfangreichen Spielebibliothek und arbeitet mit den weltweit vertrauenswürdigsten Spieleanbietern zusammen, um ein unvergleichliches Unterhaltungserlebnis zu bieten. Egal, ob Sie ein erfahrener Spieler oder neu im Online-Gaming sind, HyperBetz bietet für jeden etwas.",
+					"paragraph3": "Wir bei HyperBetz glauben, dass Online-Gaming mehr sein sollte als nur Wetten zu platzieren - es sollte eine immersive, sichere und lohnende Erfahrung sein, bei der die Spieler an erster Stelle stehen. Diese Philosophie bestimmt alles, was wir tun, von unserer Spielauswahl bis hin zu unserem Kundensupport."
+				},
+				"games": {
+					"heading": "Massive Game Collection - Über 5.000 Premium-Titel",
+					"paragraph1": "HyperBetz verfügt über eine beeindruckende Bibliothek von",
+					"count": "über 5.000 Premium-Spiele",
+					"paragraph2": "von den führenden Softwareanbietern der Branche. Unsere umfangreiche Sammlung stellt sicher, dass jeder Spielertyp sein perfektes Spiel findet, egal ob Sie klassische Spielautomaten, moderne Video-Slots, Tischspiele, Live-Casinos oder Sportwetten bevorzugen.",
+					"slots": {
+						"title": "Spielautomaten & Video-Spielautomaten:",
+						"description": "Von klassischen 3-Walzen-Spielautomaten bis hin zu funktionsreichen 5-Walzen-Video-Spielautomaten mit atemberaubender Grafik, Bonusrunden und progressiven Jackpots. Genießen Sie beliebte Titel von Anbietern wie Pragmatic Play, NetEnt, Play'n GO und Microgaming."
+					},
+					"liveCasino": {
+						"title": "Live-Casino-Spiele",
+						"description": "Erleben Sie den Nervenkitzel echter Casino-Action mit unseren Live-Dealer-Spielen von Evolution Gaming. Spielen Sie Live-Blackjack, Roulette, Baccarat und Spielshows mit professionellen Dealern in Echtzeit-HD-Streaming."
+					},
+					"sports": {
+						"title": "Sportwetten:",
+						"description": "Umfassende Sportwetten, die die wichtigsten Sportligen weltweit abdecken, darunter Fußball, Basketball, Tennis, Cricket und E-Sport. Genießen Sie wettbewerbsfähige Quoten, Live-Wetten und In-Play-Märkte."
+					},
+					"poker": {
+						"title": "Poker & Tischspiele:",
+						"description": "Mehrere Pokervarianten, darunter Texas Hold'em, Caribbean Stud und Video Poker. Plus klassische Tischspiele wie Blackjack, Roulette und Baccarat mit verschiedenen Regeln und Einsatzlimits."
+					}
+				},
+				"technology": {
+					"heading": "Blockchain-Technologie der nächsten Generation",
+					"paragraph1": "Was HyperBetz auszeichnet, ist unsere Implementierung von",
+					"blockchain": "fortschrittliche Blockchain-Technologie",
+					"paragraph2": "die vollständige Transparenz, Sicherheit und Fairness bei jeder Transaktion und jedem Spielergebnis gewährleistet. Unsere Blockchain-basierte Plattform bietet eine sofortige Überprüfung der Spielergebnisse, so dass es für niemanden - auch nicht für uns - möglich ist, die Ergebnisse zu manipulieren.",
+					"paragraph3": "Diese Technologie ermöglicht blitzschnelle Ein- und Auszahlungen von Kryptowährungen, die oft innerhalb von Minuten statt Tagen abgeschlossen werden. Spieler können mit verschiedenen Kryptowährungen wie Bitcoin, Ethereum, USDT und mehr mit minimalen Gebühren und maximaler Sicherheit einzahlen und abheben.",
+					"paragraph4": "Unsere Infrastruktur basiert auf redundanten Servern an mehreren Standorten, um sicherzustellen,",
+					"uptime": "99,9 % Uptime",
+					"paragraph5": "und ununterbrochenes Spielerlebnis. Selbst bei Verkehrsspitzen oder Wartungsarbeiten sorgen unsere Lastausgleichssysteme für einen reibungslosen Spielablauf ohne Verzögerungen oder Ausfallzeiten."
+				},
+				"security": {
+					"heading": "Sicherheit & Fairplay - Zertifiziert und verifiziert",
+					"paragraph1": "Spielersicherheit und Fairplay sind bei HyperBetz nicht verhandelbar. Alle unsere Spiele werden strengen Tests unterzogen und von unabhängigen Testagenturen zertifiziert. Jeder Spielautomat, jedes Tischspiel und jedes zufällige Ergebnis wird von",
+					"rng": "zertifizierte Zufallszahlengeneratoren (RNG)",
+					"paragraph2": "sicherstellung völlig fairer und unvorhersehbarer Ergebnisse.",
+					"paragraph3": "Wir verwenden eine militärische SSL-Verschlüsselung, um alle Datenübertragungen zwischen Ihrem Gerät und unseren Servern zu schützen. Ihre persönlichen Daten, finanziellen Daten und Spielaktivitäten werden verschlüsselt und sicher gespeichert und entsprechen den internationalen Datenschutzstandards, einschließlich der Einhaltung der DSGVO.",
+					"paragraph4": "Unsere Plattform wird regelmäßig von Cybersicherheitsunternehmen von Drittanbietern überprüft, um potenzielle Schwachstellen zu identifizieren und zu beheben. Wir implementieren auch die Zwei-Faktor-Authentifizierung (2FA) für alle Benutzerkonten und fügen eine zusätzliche Schutzebene gegen unbefugten Zugriff hinzu."
+				},
+				"global": {
+					"heading": "Globale Reichweite - Spieler auf der ganzen Welt bedienen",
+					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 18 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"players": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 17 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 16 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"countries": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 15 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 15 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 14 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				},
+				"payments": {
+					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 13 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"instant": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 11 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				},
+				"mobile": {
+					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 09 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 08 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				},
+				"support": {
+					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"availability": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 06 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 05 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 04 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				},
+				"responsible": {
+					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 04 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 03 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 02 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				},
+				"whyChoose": {
+					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 02 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"point1": {
+						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 01 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 00 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					},
+					"point2": {
+						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 00 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 59 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					},
+					"point3": {
+						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 58 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 57 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					},
+					"point4": {
+						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 56 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 56 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					},
+					"point5": {
+						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 55 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 55 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					},
+					"point6": {
+						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 54 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 53 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					}
+				},
+				"closing": {
+					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 52 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+					"tagline": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 52 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				}
+			}
 		}
 	}
 }
