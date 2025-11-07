@@ -210,8 +210,8 @@
 
 	"pageDefaults": {
 		"home": {
-			"title": "Hyperbetz - Your Gateway to Fun and Rewards",
-			"description": "Join Hyperbetz for an exciting gaming experience with amazing rewards! Play crypto games, slots, live casino, and sports betting.",
+			"title": "HyperBetz – Global Casino for Slots, Sports & Live Games",
+			"description": "Play at HyperBetz – a trusted online casino with 5000+ slots, live tables & sports betting. Secure play, fast payouts & daily rewards.",
 			"keywords": [
 				"gaming",
 				"rewards",
@@ -254,8 +254,8 @@
 			"schemaType": "ProfilePage"
 		},
 		"affiliate": {
-			"title": "Affiliate Program - Earn Rewards",
-			"description": "Join our affiliate program and earn rewards by referring friends to Hyperbetz. Start earning today!",
+			"title": "Join the HyperBetz Affiliate Program – Earn Lifetime Commissions",
+			"description": "Partner with HyperBetz & earn lifetime income for every player you refer. Easy setup & global reach.",
 			"keywords": [
 				"affiliate program",
 				"referral rewards",
@@ -266,11 +266,90 @@
 			"schemaType": "WebPage"
 		},
 		"providers": {
-			"title": "Game Providers - Top Gaming Studios",
-			"description": "Discover games from the world's leading game providers and studios. Premium content from trusted developers.",
+			"title": "Game Providers at HyperBetz – Top Casino Studios",
+			"description": "Explore 50+ trusted providers on HyperBetz – Pragmatic Play, Red Tiger, Microgaming & more. Fair, certified gaming.",
 			"keywords": ["game providers", "gaming studios", "game developers"],
 			"ogType": "website",
 			"schemaType": "CollectionPage"
+		},
+		"about": {
+			"title": "About HyperBetz – Our Story & Mission",
+			"description": "Learn about HyperBetz - our mission, values, and commitment to providing a safe, fair, and exciting gaming experience.",
+			"keywords": [
+				"about hyperbetz",
+				"online casino platform",
+				"gaming platform",
+				"casino about us",
+				"fair play casino",
+				"responsible gaming"
+			],
+			"ogType": "website",
+			"schemaType": "WebPage"
+		},
+		"bonus": {
+			"title": "Turnover Bonus Program – Earn Rewards | HyperBetz",
+			"description": "Join HyperBetz Turnover Bonus Program. Earn up to 20% bonus on your gaming activity. Automatic rewards, transparent calculations.",
+			"keywords": [
+				"turnover bonus",
+				"casino bonus",
+				"gaming rewards",
+				"loyalty program",
+				"bonus tiers"
+			],
+			"ogType": "website",
+			"schemaType": "WebPage"
+		},
+		"privacy": {
+			"title": "Privacy Policy – Data Protection | HyperBetz",
+			"description": "HyperBetz Privacy Policy. Learn how we collect, use, and protect your personal data in our crypto-casino platform.",
+			"keywords": [
+				"privacy policy",
+				"data protection",
+				"user privacy",
+				"crypto privacy",
+				"GDPR compliance"
+			],
+			"ogType": "website",
+			"schemaType": "WebPage"
+		},
+		"terms": {
+			"title": "Terms & Conditions – User Agreement | HyperBetz",
+			"description": "Read HyperBetz Terms & Conditions. Understand your rights, responsibilities, and our platform rules.",
+			"keywords": [
+				"terms and conditions",
+				"user agreement",
+				"terms of service",
+				"legal terms",
+				"casino rules"
+			],
+			"ogType": "website",
+			"schemaType": "WebPage"
+		},
+		"responsibleGambling": {
+			"title": "Responsible Gambling – Player Protection | HyperBetz",
+			"description": "HyperBetz promotes responsible gambling. Access tools, resources, and support for safe gaming.",
+			"keywords": [
+				"responsible gambling",
+				"player protection",
+				"gambling awareness",
+				"self-exclusion",
+				"safe gambling"
+			],
+			"ogType": "website",
+			"schemaType": "WebPage"
+		},
+		"faqs": {
+			"title": "FAQs – Frequently Asked Questions | HyperBetz",
+			"description": "Find answers to common questions about HyperBetz crypto-casino. Learn about deposits, withdrawals, games, and bonuses.",
+			"keywords": [
+				"FAQs",
+				"frequently asked questions",
+				"help",
+				"support",
+				"crypto casino FAQ"
+			],
+			"ogType": "website",
+			"schemaType": "FAQPage"
 		}
 	},
 

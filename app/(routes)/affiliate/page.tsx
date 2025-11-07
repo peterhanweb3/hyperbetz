@@ -233,7 +233,7 @@ export default function AffiliatePage() {
 					title="Affiliate Program - Earn Commissions | HyperBetz"
 					description="Join the HyperBetz affiliate program and earn up to 50% commission on player wagers. Track referrals, bonuses, and claim rewards."
 					keywords="affiliate program hyperbetz, casino affiliate, betting commissions, referral rewards, earn money online, hyperbetz"
-					ogImage="/assets/seo.png"
+					ogImage="/assets/seo/AFFILIATE.png"
 				/>
 				<div className="py-4 sm:py-6 space-y-6 sm:space-y-8 px-4 sm:px-6 lg:px-8">
 					{/* Header Section */}
@@ -322,7 +322,7 @@ export default function AffiliatePage() {
 				title="Affiliate Program - Earn Commissions | HyperBetz"
 				description="Join the HyperBetz affiliate program and earn up to 50% commission on player wagers. Track referrals, bonuses, and claim rewards."
 				keywords="affiliate program, casino affiliate, betting commissions, referral rewards, earn money online"
-				ogImage="/assets/seo.png"
+				ogImage="/assets/seo/og.png"
 			/>
 			<div className="py-4 sm:py-6 space-y-6 sm:space-y-8 px-4 sm:px-6 lg:px-8">
 				{/* Header Section with Refresh Button */}

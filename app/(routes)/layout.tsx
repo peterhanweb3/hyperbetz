@@ -43,6 +43,7 @@ import { MobileBottomNavigation } from "@/components/common/mobile-bottom-naviga
 import { AppSidebar } from "@/components/common/sidebar/app-sidebar";
 import { useCrossTabLogout } from "@/hooks/use-cross-tab-logout";
 import { OfflineDetector } from "@/components/common/offline-detector";
+import { Footer } from "@/components/common/footer";
 
 const queryClient = new QueryClient();
 
@@ -245,12 +246,12 @@ export default function Layout({
 									<SidebarProvider className="overflow-x-clip">
 										<AppSidebar />
 										{/* <SidebarInset> */}
-									<SidebarInset className="overflow-auto">
-										{/* Transferred the width calculation of PageHeader to the component itself */}
-										<PageHeader className="consistent-padding-x fixed w-full z-40" />
-										<OfflineDetector />
-										<BlurOverlay />
-										<LiveChatSidebar />
+										<SidebarInset className="overflow-auto">
+											{/* Transferred the width calculation of PageHeader to the component itself */}
+											<PageHeader className="consistent-padding-x fixed w-full z-40" />
+											<OfflineDetector />
+											<BlurOverlay />
+											<LiveChatSidebar />
 											<IdleModal
 												open={isLoggedInOneTime}
 												onClose={handleClose}
@@ -268,6 +269,7 @@ export default function Layout({
 													{children}
 												</main>
 											</AppContent>
+											<Footer />
 											<MobileBottomNavigation />
 										</SidebarInset>
 									</SidebarProvider>

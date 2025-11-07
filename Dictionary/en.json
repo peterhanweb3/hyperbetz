@@ -1495,5 +1495,432 @@
 				}
 			}
 		}
+	},
+	"footer": {
+		"sections": {
+			"company": {
+				"title": "Company",
+				"links": {
+					"about": "About Us",
+					"providers": "Providers",
+					"affiliate": "Affiliate Program",
+					"bonus": "Turnover Bonus"
+				}
+			},
+			"legal": {
+				"title": "Legal",
+				"links": {
+					"privacy": "Privacy Policy",
+					"terms": "Terms & Conditions",
+					"gambling": "Responsible Gambling",
+					"faqs": "FAQs"
+				}
+			},
+			"games": {
+				"title": "Games",
+				"links": {
+					"lobby": "Game Lobby",
+					"slots": "Slots",
+					"live": "Live Casino",
+					"sports": "Sports Betting"
+				}
+			},
+			"support": {
+				"title": "Support",
+				"links": {
+					"help": "Help Center",
+					"contact": "Contact Us"
+				}
+			}
+		},
+		"copyright": "© {year} HyperBetz. All rights reserved.",
+		"followUs": "Follow us:",
+		"disclaimer": {
+			"line1": "18+ Only | Gamble Responsibly",
+			"line2": "Gambling can be addictive. Please play responsibly and only bet what you can afford to lose.",
+			"line3": "If you feel you have a gambling problem, please seek help."
+		}
+	},
+	"privacy": {
+		"title": "Privacy Policy",
+		"subtitle": "How HyperBetz collects, uses, and protects your data",
+		"lastUpdated": "January 2025",
+		"intro": {
+			"paragraph1": "HyperBetz ('HyperBetz', 'we', 'us', or 'our') runs the HyperBetz crypto-casino platform. This Privacy Policy explains how we collect, use, store and protect personal and transaction data when you use our website, mobile apps, or related services (the 'Services').",
+			"paragraph2": "HyperBetz operates as a crypto-wallet-only casino: all deposits and withdrawals are made using cryptocurrency wallets. We are committed to protecting your privacy while meeting regulatory obligations (such as AML/KYC requirements) and ensuring a safe, fair gaming environment.",
+			"paragraph3": "By accessing or using HyperBetz you accept the terms of this Privacy Policy."
+		},
+		"sections": {
+			"scope": {
+				"title": "1. Scope & Acceptance",
+				"content": "This policy applies to all users of HyperBetz. We may update this policy; updates take effect when posted on the site. Continued use following a change means you accept the new policy."
+			},
+			"dataCollection": {
+				"title": "2. What Data We Collect",
+				"intro": "Because we operate with crypto wallets only, the types of data we collect reflect that model. We collect:",
+				"accountData": {
+					"title": "A. Account & Identity Data (when required)",
+					"email": "Email (if provided), display name, account ID.",
+					"kyc": "Important: While crypto wallets enable on-chain anonymity, certain transactions or regulatory triggers may require identity verification. We will clearly request KYC only when necessary."
+				},
+				"walletData": {
+					"title": "B. Wallet & Transaction Data",
+					"addresses": "Cryptocurrency wallet addresses you connect or use with HyperBetz.",
+					"transactions": "On-chain transaction hashes and timestamps (deposits/withdrawals).",
+					"metadata": "Transaction metadata necessary to reconcile payments and prevent fraud."
+				},
+				"technicalData": {
+					"title": "C. Technical & Usage Data",
+					"ip": "IP address, approximate geolocation derived from IP, device type, browser, OS.",
+					"session": "Session logs, time stamps, pages visited, game activity, wagers and outcomes.",
+					"cookies": "Cookies and analytics data to improve site performance and user experience."
+				},
+				"securityData": {
+					"title": "D. Security & Risk Data",
+					"fraud": "Fraud signals, device fingerprints, risk scores from anti-fraud vendors.",
+					"disputes": "Records of dispute resolution, chargebacks (if applicable), and compliance checks."
+				}
+			},
+			"purposes": {
+				"title": "3. Why We Collect Data – Lawful Bases & Purposes",
+				"items": {
+					"0": {
+						"title": "Service provision & contract performance",
+						"description": "to create and maintain accounts, process deposits/withdrawals via crypto wallets, pay winnings."
+					},
+					"1": {
+						"title": "Security & fraud prevention",
+						"description": "detect and prevent abuse and money-laundering."
+					},
+					"2": {
+						"title": "Compliance with legal obligations",
+						"description": "meet AML/KYC requirements when necessary."
+					},
+					"3": {
+						"title": "Platform operations & improvement",
+						"description": "analytics, product development, customer support."
+					},
+					"4": {
+						"title": "Marketing (with consent)",
+						"description": "newsletters, promotional offers — only if you opt in."
+					},
+					"5": {
+						"title": "Legitimate interest",
+						"description": "preserving platform integrity and investigating misuse."
+					}
+				}
+			},
+			"cryptoWallet": {
+				"title": "4. Crypto Wallet Specifics & On-Chain Data",
+				"points": {
+					"0": "Wallet addresses and on-chain transaction data are stored only to the extent necessary to credit/debit user accounts, audit transactions, and meet compliance obligations.",
+					"1": "On-chain data is public by nature — HyperBetz does not control blockchain visibility. We combine on-chain data with off-chain records to reconcile accounts.",
+					"2": "If you connect a custodial wallet service (third-party), you consent to any data those providers share with us for transaction processing."
+				}
+			},
+			"dataSharing": {
+				"title": "5. When We Share Data",
+				"intro": "We may share your information:",
+				"items": {
+					"0": "With regulators or law enforcement when compelled by legal process or to prevent illegal activity.",
+					"1": "With affiliates or third parties in a business transfer (merger, acquisition) — always with appropriate safeguards.",
+					"2": "With fraud prevention networks to protect our platform and users."
+				},
+				"noSelling": "We do not sell your personal data to advertisers."
+			},
+			"security": {
+				"title": "6. Security Measures",
+				"intro": "We use industry-standard security measures:",
+				"items": {
+					"0": "TLS/SSL encryption in transit; encrypted storage for sensitive data.",
+					"1": "Access controls, logging, and role-based privileges.",
+					"2": "Regular security audits and vulnerability testing.",
+					"3": "Multi-factor authentication (MFA) for staff and optional for users."
+				},
+				"warning": "You must keep your wallet private keys and account credentials secure. We never request private keys."
+			},
+			"cookies": {
+				"title": "7. Cookies & Tracking",
+				"content": "We use cookies and similar technologies for necessary site functions, analytics, and (with consent) marketing. You can control cookies in your browser, but disabling essential cookies may break functionality."
+			},
+			"minAge": {
+				"title": "8. Children & Minimum Age",
+				"content": "You must be 18+ (or older if required by local law) to use our Services. We actively prevent underage use and will delete data if a minor's registration is identified."
+			},
+			"breach": {
+				"title": "9. Breach Notification",
+				"content": "In case of a data breach that presents a risk to your rights, we will notify affected users and relevant authorities as required by law, and we will take steps to remediate."
+			},
+			"changes": {
+				"title": "10. Changes to This Policy",
+				"content": "We may modify this Privacy Policy. Material changes will be posted on the site and, when appropriate, notified to you."
+			},
+			"contact": {
+				"title": "11. Contact",
+				"intro": "Questions or requests:"
+			}
+		}
+	},
+	"terms": {
+		"title": "Terms & Conditions",
+		"subtitle": "User Agreement and Platform Rules",
+		"lastUpdated": "January 2025",
+		"intro": "By using HyperBetz, you agree to these Terms & Conditions. Please read carefully before using our platform.",
+		"sections": {
+			"0": {
+				"title": "1. Acceptance of Terms",
+				"content": "By accessing and using HyperBetz, you accept and agree to be bound by these Terms & Conditions. If you do not agree, please do not use our services.",
+				"hasPoints": "false"
+			},
+			"1": {
+				"title": "2. Eligibility",
+				"content": "You must be at least 18 years old (or the legal gambling age in your jurisdiction) to use HyperBetz. By using our platform, you confirm that you meet this requirement.",
+				"hasPoints": "false"
+			},
+			"2": {
+				"title": "3. Account Registration",
+				"content": "You are responsible for maintaining the confidentiality of your account credentials. HyperBetz is not liable for unauthorized access to your account.",
+				"hasPoints": "false"
+			},
+			"3": {
+				"title": "4. Deposits and Withdrawals",
+				"content": "All transactions are made using cryptocurrency. You are responsible for ensuring the accuracy of wallet addresses. HyperBetz is not responsible for transactions sent to incorrect addresses.",
+				"hasPoints": "false"
+			},
+			"4": {
+				"title": "5. Gaming Rules",
+				"content": "All games are subject to their individual rules and RTP (Return to Player) percentages. Malfunction voids all pays and plays.",
+				"hasPoints": "false"
+			},
+			"5": {
+				"title": "6. Bonuses and Promotions",
+				"content": "Bonuses are subject to specific terms and wagering requirements. HyperBetz reserves the right to modify or cancel promotions at any time.",
+				"hasPoints": "false"
+			},
+			"7": {
+				"title": "7. Responsible Gambling",
+				"content": "HyperBetz promotes responsible gambling. We provide tools to help you control your gaming activity. Please gamble responsibly.",
+				"hasPoints": "false"
+			},
+			"8": {
+				"title": "8. Prohibited Activities",
+				"content": "Users are prohibited from fraud, collusion, money laundering, using bots or automated systems, and any activity that violates applicable laws.",
+				"hasPoints": "false"
+			},
+			"9": {
+				"title": "9. Intellectual Property",
+				"content": "All content on HyperBetz is protected by copyright and trademark laws. Unauthorized use is prohibited.",
+				"hasPoints": "false"
+			},
+			"10": {
+				"title": "10. Limitation of Liability",
+				"content": "HyperBetz is not liable for indirect, incidental, or consequential damages arising from your use of the platform.",
+				"hasPoints": "false"
+			},
+			"11": {
+				"title": "11. Changes to Terms",
+				"content": "We reserve the right to modify these Terms at any time. Continued use of the platform constitutes acceptance of modified terms.",
+				"hasPoints": "false"
+			},
+			"12": {
+				"title": "12. Contact",
+				"content": "For questions about these Terms & Conditions, please contact us at support@hyperbetz.games.",
+				"hasPoints": "false"
+			}
+		}
+	},
+	"responsibleGambling": {
+		"title": "Responsible Gambling",
+		"subtitle": "Your Safety and Well-being Matter",
+		"intro": {
+			"paragraph1": "At HyperBetz, we believe gaming should be entertaining and fun. We are committed to promoting responsible gambling and providing tools to help you stay in control.",
+			"paragraph2": "Gambling should never interfere with your financial obligations or personal relationships. If you feel gambling is becoming a problem, we're here to help."
+		},
+		"sections": {
+			"commitment": {
+				"title": "Our Commitment to Player Protection",
+				"content": "HyperBetz is dedicated to creating a safe gaming environment. We provide comprehensive tools and resources to help you manage your gaming activity, set limits, and seek help when needed."
+			},
+			"tools": {
+				"title": "Responsible Gaming Tools",
+				"items": {
+					"0": {
+						"title": "Deposit Limits",
+						"description": "Set daily, weekly, or monthly deposit limits to control your spending."
+					},
+					"1": {
+						"title": "Session Time Limits",
+						"description": "Manage how long you play by setting session duration limits."
+					},
+					"2": {
+						"title": "Self-Exclusion",
+						"description": "Temporarily or permanently exclude yourself from the platform."
+					},
+					"3": {
+						"title": "Reality Checks",
+						"description": "Receive notifications about your gaming duration and spending."
+					}
+				}
+			},
+			"signs": {
+				"title": "Warning Signs of Problem Gambling",
+				"intro": "Please watch for these signs that gambling may be becoming a problem:",
+				"list": "Spending more money or time than you can afford|Chasing losses|Neglecting personal or professional responsibilities|Borrowing money to gamble|Lying about gambling activities|Feeling anxious or irritable when not gambling"
+			},
+			"help": {
+				"title": "Get Help",
+				"intro": "If you or someone you know has a gambling problem, help is available:",
+				"organizations": {
+					"0": {
+						"name": "Gamblers Anonymous",
+						"description": "A fellowship of people who share their experience to help others recover from gambling problems.",
+						"url": "https://www.gamblersanonymous.org"
+					},
+					"1": {
+						"name": "National Council on Problem Gambling",
+						"description": "Provides resources, support, and a 24/7 helpline for those affected by problem gambling.",
+						"url": "https://www.ncpgambling.org"
+					}
+				}
+			},
+			"protection": {
+				"title": "Underage Protection",
+				"content": "HyperBetz strictly prohibits underage gambling. We use advanced age verification systems and actively monitor for underage activity. Parents can use parental control software to restrict access to gambling sites."
+			}
+		},
+		"manageSettingsButton": "Manage Responsible Gaming Settings"
+	},
+	"faqs": {
+		"title": "Frequently Asked Questions",
+		"subtitle": "Find answers to common questions about HyperBetz",
+		"intro": "Browse our comprehensive FAQ section to find quick answers to your questions. Can't find what you're looking for? Contact our support team.",
+		"categories": {
+			"general": {
+				"title": "General Questions",
+				"items": {
+					"0": {
+						"question": "What is HyperBetz?",
+						"answer": "HyperBetz is a crypto-casino platform offering 5,000+ games including slots, live casino, sports betting, and more. We accept cryptocurrency deposits and provide instant withdrawals."
+					},
+					"1": {
+						"question": "Is HyperBetz licensed and regulated?",
+						"answer": "Yes, HyperBetz operates under proper gaming licenses and follows strict regulatory standards to ensure fair play and player protection."
+					},
+					"2": {
+						"question": "Which countries can access HyperBetz?",
+						"answer": "HyperBetz is available in most countries worldwide. However, some jurisdictions have restrictions. Please check our Terms & Conditions for specific country restrictions."
+					},
+					"3": {
+						"question": "Is my data safe with HyperBetz?",
+						"answer": "Absolutely. We use military-grade encryption, secure servers, and comply with strict data protection regulations. Your information is never shared without your consent."
+					},
+					"4": {
+						"question": "Can I play on mobile?",
+						"answer": "Yes! HyperBetz is fully optimized for mobile devices. You can play all games directly from your mobile browser without downloading an app."
+					}
+				}
+			},
+			"deposits": {
+				"title": "Deposits",
+				"items": {
+					"0": {
+						"question": "What cryptocurrencies can I deposit?",
+						"answer": "HyperBetz supports major cryptocurrencies including Bitcoin (BTC), Ethereum (ETH), USDT, USDC, BNB, and many more."
+					},
+					"1": {
+						"question": "How long do deposits take?",
+						"answer": "Crypto deposits are typically credited within 1-3 blockchain confirmations, usually taking 5-15 minutes depending on the network."
+					},
+					"2": {
+						"question": "Is there a minimum deposit amount?",
+						"answer": "Yes, the minimum deposit varies by cryptocurrency. Check the deposit page for current minimums."
+					},
+					"3": {
+						"question": "Are deposits charged any fees?",
+						"answer": "HyperBetz does not charge deposit fees. However, blockchain network fees apply and are paid to miners, not to us."
+					}
+				}
+			},
+			"withdrawals": {
+				"title": "Withdrawals",
+				"items": {
+					"0": {
+						"question": "How do I withdraw my winnings?",
+						"answer": "Go to your wallet, select the cryptocurrency you want to withdraw, enter your wallet address and amount, then confirm. Withdrawals are processed within 15 minutes."
+					},
+					"1": {
+						"question": "Is there a withdrawal limit?",
+						"answer": "Standard withdrawal limits apply based on your account level. VIP players enjoy higher limits. Check your account settings for details."
+					},
+					"2": {
+						"question": "Do I need to verify my account?",
+						"answer": "Most withdrawals are instant without verification. However, larger withdrawals or suspicious activity may trigger KYC requirements for security."
+					},
+					"3": {
+						"question": "Can I cancel a withdrawal?",
+						"answer": "You can cancel a withdrawal request before it's processed. Once processing begins, cancellation is not possible."
+					}
+				}
+			},
+			"games": {
+				"title": "Games",
+				"items": {
+					"0": {
+						"question": "How many games does HyperBetz offer?",
+						"answer": "We offer over 5,000 games from 50+ premium providers including slots, live casino, table games, and sports betting."
+					},
+					"1": {
+						"question": "Are the games fair?",
+						"answer": "Yes! All our games use certified Random Number Generators (RNG) and are regularly audited by independent testing agencies for fairness."
+					},
+					"2": {
+						"question": "Can I play games for free?",
+						"answer": "Many slots and table games offer demo mode where you can play for free without wagering real money."
+					}
+				}
+			},
+			"bonuses": {
+				"title": "Bonuses & Promotions",
+				"items": {
+					"0": {
+						"question": "Does HyperBetz offer a welcome bonus?",
+						"answer": "Yes! New players receive a generous welcome bonus package. Check our promotions page for current offers."
+					},
+					"1": {
+						"question": "What is the Turnover Bonus program?",
+						"answer": "Our Turnover Bonus rewards your gaming activity automatically. The more you play, the higher your tier and bonus percentage (up to 20%)."
+					},
+					"2": {
+						"question": "Are there wagering requirements?",
+						"answer": "Most bonuses have wagering requirements. Check the specific terms of each promotion for details."
+					}
+				}
+			},
+			"account": {
+				"title": "Account Management",
+				"items": {
+					"0": {
+						"question": "How do I create an account?",
+						"answer": "Creating an account is easy! Click 'Sign Up', connect your crypto wallet, and you're ready to play. No lengthy registration forms needed."
+					},
+					"1": {
+						"question": "I forgot my password. What should I do?",
+						"answer": "Click 'Forgot Password' on the login page and follow the instructions to reset your password via email."
+					},
+					"2": {
+						"question": "Can I have multiple accounts?",
+						"answer": "No, each player is allowed only one account. Multiple accounts may result in closure and forfeiture of funds."
+					},
+					"3": {
+						"question": "How do I close my account?",
+						"answer": "Contact our support team at support@hyperbetz.games to request account closure. Please withdraw any remaining balance first."
+					}
+				}
+			}
+		},
+		"stillNeedHelp": {
+			"title": "Still Need Help?",
+			"content": "Can't find the answer you're looking for? Our support team is available 24/7 to assist you. Contact us at:"
+		}
 	}
 }

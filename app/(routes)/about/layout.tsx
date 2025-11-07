@@ -25,6 +25,7 @@ export const metadata: Metadata = generateSEOMetadata({
 	path: "/about",
 	pageType: "about",
 	ogType: "website",
+	ogImage: "/assets/seo/og.png",
 	schemas: [
 		generateOrganizationSchema(),
 		generateWebPageSchema({

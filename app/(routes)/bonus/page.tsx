@@ -164,7 +164,7 @@ export default function BonusPage() {
 					title="Turnover Bonus Program - Earn Rewards | HyperBetz"
 					description="Get up to 20% bonus on your wagers with HyperBetz turnover bonus program. Earn rewards on slots, live casino, and sports betting."
 					keywords="turnover bonus, casino bonus, wager rewards, betting bonus, loyalty program"
-					ogImage="/assets/seo.png"
+					ogImage="/assets/seo/TURNOVER_BONUS.png"
 				/>
 				<div className="py-4 sm:py-6 space-y-6 sm:space-y-8">
 					{/* Header Section */}
@@ -254,7 +254,7 @@ export default function BonusPage() {
 				title="Turnover Bonus Program - Earn Rewards | HyperBetz"
 				description="Get up to 20% bonus on your wagers with HyperBetz turnover bonus program. Earn rewards on slots, live casino, and sports betting."
 				keywords="turnover bonus, casino bonus, wager rewards, betting bonus, loyalty program"
-				ogImage="/assets/seo.png"
+				ogImage="/assets/seo/og.png"
 			/>
 			<div className="py-4 sm:py-6 space-y-6 sm:space-y-8">
 				{/* Header Section with Refresh Button */}
