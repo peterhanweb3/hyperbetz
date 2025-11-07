@@ -315,7 +315,7 @@ export const SwapPanel = memo(
 									<Settings className="h-4 w-4" />
 								</Button>
 							</PopoverTrigger>
-							<PopoverContent className="w-80" align="end">
+							<PopoverContent className="w-80" align="start">
 								<div className="space-y-4">
 									<div>
 										<Label className="text-[11px] md:text-xs font-medium">
@@ -524,7 +524,7 @@ export const SwapPanel = memo(
 				) : (
 					<div className="p-4 space-y-1">
 						{/* You Pay Card */}
-						<div className="bg-input/30 border border-border rounded-xl p-3 space-y-2.5">
+						<div className="bg-input/30 border border-border rounded-xl p-3 space-y-2.5 h-25 sm:h-auto">
 							<div className="flex items-center justify-between">
 								<span className="text-sm text-muted-foreground">
 									{t("youPay")}
@@ -591,7 +591,7 @@ export const SwapPanel = memo(
 										{isLowBalance && (
 											<Badge
 												variant="destructive"
-												className="text-xs"
+												className="text-[10px]"
 											>
 												{t("low")}
 											</Badge>
@@ -625,7 +625,7 @@ export const SwapPanel = memo(
 									variant="ghost"
 									onClick={() => setFromTokenModalOpen(true)}
 									disabled={isLoadingNativeToken}
-									className="h-auto px-2.5 gap-2 bg-muted/30 hover:bg-muted/50 rounded-full"
+									className="h-auto px-2.5 py-1.5 gap-2 bg-muted/30 hover:bg-muted/50 rounded-full"
 								>
 									{isLoadingNativeToken ? (
 										<>
@@ -661,7 +661,7 @@ export const SwapPanel = memo(
 										</>
 									) : (
 										<>
-											<span className="text-[11px] md:text-xs font-medium">
+											<span className="text-[11px] py-[2px] md:text-xs font-medium">
 												{t("selectToken")}
 											</span>
 											<ChevronDown className="h-3 w-3" />
@@ -696,7 +696,7 @@ export const SwapPanel = memo(
 						</div>
 
 						{/* You Receive Card */}
-						<div className="bg-input/30 border border-border rounded-xl p-3 space-y-2.5">
+						<div className="bg-input/30 border border-border rounded-xl p-3 space-y-2.5 h-25 sm:h-auto">
 							<div className="flex items-center justify-between">
 								<span className="text-sm text-muted-foreground">
 									{t("youReceive")}
@@ -729,7 +729,7 @@ export const SwapPanel = memo(
 								<Button
 									variant="ghost"
 									onClick={() => setToTokenModalOpen(true)}
-									className="h-auto px-3 gap-2 bg-muted/30 hover:bg-muted/50 rounded-full"
+									className="h-auto px-3 py-1.5 gap-2 bg-muted/30 hover:bg-muted/50 rounded-full"
 								>
 									{toToken ? (
 										<>
@@ -749,7 +749,7 @@ export const SwapPanel = memo(
 										</>
 									) : (
 										<>
-											<span className="text-[11px] md:text-xs font-medium">
+											<span className="text-[11px] py-[2px] md:text-xs font-medium">
 												{t("selectToken")}
 											</span>
 											<ChevronDown className="h-3 w-3" />
