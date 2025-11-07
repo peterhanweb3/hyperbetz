@@ -687,7 +687,6 @@ export function NavMain({
 			if (k === "SLOT") return tGames("slots");
 			if (k === "SPORTS") return tGames("sports");
 			if (k === "LIVE CASINO") return tGames("liveCasino");
-			if (k === "-") return tGames("sports"); // Handle API's "-" category as Sports
 			return category.title;
 		})();
 		return (

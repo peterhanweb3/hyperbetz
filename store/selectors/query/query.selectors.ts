@@ -187,6 +187,7 @@ export const selectNavDataForGames = createSelector(
 		// Convert Maps to sorted arrays of objects
 		const sortedCategories = Array.from(categories.entries())
 			.map(([name, count]) => ({ name, count }))
+			.filter((category) => category.name !== "-")
 			.sort((a, b) => a.name.localeCompare(b.name));
 
 		const sortedProviders = Array.from(providers.entries())
