@@ -79,7 +79,7 @@ function HeroGameCard({ game }: { game: Game }) {
 	const openGame = () => {
 		const queryParams = new URLSearchParams({
 			vendor: game.vendor_name,
-			gameType: game.category,
+			gameType: game.own_game_type,
 			gpId: String(game.gp_id),
 		}).toString();
 		const href = `/play/${game.game_id}?${queryParams}`;

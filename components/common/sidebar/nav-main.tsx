@@ -169,7 +169,7 @@ export function NavMain({
 		}
 		const qp = new URLSearchParams({
 			vendor: game.vendor_name,
-			gameType: game.category,
+			gameType: game.own_game_type,
 			gpId: String(game.gp_id),
 		}).toString();
 		router.push(`/play/${game.game_id}?${qp}`);

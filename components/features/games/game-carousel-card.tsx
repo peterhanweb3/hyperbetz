@@ -62,7 +62,7 @@ const GameCardComponent = ({
 	// Construct the URL for the middleware page. Pass game details via query params.
 	const queryParams = new URLSearchParams({
 		vendor: game.vendor_name,
-		gameType: game.category,
+		gameType: game.own_game_type,
 		gpId: String(game.gp_id),
 	}).toString();
 

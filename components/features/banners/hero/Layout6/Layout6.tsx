@@ -61,7 +61,7 @@ const FeaturedGameCard = ({ game }: { game: Game }) => {
 
 	const queryParams = new URLSearchParams({
 		vendor: game.vendor_name,
-		gameType: game.category,
+		gameType: game.own_game_type,
 		gpId: String(game.gp_id),
 	}).toString();
 	const gameUrl = `/play/${game.game_id}?${queryParams}`;
@@ -130,7 +130,7 @@ const CompactGameCard = ({ game }: { game: Game }) => {
 
 	const queryParams = new URLSearchParams({
 		vendor: game.vendor_name,
-		gameType: game.category,
+		gameType: game.own_game_type,
 		gpId: String(game.gp_id),
 	}).toString();
 	const gameUrl = `/play/${game.game_id}?${queryParams}`;

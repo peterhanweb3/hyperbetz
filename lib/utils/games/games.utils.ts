@@ -202,7 +202,7 @@ export const convertGamesToHeroSlides = (games: Game[], router: AppRouterInstanc
     // Construct the unique play URL for each game.
     const queryParams = new URLSearchParams({
       vendor: game.vendor_name,
-      gameType: game.category,
+      gameType: game.own_game_type,
       gpId: String(game.gp_id),
     }).toString();
     const gameUrl = `/play/${game.game_id}?${queryParams}`;
