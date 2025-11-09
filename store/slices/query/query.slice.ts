@@ -33,6 +33,7 @@ export interface QuerySliceActions {
 	setSortBy: (sortValue: string) => void;
 	showMoreItems: () => void;
 	syncStateFromUrl: (searchParams: URLSearchParams) => void;
+	syncStateFromPath: (slug: string[]) => void;
 	initializeQueryState: (searchParams: URLSearchParams) => void;
 }
 
@@ -198,6 +199,52 @@ export const createQuerySlice: AppStateCreator<QuerySlice> = (set, get) => ({
 			});
 
 			// 3. Update individual properties instead of replacing the entire state.query
+			state.query.searchQuery = newState.searchQuery;
+			state.query.activeFilters = newState.activeFilters;
+			state.query.sortBy = newState.sortBy;
+			state.query.itemsToShow = newState.itemsToShow;
+			state.query.isInitialized = newState.isInitialized;
+		});
+	},
+
+	/**
+	 * Syncs state from SEO-friendly path params (e.g., /games/pg-soft/slot)
+	 * Supports patterns:
+	 * - [provider] = provider only
+	 * - [provider, category] = provider + category
+	 */
+	syncStateFromPath: (slug: string[]) => {
+		set((state) => {
+			// Import the slug mapping utilities
+			const { slugToProviderName, slugToCategory } = require('@/lib/utils/provider-slug-mapping');
+
+			// Create a fresh state
+			const newState: QuerySliceState = {
+				...initialState,
+				isInitialized: true,
+				activeFilters: {},
+			};
+
+			if (slug.length === 1) {
+				// Only provider name: /games/pg-soft
+				const providerName = slugToProviderName(decodeURIComponent(slug[0]));
+				if (providerName) {
+					newState.activeFilters['provider_name'] = [providerName];
+				}
+			} else if (slug.length === 2) {
+				// Provider + category: /games/pg-soft/slot
+				const providerName = slugToProviderName(decodeURIComponent(slug[0]));
+				const category = slugToCategory(decodeURIComponent(slug[1]));
+
+				if (providerName) {
+					newState.activeFilters['provider_name'] = [providerName];
+				}
+				if (category) {
+					newState.activeFilters['category'] = [category];
+				}
+			}
+
+			// Update state
 			state.query.searchQuery = newState.searchQuery;
 			state.query.activeFilters = newState.activeFilters;
 			state.query.sortBy = newState.sortBy;

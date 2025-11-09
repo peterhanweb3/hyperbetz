@@ -36,12 +36,12 @@ export function getShuffledTopProviders(
 			(p) => p.title.toLowerCase() === providerName.toLowerCase()
 		);
 
+		const seoSlug = providerName.toLowerCase().trim().replace(/\s+/g, '-').replace(/\./g, '');
+
 		return {
 			name: providerName,
 			count: matchedProvider?.count || 0,
-			url:
-				matchedProvider?.url ||
-				`/games?provider_name=${encodeURIComponent(providerName)}`,
+			url: matchedProvider?.url || `/games/${seoSlug}`,
 		};
 	});
 
@@ -65,12 +65,12 @@ export function getAllTopProviders(
 			(p) => p.title.toLowerCase() === providerName.toLowerCase()
 		);
 
+		const seoSlug = providerName.toLowerCase().trim().replace(/\s+/g, '-').replace(/\./g, '');
+
 		return {
 			name: providerName,
 			count: matchedProvider?.count || 0,
-			url:
-				matchedProvider?.url ||
-				`/games?provider_name=${encodeURIComponent(providerName)}`,
+			url: matchedProvider?.url || `/games/${seoSlug}`,
 		};
 	});
 }

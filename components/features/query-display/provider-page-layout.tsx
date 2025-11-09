@@ -18,14 +18,21 @@ import { ProviderListCard } from "./provider-list-card";
 import { useTranslations } from "@/lib/locale-provider";
 // import { ActiveFilters } from "@/store/slices/query/query.slice";
 
-export const ProviderPageLayout = () => {
+interface ProviderPageLayoutProps {
+	categoryFromPath?: string;
+}
+
+export const ProviderPageLayout = ({ categoryFromPath }: ProviderPageLayoutProps = {}) => {
 	// --- 1. HOOKS & STATE SETUP ---
 	const router = useRouter();
 	const pathname = usePathname();
 	const searchParams = useSearchParams();
 
-	// Get category from URL params
-	const categoryFilter = searchParams.get("category") ?? "";
+	// Get category from URL params (support both path params and query params)
+	// Path params take precedence for SEO-friendly URLs
+	const categoryFilter = categoryFromPath
+		? decodeURIComponent(categoryFromPath).replace(/-/g, ' ').toUpperCase()
+		: (searchParams.get("category") ?? "");
 
 	// Get raw data using our efficient selectors based on category filter
 	const allProviders = useAppStore(selectAllProviders);

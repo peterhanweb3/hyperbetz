@@ -83,28 +83,38 @@ const isBonusActive = (pathname: string) => {
 };
 
 /**
- * A helper to create a URL with a specific query parameter for the /games page.
- * @param filterType - The query parameter key (e.g., "category").
- * @param filterValue - The value for the query parameter (e.g., "LIVE CASINO").
- * @returns A URL string like "/games?category=LIVE+CASINO".
+ * Create SEO-friendly URL for games filtered by provider
+ * @param providerName - The provider name (e.g., "PG Soft")
+ * @returns A URL string like "/games/pg-soft"
  */
 const createGamesLink = (filterType: string, filterValue: string) => {
+	if (filterType === "provider_name") {
+		// Convert provider name to SEO-friendly slug
+		const slug = filterValue.toLowerCase().trim().replace(/\s+/g, '-').replace(/\./g, '');
+		return `/games/${slug}`;
+	}
+	// Fallback for other filter types
 	const params = new URLSearchParams();
 	params.set(filterType, filterValue);
 	return `/games?${params.toString()}`;
 };
 
 /**
- * A helper to create a URL with a specific query parameter for the /providers page.
- * @param filterType - The query parameter key (e.g., "category").
- * @param filterValue - The value for the query parameter (e.g., "LIVE CASINO").
- * @returns A URL string like "/providers?category=LIVE+CASINO".
+ * Create SEO-friendly URL for providers filtered by category
+ * @param category - The category name (e.g., "SLOT", "LIVE CASINO")
+ * @returns A URL string like "/providers/slot" or "/providers/live-casino"
  */
 const createProvidersLink = (filterType: string, filterValue: string) => {
-	// if (filterType === "category" && filterValue === "SPORTS") THEN REDIRECT IT TO "games?provider_name={params/toString()}"
-	if (filterType === "category" && filterValue === "SPORTS") {
-		return `/games?provider_name=SBO`;
+	if (filterType === "category") {
+		// Special case for Sports
+		if (filterValue === "SPORTS") {
+			return `/games/sbo`;
+		}
+		// Convert category to SEO-friendly slug
+		const slug = filterValue.toLowerCase().trim().replace(/\s+/g, '-');
+		return `/providers/${slug}`;
 	}
+	// Fallback
 	const params = new URLSearchParams();
 	params.set(filterType, filterValue);
 	return `/providers?${params.toString()}`;

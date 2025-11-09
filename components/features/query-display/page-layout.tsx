@@ -83,16 +83,47 @@ export const QueryPageLayout = () => {
 				currentPath += `/${segment}`;
 				const isLast = index === pathSegments.length - 1;
 
-				// Try to get translation from navigation, fallback to formatted segment
+				// Smart breadcrumb labeling
+				let label = segment;
+
+				// Try to get translation from navigation first
 				const translationKey = segment.toLowerCase();
-				const translatedSegment =
-					tNavigation(translationKey) !== translationKey
-						? tNavigation(translationKey)
-						: segment.charAt(0).toUpperCase() +
-						  segment.slice(1).toLowerCase();
+				const translatedNav = tNavigation(translationKey);
+
+				if (translatedNav !== translationKey) {
+					// Found a navigation translation
+					label = translatedNav;
+				} else {
+					// Check if this is a provider or category slug
+					// eslint-disable-next-line @typescript-eslint/no-require-imports
+					const { slugToProviderName, slugToCategory } = require('@/lib/utils/provider-slug-mapping');
+
+					// Try provider name lookup
+					const providerName = slugToProviderName(segment);
+					if (providerName) {
+						label = providerName;
+					} else {
+						// Try category lookup
+						const category = slugToCategory(segment);
+						if (category && category !== segment.toUpperCase()) {
+							// Use friendly category names
+							const categoryMap: Record<string, string> = {
+								'SLOT': 'Slots',
+								'LIVE CASINO': 'Live Casino',
+								'SPORT BOOK': 'Sports',
+								'SPORTSBOOK': 'Sports',
+								'RNG': 'Table Games',
+							};
+							label = categoryMap[category] || category;
+						} else {
+							// Fallback to capitalized segment
+							label = segment.charAt(0).toUpperCase() + segment.slice(1).toLowerCase();
+						}
+					}
+				}
 
 				breadcrumbItems.push({
-					label: translatedSegment,
+					label,
 					href: currentPath,
 					isActive: isLast,
 				});

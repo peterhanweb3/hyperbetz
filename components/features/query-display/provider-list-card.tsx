@@ -18,9 +18,10 @@ export const ProviderListCard = ({
 }: ProviderListCardProps) => {
 	const tGames = useTranslations("games");
 	const tProviders = useTranslations("providers");
-	const params = new URLSearchParams();
-	params.set("provider_name", name);
-	const providerUrl = `/games?${params.toString()}`;
+
+	// Convert provider name to SEO-friendly URL format (lowercase with hyphens)
+	const seoProviderName = name.toLowerCase().trim().replace(/\s+/g, '-').replace(/\./g, '');
+	const providerUrl = `/games/${seoProviderName}`;
 
 	return (
 		<Link href={providerUrl}>

@@ -15,12 +15,10 @@ export const ProviderGridCard = ({
 }: ProviderCardProps) => {
 	const tGames = useTranslations("games");
 	const tProviders = useTranslations("providers");
-	// Create the URLSearchParams object to build the query string.
-	const params = new URLSearchParams();
-	// The key 'provider_name' must match the filter ID used by our query system.
-	params.set("provider_name", name);
 
-	const providerUrl = `/games?${params.toString()}`;
+	// Convert provider name to SEO-friendly URL format (lowercase with hyphens)
+	const seoProviderName = name.toLowerCase().trim().replace(/\s+/g, '-').replace(/\./g, '');
+	const providerUrl = `/games/${seoProviderName}`;
 
 	return (
 		<Link href={providerUrl} className="block group h-full">

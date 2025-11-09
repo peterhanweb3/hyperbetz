@@ -302,11 +302,10 @@ export function NavMain({
 				}
 				router.replace(`/getLobby/${decodeURIComponent(providerName)}`);
 			} else {
-				router.push(
-					`/games?provider_name=${encodeURIComponent(
-						providerName
-					)}&category=${encodeURIComponent(categoryTitle)}`
-				);
+				// Convert to SEO-friendly URL format (lowercase with hyphens)
+				const seoProvider = providerName.toLowerCase().trim().replace(/\s+/g, '-').replace(/\./g, '');
+				const seoCategory = categoryTitle.toLowerCase().trim().replace(/\s+/g, '-');
+				router.push(`/games/${seoProvider}/${seoCategory}`);
 			}
 		};
 		// Add custom Evolution provider for Live Casino category
@@ -896,7 +895,7 @@ export function NavMain({
 														className="!h-auto !min-h-[1.75rem] !items-start !py-1"
 													>
 														<Link
-															href="/providers?filter=top"
+															href="/providers"
 															className="flex items-center justify-between w-full hover:bg-primary/20 transition-all duration-300 border-t border-border/50 py-2 mt-4 gap-2"
 															prefetch={false}
 															onClick={

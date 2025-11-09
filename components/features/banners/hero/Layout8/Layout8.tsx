@@ -380,7 +380,7 @@ const LiveCasinoAndSlotsSection = () => {
 							title={tGames("liveCasino")}
 							icon={faCards}
 							onViewMoreClick={() =>
-								router.push("/games?category=LIVE CASINO")
+								router.push("/providers/live-casino")
 							}
 						/>
 
@@ -407,7 +407,7 @@ const LiveCasinoAndSlotsSection = () => {
 							title={tGames("slots")}
 							icon={faSlotMachine}
 							onViewMoreClick={() =>
-								router.push("/games?category=SLOT")
+								router.push("/providers/slot")
 							}
 						/>
 
