@@ -1878,62 +1878,155 @@
 	},
 	"responsibleGambling": {
 		"title": "Responsible Gambling",
-		"subtitle": "Your Safety and Well-being Matter",
+		"subtitle": "Play Smart • Stay in Control",
 		"intro": {
-			"paragraph1": "At {siteName}, we believe gaming should be entertaining and fun. We are committed to promoting responsible gambling and providing tools to help you stay in control.",
-			"paragraph2": "Gambling should never interfere with your financial obligations or personal relationships. If you feel gambling is becoming a problem, we're here to help."
+			"title": "Putting Your Well-being First",
+			"paragraph1": "At {siteName}, we believe gaming should always be entertaining and never harmful.",
+			"paragraph2": "We provide tools, guidance, and dedicated support to help you stay in control of your experience.",
+			"paragraph3": "If gambling stops being fun, press pause and reach out for help—we are here for you 24/7."
 		},
-		"sections": {
-			"commitment": {
-				"title": "Our Commitment to Player Protection",
-				"content": "{siteName} is dedicated to creating a safe gaming environment. We provide comprehensive tools and resources to help you manage your gaming activity, set limits, and seek help when needed."
-			},
-			"tools": {
-				"title": "Responsible Gaming Tools",
-				"items": {
-					"0": {
-						"title": "Deposit Limits",
-						"description": "Set daily, weekly, or monthly deposit limits to control your spending."
-					},
-					"1": {
-						"title": "Session Time Limits",
-						"description": "Manage how long you play by setting session duration limits."
-					},
-					"2": {
-						"title": "Self-Exclusion",
-						"description": "Temporarily or permanently exclude yourself from the platform."
-					},
-					"3": {
-						"title": "Reality Checks",
-						"description": "Receive notifications about your gaming duration and spending."
-					}
-				}
-			},
-			"signs": {
-				"title": "Warning Signs of Problem Gambling",
-				"intro": "Please watch for these signs that gambling may be becoming a problem:",
-				"list": "Spending more money or time than you can afford|Chasing losses|Neglecting personal or professional responsibilities|Borrowing money to gamble|Lying about gambling activities|Feeling anxious or irritable when not gambling"
-			},
-			"help": {
-				"title": "Get Help",
-				"intro": "If you or someone you know has a gambling problem, help is available:",
-				"organizations": {
-					"0": {
-						"name": "Gamblers Anonymous",
-						"description": "A fellowship of people who share their experience to help others recover from gambling problems.",
-						"url": "https://www.gamblersanonymous.org"
-					},
-					"1": {
-						"name": "National Council on Problem Gambling",
-						"description": "Provides resources, support, and a 24/7 helpline for those affected by problem gambling.",
-						"url": "https://www.ncpgambling.org"
-					}
-				}
-			},
-			"protection": {
-				"title": "Underage Protection",
-				"content": "{siteName} strictly prohibits underage gambling. We use advanced age verification systems and actively monitor for underage activity. Parents can use parental control software to restrict access to gambling sites."
+		"mission": {
+			"title": "Our Mission",
+			"content": "Responsible gambling is at the heart of everything we do. {siteName} is committed to protecting players, empowering informed decisions, and creating a safe environment for every spin, bet, and game.",
+			"beliefs": {
+				"0": "Gaming should enhance your life—not disrupt it.",
+				"1": "Transparency, fairness, and support create trust.",
+				"2": "Asking for help is a sign of strength, not weakness."
 			}
+		},
+		"understanding": {
+			"title": "Understanding Responsible Gambling",
+			"paragraph1": "Responsible gambling means playing for fun, with time and budget limits that fit your lifestyle.",
+			"paragraph2": "Recognizing risks early protects both your finances and your well-being.",
+			"tips": {
+				"0": "Treat gaming as entertainment, not income.",
+				"1": "Set a budget before you play and stick to it.",
+				"2": "Decide how long you'll play and set a timer.",
+				"3": "Never chase losses—take a break instead.",
+				"4": "Balance gaming with hobbies, work, and relationships.",
+				"5": "Withdraw winnings regularly to lock in success."
+			}
+		},
+		"selfCheck": {
+			"title": "Personal Self-Check",
+			"intro": "Ask yourself these questions to monitor your habits:",
+			"questions": {
+				"0": "Do I spend more money or time on gaming than I planned?",
+				"1": "Am I gambling to cope with stress, boredom, or other emotions?",
+				"2": "Have friends or family expressed concern about my gaming?",
+				"3": "Do I feel irritated when I try to cut down?",
+				"4": "Am I chasing losses in hopes of getting even?",
+				"5": "Have I borrowed or sold items to continue gambling?"
+			},
+			"warning": "If you answered ‘yes’ to any question, consider taking a break and using the support resources below."
+		},
+		"tools": {
+			"title": "Tools We Provide",
+			"intro": "Control your experience with proactive tools available in your {siteName} account panel.",
+			"selfExclusion": {
+				"title": "Self-Exclusion & Time-Outs",
+				"description": "Suspend access to your account instantly for a chosen period or permanently if you need a longer break.",
+				"contact": "Activate via your profile or contact support@hyperbetz.games for immediate assistance."
+			},
+			"coolingOff": {
+				"title": "Cooling-Off Periods",
+				"description": "Step away temporarily while we block logins and wagers for the duration you select.",
+				"periods": {
+					"0": "24 hours for a quick reset",
+					"1": "7 days to regroup and refocus",
+					"2": "30 days for extended downtime"
+				},
+				"note": "Your remaining balance stays secure. You can rejoin automatically once the timer ends."
+			},
+			"depositAwareness": {
+				"title": "Deposit & Loss Awareness",
+				"description": "Track every deposit and wager in real time and set spending alerts that notify you before habits become unhealthy."
+			}
+		},
+		"underagePrevention": {
+			"title": "Preventing Underage Gambling",
+			"paragraph1": "{siteName} enforces strict age controls. We do not allow players under 18 (or local legal age) to access any games.",
+			"tipsTitle": "Safety tips for parents and guardians:",
+			"tips": {
+				"0": "Keep devices and wallets secured with strong passwords.",
+				"1": "Install parental control or blocking software on shared devices.",
+				"2": "Monitor in-app purchases and crypto transfers.",
+				"3": "Educate teens about the risks of gambling and crypto use.",
+				"4": "Contact us immediately if you suspect an underage account."
+			},
+			"warning": "We close any accounts confirmed to belong to minors and may withhold funds as required by law."
+		},
+		"helpSupport": {
+			"title": "Global Help & Support",
+			"intro": "Support is always available. These independent organizations provide confidential guidance in multiple languages:",
+			"organizations": {
+				"0": {
+					"name": "Gamblers Anonymous",
+					"description": "Worldwide peer-support meetings helping individuals recover from gambling addiction.",
+					"url": "https://www.gamblersanonymous.org"
+				},
+				"1": {
+					"name": "Gambling Therapy",
+					"description": "Offers live chat, forums, and multilingual resources for players and families.",
+					"url": "https://www.gamblingtherapy.org"
+				},
+				"2": {
+					"name": "BeGambleAware",
+					"description": "Provides UK-focused support, self-help tools, and a 24/7 helpline.",
+					"url": "https://www.begambleaware.org"
+				},
+				"3": {
+					"name": "National Council on Problem Gambling",
+					"description": "US-based organization with helplines, text support, and local referrals.",
+					"url": "https://www.ncpgambling.org"
+				},
+				"4": {
+					"name": "QuitGamble.com",
+					"description": "An online recovery community offering courses, support groups, and personal action plans.",
+					"url": "https://www.quitgamble.com"
+				}
+			}
+		},
+		"principles": {
+			"title": "Responsible Gaming Principles",
+			"items": {
+				"0": {
+					"title": "Transparency",
+					"description": "Clear information about odds, RTP, and rules so you understand every wager."
+				},
+				"1": {
+					"title": "Player Control",
+					"description": "Flexible limits and self-service tools empower you to manage play."
+				},
+				"2": {
+					"title": "Secure Environment",
+					"description": "Advanced monitoring detects fraud, botting, and risky behavior in real time."
+				},
+				"3": {
+					"title": "Fair Play",
+					"description": "All games are RNG-certified and independently audited for fairness."
+				},
+				"4": {
+					"title": "Supportive Culture",
+					"description": "Expert agents offer non-judgmental guidance whenever you need support."
+				}
+			}
+		},
+		"playSmart": {
+			"title": "Play Smart Reminders",
+			"intro": "Keep these healthy-play reminders in mind every time you log in:",
+			"reminders": {
+				"0": "Set a time limit and respect it.",
+				"1": "Only gamble with funds you can afford to lose.",
+				"2": "Take frequent breaks to reset your focus.",
+				"3": "Avoid gambling when tired, stressed, or impaired.",
+				"4": "Celebrate wins responsibly and walk away smiling."
+			}
+		},
+		"finalMessage": {
+			"paragraph1": "Responsible gambling keeps the fun alive.",
+			"paragraph2": "Lean on our tools, seek support early, and remember that taking a break is always an option.",
+			"contact": "Need help from {siteName}? Email support@hyperbetz.games any time."
 		}
 	},
 	"faqs": {
