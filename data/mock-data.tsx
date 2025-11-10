@@ -121,7 +121,7 @@ export const mockInfoCards: InfoCardData[] = [
 		description:
 			"Enjoy Hyperbetz Originals and other casino games from top providers.",
 		linkText: "Go to Casino",
-		href: "/games?category=LIVE+CASINO",
+		href: "/providers/live-casino",
 		// backgroundImage: "/assets/banners/hero/casino.png", // Example PNG image
 		backgroundImage: "/assets/banners/hero/casino_gif.gif", // Example PNG image
 	},
@@ -134,7 +134,7 @@ export const mockInfoCards: InfoCardData[] = [
 		description:
 			"Spin the reels and hit massive jackpots with our premium slot collection.",
 		linkText: "Go to Slots",
-		href: "/games?category=SLOT",
+		href: "/providers/slot",
 		// backgroundImage: "/assets/banners/hero/slot.png", // Example PNG image
 		backgroundImage: "/assets/banners/hero/slot_gif.gif", // Example PNG image
 	},
@@ -146,7 +146,7 @@ export const mockInfoCards: InfoCardData[] = [
 		description:
 			"Bet on your favorite teams and sports events with competitive odds.",
 		linkText: "Go to Sports",
-		href: "/games?category=SPORTSBOOK",
+		href: "/games/sbo",
 		// backgroundImage: "/assets/banners/hero/sport.png", // Example PNG image
 		backgroundImage: "/assets/banners/hero/sports_gif.gif", // Example PNG image
 	},

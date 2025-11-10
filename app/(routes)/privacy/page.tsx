@@ -39,9 +39,9 @@ export default function PrivacyPage() {
 			<SectionCard
 				title={t("privacy.sections.dataCollection.title")}
 				icon={Database}
+				intro={t("privacy.sections.dataCollection.intro")}
+				outro={t("privacy.sections.dataCollection.securityData.note")}
 			>
-				<p>{t("privacy.sections.dataCollection.intro")}</p>
-
 				<ListSection
 					title={t(
 						"privacy.sections.dataCollection.accountData.title"
@@ -126,7 +126,11 @@ export default function PrivacyPage() {
 			</SectionCard>
 
 			{/* 3. Why We Collect Data */}
-			<SectionCard title={t("privacy.sections.purposes.title")}>
+			<SectionCard
+				title={t("privacy.sections.purposes.title")}
+				intro={t("privacy.sections.purposes.intro")}
+				outro={t("privacy.sections.purposes.outro")}
+			>
 				<ListSection
 					items={[
 						{
@@ -157,12 +161,6 @@ export default function PrivacyPage() {
 							title: t("privacy.sections.purposes.items.4.title"),
 							content: t(
 								"privacy.sections.purposes.items.4.description"
-							),
-						},
-						{
-							title: t("privacy.sections.purposes.items.5.title"),
-							content: t(
-								"privacy.sections.purposes.items.5.description"
 							),
 						},
 					]}
@@ -196,8 +194,12 @@ export default function PrivacyPage() {
 			</SectionCard>
 
 			{/* 5. Data Sharing */}
-			<SectionCard title={t("privacy.sections.dataSharing.title")}>
-				<p>{t("privacy.sections.dataSharing.intro")}</p>
+			<SectionCard
+				title={t("privacy.sections.dataSharing.title")}
+				intro={t("privacy.sections.dataSharing.intro")}
+				outro={t("privacy.sections.dataSharing.noSelling")}
+				classNames={{ outro: "font-medium" }}
+			>
 				<ListSection
 					items={[
 						{
@@ -211,17 +213,16 @@ export default function PrivacyPage() {
 						},
 					]}
 				/>
-				<p className="font-medium">
-					{t("privacy.sections.dataSharing.noSelling")}
-				</p>
 			</SectionCard>
 
 			{/* 6. Security Measures */}
 			<SectionCard
 				title={t("privacy.sections.security.title")}
+				intro={t("privacy.sections.security.intro")}
+				outro={t("privacy.sections.security.warning")}
+				classNames={{ outro: "font-medium text-foreground" }}
 				icon={Shield}
 			>
-				<p>{t("privacy.sections.security.intro")}</p>
 				<ListSection
 					items={[
 						{
@@ -238,9 +239,6 @@ export default function PrivacyPage() {
 						},
 					]}
 				/>
-				<p className="font-medium text-foreground">
-					{t("privacy.sections.security.warning")}
-				</p>
 			</SectionCard>
 
 			{/* 7. Cookies & Tracking */}

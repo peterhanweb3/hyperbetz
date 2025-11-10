@@ -5,21 +5,32 @@
 
 import { ReactNode } from "react";
 import { LucideIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface SectionCardProps {
 	title?: string;
+	intro?: string;
+	outro?: string;
 	icon?: LucideIcon;
 	children: ReactNode;
 	variant?: "default" | "primary" | "warning";
 	className?: string;
+	classNames?: {
+		intro?: string;
+		outro?: string;
+		title?: string;
+	};
 }
 
 export function SectionCard({
 	title,
+	intro,
+	outro,
 	icon: Icon,
 	children,
 	variant = "default",
 	className = "",
+	classNames,
 }: SectionCardProps) {
 	const variantClasses = {
 		default: "border-border bg-card",
@@ -39,13 +50,38 @@ export function SectionCard({
 						</div>
 					)}
 					{title && (
-						<h2 className="text-xl font-semibold text-foreground">
+						<h2
+							className={cn(
+								"text-xl font-semibold text-foreground",
+								classNames?.title
+							)}
+						>
 							{title}
 						</h2>
 					)}
 				</div>
 			)}
+			{intro && (
+				<p
+					className={cn(
+						"mb-4 text-muted-foreground",
+						classNames?.intro
+					)}
+				>
+					{intro}
+				</p>
+			)}
 			<div className="space-y-4 text-muted-foreground">{children}</div>
+			{outro && (
+				<p
+					className={cn(
+						"mt-4 text-muted-foreground",
+						classNames?.outro
+					)}
+				>
+					{outro}
+				</p>
+			)}
 		</div>
 	);
 }

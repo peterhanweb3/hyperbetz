@@ -6,17 +6,15 @@ import {
 } from "@/lib/seo/schema-generator";
 
 export const metadata: Metadata = generateSEOMetadata({
-	title: "Responsible Gambling - HyperBetz",
+	title: "Responsible Gambling | HyperBetz.games – Play Smart, Stay Safe",
 	description:
-		"HyperBetz promotes responsible gambling. Learn about our tools, resources, and commitment to player protection and safe gaming.",
+		"Learn about responsible gambling at HyperBetz.games. Stay in control, play responsibly, and get support through global help organizations.",
 	keywords: [
-		"responsible gambling",
-		"player protection",
-		"gambling awareness",
-		"self-exclusion",
-		"deposit limits",
-		"gaming addiction",
-		"safe gambling",
+		"HyperBetz Responsible Gambling",
+		"HyperBetz play safe",
+		"crypto casino responsible gaming",
+		"gambling help",
+		"HyperBetz self exclusion",
 	],
 	path: "/responsible-gambling",
 	pageType: "responsibleGambling",
@@ -25,10 +23,10 @@ export const metadata: Metadata = generateSEOMetadata({
 	schemas: [
 		generateOrganizationSchema(),
 		generateWebPageSchema({
-			title: "Responsible Gambling - HyperBetz",
+			title: "Responsible Gambling at HyperBetz.games",
 			url: "https://hyperbetz.games/responsible-gambling",
 			description:
-				"HyperBetz Responsible Gambling - Tools and resources for safe gaming.",
+				"HyperBetz.games promotes responsible crypto gaming. Learn to play safely, control habits, and access global gambling support organizations.",
 		}),
 	],
 });

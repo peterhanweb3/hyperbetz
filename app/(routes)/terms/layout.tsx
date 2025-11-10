@@ -6,16 +6,15 @@ import {
 } from "@/lib/seo/schema-generator";
 
 export const metadata: Metadata = generateSEOMetadata({
-	title: "Terms & Conditions - HyperBetz",
+	title: "Terms & Conditions | HyperBetz.games – Crypto Casino Rules",
 	description:
-		"Read HyperBetz terms and conditions. Understand your rights, responsibilities, and our rules for using the crypto-casino platform.",
+		"Read HyperBetz.games Terms & Conditions. Learn about wallet login (Dynamic.xyz), crypto deposits, withdrawals, fair play, and responsible gaming policies.",
 	keywords: [
-		"terms and conditions",
-		"user agreement",
-		"terms of service",
-		"legal terms",
-		"casino rules",
-		"user responsibilities",
+		"HyperBetz Terms and Conditions",
+		"HyperBetz crypto casino rules",
+		"Dynamic.xyz wallet login",
+		"HyperBetz withdrawal policy",
+		"HyperBetz fair play",
 	],
 	path: "/terms",
 	pageType: "terms",
