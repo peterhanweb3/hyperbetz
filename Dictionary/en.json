@@ -1533,6 +1533,14 @@
 				}
 			}
 		},
+		"seoContent": {
+			"title": "{siteName}",
+			"paragraph1": "Online gaming has exploded in popularity, offering an exhilarating experience like never before! As we step into 2025, the gaming world is brimming with endless possibilities, featuring thousands of games that cater to every taste and style.",
+			"paragraph2": "Whether you're a fan of thrilling slots, strategic card games, or immersive live dealer experiences, there's something here for everyone. Our platform is all about delivering fresh, innovative, and exciting content that keeps players on the edge of their seats.",
+			"paragraph3": "We make it easy and secure to jump in and play with a variety of payment options. Get ready to dive into a world of adventure and big wins, where the fun never stops and the rewards are endless. Join us and be part of a gaming revolution that promises non-stop excitement!",
+			"showMore": "Show more",
+			"showLess": "Show less"
+		},
 		"copyright": "© {year} {siteName}. All rights reserved.",
 		"followUs": "Follow us:",
 		"disclaimer": {
