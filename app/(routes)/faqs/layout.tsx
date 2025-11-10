@@ -6,18 +6,16 @@ import {
 } from "@/lib/seo/schema-generator";
 
 export const metadata: Metadata = generateSEOMetadata({
-	title: "Frequently Asked Questions (FAQs) - HyperBetz",
+	title: "FAQs | HyperBetz.games – Crypto Casino Help & Support",
 	description:
-		"Find answers to common questions about HyperBetz crypto-casino. Learn about deposits, withdrawals, games, bonuses, and more.",
+		"Find answers to common HyperBetz.games questions. Learn about wallet login, deposits, withdrawals, fair play, and blockchain transparency.",
 	keywords: [
-		"FAQs",
-		"frequently asked questions",
-		"help",
-		"support",
-		"crypto casino FAQ",
-		"how to play",
-		"withdrawals",
-		"deposits",
+		"HyperBetz FAQ",
+		"HyperBetz crypto casino help",
+		"wallet login guide",
+		"crypto deposit",
+		"crypto withdrawal",
+		"provably fair games",
 	],
 	path: "/faqs",
 	pageType: "faqs",
@@ -26,10 +24,10 @@ export const metadata: Metadata = generateSEOMetadata({
 	schemas: [
 		generateOrganizationSchema(),
 		generateWebPageSchema({
-			title: "FAQs - HyperBetz",
+			title: "FAQs – HyperBetz Crypto Casino Help Center",
 			url: "https://hyperbetz.games/faqs",
 			description:
-				"Frequently Asked Questions about HyperBetz crypto-casino platform.",
+				"Explore FAQs at HyperBetz.games. Learn how to connect your wallet, deposit crypto, withdraw winnings, and play provably fair blockchain games.",
 		}),
 	],
 });

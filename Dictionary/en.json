@@ -1730,39 +1730,39 @@
 		}
 	},
 	"responsibleGambling": {
-		"title": "Responsible Gambling – HyperBetz",
+		"title": "Responsible Gambling – HyperBetz.games",
 		"subtitle": "Play Smart, Stay Safe, Stay in Control",
 		"lastUpdated": "Last Updated: January 2025",
 		"intro": {
-			"title": "Description",
-			"paragraph1": "At HyperBetz, we are committed to ensuring that gaming remains a safe, enjoyable, and responsible form of entertainment. We encourage our community to play smart, stay in control, and treat gambling as a leisure activity — not as a source of income or financial recovery.",
+			"title": "🎯 Responsible Gambling – HyperBetz.games",
+			"paragraph1": "At HyperBetz.games, we are committed to ensuring that gaming remains a safe, enjoyable, and responsible form of entertainment. We encourage our community to play smart, stay in control, and treat gambling as a leisure activity — not as a source of income or financial recovery.",
 			"paragraph2": "We believe in gambling as entertainment, not a way to earn money. Our mission is to help players make informed decisions and to prevent gambling from becoming a problem.",
 			"paragraph3": "We strictly prohibit all individuals under the age of 18 (or the minimum legal gambling age in their jurisdiction) from accessing or using our platform."
 		},
 		"mission": {
-			"title": "Our Mission",
+			"title": "⚖️ Our Mission",
 			"content": "HyperBetz promotes responsible gaming by offering an environment that is transparent, secure, and community-driven. Our mission is to help players make informed decisions and to prevent gambling from becoming a problem.",
 			"beliefs": [
-				"Gambling as entertainment, not a way to earn money",
-				"Promoting self-awareness and moderation",
-				"Providing support tools and resources to prevent risky behavior"
+				"Gambling as entertainment, not a way to earn money.",
+				"Promoting self-awareness and moderation.",
+				"Providing support tools and resources to prevent risky behavior."
 			]
 		},
 		"understanding": {
-			"title": "Understanding Responsible Gambling",
+			"title": "🧠 Understanding Responsible Gambling",
 			"paragraph1": "Online gambling is more accessible than ever — but that also means it's easier to lose track of time, balance, or motivation. Responsible gambling means knowing your limits, staying informed, and maintaining control over your play.",
 			"paragraph2": "To keep your experience fun and safe, remember:",
 			"tips": [
-				"Play for fun, not profit",
-				"Don't chase losses — take breaks when needed",
-				"Set personal limits for spending and time",
-				"Never gamble if you're stressed, tired, or upset",
-				"Avoid gambling with money intended for other expenses",
-				"If gambling stops being fun, it's time to step back"
+				"Play for fun, not profit.",
+				"Don't chase losses — take breaks when needed.",
+				"Set personal limits for spending and time.",
+				"Never gamble if you're stressed, tired, or upset.",
+				"Avoid gambling with money intended for other expenses.",
+				"If gambling stops being fun, it's time to step back."
 			]
 		},
 		"selfCheck": {
-			"title": "Self-Check: Are You Gambling Responsibly?",
+			"title": "🧩 Self-Check: Are You Gambling Responsibly?",
 			"intro": "Ask yourself these questions honestly:",
 			"questions": [
 				"Do you ever gamble longer than intended?",
@@ -1775,12 +1775,12 @@
 			"warning": "If you answered \"yes\" to several of these, you may need to review your gambling habits and seek assistance."
 		},
 		"tools": {
-			"title": "What {asdkfl} Offers to Help You Stay in Control",
+			"title": "🛡️ What HyperBetz Offers to Help You Stay in Control",
 			"intro": "We want all players to enjoy gambling safely and responsibly. Our platform includes several tools and resources designed to help you manage your gameplay.",
 			"selfExclusion": {
 				"title": "🔹 Self-Exclusion",
 				"description": "You can request a temporary or permanent self-exclusion from your account. During this period, your access will be restricted, and you won't receive promotional materials.",
-				"contact": "To initiate self-exclusion, contact hyperbetz.games — our team will assist you confidentially."
+				"contact": "To initiate self-exclusion, contact support@hyperbetz.games — our team will assist you confidentially."
 			},
 			"coolingOff": {
 				"title": "🔹 Cooling-Off Periods",
@@ -1794,20 +1794,20 @@
 			}
 		},
 		"underagePrevention": {
-			"title": "Underage Gambling Prevention",
+			"title": "👶 Underage Gambling Prevention",
 			"paragraph1": "Gambling by anyone under 18 is strictly prohibited. We take underage gambling seriously and actively discourage it.",
 			"tipsTitle": "Tips for Parents and Guardians:",
 			"tips": [
-				"Use passwords or lock access on devices",
-				"Avoid storing wallet credentials or recovery phrases on shared devices",
-				"Log out of HyperBetz when leaving your device unattended",
-				"Use content filters like NetNanny or GamBlock to restrict access",
-				"Regularly monitor children's online activities"
+				"Use passwords or lock access on devices.",
+				"Avoid storing wallet credentials or recovery phrases on shared devices.",
+				"Log out of HyperBetz when leaving your device unattended.",
+				"Use content filters like NetNanny or GamBlock to restrict access.",
+				"Regularly monitor children's online activities."
 			],
 			"warning": "If underage gambling is detected, the account will be immediately closed and any winnings forfeited."
 		},
 		"helpSupport": {
-			"title": "Help and Support",
+			"title": "❤️ Help and Support",
 			"intro": "If you ever feel gambling is affecting your mental, emotional, or financial health, you are not alone. Below are trusted global organizations that provide free and confidential help:",
 			"organizations": {
 				"0": {
@@ -1840,27 +1840,27 @@
 		},
 		"principles": {
 			"title": "⚙️ Responsible Gaming Principles at HyperBetz",
-			"intro": "At HyperBetz, we uphold these core principles:",
+			"intro": "At HyperBetz.games, we uphold these core principles:",
 			"items": {
 				"0": {
 					"title": "Transparency",
-					"description": "Every game and outcome is provably fair and blockchain-verified"
+					"description": "Every game and outcome is provably fair and blockchain-verified."
 				},
 				"1": {
 					"title": "Security",
-					"description": "All sessions are protected through Dynamic.xyz wallet login — no passwords or KYC needed"
+					"description": "All sessions are protected through Dynamic.xyz wallet login — no passwords or KYC needed."
 				},
 				"2": {
 					"title": "Autonomy",
-					"description": "You control your gameplay; you can disconnect anytime"
+					"description": "You control your gameplay; you can disconnect anytime."
 				},
 				"3": {
 					"title": "Education",
-					"description": "We promote awareness and help players understand risks"
+					"description": "We promote awareness and help players understand risks."
 				},
 				"4": {
 					"title": "Community Support",
-					"description": "Our support team is available 24/7 to guide you toward healthy gaming habits"
+					"description": "Our support team is available 24/7 to guide you toward healthy gaming habits."
 				}
 			}
 		},
@@ -1868,36 +1868,37 @@
 			"title": "🎮 Remember — Play Smart",
 			"intro": "Gambling should always be fun, social, and balanced. Keep these key reminders in mind:",
 			"reminders": [
-				"Set a time limit before you start",
-				"Never chase losses or play under emotional stress",
-				"Treat winnings as a bonus, not income",
-				"Keep gambling separate from your work and relationships",
-				"Stop playing when the fun stops"
+				"Set a time limit before you start.",
+				"Never chase losses or play under emotional stress.",
+				"Treat winnings as a bonus, not income.",
+				"Keep gambling separate from your work and relationships.",
+				"Stop playing when the fun stops."
 			]
 		},
 		"finalMessage": {
-			"paragraph1": "At HyperBetz, your well-being is our top priority.",
+			"paragraph1": "At HyperBetz.games, your well-being is our top priority.",
 			"paragraph2": "We encourage every player to make conscious, informed choices and enjoy a safe gaming experience.",
-			"contact": "If you need advice, assistance, or self-exclusion support, contact us at 📧 hyperbetz.games"
+			"contact": "If you need advice, assistance, or self-exclusion support, contact us at 📧 support@hyperbetz.games"
 		},
 		"manageSettingsButton": "Manage Responsible Gaming Settings",
 		"seo": {
-			"metaTitle": "Responsible Gambling | HyperBetz – Play Smart, Stay Safe",
-			"metaDescription": "Learn about responsible gambling at HyperBetz. Stay in control, play responsibly, and get support through global help organizations.",
+			"metaTitle": "Responsible Gambling | HyperBetz.games – Play Smart, Stay Safe",
+			"metaDescription": "Learn about responsible gambling at HyperBetz.games. Stay in control, play responsibly, and get support through global help organizations.",
 			"keywords": "HyperBetz Responsible Gambling, HyperBetz play safe, crypto casino responsible gaming, gambling help, HyperBetz self exclusion",
-			"ogTitle": "Responsible Gambling | HyperBetz – Play Smart, Stay Safe",
-			"ogDescription": "HyperBetz promotes responsible crypto gaming. Learn to play safely, control habits, and access global gambling support organizations."
+			"h1": "Responsible Gambling at HyperBetz.games",
+			"ogTitle": "Responsible Gambling | HyperBetz.games – Play Smart, Stay Safe",
+			"ogDescription": "HyperBetz.games promotes responsible crypto gaming. Learn to play safely, control habits, and access global gambling support organizations."
 		}
 	},
 	"faqs": {
-		"title": "FAQs – HyperBetz",
-		"introTitle": "Frequently Asked Questions",
+		"title": "FAQs – HyperBetz.games",
+		"introTitle": "❓ FAQs – HyperBetz.games",
 		"subtitle": "Crypto Casino Help & Support Center",
 		"lastUpdated": "Last Updated: January 2025",
-		"intro": "Welcome to the HyperBetz FAQ Center, where you'll find quick answers to the most common questions about our crypto gaming platform. If you can't find your answer here, our 24/7 support team is always ready to help.",
+		"intro": "Welcome to the HyperBetz.games FAQ Center, where you'll find quick answers to the most common questions about our crypto gaming platform. If you can't find your answer here, our 24/7 support team is always ready to help at support@hyperbetz.games.",
 		"blockchainTransparency": {
 			"title": "🧩 Blockchain Transparency",
-			"paragraph1": "HyperBetz is powered by Ethereum-based smart contracts, ensuring that every bet, transaction, and reward is recorded transparently on-chain.",
+			"paragraph1": "HyperBetz.games is powered by Ethereum-based smart contracts, ensuring that every bet, transaction, and reward is recorded transparently on-chain.",
 			"paragraph2": "All data and game logic are immutable and verifiable, ensuring true fairness and auditability. You can track all platform transactions through public explorers such as:",
 			"explorersTitle": "Public Block Explorers:",
 			"guarantee": "This guarantees that no manipulation or bias can occur — ever."
@@ -1908,7 +1909,7 @@
 				"items": {
 					"0": {
 						"question": "1. Can I register on your website?",
-						"answer": "Yes — registration is open to anyone 18 years or older (or the legal age of majority in your jurisdiction). You must also ensure that online gaming is legal where you reside.|At HyperBetz, you don't need traditional sign-ups or passwords. Simply connect your wallet via Dynamic.xyz to start playing instantly.|👉 For legal and compliance details, please review our Terms & Conditions.|Reminder: Gambling can be addictive. Please play responsibly and know your limits."
+						"answer": "Yes — registration is open to anyone 18 years or older (or the legal age of majority in your jurisdiction). You must also ensure that online gaming is legal where you reside.|At HyperBetz.games, you don't need traditional sign-ups or passwords. Simply connect your wallet via Dynamic.xyz to start playing instantly.|👉 For legal and compliance details, please review our Terms & Conditions.|Reminder: Gambling can be addictive. Please play responsibly and know your limits."
 					},
 					"1": {
 						"question": "2. What if I forget my login details?",
@@ -1945,7 +1946,7 @@
 					},
 					"4": {
 						"question": "9. What if my transaction is delayed?",
-						"answer": "Blockchain transactions sometimes take longer due to network congestion or low gas fees. If your deposit or withdrawal hasn't arrived:|• Check your TXID on the blockchain explorer.|• Confirm that you used the correct network and address.|• If it's been more than an hour, contact hyperbetz.games with your TXID and wallet details."
+						"answer": "Blockchain transactions sometimes take longer due to network congestion or low gas fees. If your deposit or withdrawal hasn't arrived:|• Check your TXID on the blockchain explorer.|• Confirm that you used the correct network and address.|• If it's been more than an hour, contact support@hyperbetz.games with your TXID and wallet details."
 					}
 				}
 			},
@@ -1958,7 +1959,7 @@
 					},
 					"1": {
 						"question": "11. What should I do if a game freezes or crashes?",
-						"answer": "If your game stops responding:|• Refresh the page.|• Clear your browser cache and reconnect your wallet.|• If the issue persists, contact our support team via Live Chat or hyperbetz.games.|Our team will assist you in restoring your game session or balance if affected."
+						"answer": "If your game stops responding:|• Refresh the page.|• Clear your browser cache and reconnect your wallet.|• If the issue persists, contact our support team via Live Chat or support@hyperbetz.games.|Our team will assist you in restoring your game session or balance if affected."
 					},
 					"2": {
 						"question": "12. Can I use more than one wallet or account?",
@@ -1966,7 +1967,7 @@
 					},
 					"3": {
 						"question": "13. Is my personal data safe?",
-						"answer": "Yes. At HyperBetz, we do not collect personal data — your identity remains secure. Access is managed through Dynamic.xyz, ensuring full privacy and ownership of your digital identity.|No passwords, emails, or sensitive documents are stored by us. Your wallet = your identity."
+						"answer": "Yes. At HyperBetz.games, we do not collect personal data — your identity remains secure. Access is managed through Dynamic.xyz, ensuring full privacy and ownership of your digital identity.|No passwords, emails, or sensitive documents are stored by us. Your wallet = your identity."
 					}
 				}
 			},
@@ -1975,7 +1976,7 @@
 				"items": {
 					"0": {
 						"question": "14. Does HyperBetz support responsible gambling?",
-						"answer": "Absolutely. We encourage every player to enjoy gaming in moderation. You can request a self-exclusion period or take a cooling-off break anytime by contacting hyperbetz.games.|If you feel gambling is affecting your life, visit our Responsible Gambling page for resources and help organizations."
+						"answer": "Absolutely. We encourage every player to enjoy gaming in moderation. You can request a self-exclusion period or take a cooling-off break anytime by contacting support@hyperbetz.games.|If you feel gambling is affecting your life, visit our Responsible Gambling page for resources and help organizations."
 					},
 					"1": {
 						"question": "15. What should I do if I suspect a gambling problem?",
@@ -1991,12 +1992,12 @@
 			"liveChat": "Live Chat (available inside your wallet-connected dashboard)"
 		},
 		"seo": {
-			"metaTitle": "FAQs | HyperBetz – Crypto Casino Help & Support",
-			"metaDescription": "Find answers to common HyperBetz questions. Learn about wallet login, deposits, withdrawals, fair play, and blockchain transparency.",
+			"metaTitle": "FAQs | HyperBetz.games – Crypto Casino Help & Support",
+			"metaDescription": "Find answers to common HyperBetz.games questions. Learn about wallet login, deposits, withdrawals, fair play, and blockchain transparency.",
 			"keywords": "HyperBetz FAQ, HyperBetz crypto casino help, wallet login guide, crypto deposit, crypto withdrawal, provably fair games",
 			"h1": "FAQs – HyperBetz Crypto Casino Help Center",
-			"ogTitle": "FAQs | HyperBetz – Crypto Casino Help Center",
-			"ogDescription": "Explore FAQs at HyperBetz. Learn how to connect your wallet, deposit crypto, withdraw winnings, and play provably fair blockchain games."
+			"ogTitle": "FAQs | HyperBetz.games – Crypto Casino Help Center",
+			"ogDescription": "Explore FAQs at HyperBetz.games. Learn how to connect your wallet, deposit crypto, withdraw winnings, and play provably fair blockchain games."
 		}
 	}
 }
