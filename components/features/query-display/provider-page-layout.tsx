@@ -22,7 +22,9 @@ interface ProviderPageLayoutProps {
 	categoryFromPath?: string;
 }
 
-export const ProviderPageLayout = ({ categoryFromPath }: ProviderPageLayoutProps = {}) => {
+export const ProviderPageLayout = ({
+	categoryFromPath,
+}: ProviderPageLayoutProps = {}) => {
 	// --- 1. HOOKS & STATE SETUP ---
 	const router = useRouter();
 	const pathname = usePathname();
@@ -31,8 +33,8 @@ export const ProviderPageLayout = ({ categoryFromPath }: ProviderPageLayoutProps
 	// Get category from URL params (support both path params and query params)
 	// Path params take precedence for SEO-friendly URLs
 	const categoryFilter = categoryFromPath
-		? decodeURIComponent(categoryFromPath).replace(/-/g, ' ').toUpperCase()
-		: (searchParams.get("category") ?? "");
+		? decodeURIComponent(categoryFromPath).replace(/-/g, " ").toUpperCase()
+		: searchParams.get("category") ?? "";
 
 	// Get raw data using our efficient selectors based on category filter
 	const allProviders = useAppStore(selectAllProviders);
@@ -64,7 +66,7 @@ export const ProviderPageLayout = ({ categoryFromPath }: ProviderPageLayoutProps
 	// --- 2. URL SYNCHRONIZATION LOGIC ---
 	useEffect(() => {
 		const params = new URLSearchParams();
-		if (categoryFilter) params.set("category", categoryFilter);
+		// if (categoryFilter) params.set("category", categoryFilter);
 		// if (searchQuery) params.set("q", searchQuery);
 		if (sortBy && sortBy !== "a-z") params.set("sort", sortBy);
 
@@ -72,8 +74,8 @@ export const ProviderPageLayout = ({ categoryFromPath }: ProviderPageLayoutProps
 		router.replace(`${pathname}?${params.toString()}`);
 	}, [
 		// searchQuery,
+		// categoryFilter,
 		sortBy,
-		categoryFilter,
 		pathname,
 		router,
 	]);
@@ -117,6 +119,7 @@ export const ProviderPageLayout = ({ categoryFromPath }: ProviderPageLayoutProps
 					title: tProviders("categories.liveCasino.title"),
 				};
 			case "SPORT BOOK":
+			case "SPORTS":
 			case "SPORTSBOOK":
 				return {
 					title: tProviders("categories.sports.title"),

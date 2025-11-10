@@ -1,5 +1,9 @@
 import { AppStateCreator } from "@/store/store";
-import { SearchParams } from "next/dist/server/request/search-params";
+import {
+	slugToProviderName,
+	slugToCategory,
+} from "@/lib/utils/provider-slug-mapping";
+// import { SearchParams } from "next/dist/server/request/search-params";
 
 // --- STATE DEFINITION ---
 
@@ -216,9 +220,6 @@ export const createQuerySlice: AppStateCreator<QuerySlice> = (set, get) => ({
 	 */
 	syncStateFromPath: (slug: string[]) => {
 		set((state) => {
-			// Import the slug mapping utilities
-			const { slugToProviderName, slugToCategory } = require('@/lib/utils/provider-slug-mapping');
-
 			// Create a fresh state
 			const newState: QuerySliceState = {
 				...initialState,
@@ -228,36 +229,55 @@ export const createQuerySlice: AppStateCreator<QuerySlice> = (set, get) => ({
 
 			if (slug.length === 1) {
 				// Only provider name: /games/pg-soft or /games/pragmatic-play
-				const providerResult = slugToProviderName(decodeURIComponent(slug[0]));
+				const providerResult = slugToProviderName(
+					decodeURIComponent(slug[0])
+				);
 				if (providerResult) {
 					// Handle both single provider and array of providers
-					newState.activeFilters['provider_name'] = Array.isArray(providerResult)
+					newState.activeFilters["provider_name"] = Array.isArray(
+						providerResult
+					)
 						? providerResult
 						: [providerResult];
 				}
 			} else if (slug.length === 2) {
 				// Provider + category: /games/pg-soft/slot or /games/pragmatic-play/slot
-				const providerResult = slugToProviderName(decodeURIComponent(slug[0]));
+				const providerResult = slugToProviderName(
+					decodeURIComponent(slug[0])
+				);
 				const category = slugToCategory(decodeURIComponent(slug[1]));
 
 				if (providerResult) {
 					// When category is specified, intelligently select the right provider variant
 					if (Array.isArray(providerResult)) {
 						// For Pragmatic Play: choose Live or Slot based on category
-						if (category === "LIVE CASINO" && providerResult.includes("Pragmatic Live")) {
-							newState.activeFilters['provider_name'] = ["Pragmatic Live"];
-						} else if (category === "SLOT" && providerResult.includes("Pragmatic Slot")) {
-							newState.activeFilters['provider_name'] = ["Pragmatic Slot"];
+						if (
+							category === "LIVE CASINO" &&
+							providerResult.includes("Pragmatic Live")
+						) {
+							newState.activeFilters["provider_name"] = [
+								"Pragmatic Live",
+							];
+						} else if (
+							category === "SLOT" &&
+							providerResult.includes("Pragmatic Slot")
+						) {
+							newState.activeFilters["provider_name"] = [
+								"Pragmatic Slot",
+							];
 						} else {
 							// Use all variants if category doesn't match specific provider
-							newState.activeFilters['provider_name'] = providerResult;
+							newState.activeFilters["provider_name"] =
+								providerResult;
 						}
 					} else {
-						newState.activeFilters['provider_name'] = [providerResult];
+						newState.activeFilters["provider_name"] = [
+							providerResult,
+						];
 					}
 				}
 				if (category) {
-					newState.activeFilters['category'] = [category];
+					newState.activeFilters["category"] = [category];
 				}
 			}
 

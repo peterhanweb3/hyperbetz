@@ -20,7 +20,11 @@ export const ProviderListCard = ({
 	const tProviders = useTranslations("providers");
 
 	// Convert provider name to SEO-friendly URL format (lowercase with hyphens)
-	const seoProviderName = name.toLowerCase().trim().replace(/\s+/g, '-').replace(/\./g, '');
+	const seoProviderName = name
+		.toLowerCase()
+		.trim()
+		.replace(/\s+/g, "-")
+		.replace(/\./g, "");
 	const providerUrl = `/games/${seoProviderName}`;
 
 	return (
@@ -61,7 +65,7 @@ export const ProviderListCard = ({
 							{name}
 						</h3>
 						<div className="text-sm text-muted-foreground">
-							{gameCount} {tGames("count", { count: gameCount })}
+							{tGames("count", { count: gameCount })}
 						</div>
 					</div>
 

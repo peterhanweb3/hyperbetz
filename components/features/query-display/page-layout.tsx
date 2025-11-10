@@ -6,7 +6,10 @@ import { ViewMode } from "./grid-list-toggle";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { JsonLd } from "@/components/seo/json-ld";
-
+import {
+	slugToProviderDisplayName,
+	slugToCategory,
+} from "@/lib/utils/provider-slug-mapping";
 // --- Import the UI "Lego Bricks" ---
 // import { QuerySearchInput } from "./query-search-input";
 import { QuerySortDropdown } from "./query-sort-dropdown";
@@ -70,7 +73,10 @@ export const QueryPageLayout = () => {
 	// Generate breadcrumb from pathname
 	const getBreadcrumbItems = useMemo(() => {
 		const pathSegments = pathname.split("/").filter(Boolean);
-		const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://hyperbetz.games';
+		const baseUrl =
+			typeof window !== "undefined"
+				? window.location.origin
+				: "https://hyperbetz.games";
 
 		const breadcrumbItems = [
 			{
@@ -89,16 +95,18 @@ export const QueryPageLayout = () => {
 				// Smart breadcrumb labeling
 				let label = segment;
 
-				// Check if this is a provider or category slug FIRST (before translation)
-				// eslint-disable-next-line @typescript-eslint/no-require-imports
-				const { slugToProviderDisplayName, slugToCategory } = require('@/lib/utils/provider-slug-mapping');
-
 				// Try provider name lookup first
 				const providerDisplayName = slugToProviderDisplayName(segment);
 				// Only use provider name if it's different from the generic transformation
-				const isProviderSlug = providerDisplayName !== segment.split('-').map(word =>
-					word.charAt(0).toUpperCase() + word.slice(1)
-				).join(' ');
+				const isProviderSlug =
+					providerDisplayName !==
+					segment
+						.split("-")
+						.map(
+							(word) =>
+								word.charAt(0).toUpperCase() + word.slice(1)
+						)
+						.join(" ");
 
 				if (isProviderSlug) {
 					label = providerDisplayName;
@@ -108,27 +116,29 @@ export const QueryPageLayout = () => {
 					if (category && category !== segment.toUpperCase()) {
 						// Use friendly category names
 						const categoryMap: Record<string, string> = {
-							'SLOT': 'Slots',
-							'LIVE CASINO': 'Live Casino',
-							'SPORT BOOK': 'Sports',
-							'SPORTSBOOK': 'Sports',
-							'RNG': 'Table Games',
+							SLOT: "Slots",
+							"LIVE CASINO": "Live Casino",
+							"SPORT BOOK": "Sports",
+							SPORTSBOOK: "Sports",
+							RNG: "Table Games",
 						};
 						label = categoryMap[category] || category;
 					} else {
 						// Try translation from navigation
 						const translationKey = segment.toLowerCase();
 						// const translatedNav = tNavigation(translationKey);
-						
+
 						// remove - if any in translation key dont use tNavigation cause providers are dynamic
-						const translatedNav = translationKey.replace(/-/g, ' ');
+						const translatedNav = translationKey.replace(/-/g, " ");
 
 						if (translatedNav !== translationKey) {
 							// Found a navigation translation
 							label = translatedNav;
 						} else {
 							// Fallback to capitalized segment
-							label = segment.charAt(0).toUpperCase() + segment.slice(1).toLowerCase();
+							label =
+								segment.charAt(0).toUpperCase() +
+								segment.slice(1).toLowerCase();
 						}
 					}
 				}
@@ -145,16 +155,19 @@ export const QueryPageLayout = () => {
 	}, [pathname, tNavigation]);
 
 	// Generate Breadcrumb schema for SEO
-	const breadcrumbSchema = useMemo(() => ({
-		"@context": "https://schema.org",
-		"@type": "BreadcrumbList",
-		"itemListElement": getBreadcrumbItems.items.map((item, index) => ({
-			"@type": "ListItem",
-			"position": index + 1,
-			"name": item.label,
-			"item": `${getBreadcrumbItems.baseUrl}${item.href}`
-		}))
-	}), [getBreadcrumbItems]);
+	const breadcrumbSchema = useMemo(
+		() => ({
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			itemListElement: getBreadcrumbItems.items.map((item, index) => ({
+				"@type": "ListItem",
+				position: index + 1,
+				name: item.label,
+				item: `${getBreadcrumbItems.baseUrl}${item.href}`,
+			})),
+		}),
+		[getBreadcrumbItems]
+	);
 
 	// Dynamic header configuration based on category
 	const getHeaderConfig = useMemo(() => {
