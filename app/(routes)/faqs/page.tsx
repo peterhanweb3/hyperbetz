@@ -3,7 +3,8 @@
 import { PageHeader, SectionCard } from "@/components/legal";
 import { HelpCircle, ChevronDown } from "lucide-react";
 import { useT } from "@/hooks/useI18n";
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { JsonLd } from "@/components/seo/json-ld";
 
 interface FAQItemProps {
 	question: string;
@@ -85,8 +86,29 @@ export default function FAQsPage() {
 		},
 	];
 
+	// Generate FAQ schema for SEO (rich snippets in Google)
+	const faqSchema = useMemo(() => {
+		const allQuestions = faqCategories.flatMap(category =>
+			category.items.map(item => ({
+				"@type": "Question",
+				"name": item.question,
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": item.answer
+				}
+			}))
+		);
+
+		return {
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			"mainEntity": allQuestions
+		};
+	}, [faqCategories]);
+
 	return (
 		<div className="container mx-auto space-y-8 consistent-padding-x consistent-padding-y">
+			<JsonLd data={faqSchema} />
 			<PageHeader title={t("faqs.title")} subtitle={t("faqs.subtitle")} />
 
 			<SectionCard variant="primary" icon={HelpCircle}>

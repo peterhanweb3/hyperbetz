@@ -3,6 +3,7 @@
 import { useAppStore } from "@/store/store";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback } from "react";
+import { providerNameToSlug, categoryToSlug } from "@/lib/utils/provider-slug-mapping";
 
 /**
  * The primary controller hook for managing the query state.
@@ -23,27 +24,55 @@ export const useQueryManager = () => {
   );
 
   const handleToggleFilter = (filterType: string, value: string) => {
-    // 1. Immediately update the Zustand store.
-    toggleFilter(filterType, value);
+    // DON'T call toggleFilter() here - calculate new state and just navigate
+    // The syncStateFromPath will handle updating the store
+    // toggleFilter(filterType, value); // REMOVED - causes race condition
 
-    // 2. Construct the new URLSearchParams based on the *next* state.
+    // 1. Calculate the next state of filters
     const newActiveFilters = { ...activeFilters };
     const currentValues = newActiveFilters[filterType] || [];
-    if (currentValues.includes(value)) {
+    const isRemoving = currentValues.includes(value);
+
+    if (isRemoving) {
       newActiveFilters[filterType] = currentValues.filter(v => v !== value);
+      if (newActiveFilters[filterType].length === 0) {
+        delete newActiveFilters[filterType];
+      }
     } else {
       newActiveFilters[filterType] = [...currentValues, value];
     }
 
+    // 2. Navigate to the correct path based on active filters
+    const providers = newActiveFilters['provider_name'] || [];
+    const categories = newActiveFilters['category'] || [];
+
+    let newPath = '/games';
+
+    // Build path based on filters
+    if (providers.length > 0) {
+      const providerSlug = providerNameToSlug(providers[0]); // Use first provider
+      newPath = `/games/${providerSlug}`;
+
+      if (categories.length > 0) {
+        const categorySlug = categoryToSlug(categories[0]); // Use first category
+        newPath = `/games/${providerSlug}/${categorySlug}`;
+      }
+    } else if (categories.length > 0) {
+      // Category only (no provider)
+      const categorySlug = categoryToSlug(categories[0]);
+      newPath = `/providers/${categorySlug}`;
+    }
+
+    // Add query params for search and sort if needed
     const params = new URLSearchParams();
     if (searchQuery) params.set("q", searchQuery);
     if (sortBy !== "a-z") params.set("sort", sortBy);
-    Object.entries(newActiveFilters).forEach(([key, values]) => {
-      values.forEach(v => params.append(key, v));
-    });
 
-    // 3. Instantly update the URL.
-    updateUrl(params);
+    const queryString = params.toString();
+    const finalPath = queryString ? `${newPath}?${queryString}` : newPath;
+
+    // 3. Navigate to new path - the page will sync state from URL/path
+    router.push(finalPath, { scroll: false });
   };
 
   // --- THE FIX IS HERE: FULLY IMPLEMENTED handleSort ---
@@ -76,11 +105,18 @@ export const useQueryManager = () => {
   };
 
   const handleClearFilters = () => {
-    clearAllFilters();
+    // DON'T call clearAllFilters() here - let the navigation handle it
+    // clearAllFilters(); // REMOVED - causes race condition
+
+    // Navigate to /games - the syncStateFromUrl will clear filters automatically
     const params = new URLSearchParams();
     if (searchQuery) params.set("q", searchQuery);
     if (sortBy !== "a-z") params.set("sort", sortBy);
-    updateUrl(params);
+
+    const queryString = params.toString();
+    const finalPath = queryString ? `/games?${queryString}` : '/games';
+
+    router.push(finalPath, { scroll: false });
   };
 
   // Return only the handlers the UI needs.

@@ -7,7 +7,7 @@
 		"viewAll": "Voir tout"
 	},
 	"app": {
-		"name": "HyperBetz"
+		"name": "{siteName}"
 	},
 	"header": {
 		"toggleSidebar": "Basculer la barre latérale",
@@ -830,7 +830,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Retrait réussi !",
-			"successMessage": "🎉 Je viens de retirer {withdrawAmount} {tokenSymbol} de HyperBetz ! 🚀 Rejoignez la série de victoires sur {shareUrl}",
+			"successMessage": "🎉 Je viens de retirer {withdrawAmount} {tokenSymbol} de {siteName} ! 🚀 Rejoignez la série de victoires sur {shareUrl}",
 			"withdrawnAmount": "Montant retiré",
 			"shareText": "Partager",
 			"subText": "🚀 REJOIGNEZ LA SÉRIE DE VICTOIRES ! 🚀",
@@ -845,7 +845,7 @@
 			"screenshotFailed": "Échec de la capture d'écran. Veuillez réessayer ou utiliser un autre navigateur.",
 			"shareFailed": "Échec du partage. Veuillez réessayer.",
 			"status": "Terminé",
-			"userName": "Joueur HyperBetz"
+			"userName": "Joueur {siteName}"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "Retrait confirmé !",
@@ -1003,7 +1003,7 @@
 			"casino": {
 				"title": "Casino",
 				"badge": "590+ JEUX",
-				"desc": "Profitez des originaux de HyperBetz et d'autres jeux de casino des meilleurs fournisseurs.",
+				"desc": "Profitez des originaux de {siteName} et d'autres jeux de casino des meilleurs fournisseurs.",
 				"link": "Aller au casino"
 			},
 			"slots": {
@@ -1276,7 +1276,7 @@
 			"statusCompleted": "Terminé",
 			"statusOnChain": "Dans la chaîne",
 			"claimAmount": "Montant de la demande",
-			"logoAlt": "Logo HyperBetz",
+			"logoAlt": "Logo {siteName}",
 			"backgroundAlt": "Arrière-plan du succès de la",
 			"creatingMagic": "Création de magie...",
 			"downloadShare": "Télécharger et partager",

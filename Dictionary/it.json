@@ -7,7 +7,7 @@
 		"viewAll": "Mostra tutto"
 	},
 	"app": {
-		"name": "HyperBetz"
+		"name": "{siteName}"
 	},
 	"header": {
 		"toggleSidebar": "Mostra/Nascondi barra laterale",
@@ -830,7 +830,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Prelievo riuscito!",
-			"successMessage": "🎉 Ho appena prelevato {withdrawAmount} {tokenSymbol} da HyperBetz! 🚀 Unisciti alla serie di vittorie su {shareUrl}",
+			"successMessage": "🎉 Ho appena prelevato {withdrawAmount} {tokenSymbol} da {siteName}! 🚀 Unisciti alla serie di vittorie su {shareUrl}",
 			"withdrawnAmount": "Importo prelevato",
 			"shareText": "Condividi",
 			"subText": "🚀 UNISCITI ALLA SERIE DI VITTORIE! 🚀",
@@ -845,7 +845,7 @@
 			"screenshotFailed": "Cattura dello schermo non riuscita. Riprova o utilizza un altro browser.",
 			"shareFailed": "Condivisione fallita. Per favore riprova.",
 			"status": "Completato",
-			"userName": "Giocatore HyperBetz"
+			"userName": "Giocatore {siteName}"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "Prelievo confermato!",
@@ -1003,7 +1003,7 @@
 			"casino": {
 				"title": "Casinò",
 				"badge": "590+ GIOCHI",
-				"desc": "Goditi gli originali di HyperBetz e altri giochi da casinò dei migliori fornitori.",
+				"desc": "Goditi gli originali di {siteName} e altri giochi da casinò dei migliori fornitori.",
 				"link": "Vai al casinò"
 			},
 			"slots": {
@@ -1276,7 +1276,7 @@
 			"statusCompleted": "Completato",
 			"statusOnChain": "On-chain",
 			"claimAmount": "Importo richiesto",
-			"logoAlt": "Logo HyperBetz",
+			"logoAlt": "Logo {siteName}",
 			"backgroundAlt": "Background del successo del reclamo",
 			"creatingMagic": "Creazione della magia in corso...",
 			"downloadShare": "Scarica e condividi",

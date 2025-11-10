@@ -7,7 +7,7 @@
 		"viewAll": "모두 보기"
 	},
 	"app": {
-		"name": "HyperBetz"
+		"name": "{siteName}"
 	},
 	"header": {
 		"toggleSidebar": "사이드바 전환",
@@ -830,7 +830,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "출금 성공!",
-			"successMessage": "🎉 HyperBetz에서 방금 {withdrawAmount} {tokenSymbol}을(를) 출금했습니다! 🚀 {shareUrl}에서 승리의 행진에 동참하세요",
+			"successMessage": "🎉 {siteName}에서 방금 {withdrawAmount} {tokenSymbol}을(를) 출금했습니다! 🚀 {shareUrl}에서 승리의 행진에 동참하세요",
 			"withdrawnAmount": "출금된 금액",
 			"shareText": "공유하기",
 			"subText": "🚀 승리의 행진에 동참하세요! 🚀",
@@ -845,7 +845,7 @@
 			"screenshotFailed": "스크린샷에 실패했습니다. 다시 시도하거나 다른 브라우저를 사용하세요.",
 			"shareFailed": "공유 실패. 다시 시도해 주세요.",
 			"status": "완료됨",
-			"userName": "HyperBetz 플레이어"
+			"userName": "{siteName} 플레이어"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "출금이 확인되었습니다!",
@@ -1003,7 +1003,7 @@
 			"casino": {
 				"title": "카지노",
 				"badge": "590+ 게임",
-				"desc": "HyperBetz 오리지널 및 상위 제공업체의 다른 카지노 게임을 즐기세요.",
+				"desc": "{siteName} 오리지널 및 상위 제공업체의 다른 카지노 게임을 즐기세요.",
 				"link": "카지노로 가기"
 			},
 			"slots": {
@@ -1276,7 +1276,7 @@
 			"statusCompleted": "완료",
 			"statusOnChain": "온체인",
 			"claimAmount": "소 가",
-			"logoAlt": "HyperBetz 로고",
+			"logoAlt": "{siteName} 로고",
 			"backgroundAlt": "청구 성공 배경",
 			"creatingMagic": "매직 생성 중...",
 			"downloadShare": "다운로드 및 공유",

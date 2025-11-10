@@ -8,8 +8,6 @@ import {
 } from "@/components/legal";
 import { Shield, Heart, AlertCircle, Phone, Settings } from "lucide-react";
 import { useT } from "@/hooks/useI18n";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 export default function ResponsibleGamblingPage() {
 	const t = useT();
@@ -162,15 +160,6 @@ export default function ResponsibleGamblingPage() {
 					</p>
 				</ContentSection>
 			</SectionCard>
-
-			<div className="flex justify-center">
-				<Link href="/profile">
-					<Button size="lg" className="gap-2">
-						<Settings className="size-4" />
-						{t("responsibleGambling.manageSettingsButton")}
-					</Button>
-				</Link>
-			</div>
 		</div>
 	);
 }

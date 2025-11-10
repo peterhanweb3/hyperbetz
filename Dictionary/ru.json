@@ -7,7 +7,7 @@
 		"viewAll": "Посмотреть все"
 	},
 	"app": {
-		"name": "HyperBetz"
+		"name": "{siteName}"
 	},
 	"header": {
 		"toggleSidebar": "Переключить боковую панель",
@@ -830,7 +830,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Вывод успешен!",
-			"successMessage": "🎉 Только что вывел(а) {withdrawAmount} {tokenSymbol} из HyperBetz! 🚀 Присоединяйтесь к победной серии на {shareUrl}",
+			"successMessage": "🎉 Только что вывел(а) {withdrawAmount} {tokenSymbol} из {siteName}! 🚀 Присоединяйтесь к победной серии на {shareUrl}",
 			"withdrawnAmount": "Выведенная сумма",
 			"shareText": "Поделиться",
 			"subText": "🚀 ПРИСОЕДИНЯЙТЕСЬ К ПОБЕДНОЙ СЕРИИ! 🚀",
@@ -845,7 +845,7 @@
 			"screenshotFailed": "Не удалось сделать снимок экрана. Пожалуйста, попробуйте еще раз или используйте другой браузер.",
 			"shareFailed": "Не удалось поделиться. Пожалуйста, попробуйте еще раз.",
 			"status": "Завершено",
-			"userName": "Игрок HyperBetz"
+			"userName": "Игрок {siteName}"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "Вывод подтвержден!",
@@ -1003,7 +1003,7 @@
 			"casino": {
 				"title": "Казино",
 				"badge": "590+ ИГР",
-				"desc": "Наслаждайтесь оригинальными играми HyperBetz и другими играми казино от лучших провайдеров.",
+				"desc": "Наслаждайтесь оригинальными играми {siteName} и другими играми казино от лучших провайдеров.",
 				"link": "Перейти в казино"
 			},
 			"slots": {
@@ -1276,7 +1276,7 @@
 			"statusCompleted": "Завершено",
 			"statusOnChain": "Ончейн",
 			"claimAmount": "Сумма претензии",
-			"logoAlt": "Логотип HyperBetz",
+			"logoAlt": "Логотип {siteName}",
 			"backgroundAlt": "Справочная информация об успехе заявки",
 			"creatingMagic": "Создание магии...",
 			"downloadShare": "Скачать или поделиться",

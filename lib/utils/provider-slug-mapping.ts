@@ -76,20 +76,49 @@ export const PROVIDER_NAME_TO_SLUG: Record<string, string> = Object.entries(
 }, {} as Record<string, string>);
 
 /**
- * Convert a URL slug to the actual provider name
+ * Convert a URL slug to the actual provider name(s)
+ * Returns array for providers that have multiple variants (e.g., Pragmatic Play)
  */
-export function slugToProviderName(slug: string): ProviderName | null {
+export function slugToProviderName(slug: string): ProviderName | ProviderName[] | null {
 	const normalized = slug.toLowerCase().trim();
+
+	// Special case: "pragmatic-play" should return both Pragmatic providers
+	if (normalized === "pragmatic-play") {
+		return ["Pragmatic Live", "Pragmatic Slot"];
+	}
+
 	return PROVIDER_SLUG_MAP[normalized] || null;
+}
+
+/**
+ * Get display name for breadcrumbs/UI (returns a single string)
+ */
+export function slugToProviderDisplayName(slug: string): string {
+	const normalized = slug.toLowerCase().trim();
+
+	// Special case: show "Pragmatic Play" as the brand name
+	if (normalized === "pragmatic-play") {
+		return "Pragmatic Play";
+	}
+
+	const providerName = PROVIDER_SLUG_MAP[normalized];
+	return providerName || slug.split('-').map(word =>
+		word.charAt(0).toUpperCase() + word.slice(1)
+	).join(' ');
 }
 
 /**
  * Convert a provider name to a URL slug
  */
 export function providerNameToSlug(providerName: string): string {
+	// Special handling for Pragmatic Play (brand name)
+	if (providerName === "Pragmatic Play") {
+		return "pragmatic-play";
+	}
+
 	return (
 		PROVIDER_NAME_TO_SLUG[providerName] ||
-		providerName.toLowerCase().replace(/\s+/g, "-")
+		providerName.toLowerCase().replace(/\s+/g, "-").replace(/\./g, '')
 	);
 }
 

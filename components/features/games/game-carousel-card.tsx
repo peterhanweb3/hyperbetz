@@ -20,23 +20,25 @@ interface GameCardProps {
 /**
  * Enhanced play button with smooth animations
  */
-const PlayButton = () => {
+const PlayButton = ({ gameName }: { gameName: string }) => {
 	return (
 		<div className="absolute bottom-[15%] left-1/2 -translate-x-1/2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
 			{/* Pulsating shadow layers */}
-			<div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75"></div>
-			<div className="absolute inset-0 rounded-full bg-primary animate-pulse opacity-50 scale-110"></div>
-			<div className="absolute inset-0 rounded-full bg-primary/30 animate-ping opacity-25 scale-125 animation-delay-150"></div>
+			<div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75" aria-hidden="true"></div>
+			<div className="absolute inset-0 rounded-full bg-primary animate-pulse opacity-50 scale-110" aria-hidden="true"></div>
+			<div className="absolute inset-0 rounded-full bg-primary/30 animate-ping opacity-25 scale-125 animation-delay-150" aria-hidden="true"></div>
 
 			{/* Main button */}
 			<Button
 				variant="default"
 				size="icon"
+				aria-label={`Play ${gameName}`}
 				className="h-12 w-12 cursor-pointer rounded-full relative z-10 shadow-lg shadow-primary/50"
 			>
 				<FontAwesomeIcon
 					icon={faPlay}
 					className="h-6 w-6 fill-current"
+					aria-hidden="true"
 				/>
 			</Button>
 		</div>
@@ -91,17 +93,26 @@ const GameCardComponent = ({
 	};
 
 	return (
-		<div className="group w-full h-full">
+		<article className="group w-full h-full" aria-label={`${game.game_name} game card`}>
 			{/* Modern card container with fixed height */}
 			<div
+				role="button"
+				tabIndex={0}
+				aria-label={`Play ${game.game_name}${showProvider ? ` by ${game.provider_name}` : ''}`}
 				className="relative overflow-hidden rounded-2xl bg-card shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer border border-border h-full flex flex-col"
 				onClick={handleCardClick}
+				onKeyDown={(e) => {
+					if (e.key === 'Enter' || e.key === ' ') {
+						e.preventDefault();
+						handleCardClick(e as unknown as React.MouseEvent<HTMLDivElement>);
+					}
+				}}
 			>
 				{/* Image container with modern aspect ratio */}
 				<div className="relative aspect-[5/4.5] overflow-hidden flex-shrink-0">
 					<Image
 						src={`${game.full_url_game_image}`}
-						alt={game.game_name}
+						alt={`${game.game_name} - ${game.provider_name} ${game.category} game`}
 						fill
 						className="transition-transform duration-700 ease-out group-hover:scale-110"
 						sizes="(max-width: 640px) 45vw, (max-width: 1024px) 25vw, (max-width: 1280px) 18vw, 240px"
@@ -110,10 +121,10 @@ const GameCardComponent = ({
 					/>
 
 					{/* Gradient overlay for better text readability */}
-					<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+					<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden="true" />
 
 					{/* Play button overlay */}
-					<PlayButton />
+					<PlayButton gameName={game.game_name} />
 
 					{/* LIVE indicator */}
 					{game.category == "LIVE CASINO" && (
@@ -123,9 +134,11 @@ const GameCardComponent = ({
 									? "bottom-3"
 									: "top-3"
 							} left-3`}
+							role="status"
+							aria-label="Live casino game"
 						>
 							<div className="bg-red-600 rounded-lg px-2 py-1 shadow-lg flex items-center gap-1.5">
-								<div className="w-1.5 h-1.5 bg-white rounded-full animate-play-pulse-alt " />
+								<div className="w-1.5 h-1.5 bg-white rounded-full animate-play-pulse-alt " aria-hidden="true" />
 								<span className="text-xs font-semibold text-white uppercase tracking-wider">
 									LIVE
 								</span>
@@ -154,7 +167,8 @@ const GameCardComponent = ({
 					)}
 					{/* Favorite toggle */}
 					<button
-						aria-label={fav ? "Remove favorite" : "Add favorite"}
+						aria-label={fav ? `Remove ${game.game_name} from favorites` : `Add ${game.game_name} to favorites`}
+						aria-pressed={fav}
 						onClick={toggleFavorite}
 						className={`absolute cursor-pointer top-3 right-3 rounded-full px-2 py-1 transition-colors border ${
 							fav
@@ -163,9 +177,9 @@ const GameCardComponent = ({
 						}`}
 					>
 						{fav ? (
-							<FontAwesomeIcon icon={heartAlt} />
+							<FontAwesomeIcon icon={heartAlt} aria-hidden="true" />
 						) : (
-							<FontAwesomeIcon icon={faHeart} />
+							<FontAwesomeIcon icon={faHeart} aria-hidden="true" />
 						)}
 					</button>
 				</div>
@@ -203,7 +217,7 @@ const GameCardComponent = ({
 					</div>
 				</div>
 			</div>
-		</div>
+		</article>
 	);
 };
 

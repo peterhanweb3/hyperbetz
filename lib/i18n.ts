@@ -81,11 +81,19 @@ export function isRtlLocale(locale: Locale): boolean {
 export async function getMessages(locale: Locale) {
 	try {
 		// Load from Dictionary folder
-		return (await import(`../Dictionary/${locale}.json`)).default;
+		const messages = (await import(`../Dictionary/${locale}.json`)).default;
+
+		// Interpolate site name in all translations
+		const { interpolateTranslations } = await import('./utils/site-config');
+		return interpolateTranslations(messages);
 	} catch {
 		console.warn(
 			`Failed to load messages for locale: ${locale}. Falling back to ${defaultLocale}`
 		);
-		return (await import(`../Dictionary/${defaultLocale}.json`)).default;
+		const messages = (await import(`../Dictionary/${defaultLocale}.json`)).default;
+
+		// Interpolate site name in fallback translations too
+		const { interpolateTranslations } = await import('./utils/site-config');
+		return interpolateTranslations(messages);
 	}
 }

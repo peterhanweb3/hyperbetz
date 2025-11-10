@@ -7,7 +7,7 @@
 		"viewAll": "ดูทั้งหมด"
 	},
 	"app": {
-		"name": "HyperBetz"
+		"name": "{siteName}"
 	},
 	"header": {
 		"toggleSidebar": "สลับแถบด้านข้าง",
@@ -830,7 +830,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "การถอนเงินสำเร็จ!",
-			"successMessage": "🎉 เพิ่งถอน {withdrawAmount} {tokenSymbol} จาก HyperBetz! 🚀 เข้าร่วมเส้นทางแห่งชัยชนะได้ที่ {shareUrl}",
+			"successMessage": "🎉 เพิ่งถอน {withdrawAmount} {tokenSymbol} จาก {siteName}! 🚀 เข้าร่วมเส้นทางแห่งชัยชนะได้ที่ {shareUrl}",
 			"withdrawnAmount": "จำนวนเงินที่ถอน",
 			"shareText": "แชร์",
 			"subText": "🚀 เข้าร่วมเส้นทางแห่งชัยชนะ! 🚀",
@@ -845,7 +845,7 @@
 			"screenshotFailed": "การจับภาพหน้าจอล้มเหลว กรุณาลองใหม่อีกครั้งหรือใช้เบราว์เซอร์อื่น",
 			"shareFailed": "การแชร์ล้มเหลว กรุณาลองใหม่อีกครั้ง",
 			"status": "เสร็จสมบูรณ์",
-			"userName": "ผู้เล่น HyperBetz"
+			"userName": "ผู้เล่น {siteName}"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "การถอนเงินได้รับการยืนยันแล้ว!",
@@ -1003,7 +1003,7 @@
 			"casino": {
 				"title": "คาสิโน",
 				"badge": "590+ เกม",
-				"desc": "สนุกกับเกมดั้งเดิมของ HyperBetz และเกมคาสิโนอื่นๆ จากผู้ให้บริการชั้นนำ",
+				"desc": "สนุกกับเกมดั้งเดิมของ {siteName} และเกมคาสิโนอื่นๆ จากผู้ให้บริการชั้นนำ",
 				"link": "ไปที่คาสิโน"
 			},
 			"slots": {
@@ -1276,7 +1276,7 @@
 			"statusCompleted": "ชำระเงินสำเร็จ",
 			"statusOnChain": "ออนเชน",
 			"claimAmount": "จำนวนการเคลม",
-			"logoAlt": "โลโก้ HyperBetz",
+			"logoAlt": "โลโก้ {siteName}",
 			"backgroundAlt": "อ้างสิทธิ์ภูมิหลังความสำเร็จ",
 			"creatingMagic": "กำลังสร้างเวทมนตร์...",
 			"downloadShare": "ดาวน์โหลดและแชร์",

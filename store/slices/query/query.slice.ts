@@ -212,6 +212,7 @@ export const createQuerySlice: AppStateCreator<QuerySlice> = (set, get) => ({
 	 * Supports patterns:
 	 * - [provider] = provider only
 	 * - [provider, category] = provider + category
+	 * Handles providers that have multiple variants (e.g., Pragmatic Play)
 	 */
 	syncStateFromPath: (slug: string[]) => {
 		set((state) => {
@@ -226,18 +227,34 @@ export const createQuerySlice: AppStateCreator<QuerySlice> = (set, get) => ({
 			};
 
 			if (slug.length === 1) {
-				// Only provider name: /games/pg-soft
-				const providerName = slugToProviderName(decodeURIComponent(slug[0]));
-				if (providerName) {
-					newState.activeFilters['provider_name'] = [providerName];
+				// Only provider name: /games/pg-soft or /games/pragmatic-play
+				const providerResult = slugToProviderName(decodeURIComponent(slug[0]));
+				if (providerResult) {
+					// Handle both single provider and array of providers
+					newState.activeFilters['provider_name'] = Array.isArray(providerResult)
+						? providerResult
+						: [providerResult];
 				}
 			} else if (slug.length === 2) {
-				// Provider + category: /games/pg-soft/slot
-				const providerName = slugToProviderName(decodeURIComponent(slug[0]));
+				// Provider + category: /games/pg-soft/slot or /games/pragmatic-play/slot
+				const providerResult = slugToProviderName(decodeURIComponent(slug[0]));
 				const category = slugToCategory(decodeURIComponent(slug[1]));
 
-				if (providerName) {
-					newState.activeFilters['provider_name'] = [providerName];
+				if (providerResult) {
+					// When category is specified, intelligently select the right provider variant
+					if (Array.isArray(providerResult)) {
+						// For Pragmatic Play: choose Live or Slot based on category
+						if (category === "LIVE CASINO" && providerResult.includes("Pragmatic Live")) {
+							newState.activeFilters['provider_name'] = ["Pragmatic Live"];
+						} else if (category === "SLOT" && providerResult.includes("Pragmatic Slot")) {
+							newState.activeFilters['provider_name'] = ["Pragmatic Slot"];
+						} else {
+							// Use all variants if category doesn't match specific provider
+							newState.activeFilters['provider_name'] = providerResult;
+						}
+					} else {
+						newState.activeFilters['provider_name'] = [providerResult];
+					}
 				}
 				if (category) {
 					newState.activeFilters['category'] = [category];

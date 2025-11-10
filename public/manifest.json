@@ -1,7 +1,7 @@
 {
-	"name": "Meme Win - Your Gateway to Fun and Rewards",
-	"short_name": "Meme Win",
-	"description": "Join Meme Win for an exciting gaming experience with amazing rewards!",
+	"name": "HyperBetz - Global Casino for Slots, Sports & Live Games",
+	"short_name": "HyperBetz",
+	"description": "Play online casino games, slots, live casino, and sports betting with crypto on HyperBetz. Win big with amazing rewards!",
 	"start_url": "/",
 	"display": "standalone",
 	"background_color": "#000000",
@@ -9,18 +9,18 @@
 	"orientation": "portrait-primary",
 	"icons": [
 		{
-			"src": "/assets/site/meme-win-logo.png",
+			"src": "/assets/site/Hyperbetz-logo.png",
 			"sizes": "192x192",
 			"type": "image/png",
 			"purpose": "any"
 		},
 		{
-			"src": "/assets/site/meme-win-logo.png",
+			"src": "/assets/site/Hyperbetz-logo.png",
 			"sizes": "512x512",
 			"type": "image/png",
 			"purpose": "any maskable"
 		}
 	],
-	"categories": ["gaming", "entertainment"],
+	"categories": ["gaming", "entertainment", "casino", "sports"],
 	"prefer_related_applications": false
 }

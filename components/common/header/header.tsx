@@ -126,25 +126,25 @@ export function PageHeader({ className }: { className?: string }) {
 				<DropdownMenuSeparator />
 				<DropdownMenuGroup>
 					<DropdownMenuItem onClick={() => router.push("/profile")}>
-						<FontAwesomeIcon icon={faUser} fontSize={20} />
+						<FontAwesomeIcon icon={faUser} fontSize={20} aria-hidden="true" />
 						<span>{tHeader("profile")}</span>
 					</DropdownMenuItem>
 					<DropdownMenuItem onClick={handleCashirClick}>
-						<FontAwesomeIcon icon={faWallet} fontSize={20} />
+						<FontAwesomeIcon icon={faWallet} fontSize={20} aria-hidden="true" />
 						<span>{tHeader("cashier")}</span>
 					</DropdownMenuItem>
 					<DropdownMenuItem
 						onClick={() => router.push("/history?section=bet")}
 					>
-						<FontAwesomeIcon icon={faChartLineUp} fontSize={20} />
+						<FontAwesomeIcon icon={faChartLineUp} fontSize={20} aria-hidden="true" />
 						<span>{tHeader("winLoss")}</span>
 					</DropdownMenuItem>
 					<DropdownMenuItem onClick={() => router.push("/affiliate")}>
-						<FontAwesomeIcon icon={faUsers} fontSize={20} />
+						<FontAwesomeIcon icon={faUsers} fontSize={20} aria-hidden="true" />
 						<span>{tHeader("affiliate")}</span>
 					</DropdownMenuItem>
 					<DropdownMenuItem onClick={() => router.push("/bonus")}>
-						<FontAwesomeIcon icon={faGift} fontSize={20} />
+						<FontAwesomeIcon icon={faGift} fontSize={20} aria-hidden="true" />
 						<span>{tHeader("turnoverBonus")}</span>
 					</DropdownMenuItem>
 				</DropdownMenuGroup>
@@ -173,12 +173,13 @@ export function PageHeader({ className }: { className?: string }) {
 							variant="outline"
 							size="icon"
 							onClick={toggleChat}
+							aria-label={`${tHeader("liveChat")}${messageCount > 0 ? ` - ${messageCount} unread messages` : ''}`}
 							className="relative md:hidden"
 						>
-							{/* <MessageCircle className="w-5 h-5" /> */}
 							<FontAwesomeIcon
 								icon={faComment}
 								className="w-5 h-5"
+								aria-hidden="true"
 							/>
 							{!isChatOpen && messageCount > 0 && (
 								<span className="absolute -top-1 -right-1 bg-primary text-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
@@ -194,10 +195,10 @@ export function PageHeader({ className }: { className?: string }) {
 							onClick={() => setSearchOpen(true)}
 							aria-label="Search"
 						>
-							{/* <Search className="w-4 h-4" /> */}
 							<FontAwesomeIcon
 								icon={faMagnifyingGlass}
 								className="w-4 h-4"
+								aria-hidden="true"
 							/>
 						</Button>
 					</DropdownMenuItem>
@@ -207,10 +208,10 @@ export function PageHeader({ className }: { className?: string }) {
 					onClick={handleLogout}
 					className="text-destructive"
 				>
-					{/* <LogOut className="mr-2 h-4 w-4" /> */}
 					<FontAwesomeIcon
 						icon={faRightFromBracket}
 						className="mr-2 w-5 h-5"
+						aria-hidden="true"
 					/>
 					<span>{tHeader("logout")}</span>
 				</DropdownMenuItem>
@@ -281,6 +282,7 @@ export function PageHeader({ className }: { className?: string }) {
 	);
 	return (
 		<header
+			role="banner"
 			className={cn(
 				"flex h-16 shrink-0 mx-auto bg-sidebar/90 backdrop-blur-lg sticky top-0 items-center lg:justify-between gap-2 border-b",
 				open
@@ -290,17 +292,17 @@ export function PageHeader({ className }: { className?: string }) {
 			)}
 		>
 			{/* Left Side: Brand Logo & Title */}
-			<div className="flex items-center gap-2 cursor-pointer">
+			<nav className="flex items-center gap-2 cursor-pointer" aria-label="Main navigation">
 				<Button
 					className="p-2"
 					variant={"outline"}
 					size="icon"
+					aria-label={tHeader("toggleSidebar")}
 					onClick={() => {
 						toggleSidebar();
 					}}
 				>
-					{/* <MenuSquare className="w-4 h-4" /> */}
-					<FontAwesomeIcon icon={faBars} className="w-6 h-6" />
+					<FontAwesomeIcon icon={faBars} className="w-6 h-6" aria-hidden="true" />
 					<span className="sr-only">{tHeader("toggleSidebar")}</span>
 				</Button>
 
@@ -313,8 +315,7 @@ export function PageHeader({ className }: { className?: string }) {
 						isLoggedIn ? tNavigation("lobby") : tNavigation("home")
 					}
 				>
-					{/* <Search className="w-4 h-4" /> */}
-					<FontAwesomeIcon icon={faHome} className="w-4 h-4" />
+					<FontAwesomeIcon icon={faHome} className="w-4 h-4" aria-hidden="true" />
 				</Button>
 				{!isLoggedIn && (
 					<Button
@@ -324,14 +325,14 @@ export function PageHeader({ className }: { className?: string }) {
 						onClick={() => setSearchOpen(true)}
 						aria-label="Search"
 					>
-						{/* <Search className="w-4 h-4" /> */}
 						<FontAwesomeIcon
 							icon={faMagnifyingGlass}
 							className="w-4 h-4"
+							aria-hidden="true"
 						/>
 					</Button>
 				)}
-			</div>
+			</nav>
 
 			<Button
 				className="flex lg:hidden "
@@ -342,14 +343,15 @@ export function PageHeader({ className }: { className?: string }) {
 					isLoggedIn ? tNavigation("lobby") : tNavigation("home")
 				}
 			>
-				{/* <Search className="w-4 h-4" /> */}
-				<FontAwesomeIcon icon={faHome} className="w-4 h-4" />
+				<FontAwesomeIcon icon={faHome} className="w-4 h-4" aria-hidden="true" />
 			</Button>
 
 			{/* Center: Global search (desktop only) */}
 			<div className="hidden xl:flex flex-1 max-w mr-6">
 				<Input
+					type="search"
 					placeholder={tHeader("searchPlaceholder")}
+					aria-label={tHeader("searchPlaceholder")}
 					className="w-full"
 					onKeyDown={(e) => {
 						if (e.key === "Enter") setSearchOpen(true);
@@ -391,7 +393,7 @@ export function PageHeader({ className }: { className?: string }) {
 							onClick={handleRefreshUserInfo}
 							disabled={!canRefresh || isRefreshing}
 							className="relative"
-							aria-label="Refresh user info"
+							aria-label={isRefreshing ? "Refreshing user info" : "Refresh user info"}
 						>
 							<FontAwesomeIcon
 								icon={faArrowsRotate}
@@ -399,6 +401,7 @@ export function PageHeader({ className }: { className?: string }) {
 									"w-4 h-4",
 									isRefreshing && "animate-spin"
 								)}
+								aria-hidden="true"
 							/>
 							<span className="sr-only">Refresh</span>
 						</Button>
@@ -406,6 +409,7 @@ export function PageHeader({ className }: { className?: string }) {
 						{/* Wallet Control - Single Button (merged) */}
 						<Button
 							onClick={() => openTransactionModal("walletInfo")}
+							aria-label={`Open wallet - Current balance: ${(user?.balance ?? 0).toFixed(2)} USD`}
 							className="flex items-center gap-1.5 rounded-full p-0 bg-transparent hover:bg-transparent shadow-none
 								focus-visible:ring-0 focus-visible:ring-offset-0"
 						>
@@ -414,14 +418,15 @@ export function PageHeader({ className }: { className?: string }) {
 								className="flex items-center gap-2 rounded-md px-3 md:px-3.5 py-1 md:py-1.5
 								bg-gradient-to-r from-primary to-[color-mix(in_oklab,theme(colors.primary)/100%,black_15%)]
 								text-foreground shadow-md hover:shadow-lg transition-shadow"
+								aria-hidden="true"
 							>
 								<span className="text-sm md:text-base font-semibold">
 									$ {(user?.balance ?? 0).toFixed(2)} USD
 								</span>
-								{/* <ChevronDown className="w-5 h-5 sm:block" /> */}
 								<FontAwesomeIcon
 									icon={faChevronDown}
 									className="w-5 h-5 sm:block"
+									aria-hidden="true"
 								/>
 							</span>
 						</Button>
@@ -439,14 +444,14 @@ export function PageHeader({ className }: { className?: string }) {
 						<Button
 							variant="outline"
 							size="icon"
-							aria-label="Language"
+							aria-label="Change language"
 							onClick={() => setLanguageModalOpen(true)}
 							className="flex lg:hidden"
 						>
-							{/* <Languages className="h-4 w-4" /> */}
 							<FontAwesomeIcon
 								icon={faGlobe}
 								className="w-5 h-5"
+								aria-hidden="true"
 							/>
 							<span className="sr-only">Language</span>
 						</Button>
@@ -469,12 +474,15 @@ export function PageHeader({ className }: { className?: string }) {
 						variant="outline"
 						size="icon"
 						onClick={toggleChat}
+						aria-label={`${tHeader("liveChat")}${messageCount > 0 ? ` - ${messageCount} unread messages` : ''}`}
 						className="relative hidden lg:flex"
 					>
-						{/* <MessageCircle className="w-5 h-5" /> */}
-						<FontAwesomeIcon icon={faComment} className="w-5 h-5" />
+						<FontAwesomeIcon icon={faComment} className="w-5 h-5" aria-hidden="true" />
 						{!isChatOpen && messageCount > 0 && (
-							<span className="absolute -top-1 -right-1 bg-primary text-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
+							<span
+								className="absolute -top-1 -right-1 bg-primary text-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center"
+								aria-label={`${messageCount} unread messages`}
+							>
 								{messageCount > 99 ? "99+" : messageCount}
 							</span>
 						)}
@@ -485,12 +493,11 @@ export function PageHeader({ className }: { className?: string }) {
 				<Button
 					variant="outline"
 					size="icon"
-					aria-label="Language"
+					aria-label="Change language"
 					onClick={() => setLanguageModalOpen(true)}
 					className="hidden lg:flex"
 				>
-					{/* <Languages className="h-4 w-4" /> */}
-					<FontAwesomeIcon icon={faGlobe} className="w-5 h-5" />
+					<FontAwesomeIcon icon={faGlobe} className="w-5 h-5" aria-hidden="true" />
 					<span className="sr-only">Language</span>
 				</Button>
 				{/* <ThemeToggle className="hidden lg:flex" /> */}

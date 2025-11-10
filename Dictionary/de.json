@@ -7,7 +7,7 @@
 		"viewAll": "Alle ansehen"
 	},
 	"app": {
-		"name": "HyperBetz"
+		"name": "{siteName}"
 	},
 	"header": {
 		"toggleSidebar": "Seitenleiste umschalten",
@@ -830,7 +830,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "Auszahlung erfolgreich!",
-			"successMessage": "🎉 Habe gerade {withdrawAmount} {tokenSymbol} von HyperBetz abgehoben! 🚀 Mach mit bei der Siegesserie auf {shareUrl}",
+			"successMessage": "🎉 Habe gerade {withdrawAmount} {tokenSymbol} von {siteName} abgehoben! 🚀 Mach mit bei der Siegesserie auf {shareUrl}",
 			"withdrawnAmount": "Abgehobener Betrag",
 			"shareText": "Teilen",
 			"subText": "🚀 MACH MIT BEI DER SIEGESSTRÄHNE! 🚀",
@@ -845,7 +845,7 @@
 			"screenshotFailed": "Screenshot fehlgeschlagen. Bitte versuchen Sie es erneut oder verwenden Sie einen anderen Browser.",
 			"shareFailed": "Teilen fehlgeschlagen. Bitte versuche es erneut.",
 			"status": "Abgeschlossen",
-			"userName": "HyperBetz-Spieler"
+			"userName": "{siteName}-Spieler"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "Auszahlung bestätigt!",
@@ -1003,7 +1003,7 @@
 			"casino": {
 				"title": "Kasino",
 				"badge": "590+ SPIELE",
-				"desc": "Genieße HyperBetz Originals und andere Casinospiele von Top-Anbietern.",
+				"desc": "Genieße {siteName} Originals und andere Casinospiele von Top-Anbietern.",
 				"link": "Zum Casino"
 			},
 			"slots": {
@@ -1276,7 +1276,7 @@
 			"statusCompleted": "Abgeschlossen",
 			"statusOnChain": "On-Chain",
 			"claimAmount": "Beanspruchter Betrag",
-			"logoAlt": "HyperBetz-Logo",
+			"logoAlt": "{siteName}-Logo",
 			"backgroundAlt": "Anspruchserfolgshintergrund",
 			"creatingMagic": "Magie wird erstellt...",
 			"downloadShare": "Herunterladen & Teilen",
@@ -1296,14 +1296,14 @@
 		}
 	},
 	"about": {
-		"title": "Über HyperBetz",
+		"title": "Über {siteName}",
 		"subtitle": "Eine globale Online-Gaming-Plattform, die Spieler mit hochwertigen Casino- und Wettspielen verbindet",
 		"stats": "[Objekt-Objekt],[Objekt-Objekt],[Objekt-Objekt],[Objekt-Objekt]",
 		"features": "[Objekt-Objekt],[Objekt-Objekt],[Objekt-Objekt],[Objekt-Objekt]",
 		"sections": {
 			"whoWeAre": {
 				"title": "Über uns",
-				"paragraph1": "HyperBetz ist eine globale Online-Gaming-Plattform, die Spieler mit Tausenden von hochwertigen Casino- und Wettspielen verbindet. Wir arbeiten mit den angesehensten Anbietern der Branche zusammen, um ein nahtloses Erlebnis auf jedem Gerät zu bieten.",
+				"paragraph1": "{siteName} ist eine globale Online-Gaming-Plattform, die Spieler mit Tausenden von hochwertigen Casino- und Wettspielen verbindet. Wir arbeiten mit den angesehensten Anbietern der Branche zusammen, um ein nahtloses Erlebnis auf jedem Gerät zu bieten.",
 				"paragraph2": "Jedes Feature, jede Drehung und jede ausgeteilte Karte wurde entwickelt, um Sie dem Nervenkitzel des echten Spiels näher zu bringen und gleichzeitig alles transparent und fair zu halten."
 			},
 			"whatMakesUsDifferent": {
@@ -1320,26 +1320,26 @@
 			},
 			"responsibleGaming": {
 				"title": "Verantwortungsvolles Spielen",
-				"description": "Wir glauben, dass Spielen immer verantwortungsbewusst und transparent sein sollte. Aus diesem Grund befolgt HyperBetz strenge internationale Glücksspielstandards und Altersrichtlinien.",
+				"description": "Wir glauben, dass Spielen immer verantwortungsbewusst und transparent sein sollte. Aus diesem Grund befolgt {siteName} strenge internationale Glücksspielstandards und Altersrichtlinien.",
 				"points": "[Objekt Objekt],[Objekt Objekt]"
 			},
 			"ourPromise": {
 				"title": "Unser Versprechen,",
-				"paragraph1": "Wir sind nicht hier, um eine weitere Casino-Website zu sein — wir sind hier, um einen neuen Standard für Online-Glücksspiele zu setzen. Wenn Sie auf HyperBetz spielen, spielen Sie auf einer Plattform, die auf Vertrauen, Innovation und echtem Wert basiert.",
+				"paragraph1": "Wir sind nicht hier, um eine weitere Casino-Website zu sein — wir sind hier, um einen neuen Standard für Online-Glücksspiele zu setzen. Wenn Sie auf {siteName} spielen, spielen Sie auf einer Plattform, die auf Vertrauen, Innovation und echtem Wert basiert.",
 				"paragraph2": "Jedes Update, jede Funktion und jede Partnerschaft, die wir hinzufügen, konzentriert sich auf ein Ziel: den Spielern das bestmögliche Spielerlebnis zu bieten."
 			},
 			"description": {
-				"title": "Über HyperBetz - Ihr erstklassiges Online-Gaming-Ziel",
+				"title": "Über {siteName} - Ihr erstklassiges Online-Gaming-Ziel",
 				"intro": {
-					"heading": "Willkommen bei HyperBetz",
-					"brand": "HyperBetz",
-					"paragraph1": "ist eine führende globale Online-Casino- und Wettplattform, die die Art und Weise, wie Spieler Online-Glücksspiele erleben, revolutioniert hat. Mit der Vision, die umfassendste, sicherste und unterhaltsamste Spieleplattform zu schaffen, hat sich HyperBetz schnell zum Anlaufpunkt für Spieler entwickelt, die Premium-Casinospiele, Live-Dealer-Erlebnisse, Sportwetten und vieles mehr suchen.",
-					"paragraph2": "Unsere Plattform kombiniert modernste Technologie mit einer umfangreichen Spielebibliothek und arbeitet mit den weltweit vertrauenswürdigsten Spieleanbietern zusammen, um ein unvergleichliches Unterhaltungserlebnis zu bieten. Egal, ob Sie ein erfahrener Spieler oder neu im Online-Gaming sind, HyperBetz bietet für jeden etwas.",
-					"paragraph3": "Wir bei HyperBetz glauben, dass Online-Gaming mehr sein sollte als nur Wetten zu platzieren - es sollte eine immersive, sichere und lohnende Erfahrung sein, bei der die Spieler an erster Stelle stehen. Diese Philosophie bestimmt alles, was wir tun, von unserer Spielauswahl bis hin zu unserem Kundensupport."
+					"heading": "Willkommen bei {siteName}",
+					"brand": "{siteName}",
+					"paragraph1": "ist eine führende globale Online-Casino- und Wettplattform, die die Art und Weise, wie Spieler Online-Glücksspiele erleben, revolutioniert hat. Mit der Vision, die umfassendste, sicherste und unterhaltsamste Spieleplattform zu schaffen, hat sich {siteName} schnell zum Anlaufpunkt für Spieler entwickelt, die Premium-Casinospiele, Live-Dealer-Erlebnisse, Sportwetten und vieles mehr suchen.",
+					"paragraph2": "Unsere Plattform kombiniert modernste Technologie mit einer umfangreichen Spielebibliothek und arbeitet mit den weltweit vertrauenswürdigsten Spieleanbietern zusammen, um ein unvergleichliches Unterhaltungserlebnis zu bieten. Egal, ob Sie ein erfahrener Spieler oder neu im Online-Gaming sind, {siteName} bietet für jeden etwas.",
+					"paragraph3": "Wir bei {siteName} glauben, dass Online-Gaming mehr sein sollte als nur Wetten zu platzieren - es sollte eine immersive, sichere und lohnende Erfahrung sein, bei der die Spieler an erster Stelle stehen. Diese Philosophie bestimmt alles, was wir tun, von unserer Spielauswahl bis hin zu unserem Kundensupport."
 				},
 				"games": {
 					"heading": "Massive Game Collection - Über 5.000 Premium-Titel",
-					"paragraph1": "HyperBetz verfügt über eine beeindruckende Bibliothek von",
+					"paragraph1": "{siteName} verfügt über eine beeindruckende Bibliothek von",
 					"count": "über 5.000 Premium-Spiele",
 					"paragraph2": "von den führenden Softwareanbietern der Branche. Unsere umfangreiche Sammlung stellt sicher, dass jeder Spielertyp sein perfektes Spiel findet, egal ob Sie klassische Spielautomaten, moderne Video-Slots, Tischspiele, Live-Casinos oder Sportwetten bevorzugen.",
 					"slots": {
@@ -1361,7 +1361,7 @@
 				},
 				"technology": {
 					"heading": "Blockchain-Technologie der nächsten Generation",
-					"paragraph1": "Was HyperBetz auszeichnet, ist unsere Implementierung von",
+					"paragraph1": "Was {siteName} auszeichnet, ist unsere Implementierung von",
 					"blockchain": "fortschrittliche Blockchain-Technologie",
 					"paragraph2": "die vollständige Transparenz, Sicherheit und Fairness bei jeder Transaktion und jedem Spielergebnis gewährleistet. Unsere Blockchain-basierte Plattform bietet eine sofortige Überprüfung der Spielergebnisse, so dass es für niemanden - auch nicht für uns - möglich ist, die Ergebnisse zu manipulieren.",
 					"paragraph3": "Diese Technologie ermöglicht blitzschnelle Ein- und Auszahlungen von Kryptowährungen, die oft innerhalb von Minuten statt Tagen abgeschlossen werden. Spieler können mit verschiedenen Kryptowährungen wie Bitcoin, Ethereum, USDT und mehr mit minimalen Gebühren und maximaler Sicherheit einzahlen und abheben.",
@@ -1371,7 +1371,7 @@
 				},
 				"security": {
 					"heading": "Sicherheit & Fairplay - Zertifiziert und verifiziert",
-					"paragraph1": "Spielersicherheit und Fairplay sind bei HyperBetz nicht verhandelbar. Alle unsere Spiele werden strengen Tests unterzogen und von unabhängigen Testagenturen zertifiziert. Jeder Spielautomat, jedes Tischspiel und jedes zufällige Ergebnis wird von",
+					"paragraph1": "Spielersicherheit und Fairplay sind bei {siteName} nicht verhandelbar. Alle unsere Spiele werden strengen Tests unterzogen und von unabhängigen Testagenturen zertifiziert. Jeder Spielautomat, jedes Tischspiel und jedes zufällige Ergebnis wird von",
 					"rng": "zertifizierte Zufallszahlengeneratoren (RNG)",
 					"paragraph2": "sicherstellung völlig fairer und unvorhersehbarer Ergebnisse.",
 					"paragraph3": "Wir verwenden eine militärische SSL-Verschlüsselung, um alle Datenübertragungen zwischen Ihrem Gerät und unseren Servern zu schützen. Ihre persönlichen Daten, finanziellen Daten und Spielaktivitäten werden verschlüsselt und sicher gespeichert und entsprechen den internationalen Datenschutzstandards, einschließlich der Einhaltung der DSGVO.",

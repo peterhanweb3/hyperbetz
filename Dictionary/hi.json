@@ -7,7 +7,7 @@
 		"viewAll": "सभी देखें"
 	},
 	"app": {
-		"name": "HyperBetz"
+		"name": "{siteName}"
 	},
 	"header": {
 		"toggleSidebar": "साइडबार टॉगल करें",
@@ -830,7 +830,7 @@
 		},
 		"withdrawSuccess": {
 			"title": "निकासी सफल!",
-			"successMessage": "🎉 अभी-अभी HyperBetz से {withdrawAmount} {tokenSymbol} निकाले! 🚀 {shareUrl} पर जीतने की होड़ में शामिल हों",
+			"successMessage": "🎉 अभी-अभी {siteName} से {withdrawAmount} {tokenSymbol} निकाले! 🚀 {shareUrl} पर जीतने की होड़ में शामिल हों",
 			"withdrawnAmount": "निकाली गई राशि",
 			"shareText": "साझा करें",
 			"subText": "🚀 जीतने की होड़ में शामिल हों! 🚀",
@@ -845,7 +845,7 @@
 			"screenshotFailed": "स्क्रीनशॉट असफल हुआ। कृपया फिर से प्रयास करें या एक अलग ब्राउज़र का उपयोग करें।",
 			"shareFailed": "साझा करना असफल रहा। कृपया पुनः प्रयास करें।",
 			"status": "सम्पन्न",
-			"userName": "HyperBetz खिलाड़ी"
+			"userName": "{siteName} खिलाड़ी"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "निकासी की पुष्टि हुई!",
@@ -1003,7 +1003,7 @@
 			"casino": {
 				"title": "कैसीनो",
 				"badge": "590+ गेम्स",
-				"desc": "HyperBetz ओरिजिनल्स और शीर्ष प्रदाताओं के अन्य कैसीनो गेम्स का आनंद लें।",
+				"desc": "{siteName} ओरिजिनल्स और शीर्ष प्रदाताओं के अन्य कैसीनो गेम्स का आनंद लें।",
 				"link": "कैसीनो पर जाएं"
 			},
 			"slots": {
@@ -1276,7 +1276,7 @@
 			"statusCompleted": "समाप्त/पूरा हुआ",
 			"statusOnChain": "ऑन - चेन",
 			"claimAmount": "दावा राशि",
-			"logoAlt": "HyperBetz का लोगो",
+			"logoAlt": "{siteName} का लोगो",
 			"backgroundAlt": "सफलता का बैकग्राउंड क्लेम करें",
 			"creatingMagic": "जादू बनाया जा रहा है...",
 			"downloadShare": "डाउनलोड करें और शेयर करें",

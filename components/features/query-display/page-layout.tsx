@@ -5,6 +5,7 @@ import { useState, useMemo } from "react";
 import { ViewMode } from "./grid-list-toggle";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { JsonLd } from "@/components/seo/json-ld";
 
 // --- Import the UI "Lego Bricks" ---
 // import { QuerySearchInput } from "./query-search-input";
@@ -69,6 +70,8 @@ export const QueryPageLayout = () => {
 	// Generate breadcrumb from pathname
 	const getBreadcrumbItems = useMemo(() => {
 		const pathSegments = pathname.split("/").filter(Boolean);
+		const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://hyperbetz.games';
+
 		const breadcrumbItems = [
 			{
 				label: tNavigation("home"),
@@ -86,35 +89,43 @@ export const QueryPageLayout = () => {
 				// Smart breadcrumb labeling
 				let label = segment;
 
-				// Try to get translation from navigation first
-				const translationKey = segment.toLowerCase();
-				const translatedNav = tNavigation(translationKey);
+				// Check if this is a provider or category slug FIRST (before translation)
+				// eslint-disable-next-line @typescript-eslint/no-require-imports
+				const { slugToProviderDisplayName, slugToCategory } = require('@/lib/utils/provider-slug-mapping');
 
-				if (translatedNav !== translationKey) {
-					// Found a navigation translation
-					label = translatedNav;
+				// Try provider name lookup first
+				const providerDisplayName = slugToProviderDisplayName(segment);
+				// Only use provider name if it's different from the generic transformation
+				const isProviderSlug = providerDisplayName !== segment.split('-').map(word =>
+					word.charAt(0).toUpperCase() + word.slice(1)
+				).join(' ');
+
+				if (isProviderSlug) {
+					label = providerDisplayName;
 				} else {
-					// Check if this is a provider or category slug
-					// eslint-disable-next-line @typescript-eslint/no-require-imports
-					const { slugToProviderName, slugToCategory } = require('@/lib/utils/provider-slug-mapping');
-
-					// Try provider name lookup
-					const providerName = slugToProviderName(segment);
-					if (providerName) {
-						label = providerName;
+					// Try category lookup
+					const category = slugToCategory(segment);
+					if (category && category !== segment.toUpperCase()) {
+						// Use friendly category names
+						const categoryMap: Record<string, string> = {
+							'SLOT': 'Slots',
+							'LIVE CASINO': 'Live Casino',
+							'SPORT BOOK': 'Sports',
+							'SPORTSBOOK': 'Sports',
+							'RNG': 'Table Games',
+						};
+						label = categoryMap[category] || category;
 					} else {
-						// Try category lookup
-						const category = slugToCategory(segment);
-						if (category && category !== segment.toUpperCase()) {
-							// Use friendly category names
-							const categoryMap: Record<string, string> = {
-								'SLOT': 'Slots',
-								'LIVE CASINO': 'Live Casino',
-								'SPORT BOOK': 'Sports',
-								'SPORTSBOOK': 'Sports',
-								'RNG': 'Table Games',
-							};
-							label = categoryMap[category] || category;
+						// Try translation from navigation
+						const translationKey = segment.toLowerCase();
+						// const translatedNav = tNavigation(translationKey);
+						
+						// remove - if any in translation key dont use tNavigation cause providers are dynamic
+						const translatedNav = translationKey.replace(/-/g, ' ');
+
+						if (translatedNav !== translationKey) {
+							// Found a navigation translation
+							label = translatedNav;
 						} else {
 							// Fallback to capitalized segment
 							label = segment.charAt(0).toUpperCase() + segment.slice(1).toLowerCase();
@@ -130,8 +141,20 @@ export const QueryPageLayout = () => {
 			});
 		}
 
-		return breadcrumbItems;
+		return { items: breadcrumbItems, baseUrl };
 	}, [pathname, tNavigation]);
+
+	// Generate Breadcrumb schema for SEO
+	const breadcrumbSchema = useMemo(() => ({
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": getBreadcrumbItems.items.map((item, index) => ({
+			"@type": "ListItem",
+			"position": index + 1,
+			"name": item.label,
+			"item": `${getBreadcrumbItems.baseUrl}${item.href}`
+		}))
+	}), [getBreadcrumbItems]);
 
 	// Dynamic header configuration based on category
 	const getHeaderConfig = useMemo(() => {
@@ -215,6 +238,9 @@ export const QueryPageLayout = () => {
 
 	return (
 		<div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+			{/* SEO: Breadcrumb Schema for rich snippets */}
+			<JsonLd data={breadcrumbSchema} />
+
 			{/* --- MAIN CONTENT AREA --- */}
 			<main className="lg:col-span-4">
 				<div className="space-y-4">
@@ -231,7 +257,7 @@ export const QueryPageLayout = () => {
 								className="flex items-center space-x-1 text-sm text-muted-foreground"
 								aria-label="Breadcrumb"
 							>
-								{getBreadcrumbItems.map((item, index) => (
+								{getBreadcrumbItems.items.map((item, index) => (
 									<div
 										key={item.href}
 										className="flex items-center"

@@ -10,14 +10,11 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
+  const { slugToProviderDisplayName, slugToCategory } = await import('@/lib/utils/provider-slug-mapping');
 
   if (slug.length === 1) {
-    // Provider only: /games/pg-soft
-    const providerName = decodeURIComponent(slug[0])
-      .replace(/-/g, ' ')
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(' ');
+    // Provider only: /games/pg-soft or /games/pragmatic-play
+    const providerName = slugToProviderDisplayName(decodeURIComponent(slug[0]));
 
     return generateSEOMetadata({
       title: `${providerName} Games - Play Online Casino Games - HyperBetz`,
@@ -28,18 +25,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ogType: 'website',
     });
   } else if (slug.length === 2) {
-    // Provider + category: /games/pg-soft/slot
-    const providerName = decodeURIComponent(slug[0])
-      .replace(/-/g, ' ')
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(' ');
+    // Provider + category: /games/pg-soft/slot or /games/pragmatic-play/slot
+    const providerName = slugToProviderDisplayName(decodeURIComponent(slug[0]));
+    const category = slugToCategory(decodeURIComponent(slug[1]));
 
-    const categoryName = decodeURIComponent(slug[1])
-      .replace(/-/g, ' ')
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(' ');
+    // Use friendly category names
+    const categoryMap: Record<string, string> = {
+      'SLOT': 'Slot',
+      'LIVE CASINO': 'Live Casino',
+      'SPORT BOOK': 'Sports',
+      'SPORTSBOOK': 'Sports',
+      'RNG': 'Table',
+    };
+    const categoryName = categoryMap[category] || category.charAt(0).toUpperCase() + category.slice(1).toLowerCase();
 
     return generateSEOMetadata({
       title: `${providerName} ${categoryName} Games - HyperBetz`,
