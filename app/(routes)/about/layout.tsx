@@ -7,20 +7,24 @@ import {
 
 // Generate SEO Metadata for About Page
 export const metadata: Metadata = generateSEOMetadata({
-	title: "About Us - HyperBetz",
+	title: "About HyperBetz | Trusted Global Online Casino Platform",
 	description:
-		"At HyperBetz, gaming isn't just a pastime — it's an experience. Discover our mission to create a world-class gaming platform with 5,000+ games, instant transactions, and 24/7 support.",
+		"Learn about HyperBetz — a secure, global casino platform offering slots, live casino, sports betting, and poker. Fair, fast, and built for real players.",
 	keywords: [
-		"about hyperbetz",
+		"About HyperBetz",
+		"HyperBetz casino",
+		"HyperBetz games",
+		"global online casino",
+		"secure casino platform",
 		"online casino platform",
 		"gaming platform",
-		"casino about us",
-		"online betting platform",
 		"fair play casino",
 		"responsible gaming",
 		"casino providers",
 		"pragmatic play",
 		"red tiger gaming",
+		"microgaming",
+		"ka gaming",
 	],
 	path: "/about",
 	pageType: "about",
@@ -29,10 +33,10 @@ export const metadata: Metadata = generateSEOMetadata({
 	schemas: [
 		generateOrganizationSchema(),
 		generateWebPageSchema({
-			title: "About HyperBetz",
+			title: "About HyperBetz | Trusted Global Online Casino Platform",
 			url: "https://hyperbetz.com/about",
 			description:
-				"Learn about HyperBetz - our mission, values, and commitment to providing a safe, fair, and exciting gaming experience.",
+				"Learn about HyperBetz — a secure, global casino platform offering slots, live casino, sports betting, and poker. Fair, fast, and built for real players.",
 		}),
 	],
 });

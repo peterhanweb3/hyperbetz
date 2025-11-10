@@ -240,8 +240,8 @@
 			"schemaType": "CollectionPage"
 		},
 		"game": {
-			"title": "{gameName} - Play Now",
-			"description": "Play {gameName} at Hyperbetz. Experience thrilling gameplay, exciting features, and amazing rewards.",
+			"title": "All Games on HyperBetz – Slots, Poker & Live Casino",
+			"description": "Discover the full HyperBetz game list – slots, poker & live casino from top providers. Play instantly, win securely.",
 			"keywords": ["play {gameName}", "{gameName} game", "online gaming"],
 			"ogType": "website",
 			"schemaType": "Game"
@@ -254,7 +254,7 @@
 			"schemaType": "ProfilePage"
 		},
 		"affiliate": {
-			"title": "Join the HyperBetz Affiliate Program – Earn Lifetime Commissions",
+			"title": "Join the HyperBetz Affiliate Program – Earn Lifetime Commissions.",
 			"description": "Partner with HyperBetz & earn lifetime income for every player you refer. Easy setup & global reach.",
 			"keywords": [
 				"HyperBetz affiliate program",
@@ -313,8 +313,8 @@
 			"schemaType": "WebPage"
 		},
 		"bonus": {
-			"title": "Turnover Bonus Program – Earn Rewards | HyperBetz",
-			"description": "Join HyperBetz Turnover Bonus Program. Earn up to 20% bonus on your gaming activity. Automatic rewards, transparent calculations.",
+			"title": "HyperBetz Turnover Bonus – Earn Rewards While You Play",
+			"description": "Join the HyperBetz Turnover Bonus Program & earn daily rewards as you play slots & live games.",
 			"keywords": [
 				"HyperBetz bonuses",
 				"crypto casino bonus",
