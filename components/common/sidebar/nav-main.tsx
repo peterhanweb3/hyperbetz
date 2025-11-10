@@ -303,8 +303,15 @@ export function NavMain({
 				router.replace(`/getLobby/${decodeURIComponent(providerName)}`);
 			} else {
 				// Convert to SEO-friendly URL format (lowercase with hyphens)
-				const seoProvider = providerName.toLowerCase().trim().replace(/\s+/g, '-').replace(/\./g, '');
-				const seoCategory = categoryTitle.toLowerCase().trim().replace(/\s+/g, '-');
+				const seoProvider = providerName
+					.toLowerCase()
+					.trim()
+					.replace(/\s+/g, "-")
+					.replace(/\./g, "");
+				const seoCategory = categoryTitle
+					.toLowerCase()
+					.trim()
+					.replace(/\s+/g, "-");
 				router.push(`/games/${seoProvider}/${seoCategory}`);
 			}
 		};
@@ -616,6 +623,11 @@ export function NavMain({
 		const triggerRef = useRef<HTMLDivElement | null>(null);
 		const contentRef = useRef<HTMLDivElement | null>(null);
 		const ignoreNextCloseRef = useRef(false);
+		const hoverIntentTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+		const lastMousePositionRef = useRef<{ x: number; y: number } | null>(
+			null
+		);
+		const isMovingTowardsContentRef = useRef(false);
 
 		// Radix will attempt to close on pointer leave; we selectively accept open=true only.
 		const handleRadixOpenChange = (next: boolean) => {
@@ -628,7 +640,43 @@ export function NavMain({
 			ignoreNextCloseRef.current = false;
 		};
 
+		// Helper to check if mouse is moving towards the hover card (triangular safe zone)
+		const isMovingTowardsCard = (
+			mouseX: number,
+			mouseY: number
+		): boolean => {
+			const tRect = triggerRef.current?.getBoundingClientRect();
+			const cRect = contentRef.current?.getBoundingClientRect();
+			const last = lastMousePositionRef.current;
+
+			if (!tRect || !cRect || !last) return false;
+
+			// Calculate movement vector
+			const dx = mouseX - last.x;
+			const dy = mouseY - last.y;
+
+			// If movement is very small, don't change state
+			if (Math.abs(dx) < 2 && Math.abs(dy) < 2)
+				return isMovingTowardsContentRef.current;
+
+			// Define the safe zone triangle points
+			// Point A: current mouse position
+			// Point B: top-right corner of trigger or top-left of content
+			// Point C: bottom-right corner of trigger or bottom-left of content
+			// const contentLeft = cRect.left;
+			const contentTop = cRect.top;
+			const contentBottom = cRect.bottom;
+
+			// Check if mouse is moving towards the content area (rightward with appropriate Y)
+			const movingRight = dx > 0;
+			const yInContentRange =
+				mouseY >= contentTop - 50 && mouseY <= contentBottom + 50;
+
+			return movingRight && yInContentRange;
+		};
+
 		// Pointer tracking: close only when pointer is outside BOTH trigger and content
+		// AND not moving towards the content
 		useEffect(() => {
 			if (!open) return;
 			const handlePointerMove = (e: PointerEvent) => {
@@ -636,6 +684,16 @@ export function NavMain({
 				const y = e.clientY;
 				const tRect = triggerRef.current?.getBoundingClientRect();
 				const cRect = contentRef.current?.getBoundingClientRect();
+
+				// Update movement tracking
+				if (lastMousePositionRef.current) {
+					isMovingTowardsContentRef.current = isMovingTowardsCard(
+						x,
+						y
+					);
+				}
+				lastMousePositionRef.current = { x, y };
+
 				const insideTrigger =
 					tRect &&
 					x >= tRect.left &&
@@ -648,14 +706,78 @@ export function NavMain({
 					x <= cRect.right &&
 					y >= cRect.top &&
 					y <= cRect.bottom;
-				if (!insideTrigger && !insideContent) {
-					setOpen(false);
+
+				// Create a buffer zone between trigger and content
+				const inBufferZone =
+					tRect &&
+					cRect &&
+					x >= tRect.right &&
+					x <= cRect.left + 20 &&
+					y >= Math.min(tRect.top, cRect.top) - 20 &&
+					y <= Math.max(tRect.bottom, cRect.bottom) + 20;
+
+				// Don't close if:
+				// 1. Inside trigger or content
+				// 2. In buffer zone between them
+				// 3. Moving towards the content
+				if (
+					insideTrigger ||
+					insideContent ||
+					inBufferZone ||
+					isMovingTowardsContentRef.current
+				) {
+					return;
 				}
+
+				setOpen(false);
+				lastMousePositionRef.current = null;
+				isMovingTowardsContentRef.current = false;
 			};
 			document.addEventListener("pointermove", handlePointerMove);
-			return () =>
+			return () => {
 				document.removeEventListener("pointermove", handlePointerMove);
+			};
 		}, [open]);
+
+		// Cleanup timeout on unmount
+		useEffect(() => {
+			return () => {
+				if (hoverIntentTimeoutRef.current) {
+					clearTimeout(hoverIntentTimeoutRef.current);
+				}
+			};
+		}, []);
+
+		// Handle mouse enter with intent detection
+		const handleMouseEnter = () => {
+			if (suppressHoverCards) return;
+
+			// Clear any existing timeout
+			if (hoverIntentTimeoutRef.current) {
+				clearTimeout(hoverIntentTimeoutRef.current);
+			}
+
+			// Add a small delay before opening to detect intent
+			hoverIntentTimeoutRef.current = setTimeout(() => {
+				setOpen(true);
+				lastMousePositionRef.current = null;
+				isMovingTowardsContentRef.current = false;
+			}, 100); // 100ms delay for intent detection
+		};
+
+		// Handle mouse leave from trigger
+		const handleMouseLeave = (e: React.MouseEvent) => {
+			// Clear the opening timeout if user leaves quickly
+			if (hoverIntentTimeoutRef.current) {
+				clearTimeout(hoverIntentTimeoutRef.current);
+				hoverIntentTimeoutRef.current = null;
+			}
+
+			// Initialize mouse tracking
+			lastMousePositionRef.current = { x: e.clientX, y: e.clientY };
+
+			// Don't close immediately - let the pointer tracking handle it
+		};
 
 		// Open on keyboard focus of trigger for accessibility
 		const handleTriggerFocus = () => setOpen(true);
@@ -681,6 +803,7 @@ export function NavMain({
 			// Stop propagation so Radix doesn't think we've left hoverable area prematurely
 			e.stopPropagation();
 		};
+
 		const displayTitle = (() => {
 			const k = category.title.toUpperCase();
 			if (k === "SLOT") return tGames("slots");
@@ -688,12 +811,13 @@ export function NavMain({
 			if (k === "LIVE CASINO") return tGames("liveCasino");
 			return category.title;
 		})();
+
 		return (
 			<SidebarMenuItem key={category.title}>
 				<div className="flex items-center w-full">
 					<HoverCard
-						// openDelay={2000}
-						// closeDelay={1000}
+						openDelay={150}
+						closeDelay={200}
 						open={open}
 						onOpenChange={handleRadixOpenChange}
 					>
@@ -701,10 +825,8 @@ export function NavMain({
 							<div
 								className="flex-1"
 								ref={triggerRef}
-								onMouseEnter={() => {
-									if (suppressHoverCards) return; // wait for pointer move first
-									setOpen(true);
-								}}
+								onMouseEnter={handleMouseEnter}
+								onMouseLeave={handleMouseLeave}
 							>
 								<SidebarMenuButton asChild>
 									<Link
@@ -755,7 +877,11 @@ export function NavMain({
 							sideOffset={0}
 							ref={contentRef}
 							onMouseDown={preventCloseOnMouseDown}
-							onMouseEnter={() => setOpen(true)}
+							onMouseEnter={() => {
+								setOpen(true);
+								// Clear tracking when entering content
+								isMovingTowardsContentRef.current = false;
+							}}
 						>
 							<CategoryProvidersList
 								providers={providersForCategory}

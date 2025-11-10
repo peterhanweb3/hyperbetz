@@ -10,59 +10,60 @@ export const PROVIDER_SLUG_MAP: Record<string, ProviderName> = {
 	"5g-games": "5G Games",
 	"568win": "568Win",
 	"93-connect": "93 Connect",
-	"advant": "Advant",
+	advant: "Advant",
 	"afb-casino": "AFB Casino",
-	"allbet": "Allbet",
+	allbet: "Allbet",
 	"asia-gaming": "Asia Gaming",
-	"aviatrix": "Aviatrix",
+	aviatrix: "Aviatrix",
 	"big-gaming": "Big Gaming",
-	"booongo": "Booongo",
-	"btg": "BTG",
-	"clotplay": "ClotPlay",
-	"cq9": "CQ9",
+	booongo: "Booongo",
+	btg: "BTG",
+	clotplay: "ClotPlay",
+	cq9: "CQ9",
 	"dragoon-soft": "Dragoon Soft",
 	"dream-gaming": "Dream Gaming",
-	"evolution": "Evolution",
+	evolution: "Evolution",
 	"fa-chai": "Fa Chai",
-	"fastspin": "Fastspin",
-	"funky": "Funky",
-	"gameplay": "GamePlay",
-	"gd88": "GD88",
-	"habanero": "Habanero",
+	fastspin: "Fastspin",
+	funky: "Funky",
+	gameplay: "GamePlay",
+	gd88: "GD88",
+	habanero: "Habanero",
 	"ion-club": "ION Club",
-	"jdb": "JDB",
-	"jili": "Jili",
-	"joker": "Joker",
+	jdb: "JDB",
+	jili: "Jili",
+	joker: "Joker",
 	"ka-gaming": "KA GAMING",
 	"king-midas": "King Midas",
-	"lambda": "Lambda",
-	"live22": "Live22",
-	"microgaming": "Microgaming",
-	"mt": "MT",
-	"netent": "NetEnt",
+	lambda: "Lambda",
+	live22: "Live22",
+	microgaming: "Microgaming",
+	mt: "MT",
+	netent: "NetEnt",
 	"no-limit": "No Limit",
-	"pegasus": "Pegasus",
+	pegasus: "Pegasus",
 	"pg-soft": "PG Soft",
 	"phoenix-7": "Phoenix 7",
-	"playstar": "PlayStar",
-	"playtech": "Playtech",
+	playstar: "PlayStar",
+	playtech: "Playtech",
 	"poggi-play": "Poggi Play",
 	"pragmatic-live": "Pragmatic Live",
 	"pragmatic-slot": "Pragmatic Slot",
 	"pragmatic-play": "Pragmatic Slot", // Alias
 	"red-tiger": "Red Tiger",
-	"relax": "Relax",
+	relax: "Relax",
 	"relax-gaming": "Relax", // Alias
-	"rich88": "Rich88",
+	rich88: "Rich88",
 	"sa-gaming": "SA Gaming",
+	sbo: "SBO",
 	"sexy-baccarat": "Sexy Baccarat",
 	"tom-horn": "Tom Horn",
 	"via-casino": "Via Casino",
 	"w-casino": "W Casino",
 	"we-entertain": "WE Entertain.",
 	"world-match": "World Match",
-	"yggdrasil": "Yggdrasil",
-	"ygr": "YGR",
+	yggdrasil: "Yggdrasil",
+	ygr: "YGR",
 	"hacksaw-gaming": "Habanero", // Common alias
 	"nolimit-city": "No Limit", // Common alias
 };
@@ -79,7 +80,9 @@ export const PROVIDER_NAME_TO_SLUG: Record<string, string> = Object.entries(
  * Convert a URL slug to the actual provider name(s)
  * Returns array for providers that have multiple variants (e.g., Pragmatic Play)
  */
-export function slugToProviderName(slug: string): ProviderName | ProviderName[] | null {
+export function slugToProviderName(
+	slug: string
+): ProviderName | ProviderName[] | null {
 	const normalized = slug.toLowerCase().trim();
 
 	// Special case: "pragmatic-play" should return both Pragmatic providers
@@ -95,16 +98,19 @@ export function slugToProviderName(slug: string): ProviderName | ProviderName[] 
  */
 export function slugToProviderDisplayName(slug: string): string {
 	const normalized = slug.toLowerCase().trim();
-
 	// Special case: show "Pragmatic Play" as the brand name
 	if (normalized === "pragmatic-play") {
 		return "Pragmatic Play";
 	}
 
 	const providerName = PROVIDER_SLUG_MAP[normalized];
-	return providerName || slug.split('-').map(word =>
-		word.charAt(0).toUpperCase() + word.slice(1)
-	).join(' ');
+	return (
+		providerName ||
+		slug
+			.split("-")
+			.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+			.join(" ")
+	);
 }
 
 /**
@@ -118,7 +124,7 @@ export function providerNameToSlug(providerName: string): string {
 
 	return (
 		PROVIDER_NAME_TO_SLUG[providerName] ||
-		providerName.toLowerCase().replace(/\s+/g, "-").replace(/\./g, '')
+		providerName.toLowerCase().replace(/\s+/g, "-").replace(/\./g, "")
 	);
 }
 
@@ -126,22 +132,25 @@ export function providerNameToSlug(providerName: string): string {
  * Category slug mapping
  */
 const CATEGORY_SLUG_MAP: Record<string, string> = {
-	"slot": "SLOT",
-	"slots": "SLOT",
+	slot: "SLOT",
+	slots: "SLOT",
 	"live-casino": "LIVE CASINO",
-	"livecasino": "LIVE CASINO",
-	"sports": "SPORT BOOK",
-	"sportsbook": "SPORT BOOK",
-	"sport-book": "SPORT BOOK",
-	"rng": "RNG",
+	livecasino: "LIVE CASINO",
+
+	// THESE 3 LINES ARE THE REASON WHY SPORTS CATEGORY WAS NOT WORKING FOR FILTERING AS IT RETURNS OUT SPORT BOOK BUT CATEGORY FILTER NEEDS SPORTS INSTEAD
+	sports: "SPORTS",
+	sportsbook: "SPORTS",
+	"sport-book": "SPORTS",
+	rng: "RNG",
 };
 
 const CATEGORY_TO_SLUG: Record<string, string> = {
-	"SLOT": "slot",
+	SLOT: "slot",
 	"LIVE CASINO": "live-casino",
 	"SPORT BOOK": "sports",
-	"SPORTSBOOK": "sports",
-	"RNG": "rng",
+	SPORTS: "sports",
+	SPORTSBOOK: "sports",
+	RNG: "rng",
 };
 
 /**

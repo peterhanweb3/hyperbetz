@@ -73,8 +73,8 @@ export type ProviderName =
 	| "WE Entertain."
 	| "World Match"
 	| "Yggdrasil"
-	| "YGR";
-
+	| "YGR"
+	| "SBO";
 /**
  * Defines the structure for a single game object in the data array.
  */
