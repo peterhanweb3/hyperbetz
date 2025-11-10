@@ -72,6 +72,8 @@ export const DynamicGameCarouselList = () => {
 			<ExploreSection />
 
 			{filteredCategories.map((category) => {
+				//if name = "-" then skip
+				if (category === "-") return null;
 				const gamesForCategory = getGamesByCategory(
 					allGames,
 					category,
