@@ -23,6 +23,11 @@ import { useT } from "@/hooks/useI18n";
 export default function ResponsibleGamblingPage() {
 	const t = useT();
 
+	// Helper function to split multi-paragraph content
+	const splitParagraphs = (text: string) => {
+		return text.includes("|") ? text.split("|") : [text];
+	};
+
 	return (
 		<div className="container mx-auto space-y-8 consistent-padding-x consistent-padding-y">
 			<PageHeader
@@ -36,14 +41,18 @@ export default function ResponsibleGamblingPage() {
 				title={t("responsibleGambling.intro.title")}
 				icon={Heart}
 			>
-				<p className="text-base mb-4">
-					{t("responsibleGambling.intro.paragraph1")}
-				</p>
-				<p className="text-base mb-4">
+				{splitParagraphs(t("responsibleGambling.intro.paragraph1")).map(
+					(para, index) => (
+						<p key={index} className="text-base mb-4">
+							{para}
+						</p>
+					)
+				)}
+				<p className="text-base font-semibold">
 					{t("responsibleGambling.intro.paragraph2")}
 				</p>
-				<p className="text-base font-semibold">
-					{t("responsibleGambling.intro.paragraph3")}
+				<p className="text-sm text-muted-foreground mt-4">
+					{t("responsibleGambling.lastUpdated")}
 				</p>
 			</SectionCard>
 
@@ -53,8 +62,15 @@ export default function ResponsibleGamblingPage() {
 				icon={Target}
 			>
 				<ContentSection>
-					<p className="mb-4">
-						{t("responsibleGambling.mission.content")}
+					{splitParagraphs(
+						t("responsibleGambling.mission.paragraph1")
+					).map((para, index) => (
+						<p key={index} className="mb-4">
+							{para}
+						</p>
+					))}
+					<p className="mb-2 font-semibold">
+						{t("responsibleGambling.mission.paragraph2")}
 					</p>
 					<ListSection
 						items={[
@@ -84,10 +100,14 @@ export default function ResponsibleGamblingPage() {
 				icon={Lightbulb}
 			>
 				<ContentSection>
-					<p className="mb-4">
-						{t("responsibleGambling.understanding.paragraph1")}
-					</p>
-					<p className="mb-4">
+					{splitParagraphs(
+						t("responsibleGambling.understanding.paragraph1")
+					).map((para, index) => (
+						<p key={index} className="mb-4">
+							{para}
+						</p>
+					))}
+					<p className="mb-2 font-semibold">
 						{t("responsibleGambling.understanding.paragraph2")}
 					</p>
 					<ListSection
@@ -181,9 +201,13 @@ export default function ResponsibleGamblingPage() {
 				icon={Settings}
 			>
 				<ContentSection>
-					<p className="mb-4">
-						{t("responsibleGambling.tools.intro")}
-					</p>
+					{splitParagraphs(t("responsibleGambling.tools.intro")).map(
+						(para, index) => (
+							<p key={index} className="mb-4">
+								{para}
+							</p>
+						)
+					)}
 				</ContentSection>
 
 				{/* Self-Exclusion */}
@@ -192,14 +216,13 @@ export default function ResponsibleGamblingPage() {
 						<Shield className="size-5" />
 						{t("responsibleGambling.tools.selfExclusion.title")}
 					</h3>
-					<p className="mb-2">
-						{t(
-							"responsibleGambling.tools.selfExclusion.description"
-						)}
-					</p>
-					<p className="text-sm">
-						{t("responsibleGambling.tools.selfExclusion.contact")}
-					</p>
+					{splitParagraphs(
+						t("responsibleGambling.tools.selfExclusion.description")
+					).map((para, index) => (
+						<p key={index} className="mb-2">
+							{para}
+						</p>
+					))}
 				</div>
 
 				{/* Cooling-Off Periods */}
@@ -208,9 +231,13 @@ export default function ResponsibleGamblingPage() {
 						<Clock className="size-5" />
 						{t("responsibleGambling.tools.coolingOff.title")}
 					</h3>
-					<p className="mb-2">
-						{t("responsibleGambling.tools.coolingOff.description")}
-					</p>
+					{splitParagraphs(
+						t("responsibleGambling.tools.coolingOff.paragraph1")
+					).map((para, index) => (
+						<p key={index} className="mb-2">
+							{para}
+						</p>
+					))}
 					<ListSection
 						items={[
 							{
@@ -231,7 +258,7 @@ export default function ResponsibleGamblingPage() {
 						]}
 					/>
 					<p className="text-sm mt-2">
-						{t("responsibleGambling.tools.coolingOff.note")}
+						{t("responsibleGambling.tools.coolingOff.paragraph2")}
 					</p>
 				</div>
 
@@ -241,11 +268,15 @@ export default function ResponsibleGamblingPage() {
 						<DollarSign className="size-5" />
 						{t("responsibleGambling.tools.depositAwareness.title")}
 					</h3>
-					<p>
-						{t(
+					{splitParagraphs(
+						t(
 							"responsibleGambling.tools.depositAwareness.description"
-						)}
-					</p>
+						)
+					).map((para, index) => (
+						<p key={index} className="mb-2">
+							{para}
+						</p>
+					))}
 				</div>
 			</SectionCard>
 
@@ -255,9 +286,13 @@ export default function ResponsibleGamblingPage() {
 				icon={Baby}
 			>
 				<ContentSection>
-					<p className="mb-4">
-						{t("responsibleGambling.underagePrevention.paragraph1")}
-					</p>
+					{splitParagraphs(
+						t("responsibleGambling.underagePrevention.paragraph1")
+					).map((para, index) => (
+						<p key={index} className="mb-4">
+							{para}
+						</p>
+					))}
 					<h4 className="font-semibold mb-2">
 						{t("responsibleGambling.underagePrevention.tipsTitle")}
 					</h4>
@@ -301,9 +336,13 @@ export default function ResponsibleGamblingPage() {
 				title={t("responsibleGambling.helpSupport.title")}
 				icon={Phone}
 			>
-				<p className="mb-4">
-					{t("responsibleGambling.helpSupport.intro")}
-				</p>
+				{splitParagraphs(
+					t("responsibleGambling.helpSupport.intro")
+				).map((para, index) => (
+					<p key={index} className="mb-4">
+						{para}
+					</p>
+				))}
 				<div className="mt-4 space-y-3">
 					{[0, 1, 2, 3, 4].map((index) => (
 						<div
@@ -315,11 +354,6 @@ export default function ResponsibleGamblingPage() {
 									`responsibleGambling.helpSupport.organizations.${index}.name`
 								)}
 							</h4>
-							<p className="text-sm mb-2">
-								{t(
-									`responsibleGambling.helpSupport.organizations.${index}.description`
-								)}
-							</p>
 							<a
 								href={t(
 									`responsibleGambling.helpSupport.organizations.${index}.url`
@@ -335,6 +369,9 @@ export default function ResponsibleGamblingPage() {
 						</div>
 					))}
 				</div>
+				<p className="mt-4">
+					{t("responsibleGambling.helpSupport.paragraph2")}
+				</p>
 			</SectionCard>
 
 			{/* Responsible Gaming Principles */}
@@ -342,6 +379,9 @@ export default function ResponsibleGamblingPage() {
 				title={t("responsibleGambling.principles.title")}
 				icon={Shield}
 			>
+				<p className="mb-4">
+					{t("responsibleGambling.principles.intro")}
+				</p>
 				<ListSection
 					items={[
 						{
@@ -395,9 +435,13 @@ export default function ResponsibleGamblingPage() {
 				icon={Heart}
 			>
 				<ContentSection>
-					<p className="mb-4">
-						{t("responsibleGambling.playSmart.intro")}
-					</p>
+					{splitParagraphs(
+						t("responsibleGambling.playSmart.intro")
+					).map((para, index) => (
+						<p key={index} className="mb-4">
+							{para}
+						</p>
+					))}
 					<ListSection
 						items={[
 							{
@@ -433,13 +477,17 @@ export default function ResponsibleGamblingPage() {
 			{/* Final Message */}
 			<SectionCard variant="primary">
 				<ContentSection>
-					<p className="mb-4 text-lg font-semibold">
-						{t("responsibleGambling.finalMessage.paragraph1")}
-					</p>
-					<p className="mb-4">
+					{splitParagraphs(
+						t("responsibleGambling.finalMessage.paragraph1")
+					).map((para, index) => (
+						<p key={index} className="mb-4 text-lg font-semibold">
+							{para}
+						</p>
+					))}
+					<p className="mb-2">
 						{t("responsibleGambling.finalMessage.paragraph2")}
 					</p>
-					<p className="text-sm">
+					<p className="text-primary font-medium">
 						{t("responsibleGambling.finalMessage.contact")}
 					</p>
 				</ContentSection>

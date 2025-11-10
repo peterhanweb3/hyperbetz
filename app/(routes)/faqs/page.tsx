@@ -9,10 +9,56 @@ import { JsonLd } from "@/components/seo/json-ld";
 interface FAQItemProps {
 	question: string;
 	answer: string | string[];
+	reminder?: string;
 }
 
-function FAQItem({ question, answer }: FAQItemProps) {
+function FAQItem({ question, answer, reminder }: FAQItemProps) {
 	const [isOpen, setIsOpen] = useState(false);
+
+	// Helper function to render paragraph content with bullet points
+	const renderParagraph = (text: string, index: number) => {
+		// Check if the paragraph should be a bullet point
+		// Bullet points start with "Go to", "Choose", "Copy", "Send", "Refresh", "Clear", etc.
+		const bulletKeywords = [
+			"Go to",
+			"Choose",
+			"Copy",
+			"Send",
+			"Once confirmed",
+			"Reconnect",
+			"If you've lost",
+			"Check your",
+			"Confirm that",
+			"If it's been",
+			"Refresh",
+			"Clear your",
+			"If the issue",
+			"Enter your",
+			"Double-check",
+			"Withdrawals are",
+			"GamCare:",
+			"Gambling Therapy:",
+			"Gamblers Anonymous:",
+		];
+
+		const shouldBeBullet = bulletKeywords.some((keyword) =>
+			text.trim().startsWith(keyword)
+		);
+
+		if (shouldBeBullet) {
+			return (
+				<li key={index} className="ml-4">
+					{text}
+				</li>
+			);
+		}
+
+		return (
+			<p key={index} className="mb-2">
+				{text}
+			</p>
+		);
+	};
 
 	return (
 		<div className="border border-border rounded-lg overflow-hidden bg-card">
@@ -30,13 +76,22 @@ function FAQItem({ question, answer }: FAQItemProps) {
 				/>
 			</button>
 			{isOpen && (
-				<div className="px-4 pb-4 pt-2 text-muted-foreground space-y-2">
+				<div className="px-4 pb-4 pt-2 text-muted-foreground">
 					{Array.isArray(answer) ? (
-						answer.map((paragraph, index) => (
-							<p key={index}>{paragraph}</p>
-						))
+						<ul className="space-y-2 list-disc">
+							{answer.map((paragraph, index) =>
+								renderParagraph(paragraph, index)
+							)}
+						</ul>
 					) : (
-						<p>{answer}</p>
+						<p className="mb-2">{answer}</p>
+					)}
+					{reminder && (
+						<div className="mt-4 p-3 bg-amber-500/10 border border-amber-500/30 rounded-lg">
+							<p className="text-sm text-amber-600 dark:text-amber-400 font-medium">
+								{reminder}
+							</p>
+						</div>
 					)}
 				</div>
 			)}
@@ -54,11 +109,14 @@ export default function FAQsPage() {
 				const answer = t(
 					`faqs.categories.accountRegistration.items.${i}.answer`
 				);
+				const reminderKey = `faqs.categories.accountRegistration.items.${i}.reminder`;
+				const reminder = t(reminderKey);
 				return {
 					question: t(
 						`faqs.categories.accountRegistration.items.${i}.question`
 					),
 					answer: answer.includes("|") ? answer.split("|") : answer,
+					reminder: reminder !== reminderKey ? reminder : undefined,
 				};
 			}),
 		},
@@ -73,6 +131,7 @@ export default function FAQsPage() {
 						`faqs.categories.depositsWithdrawals.items.${i}.question`
 					),
 					answer: answer.includes("|") ? answer.split("|") : answer,
+					reminder: undefined,
 				};
 			}),
 		},
@@ -87,6 +146,7 @@ export default function FAQsPage() {
 						`faqs.categories.gamesSecurity.items.${i}.question`
 					),
 					answer: answer.includes("|") ? answer.split("|") : answer,
+					reminder: undefined,
 				};
 			}),
 		},
@@ -101,6 +161,7 @@ export default function FAQsPage() {
 						`faqs.categories.responsibleGambling.items.${i}.question`
 					),
 					answer: answer.includes("|") ? answer.split("|") : answer,
+					reminder: undefined,
 				};
 			}),
 		},
@@ -108,21 +169,21 @@ export default function FAQsPage() {
 
 	// Generate FAQ schema for SEO (rich snippets in Google)
 	const faqSchema = useMemo(() => {
-		const allQuestions = faqCategories.flatMap(category =>
-			category.items.map(item => ({
+		const allQuestions = faqCategories.flatMap((category) =>
+			category.items.map((item) => ({
 				"@type": "Question",
-				"name": item.question,
-				"acceptedAnswer": {
+				name: item.question,
+				acceptedAnswer: {
 					"@type": "Answer",
-					"text": item.answer
-				}
+					text: item.answer,
+				},
 			}))
 		);
 
 		return {
 			"@context": "https://schema.org",
 			"@type": "FAQPage",
-			"mainEntity": allQuestions
+			mainEntity: allQuestions,
 		};
 	}, [faqCategories]);
 
@@ -136,24 +197,61 @@ export default function FAQsPage() {
 				title={t("faqs.introTitle")}
 				icon={HelpCircle}
 			>
-				<p className="text-base mb-2">{t("faqs.intro")}</p>
-				<p className="text-sm text-muted-foreground">
+				{t("faqs.intro")
+					.split("|")
+					.map((paragraph, index) => (
+						<p
+							key={index}
+							className={
+								index === 0
+									? "text-base mb-2"
+									: "text-base mb-4"
+							}
+						>
+							{paragraph}
+						</p>
+					))}
+				<p className="text-sm text-muted-foreground mt-4">
 					{t("faqs.lastUpdated")}
 				</p>
 			</SectionCard>
 
+			{faqCategories.map((category, categoryIndex) => (
+				<div key={categoryIndex} className="space-y-4">
+					<h2 className="text-2xl font-semibold text-foreground">
+						{category.title}
+					</h2>
+					<div className="space-y-3">
+						{category.items.map((item, itemIndex) => (
+							<FAQItem
+								key={itemIndex}
+								question={item.question}
+								answer={item.answer}
+								reminder={item.reminder}
+							/>
+						))}
+					</div>
+				</div>
+			))}
+
 			{/* Blockchain Transparency Section */}
 			<SectionCard title={t("faqs.blockchainTransparency.title")}>
-				<p className="mb-4">
-					{t("faqs.blockchainTransparency.paragraph1")}
-				</p>
+				{t("faqs.blockchainTransparency.paragraph1")
+					.split("|")
+					.map((paragraph, index) => (
+						<p key={index} className="mb-4">
+							{paragraph}
+						</p>
+					))}
 				<p className="mb-4">
 					{t("faqs.blockchainTransparency.paragraph2")}
 				</p>
 				<div className="space-y-2">
-					<p className="font-semibold">
-						{t("faqs.blockchainTransparency.explorersTitle")}
-					</p>
+					{t("faqs.blockchainTransparency.explorersTitle") && (
+						<p className="font-semibold">
+							{t("faqs.blockchainTransparency.explorersTitle")}
+						</p>
+					)}
 					<ul className="list-disc list-inside space-y-1 ml-4">
 						<li>
 							<a
@@ -192,34 +290,16 @@ export default function FAQsPage() {
 				</p>
 			</SectionCard>
 
-			{faqCategories.map((category, categoryIndex) => (
-				<div key={categoryIndex} className="space-y-4">
-					<h2 className="text-2xl font-semibold text-foreground">
-						{category.title}
-					</h2>
-					<div className="space-y-3">
-						{category.items.map((item, itemIndex) => (
-							<FAQItem
-								key={itemIndex}
-								question={item.question}
-								answer={item.answer}
-							/>
-						))}
-					</div>
-				</div>
-			))}
-
 			<SectionCard title={t("faqs.needMoreHelp.title")} variant="primary">
 				<p className="mb-4">{t("faqs.needMoreHelp.intro")}</p>
 				<div className="space-y-2">
-					<p className="font-semibold">
-						{t("faqs.needMoreHelp.contactTitle")}
-					</p>
+					{t("faqs.needMoreHelp.contactTitle") && (
+						<p className="font-semibold">
+							{t("faqs.needMoreHelp.contactTitle")}
+						</p>
+					)}
 					<p className="text-primary font-medium">
-						💬 {t("faqs.needMoreHelp.liveChat")}
-					</p>
-					<p className="text-primary font-medium">
-						📧 support@hyperbetz.games
+						{t("faqs.needMoreHelp.liveChat")}
 					</p>
 				</div>
 			</SectionCard>

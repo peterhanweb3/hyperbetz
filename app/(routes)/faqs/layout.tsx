@@ -6,12 +6,12 @@ import {
 } from "@/lib/seo/schema-generator";
 
 export const metadata: Metadata = generateSEOMetadata({
-	title: "FAQs | HyperBetz.games – Crypto Casino Help & Support",
+	title: "FAQs | {siteName}.games – Crypto Casino Help & Support",
 	description:
-		"Find answers to common HyperBetz.games questions. Learn about wallet login, deposits, withdrawals, fair play, and blockchain transparency.",
+		"Find answers to common {siteName} questions. Learn about wallet login, deposits, withdrawals, fair play, and blockchain transparency.",
 	keywords: [
-		"HyperBetz FAQ",
-		"HyperBetz crypto casino help",
+		"{siteName} FAQ",
+		"{siteName} crypto casino help",
 		"wallet login guide",
 		"crypto deposit",
 		"crypto withdrawal",
@@ -24,10 +24,10 @@ export const metadata: Metadata = generateSEOMetadata({
 	schemas: [
 		generateOrganizationSchema(),
 		generateWebPageSchema({
-			title: "FAQs – HyperBetz Crypto Casino Help Center",
+			title: "FAQs – {siteName} Crypto Casino Help Center",
 			url: "https://hyperbetz.games/faqs",
 			description:
-				"Explore FAQs at HyperBetz.games. Learn how to connect your wallet, deposit crypto, withdraw winnings, and play provably fair blockchain games.",
+				"Explore FAQs at {siteName}. Learn how to connect your wallet, deposit crypto, withdraw winnings, and play provably fair blockchain games.",
 		}),
 	],
 });
