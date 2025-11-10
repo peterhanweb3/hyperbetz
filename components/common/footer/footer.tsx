@@ -233,7 +233,6 @@ export function Footer() {
 								</h3>
 								<ul className="space-y-2.5">
 									{section.links.map((link, linkIndex) => {
-										const Icon = link.icon;
 										return (
 											<li key={linkIndex}>
 												<Link
