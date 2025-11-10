@@ -1578,11 +1578,13 @@
 				"securityData": {
 					"title": "D. Security & Risk Data",
 					"fraud": "Fraud signals, device fingerprints, risk scores from anti-fraud vendors.",
-					"disputes": "Records of dispute resolution, chargebacks (if applicable), and compliance checks."
+					"disputes": "Records of dispute resolution, chargebacks (if applicable), and compliance checks.",
+					"note": "We do not collect sensitive categories (race, religion, health, etc.) unless lawfully required and with clear consent."
 				}
 			},
 			"purposes": {
 				"title": "3. Why We Collect Data – Lawful Bases & Purposes",
+				"intro": "We process your data for lawful and specific purposes:",
 				"items": {
 					"0": {
 						"title": "Service provision & contract performance",
@@ -1593,22 +1595,19 @@
 						"description": "detect and prevent abuse and money-laundering."
 					},
 					"2": {
-						"title": "Compliance with legal obligations",
-						"description": "meet AML/KYC requirements when necessary."
-					},
-					"3": {
 						"title": "Platform operations & improvement",
 						"description": "analytics, product development, customer support."
 					},
-					"4": {
+					"3": {
 						"title": "Marketing (with consent)",
 						"description": "newsletters, promotional offers — only if you opt in."
 					},
-					"5": {
+					"4": {
 						"title": "Legitimate interest",
 						"description": "preserving platform integrity and investigating misuse."
 					}
-				}
+				},
+				"outro": "When we rely on consent (e.g., marketing), you can withdraw that consent anytime."
 			},
 			"cryptoWallet": {
 				"title": "4. Crypto Wallet Specifics & On-Chain Data",
@@ -1665,67 +1664,211 @@
 		"title": "Terms & Conditions",
 		"subtitle": "User Agreement and Platform Rules",
 		"lastUpdated": "January 2025",
-		"intro": "By using HyperBetz, you agree to these Terms & Conditions. Please read carefully before using our platform.",
+		"intro": {
+			"paragraph1": "By registering or connecting your wallet on www.hyperbetz.games, you enter into a binding agreement with HyperBetz N.V.",
+			"paragraph2": "If you do not agree with any of these terms, do not access, use, or register on our Website. Read these Terms carefully. If you are uncertain about your rights or obligations, consult a legal advisor in your jurisdiction before using the Website."
+		},
 		"sections": {
-			"0": {
-				"title": "1. Acceptance of Terms",
-				"content": "By accessing and using HyperBetz, you accept and agree to be bound by these Terms & Conditions. If you do not agree, please do not use our services.",
-				"hasPoints": "false"
+			"ownership": {
+				"title": "1. HyperBetz.games Ownership",
+				"content1": "HyperBetz.games is owned and operated by HyperBetz N.V. ('HyperBetz', 'We', 'Our', 'Us').",
+				"content2": "HyperBetz.games is a crypto-wallet-only casino. All deposits, wagers, and withdrawals are processed through users' cryptocurrency wallets. We support wallet login through Dynamic.xyz and compatible wallet connectors (e.g., WalletConnect / MetaMask)."
 			},
-			"1": {
-				"title": "2. Eligibility",
-				"content": "You must be at least 18 years old (or the legal gambling age in your jurisdiction) to use HyperBetz. By using our platform, you confirm that you meet this requirement.",
-				"hasPoints": "false"
+			"notice": {
+				"title": "2. Important Notice",
+				"content1": "2.1 By registering or connecting your wallet on www.hyperbetz.games (the 'Website'), you enter into a binding agreement with HyperBetz N.V. and agree to: (i) these Terms and Conditions; (ii) our Privacy Policy; (iii) our Cookie Policy; (iv) our Affiliate Terms; and (v) our Responsible Gaming Policy.",
+				"content2": "2.2 If you do not agree with any of these terms, do not access, use, or register on our Website.",
+				"content3": "2.3 Read these Terms carefully. If you are uncertain about your rights or obligations, consult a legal advisor in your jurisdiction before using the Website."
 			},
-			"2": {
-				"title": "3. Account Registration",
-				"content": "You are responsible for maintaining the confidentiality of your account credentials. HyperBetz is not liable for unauthorized access to your account.",
-				"hasPoints": "false"
+			"general": {
+				"title": "3. General Terms",
+				"items": [
+					"Upon registration or wallet connection, you ('User', 'Player', 'You', or 'Your') agree to comply with all HyperBetz rules and policies.",
+					"This Agreement is a legally binding contract between you and HyperBetz.games.",
+					"These Terms become effective the moment you connect your wallet and start using the site.",
+					"HyperBetz reserves the right to amend or update these Terms at any time. Changes will be published on the Website; continued use constitutes acceptance.",
+					"In the event of conflict, these Terms prevail over any other rules, promotions, or external materials.",
+					"Only the English version of these Terms is legally binding. Translations are for convenience only."
+				]
 			},
-			"3": {
-				"title": "4. Deposits and Withdrawals",
-				"content": "All transactions are made using cryptocurrency. You are responsible for ensuring the accuracy of wallet addresses. HyperBetz is not responsible for transactions sent to incorrect addresses.",
-				"hasPoints": "false"
+			"account": {
+				"title": "4. Account, Wallet Login & Security",
+				"intro": "HyperBetz uses Dynamic.xyz for wallet-based authentication and security measures to protect your account.",
+				"walletLogin": {
+					"title": "4.1 Wallet Login (Dynamic.xyz)",
+					"items": [
+						"HyperBetz uses Dynamic.xyz (or other supported connectors) for wallet-based login and authentication. By connecting a wallet, you confirm you are the lawful owner of that wallet and authorize HyperBetz to recognize that wallet as your account.",
+						"We never request your private keys. You must keep your wallet credentials and device secure. HyperBetz is not responsible for losses caused by compromised wallets or leaked private keys."
+					]
+				},
+				"registration": {
+					"title": "4.2 Registration Details",
+					"items": [
+						"You may be asked to provide contact details (email, username) for account communication. You must provide accurate information and keep it up to date.",
+						"You are responsible for all actions taken using your connected wallet."
+					]
+				},
+				"security": {
+					"title": "4.3 Multiple Accounts & Security",
+					"items": [
+						"Only one account per individual is permitted. Multiple accounts or attempts to circumvent limits may result in account suspension and fund forfeiture.",
+						"Enable any offered platform security features (for example, 2FA for associated services) and secure your own wallet.",
+						"Notify support immediately if you suspect unauthorized access."
+					]
+				}
 			},
-			"4": {
-				"title": "5. Gaming Rules",
-				"content": "All games are subject to their individual rules and RTP (Return to Player) percentages. Malfunction voids all pays and plays.",
-				"hasPoints": "false"
+			"eligibility": {
+				"title": "5. Eligibility & User Warranties",
+				"intro": "5.1 You represent and warrant that:",
+				"items": [
+					"You are at least 18 years old (or the minimum legal gambling age in your jurisdiction).",
+					"You are legally permitted to use online crypto gambling services where you are located.",
+					"You are the lawful owner of the wallet you connect.",
+					"You will not use VPNs or location spoofing to bypass regional restrictions.",
+					"You will not use the Service for illegal or commercial purposes.",
+					"You accept that cryptocurrency value may fluctuate and you bear all market risk."
+				],
+				"outro": "5.2 If you breach these warranties, HyperBetz may suspend or terminate access and withhold funds where permitted by law."
 			},
-			"5": {
-				"title": "6. Bonuses and Promotions",
-				"content": "Bonuses are subject to specific terms and wagering requirements. HyperBetz reserves the right to modify or cancel promotions at any time.",
-				"hasPoints": "false"
+			"restricted": {
+				"title": "6. Restricted Jurisdictions",
+				"content1": "6.1 HyperBetz does not accept players from jurisdictions where crypto gambling is prohibited or restricted. This includes, but is not limited to:",
+				"content2": "United States (and U.S. territories), United Kingdom, France, Netherlands, Spain, Germany, Australia, Austria, Comoros, Iran, North Korea, Sudan, Syria, and any jurisdiction listed on FATF blacklists.",
+				"content3": "6.2 Attempting to access the Service from a restricted jurisdiction, including via VPN or proxy, is a breach of these Terms and may lead to account closure and forfeiture of funds."
 			},
-			"7": {
-				"title": "7. Responsible Gambling",
-				"content": "HyperBetz promotes responsible gambling. We provide tools to help you control your gaming activity. Please gamble responsibly.",
-				"hasPoints": "false"
+			"crypto": {
+				"title": "7. Crypto Deposits & Withdrawals",
+				"policy": {
+					"title": "7.1 Crypto-Only Policy",
+					"items": [
+						"HyperBetz accepts deposits and withdrawals in supported cryptocurrencies only (e.g., BTC, ETH, USDT, TRX, BNB). No fiat, card, or bank-transfer deposits are accepted.",
+						"All deposits must originate from wallets you control. Deposits from third-party wallets are prohibited."
+					]
+				},
+				"deposits": {
+					"title": "7.2 Deposits",
+					"items": [
+						"Deposits are credited after the required blockchain confirmations. Network (gas) fees are payable by you.",
+						"HyperBetz may refuse or reverse deposits that appear to originate from blocked addresses or restricted sources."
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 Withdrawals",
+					"items": [
+						"Withdrawals are processed to the wallet address you provide. HyperBetz may require you to confirm the destination wallet prior to processing.",
+						"You must have sufficient cleared balance to cover a withdrawal. Withdrawals may be delayed to investigate suspected abuse or unusual activity."
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 Chargebacks & Reversals",
+					"items": [
+						"Crypto transactions are final on-chain. If HyperBetz incurs losses because of chargebacks or reversals from third-party service providers (rare with on-chain), we reserve the right to recover amounts or charge administrative fees."
+					]
+				}
 			},
-			"8": {
-				"title": "8. Prohibited Activities",
-				"content": "Users are prohibited from fraud, collusion, money laundering, using bots or automated systems, and any activity that violates applicable laws.",
-				"hasPoints": "false"
+			"kyc": {
+				"title": "8. No Routine Identity Verification (No KYC)",
+				"content1": "8.1 HyperBetz does not perform routine identity verification (KYC) as a condition of normal play. Users can connect a wallet via Dynamic.xyz and start playing without providing identity documents.",
+				"content2": "8.2 Notwithstanding the above, HyperBetz reserves the right to request information or suspend transactions if required to:",
+				"items": [
+					"Comply with a lawful order from the competent authorities:",
+					"Prevent, investigate, or remediate fraud, money-laundering, or other illegal activity",
+					"Or protect the security and integrity of the platform."
+				],
+				"content3": "8.3 If you refuse to provide such information when legally required, HyperBetz may restrict or close your account and delay or withhold withdrawals to the extent permitted by law."
 			},
-			"9": {
-				"title": "9. Intellectual Property",
-				"content": "All content on HyperBetz is protected by copyright and trademark laws. Unauthorized use is prohibited.",
-				"hasPoints": "false"
+			"fairPlay": {
+				"title": "9. Fair Play, Prohibited Conduct & Security",
+				"intro": "You must not:",
+				"items": [
+					"Use bots, scripts, automated play tools, or any unauthorized software.",
+					"Collude with other players or manipulate game outcomes.",
+					"Create multiple accounts to exploit bonuses or promotions.",
+					"Attempt to reverse or tamper with on-chain transactions.",
+					"Exploit game bugs or platform vulnerabilities."
+				],
+				"outro1": "Accounts found cheating, colluding, or exploiting the platform may be suspended, closed, or have balances forfeited.",
+				"outro2": "HyperBetz implements technical and behavioral monitoring to protect platform integrity."
 			},
-			"10": {
-				"title": "10. Limitation of Liability",
-				"content": "HyperBetz is not liable for indirect, incidental, or consequential damages arising from your use of the platform.",
-				"hasPoints": "false"
+			"bonuses": {
+				"title": "10. Bonuses & Promotions",
+				"items": [
+					"All bonus offers and promotions are subject to specific Bonus Terms stated with each offer.",
+					"Bonus abuse (including multiple accounts or rapid bonus switching) can lead to denial, reversal, or forfeiture of bonuses and closure of accounts.",
+					"Bonus wagering requirements must be met before withdrawing bonus-derived funds, as specified per promotion."
+				]
 			},
-			"11": {
-				"title": "11. Changes to Terms",
-				"content": "We reserve the right to modify these Terms at any time. Continued use of the platform constitutes acceptance of modified terms.",
-				"hasPoints": "false"
+			"playingRules": {
+				"title": "11. Playing Rules & Game Settlement",
+				"items": [
+					"Bets are accepted only once you receive on-screen confirmation. Bets placed with insufficient balance are void.",
+					"HyperBetz's internal logs and blockchain records are authoritative in case of disputes.",
+					"If an event is canceled, suspended, or otherwise compromised, HyperBetz will settle or void bets according to published game and market rules.",
+					"For provably-fair games, verification tools and server seeds (where applicable) are made available per game; server logs are final."
+				]
 			},
-			"12": {
-				"title": "12. Contact",
-				"content": "For questions about these Terms & Conditions, please contact us at support@hyperbetz.games.",
-				"hasPoints": "false"
+			"errors": {
+				"title": "12. Errors, Interruptions & Limits",
+				"intro": "HyperBetz is not liable for losses caused by:",
+				"items": [
+					"Internet or device failures",
+					"Blockchain delays, forks, or network congestion",
+					"Software bugs or third-party service outages"
+				],
+				"outro1": "HyperBetz reserves the right to void bets, adjust balances, or cancel transactions when errors or exploits are detected.",
+				"outro2": "We may set wagering limits, maximum wins, and other controls to protect users and the platform."
+			},
+			"suspension": {
+				"title": "13. Suspension, Closure & Fund Handling",
+				"intro": "HyperBetz may suspend or close accounts where:",
+				"items": [
+					"Terms are violated",
+					"Abuse, fraud, or suspicious behavior is detected",
+					"Legal or regulatory obligations require it"
+				],
+				"outro1": "On account closure, pending wagers may be canceled and remaining funds handled per applicable law and platform policy.",
+				"outro2": "HyperBetz may retain funds where necessary to resolve disputes, comply with lawful requests, or remediate losses."
+			},
+			"responsibleGaming": {
+				"title": "14. Responsible Gaming",
+				"items": [
+					"HyperBetz promotes responsible gambling. You may request: Self-exclusion, Deposit limits, or Temporary suspension.",
+					"If you suspect gambling harm, contact hyperbetz.games for immediate assistance.",
+					"Underage gambling (under 18 or the local legal age) is strictly prohibited. Accounts found to belong to minors will be closed and funds handled per policy."
+				]
+			},
+			"ip": {
+				"title": "15. Intellectual Property",
+				"content1": "All trademarks, logos, site content, software, and game assets on HyperBetz are owned or licensed by HyperBetz. Unauthorized copying, scraping, or redistribution is prohibited.",
+				"content2": "You are granted a limited, revocable license to access the Service for personal entertainment only."
+			},
+			"liability": {
+				"title": "16. Limitation of Liability",
+				"items": [
+					"To the fullest extent permitted by law, HyperBetz will not be liable for indirect, special, consequential or incidental losses, including lost profits or opportunity costs.",
+					"Our aggregate liability for any claim related to these Terms shall not exceed the value of your last deposit or an amount specified by applicable law.",
+					"Nothing in these Terms limits liability for death or personal injury caused by negligence where applicable law prohibits such limitation."
+				]
+			},
+			"disputes": {
+				"title": "17. Dispute Resolution & Governing Law",
+				"content": "In case of dispute, contact hyperbetz.games. We aim to resolve complaints quickly; escalate to management if needed."
+			},
+			"amendments": {
+				"title": "18. Amendments",
+				"content": "HyperBetz may amend these Terms at any time. Updated Terms will be posted on the Website. Continued use constitutes acceptance."
+			},
+			"miscellaneous": {
+				"title": "19. Miscellaneous",
+				"items": [
+					"These Terms constitute the entire agreement between you and HyperBetz regarding the Service.",
+					"If any clause is found unenforceable, it will be modified to the minimum extent necessary and the remaining provisions will remain in effect.",
+					"You may not assign your rights under these Terms. HyperBetz may assign or subcontract rights and obligations."
+				]
+			},
+			"contact": {
+				"title": "20. Contact",
+				"intro": "For support, complaints, or legal notices:"
 			}
 		}
 	},
