@@ -1834,7 +1834,7 @@
 				"title": "14. Responsible Gaming",
 				"items": [
 					"{siteName} promotes responsible gambling. You may request: Self-exclusion, Deposit limits, or Temporary suspension.",
-					"If you suspect gambling harm, contact support@{siteName} for immediate assistance.",
+					"If you suspect gambling harm, contact support@hyperbetz.games for immediate assistance.",
 					"Underage gambling (under 18 or the local legal age) is strictly prohibited. Accounts found to belong to minors will be closed and funds handled per policy."
 				]
 			},
@@ -1853,7 +1853,7 @@
 			},
 			"disputes": {
 				"title": "17. Dispute Resolution & Governing Law",
-				"content": "In case of dispute, contact support@{siteName}. We aim to resolve complaints quickly; escalate to management if needed."
+				"content": "In case of dispute, contact support@hyperbetz.games. We aim to resolve complaints quickly; escalate to management if needed."
 			},
 			"amendments": {
 				"title": "18. Amendments",
@@ -1870,8 +1870,8 @@
 			"contact": {
 				"title": "20. Contact",
 				"intro": "For support, complaints, or legal notices:",
-				"supportEmail": "General Support: support@{siteName}.games",
-				"affiliateEmail": "Affiliate Inquiries: affiliates@{siteName}.games",
+				"supportEmail": "General Support: support@hyperbetz.games",
+				"affiliateEmail": "Affiliate Inquiries: affiliates@hyperbetz.games",
 				"registeredOffice": "Registered office: {siteName} N.V., Heelsumstraat 51, Willemstad, Curaçao"
 			}
 		}
@@ -2031,135 +2031,104 @@
 	},
 	"faqs": {
 		"title": "Frequently Asked Questions",
-		"subtitle": "Find answers to common questions about {siteName}",
-		"intro": "Browse our comprehensive FAQ section to find quick answers to your questions. Can't find what you're looking for? Contact our support team.",
+		"subtitle": "Everything you need to know about {siteName}",
+		"introTitle": "How can we help today?",
+		"intro": "Browse popular questions below or jump into live chat for instant assistance.",
+		"lastUpdated": "Last updated: January 2025",
+		"blockchainTransparency": {
+			"title": "Blockchain Transparency",
+			"paragraph1": "As a crypto-first casino, every transaction with {siteName} is recorded on-chain. You can trace deposits, wagers, and withdrawals directly on public block explorers.",
+			"paragraph2": "Use the explorers below to verify activity on the networks we currently support:",
+			"explorersTitle": "Popular block explorers:",
+			"guarantee": "Blockchain transparency ensures provable trust and instant payouts—no hidden processing or manual approvals."
+		},
 		"categories": {
-			"general": {
-				"title": "General Questions",
+			"accountRegistration": {
+				"title": "Account & Registration",
 				"items": {
 					"0": {
-						"question": "What is {siteName}?",
-						"answer": "{siteName} is a crypto-casino platform offering 5,000+ games including slots, live casino, sports betting, and more. We accept cryptocurrency deposits and provide instant withdrawals."
+						"question": "How do I get started on {siteName}?",
+						"answer": "Click ‘Sign Up’, connect a supported crypto wallet (MetaMask, WalletConnect, etc.), and authorize the connection. No lengthy forms or personal documents required."
 					},
 					"1": {
-						"question": "Is {siteName} licensed and regulated?",
-						"answer": "Yes, {siteName} operates under proper gaming licenses and follows strict regulatory standards to ensure fair play and player protection."
+						"question": "Do I need to create a username or password?",
+						"answer": "Your connected wallet serves as your secure login. You can set a display nickname in your profile settings if you like, but no password is needed."
 					},
 					"2": {
-						"question": "Which countries can access {siteName}?",
-						"answer": "{siteName} is available in most countries worldwide. However, some jurisdictions have restrictions. Please check our Terms & Conditions for specific country restrictions."
+						"question": "Can I manage more than one account?",
+						"answer": "Multiple accounts per person are not allowed. Managing several wallets for bonuses or circumventing limits may result in closure and fund forfeiture."
 					},
 					"3": {
-						"question": "Is my data safe with {siteName}?",
-						"answer": "Absolutely. We use military-grade encryption, secure servers, and comply with strict data protection regulations. Your information is never shared without your consent."
+						"question": "How do I update my contact details?",
+						"answer": "Open Settings → Profile. You can add an email for updates and security alerts or change your nickname anytime."
+					}
+				}
+			},
+			"depositsWithdrawals": {
+				"title": "Deposits & Withdrawals",
+				"items": {
+					"0": {
+						"question": "Which cryptocurrencies can I use?",
+						"answer": "{siteName} supports BTC, ETH, USDT (ERC20/TRC20), USDC, TRX, BNB, and other leading chains. Check the cashier for the full list before sending funds."
+					},
+					"1": {
+						"question": "How fast are deposits credited?",
+						"answer": "Funds appear once the network confirms your transaction. Most deposits clear within minutes; high network congestion may take slightly longer."
+					},
+					"2": {
+						"question": "What are the minimum and maximum deposit limits?",
+						"answer": "Limits vary by currency. Minimums are displayed on the deposit screen and maximums depend on your VIP level. Contact support for personalized limits."
+					},
+					"3": {
+						"question": "How do withdrawals work?",
+						"answer": "Select Withdraw, choose your coin, enter a wallet address you control, and confirm. {siteName} sends payouts instantly once internal checks pass."
 					},
 					"4": {
-						"question": "Can I play on mobile?",
-						"answer": "Yes! {siteName} is fully optimized for mobile devices. You can play all games directly from your mobile browser without downloading an app."
+						"question": "Will I ever need to provide KYC documents?",
+						"answer": "Routine play doesn’t require KYC. In rare cases (large payouts, security reviews, or regulatory obligations) we may request verification to keep your account safe."
 					}
 				}
 			},
-			"deposits": {
-				"title": "Deposits",
+			"gamesSecurity": {
+				"title": "Games & Security",
 				"items": {
 					"0": {
-						"question": "What cryptocurrencies can I deposit?",
-						"answer": "{siteName} supports major cryptocurrencies including Bitcoin (BTC), Ethereum (ETH), USDT, USDC, BNB, and many more."
+						"question": "Are the games provably fair?",
+						"answer": "All titles come from certified providers and use independent RNGs. We also publish RTP information and provider audit seals where available."
 					},
 					"1": {
-						"question": "How long do deposits take?",
-						"answer": "Crypto deposits are typically credited within 1-3 blockchain confirmations, usually taking 5-15 minutes depending on the network."
+						"question": "Can I view my betting history?",
+						"answer": "Yes. Go to Wallet → History to review deposits, wagers, wins, and withdrawals. You can export data for personal records."
 					},
 					"2": {
-						"question": "Is there a minimum deposit amount?",
-						"answer": "Yes, the minimum deposit varies by cryptocurrency. Check the deposit page for current minimums."
+						"question": "Does {siteName} offer demo play?",
+						"answer": "Many slots and table games provide a demo toggle so you can test gameplay without risking crypto. Live dealer games require real wagers."
 					},
 					"3": {
-						"question": "Are deposits charged any fees?",
-						"answer": "{siteName} does not charge deposit fees. However, blockchain network fees apply and are paid to miners, not to us."
+						"question": "How does {siteName} protect my funds?",
+						"answer": "We store operational balances in secure multi-sig wallets and monitor transactions 24/7 to block suspicious activity instantly."
 					}
 				}
 			},
-			"withdrawals": {
-				"title": "Withdrawals",
+			"responsibleGambling": {
+				"title": "Responsible Gambling",
 				"items": {
 					"0": {
-						"question": "How do I withdraw my winnings?",
-						"answer": "Go to your wallet, select the cryptocurrency you want to withdraw, enter your wallet address and amount, then confirm. Withdrawals are processed within 15 minutes."
+						"question": "What tools help me stay in control?",
+						"answer": "Use self-exclusion, cooling-off periods, and spend alerts inside your profile. Our support team can assist with custom limits if needed."
 					},
 					"1": {
-						"question": "Is there a withdrawal limit?",
-						"answer": "Standard withdrawal limits apply based on your account level. VIP players enjoy higher limits. Check your account settings for details."
-					},
-					"2": {
-						"question": "Do I need to verify my account?",
-						"answer": "Most withdrawals are instant without verification. However, larger withdrawals or suspicious activity may trigger KYC requirements for security."
-					},
-					"3": {
-						"question": "Can I cancel a withdrawal?",
-						"answer": "You can cancel a withdrawal request before it's processed. Once processing begins, cancellation is not possible."
-					}
-				}
-			},
-			"games": {
-				"title": "Games",
-				"items": {
-					"0": {
-						"question": "How many games does {siteName} offer?",
-						"answer": "We offer over 5,000 games from 50+ premium providers including slots, live casino, table games, and sports betting."
-					},
-					"1": {
-						"question": "Are the games fair?",
-						"answer": "Yes! All our games use certified Random Number Generators (RNG) and are regularly audited by independent testing agencies for fairness."
-					},
-					"2": {
-						"question": "Can I play games for free?",
-						"answer": "Many slots and table games offer demo mode where you can play for free without wagering real money."
-					}
-				}
-			},
-			"bonuses": {
-				"title": "Bonuses & Promotions",
-				"items": {
-					"0": {
-						"question": "Does {siteName} offer a welcome bonus?",
-						"answer": "Yes! New players receive a generous welcome bonus package. Check our promotions page for current offers."
-					},
-					"1": {
-						"question": "What is the Turnover Bonus program?",
-						"answer": "Our Turnover Bonus rewards your gaming activity automatically. The more you play, the higher your tier and bonus percentage (up to 20%)."
-					},
-					"2": {
-						"question": "Are there wagering requirements?",
-						"answer": "Most bonuses have wagering requirements. Check the specific terms of each promotion for details."
-					}
-				}
-			},
-			"account": {
-				"title": "Account Management",
-				"items": {
-					"0": {
-						"question": "How do I create an account?",
-						"answer": "Creating an account is easy! Click 'Sign Up', connect your crypto wallet, and you're ready to play. No lengthy registration forms needed."
-					},
-					"1": {
-						"question": "I forgot my password. What should I do?",
-						"answer": "Click 'Forgot Password' on the login page and follow the instructions to reset your password via email."
-					},
-					"2": {
-						"question": "Can I have multiple accounts?",
-						"answer": "No, each player is allowed only one account. Multiple accounts may result in closure and forfeiture of funds."
-					},
-					"3": {
-						"question": "How do I close my account?",
-						"answer": "Contact our support team at support@{siteName} to request account closure. Please withdraw any remaining balance first."
+						"question": "Where can I find professional help?",
+						"answer": "Visit our Responsible Gambling page for helpline links and organizations like Gamblers Anonymous, Gambling Therapy, and BeGambleAware."
 					}
 				}
 			}
 		},
-		"stillNeedHelp": {
-			"title": "Still Need Help?",
-			"content": "Can't find the answer you're looking for? Our support team is available 24/7 to assist you. Contact us at:"
+		"needMoreHelp": {
+			"title": "Need More Help?",
+			"intro": "Our specialists are online around the clock for anything you need—from wallet questions to VIP treatment.",
+			"contactTitle": "Reach us anytime:",
+			"liveChat": "Live chat (average reply under 60 seconds)"
 		}
 	}
 }
