@@ -61,27 +61,39 @@ export const DynamicGameCarouselList = () => {
 	// 3. All data transformation logic is encapsulated HERE.
 	const gameCategories = getUniqueValuesByKey(allGames, "category");
 
-	// Filter out sports categories to replace with Explore section
-	const filteredCategories = gameCategories.filter(
-		(category) => category !== "SPORTSBOOK" && category !== "SPORT BOOK"
+	// Reorder categories: Slots, Live Casino, Sports, then rest
+	const orderedCategories = gameCategories.filter((cat) => cat !== "-");
+	const slots = orderedCategories.filter((cat) => cat === "SLOT");
+	const liveCasino = orderedCategories.filter((cat) => cat === "LIVE CASINO");
+	const sports = orderedCategories.filter(
+		(cat) => cat === "SPORTSBOOK" || cat === "SPORT BOOK"
 	);
+	const others = orderedCategories.filter(
+		(cat) =>
+			cat !== "SLOT" &&
+			cat !== "LIVE CASINO" &&
+			cat !== "SPORTSBOOK" &&
+			cat !== "SPORT BOOK"
+	);
+	const finalCategories = [...slots, ...liveCasino, ...sports, ...others];
 
 	return (
 		<>
 			{/* Add Explore Section */}
 			<ExploreSection />
 
-			{filteredCategories.map((category) => {
-				//if name = "-" then skip
-				if (category === "-") return null;
+			{finalCategories.map((category) => {
 				const gamesForCategory = getGamesByCategory(
 					allGames,
 					category,
 					12
 				);
+
 				const categoryName = (() => {
 					if (category === "SLOT") return t("slots");
 					if (category === "LIVE CASINO") return t("liveCasino");
+					if (category === "SPORTS" || category === "SPORT BOOK")
+						return t("sports");
 					return category.charAt(0).toUpperCase() + category.slice(1);
 				})();
 				if (category === "SLOT") {
@@ -103,6 +115,17 @@ export const DynamicGameCarouselList = () => {
 							games={gamesForCategory}
 							title={t("liveCasino")}
 							icon={faCards}
+						/>
+					);
+				}
+				if (category === "SPORTSBOOK" || category === "SPORT BOOK") {
+					return (
+						<GameCarouselSection
+							key={category}
+							category={category}
+							games={gamesForCategory}
+							title="Sports"
+							icon={faFutbol}
 						/>
 					);
 				}

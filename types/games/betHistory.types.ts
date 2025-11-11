@@ -12,7 +12,12 @@ export type BetStatus =
 /**
  * Defines the possible game types for bet history.
  */
-export type BetGameType = "Live Casino" | "Slot" | "Sport Book" | "RNG";
+export type BetGameType =
+	| "Live Casino"
+	| "Slot"
+	| "Sport Book"
+	| "RNG"
+	| "Sports";
 
 /**
  * Defines the possible order options for bet history.

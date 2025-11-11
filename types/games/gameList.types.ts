@@ -14,6 +14,7 @@ export type GameType =
 	| "RNG"
 	| "Live Casino"
 	| "SPORTSBOOK"
+	| "SPORTS"
 	| "-";
 
 /**
