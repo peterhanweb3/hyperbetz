@@ -162,7 +162,7 @@
 
 	"defaults": {
 		"siteName": "Hyperbetz",
-		"siteTLD": ".games",
+		"siteDomain": "hyperbetz.games",
 		"organization": "Hyperbetz Gaming",
 		"description": "Your Gateway to Fun and Rewards - Experience the best online gaming with crypto, slots, live casino, and sports betting.",
 		"author": "Hyperbetz Team",

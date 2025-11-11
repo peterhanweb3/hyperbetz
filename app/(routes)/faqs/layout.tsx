@@ -6,14 +6,14 @@ import {
 } from "@/lib/seo/schema-generator";
 import {
 	interpolateSiteName,
-	interpolateSiteTLD,
+	interpolateSiteDomain,
 } from "@/lib/utils/site-config";
 
 const siteName = interpolateSiteName(`{siteName}`);
-const siteTLD = interpolateSiteTLD(`{siteTLD}`);
+const siteDomain = interpolateSiteDomain(`{siteDomain}`);
 
 export const metadata: Metadata = generateSEOMetadata({
-	title: `FAQs | ${siteName}${siteTLD} – Crypto Casino Help & Support`,
+	title: `FAQs | ${siteName} – Crypto Casino Help & Support`,
 	description: `Find answers to common ${siteName} questions. Learn about wallet login, deposits, withdrawals, fair play, and blockchain transparency.`,
 	keywords: [
 		`${siteName} FAQ`,
@@ -25,7 +25,7 @@ export const metadata: Metadata = generateSEOMetadata({
 	],
 	path: "/faqs",
 	pageType: "faqs",
-	ogTitle: `FAQs | ${siteName}${siteTLD} – Crypto Casino Help Center`,
+	ogTitle: `FAQs | ${siteName} – Crypto Casino Help Center`,
 	ogDescription: `Explore FAQs at ${siteName}. Learn how to connect your wallet, deposit crypto, withdraw winnings, and play provably fair blockchain games.`,
 	ogType: "website",
 	ogImage: "/assets/seo/og.png",
@@ -33,7 +33,7 @@ export const metadata: Metadata = generateSEOMetadata({
 		generateOrganizationSchema(),
 		generateWebPageSchema({
 			title: `FAQs – ${siteName} Crypto Casino Help Center`,
-			url: "https://hyperbetz.games/faqs",
+			url: `https://${siteDomain}/faqs`,
 			description: `Explore FAQs at ${siteName}. Learn how to connect your wallet, deposit crypto, withdraw winnings, and play provably fair blockchain games.`,
 		}),
 	],

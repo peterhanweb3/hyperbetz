@@ -6,11 +6,11 @@ import {
 } from "@/lib/seo/schema-generator";
 import {
 	interpolateSiteName,
-	interpolateSiteTLD,
+	interpolateSiteDomain,
 } from "@/lib/utils/site-config";
 
 const siteName = interpolateSiteName(`{siteName}`);
-const siteTLD = interpolateSiteTLD(`{siteTLD}`);
+const siteDomain = interpolateSiteDomain(`{siteDomain}`);
 
 // Generate SEO Metadata for Providers Page
 export const metadata: Metadata = generateSEOMetadata({
@@ -35,15 +35,15 @@ export const metadata: Metadata = generateSEOMetadata({
 	],
 	path: "/providers",
 	pageType: "providers",
-	ogTitle: `Top Game Providers | ${siteName}${siteTLD} – Pragmatic Play, NetEnt, Yggdrasil`,
-	ogDescription: `Explore leading casino providers at ${siteName}${siteTLD}. Play certified crypto slots and live dealer games from Pragmatic Play, Yggdrasil, NetEnt, and more. 100% fair and secure.`,
+	ogTitle: `Top Game Providers | ${siteName} – Pragmatic Play, NetEnt, Yggdrasil`,
+	ogDescription: `Explore leading casino providers at ${siteName}. Play certified crypto slots and live dealer games from Pragmatic Play, Yggdrasil, NetEnt, and more. 100% fair and secure.`,
 	ogType: "website",
 	ogImage: "/assets/seo/PROVIDERS.png",
 	schemas: [
 		generateOrganizationSchema(),
 		generateWebPageSchema({
 			title: `Game Providers at ${siteName} – Top Casino Studios`,
-			url: `https://${siteName.toLowerCase()}${siteTLD}/providers`,
+			url: `https://${siteDomain}/providers`,
 			description: `Explore 50+ trusted providers on ${siteName} – Pragmatic Play, Red Tiger, Microgaming & more. Fair, certified gaming.`,
 		}),
 	],

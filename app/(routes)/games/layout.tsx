@@ -6,11 +6,11 @@ import {
 } from "@/lib/seo/schema-generator";
 import {
 	interpolateSiteName,
-	interpolateSiteTLD,
+	interpolateSiteDomain,
 } from "@/lib/utils/site-config";
 
 const siteName = interpolateSiteName(`{siteName}`);
-const siteTLD = interpolateSiteTLD(`{siteTLD}`);
+const siteDomain = interpolateSiteDomain(`{siteDomain}`);
 
 // Generate SEO Metadata for Games Page
 export const metadata: Metadata = generateSEOMetadata({
@@ -30,15 +30,15 @@ export const metadata: Metadata = generateSEOMetadata({
 	],
 	path: "/games",
 	pageType: "games",
-	ogTitle: `All Games at ${siteName}${siteTLD} | Slots, Poker, Live Casino & Sports`,
-	ogDescription: `Play 5,000+ casino games at ${siteName}${siteTLD} — including crypto slots, live dealers, poker, and sports betting. Fast wallet payouts and provably fair gaming on every spin.`,
+	ogTitle: `All Games at ${siteName} | Slots, Poker, Live Casino & Sports`,
+	ogDescription: `Play 5,000+ casino games at ${siteName} — including crypto slots, live dealers, poker, and sports betting. Fast wallet payouts and provably fair gaming on every spin.`,
 	ogType: "website",
 	ogImage: "/assets/seo/GAMES.png",
 	schemas: [
 		generateOrganizationSchema(),
 		generateWebPageSchema({
 			title: `All Games on ${siteName} – Slots, Poker & Live Casino`,
-			url: `https://${siteName.toLowerCase()}${siteTLD}/games`,
+			url: `https://${siteDomain}/games`,
 			description: `Discover the full ${siteName} game list – slots, poker & live casino from top providers. Play instantly, win securely.`,
 		}),
 	],

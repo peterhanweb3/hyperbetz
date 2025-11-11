@@ -109,7 +109,7 @@ export default function FAQsPage() {
 				const answer = t(
 					`faqs.categories.accountRegistration.items.${i}.answer`
 				);
-				const reminderKey = `faqs.categories.accountRegistration.items.${i}.reminder`;
+				const reminderKey = `faqs.categories.accountRegistration.items.${0}.reminder`;
 				const reminder = t(reminderKey);
 				return {
 					question: t(

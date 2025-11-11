@@ -190,7 +190,7 @@ const AppSidebarComponent = ({ ...props }: ComponentProps<typeof Sidebar>) => {
 					staticGameCategories={navData.staticGameCategories}
 					providers={navData.providers}
 					allGames={allGames}
-					aboutSection={navData.aboutSection}
+					// aboutSection={navData.aboutSection}
 				/>
 			</SidebarContent>{" "}
 			<SidebarFooter className="border-t border-border/20 bg-card/20">

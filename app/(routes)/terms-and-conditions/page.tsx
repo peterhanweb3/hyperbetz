@@ -25,6 +25,7 @@ import Link from "next/link";
 export default function TermsPage() {
 	const t = useT();
 
+	const siteDomain = window?.location?.hostname || "hyperbetz.games";
 	return (
 		<div className="container mx-auto space-y-8 consistent-padding-x consistent-padding-y">
 			<PageHeader
@@ -408,12 +409,12 @@ export default function TermsPage() {
 					<p>{t("terms.sections.contact.intro")}</p>
 					<div className="mt-4">
 						<Link
-							href="https://hyperbetz.games"
+							href={`https://${siteDomain}`}
 							className="text-primary hover:underline font-medium"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							🌐 https://hyperbetz.games
+							{`🌐 https://${siteDomain}`}
 						</Link>
 					</div>
 				</ContentSection>

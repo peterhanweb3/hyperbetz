@@ -6,15 +6,15 @@ import {
 } from "@/lib/seo/schema-generator";
 import {
 	interpolateSiteName,
-	interpolateSiteTLD,
+	interpolateSiteDomain,
 } from "@/lib/utils/site-config";
 
 const siteName = interpolateSiteName(`{siteName}`);
-const siteTLD = interpolateSiteTLD(`{siteTLD}`);
+const siteDomain = interpolateSiteDomain(`{siteDomain}`);
 
 export const metadata: Metadata = generateSEOMetadata({
-	title: `Terms & Conditions | ${siteName}${siteTLD} – Crypto Casino Rules`,
-	description: `Read ${siteName}${siteTLD} Terms & Conditions. Learn about wallet login (Dynamic.xyz), crypto deposits, withdrawals, fair play, and responsible gaming policies.`,
+	title: `Terms & Conditions | ${siteName} – Crypto Casino Rules`,
+	description: `Read ${siteName} Terms & Conditions. Learn about wallet login (Dynamic.xyz), crypto deposits, withdrawals, fair play, and responsible gaming policies.`,
 	keywords: [
 		`${siteName} Terms and Conditions`,
 		`${siteName} crypto casino rules`,
@@ -24,15 +24,15 @@ export const metadata: Metadata = generateSEOMetadata({
 	],
 	path: "/terms-and-conditions",
 	pageType: "terms",
-	ogTitle: `Terms & Conditions | ${siteName}${siteTLD} (Crypto Wallet Casino)`,
-	ogDescription: `Review ${siteName}${siteTLD}’s Terms & Conditions. Understand Dynamic.xyz wallet login, crypto deposits, withdrawals, and platform rules.`,
+	ogTitle: `Terms & Conditions | ${siteName} (Crypto Wallet Casino)`,
+	ogDescription: `Review ${siteName}'s Terms & Conditions. Understand Dynamic.xyz wallet login, crypto deposits, withdrawals, and platform rules.`,
 	ogType: "website",
 	ogImage: "/assets/seo/og.png",
 	schemas: [
 		generateOrganizationSchema(),
 		generateWebPageSchema({
 			title: `Terms & Conditions - ${siteName}`,
-			url: `https://${siteName.toLowerCase()}${siteTLD}/terms-and-conditions`,
+			url: `https://${siteDomain}/terms-and-conditions`,
 			description: `${siteName} Terms & Conditions - User agreement and platform rules.`,
 		}),
 	],
