@@ -50,52 +50,71 @@ export default function BetHistoryActiveFiltersDisplay({
 	};
 
 	return (
-		<div className="mt-3 flex items-center justify-between p-3 rounded-lg border border-border/50 bg-primary/5 backdrop-blur-sm">
-			<div className="flex items-center gap-2 text-xs text-primary">
-				<FontAwesomeIcon icon={faFilter} className="h-3 w-3" />
-				<span className="font-medium">{t("activeFilters")}</span>
-				<div className="flex items-center gap-1">
-					{localFilters.betStatus !== "ALL" && (
-						<span className="px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20">
-							{t("statusLabel")}:{" "}
-							{t(getStatusTranslationKey(localFilters.betStatus))}
+		<div className="mt-3 p-3 rounded-lg border border-border/50 bg-primary/5 backdrop-blur-sm">
+			<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+				{/* Left section - Filter label and active filters */}
+				<div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs text-primary min-w-0">
+					<div className="flex items-center gap-2 flex-shrink-0">
+						<FontAwesomeIcon icon={faFilter} className="h-3 w-3" />
+						<span className="font-medium">
+							{t("activeFilters")}
 						</span>
-					)}
-					{localFilters.providerName !== "ALL_PROVIDERS" && (
-						<span className="px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20">
-							{t("providerLabel")}: {localFilters.providerName}
-						</span>
-					)}
-					{(localFilters.dateRange !== "last-30-days" ||
-						((localFilters.dateRange as string) === "custom" &&
-							(localFilters.customDateFrom ||
-								localFilters.customDateTo))) && (
-						<span className="px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20">
-							{t("dateLabel")}:{" "}
-							{localFilters.dateRange === "custom"
-								? `${localFilters.customDateFrom || "?"} → ${
-										localFilters.customDateTo || "?"
-								  }`
-								: getDateRangeTranslation(
-										localFilters.dateRange
-								  )}
-						</span>
-					)}
+					</div>
+
+					{/* Active filter chips */}
+					<div className="flex items-center gap-1 flex-wrap">
+						{localFilters.betStatus !== "ALL" && (
+							<span className="px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20 whitespace-nowrap">
+								{t("statusLabel")}:{" "}
+								{t(
+									getStatusTranslationKey(
+										localFilters.betStatus
+									)
+								)}
+							</span>
+						)}
+						{localFilters.providerName !== "ALL_PROVIDERS" && (
+							<span className="px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20 whitespace-nowrap">
+								{t("providerLabel")}:{" "}
+								{localFilters.providerName}
+							</span>
+						)}
+						{(localFilters.dateRange !== "last-30-days" ||
+							((localFilters.dateRange as string) === "custom" &&
+								(localFilters.customDateFrom ||
+									localFilters.customDateTo))) && (
+							<span className="px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20 whitespace-nowrap">
+								{t("dateLabel")}:{" "}
+								{localFilters.dateRange === "custom"
+									? `${
+											localFilters.customDateFrom || "?"
+									  } → ${localFilters.customDateTo || "?"}`
+									: getDateRangeTranslation(
+											localFilters.dateRange
+									  )}
+							</span>
+						)}
+					</div>
 				</div>
-			</div>
-			<div className="flex items-center gap-1">
-				<button
-					type="button"
-					onClick={(e) => {
-						e.preventDefault();
-						e.stopPropagation();
-						onClearAll();
-					}}
-					className="cursor-pointer h-7 px-3 flex items-center justify-center rounded-md border border-border/50 bg-background/50 text-muted-foreground hover:bg-destructive/10 hover:text-destructive hover:border-destructive/50 transition-colors text-xs font-medium"
-				>
-					<FontAwesomeIcon icon={faTimes} className="h-3 w-3 mr-1" />
-					{t("clearAll")}
-				</button>
+
+				{/* Right section - Clear all button */}
+				<div className="flex items-center sm:justify-end">
+					<button
+						type="button"
+						onClick={(e) => {
+							e.preventDefault();
+							e.stopPropagation();
+							onClearAll();
+						}}
+						className="cursor-pointer h-7 px-3 flex items-center justify-center rounded-md border border-border/50 bg-background/50 text-muted-foreground hover:bg-destructive/10 hover:text-destructive hover:border-destructive/50 transition-colors text-xs font-medium whitespace-nowrap"
+					>
+						<FontAwesomeIcon
+							icon={faTimes}
+							className="h-3 w-3 mr-1"
+						/>
+						{t("clearAll")}
+					</button>
+				</div>
 			</div>
 		</div>
 	);

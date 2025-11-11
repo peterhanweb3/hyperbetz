@@ -1522,7 +1522,7 @@
 		"subtitle": "User Agreement and Platform Rules",
 		"lastUpdated": "January 2025",
 		"intro": {
-			"paragraph1": "By registering or connecting your wallet on www.{siteName}.games, you enter into a binding agreement with {siteName} N.V.",
+			"paragraph1": "By registering or connecting your wallet on www.{siteName}{siteTLD}, you enter into a binding agreement with {siteName} N.V.",
 			"paragraph2": "If you do not agree with any of these terms, do not access, use, or register on our Website. Read these Terms carefully. If you are uncertain about your rights or obligations, consult a legal advisor in your jurisdiction before using the Website."
 		},
 		"sections": {
@@ -1533,7 +1533,7 @@
 			},
 			"notice": {
 				"title": "2. Important Notice",
-				"content1": "2.1 By registering or connecting your wallet on www.{siteName}.games (the 'Website'), you enter into a binding agreement with {siteName} N.V. and agree to: (i) these Terms and Conditions; (ii) our Privacy Policy; (iii) our Cookie Policy; (iv) our Affiliate Terms; and (v) our Responsible Gaming Policy.",
+				"content1": "2.1 By registering or connecting your wallet on www.{siteName}{siteTLD} (the 'Website'), you enter into a binding agreement with {siteName} N.V. and agree to: (i) these Terms and Conditions; (ii) our Privacy Policy; (iii) our Cookie Policy; (iv) our Affiliate Terms; and (v) our Responsible Gaming Policy.",
 				"content2": "2.2 If you do not agree with any of these terms, do not access, use, or register on our Website.",
 				"content3": "2.3 Read these Terms carefully. If you are uncertain about your rights or obligations, consult a legal advisor in your jurisdiction before using the Website."
 			},
@@ -1690,7 +1690,7 @@
 				"title": "14. Responsible Gaming",
 				"items": [
 					"{siteName} promotes responsible gambling. You may request: Self-exclusion, Deposit limits, or Temporary suspension.",
-					"If you suspect gambling harm, visit {siteName}.games for immediate assistance.",
+					"If you suspect gambling harm, visit {siteName}{siteTLD} for immediate assistance.",
 					"Underage gambling (under 18 or the local legal age) is strictly prohibited. Accounts found to belong to minors will be closed and funds handled per policy."
 				]
 			},
@@ -1709,7 +1709,7 @@
 			},
 			"disputes": {
 				"title": "17. Dispute Resolution & Governing Law",
-				"content": "In case of dispute, visit {siteName}.games. We aim to resolve complaints quickly; escalate to management if needed."
+				"content": "In case of dispute, visit {siteName}{siteTLD}. We aim to resolve complaints quickly; escalate to management if needed."
 			},
 			"amendments": {
 				"title": "18. Amendments",
@@ -1726,8 +1726,8 @@
 			"contact": {
 				"title": "20. Contact",
 				"intro": "For support, complaints, or legal notices:",
-				"supportEmail": "General Support: visit {siteName}.games",
-				"affiliateEmail": "Affiliate Inquiries: visit {siteName}.games",
+				"supportEmail": "General Support: visit {siteName}{siteTLD}",
+				"affiliateEmail": "Affiliate Inquiries: visit {siteName}{siteTLD}",
 				"registeredOffice": "Registered office: {siteName} N.V., Heelsumstraat 51, Willemstad, Curaçao"
 			}
 		}
@@ -1782,7 +1782,7 @@
 			"intro": "We want all players to enjoy gambling safely and responsibly.|Our platform includes several tools and resources designed to help you manage your gameplay.",
 			"selfExclusion": {
 				"title": "🔹 Self-Exclusion",
-				"description": "You can request a temporary or permanent self-exclusion from your account. During this period, your access will be restricted, and you won't receive promotional materials.|To initiate self-exclusion, contact {siteName}.games — our team will assist you confidentially."
+				"description": "You can request a temporary or permanent self-exclusion from your account. During this period, your access will be restricted, and you won't receive promotional materials.|To initiate self-exclusion, contact {siteName}{siteTLD} — our team will assist you confidentially."
 			},
 			"coolingOff": {
 				"title": "🔹 Cooling-Off Periods",
@@ -1879,7 +1879,7 @@
 		"finalMessage": {
 			"paragraph1": "At {siteName}, your well-being is our top priority.|We encourage every player to make conscious, informed choices and enjoy a safe gaming experience.",
 			"paragraph2": "If you need advice, assistance, or self-exclusion support, contact us at",
-			"contact": "📧 {siteName}.games"
+			"contact": "📧 {siteName}{siteTLD}"
 		}
 	},
 	"faqs": {
@@ -1939,7 +1939,7 @@
 					},
 					"4": {
 						"question": "9. What if my transaction is delayed?",
-						"answer": "Blockchain transactions sometimes take longer due to network congestion or low gas fees.|If your deposit or withdrawal hasn't arrived:|Check your TXID on the blockchain explorer.|Confirm that you used the correct network and address.|If it's been more than an hour, contact {siteName}.games with your TXID and wallet details."
+						"answer": "Blockchain transactions sometimes take longer due to network congestion or low gas fees.|If your deposit or withdrawal hasn't arrived:|Check your TXID on the blockchain explorer.|Confirm that you used the correct network and address.|If it's been more than an hour, contact {siteName}{siteTLD} with your TXID and wallet details."
 					}
 				}
 			},
@@ -1952,7 +1952,7 @@
 					},
 					"1": {
 						"question": "11. What should I do if a game freezes or crashes?",
-						"answer": "If your game stops responding:|Refresh the page.|Clear your browser cache and reconnect your wallet.|If the issue persists, contact our support team via Live Chat or {siteName}.games.|Our team will assist you in restoring your game session or balance if affected."
+						"answer": "If your game stops responding:|Refresh the page.|Clear your browser cache and reconnect your wallet.|If the issue persists, contact our support team via Live Chat or {siteName}{siteTLD}.|Our team will assist you in restoring your game session or balance if affected."
 					},
 					"2": {
 						"question": "12. Can I use more than one wallet or account?",
@@ -1969,7 +1969,7 @@
 				"items": {
 					"0": {
 						"question": "14. Does {siteName} support responsible gambling?",
-						"answer": "Absolutely.|We encourage every player to enjoy gaming in moderation.|You can request a self-exclusion period or take a cooling-off break anytime by contacting {siteName}.games.|If you feel gambling is affecting your life, visit our Responsible Gambling page for resources and help organizations."
+						"answer": "Absolutely.|We encourage every player to enjoy gaming in moderation.|You can request a self-exclusion period or take a cooling-off break anytime by contacting {siteName}{siteTLD}.|If you feel gambling is affecting your life, visit our Responsible Gambling page for resources and help organizations."
 					},
 					"1": {
 						"question": "15. What should I do if I suspect a gambling problem?",
