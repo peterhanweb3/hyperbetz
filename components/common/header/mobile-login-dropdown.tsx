@@ -24,7 +24,10 @@ export default function MobileLoginDropdown({
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
 				{type == "top" ? (
-					<Button variant="outline" className="md:hidden text-sm">
+					<Button
+						variant="outline"
+						className="min-[800px]:hidden text-sm"
+					>
 						Login/Sign Up
 					</Button>
 				) : (

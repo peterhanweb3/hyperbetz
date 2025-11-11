@@ -141,7 +141,7 @@ export function Footer() {
 				},
 				{
 					label: t("footer.sections.legal.links.terms"),
-					href: "/terms",
+					href: "/terms-and-conditions",
 					icon: FileText,
 				},
 				{

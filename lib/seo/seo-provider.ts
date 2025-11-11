@@ -30,6 +30,10 @@ export interface SEOProps {
 	variables?: Record<string, string>;
 	schemas?: Array<Record<string, unknown>>;
 	customMetadata?: Partial<Metadata>;
+
+	// Optional properties for overriding OG title and description
+	ogTitle?: string;
+	ogDescription?: string;
 }
 
 /**
@@ -111,8 +115,8 @@ export function generateSEOMetadata(props: SEOProps): Metadata {
 				| "website"
 				| "article"
 				| "profile",
-			title: fullTitle,
-			description,
+			title: props.ogTitle || fullTitle, // Allow manual override of OG title
+			description: props.ogDescription || description, // Allow manual override of OG description
 			url: canonical,
 			siteName: config.defaults.siteName,
 			locale:

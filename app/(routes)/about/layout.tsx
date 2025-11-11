@@ -4,16 +4,21 @@ import {
 	generateOrganizationSchema,
 	generateWebPageSchema,
 } from "@/lib/seo/schema-generator";
+import {
+	interpolateSiteName,
+	interpolateSiteTLD,
+} from "@/lib/utils/site-config";
 
+const siteName = interpolateSiteName(`{siteName}`);
+const siteTLD = interpolateSiteTLD(`{siteTLD}`);
 // Generate SEO Metadata for About Page
 export const metadata: Metadata = generateSEOMetadata({
-	title: "About HyperBetz | Trusted Global Online Casino Platform",
-	description:
-		"Learn about HyperBetz — a secure, global casino platform offering slots, live casino, sports betting, and poker. Fair, fast, and built for real players.",
+	title: `About ${siteName} | Trusted Global Online Casino Platform`,
+	description: `Learn about ${siteName} — a secure, global casino platform offering slots, live casino, sports betting, and poker. Fair, fast, and built for real players.`,
 	keywords: [
-		"About HyperBetz",
-		"HyperBetz casino",
-		"HyperBetz games",
+		`About ${siteName}`,
+		`${siteName} casino`,
+		`${siteName} games`,
 		"global online casino",
 		"secure casino platform",
 		"online casino platform",
@@ -28,15 +33,16 @@ export const metadata: Metadata = generateSEOMetadata({
 	],
 	path: "/about",
 	pageType: "about",
+	ogTitle: `About ${siteName}${siteTLD} | Trusted Global Crypto Casino Platform`,
+	ogDescription: `Discover ${siteName}${siteTLD} — a secure, provably fair crypto casino offering 5,000+ games, live tables, and sports betting. Built on blockchain for fairness, speed, and transparency`,
 	ogType: "website",
 	ogImage: "/assets/seo/og.png",
 	schemas: [
 		generateOrganizationSchema(),
 		generateWebPageSchema({
-			title: "About HyperBetz | Trusted Global Online Casino Platform",
-			url: "https://hyperbetz.com/about",
-			description:
-				"Learn about HyperBetz — a secure, global casino platform offering slots, live casino, sports betting, and poker. Fair, fast, and built for real players.",
+			title: `About ${siteName} | Trusted Global Online Casino Platform`,
+			url: `https://${siteName.toLowerCase()}${siteTLD}/about`,
+			description: `Learn about ${siteName} — a secure, global casino platform offering slots, live casino, sports betting, and poker. Fair, fast, and built for real players.`,
 		}),
 	],
 });

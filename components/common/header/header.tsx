@@ -126,25 +126,45 @@ export function PageHeader({ className }: { className?: string }) {
 				<DropdownMenuSeparator />
 				<DropdownMenuGroup>
 					<DropdownMenuItem onClick={() => router.push("/profile")}>
-						<FontAwesomeIcon icon={faUser} fontSize={20} aria-hidden="true" />
+						<FontAwesomeIcon
+							icon={faUser}
+							fontSize={20}
+							aria-hidden="true"
+						/>
 						<span>{tHeader("profile")}</span>
 					</DropdownMenuItem>
 					<DropdownMenuItem onClick={handleCashirClick}>
-						<FontAwesomeIcon icon={faWallet} fontSize={20} aria-hidden="true" />
+						<FontAwesomeIcon
+							icon={faWallet}
+							fontSize={20}
+							aria-hidden="true"
+						/>
 						<span>{tHeader("cashier")}</span>
 					</DropdownMenuItem>
 					<DropdownMenuItem
 						onClick={() => router.push("/history?section=bet")}
 					>
-						<FontAwesomeIcon icon={faChartLineUp} fontSize={20} aria-hidden="true" />
+						<FontAwesomeIcon
+							icon={faChartLineUp}
+							fontSize={20}
+							aria-hidden="true"
+						/>
 						<span>{tHeader("winLoss")}</span>
 					</DropdownMenuItem>
 					<DropdownMenuItem onClick={() => router.push("/affiliate")}>
-						<FontAwesomeIcon icon={faUsers} fontSize={20} aria-hidden="true" />
+						<FontAwesomeIcon
+							icon={faUsers}
+							fontSize={20}
+							aria-hidden="true"
+						/>
 						<span>{tHeader("affiliate")}</span>
 					</DropdownMenuItem>
 					<DropdownMenuItem onClick={() => router.push("/bonus")}>
-						<FontAwesomeIcon icon={faGift} fontSize={20} aria-hidden="true" />
+						<FontAwesomeIcon
+							icon={faGift}
+							fontSize={20}
+							aria-hidden="true"
+						/>
 						<span>{tHeader("turnoverBonus")}</span>
 					</DropdownMenuItem>
 				</DropdownMenuGroup>
@@ -173,7 +193,11 @@ export function PageHeader({ className }: { className?: string }) {
 							variant="outline"
 							size="icon"
 							onClick={toggleChat}
-							aria-label={`${tHeader("liveChat")}${messageCount > 0 ? ` - ${messageCount} unread messages` : ''}`}
+							aria-label={`${tHeader("liveChat")}${
+								messageCount > 0
+									? ` - ${messageCount} unread messages`
+									: ""
+							}`}
 							className="relative md:hidden"
 						>
 							<FontAwesomeIcon
@@ -292,7 +316,10 @@ export function PageHeader({ className }: { className?: string }) {
 			)}
 		>
 			{/* Left Side: Brand Logo & Title */}
-			<nav className="flex items-center gap-2 cursor-pointer" aria-label="Main navigation">
+			<nav
+				className="flex items-center gap-2 cursor-pointer"
+				aria-label="Main navigation"
+			>
 				<Button
 					className="p-2"
 					variant={"outline"}
@@ -302,7 +329,11 @@ export function PageHeader({ className }: { className?: string }) {
 						toggleSidebar();
 					}}
 				>
-					<FontAwesomeIcon icon={faBars} className="w-6 h-6" aria-hidden="true" />
+					<FontAwesomeIcon
+						icon={faBars}
+						className="w-6 h-6"
+						aria-hidden="true"
+					/>
 					<span className="sr-only">{tHeader("toggleSidebar")}</span>
 				</Button>
 
@@ -315,7 +346,11 @@ export function PageHeader({ className }: { className?: string }) {
 						isLoggedIn ? tNavigation("lobby") : tNavigation("home")
 					}
 				>
-					<FontAwesomeIcon icon={faHome} className="w-4 h-4" aria-hidden="true" />
+					<FontAwesomeIcon
+						icon={faHome}
+						className="w-4 h-4"
+						aria-hidden="true"
+					/>
 				</Button>
 				{!isLoggedIn && (
 					<Button
@@ -343,7 +378,11 @@ export function PageHeader({ className }: { className?: string }) {
 					isLoggedIn ? tNavigation("lobby") : tNavigation("home")
 				}
 			>
-				<FontAwesomeIcon icon={faHome} className="w-4 h-4" aria-hidden="true" />
+				<FontAwesomeIcon
+					icon={faHome}
+					className="w-4 h-4"
+					aria-hidden="true"
+				/>
 			</Button>
 
 			{/* Center: Global search (desktop only) */}
@@ -393,7 +432,11 @@ export function PageHeader({ className }: { className?: string }) {
 							onClick={handleRefreshUserInfo}
 							disabled={!canRefresh || isRefreshing}
 							className="relative"
-							aria-label={isRefreshing ? "Refreshing user info" : "Refresh user info"}
+							aria-label={
+								isRefreshing
+									? "Refreshing user info"
+									: "Refresh user info"
+							}
 						>
 							<FontAwesomeIcon
 								icon={faArrowsRotate}
@@ -409,7 +452,9 @@ export function PageHeader({ className }: { className?: string }) {
 						{/* Wallet Control - Single Button (merged) */}
 						<Button
 							onClick={() => openTransactionModal("walletInfo")}
-							aria-label={`Open wallet - Current balance: ${(user?.balance ?? 0).toFixed(2)} USD`}
+							aria-label={`Open wallet - Current balance: ${(
+								user?.balance ?? 0
+							).toFixed(2)} USD`}
 							className="flex items-center gap-1.5 rounded-full p-0 bg-transparent hover:bg-transparent shadow-none
 								focus-visible:ring-0 focus-visible:ring-offset-0"
 						>
@@ -462,7 +507,7 @@ export function PageHeader({ className }: { className?: string }) {
 							type="top"
 						/>
 						{/* Desktop login - hidden on mobile */}
-						<div className="hidden md:flex md:gap-2">
+						<div className="hidden min-[800px]:flex md:gap-2">
 							<WalletConnect />
 						</div>
 					</>
@@ -474,10 +519,18 @@ export function PageHeader({ className }: { className?: string }) {
 						variant="outline"
 						size="icon"
 						onClick={toggleChat}
-						aria-label={`${tHeader("liveChat")}${messageCount > 0 ? ` - ${messageCount} unread messages` : ''}`}
+						aria-label={`${tHeader("liveChat")}${
+							messageCount > 0
+								? ` - ${messageCount} unread messages`
+								: ""
+						}`}
 						className="relative hidden lg:flex"
 					>
-						<FontAwesomeIcon icon={faComment} className="w-5 h-5" aria-hidden="true" />
+						<FontAwesomeIcon
+							icon={faComment}
+							className="w-5 h-5"
+							aria-hidden="true"
+						/>
 						{!isChatOpen && messageCount > 0 && (
 							<span
 								className="absolute -top-1 -right-1 bg-primary text-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center"
@@ -497,7 +550,11 @@ export function PageHeader({ className }: { className?: string }) {
 					onClick={() => setLanguageModalOpen(true)}
 					className="hidden lg:flex"
 				>
-					<FontAwesomeIcon icon={faGlobe} className="w-5 h-5" aria-hidden="true" />
+					<FontAwesomeIcon
+						icon={faGlobe}
+						className="w-5 h-5"
+						aria-hidden="true"
+					/>
 					<span className="sr-only">Language</span>
 				</Button>
 				{/* <ThemeToggle className="hidden lg:flex" /> */}

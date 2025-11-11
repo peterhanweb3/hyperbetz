@@ -69,12 +69,12 @@ function TransactionItem({ transaction }: TransactionItemProps) {
 					}`}
 				/>
 
-				<div className="relative p-4">
-					<div className="flex items-center justify-between">
+				<div className="relative p-3 sm:p-4">
+					<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
 						{/* Left section */}
-						<div className="flex items-center space-x-3">
+						<div className="flex items-start sm:items-center space-x-3 flex-1 min-w-0">
 							{/* Transaction type icon */}
-							<div className="relative">
+							<div className="relative flex-shrink-0">
 								<div
 									className={`flex h-10 w-10 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-105 ${
 										isDeposit
@@ -104,8 +104,8 @@ function TransactionItem({ transaction }: TransactionItemProps) {
 							</div>
 
 							{/* Transaction details */}
-							<div className="space-y-1">
-								<div className="flex items-center space-x-2">
+							<div className="space-y-1 flex-1 min-w-0">
+								<div className="flex items-center space-x-2 flex-wrap">
 									<h3 className="text-sm font-semibold text-foreground">
 										{isDeposit
 											? tProfile("deposit")
@@ -127,7 +127,7 @@ function TransactionItem({ transaction }: TransactionItemProps) {
 
 								<div className="space-y-0.5 text-xs text-muted-foreground">
 									<p className="flex items-center space-x-1">
-										<Clock className="h-2.5 w-2.5" />
+										<Clock className="h-2.5 w-2.5 flex-shrink-0" />
 										<span>
 											{new Date(
 												transaction.submit_date
@@ -140,9 +140,9 @@ function TransactionItem({ transaction }: TransactionItemProps) {
 										</span>
 									</p>
 
-									<div className="flex items-center space-x-3 text-xs">
+									<div className="flex items-center space-x-3 text-xs flex-wrap">
 										<span className="flex items-center space-x-1">
-											<div className="h-1.5 w-1.5 rounded-full bg-accent" />
+											<div className="h-1.5 w-1.5 rounded-full bg-accent flex-shrink-0" />
 											<span>{transaction.network}</span>
 										</span>
 										<span className="text-muted-foreground/60">
@@ -151,7 +151,7 @@ function TransactionItem({ transaction }: TransactionItemProps) {
 										<span>{transaction.method}</span>
 									</div>
 
-									<p className="font-mono text-xs text-muted-foreground/80 truncate max-w-[120px]">
+									<p className="font-mono text-xs text-muted-foreground/80 truncate max-w-full sm:max-w-[120px]">
 										{transaction.transaction_code}
 									</p>
 								</div>
@@ -159,8 +159,8 @@ function TransactionItem({ transaction }: TransactionItemProps) {
 						</div>
 
 						{/* Right section - Amount */}
-						<div className="flex items-center space-x-2">
-							<div className="text-right">
+						<div className="flex items-center justify-between sm:justify-end space-x-2 sm:flex-shrink-0">
+							<div className="flex items-center gap-2 md:block text-left sm:text-right">
 								<p
 									className={`text-lg font-semibold tabular-nums ${
 										isDeposit
@@ -188,7 +188,7 @@ function TransactionItem({ transaction }: TransactionItemProps) {
 									type="button"
 									variant="ghost"
 									size="sm"
-									className="h-8 w-8 rounded-lg border border-border/50 bg-background/50 p-0 backdrop-blur-sm transition-all duration-300 hover:border-border hover:bg-primary/10 hover:scale-105"
+									className="h-8 w-8 flex-shrink-0 rounded-lg border border-border/50 bg-background/50 p-0 backdrop-blur-sm transition-all duration-300 hover:border-border hover:bg-primary/10 hover:scale-105"
 									onClick={() => {
 										// Use hash_url if available, otherwise construct URL for Polygon
 										const explorerUrl =
@@ -873,47 +873,60 @@ export function TransactionHistorySection() {
 						{/* Active filters summary */}
 						{((transactionStatus && transactionStatus !== "all") ||
 							dateRange !== "last-30-days") && (
-							<div className="mt-3 flex items-center justify-between p-3 rounded-lg border border-border/50 bg-primary/5 backdrop-blur-sm">
-								<div className="flex items-center gap-2 text-xs text-primary">
-									<Filter className="h-3 w-3" />
-									<span className="font-medium">
-										{t("activeFilters")}
-									</span>
-									<div className="flex items-center gap-1">
-										{transactionStatus &&
-											transactionStatus !== "all" && (
-												<span className="px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20">
-													{t("statusLabel")}:{" "}
-													{transactionStatus.toLocaleUpperCase() ==
-													"SUCCESS"
-														? t("success")
-														: transactionStatus ===
-														  "PENDING"
-														? t("pending")
-														: t("rejected")}
+							<div className="mt-3 p-3 rounded-lg border border-border/50 bg-primary/5 backdrop-blur-sm">
+								<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+									{/* Left section - Filter label and active filters */}
+									<div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs text-primary min-w-0">
+										<div className="flex items-center gap-2 flex-shrink-0">
+											<Filter className="h-3 w-3" />
+											<span className="font-medium">
+												{t("activeFilters")}
+											</span>
+										</div>
+
+										{/* Active filter chips */}
+										<div className="flex items-center gap-1 flex-wrap">
+											{transactionStatus &&
+												transactionStatus !== "all" && (
+													<span className="px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20 whitespace-nowrap">
+														{t("statusLabel")}:{" "}
+														{transactionStatus.toLocaleUpperCase() ==
+														"SUCCESS"
+															? t("success")
+															: transactionStatus ===
+															  "PENDING"
+															? t("pending")
+															: t("rejected")}
+													</span>
+												)}
+											{dateRange !== "last-30-days" && (
+												<span className="px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20 whitespace-nowrap">
+													{t("dateLabel")}:{" "}
+													{dateRange
+														.replace("-", " ")
+														.replace(/\b\w/g, (l) =>
+															l.toUpperCase()
+														)}
 												</span>
 											)}
-										{dateRange !== "last-30-days" && (
-											<span className="px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20">
-												{t("dateLabel")}:{" "}
-												{dateRange
-													.replace("-", " ")
-													.replace(/\b\w/g, (l) =>
-														l.toUpperCase()
-													)}
-											</span>
-										)}
+										</div>
 									</div>
-								</div>
-								<div
-									onClick={(e) => {
-										e.preventDefault();
-										e.stopPropagation();
-										handleClearFilters();
-									}}
-									className="cursor-pointer h-7 w-7 flex items-center justify-center rounded-md hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors"
-								>
-									<X className="h-3 w-3" />
+
+									{/* Right section - Clear button */}
+									<div className="flex items-center sm:justify-end">
+										<button
+											type="button"
+											onClick={(e) => {
+												e.preventDefault();
+												e.stopPropagation();
+												handleClearFilters();
+											}}
+											className="cursor-pointer h-7 px-3 flex items-center justify-center rounded-md border border-border/50 bg-background/50 text-muted-foreground hover:bg-destructive/10 hover:text-destructive hover:border-destructive/50 transition-colors text-xs font-medium whitespace-nowrap"
+										>
+											<X className="h-3 w-3 mr-1" />
+											{t("clearAll")}
+										</button>
+									</div>
 								</div>
 							</div>
 						)}
