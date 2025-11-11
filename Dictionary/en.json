@@ -1412,91 +1412,115 @@
 			"paragraph2": "{siteName} is a crypto-wallet-only casino. That means all deposits and withdrawals happen through cryptocurrency wallets. We take your privacy seriously and do our best to protect it, while also following the rules (like AML/KYC requirements) and keeping the platform safe and fair for everyone.",
 			"paragraph3": "If you use {siteName}, you're agreeing to this Privacy Policy."
 		},
-		"scopeAcceptance": {
-			"title": "Scope & Acceptance",
-			"content": "This policy covers everyone using {siteName}. Sometimes we update it. When we do, the new policy goes live on the site, and if you keep using {siteName} after that, it means you're on board with the changes."
-		},
-		"dataCollection": {
-			"title": "What Data We Collect",
-			"intro": "Since we're crypto wallet only, the data we gather reflects that. Here's what we collect:",
-			"sections": [
-				{
+		"sections": {
+			"scope": {
+				"title": "Scope & Acceptance",
+				"content": "This policy covers everyone using {siteName}. Sometimes we update it. When we do, the new policy goes live on the site, and if you keep using {siteName} after that, it means you're on board with the changes."
+			},
+			"dataCollection": {
+				"title": "What Data We Collect",
+				"intro": "Since we're crypto wallet only, the data we gather reflects that. Here's what we collect:",
+				"accountData": {
 					"title": "A. Account & Identity Data (when needed)",
-					"content": "Email (if you give it), display name, account ID.|Heads up: Crypto wallets usually keep things anonymous, but sometimes regulations require us to ask for your identity (KYC). We'll only ask when it's absolutely necessary, and we'll make it clear."
+					"email": "Email (if you give it), display name, account ID.",
+					"kyc": "Heads up: Crypto wallets usually keep things anonymous, but sometimes regulations require us to ask for your identity (KYC). We'll only ask when it's absolutely necessary, and we'll make it clear."
 				},
-				{
+				"walletData": {
 					"title": "B. Wallet & Transaction Data",
-					"content": "The crypto wallet addresses you connect or use here.|On-chain transaction hashes and timestamps (for deposits and withdrawals).|Transaction details we need to reconcile payments and spot fraud."
+					"addresses": "The crypto wallet addresses you connect or use here.",
+					"transactions": "On-chain transaction hashes and timestamps (for deposits and withdrawals).",
+					"metadata": "Transaction details we need to reconcile payments and spot fraud."
 				},
-				{
+				"technicalData": {
 					"title": "C. Technical & Usage Data",
-					"content": "IP address, rough location based on IP, device type, browser, and operating system.|Session logs, time stamps, games played, wagers, outcomes, pages you visit.|Cookies and analytics to make the site better and smoother for you."
+					"ip": "IP address, rough location based on IP, device type, browser, and operating system.",
+					"session": "Session logs, time stamps, games played, wagers, outcomes, pages you visit.",
+					"cookies": "Cookies and analytics to make the site better and smoother for you."
 				},
-				{
+				"securityData": {
 					"title": "D. Security & Risk Data",
-					"content": "Fraud signals, device fingerprints, risk scores from anti-fraud partners.|Records of disputes, chargebacks, and compliance checks (if they come up)."
+					"fraud": "Fraud signals, device fingerprints, risk scores from anti-fraud partners.",
+					"disputes": "Records of disputes, chargebacks, and compliance checks (if they come up).",
+					"note": "We don't collect sensitive stuff like your race, religion, or health unless the law requires it and you give clear permission."
 				}
-			],
-			"closing": "We don't collect sensitive stuff like your race, religion, or health unless the law requires it and you give clear permission."
-		},
-		"whyCollect": {
-			"title": "Why We Collect Data",
-			"intro": "We only use your data for clear, lawful reasons:",
-			"reasons": [
-				"To run the service: set up and manage accounts, handle wallet deposits/withdrawals, pay winnings.",
-				"For security: spot and stop abuse, fraud, and money laundering.",
-				"To keep things running smoothly: analytics, product upgrades, customer support.",
-				"For marketing (if you say yes): newsletters, promo offers—you always have the option to say no or change your mind later.",
-				"To protect the platform and look into any misuse."
-			],
-			"closing": "If you give us consent for something like marketing, you can take it back at any time."
-		},
-		"cryptoWallets": {
-			"title": "Crypto Wallets & On-Chain Data",
-			"paragraph1": "We only store wallet addresses and on-chain transaction info as long as we need to credit or debit your account, audit transactions, or meet legal requirements.",
-			"paragraph2": "On-chain data is public by nature. We can't hide blockchain activity, but we do combine it with our own records to keep your account accurate.",
-			"paragraph3": "If you connect a custodial wallet (like through a third-party provider), you agree to them sharing data with us so we can process your transactions."
-		},
-		"dataSharing": {
-			"title": "When We Share Data",
-			"intro": "We only share your info in a few cases:",
-			"cases": [
-				"With regulators or law enforcement if the law requires or to stop illegal activity.",
-				"With affiliates or third parties if there's a business transfer (like a merger or acquisition)—but always with the right protections.",
-				"With fraud prevention networks to keep the platform and our users safe."
-			],
-			"closing": "We never sell your personal info to advertisers."
-		},
-		"security": {
-			"title": "Security Measures",
-			"intro": "We use security measures you'd expect:",
-			"measures": [
-				"TLS/SSL encryption for data in transit, encrypted storage for sensitive info.",
-				"Access controls, detailed logging, and role-based permissions.",
-				"Regular security audits and vulnerability checks.",
-				"Multi-factor authentication (MFA) for our staff—and you can turn it on for your own account too."
-			],
-			"closing": "Remember: keep your wallet private keys and account details safe. We'll never ask for your private keys."
-		},
-		"cookies": {
-			"title": "Cookies & Tracking",
-			"content": "We use cookies and similar tools to make the site work, analyze traffic, and (if you agree) for marketing. You can control cookies in your browser settings, but if you turn off essential ones, some things might stop working."
-		},
-		"minors": {
-			"title": "Children & Minimum Age",
-			"content": "You have to be 18 or older (or whatever your local law says) to use {siteName}. We actively block underage users and will delete any data if we find out a minor signed up."
-		},
-		"breach": {
-			"title": "Breach Notification",
-			"content": "If there's ever a data breach that puts your rights at risk, we'll notify you and the relevant authorities as the law requires, and we'll work to fix things fast."
-		},
-		"changes": {
-			"title": "Changes to This Policy",
-			"content": "We can change this Privacy Policy. If there's a big update, we'll post it on the site and let you know directly when it makes sense."
-		},
-		"contact": {
-			"title": "Contact",
-			"content": "Got questions or requests?|Visit us at {siteDomain} – Global Casino for Slots, Sports & Live Games | {siteName}"
+			},
+			"purposes": {
+				"title": "Why We Collect Data",
+				"intro": "We only use your data for clear, lawful reasons:",
+				"items": [
+					{
+						"title": "To run the service",
+						"description": "set up and manage accounts, handle wallet deposits/withdrawals, pay winnings."
+					},
+					{
+						"title": "For security",
+						"description": "spot and stop abuse, fraud, and money laundering."
+					},
+					{
+						"title": "To keep things running smoothly",
+						"description": "analytics, product upgrades, customer support."
+					},
+					{
+						"title": "For marketing (if you say yes)",
+						"description": "newsletters, promo offers—you always have the option to say no or change your mind later."
+					},
+					{
+						"title": "To protect the platform",
+						"description": "and look into any misuse."
+					}
+				],
+				"outro": "If you give us consent for something like marketing, you can take it back at any time."
+			},
+			"cryptoWallet": {
+				"title": "Crypto Wallets & On-Chain Data",
+				"points": [
+					"We only store wallet addresses and on-chain transaction info as long as we need to credit or debit your account, audit transactions, or meet legal requirements.",
+					"On-chain data is public by nature. We can't hide blockchain activity, but we do combine it with our own records to keep your account accurate.",
+					"If you connect a custodial wallet (like through a third-party provider), you agree to them sharing data with us so we can process your transactions."
+				]
+			},
+			"dataSharing": {
+				"title": "When We Share Data",
+				"intro": "We only share your info in a few cases:",
+				"items": [
+					"With regulators or law enforcement if the law requires or to stop illegal activity.",
+					"With affiliates or third parties if there's a business transfer (like a merger or acquisition)—but always with the right protections.",
+					"With fraud prevention networks to keep the platform and our users safe."
+				],
+				"noSelling": "We never sell your personal info to advertisers."
+			},
+			"security": {
+				"title": "Security Measures",
+				"intro": "We use security measures you'd expect:",
+				"items": [
+					"TLS/SSL encryption for data in transit, encrypted storage for sensitive info.",
+					"Access controls, detailed logging, and role-based permissions.",
+					"Regular security audits and vulnerability checks.",
+					"Multi-factor authentication (MFA) for our staff—and you can turn it on for your own account too."
+				],
+				"warning": "Remember: keep your wallet private keys and account details safe. We'll never ask for your private keys."
+			},
+			"cookies": {
+				"title": "Cookies & Tracking",
+				"content": "We use cookies and similar tools to make the site work, analyze traffic, and (if you agree) for marketing. You can control cookies in your browser settings, but if you turn off essential ones, some things might stop working."
+			},
+			"minAge": {
+				"title": "Children & Minimum Age",
+				"content": "You have to be 18 or older (or whatever your local law says) to use {siteName}. We actively block underage users and will delete any data if we find out a minor signed up."
+			},
+			"breach": {
+				"title": "Breach Notification",
+				"content": "If there's ever a data breach that puts your rights at risk, we'll notify you and the relevant authorities as the law requires, and we'll work to fix things fast."
+			},
+			"changes": {
+				"title": "Changes to This Policy",
+				"content": "We can change this Privacy Policy. If there's a big update, we'll post it on the site and let you know directly when it makes sense."
+			},
+			"contact": {
+				"title": "Contact",
+				"intro": "Got questions or requests?",
+				"link": "🌐 https://{siteDomain}"
+			}
 		}
 	},
 	"terms": {
@@ -1724,118 +1748,123 @@
 			"ogTitle": "Responsible Gambling | {siteName} – Play Safe & Smart",
 			"ogDescription": "Discover {siteName} responsible gambling tools. Set limits, self-exclude, and access support for safe crypto casino gaming."
 		},
-		"intro": {
-			"paragraph1": "At {siteName}, we want gaming to be safe, fun, and something you can walk away from at any time. We're all about keeping things in balance—so you play for enjoyment, not to make money or fix your finances.",
-			"paragraph2": "If you're under 18, or below your area's legal age, you can't use our platform. We take that seriously."
-		},
-		"mission": {
-			"title": "Our Mission",
-			"intro": "We believe in clear, honest, and secure gaming. {siteName} exists to help you make smart choices and keep gambling from becoming a problem.",
-			"points": [
-				"Gambling is entertainment. It's not a way to get rich.",
-				"Know yourself, set limits, and don't overdo it.",
-				"We give you tools and resources to help you stay in control."
-			]
-		},
-		"whatItMeans": {
-			"title": "What Responsible Gambling Really Means",
-			"paragraph1": "Online gambling is everywhere these days. That makes it easier to lose track of time, money, or even why you started playing in the first place.",
-			"paragraph2": "Responsible gambling means knowing your boundaries, staying sharp, and not letting things get out of hand.",
-			"reminders": [
-				"Play for the fun of it, not for profit.",
-				"Don't try to win back losses. Take breaks if you need them.",
-				"Set a spending and time limit for yourself, and stick to it.",
-				"Never gamble when you're tired, stressed, or upset.",
-				"Don't use money that's meant for bills or other needs.",
-				"If it stops being fun, step away."
-			]
-		},
-		"selfCheck": {
-			"title": "Quick Self-Check: Are You Still in Control?",
-			"intro": "Be honest with yourself:",
-			"questions": [
-				"Do you lose track of time gambling?",
-				"Has it hurt your relationships or work?",
-				"Do you get annoyed when you can't play?",
-				"Are you gambling to escape boredom or stress?",
-				"Have you borrowed money or crypto just to keep playing?",
-				"Do you chase losses, betting more to try to win it back?"
-			],
-			"closing": "If you answered \"yes\" to several, it's time to rethink how you're playing and maybe reach out for help."
-		},
-		"tools": {
-			"title": "How {siteName} Helps You Stay on Track",
-			"intro": "We want you to enjoy yourself, but we also want you to stay safe.|Here's what we offer:",
-			"features": [
-				{
+		"sections": {
+			"intro": {
+				"paragraph1": "At {siteName}, we want gaming to be safe, fun, and something you can walk away from at any time. We're all about keeping things in balance—so you play for enjoyment, not to make money or fix your finances.",
+				"paragraph2": "If you're under 18, or below your area's legal age, you can't use our platform. We take that seriously."
+			},
+			"mission": {
+				"title": "Our Mission",
+				"intro": "We believe in clear, honest, and secure gaming. {siteName} exists to help you make smart choices and keep gambling from becoming a problem.",
+				"subtitle": "Here's what matters to us:",
+				"points": [
+					"Gambling is entertainment. It's not a way to get rich.",
+					"Know yourself, set limits, and don't overdo it.",
+					"We give you tools and resources to help you stay in control."
+				]
+			},
+			"whatItMeans": {
+				"title": "What Responsible Gambling Really Means",
+				"paragraph1": "Online gambling is everywhere these days. That makes it easier to lose track of time, money, or even why you started playing in the first place.",
+				"paragraph2": "Responsible gambling means knowing your boundaries, staying sharp, and not letting things get out of hand.",
+				"subtitle": "A few things to remember:",
+				"reminders": [
+					"Play for the fun of it, not for profit.",
+					"Don't try to win back losses. Take breaks if you need them.",
+					"Set a spending and time limit for yourself, and stick to it.",
+					"Never gamble when you're tired, stressed, or upset.",
+					"Don't use money that's meant for bills or other needs.",
+					"If it stops being fun, step away."
+				]
+			},
+			"selfCheck": {
+				"title": "Quick Self-Check: Are You Still in Control?",
+				"intro": "Be honest with yourself:",
+				"questions": [
+					"Do you lose track of time gambling?",
+					"Has it hurt your relationships or work?",
+					"Do you get annoyed when you can't play?",
+					"Are you gambling to escape boredom or stress?",
+					"Have you borrowed money or crypto just to keep playing?",
+					"Do you chase losses, betting more to try to win it back?"
+				],
+				"closing": "If you answered \"yes\" to several, it's time to rethink how you're playing and maybe reach out for help."
+			},
+			"tools": {
+				"title": "How {siteName} Helps You Stay on Track",
+				"intro": "We want you to enjoy yourself, but we also want you to stay safe.",
+				"subtitle": "Here's what we offer:",
+				"selfExclusion": {
 					"title": "Self-Exclusion",
 					"content": "Need a break? You can ask to block your account temporarily or forever. During this time, you won't be able to play or get promo emails. Just reach out to us at {siteName} and we'll handle it privately."
 				},
-				{
+				"coolingOff": {
 					"title": "Cooling-Off Periods",
 					"content": "If you feel things getting out of hand, take a break for 24 hours, a week, or a month. During this time, you can't connect your wallet to play."
 				},
-				{
+				"awareness": {
 					"title": "Deposit & Loss Awareness",
 					"content": "Since everything runs through crypto wallets, you can see all your deposits and bets right on the blockchain. Keep an eye on your activity so you always know where you stand."
 				}
-			]
-		},
-		"minors": {
-			"title": "Protecting Minors",
-			"intro": "No gambling for anyone under 18. We mean it.|Parents and guardians, here are some tips:",
-			"tips": [
-				"Use passwords or lock your devices.",
-				"Don't save wallet info on shared computers or phones.",
-				"Always log out if you're stepping away.",
-				"Use tools like NetNanny or GamBlock to block gambling sites.",
-				"Check in on your kids' online activity."
-			],
-			"closing": "If we find out someone underage is playing, we'll shut down their account and cancel any winnings."
-		},
-		"support": {
-			"title": "Need Support? You're Not Alone",
-			"intro": "If gambling starts hurting your mood, relationships, or finances, please reach out. Here are some organizations that can help, no matter where you are:",
-			"organizations": [
-				{
-					"name": "GamCare",
-					"url": "GamCare - Founder of the National Gambling Helpline"
-				},
-				{
-					"name": "Gambling Therapy",
-					"url": "Gambling Therapy - Advice and support for problem gambling"
-				},
-				{
-					"name": "Gamblers Anonymous",
-					"url": "Home - Gamblers Anonymous"
-				},
-				{
-					"name": "National Council on Problem Gambling",
-					"url": "Home - National Council on Problem Gambling"
-				},
-				{
-					"name": "GamTalk",
-					"url": "https://www.gamtalk.org"
-				}
-			],
-			"closing": "They offer self-tests, live chat, and local support groups."
-		},
-		"commitment": {
-			"title": "How {siteName} Stays Responsible",
-			"principles": [
-				"Transparency: Every game is provably fair and blockchain-verified.",
-				"Security: Your sessions are always protected by Dynamic.xyz wallet login. No passwords, no KYC.",
-				"Autonomy: You're in charge. Disconnect anytime.",
-				"Education: We help you understand risks and keep you informed.",
-				"Community Support: Our team is here for you, 24/7."
-			]
-		},
-		"finalThoughts": {
-			"title": "Final Thoughts",
-			"paragraph1": "Gambling should be enjoyable, social, and balanced. Before you play, set a time limit. Don't chase losses or play when you're upset. Treat any winnings as a nice bonus, not a paycheck. Play smart, and don't be afraid to ask for help if you need it.",
-			"paragraph2": "Don't let gambling spill into your work or relationships. If it stops being fun, just walk away.",
-			"paragraph3": "At {siteName}, we care about your well-being. Make smart choices, play safe, and look out for yourself.",
-			"contact": "Need help, advice, or want to take a break? Reach out anytime at support@{siteName}."
+			},
+			"minors": {
+				"title": "Protecting Minors",
+				"intro": "No gambling for anyone under 18. We mean it.",
+				"subtitle": "Parents and guardians, here are some tips:",
+				"tips": [
+					"Use passwords or lock your devices.",
+					"Don't save wallet info on shared computers or phones.",
+					"Always log out if you're stepping away.",
+					"Use tools like NetNanny or GamBlock to block gambling sites.",
+					"Check in on your kids' online activity."
+				],
+				"closing": "If we find out someone underage is playing, we'll shut down their account and cancel any winnings."
+			},
+			"support": {
+				"title": "Need Support? You're Not Alone",
+				"intro": "If gambling starts hurting your mood, relationships, or finances, please reach out. Here are some organizations that can help, no matter where you are:",
+				"organizations": [
+					{
+						"name": "GamCare",
+						"url": "https://www.gamcare.org.uk"
+					},
+					{
+						"name": "Gambling Therapy",
+						"url": "https://www.gamblingtherapy.org"
+					},
+					{
+						"name": "Gamblers Anonymous",
+						"url": "https://www.gamblersanonymous.org"
+					},
+					{
+						"name": "National Council on Problem Gambling",
+						"url": "https://www.ncpgambling.org"
+					},
+					{
+						"name": "GamTalk",
+						"url": "https://www.gamtalk.org"
+					}
+				],
+				"closing": "They offer self-tests, live chat, and local support groups."
+			},
+			"commitment": {
+				"title": "How {siteName} Stays Responsible",
+				"subtitle": "We stick to these principles:",
+				"principles": [
+					"Transparency: Every game is provably fair and blockchain-verified.",
+					"Security: Your sessions are always protected by Dynamic.xyz wallet login. No passwords, no KYC.",
+					"Autonomy: You're in charge. Disconnect anytime.",
+					"Education: We help you understand risks and keep you informed.",
+					"Community Support: Our team is here for you, 24/7."
+				]
+			},
+			"finalThoughts": {
+				"title": "Final Thoughts",
+				"paragraph1": "Gambling should be enjoyable, social, and balanced. Before you play, set a time limit. Don't chase losses or play when you're upset. Treat any winnings as a nice bonus, not a paycheck. Play smart, and don't be afraid to ask for help if you need it.",
+				"paragraph2": "Don't let gambling spill into your work or relationships. If it stops being fun, just walk away.",
+				"paragraph3": "At {siteName}, we care about your well-being. Make smart choices, play safe, and look out for yourself.",
+				"contact": "Need help, advice, or want to take a break? Reach out anytime at {siteName}."
+			}
 		}
 	},
 	"faqs": {
@@ -1951,12 +1980,12 @@
 			"keywords": "{siteName} Terms and Conditions, {siteName} crypto casino rules, Dynamic.xyz wallet login, {siteName} withdrawal policy, {siteName} fair play",
 			"h1": "Terms & Conditions – {siteName} Crypto Wallet Casino",
 			"ogTitle": "Terms & Conditions | {siteName} (Crypto Wallet Casino)",
-			"ogDescription": "Review {siteName}' Terms & Conditions. Understand Dynamic.xyz wallet login, crypto deposits, withdrawals, and platform rules."
+			"ogDescription": "Review {siteName}'s Terms & Conditions. Understand Dynamic.xyz wallet login, crypto deposits, withdrawals, and platform rules."
 		},
-		"sections": [
-			{
+		"sections": {
+			"ownership": {
 				"number": "1",
-				"title": "{siteName} OWNERSHIP",
+				"title": "HYPERBETZ.GAMES OWNERSHIP",
 				"clauses": [
 					{
 						"number": "1.1",
@@ -1968,13 +1997,13 @@
 					}
 				]
 			},
-			{
+			"importantNotice": {
 				"number": "2",
 				"title": "IMPORTANT NOTICE",
 				"clauses": [
 					{
 						"number": "2.1",
-						"content": "By registering or connecting your wallet on www.{siteName} (the \"Website\"), you enter into a binding agreement with {siteName} N.V. and agree to: (i) these Terms and Conditions; (ii) our Privacy Policy; (iii) our Cookie Policy; (iv) our Affiliate Terms; and (v) our Responsible Gaming Policy."
+						"content": "By registering or connecting your wallet on www.{siteDomain} (the \"Website\"), you enter into a binding agreement with {siteName} N.V. and agree to: (i) these Terms and Conditions; (ii) our Privacy Policy; (iii) our Cookie Policy; (iv) our Affiliate Terms; and (v) our Responsible Gaming Policy."
 					},
 					{
 						"number": "2.2",
@@ -1986,7 +2015,7 @@
 					}
 				]
 			},
-			{
+			"generalTerms": {
 				"number": "3",
 				"title": "GENERAL TERMS",
 				"clauses": [
@@ -2016,56 +2045,54 @@
 					}
 				]
 			},
-			{
+			"accountSecurity": {
 				"number": "4",
 				"title": "ACCOUNT, WALLET LOGIN & SECURITY",
-				"subsections": [
-					{
-						"title": "4.1 Wallet Login (Dynamic.xyz)",
-						"clauses": [
-							{
-								"number": "4.1.1",
-								"content": "{siteName} uses Dynamic.xyz (or other supported connectors) for wallet-based login and authentication. By connecting a wallet, you confirm you are the lawful owner of that wallet and authorize {siteName} to recognize that wallet as your account."
-							},
-							{
-								"number": "4.1.2",
-								"content": "We never request your private keys. You must keep your wallet credentials and device secure. {siteName} is not responsible for losses caused by compromised wallets or leaked private keys."
-							}
-						]
-					},
-					{
-						"title": "4.2 Registration Details",
-						"clauses": [
-							{
-								"number": "4.2.1",
-								"content": "You may be asked to provide contact details (email, username) for account communication. You must provide accurate information and keep it up to date."
-							},
-							{
-								"number": "4.2.2",
-								"content": "You are responsible for all actions taken using your connected wallet."
-							}
-						]
-					},
-					{
-						"title": "4.3 Multiple Accounts & Security",
-						"clauses": [
-							{
-								"number": "4.3.1",
-								"content": "Only one account per individual is permitted. Multiple accounts or attempts to circumvent limits may result in account suspension and fund forfeiture."
-							},
-							{
-								"number": "4.3.2",
-								"content": "Enable any offered platform security features (for example, 2FA for associated services) and secure your own wallet."
-							},
-							{
-								"number": "4.3.3",
-								"content": "Notify support immediately if you suspect unauthorized access."
-							}
-						]
-					}
-				]
+				"walletLogin": {
+					"title": "4.1 Wallet Login (Dynamic.xyz)",
+					"clauses": [
+						{
+							"number": "4.1.1",
+							"content": "{siteName} uses Dynamic.xyz (or other supported connectors) for wallet-based login and authentication. By connecting a wallet, you confirm you are the lawful owner of that wallet and authorize {siteName} to recognize that wallet as your account."
+						},
+						{
+							"number": "4.1.2",
+							"content": "We never request your private keys. You must keep your wallet credentials and device secure. {siteName} is not responsible for losses caused by compromised wallets or leaked private keys."
+						}
+					]
+				},
+				"registration": {
+					"title": "4.2 Registration Details",
+					"clauses": [
+						{
+							"number": "4.2.1",
+							"content": "You may be asked to provide contact details (email, username) for account communication. You must provide accurate information and keep it up to date."
+						},
+						{
+							"number": "4.2.2",
+							"content": "You are responsible for all actions taken using your connected wallet."
+						}
+					]
+				},
+				"multipleAccounts": {
+					"title": "4.3 Multiple Accounts & Security",
+					"clauses": [
+						{
+							"number": "4.3.1",
+							"content": "Only one account per individual is permitted. Multiple accounts or attempts to circumvent limits may result in account suspension and fund forfeiture."
+						},
+						{
+							"number": "4.3.2",
+							"content": "Enable any offered platform security features (for example, 2FA for associated services) and secure your own wallet."
+						},
+						{
+							"number": "4.3.3",
+							"content": "Notify support immediately if you suspect unauthorized access."
+						}
+					]
+				}
 			},
-			{
+			"eligibility": {
 				"number": "5",
 				"title": "ELIGIBILITY & USER WARRANTIES",
 				"clauses": [
@@ -2079,7 +2106,7 @@
 					}
 				]
 			},
-			{
+			"restrictedJurisdictions": {
 				"number": "6",
 				"title": "RESTRICTED JURISDICTIONS",
 				"clauses": [
@@ -2093,61 +2120,59 @@
 					}
 				]
 			},
-			{
+			"cryptoTransactions": {
 				"number": "7",
 				"title": "CRYPTO DEPOSITS & WITHDRAWALS",
-				"subsections": [
-					{
-						"title": "7.1 Crypto-Only Policy",
-						"clauses": [
-							{
-								"number": "7.1.1",
-								"content": "{siteName} accepts deposits and withdrawals in supported cryptocurrencies only (e.g., BTC, ETH, USDT, TRX, BNB). No fiat, card, or bank-transfer deposits are accepted."
-							},
-							{
-								"number": "7.1.2",
-								"content": "All deposits must originate from wallets you control. Deposits from third-party wallets are prohibited."
-							}
-						]
-					},
-					{
-						"title": "7.2 Deposits",
-						"clauses": [
-							{
-								"number": "7.2.1",
-								"content": "Deposits are credited after the required blockchain confirmations. Network (gas) fees are payable by you."
-							},
-							{
-								"number": "7.2.2",
-								"content": "{siteName} may refuse or reverse deposits that appear to originate from blocked addresses or restricted sources."
-							}
-						]
-					},
-					{
-						"title": "7.3 Withdrawals",
-						"clauses": [
-							{
-								"number": "7.3.1",
-								"content": "Withdrawals are processed to the wallet address you provide. {siteName} may require you to confirm the destination wallet prior to processing."
-							},
-							{
-								"number": "7.3.2",
-								"content": "You must have sufficient cleared balance to cover a withdrawal. Withdrawals may be delayed to investigate suspected abuse or unusual activity."
-							}
-						]
-					},
-					{
-						"title": "7.4 Chargebacks & Reversals",
-						"clauses": [
-							{
-								"number": "7.4.1",
-								"content": "Crypto transactions are final on-chain. If {siteName} incurs losses because of chargebacks or reversals from third-party service providers (rare with on-chain), we reserve the right to recover amounts or charge administrative fees."
-							}
-						]
-					}
-				]
+				"cryptoOnly": {
+					"title": "7.1 Crypto-Only Policy",
+					"clauses": [
+						{
+							"number": "7.1.1",
+							"content": "{siteName} accepts deposits and withdrawals in supported cryptocurrencies only (e.g., BTC, ETH, USDT, TRX, BNB). No fiat, card, or bank-transfer deposits are accepted."
+						},
+						{
+							"number": "7.1.2",
+							"content": "All deposits must originate from wallets you control. Deposits from third-party wallets are prohibited."
+						}
+					]
+				},
+				"deposits": {
+					"title": "7.2 Deposits",
+					"clauses": [
+						{
+							"number": "7.2.1",
+							"content": "Deposits are credited after the required blockchain confirmations. Network (gas) fees are payable by you."
+						},
+						{
+							"number": "7.2.2",
+							"content": "{siteName} may refuse or reverse deposits that appear to originate from blocked addresses or restricted sources."
+						}
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 Withdrawals",
+					"clauses": [
+						{
+							"number": "7.3.1",
+							"content": "Withdrawals are processed to the wallet address you provide. {siteName} may require you to confirm the destination wallet prior to processing."
+						},
+						{
+							"number": "7.3.2",
+							"content": "You must have sufficient cleared balance to cover a withdrawal. Withdrawals may be delayed to investigate suspected abuse or unusual activity."
+						}
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 Chargebacks & Reversals",
+					"clauses": [
+						{
+							"number": "7.4.1",
+							"content": "Crypto transactions are final on-chain. If {siteName} incurs losses because of chargebacks or reversals from third-party service providers (rare with on-chain), we reserve the right to recover amounts or charge administrative fees."
+						}
+					]
+				}
 			},
-			{
+			"noKyc": {
 				"number": "8",
 				"title": "NO ROUTINE IDENTITY VERIFICATION (NO KYC)",
 				"clauses": [
@@ -2165,7 +2190,7 @@
 					}
 				]
 			},
-			{
+			"fairPlay": {
 				"number": "9",
 				"title": "FAIR PLAY, PROHIBITED CONDUCT & SECURITY",
 				"clauses": [
@@ -2183,7 +2208,7 @@
 					}
 				]
 			},
-			{
+			"bonuses": {
 				"number": "10",
 				"title": "BONUSES & PROMOTIONS",
 				"clauses": [
@@ -2201,7 +2226,7 @@
 					}
 				]
 			},
-			{
+			"gameRules": {
 				"number": "11",
 				"title": "PLAYING RULES & GAME SETTLEMENT",
 				"clauses": [
@@ -2223,7 +2248,7 @@
 					}
 				]
 			},
-			{
+			"errors": {
 				"number": "12",
 				"title": "ERRORS, INTERRUPTIONS & LIMITS",
 				"clauses": [
@@ -2241,7 +2266,7 @@
 					}
 				]
 			},
-			{
+			"suspension": {
 				"number": "13",
 				"title": "SUSPENSION, CLOSURE & FUND HANDLING",
 				"clauses": [
@@ -2259,7 +2284,7 @@
 					}
 				]
 			},
-			{
+			"responsibleGaming": {
 				"number": "14",
 				"title": "RESPONSIBLE GAMING",
 				"clauses": [
@@ -2277,7 +2302,7 @@
 					}
 				]
 			},
-			{
+			"intellectualProperty": {
 				"number": "15",
 				"title": "INTELLECTUAL PROPERTY",
 				"clauses": [
@@ -2291,7 +2316,7 @@
 					}
 				]
 			},
-			{
+			"liability": {
 				"number": "16",
 				"title": "LIMITATION OF LIABILITY",
 				"clauses": [
@@ -2309,7 +2334,7 @@
 					}
 				]
 			},
-			{
+			"disputes": {
 				"number": "17",
 				"title": "DISPUTE RESOLUTION & GOVERNING LAW",
 				"clauses": [
@@ -2319,7 +2344,7 @@
 					}
 				]
 			},
-			{
+			"amendments": {
 				"number": "18",
 				"title": "AMENDMENTS",
 				"clauses": [
@@ -2329,7 +2354,7 @@
 					}
 				]
 			},
-			{
+			"miscellaneous": {
 				"number": "19",
 				"title": "MISCELLANEOUS",
 				"clauses": [
@@ -2347,16 +2372,12 @@
 					}
 				]
 			},
-			{
+			"contact": {
 				"number": "20",
 				"title": "CONTACT",
-				"clauses": [
-					{
-						"number": "20.1",
-						"content": "For support, complaints, or legal notices:|🌐 {siteName} – Global Casino for Slots, Sports & Live Games | {siteName}"
-					}
-				]
+				"content": "For support, complaints, or legal notices:",
+				"link": "🌐 https://{siteDomain}"
 			}
-		]
+		}
 	}
 }
