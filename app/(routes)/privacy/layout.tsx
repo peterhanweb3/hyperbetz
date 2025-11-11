@@ -36,7 +36,7 @@ export const metadata: Metadata = generateSEOMetadata({
 	schemas: [
 		generateOrganizationSchema(),
 		generateWebPageSchema({
-			title: `Privacy Policy - ${siteName}`,
+			title: `Privacy Policy - ${siteName} Crypto Casino`,
 			url: `https://${siteDomain}/privacy`,
 			description: `${siteName} Privacy Policy - How we collect, use, store and protect your personal and transaction data.`,
 		}),

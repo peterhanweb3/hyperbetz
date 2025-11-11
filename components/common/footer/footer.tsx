@@ -14,6 +14,7 @@ import {
 	Info,
 } from "lucide-react";
 import { SeoContentSection } from "./seo-content-section";
+import { interpolateSiteName } from "@/lib/utils/site-config";
 
 export function Footer() {
 	const t = useT();
@@ -217,6 +218,7 @@ export function Footer() {
 		},
 	];
 
+	const siteName = interpolateSiteName(`{siteName}`);
 	return (
 		<>
 			{/* SEO Content Section */}
@@ -330,7 +332,7 @@ export function Footer() {
 								href="/"
 								className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent"
 							>
-								HyperBetz
+								{siteName}
 							</Link>
 							<div className="text-sm tracking-wider max-w-3xl text-muted-foreground space-y-2">
 								{t("footer.description")

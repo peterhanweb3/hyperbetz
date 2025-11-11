@@ -25,7 +25,7 @@ export const metadata: Metadata = generateSEOMetadata({
 	path: "/terms-and-conditions",
 	pageType: "terms",
 	ogTitle: `Terms & Conditions | ${siteName} (Crypto Wallet Casino)`,
-	ogDescription: `Review ${siteName}'s Terms & Conditions. Understand Dynamic.xyz wallet login, crypto deposits, withdrawals, and platform rules.`,
+	ogDescription: `Review ${siteName}' Terms & Conditions. Understand Dynamic.xyz wallet login, crypto deposits, withdrawals, and platform rules.`,
 	ogType: "website",
 	ogImage: "/assets/seo/og.png",
 	schemas: [
