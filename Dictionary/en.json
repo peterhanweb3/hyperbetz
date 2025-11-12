@@ -1788,7 +1788,7 @@
 			"intro": "We want you to enjoy yourself, but we also want you to stay safe.|Here's what we offer:",
 			"selfExclusion": {
 				"title": "Self-Exclusion",
-				"description": "Need a break? You can ask to block your account temporarily or forever. During this time, you won't be able to play or get promo emails. Just reach out to us at {siteDomain} and we'll handle it privately."
+				"description": "Need a break? You can ask to block your account temporarily or forever. During this time, you won't be able to play or get promo emails. Just reach out to us at {siteName} and we'll handle it privately."
 			},
 			"coolingOff": {
 				"title": "Cooling-Off Periods",
@@ -1883,24 +1883,24 @@
 			}
 		},
 		"finalMessage": {
-			"paragraph1": "Don't let gambling spill into your work or relationships. If it stops being fun, just walk away.|At {siteDomain}, we care about your well-being. Make smart choices, play safe, and look out for yourself.",
+			"paragraph1": "Don't let gambling spill into your work or relationships. If it stops being fun, just walk away.|At {siteName}, we care about your well-being. Make smart choices, play safe, and look out for yourself.",
 			"paragraph2": "Don't let gambling spill into your work or relationships. If it stops being fun, just walk away.",
-			"contact": "Need help, advice, or want to take a break? Reach out anytime at support@{siteDomain}."
+			"contact": "Need help, advice, or want to take a break? Reach out anytime at {siteName}."
 		}
 	},
 	"faqs": {
-		"title": "❓ FAQs – {siteDomain}",
-		"subtitle": "Find answers to common {siteDomain} questions. Learn about wallet login, deposits, withdrawals, fair play, and blockchain transparency.",
+		"title": "FAQs – {siteName}",
+		"subtitle": "Find answers to common {siteName} questions. Learn about wallet login, deposits, withdrawals, fair play, and blockchain transparency.",
 		"lastUpdated": "Last Updated: January 2025",
-		"introTitle": "❓ faqs.introTitle",
-		"intro": "Welcome to the {siteDomain} FAQ Center, where you'll find quick answers to the most common questions about our crypto gaming platform.|If you can't find your answer here, our 24/7 support team is always ready to help at {siteDomain}.",
+		"introTitle": "FAQs {siteName}",
+		"intro": "Welcome to the {siteName} FAQ Center, where you'll find quick answers to the most common questions about our crypto gaming platform.|If you can't find your answer here, our 24/7 support team is always ready to help at {siteName}.",
 		"categories": {
 			"accountRegistration": {
 				"title": "🔹 Account & Registration",
 				"items": {
 					"0": {
 						"question": "1. Can I register on your website?",
-						"answer": "Yes — registration is open to anyone 18 years or older (or the legal age of majority in your jurisdiction).|You must also ensure that online gaming is legal where you reside.|At {siteDomain}, you don't need traditional sign-ups or passwords.|Simply connect your wallet via Dynamic.xyz to start playing instantly.|👉 For legal and compliance details, please review our Terms & Conditions.",
+						"answer": "Yes — registration is open to anyone 18 years or older (or the legal age of majority in your jurisdiction).|You must also ensure that online gaming is legal where you reside.|At {siteName}, you don't need traditional sign-ups or passwords.|Simply connect your wallet via Dynamic.xyz to start playing instantly.|👉 For legal and compliance details, please review our Terms & Conditions.",
 						"reminder": "Reminder: Gambling can be addictive. Please play responsibly and know your limits."
 					},
 					"1": {
@@ -1938,7 +1938,7 @@
 					},
 					"4": {
 						"question": "9. What if my transaction is delayed?",
-						"answer": "Blockchain transactions sometimes take longer due to network congestion or low gas fees.|If your deposit or withdrawal hasn't arrived:|Check your TXID on the blockchain explorer.|Confirm that you used the correct network and address.|If it's been more than an hour, contact {siteDomain} with your TXID and wallet details."
+						"answer": "Blockchain transactions sometimes take longer due to network congestion or low gas fees.|If your deposit or withdrawal hasn't arrived:|Check your TXID on the blockchain explorer.|Confirm that you used the correct network and address.|If it's been more than an hour, contact {siteName} with your TXID and wallet details."
 					}
 				}
 			},
@@ -1951,7 +1951,7 @@
 					},
 					"1": {
 						"question": "11. What should I do if a game freezes or crashes?",
-						"answer": "If your game stops responding:|Refresh the page.|Clear your browser cache and reconnect your wallet.|If the issue persists, contact our support team via Live Chat or {siteDomain}.|Our team will assist you in restoring your game session or balance if affected."
+						"answer": "If your game stops responding:|Refresh the page.|Clear your browser cache and reconnect your wallet.|If the issue persists, contact our support team via Live Chat or {siteName}.|Our team will assist you in restoring your game session or balance if affected."
 					},
 					"2": {
 						"question": "12. Can I use more than one wallet or account?",
@@ -1959,7 +1959,7 @@
 					},
 					"3": {
 						"question": "13. Is my personal data safe?",
-						"answer": "Yes.|At {siteDomain}, we do not collect personal data — your identity remains secure.|Access is managed through Dynamic.xyz, ensuring full privacy and ownership of your digital identity.|No passwords, emails, or sensitive documents are stored by us.|Your wallet = your identity."
+						"answer": "Yes.|At {siteName}, we do not collect personal data — your identity remains secure.|Access is managed through Dynamic.xyz, ensuring full privacy and ownership of your digital identity.|No passwords, emails, or sensitive documents are stored by us.|Your wallet = your identity."
 					}
 				}
 			},
@@ -1968,7 +1968,7 @@
 				"items": {
 					"0": {
 						"question": "14. Does {siteName} support responsible gambling?",
-						"answer": "Absolutely.|We encourage every player to enjoy gaming in moderation.|You can request a self-exclusion period or take a cooling-off break anytime by contacting {siteDomain}.|If you feel gambling is affecting your life, visit our Responsible Gambling page for resources and help organizations."
+						"answer": "Absolutely.|We encourage every player to enjoy gaming in moderation.|You can request a self-exclusion period or take a cooling-off break anytime by contacting {siteName}.|If you feel gambling is affecting your life, visit our Responsible Gambling page for resources and help organizations."
 					},
 					"1": {
 						"question": "15. What should I do if I suspect a gambling problem?",
@@ -1979,7 +1979,7 @@
 		},
 		"blockchainTransparency": {
 			"title": "🧩 Blockchain Transparency",
-			"paragraph1": "{siteDomain} is powered by Ethereum-based smart contracts, ensuring that every bet, transaction, and reward is recorded transparently on-chain.|All data and game logic are immutable and verifiable, ensuring true fairness and auditability.|You can track all platform transactions through public explorers such as:|Etherscan.io|BscScan.com|TronScan.org",
+			"paragraph1": "{siteName} is powered by Ethereum-based smart contracts, ensuring that every bet, transaction, and reward is recorded transparently on-chain.|All data and game logic are immutable and verifiable, ensuring true fairness and auditability.|You can track all platform transactions through public explorers such as:|Etherscan.io|BscScan.com|TronScan.org",
 			"paragraph2": "",
 			"explorersTitle": "",
 			"guarantee": "This guarantees that no manipulation or bias can occur — ever."
