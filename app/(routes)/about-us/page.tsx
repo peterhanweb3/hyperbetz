@@ -107,9 +107,9 @@ export default function AboutPage() {
 							<p key={index}>{para}</p>
 						)
 					)}
-					<p className="font-semibold text-foreground">
+					{/* <p className="font-semibold text-foreground">
 						{t("about.fairGaming.ageRestriction")}
-					</p>
+					</p> */}
 					<p>{t("about.fairGaming.paragraph2")}</p>
 				</div>
 			</div>

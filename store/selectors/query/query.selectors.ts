@@ -15,6 +15,27 @@ const selectSearchQuery = (state: AppStore) =>
 const selectSortBy = (state: AppStore) => state.query.sortBy;
 const selectItemsToShow = (state: AppStore) => state.query.itemsToShow;
 
+/**
+ * Helper function to expand search keywords based on special categories
+ * For example, "lottery" expands to ["lottery", "bingo", "keno", "lotto"]
+ */
+const expandSearchKeywords = (searchQuery: string): string[] => {
+	const normalizedQuery = searchQuery.toLowerCase().trim();
+
+	// Lottery category mapping
+	if (normalizedQuery === "lottery") {
+		return ["lottery", "bingo", "keno", "lotto"];
+	}
+
+	// Add more keyword expansions here in the future if needed
+	// Example:
+	// if (normalizedQuery === "cards") {
+	//   return ["poker", "blackjack", "baccarat", "cards"];
+	// }
+
+	return [normalizedQuery];
+};
+
 // --- MEMOIZED SELECTORS (The "Engine") ---
 
 /**
@@ -49,9 +70,17 @@ export const selectFilteredGames = createSelector(
 		if (!searchQuery) {
 			return filteredByCriteria; // If no search query, return the filtered list.
 		}
-		return filteredByCriteria.filter((game) =>
-			game.game_name.toLowerCase().includes(searchQuery)
-		);
+
+		// Expand search keywords if needed (e.g., "lottery" -> ["lottery", "bingo", "keno", "lotto"])
+		const expandedKeywords = expandSearchKeywords(searchQuery);
+
+		return filteredByCriteria.filter((game) => {
+			const gameName = game.game_name.toLowerCase();
+			// Check if the game name includes ANY of the expanded keywords
+			return expandedKeywords.some((keyword) =>
+				gameName.includes(keyword)
+			);
+		});
 	}
 );
 
