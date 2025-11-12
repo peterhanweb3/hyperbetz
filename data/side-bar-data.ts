@@ -264,29 +264,34 @@ export const getNavData = ({
 				url: "/games?q=poker",
 				icon: faSpade,
 				count: 696969,
+				isnewTab: false,
 			},
 			{
 				title: "games.lottery",
 				url: "/games?q=lottery",
 				icon: faTicket,
 				count: 696969,
+				isnewTab: false,
 			},
 			{
 				title: "games.futures",
 				url: "#", // Will launch Stock Market game directly
 				icon: faChartLine,
 				count: 696969,
+				isnewTab: true,
 			},
 			{
 				title: "games.vr",
 				url: "#", // Will launch Gonzo's Treasure Map game directly
 				icon: faVrCardboard,
 				count: 696969,
+				isnewTab: true,
 			},
 			{
 				title: "games.swap",
 				url: "?tab=swap", // This will be handled by modal with URL sync
 				icon: faArrowsRotate,
+				isnewTab: false,
 				// count: 0,
 			},
 		],

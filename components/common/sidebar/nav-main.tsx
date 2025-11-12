@@ -172,7 +172,8 @@ export function NavMain({
 			gameType: game.own_game_type,
 			gpId: String(game.gp_id),
 		}).toString();
-		router.push(`/play/${game.game_id}?${qp}`);
+		window.open(`/play/${game.game_id}?${qp}`, "_blank");
+		// router.push(`/play/${game.game_id}?${qp}`);
 	};
 
 	const handleStaticCategoryClick = (
