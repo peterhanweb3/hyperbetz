@@ -1,59 +1,173 @@
 /**
- * Dynamic Robots.txt Generator
- * Environment-aware robots rules
+ * ==========================================================
+ * Digidice Gaming Network — Robots.txt Generator
+ * Version: SEO + AI + Compliance Optimized
+ * ==========================================================
+ * Purpose:
+ * - Maximize search visibility for games, providers, and offers
+ * - Allow AI indexing (not training)
+ * - Protect user-sensitive and backend routes
+ * - Ensure full discoverability of legal & trust pages
+ * ==========================================================
  */
 
 import { MetadataRoute } from "next";
-import { getSEOConfig } from "@/lib/seo/seo-config-loader";
+import { interpolateSiteDomain } from '../lib/utils/site-config';
+
+const siteDoamin = interpolateSiteDomain("{siteDomain}");
+
+// Site configuration
+const SITE_URL = `https://${siteDoamin}`;
+const DEFAULT_CRAWL_DELAY = 2;
+
+// Public content paths that should be indexed
+const PUBLIC_PATHS = [
+	"/",
+	"/lobby",
+	"/games",
+	"/games/",
+	"/providers",
+	"/providers/",
+	"/bonus",
+	"/affiliate",
+	"/promotions",
+	"/news/",
+	"/blog/",
+	"/faqs",
+	"/about-us",
+	"/privacy-policy",
+	"/terms-and-conditions",
+	"/responsible-gambling",
+];
+
+// Blog SEO patterns to allow
+const BLOG_SEO_PATTERNS = [
+	"*/blog/*transactions*",
+	"*/blog/*updates*",
+	"*/blog/*news*",
+];
+
+// Sensitive paths to disallow
+const SENSITIVE_PATHS = [
+	"/admin/",
+	"/api/",
+	"/private/",
+	"/_next/",
+	"/server/",
+	"/tmp/",
+	"/checkout/",
+	"/wallet/",
+	"/transactions/",
+	"/settings/",
+	"/my-bets/",
+	"/favourites/",
+];
+
+// Game-specific paths to disallow
+const GAME_RESTRICTED_PATTERNS = [
+	"*/casino/games/*/play*",
+	"*/casino/games/*/demo*",
+	"*/sports/home/live*",
+	"*/sports/home/upcoming*",
+	"*/sports/home/promotion*",
+];
+
+// Query parameters to disallow
+const DISALLOWED_QUERY_PARAMS = [
+	"*?ref=*",
+	"*?utm_*",
+	"*?page=*",
+	"*modal=*",
+	"*transaction=*",
+	"*betId=*",
+	"*vmcid=*",
+	"*nonce=*",
+	"*tab=*",
+	"*serverSeed=*",
+	"*clientSeed=*",
+	"*currency=*",
+	"*drop=*",
+	"*auth*",
+];
+
+// Blog patterns to disallow
+const BLOG_RESTRICTED_PATTERNS = ["*/blog/category/uncategorized*"];
+
+// AI bots that should have access (with restrictions)
+const AI_BOTS = [
+	"GPTBot",
+	"ClaudeBot",
+	"Claude-Web",
+	"PerplexityBot",
+	"ChatGPT-User",
+];
+
+// AI bot with different restrictions
+const AI_BOTS_LIMITED = ["Google-Extended"];
+
+// Search engine bots
+const SEARCH_ENGINE_BOTS = ["Googlebot", "Bingbot"];
+
+// Competitor/scraper bots to block
+const BLOCKED_BOTS = [
+	"AhrefsBot",
+	"SemrushBot",
+	"botify",
+	"ContentKing",
+	"Amazonbot",
+	"Omgilibot",
+	"Diffbot",
+	"ImagesiftBot",
+	"Omgili",
+	"YouBot",
+];
 
 export default function robots(): MetadataRoute.Robots {
-	const config = getSEOConfig();
-	const isProduction =
-		config.environment === "production" ||
-		process.env.NODE_ENV === "production";
+	// Combine all disallowed paths
+	const allDisallowedPaths = [
+		...SENSITIVE_PATHS,
+		...GAME_RESTRICTED_PATTERNS,
+		...DISALLOWED_QUERY_PARAMS,
+		...BLOG_RESTRICTED_PATTERNS,
+	];
 
-	const rules = isProduction
-		? config.robotsRules.production
-		: config.robotsRules.staging;
+	// Combine all allowed paths
+	const allAllowedPaths = [...PUBLIC_PATHS, ...BLOG_SEO_PATTERNS];
 
 	return {
 		rules: [
+			// Main rule for all crawlers
 			{
 				userAgent: "*",
-				allow: rules.allow,
-				disallow: rules.disallow,
+				allow: allAllowedPaths,
+				disallow: allDisallowedPaths,
+				crawlDelay: DEFAULT_CRAWL_DELAY,
 			},
-			// Special rules for AI crawlers
+			// Search engine bots with crawl delay
+			...SEARCH_ENGINE_BOTS.map((bot) => ({
+				userAgent: bot,
+				allow: ["/"],
+				crawlDelay: DEFAULT_CRAWL_DELAY,
+			})),
+			// AI bots with standard restrictions
+			...AI_BOTS.map((bot) => ({
+				userAgent: bot,
+				allow: ["/"],
+				disallow: ["/api/", "/admin/", "/private/"],
+			})),
+			// AI bots with limited restrictions
+			...AI_BOTS_LIMITED.map((bot) => ({
+				userAgent: bot,
+				allow: ["/"],
+				disallow: ["/private/"],
+			})),
+			// Blocked bots
 			{
-				userAgent: "GPTBot", // ChatGPT
-				allow: isProduction ? ["/"] : [],
-				disallow: isProduction
-					? ["/api/", "/admin/", "/private/"]
-					: ["/"],
-			},
-			{
-				userAgent: "Google-Extended", // Google AI/Bard
-				allow: isProduction ? ["/"] : [],
-				disallow: isProduction
-					? ["/api/", "/admin/", "/private/"]
-					: ["/"],
-			},
-			{
-				userAgent: "PerplexityBot", // Perplexity
-				allow: isProduction ? ["/"] : [],
-				disallow: isProduction
-					? ["/api/", "/admin/", "/private/"]
-					: ["/"],
-			},
-			{
-				userAgent: "Claude-Web", // Anthropic Claude
-				allow: isProduction ? ["/"] : [],
-				disallow: isProduction
-					? ["/api/", "/admin/", "/private/"]
-					: ["/"],
+				userAgent: BLOCKED_BOTS,
+				disallow: ["/"],
 			},
 		],
-		sitemap: rules.sitemap || undefined,
-		host: config.defaultDomain,
+		sitemap: `${SITE_URL}/sitemap.xml`,
+		host: SITE_URL,
 	};
 }

@@ -16,6 +16,7 @@ import { GameCard } from "./game-carousel-card";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faFireFlameCurved } from "@fortawesome/pro-light-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { cn } from "@/lib/utils";
 
 // Simple game interface for games-list-carousel functionality
 interface SimpleGame {
@@ -98,7 +99,11 @@ export const GameCarouselSection = ({
 	const limitedGames = games.slice(0, MAX_VISIBLE_GAMES);
 	const normalizedGames = limitedGames.map(normalizeGame);
 
-	// Group games into batches of 4 for mobile 2x2 grid
+	// Check if this is a SPORTS category
+	const isSportsCategory =
+		normalizedGames.length > 0 && normalizedGames[0].category === "SPORTS";
+
+	// Group games into batches of 4 for mobile 2x2 grid (only for non-SPORTS)
 	const groupGamesForMobile = (games: Game[]) => {
 		const groups = [];
 		for (let i = 0; i < games.length; i += 4) {
@@ -107,12 +112,14 @@ export const GameCarouselSection = ({
 		return groups;
 	};
 
-	const mobileGameGroups = groupGamesForMobile(normalizedGames);
+	const mobileGameGroups = isSportsCategory
+		? []
+		: groupGamesForMobile(normalizedGames);
 	const finalViewAllUrl = getViewAllUrl();
 
 	return (
 		<div className="w-full mb-6 mt-2">
-			{/* Mobile Carousel: 2x2 grid layout */}
+			{/* Mobile Carousel: Single card for SPORTS, 2x2 grid for others */}
 			<div className="sm:hidden">
 				<Carousel
 					opts={{
@@ -154,22 +161,33 @@ export const GameCarouselSection = ({
 					</div>
 
 					<CarouselContent className="-ml-2">
-						{mobileGameGroups.map((group, groupIndex) => (
-							<CarouselItem
-								key={`group-${groupIndex}`}
-								className="pl-2 basis-full"
-							>
-								<div className="grid grid-cols-2 gap-4">
-									{group.map((game, idx) => (
-										<div
-											key={`${game.game_id}-${game.game_name}-${idx}`}
-										>
-											<GameCard game={game} />
+						{isSportsCategory
+							? // SPORTS: Show 1 card per slide
+							  normalizedGames.map((game, idx) => (
+									<CarouselItem
+										key={`${game.game_id}-${game.game_name}-${idx}`}
+										className="pl-2 basis-full"
+									>
+										<GameCard game={game} />
+									</CarouselItem>
+							  ))
+							: // Other categories: Show 2x2 grid
+							  mobileGameGroups.map((group, groupIndex) => (
+									<CarouselItem
+										key={`group-${groupIndex}`}
+										className="pl-2 basis-full"
+									>
+										<div className="grid gap-4 grid-cols-2">
+											{group.map((game, idx) => (
+												<div
+													key={`${game.game_id}-${game.game_name}-${idx}`}
+												>
+													<GameCard game={game} />
+												</div>
+											))}
 										</div>
-									))}
-								</div>
-							</CarouselItem>
-						))}
+									</CarouselItem>
+							  ))}
 					</CarouselContent>
 				</Carousel>
 			</div>
@@ -219,7 +237,12 @@ export const GameCarouselSection = ({
 						{normalizedGames.map((game, idx) => (
 							<CarouselItem
 								key={`${game.game_id}-${game.game_name}-${idx}`}
-								className="pl-4 basis-1/2 lg:basis-1/5 xl:basis-1/6 2xl:basis-1/7 3xl:basis-1/8"
+								className={cn(
+									"pl-4 basis-1/2",
+									game.category !== "SPORTS"
+										? "lg:basis-1/5 xl:basis-1/6 2xl:basis-1/7 3xl:basis-1/8"
+										: "lg:basis-1/3"
+								)}
 							>
 								<GameCard game={game} />
 							</CarouselItem>
