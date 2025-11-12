@@ -142,13 +142,17 @@ export function NavMain({
 	}, [isMobile, setOpenMobile]);
 
 	const { providers: limitedProviders, remaining: remainingProvidersCount } =
-		useMemo(
-			() =>
-				providers.length
-					? getShuffledProvidersWithCache()
-					: { providers: [], remaining: 0 },
-			[providers.length, getShuffledProvidersWithCache]
-		);
+		useMemo(() => {
+			const ShuffledProvidersResult = getShuffledProvidersWithCache();
+			return providers.length
+				? {
+						...ShuffledProvidersResult,
+						remaining:
+							providers.length -
+							ShuffledProvidersResult.providers.length,
+				  }
+				: { providers: [], remaining: 0 };
+		}, [providers.length, getShuffledProvidersWithCache]);
 
 	const launchSpecificGame = (name: string) => {
 		handleMobileNavigation();
