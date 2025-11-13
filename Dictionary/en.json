@@ -20,7 +20,7 @@
 		"wallet": "Deposit/Withdraw",
 		"cashier": "Cashier",
 		"winLoss": "Win/Loss",
-		"affiliate": "Affiliate Bonus",
+		"affiliate": "Referral Bonus",
 		"logout": "Log out",
 		"balance": "Balance",
 		"turnoverBonus": "Turnover Bonus"
@@ -32,7 +32,7 @@
 		"wallet": "Wallet",
 		"settings": "Settings",
 		"promotions": "Promotions",
-		"affiliate": "Affiliate Bonus",
+		"affiliate": "Referral Bonus",
 		"bonus": "Turnover Bonus",
 		"providers": "Providers",
 		"lobby": "Lobby",
@@ -414,8 +414,8 @@
 		"realTimeScoreboard": "Real-Time Scoreboard"
 	},
 	"affiliate": {
-		"title": "Affiliate Program",
-		"loginPromptTitle": "Referral Program",
+		"title": "Referral Bonus Program",
+		"loginPromptTitle": "Referral Bonus Program",
 		"loginPromptSubtitle": "Log in to view your referral stats, bonuses and claim rewards.",
 		"goHome": "Go to Home",
 		"tabs": {
@@ -488,7 +488,7 @@
 			"subtitle": "Earnings percentages by tier level and game category",
 			"overview": {
 				"title": "Overview",
-				"body": "The Affiliate Program rewards affiliates based on the wager turnover from referred players in Slots , Live Casino , Sportsbooks and Lottery. Commissions are calculated every 24 hours, with earnings based on different turnover tiers."
+				"body": "The Referral Bonus rewards affiliates based on the wager turnover from referred players in Slots , Live Casino , Sportsbooks and Lottery. Commissions are calculated every 24 hours, with earnings based on different turnover tiers."
 			},
 			"calculation": {
 				"title": "How Commissions Are Calculated",
@@ -590,7 +590,7 @@
 				"content": "To participate:"
 			},
 			"section3": {
-				"title": "Farming Tiers and Rates",
+				"title": "Turnover Tiers and Rates",
 				"content": "Bonuses are calculated based on your daily wager amounts:",
 				"noteTitle": "Note",
 				"noteContent": "Tiers are evaluated daily at 14:00 UTC. Your previous day's wager volume determines today's bonus rate. Rates apply to all game types: Slots, Live Casino, and Sports."
@@ -626,11 +626,11 @@
 			}
 		},
 		"rates": {
-			"title": "Farming Tiers and Rates",
+			"title": "Turnover Tiers and Rates",
 			"subtitle": "Bonus percentages by wager level and game category",
 			"overview": {
 				"title": "Overview",
-				"body": "The Bonus Farming rewards users based on their wagers in Slot , Live Casino , Sportsbook and Lottery. Bonuses are calculated every 24 hours, and users can claim them next day after wagering. There are seven tiers, each with different rates depending on the wager amount."
+				"body": "The Turnover Bonus rewards users based on their wagers in Slot , Live Casino , Sportsbook and Lottery. Bonuses are calculated every 24 hours, and users can claim them next day after wagering. There are seven tiers, each with different rates depending on the wager amount."
 			},
 			"eligibility": {
 				"title": "Eligibility",
@@ -1347,7 +1347,7 @@
 				"links": {
 					"about": "About Us",
 					"providers": "Providers",
-					"affiliate": "Affiliate Program",
+					"affiliate": "Referral Bonus",
 					"bonus": "Turnover Bonus"
 				}
 			},

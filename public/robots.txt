@@ -1,0 +1,139 @@
+# ==========================================================
+# HyperBetz Gaming Network — Robots.txt
+# Version: SEO + AI + Compliance Optimized
+# ==========================================================
+# Purpose:
+# - Maximize search visibility for games, providers, and offers
+# - Allow AI indexing (not training)
+# - Protect user-sensitive and backend routes
+# - Ensure full discoverability of legal & trust pages
+# ==========================================================
+
+User-agent: *
+Content-signal: search=yes,ai-input=yes,ai-train=no
+
+# ==========================================================
+# ✅ ALLOWED PUBLIC CONTENT
+# ==========================================================
+Allow: /
+Allow: /lobby
+Allow: /games
+Allow: /games/
+Allow: /providers
+Allow: /providers/
+Allow: /bonus
+Allow: /affiliate
+Allow: /promotions
+Allow: /news/
+Allow: /blog/
+Allow: /faqs
+Allow: /about-us
+Allow: /privacy-policy
+Allow: /terms-and-conditions
+Allow: /responsible-gambling
+
+# ==========================================================
+# 🚫 DISALLOWED SENSITIVE / DYNAMIC PATHS
+# ==========================================================
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /server/
+Disallow: /tmp/
+Disallow: /checkout/
+Disallow: /wallet/
+Disallow: /transactions/
+Disallow: /settings/
+Disallow: /my-bets/
+Disallow: /favourites/
+Disallow: */casino/games/*/play*
+Disallow: */casino/games/*/demo*
+Disallow: */sports/home/live*
+Disallow: */sports/home/upcoming*
+Disallow: */sports/home/promotion*
+Disallow: *?ref=*
+Disallow: *?utm_*
+Disallow: *?page=*
+Disallow: *modal=*
+Disallow: *transaction=*
+Disallow: *betId=*
+Disallow: *vmcid=*
+Disallow: *nonce=*
+Disallow: *tab=*
+Disallow: *serverSeed=*
+Disallow: *clientSeed=*
+Disallow: *currency=*
+Disallow: *drop=*
+Disallow: *auth*
+Disallow: */blog/category/uncategorized*
+
+# ==========================================================
+# 📰 ALLOW BLOG SEO CONTENT
+# ==========================================================
+Allow: */blog/*transactions*
+Allow: */blog/*updates*
+Allow: */blog/*news*
+
+# ==========================================================
+# 🤖 SEARCH + AI BOT PERMISSIONS
+# ==========================================================
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /private/
+
+# ==========================================================
+# 🚫 BLOCK LOW-VALUE / COMPETITOR SCRAPERS
+# ==========================================================
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: botify
+User-agent: ContentKing
+User-agent: Amazonbot
+User-agent: Omgilibot
+User-agent: Diffbot
+User-agent: ImagesiftBot
+User-agent: Omgili
+User-agent: YouBot
+Disallow: /
+
+
+# © HyperBetz Gaming Network 2025 — All Rights Reserved.
