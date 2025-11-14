@@ -31,7 +31,6 @@ const USERNAME_PREFIXES = [
 	"Winner",
 	"Gold",
 	"Silver",
-	"Platinum",
 	"Fortune",
 	"Casino",
 	"Jackpot",
@@ -39,9 +38,6 @@ const USERNAME_PREFIXES = [
 	"Vegas",
 	"Slot",
 	"Poker",
-	"Roulette",
-	"Blackjack",
-	"Baccarat",
 	"Dragon",
 	"Tiger",
 	"Phoenix",
@@ -50,7 +46,6 @@ const USERNAME_PREFIXES = [
 	"Wolf",
 	"Bear",
 	"Thunder",
-	"Lightning",
 	"Storm",
 	"Fire",
 	"Ice",
@@ -77,12 +72,8 @@ const USERNAME_SUFFIXES = [
 	"Hunter",
 	"Slayer",
 	"Winner",
-	"Champion",
 	"Legend",
 	"Hero",
-	"Warrior",
-	"Fighter",
-	"Player",
 	"Gamer",
 	"Bet",
 	"Win",
@@ -97,7 +88,6 @@ const USERNAME_SUFFIXES = [
 	"Shadow",
 	"Ghost",
 	"Ninja",
-	"Samurai",
 	"Knight",
 	"777",
 	"888",
@@ -121,29 +111,6 @@ const USERNAME_SUFFIXES = [
 	"Gamma",
 ];
 
-const COUNTRY_CODES = [
-	"US",
-	"UK",
-	"DE",
-	"JP",
-	"KR",
-	"CN",
-	"IN",
-	"BR",
-	"CA",
-	"AU",
-	"FR",
-	"IT",
-	"ES",
-	"RU",
-	"MX",
-	"TH",
-	"VN",
-	"PH",
-	"ID",
-	"MY",
-];
-
 // Enhanced nickname generation with more authentic styles
 function generateRealisticNickname(): string {
 	const styles = [
@@ -151,70 +118,65 @@ function generateRealisticNickname(): string {
 		() => {
 			const prefix =
 				USERNAME_PREFIXES[
-					Math.floor(Math.random() * USERNAME_PREFIXES.length)
+				Math.floor(Math.random() * USERNAME_PREFIXES.length)
 				];
 			const suffix =
 				USERNAME_SUFFIXES[
-					Math.floor(Math.random() * USERNAME_SUFFIXES.length)
+				Math.floor(Math.random() * USERNAME_SUFFIXES.length)
 				];
 			const number = Math.floor(Math.random() * 99) + 1;
-			return `***${prefix}${suffix}${
-				number < 10 ? "0" + number : number
-			}`;
+
+			let finalNickName = `${prefix}${suffix}${number}`;
+			// now hide starting 3 characters
+			if (finalNickName.length > 3) {
+				finalNickName = `***${finalNickName.slice(3)}`;
+			}
+			return finalNickName;
+
 		},
 
 		// Style 2: Country code style
 		() => {
-			const country =
-				COUNTRY_CODES[Math.floor(Math.random() * COUNTRY_CODES.length)];
+
 			const prefix =
 				USERNAME_PREFIXES[
-					Math.floor(Math.random() * USERNAME_PREFIXES.length)
+				Math.floor(Math.random() * USERNAME_PREFIXES.length)
 				];
-			const number = Math.floor(Math.random() * 9999) + 1;
-			return `[${country}]${prefix}${number}`;
+			const number = Math.floor(Math.random() * 99) + 1;
+
+			let finalNickName = `${prefix}${number}`;
+
+			// now hide starting 3 characters from 
+			if (finalNickName.length > 3) {
+				finalNickName = `***${finalNickName.slice(3)}`;
+			}
+			return finalNickName;
+
 		},
 
-		// Style 3: Crypto wallet style
-		() => {
-			const chars =
-				"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-			let result = "0x";
-			for (let i = 0; i < 6; i++) {
-				result += chars.charAt(
-					Math.floor(Math.random() * chars.length)
-				);
-			}
-			return result + "...";
-		},
 
 		// Style 4: Gaming tags
 		() => {
 			const prefix =
 				USERNAME_PREFIXES[
-					Math.floor(Math.random() * USERNAME_PREFIXES.length)
+				Math.floor(Math.random() * USERNAME_PREFIXES.length)
 				];
 			const suffix =
 				USERNAME_SUFFIXES[
-					Math.floor(Math.random() * USERNAME_SUFFIXES.length)
+				Math.floor(Math.random() * USERNAME_SUFFIXES.length)
 				];
-			return `${prefix}_${suffix}_${Math.floor(Math.random() * 999) + 1}`;
+			// return `${prefix}_${suffix}_${Math.floor(Math.random() * 999) + 1}`;
+
+			let finalNickName = `${prefix}${suffix}${Math.floor(Math.random() * 99) + 1}`;
+
+			// now hide starting 3 characters
+			if (finalNickName.length > 3) {
+				finalNickName = `***${finalNickName.slice(3)}`;
+			}
+			return finalNickName;
+
 		},
 
-		// Style 5: VIP style
-		() => {
-			const levels = [
-				"Bronze",
-				"Silver",
-				"Gold",
-				"Platinum",
-				"Diamond",
-				"VIP",
-			];
-			const level = levels[Math.floor(Math.random() * levels.length)];
-			const number = Math.floor(Math.random() * 999) + 1;
-			return `${level}${number}`;
-		},
 	];
 
 	const selectedStyle = styles[Math.floor(Math.random() * styles.length)];
@@ -259,28 +221,28 @@ const MULTIPLIER_OPTIONS: Array<{
 	value: number | "FreeSpin";
 	weight: number;
 }> = [
-	{ value: 0.0, weight: 20 }, // Reduced losses
-	{ value: 0.2, weight: 12 },
-	{ value: 0.4, weight: 10 },
-	{ value: 0.6, weight: 8 },
-	{ value: 0.8, weight: 6 },
-	{ value: 1.2, weight: 15 }, // More small wins
-	{ value: 1.5, weight: 12 },
-	{ value: 2.0, weight: 10 },
-	{ value: 2.5, weight: 8 },
-	{ value: 3.0, weight: 6 },
-	{ value: 5.0, weight: 5 }, // Medium wins
-	{ value: 10.0, weight: 4 }, // Big wins - increased frequency
-	{ value: 15.0, weight: 3 },
-	{ value: 25.0, weight: 2.5 },
-	{ value: 50.0, weight: 2 }, // Huge wins - more frequent
-	{ value: 100.0, weight: 1.5 },
-	{ value: 250.0, weight: 1 }, // Mega wins - better chances
-	{ value: 500.0, weight: 0.8 },
-	{ value: 1000.0, weight: 0.5 }, // Jackpot level - improved
-	{ value: 2500.0, weight: 0.2 }, // Super jackpot
-	{ value: "FreeSpin", weight: 10 }, // More free spins
-];
+		{ value: 0.0, weight: 20 }, // Reduced losses
+		{ value: 0.2, weight: 12 },
+		{ value: 0.4, weight: 10 },
+		{ value: 0.6, weight: 8 },
+		{ value: 0.8, weight: 6 },
+		{ value: 1.2, weight: 15 }, // More small wins
+		{ value: 1.5, weight: 12 },
+		{ value: 2.0, weight: 10 },
+		{ value: 2.5, weight: 8 },
+		{ value: 3.0, weight: 6 },
+		{ value: 5.0, weight: 5 }, // Medium wins
+		{ value: 10.0, weight: 4 }, // Big wins - increased frequency
+		{ value: 15.0, weight: 3 },
+		{ value: 25.0, weight: 2.5 },
+		{ value: 50.0, weight: 2 }, // Huge wins - more frequent
+		{ value: 100.0, weight: 1.5 },
+		{ value: 250.0, weight: 1 }, // Mega wins - better chances
+		{ value: 500.0, weight: 0.8 },
+		{ value: 1000.0, weight: 0.5 }, // Jackpot level - improved
+		{ value: 2500.0, weight: 0.2 }, // Super jackpot
+		{ value: "FreeSpin", weight: 10 }, // More free spins
+	];
 
 // Enhanced bet amount distribution based on time of day and patterns
 function getTimeBasedBetDistribution(): Array<{
@@ -439,7 +401,7 @@ function generateBettingRecord(availableGames: Game[]): BettingRecord {
 			];
 			const winMultiplier =
 				multiplierRange[
-					Math.floor(Math.random() * multiplierRange.length)
+				Math.floor(Math.random() * multiplierRange.length)
 				];
 			profit = parseFloat((bet * winMultiplier).toFixed(2));
 			status = "win";
@@ -721,13 +683,13 @@ export function LiveBettingTable({ className }: LiveBettingTableProps) {
 								"bg-green-500/20 text-green-400 border-green-500/30",
 								"hover:bg-green-500/30 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20",
 								isBigWin &&
-									"bg-yellow-500/25 text-yellow-300 border-yellow-500/40 animate-pulse",
+								"bg-yellow-500/25 text-yellow-300 border-yellow-500/40 animate-pulse",
 								isMegaWin &&
-									"bg-orange-500/25 text-orange-300 border-orange-500/40 animate-pulse shadow-lg shadow-orange-500/30",
+								"bg-orange-500/25 text-orange-300 border-orange-500/40 animate-pulse shadow-lg shadow-orange-500/30",
 								isJackpot &&
-									"bg-red-500/25 text-red-300 border-red-500/40 animate-pulse shadow-lg shadow-red-500/50",
+								"bg-red-500/25 text-red-300 border-red-500/40 animate-pulse shadow-lg shadow-red-500/50",
 								isSuperJackpot &&
-									"bg-purple-500/25 text-purple-300 border-purple-500/40 animate-pulse shadow-xl shadow-purple-500/60"
+								"bg-purple-500/25 text-purple-300 border-purple-500/40 animate-pulse shadow-xl shadow-purple-500/60"
 							)}
 						>
 							<span className="flex items-center gap-1">
@@ -824,11 +786,11 @@ export function LiveBettingTable({ className }: LiveBettingTableProps) {
 				? isMegaMultiplier
 					? "text-purple-400 font-semibold animate-pulse"
 					: isHighMultiplier
-					? "text-yellow-400 font-semibold"
-					: "text-green-400 font-semibold"
+						? "text-yellow-400 font-semibold"
+						: "text-green-400 font-semibold"
 				: status === "processing"
-				? "text-yellow-400"
-				: "text-red-400";
+					? "text-yellow-400"
+					: "text-red-400";
 
 			return (
 				<span
@@ -862,8 +824,8 @@ export function LiveBettingTable({ className }: LiveBettingTableProps) {
 							stats.winRate >= 40
 								? "text-green-400"
 								: stats.winRate >= 30
-								? "text-yellow-400"
-								: "text-red-400"
+									? "text-yellow-400"
+									: "text-red-400"
 						)}
 					>
 						{stats.winRate.toFixed(1)}%
@@ -998,24 +960,23 @@ export function LiveBettingTable({ className }: LiveBettingTableProps) {
 											className={cn(
 												"hover:bg-primary/5 transition-all duration-300 border-border/30",
 												index === 0 &&
-													isLive &&
-													"animate-pulse bg-primary/10 shadow-md",
+												isLive &&
+												"animate-pulse bg-primary/10 shadow-md",
 												record.status === "win" &&
-													record.profit >= 50 &&
-													"bg-gradient-to-r from-green-500/10 to-yellow-500/10",
+												record.profit >= 50 &&
+												"bg-gradient-to-r from-green-500/10 to-yellow-500/10",
 												record.status === "win" &&
-													record.profit < 50 &&
-													"bg-green-500/5 hover:bg-green-500/10",
+												record.profit < 50 &&
+												"bg-green-500/5 hover:bg-green-500/10",
 												record.status === "lose" &&
-													"bg-red-500/5 hover:bg-red-500/10",
+												"bg-red-500/5 hover:bg-red-500/10",
 												record.status ===
-													"processing" &&
-													"bg-yellow-500/5 hover:bg-yellow-500/10 animate-pulse"
+												"processing" &&
+												"bg-yellow-500/5 hover:bg-yellow-500/10 animate-pulse"
 											)}
 											style={{
-												animationDelay: `${
-													index * 50
-												}ms`,
+												animationDelay: `${index * 50
+													}ms`,
 											}}
 										>
 											<TableCell className="font-medium">
@@ -1062,13 +1023,13 @@ export function LiveBettingTable({ className }: LiveBettingTableProps) {
 													className={cn(
 														"font-mono font-semibold transition-all duration-300",
 														record.bet >= 50 &&
-															"text-yellow-400 font-semibold",
+														"text-yellow-400 font-semibold",
 														record.bet >= 200 &&
-															"text-orange-400 font-semibold",
+														"text-orange-400 font-semibold",
 														record.bet >= 500 &&
-															"text-red-400 font-semibold animate-pulse",
+														"text-red-400 font-semibold animate-pulse",
 														record.bet >= 1000 &&
-															"text-purple-400 font-semibold animate-pulse shadow-lg shadow-purple-400/30"
+														"text-purple-400 font-semibold animate-pulse shadow-lg shadow-purple-400/30"
 													)}
 												>
 													{record.bet >= 1000 && (
