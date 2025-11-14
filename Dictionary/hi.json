@@ -11,18 +11,18 @@
 	},
 	"header": {
 		"toggleSidebar": "साइडबार टॉगल करें",
-		"searchPlaceholder": "गेम, प्रदाता खोजें...",
+		"searchPlaceholder": "गेम्स, प्रोवाइडर्स खोजें...",
 		"liveChat": "लाइव चैट",
 		"player": "खिलाड़ी",
 		"vip": "वीआईपी",
 		"profile": "प्रोफ़ाइल",
-		"statistics": "आंकड़े",
+		"statistics": "आँकड़े",
 		"wallet": "जमा/निकासी",
 		"cashier": "कैशियर",
 		"winLoss": "जीत/हार",
-		"affiliate": "एफिलिएट",
-		"logout": "लॉग आउट",
-		"balance": "शेष राशि",
+		"affiliate": "रेफ़रल बोनस",
+		"logout": "लॉग आउट करें",
+		"balance": "बैलेंस",
 		"turnoverBonus": "टर्नओवर बोनस"
 	},
 	"navigation": {
@@ -32,45 +32,45 @@
 		"wallet": "वॉलेट",
 		"settings": "सेटिंग्स",
 		"promotions": "प्रमोशन",
-		"affiliate": "एफिलिएट",
-		"providers": "प्रदाता",
-		"lobby": "लॉबी",
+		"affiliate": "रेफ़रल बोनस",
 		"bonus": "टर्नओवर बोनस",
-		"about": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 44 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+		"providers": "प्रोवाइडर्स",
+		"lobby": "लॉबी",
+		"about": "हमारे बारे में"
 	},
 	"profile": {
 		"language": "भाषा",
-		"welcome": "आपका स्वागत है, {name}!",
-		"settingUp": "सेट अप हो रहा है",
+		"welcome": "स्वागत है, {name}!",
+		"settingUp": "सेटअप किया जा रहा है",
 		"profileBtn": "प्रोफ़ाइल देखें",
-		"currentBalance": "वर्तमान शेष राशि",
-		"availableFunds": "उपलब्ध धनराशि",
-		"totalDeposits": "कुल जमा",
+		"currentBalance": "वर्तमान बैलेंस",
+		"availableFunds": "उपलब्ध फंड",
+		"totalDeposits": "कुल जमा राशि",
 		"totalWithdrawals": "कुल निकासी",
 		"walletAddress": "वॉलेट पता",
-		"copySuccess": "वॉलेट पता क्लिपबोर्ड पर कॉपी किया गया!",
-		"copyFailed": "वॉलेट पता कॉपी करने में विफल",
+		"copySuccess": "वॉलेट पता क्लिपबोर्ड पर कॉपी हो गया!",
+		"copyFailed": "वॉलेट पता कॉपी करने में विफल रहा",
 		"notConnected": "कनेक्ट नहीं है",
 		"myProfile": "मेरी प्रोफ़ाइल",
 		"history": {
 			"title": "इतिहास"
 		},
 		"logout": "लॉग आउट",
-		"pendingRegistration": "पंजीकरण लंबित है",
+		"pendingRegistration": "पंजीकरण लंबित",
 		"noEmailProvided": "कोई ईमेल प्रदान नहीं किया गया",
-		"balanceOverview": "शेष राशि का अवलोकन",
-		"gettingStarted": "शुरुआत करना",
-		"verifyEmail": "अपना ईमेल सत्यापित करें",
+		"balanceOverview": "बैलेंस अवलोकन",
+		"gettingStarted": "शुरू करना",
+		"verifyEmail": "अपने ईमेल को सत्यापित करें",
 		"completeEmailVerification": "ईमेल सत्यापन पूरा करें",
 		"verifyPhone": "अपना फ़ोन नंबर सत्यापित करें",
 		"addPhoneVerification": "फ़ोन सत्यापन जोड़ें",
-		"firstDeposit": "पहली जमा",
-		"makeFirstDeposit": "अपनी पहली जमा करें",
-		"placeBetOrTrade": "शर्त लगाएं / ट्रेड करें",
+		"firstDeposit": "पहला जमा",
+		"makeFirstDeposit": "अपना पहला जमा करें",
+		"placeBetOrTrade": "बेट लगाएं / ट्रेड करें",
 		"startFirstGame": "अपना पहला गेम शुरू करें",
 		"recentActivity": "हाल की गतिविधि",
-		"transactionHistory": "लेनदेन का इतिहास",
-		"activityGameWinDiceRoll": "गेम जीत - पासा रोल",
+		"transactionHistory": "लेन-देन इतिहास",
+		"activityGameWinDiceRoll": "गेम जीत - डाइस रोल",
 		"activityGameLossBlackjack": "गेम हार - ब्लैकजैक",
 		"twoHoursAgo": "2 घंटे पहले",
 		"oneDayAgo": "1 दिन पहले",
@@ -81,13 +81,13 @@
 		"goHome": "होम पर जाएं",
 		"withdrawal": "निकासी",
 		"transactions": {
-			"title": "लेनदेन का इतिहास",
-			"trackDepositsWithdrawals": "अपनी जमा और निकासी को ट्रैक करें",
+			"title": "लेन-देन इतिहास",
+			"trackDepositsWithdrawals": "अपने जमा और निकासी को ट्रैक करें",
 			"filters": "फ़िल्टर",
 			"refresh": "ताज़ा करें",
 			"advancedFilters": "उन्नत फ़िल्टर",
-			"searchTransactionComingSoon": "लेनदेन खोजें (जल्द आ रहा है)",
-			"searchPlaceholderDisabled": "खोज कार्यक्षमता एपीआई स्तर पर लागू की जाएगी...",
+			"searchTransactionComingSoon": "लेन-देन खोजें (जल्द आ रहा है)",
+			"searchPlaceholderDisabled": "खोज कार्यक्षमता API स्तर पर लागू की जाएगी...",
 			"dateRange": "तिथि सीमा",
 			"selectDateRange": "तिथि सीमा चुनें",
 			"today": "आज",
@@ -96,12 +96,12 @@
 			"last90Days": "पिछले 90 दिन",
 			"thisMonth": "इस महीने",
 			"lastMonth": "पिछले महीने",
-			"customRange": "कस्टम रेंज",
+			"customRange": "कस्टम सीमा",
 			"fromDate": "इस तारीख से",
 			"toDate": "इस तारीख तक",
-			"transactionStatus": "लेनदेन की स्थिति",
-			"allStatuses": "सभी स्थितियाँ",
-			"success": "सफल",
+			"transactionStatus": "लेन-देन स्थिति",
+			"allStatuses": "सभी स्थितियां",
+			"success": "सफलता",
 			"pending": "लंबित",
 			"rejected": "अस्वीकृत",
 			"clearAll": "सभी साफ़ करें",
@@ -109,29 +109,29 @@
 			"applyFilters": "फ़िल्टर लागू करें",
 			"activeFilters": "सक्रिय फ़िल्टर:",
 			"statusLabel": "स्थिति",
-			"dateLabel": "तिथि",
-			"statsTotalTransactions": "{total} कुल लेनदेन",
-			"pageOf": "पेज {current} का {total}",
+			"dateLabel": "तारीख",
+			"statsTotalTransactions": "{total} कुल लेन-देन",
+			"pageOf": "पेज {total} में से {current}",
 			"live": "लाइव",
 			"tabs": {
 				"all": "सभी",
 				"deposits": "जमा",
 				"withdrawals": "निकासी"
 			},
-			"errorLoadingTransactions": "लेनदेन लोड करने में त्रुटि",
-			"tryAgain": "पुनः प्रयास करें",
-			"noTransactionsFound": "कोई लेनदेन नहीं मिला",
-			"noTransactionsAvailableSelectedPeriod": "चयनित अवधि के लिए कोई लेनदेन उपलब्ध नहीं है।",
-			"noDepositsFoundSelectedPeriod": "चयनित अवधि के लिए कोई जमा नहीं मिला।",
+			"errorLoadingTransactions": "लेन-देन लोड करने में त्रुटि",
+			"tryAgain": "पुन: प्रयास करें",
+			"noTransactionsFound": "कोई लेन-देन नहीं मिला",
+			"noTransactionsAvailableSelectedPeriod": "चयनित अवधि के लिए कोई लेन-देन उपलब्ध नहीं है।",
+			"noDepositsFoundSelectedPeriod": "चयनित अवधि के लिए कोई जमा राशि नहीं मिली।",
 			"noWithdrawalsFoundSelectedPeriod": "चयनित अवधि के लिए कोई निकासी नहीं मिली।",
 			"show": "दिखाएँ",
-			"ofTransactions": "{count} लेनदेन में से",
-			"showingRangeOfTotal": "{total} में से {from}-{to} दिखा रहा है",
+			"ofTransactions": "{count} लेन-देन में से",
+			"showingRangeOfTotal": "{total} में से {from}-{to} दिखाया जा रहा है",
 			"pageShort": "पेज {current}/{total}"
 		},
 		"betHistory": {
-			"title": "सट्टेबाजी का इतिहास",
-			"trackBetsResults": "अपने गेम के दांव और परिणामों को ट्रैक करें",
+			"title": "बेट इतिहास",
+			"trackBetsResults": "अपने गेम बेट और परिणाम ट्रैक करें",
 			"filters": "फ़िल्टर",
 			"refresh": "ताज़ा करें",
 			"advancedFilters": "उन्नत फ़िल्टर",
@@ -143,17 +143,17 @@
 			"last90Days": "पिछले 90 दिन",
 			"thisMonth": "इस महीने",
 			"lastMonth": "पिछले महीने",
-			"customRange": "कस्टम रेंज",
+			"customRange": "कस्टम सीमा",
 			"fromDate": "इस तारीख से",
 			"toDate": "इस तारीख तक",
-			"provider": "प्रदाता",
-			"allProviders": "सभी प्रदाता",
+			"provider": "प्रोवाइडर",
+			"allProviders": "सभी प्रोवाइडर्स",
 			"status": "स्थिति",
-			"allStatuses": "सभी स्थितियाँ",
+			"allStatuses": "सभी स्थितियां",
 			"outstanding": "बकाया",
 			"win": "जीत",
 			"lose": "हार",
-			"draw": "ड्रा",
+			"draw": "ड्रॉ",
 			"void": "रद्द",
 			"bonusWin": "बोनस जीत",
 			"clearAll": "सभी साफ़ करें",
@@ -161,47 +161,47 @@
 			"applyFilters": "फ़िल्टर लागू करें",
 			"activeFilters": "सक्रिय फ़िल्टर",
 			"statusLabel": "स्थिति",
-			"providerLabel": "प्रदाता",
-			"dateLabel": "तिथि",
-			"totalBets": "कुल दांव",
+			"providerLabel": "प्रोवाइडर",
+			"dateLabel": "तारीख",
+			"totalBets": "कुल बेट",
 			"totalProfitLoss": "कुल लाभ/हानि",
-			"pageOf": "पेज {current} का {total}",
+			"pageOf": "पेज {total} में से {current}",
 			"live": "लाइव",
-			"errorLoadingBets": "सट्टेबाजी का इतिहास लोड करने में त्रुटि",
-			"failedToLoadBetHistory": "सट्टेबाजी का इतिहास लोड करने में विफल। कृपया पुनः प्रयास करें।",
-			"tryAgain": "पुनः प्रयास करें",
-			"noBetsFound": "कोई दांव नहीं मिला",
-			"noBetsFoundSelectedPeriod": "चयनित अवधि और फ़िल्टर के लिए कोई सट्टेबाजी का इतिहास नहीं मिला।",
+			"errorLoadingBets": "बेट इतिहास लोड करने में त्रुटि",
+			"failedToLoadBetHistory": "बेट इतिहास लोड करने में विफल रहा। कृपया पुन: प्रयास करें।",
+			"tryAgain": "पुन: प्रयास करें",
+			"noBetsFound": "कोई बेट नहीं मिला",
+			"noBetsFoundSelectedPeriod": "चयनित अवधि और फ़िल्टर के लिए कोई बेटिंग इतिहास नहीं मिला।",
 			"show": "दिखाएँ",
-			"ofBets": "{count} दांव में से",
-			"showingRangeOfTotal": "{total} में से {from}-{to} दिखा रहा है",
-			"totalBet": "कुल दांव",
+			"ofBets": "{count} बेट में से",
+			"showingRangeOfTotal": "{total} में से {from}-{to} दिखाया जा रहा है",
+			"totalBet": "कुल बेट",
 			"totalWin": "कुल जीत",
 			"net": "नेट",
 			"tableHeaders": {
-				"date": "तिथि",
+				"date": "तारीख",
 				"game": "गेम",
-				"provider": "प्रदाता",
+				"provider": "प्रोवाइडर",
 				"type": "प्रकार",
 				"status": "स्थिति",
-				"betAmount": "दांव की राशि",
-				"winAmount": "जीत की राशि",
+				"betAmount": "बेट राशि",
+				"winAmount": "जीत राशि",
 				"hideAmounts": "राशि छिपाएँ",
 				"showAmounts": "राशि दिखाएँ",
 				"gameType": "गेम का प्रकार",
 				"vendor": "विक्रेता",
 				"lastUpdate": "अंतिम अपडेट",
 				"netResult": "नेट परिणाम",
-				"betId": "दांव आईडी"
+				"betId": "बेट आईडी"
 			},
 			"errorLoading": "लोड करने में त्रुटि",
-			"noBetsFoundDescription": "अपना सट्टेबाजी का इतिहास यहाँ देखने के लिए गेम खेलना शुरू करें।",
-			"betHistory": "सट्टेबाजी का इतिहास",
+			"noBetsFoundDescription": "अपना बेटिंग इतिहास यहां देखने के लिए गेम खेलना शुरू करें।",
+			"betHistory": "बेट इतिहास",
 			"hideAmounts": "राशि छिपाएँ",
 			"showAmounts": "राशि दिखाएँ",
-			"date": "तिथि",
+			"date": "तारीख",
 			"game": "गेम",
-			"betId": "दांव आईडी",
+			"betId": "बेट आईडी",
 			"amount": "राशि",
 			"payout": "भुगतान",
 			"player": "खिलाड़ी",
@@ -209,11 +209,11 @@
 			"vendor": "विक्रेता",
 			"lastUpdate": "अंतिम अपडेट",
 			"netResult": "नेट परिणाम",
-			"totalWagered": "कुल दांव लगाया गया",
-			"totalWon": "कुल जीता",
+			"totalWagered": "कुल दांव",
+			"totalWon": "कुल जीत",
 			"netProfit": "शुद्ध लाभ",
 			"winRate": "जीत दर",
-			"showingResults": "{total} परिणामों में से {start}-{end} दिखा रहा है",
+			"showingResults": "{total} परिणामों में से {start}-{end} दिखाया जा रहा है",
 			"firstPage": "पहला पेज",
 			"previousPage": "पिछला पेज",
 			"nextPage": "अगला पेज",
@@ -228,15 +228,15 @@
 			"replyPlaceholder": "{username} को जवाब दें..."
 		},
 		"reply": {
-			"replyingTo": "{username} को जवाब दे रहे हैं",
+			"replyingTo": "{username} को जवाब दे रहा है",
 			"types": {
-				"win": "{amount} {currency} जीते",
+				"win": "{amount} {currency} जीता",
 				"gif": "GIF संदेश",
 				"image": "छवि",
 				"default": "संदेश"
 			},
 			"preview": {
-				"winIn": "{game} में {amount} {currency} जीते",
+				"winIn": "{game} में {amount} {currency} जीता",
 				"gifAlt": "GIF पूर्वावलोकन",
 				"imageAlt": "छवि पूर्वावलोकन",
 				"emoji": "इमोजी संदेश",
@@ -246,11 +246,11 @@
 		},
 		"imageDialog": {
 			"title": "अपनी छवि साझा करें 🎰",
-			"description": "चैट रूम में दिखाने के लिए तैयार हैं?",
+			"description": "चैट रूम को दिखाने के लिए तैयार हैं?",
 			"previewLabel": "पूर्वावलोकन",
 			"statusReady": "साझा करने के लिए तैयार",
 			"roomLabel": "🎰 कैसीनो चैट",
-			"shareNotice": "आपकी छवि चैट रूम में सभी खिलाड़ियों के साथ साझा की जाएगी",
+			"shareNotice": "आपकी छवि चैट रूम के सभी खिलाड़ियों के साथ साझा की जाएगी",
 			"closeAria": "डायलॉग बंद करें",
 			"cancelAria": "छवि अपलोड रद्द करें",
 			"sendAria": "चैट पर छवि भेजें",
@@ -258,107 +258,107 @@
 		},
 		"picker": {
 			"searchEmojis": "इमोजी खोजें...",
-			"searchGifs": "GIFs खोजें...",
+			"searchGifs": "GIF खोजें...",
 			"tabs": {
 				"emojis": "इमोजी",
-				"gifs": "जीआईएफ"
+				"gifs": "GIF"
 			},
 			"loadingEmojis": "इमोजी लोड हो रहे हैं...",
-			"loadingGifs": "GIFs लोड हो रहे हैं...",
-			"retry": "पुनः प्रयास करें",
-			"recent": "हाल का",
+			"loadingGifs": "GIF लोड हो रहे हैं...",
+			"retry": "पुन: प्रयास करें",
+			"recent": "हाल के",
 			"noEmojis": "कोई इमोजी नहीं मिला",
-			"noGifs": "कोई GIFs नहीं मिला",
-			"tryDifferent": "एक अलग खोज शब्द का प्रयास करें",
+			"noGifs": "कोई GIF नहीं मिला",
+			"tryDifferent": "एक अलग खोज शब्द आज़माएँ",
 			"gifCategories": {
 				"trending": "ट्रेंडिंग",
-				"reactions": "प्रतिक्रियाएं",
+				"reactions": "प्रतिक्रियाएँ",
 				"gaming": "गेमिंग",
 				"casino": "कैसीनो",
 				"celebration": "उत्सव",
-				"sports": "खेल"
+				"sports": "स्पोर्ट्स"
 			},
 			"searchResults": "खोज परिणाम",
 			"availableToTag": "टैग करने के लिए उपलब्ध उपयोगकर्ता 🎯",
-			"clickOrTab": "चुनने के लिए क्लिक या टैब करें",
+			"clickOrTab": "चुनने के लिए क्लिक करें या टैब दबाएँ",
 			"noUsers": "कोई उपयोगकर्ता नहीं मिला",
-			"noUsersMatching": "कोई मेल खाने वाला उपयोगकर्ता नहीं",
+			"noUsersMatching": "कोई उपयोगकर्ता मेल नहीं खा रहा है",
 			"startTyping": "खोजने के लिए टाइप करना शुरू करें",
 			"typeAt": "टाइप करें",
 			"toSeeSuggestions": "सुझाव देखने के लिए 🎰",
 			"errors": {
-				"emojisLoad": "इमोजी लोड करने में विफल",
-				"emojisSearch": "इमोजी खोजने में विफल",
-				"gifsLoad": "GIFs लोड करने में विफल"
+				"emojisLoad": "इमोजी लोड करने में विफल रहा",
+				"emojisSearch": "इमोजी खोजने में विफल रहा",
+				"gifsLoad": "GIF लोड करने में विफल रहा"
 			}
 		},
 		"messages": {
 			"emptyTitle": "अभी तक कोई संदेश नहीं...",
-			"emptySubtitle": "बातचीत शुरू करें और बड़ी जीत हासिल करें! 🎰",
+			"emptySubtitle": "बातचीत शुरू करें और बड़ा जीतें! 🎰",
 			"loadingHistory": "चैट इतिहास लोड हो रहा है...",
-			"loadingHistorySubtitle": "हाल के संदेश प्राप्त कर रहे हैं 📜",
-			"historyError": "चैट इतिहास लोड करने में विफल"
+			"loadingHistorySubtitle": "हाल के संदेश प्राप्त किए जा रहे हैं 📜",
+			"historyError": "चैट इतिहास लोड करने में विफल रहा"
 		},
 		"message": {
 			"you": "आप",
 			"winTitle": "\"{game}\" में बड़ी जीत! 🎰",
 			"gifAlt": "GIF",
 			"imageAlt": "अपलोड की गई छवि",
-			"rainTitle": "पैसे की बारिश! 🌧️💰",
+			"rainTitle": "पैसों की बारिश! 🌧️💰",
 			"recipients": "→ {count} {count, plural, one {प्राप्तकर्ता} other {प्राप्तकर्ता}}",
 			"eachTo": "प्रत्येक को {amount} {currency}: {list}",
-			"replyCount": "{count} {count, plural, one {उत्तर} other {उत्तर}}",
+			"replyCount": "{count} {count, plural, one {जवाब} other {जवाब}}",
 			"loadingHistory": "चैट इतिहास लोड हो रहा है..."
 		},
 		"system": {
 			"slashDisabled": "स्लैश कमांड अस्थायी रूप से अक्षम हैं। कृपया नियमित संदेशों का उपयोग करें।",
-			"rateLimit": "दर सीमा पार हो गई। कृपया एक और संदेश भेजने से पहले {seconds} सेकंड प्रतीक्षा करें।",
+			"rateLimit": "रेट लिमिट पार हो गई। कृपया एक और संदेश भेजने से पहले {seconds} सेकंड प्रतीक्षा करें।",
 			"cannotTagSelf": "आप संदेशों में खुद को टैग नहीं कर सकते।",
 			"processingImage": "छवि संसाधित हो रही है...",
-			"failedUploadPrefix": "छवि अपलोड करने में विफल: {message}",
+			"failedUploadPrefix": "छवि अपलोड करने में विफल रहा: {message}",
 			"unknownError": "अज्ञात त्रुटि"
 		}
 	},
 	"sidebar": {
-		"quest": "खोज",
-		"spin": "घुमाएँ",
-		"deposit": "जमा करें",
-		"withdraw": "निकालें",
+		"quest": "QUEST",
+		"spin": "SPIN",
+		"deposit": "जमा",
+		"withdraw": "निकासी",
 		"playOnTelegram": "टेलीग्राम पर खेलें",
 		"dailyBonus": "दैनिक बोनस",
 		"navigation": "नेविगेशन",
 		"games": "गेम्स",
-		"providers": "प्रदाता",
-		"trendingNow": "अभी ट्रेंडिंग में",
-		"allProviders": "सभी प्रदाता",
-		"allTopProviders": "सभी शीर्ष प्रदाता",
+		"providers": "प्रोवाइडर्स",
+		"trendingNow": "अभी ट्रेंडिंग",
+		"allProviders": "सभी प्रोवाइडर्स",
+		"allTopProviders": "सभी शीर्ष प्रोवाइडर्स",
 		"hotBadge": "हॉट"
 	},
 	"search": {
-		"title": "गेम खोजें",
-		"subtitle": "नाम, प्रदाता, या श्रेणी के अनुसार खोजें",
-		"placeholder": "गेम, प्रदाता, श्रेणियां खोजें...",
+		"title": "गेम्स खोजें",
+		"subtitle": "नाम, प्रोवाइडर या कैटेगरी से खोजें",
+		"placeholder": "गेम्स, प्रोवाइडर्स, कैटेगरी खोजें...",
 		"clear": "साफ़ करें",
-		"recent": "हाल का:",
+		"recent": "हाल के:",
 		"popular": "लोकप्रिय:",
 		"favoritesTry": "आप कोशिश कर सकते हैं — आपके पसंदीदा",
 		"hotPicks": "हॉट पिक्स",
-		"resultsCount": "{count} गेम मिले",
+		"resultsCount": "{count} {count, plural, one {गेम} other {गेम}} मिला",
 		"noResults": "कोई परिणाम नहीं",
-		"filterApplied": "{count} प्रदाताओं द्वारा फ़िल्टर किया गया",
+		"filterApplied": "{count} {count, plural, one {प्रोवाइडर} other {प्रोवाइडर्स}} द्वारा फ़िल्टर किया गया",
 		"suggestions": {
-			"category": "श्रेणी",
-			"provider": "प्रदाता"
+			"category": "कैटेगरी",
+			"provider": "प्रोवाइडर"
 		},
 		"sections": {
-			"topProviders": "शीर्ष प्रदाता",
-			"selectedProviders": "चयनित प्रदाता",
-			"categories": "श्रेणियाँ",
+			"topProviders": "शीर्ष प्रोवाइडर्स",
+			"selectedProviders": "चयनित प्रोवाइडर्स",
+			"categories": "कैटेगरी",
 			"games": "गेम्स",
-			"providers": "प्रदाता"
+			"providers": "प्रोवाइडर्स"
 		},
 		"results": {
-			"found": "{games} गेम्स, {categories} श्रेणियां, और {providers} प्रदाता मिले"
+			"found": "{games} गेम, {categories} कैटेगरी और {providers} प्रोवाइडर मिला"
 		},
 		"gameTypes": {
 			"blackjack": "ब्लैकजैक",
@@ -368,9 +368,9 @@
 	},
 	"query": {
 		"sort": {
-			"label": "इसके अनुसार क्रमबद्ध करें",
-			"a-z": "ए-जेड",
-			"z-a": "जेड-ए"
+			"label": "इनके द्वारा सॉर्ट करें",
+			"a-z": "A-Z",
+			"z-a": "Z-A"
 		},
 		"filters": {
 			"filter": "फ़िल्टर",
@@ -380,43 +380,43 @@
 		},
 		"searchPlaceholderGeneric": "खोजें...",
 		"providersDropdown": {
-			"title": "प्रदाता",
+			"title": "प्रोवाइडर्स",
 			"selected": "{count} चयनित",
-			"searchPlaceholder": "प्रदाताओं को खोजें...",
-			"empty": "कोई प्रदाता नहीं मिला।",
-			"clear": "प्रदाता फ़िल्टर साफ़ करें"
+			"searchPlaceholder": "प्रोवाइडर्स खोजें...",
+			"empty": "कोई प्रोवाइडर नहीं मिला।",
+			"clear": "प्रोवाइडर फ़िल्टर साफ़ करें"
 		},
 		"category": {
-			"label": "श्रेणी:"
+			"label": "कैटेगरी:"
 		},
 		"view": {
 			"toggleAria": "व्यू मोड टॉगल करें",
 			"gridAria": "ग्रिड व्यू",
-			"listAria": "लिस्ट व्यू"
+			"listAria": "सूची व्यू"
 		},
 		"loadMore": "और लोड करें"
 	},
 	"commonExtra": {
 		"connecting": "कनेक्ट हो रहा है...",
-		"offline": "ऑफलाइन",
+		"offline": "ऑफ़लाइन",
 		"online": "ऑनलाइन",
 		"clear": "साफ़ करें"
 	},
 	"home": {
-		"topProviders": "शीर्ष गेम प्रदाता"
+		"topProviders": "शीर्ष गेम प्रोवाइडर्स"
 	},
 	"lobby": {
 		"yourFavorites": "आपके पसंदीदा",
 		"featuredCasinoGames": "विशेष रुप से प्रदर्शित कैसीनो गेम्स",
 		"hotPicks": "हॉट पिक्स",
-		"slots": "स्लॉट्स",
-		"sports": "खेल",
-		"realTimeScoreboard": "वास्तविक समय स्कोरबोर्ड"
+		"slots": "स्लॉट",
+		"sports": "स्पोर्ट्स",
+		"realTimeScoreboard": "रीयल-टाइम स्कोरबोर्ड"
 	},
 	"affiliate": {
-		"title": "एफिलिएट कार्यक्रम",
-		"loginPromptTitle": "रेफरल कार्यक्रम",
-		"loginPromptSubtitle": "अपने रेफरल आँकड़े, बोनस देखने और पुरस्कारों का दावा करने के लिए लॉग इन करें।",
+		"title": "रेफ़रल बोनस प्रोग्राम",
+		"loginPromptTitle": "रेफ़रल बोनस प्रोग्राम",
+		"loginPromptSubtitle": "अपने रेफ़रल आँकड़े, बोनस और पुरस्कारों का दावा करने के लिए लॉग इन करें।",
 		"goHome": "होम पर जाएं",
 		"tabs": {
 			"dashboard": "डैशबोर्ड",
@@ -424,273 +424,443 @@
 			"calculator": "कैलकुलेटर"
 		},
 		"refresh": "ताज़ा करें",
-		"refreshing": "ताज़ा हो रहा है...",
-		"refreshAllSuccess": "सभी डेटा सफलतापूर्वक ताज़ा किया गया!",
-		"refreshPartial": "आंशिक रूप से ताज़ा किया गया: {success}/{total} अनुभाग अपडेट किए गए",
-		"refreshFailed": "डेटा ताज़ा करने में विफल। कृपया पुनः प्रयास करें।",
+		"refreshing": "ताज़ा किया जा रहा है...",
+		"refreshAllSuccess": "सभी डेटा सफलतापूर्वक ताज़ा किए गए!",
+		"refreshPartial": "आंशिक रूप से ताज़ा किया गया: {success}/{total} सेक्शन अपडेट किए गए",
+		"refreshFailed": "डेटा ताज़ा करने में विफल रहा। कृपया पुन: प्रयास करें।",
 		"dashboard": {
-			"title": "एफिलिएट डैशबोर्ड",
-			"subtitle": "अपने रेफरल, कमाई, और कमीशन प्रदर्शन को ट्रैक करें",
+			"title": "रेफ़रल डैशबोर्ड",
+			"subtitle": "अपने रेफ़रल, कमाई और कमीशन प्रदर्शन को ट्रैक करें",
 			"performanceOverview": "प्रदर्शन अवलोकन",
-			"referralManagement": "रेफरल प्रबंधन",
+			"referralManagement": "रेफ़रल प्रबंधन",
 			"termsAndCommission": "शर्तें और कमीशन संरचना",
-			"unclaimedEarnings": "अदावा की गई कमाई",
+			"unclaimedEarnings": "अप्रकाशित कमाई",
 			"claim": "दावा करें",
-			"claiming": "दावा कर रहे हैं...",
+			"claiming": "दावा किया जा रहा है...",
 			"totalIncome": "कुल आय",
-			"totalReferrals": "कुल रेफरल",
+			"claimButtonTitle": "बोनस का दावा करें",
+			"totalReferrals": "कुल रेफ़रल",
 			"usersUnit": "उपयोगकर्ता",
-			"yourReferralLinks": "आपके रेफरल लिंक",
-			"referralLinksSubtitle": "नए उपयोगकर्ताओं को संदर्भित करने और कमीशन अर्जित करने के लिए इन लिंक को साझा करें",
-			"completeReferralLink": "पूरा रेफरल लिंक",
-			"fullReferralPlaceholder": "पूरा रेफरल लिंक यहाँ दिखाई देगा",
-			"fullReferralHelp": "सीधा लिंक जिसे उपयोगकर्ता आपके रेफरल कोड के साथ पंजीकरण करने के लिए क्लिक कर सकते हैं",
-			"referralCodeOnly": "केवल रेफरल कोड",
-			"yourReferralId": "आपकी रेफरल आईडी",
-			"referralIdHelp": "इस कोड को साझा करें ताकि उपयोगकर्ता पंजीकरण के दौरान इसे मैन्युअल रूप से दर्ज कर सकें",
-			"copyFullSuccess": "पूरा रेफरल लिंक क्लिपबोर्ड पर कॉपी किया गया!",
-			"copyIdSuccess": "रेफरल आईडी क्लिपबोर्ड पर कॉपी की गई!",
-			"claimButtonTitle": "इस बोनस का दावा करें"
+			"yourReferralLinks": "आपके रेफ़रल लिंक",
+			"referralLinksSubtitle": "नए उपयोगकर्ताओं को रेफ़र करने और कमीशन कमाने के लिए इन लिंक को साझा करें",
+			"completeReferralLink": "पूरा रेफ़रल लिंक",
+			"fullReferralPlaceholder": "पूरा रेफ़रल लिंक यहां दिखाई देगा",
+			"fullReferralHelp": "सीधा लिंक जिस पर उपयोगकर्ता आपके रेफ़रल कोड के साथ रजिस्टर करने के लिए क्लिक कर सकते हैं",
+			"referralCodeOnly": "केवल रेफ़रल कोड",
+			"yourReferralId": "आपकी रेफ़रल आईडी",
+			"referralIdHelp": "उपयोगकर्ताओं को पंजीकरण के दौरान मैन्युअल रूप से दर्ज करने के लिए इस कोड को साझा करें",
+			"copyFullSuccess": "पूरा रेफ़रल लिंक क्लिपबोर्ड पर कॉपी हो गया!",
+			"copyIdSuccess": "रेफ़रल आईडी क्लिपबोर्ड पर कॉपी हो गई!"
 		},
 		"referrals": {
-			"title": "मेरे रेफरल",
-			"subtitle": "अपने एफिलिएट लिंक के माध्यम से संदर्भित सभी उपयोगकर्ताओं को ट्रैक और प्रबंधित करें",
-			"totalReferrals": "कुल रेफरल",
-			"monitorHelp": "अपने रेफरल की गतिविधि, जमा और गेमिंग पैटर्न की निगरानी करें",
+			"title": "मेरे रेफ़रल",
+			"subtitle": "अपने रेफ़रल लिंक के माध्यम से रेफ़र किए गए सभी उपयोगकर्ताओं को ट्रैक और प्रबंधित करें",
+			"totalReferrals": "कुल रेफ़रल",
+			"monitorHelp": "अपने रेफ़रल की गतिविधि, जमा और गेमिंग पैटर्न की निगरानी करें",
 			"sort": {
-				"placeholder": "इसके अनुसार क्रमबद्ध करें...",
+				"placeholder": "इनके द्वारा सॉर्ट करें...",
 				"nicknameAsc": "उपनाम (A-Z)",
 				"nicknameDesc": "उपनाम (Z-A)",
-				"lastLogin": "अंतिम लॉगिन",
-				"unclaimedAmount": "अदावा की गई राशि"
+				"lastLogin": "अंतिम लॉग इन",
+				"unclaimedAmount": "अप्रकाशित राशि"
 			},
 			"table": {
 				"nickname": "उपनाम",
 				"totalWager": "कुल दांव",
-				"lastLogin": "अंतिम लॉगिन",
+				"lastLogin": "अंतिम लॉग इन",
 				"registered": "पंजीकृत",
 				"lastDeposit": "अंतिम जमा",
 				"depositDate": "जमा तिथि",
-				"tier": "स्तर"
+				"tier": "टियर"
 			},
 			"empty": {
-				"title": "कोई रेफरल नहीं मिला",
-				"subtitle": "उन्हें यहाँ देखने के लिए उपयोगकर्ताओं को संदर्भित करना शुरू करें।"
+				"title": "कोई रेफ़रल नहीं मिला",
+				"subtitle": "उन्हें यहां देखने के लिए उपयोगकर्ताओं को रेफ़र करना शुरू करें।"
 			},
 			"pagination": {
-				"showing": "{total} परिणामों में से {from} से {to} दिखा रहा है",
+				"showing": "{total} परिणामों में से {from} से {to} दिखाया जा रहा है",
 				"prev": "पिछला",
 				"next": "अगला"
 			}
 		},
 		"rates": {
 			"title": "कमीशन दर संरचना",
-			"subtitle": "स्तर और गेम श्रेणी के अनुसार कमाई का प्रतिशत",
-			"howItWorks": {
-				"title": "कमीशन स्तर कैसे काम करते हैं",
-				"body": "आपका कमीशन स्तर आपके रेफरल की कुल दैनिक दांव राशि द्वारा निर्धारित किया जाता है। उच्च स्तर सभी गेम प्रकारों में बेहतर कमीशन दर प्रदान करते हैं।"
+			"subtitle": "टियर स्तर और गेम कैटेगरी के अनुसार कमाई का प्रतिशत",
+			"overview": {
+				"title": "अवलोकन",
+				"body": "रेफ़रल बोनस स्लॉट, लाइव कैसीनो, स्पोर्ट्सबुक और लॉटरी में रेफ़र किए गए खिलाड़ियों के दांव टर्नओवर के आधार पर सहयोगियों को पुरस्कृत करता है। कमीशन की गणना हर 24 घंटे में की जाती है, जिसमें कमाई विभिन्न टर्नओवर टियर पर आधारित होती है।"
 			},
 			"calculation": {
 				"title": "कमीशन की गणना कैसे की जाती है",
-				"desc": "कमीशन की गणना हर 24 घंटे में संदर्भित खिलाड़ियों के कुल दांव के आधार पर की जाती है। उदाहरण:",
-				"exampleTitle": "स्तर {tier}:",
-				"wagerIn": "{gameType} में {amount} का दांव"
+				"desc": "कमीशन की गणना हर 24 घंटे में रेफ़र किए गए खिलाड़ियों के कुल दांव के आधार पर की जाती है। \nउदाहरण:",
+				"exampleTitle": "टियर {tier}:",
+				"wagerIn": "{gameType} में {amount} दांव लगाएं"
 			},
 			"table": {
-				"tierLevel": "स्तर",
+				"tierLevel": "टियर स्तर",
 				"wagerRange": "दांव सीमा",
-				"slots": "स्लॉट्स",
+				"slots": "स्लॉट",
 				"liveCasino": "लाइव कैसीनो",
-				"sports": "खेल",
-				"tierPrefix": "स्तर",
+				"sports": "स्पोर्ट्स",
+				"tierPrefix": "टियर",
 				"commissionLevel": "कमीशन स्तर",
-				"dailyWager": "दैनिक दांव की मात्रा"
+				"dailyWager": "दैनिक दांव वॉल्यूम"
 			},
 			"claim": {
 				"title": "दावा और निकासी",
 				"points": {
-					"0": "गणना के बाद कमीशन निकासी के लिए उपलब्ध हैं।",
-					"1": "अदावा किए गए कमीशन की कोई समाप्ति नहीं है—वे दावा किए जाने तक जमा होते रहते हैं।",
+					"0": "कमीशन की गणना होने के बाद वे निकासी के लिए उपलब्ध होते हैं।",
+					"1": "अप्रकाशित कमीशन के लिए कोई समाप्ति नहीं है - वे दावा किए जाने तक जमा होते हैं।",
 					"2": "निकासी प्लेटफ़ॉर्म के मानक नियमों का पालन करती है, जैसे न्यूनतम सीमा और प्रसंस्करण समय।"
 				}
 			},
 			"system": {
 				"title": "सिस्टम समय और संचालन",
-				"dailyTimeframeLabel": "दैनिक समय-सीमा:",
+				"dailyTimeframeLabel": "दैनिक समय सीमा:",
 				"dailyTimeframeValue": "00:00 UTC से 23:59 UTC (हर दिन)।",
-				"claimDailyLabel": "दैनिक दावा:",
-				"claimDailyValue": "रोज़ 14:00 UTC पर उपलब्ध (आपका स्थानीय समय: {local})।",
-				"note": "नोट: यद्यपि हम विभिन्न समय क्षेत्रों के प्रदाताओं के साथ काम करते हैं, सभी गणनाएं स्थिरता सुनिश्चित करने और भ्रम से बचने के लिए UTC का पालन करती हैं।"
+				"claimDailyLabel": "दैनिक दावा करें:",
+				"claimDailyValue": "रोज़ाना 14:00 UTC पर उपलब्ध (आपका स्थानीय समय: {local})।",
+				"note": "नोट: जबकि हम विभिन्न समय क्षेत्रों के प्रोवाइडर्स के साथ काम करते हैं, संगति सुनिश्चित करने और भ्रम से बचने के लिए सभी गणनाएँ UTC का पालन करती हैं।"
 			},
 			"amendments": {
 				"title": "संशोधन",
-				"body": "हम इन शर्तों को किसी भी समय अपडेट कर सकते हैं। परिवर्तन पोस्ट किए जाने पर तुरंत प्रभावी होते हैं, और निरंतर भागीदारी का मतलब है कि आप नई शर्तों को स्वीकार करते हैं।"
+				"body": "हम इन शर्तों को किसी भी समय अपडेट कर सकते हैं। परिवर्तन पोस्ट होते ही तुरंत प्रभावी होते हैं, और निरंतर भागीदारी का मतलब है कि आप नई शर्तों को स्वीकार करते हैं।"
 			},
 			"footer": {
 				"schedule": "कमीशन अनुसूची:",
-				"availableDaily": "रोज़ उपलब्ध",
+				"availableDaily": "रोज़ाना उपलब्ध",
 				"localTimeLabel": "(आपका स्थानीय समय: {time})"
-			},
-			"overview": {
-				"title": "अवलोकन",
-				"body": "सहबद्ध कार्यक्रम स्लॉट्स, लाइव कैसीनो, स्पोर्ट्सबुक्स, और लॉटरी में संदर्भित खिलाड़ियों से दांव के कारोबार के आधार पर सम्मानित करता है। कमीशन हर 24 घंटे में गणना किए जाते हैं, विभिन्न कारोबार स्तरों पर आधारित आय के साथ।"
 			}
 		},
 		"calculator": {
 			"title": "कमाई कैलकुलेटर",
-			"subtitle": "अपने रेफरल की दांव राशि के आधार पर अपनी कमीशन कमाई का अनुमान लगाएं",
+			"subtitle": "अपने रेफ़रल के दांव राशि के आधार पर अपनी कमीशन कमाई का अनुमान लगाएं",
 			"interactive": {
 				"title": "इंटरैक्टिव टूल:",
-				"body": "सभी स्तरों पर संभावित कमाई देखने के लिए विभिन्न दांव राशियाँ दर्ज करें"
+				"body": "सभी टियर में संभावित कमाई देखने के लिए विभिन्न दांव राशि दर्ज करें"
 			},
 			"potentialEarnings": "संभावित कमाई",
-			"basedOnRate": "{percentage}% कमीशन दर के आधार पर",
-			"tier": "स्तर {level}",
+			"basedOnRate": "{percentage}% कमीशन दर पर आधारित",
+			"tier": "टियर {level}",
 			"commissionLevel": "कमीशन स्तर {level}",
 			"enterWager": "दांव राशि दर्ज करें (USD)",
-			"wagerPlaceholder": "जैसे, 1000",
+			"wagerPlaceholder": "उदा., 1000",
 			"calcFor": "${amount} दांव के लिए कमाई की गणना",
 			"totalPotential": "कुल संभावित कमाई:",
-			"combinedAtTier": "स्तर {level} पर सभी गेम प्रकारों से संयुक्त कमाई"
+			"combinedAtTier": "टियर {level} पर सभी गेम प्रकारों से संयुक्त कमाई"
+		}
+	},
+	"bonus": {
+		"title": "टर्नओवर बोनस प्रोग्राम",
+		"loginPromptTitle": "टर्नओवर बोनस प्रोग्राम",
+		"loginPromptSubtitle": "अपने बोनस आँकड़े देखने और अपने पुरस्कारों का दावा करने के लिए लॉग इन करें।",
+		"goHome": "होम पर जाएं",
+		"tabs": {
+			"dashboard": "डैशबोर्ड",
+			"claims": "दावे",
+			"rates": "बोनस दरें",
+			"calculator": "कैलकुलेटर"
+		},
+		"refresh": "ताज़ा करें",
+		"refreshing": "ताज़ा किया जा रहा है...",
+		"refreshAllSuccess": "सभी डेटा सफलतापूर्वक ताज़ा किए गए!",
+		"refreshPartial": "आंशिक रूप से ताज़ा किया गया: {success}/{total} सेक्शन अपडेट किए गए",
+		"refreshFailed": "डेटा ताज़ा करने में विफल रहा। कृपया पुन: प्रयास करें।",
+		"dashboard": {
+			"title": "बोनस डैशबोर्ड",
+			"subtitle": "अपने दांव, बोनस और पुरस्कार कमाई को ट्रैक करें",
+			"claimButtonTitle": "दावा करें",
+			"performanceOverview": "बोनस अवलोकन",
+			"bonusRatesTitle": "बोनस दर संरचना",
+			"totalIncome": "कुल बोनस",
+			"pendingBonus": "लंबित बोनस",
+			"lastClaim": "अंतिम दावा",
+			"unclaimedEarnings": "दावा करने के लिए उपलब्ध",
+			"claim": {
+				"title": "दावा और निकासी",
+				"points": {
+					"0": "कमीशन की गणना होने के बाद वे निकासी के लिए उपलब्ध होते हैं।",
+					"1": "अप्रकाशित कमीशन के लिए कोई समाप्ति नहीं है - वे दावा किए जाने तक जमा होते हैं।",
+					"2": "निकासी प्लेटफ़ॉर्म के मानक नियमों का पालन करती है, जैसे न्यूनतम सीमा और प्रसंस्करण समय।"
+				}
+			},
+			"claiming": "दावा किया जा रहा है...",
+			"section2": {
+				"title": "पात्रता",
+				"content": "भाग लेने के लिए:"
+			},
+			"section3": {
+				"title": "टर्नओवर टियर और दरें",
+				"content": "बोनस की गणना आपके दैनिक दांव राशि के आधार पर की जाती है:",
+				"noteTitle": "नोट",
+				"noteContent": "टियर का मूल्यांकन रोज़ाना 14:00 UTC पर किया जाता है। आपके पिछले दिन का दांव वॉल्यूम आज की बोनस दर निर्धारित करता है। दरें सभी गेम प्रकारों पर लागू होती हैं: स्लॉट, लाइव कैसीनो और स्पोर्ट्स।"
+			}
+		},
+		"claims": {
+			"title": "दावों का इतिहास",
+			"subtitle": "अपने बोनस दावों और दांव गतिविधि को ट्रैक करें",
+			"tableHeaders": {
+				"date": "बेटिंग तिथि",
+				"slots": "स्लॉट",
+				"liveCasino": "लाइव कैसीनो",
+				"sports": "स्पोर्ट्स",
+				"total": "कुल",
+				"tier": "टियर",
+				"unclaimed": "अप्रकाशित",
+				"token": "टोकन"
+			},
+			"tierPrefix": "टियर",
+			"availableToClaim": "दावा करने के लिए उपलब्ध",
+			"totalBonus": "कुल बोनस",
+			"claimed": "दावा किया गया",
+			"progressPercentage": "प्रगति",
+			"progressTitle": "आपकी प्रगति",
+			"currentTier": "वर्तमान टियर",
+			"nextTier": "अगला टियर",
+			"wagerProgress": "दांव प्रगति",
+			"totalWagered": "आज का कुल दांव",
+			"toNextTier": "अगले टियर तक पहुंचने के लिए",
+			"empty": {
+				"title": "अभी तक कोई बोनस दावा नहीं",
+				"subtitle": "बोनस कमाने के लिए खेलना शुरू करें!"
+			}
+		},
+		"rates": {
+			"title": "टर्नओवर टियर और दरें",
+			"subtitle": "दांव स्तर और गेम कैटेगरी के अनुसार बोनस प्रतिशत",
+			"overview": {
+				"title": "अवलोकन",
+				"body": "टर्नओवर बोनस उपयोगकर्ताओं को स्लॉट, लाइव कैसीनो, स्पोर्ट्सबुक और लॉटरी में उनके दांव के आधार पर पुरस्कृत करता है। बोनस की गणना हर 24 घंटे में की जाती है, और उपयोगकर्ता दांव लगाने के अगले दिन उनका दावा कर सकते हैं। सात टियर हैं, जिनमें से प्रत्येक में दांव राशि के आधार पर अलग-अलग दरें हैं।"
+			},
+			"eligibility": {
+				"title": "पात्रता",
+				"content": "भाग लेने के लिए:",
+				"points": {
+					"0": "आपका एक सक्रिय खाता होना चाहिए।",
+					"1": "स्लॉट, लाइव कैसीनो, स्पोर्ट्सबुक और लॉटरी में दांव लगाएं।",
+					"2": "प्रत्येक टियर के लिए न्यूनतम दांव आवश्यकताओं को पूरा करें।"
+				}
+			},
+			"calculation": {
+				"title": "बोनस की गणना कैसे की जाती है",
+				"desc": "बोनस की गणना हर 24 घंटे में आपके कुल दांव के आधार पर की जाती है। उदाहरण:",
+				"exampleTitle": "टियर {tier}:",
+				"wagerIn": "{gameType} में {amount} दांव लगाएं"
+			},
+			"table": {
+				"tierLevel": "टियर स्तर",
+				"wagerRange": "दांव सीमा",
+				"slots": "स्लॉट",
+				"liveCasino": "लाइव कैसीनो",
+				"sports": "स्पोर्ट्स",
+				"tierPrefix": "टियर",
+				"commissionLevel": "बोनस स्तर",
+				"dailyWager": "दैनिक दांव वॉल्यूम"
+			},
+			"claim": {
+				"title": "बोनस का दावा और निकासी",
+				"points": {
+					"0": "दांव के 24 घंटे बाद बोनस दावा करने के लिए पात्र हो जाते हैं।",
+					"1": "अप्रकाशित बोनस जमा होते रहेंगे और उनकी समय सीमा समाप्त नहीं होगी।",
+					"2": "दावा और निकासी प्रक्रिया प्लेटफ़ॉर्म-विशिष्ट नीतियों के आधार पर भिन्न हो सकती है।"
+				}
+			},
+			"system": {
+				"title": "सिस्टम समय और संचालन",
+				"dailyTimeframeLabel": "दैनिक समय सीमा:",
+				"dailyTimeframeValue": "00:00 UTC से 23:59 UTC (हर दिन)।",
+				"claimDailyLabel": "दैनिक दावा करें:",
+				"claimDailyValue": "रोज़ाना 14:00 UTC पर उपलब्ध (आपका स्थानीय समय: {local})।",
+				"note": "नोट: जबकि हम विभिन्न समय क्षेत्रों के प्रोवाइडर्स के साथ काम करते हैं, संगति सुनिश्चित करने और भ्रम से बचने के लिए सभी गणनाएँ UTC का पालन करती हैं।"
+			},
+			"amendments": {
+				"title": "संशोधन और अयोग्यता",
+				"body": "हम इन शर्तों को किसी भी समय अपडेट कर सकते हैं, और परिवर्तन पोस्ट होते ही प्रभावी होते हैं। यदि सिस्टम त्रुटियों, गलत गणनाओं, या धोखाधड़ी का संदेह होता है, तो हम निष्पक्षता सुनिश्चित करने के लिए आवश्यक होने पर बोनस और खातों को समायोजित या अयोग्य घोषित करने का अधिकार सुरक्षित रखते हैं"
+			},
+			"footer": {
+				"schedule": "बोनस अनुसूची:",
+				"availableDaily": "रोज़ाना उपलब्ध",
+				"localTimeLabel": "(आपका स्थानीय समय: {time})"
+			}
+		},
+		"calculator": {
+			"title": "बोनस कैलकुलेटर",
+			"subtitle": "अपने दांव राशि के आधार पर अपनी बोनस कमाई का अनुमान लगाएं",
+			"interactive": {
+				"title": "इंटरैक्टिव टूल:",
+				"body": "सभी टियर में संभावित बोनस देखने के लिए विभिन्न दांव राशि दर्ज करें"
+			},
+			"potentialEarnings": "संभावित बोनस",
+			"basedOnRate": "{percentage}% बोनस दर पर आधारित",
+			"tier": "टियर {level}",
+			"commissionLevel": "बोनस स्तर {level}",
+			"enterWager": "दांव राशि दर्ज करें (USD)",
+			"wagerPlaceholder": "उदा., 1000",
+			"calcFor": "${amount} दांव के लिए बोनस की गणना",
+			"totalPotential": "कुल संभावित बोनस:",
+			"combinedAtTier": "टियर {level} पर सभी गेम प्रकारों से संयुक्त बोनस"
+		},
+		"claimSuccessModal": {
+			"title": "दावा सफल",
+			"statusCompleted": "पूरा हुआ",
+			"statusOnChain": "ऑन-चेन",
+			"claimAmount": "दावा राशि",
+			"logoAlt": "{siteName} लोगो",
+			"backgroundAlt": "दावा सफलता पृष्ठभूमि",
+			"creatingMagic": "जादू बनाया जा रहा है...",
+			"downloadShare": "डाउनलोड और साझा करें",
+			"spreadTheWin": "जीत को फैलाएं",
+			"socialX": "X",
+			"socialFacebook": "फेसबुक",
+			"socialWhatsApp": "व्हाट्सएप",
+			"socialTelegram": "टेलीग्राम",
+			"socialReddit": "रेडिट",
+			"socialMore": "अधिक",
+			"shareText": "मैंने अभी {amount} बोनस का दावा किया है! मेरे साथ जुड़ें: {url}",
+			"referralLinkCopied": "रेफ़रल लिंक कॉपी हो गया!",
+			"referralLinkCopyFailed": "रेफ़रल लिंक कॉपी करने में विफल रहा",
+			"screenshotFailed": "स्क्रीनशॉट विफल रहा। कृपया पुन: प्रयास करें या किसी अन्य ब्राउज़र का उपयोग करें।",
+			"shareTextCopied": "साझा करने का टेक्स्ट क्लिपबोर्ड पर कॉपी हो गया!",
+			"shareFailed": "साझा करने में विफल रहा। कृपया पुन: प्रयास करें।"
 		}
 	},
 	"debug": {
-		"title": "डीबगिंग पेज"
+		"title": "डिबगिंग पेज"
 	},
 	"getLobby": {
-		"enteringLobby": "लॉबी में प्रवेश कर रहे हैं...",
+		"enteringLobby": "लॉबी में प्रवेश हो रहा है...",
 		"connectingWait": "कृपया प्रतीक्षा करें जब तक हम आपको कनेक्ट करते हैं।",
-		"invalidSession": "आपकी सत्र अमान्य है या प्रदाता गायब है। कृपया पुनः प्रयास करें।",
-		"failedPrefix": "लॉबी में प्रवेश करने में विफल: {message}",
+		"invalidSession": "आपका सत्र अमान्य है या प्रोवाइडर गुम है। कृपया पुन: प्रयास करें।",
+		"failedPrefix": "लॉबी में प्रवेश करने में विफल रहा: {message}",
 		"launchFailedTitle": "लॉन्च विफल",
-		"returnHome": "होम पर वापस जाएं"
+		"returnHome": "होम पर लौटें"
 	},
 	"play": {
 		"connecting": "गेम सर्वर से कनेक्ट हो रहा है...",
-		"invalidSession": "आपकी सत्र अमान्य है या समाप्त हो गया है। कृपया लॉग इन करें और पुनः प्रयास करें।",
+		"invalidSession": "आपका सत्र अमान्य है या समाप्त हो गया है। कृपया लॉग इन करें और पुन: प्रयास करें।",
 		"launchFailedTitle": "लॉन्च विफल",
-		"returnHome": "होम पर वापस जाएं"
+		"returnHome": "होम पर लौटें"
 	},
 	"modalsIdle": {
-		"badgeLimitedTime": "सीमित समय पेशकश",
-		"headline": "200% स्वागत बोनस प्राप्त करें!",
-		"subheadline": "अब अपना क्रिप्टो वॉलेट कनेक्ट करें और अपनी पहली जमा पर {amount} तक का बोनस प्राप्त करें!",
+		"badgeLimitedTime": "सीमित समय का ऑफर",
+		"headline": "200% वेलकम बोनस प्राप्त करें!",
+		"subheadline": "अभी अपना क्रिप्टो वॉलेट कनेक्ट करें और अपने पहले जमा पर {amount} तक का बोनस प्राप्त करें!",
 		"featureDepositMatch": "200% जमा मैच",
-		"featureZeroFees": "शून्य लेनदेन शुल्क",
-		"featureInstantWithdrawals": "तुरंत निकासी",
-		"featureNoKyc": "कोई केवाईसी आवश्यक नहीं",
-		"ctaClaim": "बोनस अभी दावा करें!",
-		"offerExpires": "प्रस्ताव समाप्त होता है:",
-		"disclaimer": "नियम और शर्तें लागू। जुआ में जोखिम शामिल है। जिम्मेदारी से खेलें। 18+",
-		"closeAria": "मोडल बंद करें",
+		"featureZeroFees": "शून्य लेन-देन शुल्क",
+		"featureInstantWithdrawals": "तत्काल निकासी",
+		"featureNoKyc": "कोई KYC आवश्यक नहीं",
+		"ctaClaim": "अभी बोनस का दावा करें!",
+		"offerExpires": "ऑफ़र इतने समय में समाप्त होता है:",
+		"disclaimer": "नियम और शर्तें लागू। जुए में जोखिम शामिल है। जिम्मेदारी से खेलें। 18+",
+		"closeAria": "मॉडेल बंद करें",
 		"bannerAlt": "प्रचार बैनर",
-		"ctaOk": "वॉलेट कनेक्ट करें और सट्टेबाजी शुरू करें",
+		"ctaOk": "वॉलेट कनेक्ट करें और बेटिंग शुरू करें",
 		"enterAmount": "राशि दर्ज करें",
-		"balance": "शेष राशि",
+		"balance": "बैलेंस",
 		"max": "अधिकतम",
-		"deposit": "जमा करें",
-		"ethereum": "इथेरियम"
+		"deposit": "जमा",
+		"ethereum": "एथेरियम"
 	},
 	"modalsSmall": {
 		"close": "बंद करें",
-		"firstDepositBoost": "पहली जमा पर बोनस बूस्ट",
+		"firstDepositBoost": "1st जमा बोनस बूस्ट",
 		"bonus": "बोनस",
 		"min": "मिनट",
 		"sec": "सेकंड",
-		"deposit": "जमा करें"
+		"deposit": "जमा"
 	},
 	"auth": {
 		"email": {
-			"title": "ईमेल लॉगिन",
+			"title": "ईमेल लॉग इन",
 			"description": "हम आपको एक 6-अंकीय कोड भेजेंगे",
 			"emailLabel": "ईमेल पता",
 			"emailPlaceholder": "name@email.com",
 			"cancel": "रद्द करें",
-			"sending": "भेज रहा है",
+			"sending": "भेजा जा रहा है",
 			"continue": "जारी रखें",
 			"enterCodeTitle": "कोड दर्ज करें",
 			"sentTo": "{email} पर भेजा गया",
 			"changeEmail": "ईमेल बदलें",
-			"resendCode": "कोड पुनः भेजें",
-			"resendIn": "{seconds}s में पुनः भेजें",
-			"verifying": "सत्यापित हो रहा है",
+			"resendCode": "कोड पुन: भेजें",
+			"resendIn": "{seconds}s में पुन: भेजें",
+			"verifying": "सत्यापन हो रहा है",
 			"successTitle": "आप अंदर हैं",
-			"successSubtitle": "चीजें सेट कर रहा है...",
-			"modalAria": "ईमेल सत्यापन मोडल",
+			"successSubtitle": "चीजों को सेटअप किया जा रहा है...",
+			"modalAria": "ईमेल सत्यापन मॉडेल",
 			"errors": {
-				"invalidEmail": "कृपया एक मान्य ईमेल पता दर्ज करें",
-				"sendFailed": "सत्यापन कोड भेजने में विफल।",
-				"invalidCode": "कृपया एक 6-अंकीय सत्यापन कोड दर्ज करें"
+				"invalidEmail": "कृपया एक वैध ईमेल पता दर्ज करें",
+				"sendFailed": "सत्यापन कोड भेजने में विफल रहा।",
+				"invalidCode": "कृपया 6-अंकीय सत्यापन कोड दर्ज करें"
 			}
 		},
 		"setNickname": {
 			"title": "अपना उपनाम सेट करें",
-			"subtitle": "यह एक बार का सेटअप है और इसे बदला नहीं जा सकता",
+			"subtitle": "यह एक बार का सेटअप है और इसे बदला नहीं जा सकता है",
 			"logoutAria": "लॉग आउट",
-			"inputPlaceholder": "अपना अनूठा उपनाम चुनें",
-			"referrerCheckbox": "मेरे पास एक रेफरर आईडी है",
-			"referrerPlaceholder": "रेफरर आईडी दर्ज करें",
-			"referrerHelp": "वैकल्पिक। यह आपके खाते को बोनस कार्यक्रमों के लिए रेफरर से जोड़ता है।",
+			"inputPlaceholder": "अपना अद्वितीय उपनाम चुनें",
+			"referrerCheckbox": "मेरे पास एक रेफ़रर आईडी है",
+			"referrerPlaceholder": "रेफ़रर आईडी दर्ज करें",
+			"referrerHelp": "वैकल्पिक। यह बोनस कार्यक्रमों के लिए आपके खाते को रेफ़रर से जोड़ता है।",
 			"status": {
-				"checking": "उपलब्धता की जाँच हो रही है...",
+				"checking": "उपलब्धता जाँच रहा है...",
 				"available": "उपनाम उपलब्ध है!",
-				"taken": "यह उपनाम पहले ही लिया जा चुका है।"
+				"taken": "यह उपनाम पहले से ही लिया गया है।"
 			},
-			"register": "पंजीकरण करें और खेलें",
+			"register": "रजिस्टर करें और खेलें",
 			"termsTitle": "नियम और शर्तें:",
-			"termsBody": "इस दस्तावेज़ पर अपने वॉलेट से हस्ताक्षर करके और/या इस वेब3 एप्लिकेशन का उपयोग जारी रखकर, आप एप्लिकेशन के उपयोग की शर्तों को स्वीकार करते हैं। उपयोग की शर्तों के लिए अपनी सहमति पर हस्ताक्षर करना एक ब्लॉकचेन लेनदेन नहीं है और इसमें कोई लागत नहीं आती है।",
+			"termsBody": "अपने वॉलेट के साथ इस दस्तावेज़ पर हस्ताक्षर करके और/या इस Web3 एप्लिकेशन का उपयोग जारी रखकर, आप एप्लिकेशन के उपयोग की शर्तों को स्वीकार करते हैं। उपयोग की शर्तों के लिए आपकी सहमति पर हस्ताक्षर करना एक ब्लॉकचेन लेन-देन नहीं है और इसमें कोई लागत नहीं आती है।",
 			"errors": {
-				"verifyNicknameFailed": "उपनाम सत्यापित नहीं किया जा सका। कृपया पुनः प्रयास करें।",
+				"verifyNicknameFailed": "उपनाम सत्यापित नहीं हो सका। कृपया पुन: प्रयास करें।",
 				"registerFailed": "पंजीकरण विफल: {message}"
 			}
 		},
 		"walletConnect": {
-			"loginWithEmail": "ईमेल से लॉगिन करें",
+			"loginWithEmail": "ईमेल से लॉग इन करें",
 			"connectWalletBtn": "वॉलेट कनेक्ट करें",
+			"loginWithWallet": "वॉलेट से लॉग इन करें",
 			"player": "खिलाड़ी",
 			"walletConnected": "वॉलेट कनेक्टेड",
 			"emailConnected": "ईमेल कनेक्टेड",
 			"disconnect": "डिस्कनेक्ट करें",
 			"walletAddress": "वॉलेट पता",
-			"balance": "शेष राशि",
-			"loginWithWallet": "वॉलेट से लॉगिन करें"
+			"balance": "बैलेंस"
 		}
 	},
 	"walletProvider": {
 		"transactionModal": {
+			"title": "वॉलेट",
 			"tabs": {
-				"deposit": "जमा करें",
-				"withdraw": "निकालें",
-				"swap": "स्वैप करें",
-				"walletInfo": "वॉलेट",
+				"deposit": "जमा",
 				"tip": "टिप",
+				"withdraw": "निकासी",
+				"swap": "स्वैप",
+				"walletInfo": "वॉलेट",
 				"emailWallet": "ईमेल वॉलेट",
-				"wallet": "बटुआ"
+				"wallet": "वॉलेट"
 			},
 			"mobileDropdown": {
 				"emailWallet": "ईमेल वॉलेट",
 				"wallet": "वॉलेट",
-				"deposit": "जमा करें",
-				"withdraw": "निकालें",
-				"swap": "स्वैप करें",
-				"tip": "बख्शीश"
-			},
-			"title": "बटुआ"
+				"deposit": "जमा",
+				"tip": "टिप",
+				"withdraw": "निकासी",
+				"swap": "स्वैप"
+			}
 		},
 		"networkSelector": {
 			"placeholder": "नेटवर्क चुनें",
-			"switching": "स्विच कर रहा है...",
+			"switching": "स्विच हो रहा है...",
 			"walletNotConnected": "वॉलेट कनेक्ट नहीं है।",
-			"failedToSwitch": "नेटवर्क स्विच करने में विफल। कृपया अपने वॉलेट से प्रयास करें।",
+			"failedToSwitch": "नेटवर्क स्विच करने में विफल रहा। कृपया अपने वॉलेट से प्रयास करें।",
 			"altLogo": "नेटवर्क लोगो"
 		},
 		"tokenList": {
 			"dialogTitle": "एक टोकन चुनें",
-			"instantDeposit": "तुरंत जमा",
-			"yourWalletBalance": "आपका वॉलेट शेष",
+			"instantDeposit": "तत्काल जमा",
+			"yourWalletBalance": "आपका वॉलेट बैलेंस",
 			"searchPlaceholder": "नाम खोजें या पता पेस्ट करें",
 			"emptySearch": "आपकी खोज से मेल खाने वाला कोई टोकन नहीं मिला।",
-			"emptyOwned": "शेष राशि वाला कोई टोकन नहीं मिला।",
+			"emptyOwned": "बैलेंस वाला कोई टोकन नहीं मिला।",
 			"searchResults": "खोज परिणाम",
 			"yourTokens": "आपके टोकन",
 			"otherResults": "अन्य परिणाम"
@@ -698,159 +868,204 @@
 		"tabsSidebar": {
 			"walletInfo": "वॉलेट",
 			"emailWallet": "ईमेल वॉलेट",
-			"deposit": "जमा करें",
-			"withdraw": "निकालें",
-			"swap": "स्वैप करें"
+			"deposit": "जमा",
+			"withdraw": "निकासी",
+			"swap": "स्वैप"
 		},
 		"depositPanel": {
 			"youPay": "आप भुगतान करते हैं",
-			"resetForm": "फ़ॉर्म रीसेट करें",
+			"resetForm": "फॉर्म रीसेट करें",
 			"enterAmount": "राशि दर्ज करें",
 			"selectToken": "टोकन चुनें",
 			"max": "अधिकतम",
-			"balance": "शेष राशि:",
+			"maxButtonToolTipText": "गैस शुल्क को कवर करने और लेन-देन विफलता से बचने के लिए {gasReservationAmount} {selectedTokenSymbol} आरक्षित है",
+			"balance": "बैलेंस:",
 			"calculating": "गणना हो रही है...",
-			"approxUsd": "~${amount} USD",
+			"approxUsd": "~ ${amount} USD",
 			"minPrefix": "न्यूनतम:",
 			"ratesMayVary": "दरें भिन्न हो सकती हैं",
 			"emailWalletAddress": "ईमेल वॉलेट पता",
 			"walletAddress": "वॉलेट पता",
 			"minimumIs": "न्यूनतम {min} है",
 			"errors": {
-				"selectTokenAndAmount": "कृपया एक टोकन चुनें और राशि दर्ज करें",
-				"insufficientBalance": "इस लेनदेन के लिए अपर्याप्त शेष राशि",
+				"selectTokenAndAmount": "कृपया एक टोकन चुनें और एक राशि दर्ज करें",
+				"insufficientBalance": "इस लेन-देन के लिए अपर्याप्त बैलेंस",
 				"amountTooHighGas": "गैस शुल्क को ध्यान में रखते हुए राशि बहुत अधिक है",
-				"checkForm": "कृपया फ़ॉर्म की जाँच करें और पुनः प्रयास करें",
-				"pendingDeposit": "आपकी एक जमा लंबित है। कृपया इसके पूरा होने की प्रतीक्षा करें"
+				"checkForm": "कृपया फॉर्म की जांच करें और पुन: प्रयास करें",
+				"pendingDeposit": "आपका एक जमा लंबित है। कृपया इसके पूरा होने की प्रतीक्षा करें"
 			},
 			"status": {
-				"processing": "संसाधित हो रहा है...",
-				"awaitingApproval": "अनुमोदन की प्रतीक्षा है",
-				"calculatingRate": "दर की गणना हो रही है...",
-				"insufficientBalance": "अपर्याप्त शेष राशि"
+				"processing": "प्रसंस्करण हो रहा है...",
+				"awaitingApproval": "अनुमोदन की प्रतीक्षा",
+				"calculatingRate": "दर की गणना...",
+				"insufficientBalance": "अपर्याप्त बैलेंस"
 			},
 			"buttons": {
-				"depositUsd": "${amount} जमा करें"
+				"depositUsd": "जमा करें ${amount}"
+			}
+		},
+		"tipPanel": {
+			"youTip": "आप टिप देते हैं",
+			"resetForm": "फॉर्म रीसेट करें",
+			"enterAmount": "राशि दर्ज करें",
+			"selectToken": "टोकन चुनें",
+			"minPrefix": "न्यूनतम",
+			"balance": "बैलेंस:",
+			"max": "अधिकतम",
+			"maxButtonToolTipText": "गैस शुल्क को कवर करने और लेन-देन विफलता से बचने के लिए {gasReservationAmount} {selectedTokenSymbol} आरक्षित है",
+			"approxUsd": "~ ${amount} USD",
+			"tipPanelWarningText": "टिप स्वैच्छिक हैं और वापस नहीं किए जा सकते।",
+			"emailWalletAddress": "ईमेल वॉलेट पता",
+			"errors": {
+				"selectTokenAndAmount": "कृपया एक टोकन चुनें और एक राशि दर्ज करें।",
+				"insufficientBalance": "अपर्याप्त बैलेंस।",
+				"belowMinimum": "राशि कम से कम {min} होनी चाहिए।",
+				"missingWallet": "टिप वॉलेट प्राप्त करने में असमर्थ। कृपया बाद में पुन: प्रयास करें।",
+				"checkForm": "कृपया अपने टिप विवरण सत्यापित करें।"
 			},
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} गैस शुल्क को कवर करने और लेनदेन विफलता से बचने के लिए आरक्षित है"
+			"status": {
+				"processing": "टिप भेजी जा रही है...",
+				"awaitingApproval": "अनुमोदन की प्रतीक्षा...",
+				"calculatingRate": "गणना हो रही है...",
+				"insufficientBalance": "अपर्याप्त बैलेंस",
+				"fetchingWallet": "टिप वॉलेट तैयार किया जा रहा है..."
+			},
+			"prompts": {
+				"selectToken": "टोकन चुनें",
+				"enterAmount": "राशि दर्ज करें"
+			},
+			"buttons": {
+				"tipUsd": "टिप ${amount}",
+				"tip": "टिप"
+			},
+			"minimumIs": "न्यूनतम टिप {min} है"
+		},
+		"tipPending": {
+			"submittedTitle": "टिप लंबित",
+			"submittedDesc": "आपके टिप की ऑन-चेन पुष्टि हो रही है।",
+			"confirmedTitle": "टिप की पुष्टि हो गई!",
+			"confirmedDesc": "आपका टिप सफलतापूर्वक वितरित हो गया।",
+			"viewOnExplorer": "एक्सप्लोरर पर देखें",
+			"newTipPending": "एक और टिप भेजें",
+			"newTipConfirmed": "एक और टिप भेजें"
 		},
 		"swapPanel": {
 			"selectTokens": "टोकन चुनें",
 			"enterAmount": "राशि दर्ज करें",
-			"gettingQuote": "उद्धरण प्राप्त हो रहा है...",
+			"gettingQuote": "कोट प्राप्त किया जा रहा है...",
 			"confirming": "पुष्टि हो रही है...",
 			"approving": "अनुमोदन हो रहा है...",
-			"insufficientBalance": "स्वैप के लिए अपर्याप्त शेष राशि",
-			"sameToken": "एक ही टोकन को स्वैप नहीं किया जा सकता",
-			"approveAndSwap": "अनुमोदित करें और स्वैप करें",
-			"swap": "स्वैप करें",
+			"insufficientBalance": "स्वैप के लिए अपर्याप्त बैलेंस",
+			"sameToken": "एक ही टोकन को स्वैप नहीं कर सकते",
+			"approveAndSwap": "अनुमोदन और स्वैप करें",
+			"swap": "स्वैप",
 			"slippageTolerance": "स्लिपेज सहिष्णुता",
 			"custom": "कस्टम",
 			"set": "सेट करें",
 			"currentSlippage": "वर्तमान स्लिपेज",
 			"swapSuccessful": "स्वैप सफल!",
-			"transactionConfirmed": "आपका लेनदेन पुष्टि हो गया है",
+			"transactionConfirmed": "आपका लेन-देन सबमिट हो गया है",
 			"hash": "हैश",
 			"newSwap": "नया स्वैप",
 			"youPay": "आप भुगतान करते हैं",
 			"max": "अधिकतम",
+			"maxButtonToolTipText": "गैस शुल्क को कवर करने और लेन-देन विफलता से बचने के लिए {gasReservationAmount} {selectedTokenSymbol} आरक्षित है",
 			"low": "कम",
 			"amountPlaceholder": "0",
 			"selectToken": "टोकन चुनें",
 			"youReceive": "आप प्राप्त करते हैं",
-			"gettingBestQuote": "सर्वश्रेष्ठ उद्धरण प्राप्त हो रहा है...",
+			"gettingBestQuote": "सर्वोत्तम कोट प्राप्त किया जा रहा है...",
 			"gas": "गैस",
 			"minimumReceived": "न्यूनतम प्राप्त",
 			"slippageToleranceLabel": "स्लिपेज सहिष्णुता",
 			"gasFee": "गैस शुल्क",
-			"priceWarning": "कीमतें वास्तविक समय में अपडेट होती हैं और आपके लेनदेन की पुष्टि से पहले बदल सकती हैं",
+			"priceWarning": "कीमतें वास्तविक समय में अपडेट की जाती हैं और आपके लेन-देन की पुष्टि होने से पहले बदल सकती हैं",
 			"emailWalletAddress": "ईमेल वॉलेट पता",
 			"walletAddress": "वॉलेट पता",
 			"minimumIs": "न्यूनतम {min} है",
 			"errors": {
-				"selectTokenAndAmount": "कृपया एक टोकन चुनें और राशि दर्ज करें",
-				"insufficientBalance": "इस लेनदेन के लिए अपर्याप्त शेष राशि",
+				"selectTokenAndAmount": "कृपया एक टोकन चुनें और एक राशि दर्ज करें",
+				"insufficientBalance": "इस लेन-देन के लिए अपर्याप्त बैलेंस",
 				"amountTooHighGas": "गैस शुल्क को ध्यान में रखते हुए राशि बहुत अधिक है",
-				"checkForm": "कृपया फ़ॉर्म की जाँच करें और पुनः प्रयास करें",
-				"pendingDeposit": "आपकी एक जमा लंबित है। कृपया इसके पूरा होने की प्रतीक्षा करें"
+				"checkForm": "कृपया फॉर्म की जांच करें और पुन: प्रयास करें",
+				"pendingDeposit": "आपका एक जमा लंबित है। कृपया इसके पूरा होने की प्रतीक्षा करें"
 			},
 			"status": {
-				"processing": "संसाधित हो रहा है...",
-				"awaitingApproval": "अनुमोदन की प्रतीक्षा है",
-				"calculatingRate": "दर की गणना हो रही है...",
-				"insufficientBalance": "अपर्याप्त शेष राशि"
+				"processing": "प्रसंस्करण हो रहा है...",
+				"awaitingApproval": "अनुमोदन की प्रतीक्षा",
+				"calculatingRate": "दर की गणना...",
+				"insufficientBalance": "अपर्याप्त बैलेंस"
 			},
 			"buttons": {
-				"depositUsd": "${amount} जमा करें"
-			},
-			"maxButtonToolTipText": "गैस शुल्क को कवर करने और लेनदेन विफलता से बचने के लिए {gasReservationAmount} {selectedTokenSymbol} आरक्षित है"
+				"depositUsd": "जमा करें ${amount}"
+			}
 		},
 		"depositPending": {
-			"confirmedTitle": "जमा की पुष्टि हुई!",
-			"submittedTitle": "लेनदेन सबमिट किया गया",
-			"confirmedDesc": "आपकी शेष राशि अपडेट कर दी गई है।",
+			"confirmedTitle": "जमा की पुष्टि हो गई!",
+			"submittedTitle": "लेन-देन सबमिट किया गया",
+			"failedTitle": "लेन-देन विफल",
+			"confirmedDesc": "आपका बैलेंस अपडेट कर दिया गया है।",
 			"submittedDesc": "ब्लॉकचेन पुष्टि की प्रतीक्षा है। इसमें कुछ मिनट लग सकते हैं।",
+			"failedDesc": "आपका लेन-देन विफल हो गया है। कृपया पुन: प्रयास करें।",
 			"viewOnExplorer": "एक्सप्लोरर पर देखें",
 			"newDepositConfirmed": "एक और जमा करें",
-			"newDepositPending": "एक नई जमा शुरू करें",
-			"failedTitle": "लेन - देन विफल",
-			"failedDesc": "आपका लेनदेन विफल हो गया है. ",
-			"newDepositFailed": "पुनः प्रयास करें"
+			"newDepositPending": "एक नया जमा शुरू करें",
+			"newDepositFailed": "पुन: प्रयास करें"
 		},
 		"withdrawPanel": {
-			"resetForm": "फ़ॉर्म रीसेट करें",
-			"networkNotSupported": "निकासी केवल आर्बिट्रम, पॉलीगॉन और बीएनबी पर समर्थित है",
+			"resetForm": "फॉर्म रीसेट करें",
+			"networkNotSupported": "निकासी केवल Arbitrum, Polygon और BNB पर समर्थित है",
 			"youWithdraw": "आप निकालते हैं",
 			"loading": "लोड हो रहा है...",
 			"amount": "राशि",
 			"max": "अधिकतम",
-			"balance": "शेष राशि:",
+			"balance": "बैलेंस:",
 			"available": "उपलब्ध:",
-			"insufficientBalance": "अपर्याप्त शेष राशि",
+			"insufficientBalance": "अपर्याप्त बैलेंस",
 			"minimumIs": "न्यूनतम {min} है",
 			"minLabel": "न्यूनतम:",
+			"calculating": "गणना हो रही है",
 			"emailWalletAddress": "ईमेल वॉलेट पता",
 			"walletAddress": "वॉलेट पता",
 			"errors": {
-				"pendingWithdrawal": "आपकी एक निकासी पहले से ही लंबित है",
+				"pendingWithdrawal": "आपका पहले से ही एक निकासी लंबित है",
 				"invalidAddress": "अमान्य पता",
 				"enterAmount": "राशि दर्ज करें",
 				"networkNotSupported": "नेटवर्क समर्थित नहीं है"
 			},
 			"status": {
-				"processing": "संसाधित हो रहा है...",
-				"insufficientBalance": "अपर्याप्त शेष राशि",
-				"pendingWithdrawal": "पहले से ही लंबित निकासी है"
+				"processing": "प्रसंस्करण हो रहा है...",
+				"insufficientBalance": "अपर्याप्त बैलेंस",
+				"pendingWithdrawal": "पहले से ही निकासी लंबित है"
 			},
 			"buttons": {
-				"withdraw": "{amount} {symbol} निकालें",
+				"withdraw": "निकासी {amount} {symbol}",
 				"minimum": "न्यूनतम {amount} {symbol}"
-			},
-			"calculating": "गिना जा रहा है"
+			}
 		},
 		"withdrawSuccess": {
 			"title": "निकासी सफल!",
-			"successMessage": "🎉 अभी-अभी {siteName} से {withdrawAmount} {tokenSymbol} निकाले! 🚀 {shareUrl} पर जीतने की होड़ में शामिल हों",
-			"withdrawnAmount": "निकाली गई राशि",
+			"successMessage": "🎉 अभी-अभी {siteName} से {withdrawAmount} {tokenSymbol} निकाला! 🚀 {shareUrl} पर जीतने की होड़ में शामिल हों",
+			"withdrawnAmount": "निकासी की गई राशि",
 			"shareText": "साझा करें",
 			"subText": "🚀 जीतने की होड़ में शामिल हों! 🚀",
 			"generating": "उत्पन्न हो रहा है...",
 			"screenshot": "स्क्रीनशॉट लें",
 			"download": "छवि डाउनलोड करें",
 			"close": "बंद करें",
-			"copiedToClipboard": "शेयर लिंक सफलतापूर्वक कॉपी किया गया",
+			"copiedToClipboard": "साझाकरण लिंक सफलतापूर्वक कॉपी किया गया",
+			"userName": "{siteName} खिलाड़ी",
+			"status": "पूरा हुआ",
 			"entryPrice": "निकासी राशि",
 			"lastPrice": "टोकन प्रतीक",
 			"referralCode": "रेफ़रल कोड",
-			"screenshotFailed": "स्क्रीनशॉट असफल हुआ। कृपया फिर से प्रयास करें या एक अलग ब्राउज़र का उपयोग करें।",
-			"shareFailed": "साझा करना असफल रहा। कृपया पुनः प्रयास करें।",
-			"status": "सम्पन्न",
-			"userName": "{siteName} खिलाड़ी"
+			"screenshotFailed": "स्क्रीनशॉट विफल रहा। कृपया पुन: प्रयास करें या किसी अन्य ब्राउज़र का उपयोग करें।",
+			"shareFailed": "साझा करने में विफल रहा। कृपया पुन: प्रयास करें।"
 		},
 		"withdrawPending": {
-			"confirmedTitle": "निकासी की पुष्टि हुई!",
-			"submittedTitle": "लेनदेन सबमिट किया गया",
-			"confirmedDesc": "आपकी धनराशि रास्ते में है।",
+			"confirmedTitle": "निकासी की पुष्टि हो गई!",
+			"submittedTitle": "लेन-देन सबमिट किया गया",
+			"confirmedDesc": "आपका फंड रास्ते में है।",
 			"submittedDesc": "ब्लॉकचेन पुष्टि की प्रतीक्षा है...",
 			"viewOnExplorer": "एक्सप्लोरर पर देखें",
 			"manualApproval": "इस निकासी के लिए मैन्युअल अनुमोदन की आवश्यकता है।",
@@ -859,51 +1074,6 @@
 		},
 		"withdrawSummary": {
 			"youWillReceive": "आप प्राप्त करेंगे"
-		},
-		"tipPanel": {
-			"approxUsd": "~  अमेरिकी डॉलर",
-			"balance": "शेष:",
-			"buttons": {
-				"tip": "टिप",
-				"tipUsd": "टिप"
-			},
-			"emailWalletAddress": "ईमेल वॉलेट पता",
-			"enterAmount": "राशि दर्ज करें",
-			"errors": {
-				"belowMinimum": "राशि कम से कम {min} होनी चाहिए।",
-				"checkForm": "कृपया अपनी टिप विवरण की जाँच करें।",
-				"insufficientBalance": "अपर्याप्त शेषराशि।",
-				"missingWallet": "टिप वॉलेट प्राप्त करने में असमर्थ। कृपया बाद में पुन: प्रयास करें।",
-				"selectTokenAndAmount": "कृपया एक टोकन चुनें और एक राशि दर्ज करें।"
-			},
-			"max": "अधिकतम",
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} गैस शुल्क को कवर करने और लेनदेन विफलता से बचने के लिए आरक्षित है",
-			"minimumIs": "न्यूनतम टिप {min} है",
-			"minPrefix": "न्यूनतम",
-			"prompts": {
-				"enterAmount": "राशि दर्ज करें",
-				"selectToken": "टोकन चुनें"
-			},
-			"resetForm": "प्रपत्र रीसेट करें",
-			"selectToken": "टोकन चुनें",
-			"status": {
-				"awaitingApproval": "मंजूरी की प्रतीक्षा कर रहा है...",
-				"calculatingRate": "गणना की जा रही है...",
-				"fetchingWallet": "टिप वॉलेट तैयार किया जा रहा है...",
-				"insufficientBalance": "अपर्याप्त शेष राशि",
-				"processing": "टिप भेजी जा रही है..."
-			},
-			"tipPanelWarningText": "टिप्स स्वैच्छिक और गैर-वापसी योग्य हैं।",
-			"youTip": "आपकी टिप"
-		},
-		"tipPending": {
-			"confirmedDesc": "आपकी टिप सफलतापूर्वक भेज दी गई है।",
-			"confirmedTitle": "बख़्शीश की पुष्टि हुई!",
-			"newTipConfirmed": "एक और टिप भेजें",
-			"newTipPending": "एक और टिप भेजें",
-			"submittedDesc": "आपकी टिप चेन पर पुष्टि की जा रही है।",
-			"submittedTitle": "टिप लंबित",
-			"viewOnExplorer": "एक्सप्लोरर पर देखें"
 		}
 	},
 	"navUser": {
@@ -911,32 +1081,32 @@
 		"account": "खाता",
 		"billing": "बिलिंग",
 		"notifications": "सूचनाएं",
-		"logout": "लॉग आउट"
+		"logout": "लॉग आउट करें"
 	},
 	"games": {
 		"pageTitle": "सभी गेम्स",
 		"playNow": "अभी खेलें",
 		"byProvider": "{name} द्वारा",
 		"count": "{count} गेम्स",
-		"noResults": "आपके मानदंडों से मेल खाने वाला कोई गेम नहीं मिला।",
-		"errorLoading": "गेम लोड नहीं किए जा सके। कृपया बाद में पुनः प्रयास करें।",
-		"slots": "स्लॉट्स",
-		"sports": "खेल",
+		"noResults": "आपके मानदंड से मेल खाने वाले कोई गेम नहीं मिले।",
+		"errorLoading": "गेम लोड नहीं हो सके। कृपया बाद में पुन: प्रयास करें।",
+		"slots": "स्लॉट",
+		"sports": "स्पोर्ट्स",
 		"liveCasino": "लाइव कैसीनो",
 		"explore": "अन्वेषण करें",
-		"exploreSubtitle": "अद्भुत गेमिंग अनुभवों की खोज करें",
+		"exploreSubtitle": "अद्भुत गेमिंग अनुभव खोजें",
 		"poker": "पोकर",
 		"lottery": "लॉटरी",
 		"futures": "फ्यूचर्स",
 		"vr": "वीआर",
 		"swap": "स्वैप",
-		"slotsDescription": "रीलों को घुमाएं और बड़े जैकपॉट जीतें",
+		"slotsDescription": "रील घुमाएँ और विशाल जैकपॉट जीतें",
 		"liveCasinoDescription": "लाइव डीलरों के साथ वास्तविक समय कैसीनो कार्रवाई का अनुभव करें",
-		"sportsDescription": "अपनी पसंदीदा टीमों और खेल आयोजनों पर दांव लगाएं",
-		"pokerDescription": "क्लासिक पोकर गेम में अपने कौशल का परीक्षण करें",
-		"lotteryDescription": "लॉटरी और तत्काल जीत वाले खेलों के साथ अपनी किस्मत आजमाएं",
-		"futuresDescription": "बाजार की गतिविधियों का व्यापार और भविष्यवाणी करें",
-		"vrDescription": "आभासी वास्तविकता गेमिंग में डूब जाएं",
+		"sportsDescription": "अपनी पसंदीदा टीमों और खेल आयोजनों पर बेट लगाएं",
+		"pokerDescription": "क्लासिक पोकर गेम्स में अपने कौशल का परीक्षण करें",
+		"lotteryDescription": "लॉटरी और तत्काल जीत गेम्स के साथ अपनी किस्मत आजमाएं",
+		"futuresDescription": "ट्रेड करें और बाज़ार के उतार-चढ़ाव की भविष्यवाणी करें",
+		"vrDescription": "खुद को वर्चुअल रियलिटी गेमिंग में डुबो दें",
 		"swapDescription": "टोकन और क्रिप्टोकरेंसी को सहजता से एक्सचेंज करें",
 		"categories": {
 			"slot": {
@@ -946,10 +1116,10 @@
 				"title": "लाइव कैसीनो गेम्स"
 			},
 			"sports": {
-				"title": "खेल सट्टेबाजी गेम्स"
+				"title": "स्पोर्ट्स बेटिंग गेम्स"
 			},
 			"rng": {
-				"title": "आरएनजी गेम्स"
+				"title": "RNG गेम्स"
 			},
 			"other": {
 				"title": "{category} गेम्स"
@@ -957,27 +1127,27 @@
 		}
 	},
 	"providers": {
-		"pageTitle": "सभी गेम प्रदाता",
-		"searchPlaceholder": "एक प्रदाता खोजें...",
-		"empty": "आपकी खोज से मेल खाने वाला कोई प्रदाता नहीं मिला।",
+		"pageTitle": "सभी गेम प्रोवाइडर्स",
+		"searchPlaceholder": "प्रोवाइडर खोजें...",
+		"empty": "आपकी खोज से मेल खाने वाले कोई प्रोवाइडर नहीं मिले।",
 		"logoAlt": "{name} लोगो",
-		"filteredBy": "श्रेणी के अनुसार फ़िल्टर किया गया:",
+		"filteredBy": "कैटेगरी द्वारा फ़िल्टर किया गया:",
 		"clearFilter": "फ़िल्टर साफ़ करें",
 		"categories": {
 			"slot": {
-				"title": "स्लॉट गेम प्रदाता"
+				"title": "स्लॉट गेम प्रोवाइडर्स"
 			},
 			"liveCasino": {
-				"title": "लाइव कैसीनो प्रदाता"
+				"title": "लाइव कैसीनो प्रोवाइडर्स"
 			},
 			"sports": {
-				"title": "खेल सट्टेबाजी प्रदाता"
+				"title": "स्पोर्ट्स बेटिंग प्रोवाइडर्स"
 			},
 			"rng": {
-				"title": "आरएनजी गेम प्रदाता"
+				"title": "RNG गेम प्रोवाइडर्स"
 			},
 			"other": {
-				"title": "{category} गेम प्रदाता"
+				"title": "{category} गेम प्रोवाइडर्स"
 			}
 		}
 	},
@@ -985,57 +1155,57 @@
 		"guest": {
 			"title": "एक्शन में शामिल हों",
 			"subtitle": "अभी साइन अप करें और एक विशेष स्वागत बोनस प्राप्त करें!",
-			"cta": "अभी पंजीकरण करें"
+			"cta": "अभी रजिस्टर करें"
 		},
 		"welcome": {
-			"title1": "स्वागत बोनस",
+			"title1": "वेलकम बोनस",
 			"title2": "590% तक",
-			"subtitle": "+ 225 मुफ्त स्पिन",
+			"subtitle": "+ 225 फ्री स्पिन",
 			"cta": "जमा करें और प्राप्त करें"
 		},
 		"jackpot": {
 			"title1": "मेगा जैकपॉट",
 			"title2": "$1,000,000",
-			"subtitle": "अभी खेलें और बड़ी जीत हासिल करें",
+			"subtitle": "अभी खेलें और बड़ा जीतें",
 			"cta": "अभी खेलें"
 		},
 		"cards": {
 			"casino": {
 				"title": "कैसीनो",
 				"badge": "590+ गेम्स",
-				"desc": "{siteName} ओरिजिनल्स और शीर्ष प्रदाताओं के अन्य कैसीनो गेम्स का आनंद लें।",
+				"desc": "शीर्ष प्रोवाइडर्स से {siteName} ओरिजिनल्स और अन्य कैसीनो गेम्स का आनंद लें।",
 				"link": "कैसीनो पर जाएं"
 			},
 			"slots": {
-				"title": "स्लॉट्स",
+				"title": "स्लॉट",
 				"badge": "5292 गेम्स",
-				"desc": "रीलों को घुमाएं और हमारे प्रीमियम स्लॉट संग्रह के साथ बड़े जैकपॉट जीतें।",
-				"link": "स्लॉट्स पर जाएं"
+				"desc": "रील घुमाएँ और हमारे प्रीमियम स्लॉट संग्रह के साथ विशाल जैकपॉट मारें।",
+				"link": "स्लॉट पर जाएं"
 			},
 			"sports": {
-				"title": "खेल",
+				"title": "स्पोर्ट्स",
 				"badge": "3 गेम्स",
-				"desc": "अपनी पसंदीदा टीमों और खेल आयोजनों पर प्रतिस्पर्धी बाधाओं के साथ दांव लगाएं।",
-				"link": "खेल पर जाएं"
+				"desc": "प्रतिस्पर्धी ऑड्स के साथ अपनी पसंदीदा टीमों और खेल आयोजनों पर बेट लगाएं।",
+				"link": "स्पोर्ट्स पर जाएं"
 			},
 			"crypto": {
-				"title": "क्रिप्टो और कमाएं",
-				"badge": "60% अप्रैल",
-				"desc": "आकर्षक दरों पर क्रिप्टोकरेंसी के साथ दांव लगाएं, व्यापार करें और कमाएं।",
+				"title": "क्रिप्टो और कमाएँ",
+				"badge": "60% APR",
+				"desc": "आकर्षक दरों पर क्रिप्टोकरेंसी के साथ स्टेक करें, ट्रेड करें और कमाएँ।",
 				"link": "क्रिप्टो पर जाएं"
 			}
 		},
 		"layout3": {
 			"headerTitle": "गेम स्पॉटलाइट",
-			"headerSubtitle": "हमारे क्यूरेटेड संग्रह में अद्भुत खेलों की खोज करें और नए रोमांच का पता लगाएं",
+			"headerSubtitle": "अद्भुत गेम्स खोजें और हमारे क्यूरेटेड संग्रह में नए रोमांच का अन्वेषण करें",
 			"slider1Title": "विशेष रुप से प्रदर्शित गेम्स",
-			"slider1Badge": "स्टाफ पिक्स",
-			"slider2Title": "और अधिक अन्वेषण करने के लिए",
+			"slider1Badge": "कर्मचारी पिक",
+			"slider2Title": "अन्वेषण करने के लिए और",
 			"slider2Badge": "ट्रेंडिंग",
 			"featuredGameLabel": "विशेष रुप से प्रदर्शित गेम"
 		},
-		"ctaExploreGames": "गेम्स एक्सप्लोर करें",
-		"ctaJoinAffiliate": "एफिलिएट प्रोग्राम से जुड़ें"
+		"ctaExploreGames": "गेम्स अन्वेषण करें",
+		"ctaJoinAffiliate": "रेफ़रल में शामिल हों"
 	},
 	"betting": {
 		"live": {
@@ -1044,8 +1214,8 @@
 			"bigWins50": "बड़ी जीत (50+)",
 			"recentWins": "हाल की जीत",
 			"header": {
-				"title": "लाइव सट्टेबाजी गतिविधि",
-				"subtitle": "वास्तविक समय सट्टेबाजी गतिविधि • {count} गेम लोड किए गए"
+				"title": "लाइव बेटिंग गतिविधि",
+				"subtitle": "रीयल-टाइम बेटिंग गतिविधि • {count} गेम्स लोड हुए"
 			},
 			"status": {
 				"live": "लाइव",
@@ -1063,384 +1233,1171 @@
 			"table": {
 				"game": "गेम का नाम",
 				"time": "समय",
-				"provider": "प्रदाता",
+				"provider": "प्रोवाइडर",
 				"nickname": "उपनाम",
-				"bet": "दांव",
-				"multiplier": "गुणक",
+				"bet": "बेट",
+				"multiplier": "मल्टीप्लायर",
 				"profit": "लाभ"
 			},
-			"empty": "कोई सट्टेबाजी रिकॉर्ड नहीं मिला"
+			"empty": "कोई बेटिंग रिकॉर्ड नहीं मिला"
 		}
 	},
 	"fontChanger": {
 		"changeFont": "फ़ॉन्ट बदलें",
 		"fontSettings": "फ़ॉन्ट सेटिंग्स",
 		"current": "वर्तमान",
-		"browseGoogleFonts": "गूगल फ़ॉन्ट्स ब्राउज़ करें",
+		"browseGoogleFonts": "गूगल फ़ॉन्ट ब्राउज़ करें",
 		"uploadCustomFont": "कस्टम फ़ॉन्ट अपलोड करें",
 		"quickUploadFontFile": "त्वरित फ़ॉन्ट फ़ाइल अपलोड करें",
 		"resetToDefault": "डिफ़ॉल्ट पर रीसेट करें",
 		"googleFonts": {
-			"title": "गूगल फ़ॉन्ट्स",
-			"searchFonts": "फ़ॉन्ट्स खोजें...",
+			"title": "गूगल फ़ॉन्ट",
+			"searchFonts": "फ़ॉन्ट खोजें...",
 			"preview": "पूर्वावलोकन",
-			"previewText": "एक फुर्तीली भूरी लोमड़ी आलसी कुत्ते के ऊपर से कूदती है",
+			"previewText": "The quick brown fox jumps over the lazy dog",
 			"alphabetPreview": "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 1234567890",
 			"applyFont": "फ़ॉन्ट लागू करें",
 			"clearPreview": "पूर्वावलोकन साफ़ करें",
-			"previewWith": "{font} के साथ पाठ का पूर्वावलोकन करें",
+			"previewWith": "{font} के साथ टेक्स्ट का पूर्वावलोकन",
 			"noFontsFound": "\"{searchTerm}\" से मेल खाने वाला कोई फ़ॉन्ट नहीं मिला"
 		},
 		"customUpload": {
 			"title": "कस्टम फ़ॉन्ट अपलोड करें",
-			"description": "वेबसाइट को अनुकूलित करने के लिए अपनी खुद की फ़ॉन्ट फ़ाइल अपलोड करें",
+			"description": "वेबसाइट को कस्टमाइज़ करने के लिए अपनी खुद की फ़ॉन्ट फ़ाइल अपलोड करें",
 			"fontFile": "फ़ॉन्ट फ़ाइल",
-			"dragDropArea": "अपनी फ़ॉन्ट फ़ाइल को यहाँ खींचें और छोड़ें, या",
+			"dragDropArea": "अपनी फ़ॉन्ट फ़ाइल को यहां खींचें और छोड़ें, या",
 			"clickToUpload": "अपलोड करने के लिए क्लिक करें",
 			"supportedFormats": "समर्थित प्रारूप: .woff, .woff2, .ttf, .otf",
-			"maxFileSize": "अधिकतम फ़ाइल आकार: 10MB",
-			"fontName": "फ़ॉन्ट का नाम",
+			"maxFileSize": "अधिकतम फ़ाइल साइज़: 10MB",
+			"fontName": "फ़ॉन्ट नाम",
 			"fontNamePlaceholder": "अपने फ़ॉन्ट के लिए एक नाम दर्ज करें",
 			"previewYourFont": "अपने फ़ॉन्ट का पूर्वावलोकन करें",
-			"uploadAndApply": "अपलोड करें और लागू करें",
+			"uploadAndApply": "फ़ॉन्ट अपलोड और लागू करें",
 			"cancel": "रद्द करें",
 			"uploading": "अपलोड हो रहा है...",
 			"errors": {
-				"invalidFileType": "कृपया एक मान्य फ़ॉन्ट फ़ाइल अपलोड करें (.woff, .woff2, .ttf, .otf)",
-				"fileTooLarge": "फ़ाइल का आकार 10MB की सीमा से अधिक है",
-				"uploadFailed": "फ़ॉन्ट फ़ाइल अपलोड करने में विफल",
+				"invalidFileType": "कृपया एक वैध फ़ॉन्ट फ़ाइल अपलोड करें (.woff, .woff2, .ttf, .otf)",
+				"fileTooLarge": "फ़ाइल साइज़ 10MB सीमा से अधिक है",
+				"uploadFailed": "फ़ॉन्ट फ़ाइल अपलोड करने में विफल रहा",
 				"enterFontName": "कृपया एक फ़ॉन्ट फ़ाइल चुनें और एक नाम प्रदान करें",
-				"readFileFailed": "फ़ॉन्ट फ़ाइल पढ़ने में विफल"
+				"readFileFailed": "फ़ॉन्ट फ़ाइल पढ़ने में विफल रहा"
 			}
 		},
 		"messages": {
 			"fontAppliedSuccess": "फ़ॉन्ट \"{fontName}\" सफलतापूर्वक लागू किया गया!",
 			"fontUploadedSuccess": "फ़ॉन्ट \"{fontName}\" सफलतापूर्वक अपलोड और लागू किया गया!",
-			"fontResetSuccess": "फ़ॉन्ट डिफ़ॉल्ट पर रीसेट किया गया",
-			"invalidFileType": "कृपया एक मान्य फ़ॉन्ट फ़ाइल अपलोड करें (.woff, .woff2, .ttf, .otf)",
-			"uploadFailed": "फ़ॉन्ट फ़ाइल पढ़ने में विफल"
-		}
-	},
-	"bonus": {
-		"title": "टर्नओवर बोनस कार्यक्रम",
-		"loginPromptTitle": "टर्नओवर बोनस कार्यक्रम",
-		"loginPromptSubtitle": "अपने बोनस आँकड़े देखने और अपने पुरस्कारों का दावा करने के लिए लॉग इन करें।",
-		"goHome": "होम पर जाएं",
-		"tabs": {
-			"dashboard": "डैशबोर्ड",
-			"claims": "दावे",
-			"rates": "बोनस दरें",
-			"calculator": "कैलकुलेटर"
-		},
-		"refresh": "ताज़ा करें",
-		"refreshing": "ताज़ा कर रहा है...",
-		"refreshAllSuccess": "सभी डेटा सफलतापूर्वक ताज़ा कर दिया गया है!",
-		"refreshPartial": "आंशिक रूप से ताज़ा किया गया: {success}/{total} अनुभाग अपडेट किए गए",
-		"refreshFailed": "डेटा को रीफ्रेश करने में विफल रहा। कृपया पुनः प्रयास करें।",
-		"dashboard": {
-			"title": "बोनस डैशबोर्ड",
-			"subtitle": "अपनी शर्तें, बोनस, और पुरस्कार आय को ट्रैक करें",
-			"performanceOverview": "बोनस अवलोकन",
-			"bonusRatesTitle": "बोनस दर संरचना",
-			"totalIncome": "कुल बोनस",
-			"pendingBonus": "लंबित बोनस",
-			"lastClaim": "अंतिम दावा",
-			"unclaimedEarnings": "दावा करने के लिए उपलब्ध",
-			"claim": {
-				"title": "दावा और निकासी",
-				"points": {
-					"0": "आयोग की गणना के बाद निकासी के लिए उपलब्ध होते हैं।",
-					"1": "अदाविकृत कमीशन के लिए समाप्ति नहीं होती है - वे तब तक जमा होते रहते हैं जब तक दावा नहीं किया जाता।",
-					"2": "निकासी प्लेटफ़ॉर्म के मानक नियमों का पालन करती हैं, जैसे कि न्यूनतम सीमाएँ और प्रसंस्करण समय।"
-				}
-			},
-			"claiming": "दावा कर रहे हैं...",
-			"section2": {
-				"title": "पात्रता",
-				"content": "भाग लेने के लिए:"
-			},
-			"section3": {
-				"title": "खेती की श्रेणियाँ और दरें",
-				"content": "बोनस आपके दैनिक दांव की राशि के आधार पर गणना की जाती है:",
-				"noteTitle": "नोट",
-				"noteContent": "स्तरों का मूल्यांकन प्रतिदिन 14:00 UTC पर किया जाता है। आपके पिछले दिन की दांव की मात्रा आज की बोनस दर निर्धारित करती है। दरें सभी गेम प्रकारों पर लागू होती हैं: स्लॉट्स, लाइव कैसीनो, और खेल।"
-			},
-			"claimButtonTitle": "दावा करें"
-		},
-		"claims": {
-			"title": "दावों का इतिहास",
-			"subtitle": "अपने बोनस दावे और सट्टेबाजी गतिविधि को ट्रैक करें",
-			"tableHeaders": {
-				"date": "बेट लगाने की तारीख",
-				"slots": "स्लॉट्स",
-				"liveCasino": "लाइव कैसीनो",
-				"sports": "खेल",
-				"total": "कुल",
-				"tier": "स्तर",
-				"unclaimed": "अनक्लेम्ड",
-				"token": "टोकन"
-			},
-			"tierPrefix": "स्तर",
-			"availableToClaim": "दावा करने के लिए उपलब्ध",
-			"totalBonus": "कुल बोनस",
-			"claimed": "दावा किया",
-			"progressPercentage": "प्रगति",
-			"progressTitle": "आपकी प्रगति",
-			"currentTier": "वर्तमान स्तर",
-			"nextTier": "अगला स्तर",
-			"wagerProgress": "शर्त प्रगति",
-			"totalWagered": "आज कुल दांव",
-			"toNextTier": "अगले स्तर पर पहुंचने के लिए",
-			"empty": {
-				"title": "अभी तक कोई बोनस दावा नहीं",
-				"subtitle": "बोनस कमाने के लिए खेलना शुरू करें!"
-			}
-		},
-		"rates": {
-			"title": "खेती की स्तर और दरें",
-			"subtitle": "दांव के स्तर और खेल श्रेणी के अनुसार बोनस प्रतिशत",
-			"overview": {
-				"title": "सारांश",
-				"body": "बोनस खेती स्लॉट, लाइव कैसिनो, स्पोर्ट्सबुक और लॉटरी में उनके दांव के आधार पर उपयोगकर्ताओं को पुरस्कृत करती है। बोनस हर 24 घंटे में गणना की जाती है, और उपयोगकर्ता उन्हें दांव लगाने के अगले दिन दावा कर सकते हैं। सात स्तर हैं, प्रत्येक में दांव की राशि के आधार पर अलग-अलग दरें हैं।"
-			},
-			"eligibility": {
-				"title": "पात्रता",
-				"content": "भाग लेने के लिए:",
-				"points": {
-					"0": "आपके पास एक सक्रिय खाता होना चाहिए।",
-					"1": "स्लॉट, लाइव कैसीनो, स्पोर्ट्सबुक और लॉटरी में दांव लगाएं।",
-					"2": "प्रत्येक स्तर के लिए न्यूनतम दांव आवश्यकताओं को पूरा करें।"
-				}
-			},
-			"calculation": {
-				"title": "बोनस कैसे गणना की जाती है",
-				"desc": "बोनस आपके कुल दांव के आधार पर हर 24 घंटे में गणना की जाती है। उदाहरण:",
-				"exampleTitle": "स्तर {tier}:",
-				"wagerIn": "{gameType} में {amount} की शर्त लगाएँ"
-			},
-			"table": {
-				"tierLevel": "स्तर स्तर",
-				"wagerRange": "शर्त रेंज",
-				"slots": "स्लॉट्स",
-				"liveCasino": "लाइव कैसीनो",
-				"sports": "खेल",
-				"tierPrefix": "स्तर",
-				"commissionLevel": "बोनस स्तर",
-				"dailyWager": "दैनिक शर्त राशि"
-			},
-			"claim": {
-				"title": "बोनस का दावा और निकासी",
-				"points": {
-					"0": "बोनस को दांव लगाने के 24 घंटे बाद दावा किया जा सकता है।",
-					"1": "अनक्लेम किए गए बोनस जमा होंगे और समाप्त नहीं होंगे।",
-					"2": "दावा और निकासी की प्रक्रिया प्लेटफ़ॉर्म-विशिष्ट नीतियों के आधार पर भिन्न हो सकती है।"
-				}
-			},
-			"system": {
-				"title": "सिस्टम समय और संचालन",
-				"dailyTimeframeLabel": "दैनिक समय सीमा:",
-				"dailyTimeframeValue": "00:00 यूटीसी से 23:59 यूटीसी (हर दिन)।",
-				"claimDailyLabel": "दैनिक दावा:",
-				"claimDailyValue": "दैनिक रूप से उपलब्ध 14:00 यूटीसी पर (आपका स्थानीय समय: {local})।",
-				"note": "नोट: जबकि हम विभिन्न समय क्षेत्रों के प्रदाताओं के साथ काम करते हैं, सभी गणनाएं सुसंगतता सुनिश्चित करने और भ्रम से बचने के लिए यूटीसी का पालन करती हैं।"
-			},
-			"amendments": {
-				"title": "संशोधन और अयोग्यता",
-				"body": "हम इन शर्तों को कभी भी अपडेट कर सकते हैं, और परिवर्तन पोस्टिंग पर प्रभावी होते हैं। यदि सिस्टम त्रुटियाँ, गलत गणनाएँ, या धोखाधड़ी का संदेह होता है, तो हम बोनस और खातों को आवश्यकतानुसार समायोजित या अयोग्य करने का अधिकार सुरक्षित रखते हैं ताकि निष्पक्षता सुनिश्चित की जा सके"
-			},
-			"footer": {
-				"schedule": "बोनस कार्यक्रम:",
-				"availableDaily": "प्रतिदिन उपलब्ध है",
-				"localTimeLabel": "(आपका स्थानीय समय: {time})"
-			}
-		},
-		"calculator": {
-			"title": "बोनस कैलकुलेटर",
-			"subtitle": "अपने बेट की रकम के आधार पर अपनी बोनस कमाई का अनुमान लगाएं",
-			"interactive": {
-				"title": "इंटरैक्टिव टूल:",
-				"body": "सभी स्तरों के संभावित बोनस देखने के लिए विभिन्न दांव राशि दर्ज करें"
-			},
-			"potentialEarnings": "संभावित बोनस",
-			"basedOnRate": "{percentage}% बोनस दर के आधार पर",
-			"tier": "स्तर {level}",
-			"commissionLevel": "बोनस स्तर {level}",
-			"enterWager": "दांव की राशि दर्ज करें (USD)",
-			"wagerPlaceholder": "उदाहरण के लिए, 1000",
-			"calcFor": "${amount} की शर्त के लिए बोनस गणना",
-			"totalPotential": "कुल संभावित बोनस:",
-			"combinedAtTier": "सभी खेल प्रकारों से संयोजित बोनस स्तर {level} पर"
-		},
-		"claimSuccessModal": {
-			"title": "सफल होने का दावा करें",
-			"statusCompleted": "समाप्त/पूरा हुआ",
-			"statusOnChain": "ऑन - चेन",
-			"claimAmount": "दावा राशि",
-			"logoAlt": "{siteName} का लोगो",
-			"backgroundAlt": "सफलता का बैकग्राउंड क्लेम करें",
-			"creatingMagic": "जादू बनाया जा रहा है...",
-			"downloadShare": "डाउनलोड करें और शेयर करें",
-			"spreadTheWin": "जीत को फैलाएँ",
-			"socialX": "X",
-			"socialFacebook": "Facebook",
-			"socialWhatsApp": "वाट्सऐप",
-			"socialTelegram": "Telegram ",
-			"socialReddit": "Reddit",
-			"socialMore": "अधिक",
-			"shareText": "I just claimed {amount} bonus! Join me: {url}",
-			"referralLinkCopied": "रेफ़रल लिंक कॉपी किया गया!",
-			"referralLinkCopyFailed": "रेफ़रल लिंक कॉपी नहीं किया जा सका",
-			"screenshotFailed": "स्क्रीनशॉट नहीं मिल सका। कृपया फिर से कोशिश करें या किसी दूसरे ब्राउज़र का इस्तेमाल करें।",
-			"shareTextCopied": "क्लिपबोर्ड पर कॉपी किया गया टेक्स्ट शेयर करें!",
-			"shareFailed": "शेयर नहीं हो सका। कृपया फिर से कोशिश करें।"
+			"fontResetSuccess": "फ़ॉन्ट डिफ़ॉल्ट पर रीसेट हो गया",
+			"invalidFileType": "कृपया एक वैध फ़ॉन्ट फ़ाइल अपलोड करें (.woff, .woff2, .ttf, .otf)",
+			"uploadFailed": "फ़ॉन्ट फ़ाइल पढ़ने में विफल रहा"
 		}
 	},
 	"about": {
-		"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 43 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"subtitle": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 43 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"stats": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 42 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"features": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 41 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+		"title": "🎮 {siteName} के बारे में",
+		"subtitle": "{siteName} में, गेमिंग सिर्फ समय बिताने के लिए नहीं है — यह वास्तविक उत्साह के बारे में है। वह क्षण जब आप एक बड़ी जीत हासिल करते हैं, या जब सब कुछ ठीक हो जाता है, यही हमारा लक्ष्य है।",
+		"meta": {
+			"title": "{siteName} के बारे में | विश्वसनीय ग्लोबल ऑनलाइन कैसीनो प्लेटफॉर्म",
+			"description": "{siteName}, स्लॉट, लाइव कैसीनो, स्पोर्ट्स बेटिंग और पोकर की पेशकश करने वाले एक सुरक्षित, वैश्विक कैसीनो प्लेटफॉर्म के बारे में जानें। निष्पक्ष, तेज और वास्तविक खिलाड़ियों के लिए बनाया गया।"
+		},
+		"intro": {
+			"paragraph1": "हमने {siteName} को उन खिलाड़ियों के लिए बनाया जो अपने गेम से अधिक चाहते हैं। अधिक गति। अधिक निष्पक्षता। अधिक रोमांच। चाहे आप लाइव कैसीनो गेम्स, स्पोर्ट्स बेटिंग, पोकर, या हाई-स्टेक स्लॉट पर जैकपॉट का पीछा करने में रुचि रखते हों, आपको यह सब यहां मिलेगा, और आप हम पर भरोसा कर सकते हैं कि हम चीजों को वैध रखेंगे।",
+			"paragraph2": "पहले दिन से, हम चाहते थे कि {siteName} वास्तविक लगे। सिर्फ एक और वेबसाइट नहीं, बल्कि एक ऐसी जगह जहां आपको हर बार लॉग इन करने पर एक सुरक्षित, रोमांचक गेमिंग अनुभव मिले।"
+		},
+		"whoWeAre": {
+			"title": "💎 हम कौन हैं",
+			"paragraph1": "{siteName} दुनिया भर के खिलाड़ियों को हजारों शीर्ष कैसीनो और बेटिंग गेम्स से जोड़ता है। हम उद्योग के सबसे बड़े नामों के साथ काम करते हैं — Pragmatic Play, Red Tiger, Microgaming, KA Gaming — ताकि हर गेम सुचारू रूप से चले और शानदार दिखे, चाहे आप अपने फ़ोन पर खेल रहे हों या लैपटॉप पर।",
+			"paragraph2": "हर स्पिन, हर डील, हर बोनस — सब कुछ आपको वास्तविक गेमिंग का रोमांच देने के लिए सेट किया गया है। और हम चीजों को सीधा रखते हैं। कोई चाल नहीं, कोई गुप्त नियम नहीं। बस ईमानदार, स्पष्ट खेल।"
+		},
+		"mission": {
+			"title": "🎯 हमारा मिशन",
+			"paragraph1": "हम चाहते हैं कि ऑनलाइन गेमिंग सरल, सुरक्षित और वास्तव में मजेदार हो।",
+			"paragraph2": "हम चीजों को व्यक्तिगत रखते हैं। तेज़ जमा, तेज़ निकासी। एक साफ-सुथरा लुक जो आँखों के लिए आसान हो। समर्थन जो ज़रूरत पड़ने पर वास्तव में मदद करता है।|{siteName} में, आप हमेशा सुर्खियों में रहते हैं। आपका विश्वास हमें बेहतर बनाने के लिए प्रेरित करता है।"
+		},
+		"whatMakesUsDifferent": {
+			"title": "🏆 क्या {siteName} को अलग बनाता है",
+			"features": [
+				"5,000 से अधिक गेम्स — स्लॉट, पोकर, स्पोर्ट्स, लाइव कैसीनो",
+				"तत्काल, विश्वसनीय जमा और निकासी",
+				"हर गेम निष्पक्षता के लिए RNG-प्रमाणित है",
+				"एक साफ डिज़ाइन जो कहीं भी काम करता है",
+				"हर समय नए बोनस और प्रोमो"
+			],
+			"closing": "हम यहां सिर्फ गेम्स पेश करने के लिए नहीं हैं। हम एक ऐसी जगह बनाने के लिए यहां हैं जहां आप सुरक्षित, जुड़े हुए महसूस करें और अपनी अगली चुनौती लेने के लिए तैयार हों।"
+		},
+		"fairGaming": {
+			"title": "🌍 निष्पक्ष और जिम्मेदार गेमिंग",
+			"paragraph1": "हम निष्पक्षता को गंभीरता से लेते हैं। इसका मतलब है अंतरराष्ट्रीय मानकों का पालन करना, और चीजों को स्पष्ट रखना - केवल 18 वर्ष और उससे अधिक उम्र के खिलाड़ी, कोई अपवाद नहीं।",
+			"paragraph2": "हम निष्पक्षता के लिए हर गेम का परीक्षण करते हैं, और हमारी एन्क्रिप्शन तकनीक आपकी जानकारी को सुरक्षित रखती है।"
+		},
+		"promise": {
+			"title": "🤝 हमारा वादा",
+			"paragraph1": "हम यहां घुलमिल जाने के लिए नहीं हैं। हम ऑनलाइन गेमिंग के लिए मानक को ऊंचा करने के लिए यहां हैं।",
+			"paragraph2": "जब आप {siteName} पर खेलते हैं, तो आप विश्वास और नए विचारों पर बने एक प्लेटफ़ॉर्म का उपयोग कर रहे होते हैं। हर अपडेट, नई सुविधा, या साझेदारी आपके अनुभव को बेहतर बनाने के बारे में है।"
+		},
+		"joinCommunity": {
+			"title": "🚀 {siteName} समुदाय में शामिल हों",
+			"paragraph1": "ऑनलाइन गेमिंग तेज़ी से आगे बढ़ रहा है, और {siteName} पहले से ही आगे है — तेज़, स्मार्ट और अधिक फायदेमंद।",
+			"paragraph2": "अभी शामिल हों। अपना वेलकम बोनस प्राप्त करें। देखें कि दुनिया भर के इतने सारे खिलाड़ी {siteName} को अपना पसंदीदा स्थान क्यों बना रहे हैं।",
+			"tagline": "🎯 खेलें। जीतें। अनुभव करें। {siteName}।"
+		}
+	},
+	"footer": {
 		"sections": {
-			"whoWeAre": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 40 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 40 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 39 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"company": {
+				"title": "कंपनी",
+				"links": {
+					"about": "हमारे बारे में",
+					"providers": "प्रोवाइडर्स",
+					"affiliate": "रेफ़रल बोनस",
+					"bonus": "टर्नओवर बोनस"
+				}
 			},
-			"whatMakesUsDifferent": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 38 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"legal": {
+				"title": "कानूनी",
+				"links": {
+					"privacy": "गोपनीयता नीति",
+					"terms": "नियम और शर्तें",
+					"gambling": "जिम्मेदार जुआ",
+					"faqs": "अक्सर पूछे जाने वाले प्रश्न"
+				}
 			},
-			"providers": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 38 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"seeAllButton": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 37 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"exploreGamesButton": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 36 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"games": {
+				"title": "गेम्स",
+				"links": {
+					"lobby": "गेम लॉबी",
+					"slots": "स्लॉट",
+					"live": "लाइव कैसीनो",
+					"sports": "स्पोर्ट्स बेटिंग"
+				}
 			},
-			"missionVisionValues": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 36 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"items": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 35 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"support": {
+				"title": "समर्थन",
+				"links": {
+					"help": "सहायता केंद्र",
+					"contact": "हमसे संपर्क करें"
+				}
+			}
+		},
+		"seoContent": {
+			"title": "विवरण",
+			"paragraph1": "{siteName} में आपका स्वागत है, जहां क्रिप्टो कैसीनो गेमिंग के वास्तविक रोमांच से मिलता है। यदि आप ऑनलाइन खेल की दुनिया में कुछ नया ढूंढ रहे हैं, तो आपने इसे अभी-अभी पाया है। {siteName} उन लोगों के लिए बनाया गया है जो गति, सुरक्षा और, सबसे ऊपर, गेम्स चाहते हैं जो वास्तव में मनोरंजन करते हैं — चाहे आप घूमने वाले स्लॉट, लाइव टेबल, स्पोर्ट्स बेट में हों, या उन क्रिप्टो-ओनली गेम्स को आज़माना चाहते हों जो आपको कहीं और नहीं मिल सकते हैं।",
+			"paragraph2": "सब कुछ ब्लॉकचेन पर चलता है, इसलिए आप हर परिणाम पर भरोसा कर सकते हैं। परिणाम यादृच्छिक हैं, मौके पर सत्यापित हैं। कोई चाल नहीं। बस सीधी जीत और वास्तविक उत्साह। हाई रोलर? रणनीति प्रशंसक? शायद आप बस वापस बैठना और थोड़ी देर के लिए खेलना चाहते हैं। आपकी शैली के लिए यहां कुछ है।",
+			"paragraph3": "शुरुआत करना आसान नहीं हो सकता है — तुरंत जमा करें, तेजी से कैश आउट करें, अपने Dynamic.xyz वॉलेट के साथ लॉग इन करें, और रास्ते में कुछ अद्वितीय बोनस प्राप्त करें। {siteName} चीजों को गतिमान रखता है। कोई प्रतीक्षा नहीं। कोई सिरदर्द नहीं। कोई फर्क नहीं पड़ता कि आप कहां हैं — कनाडा, यूरोप, एशिया — हमारा मल्टी-चेन सेटअप आपके स्थानीय क्रिप्टो विकल्पों के साथ ठीक बैठता है।",
+			"paragraph4": "हजारों लोग पहले से ही जानते हैं: यह ऑनलाइन जुआ खेलने का एक स्मार्ट तरीका है। यहां, यह केवल जीत का पीछा करने के बारे में नहीं है — यह गोपनीयता, निष्पक्षता और एक ऐसे समुदाय का हिस्सा होने के बारे में है जो वास्तव में समझता है कि खिलाड़ी क्या चाहते हैं। {siteName} सिर्फ एक और ऑनलाइन कैसीनो नहीं है। यह Web3 जुआ है, जो उन लोगों के लिए पुनर्निर्मित किया गया है जो अधिक उम्मीद करते हैं।",
+			"tagline": "तो, क्या आप स्मार्ट खेलने, सुरक्षित बेट लगाने और शायद बड़ा जीतने के लिए तैयार हैं? {siteName} पर जाएँ।",
+			"showMore": "और दिखाएँ",
+			"showLess": "कम दिखाएँ"
+		},
+		"copyright": "© {year} {siteName}। सभी अधिकार सुरक्षित।",
+		"followUs": "हमें फॉलो करें:",
+		"disclaimer": {
+			"line1": "केवल 18+ | जिम्मेदारी से जुआ खेलें",
+			"line2": "जुआ की लत लग सकती है। कृपया जिम्मेदारी से खेलें और केवल वही बेट लगाएं जो आप खो सकते हैं।",
+			"line3": "अगर आपको लगता है कि आपको जुए की समस्या है, तो कृपया मदद लें।"
+		},
+		"description": "{siteName} क्रिप्टो स्लॉट, लाइव टेबल और स्पोर्ट्स बेटिंग के लिए आपका पसंदीदा स्थान है। ब्लॉकचेन गेम्स में गोता लगाएँ जिन पर आप वास्तव में भरोसा कर सकते हैं, सेकंडों में सीधे अपने वॉलेट में अपनी जीत निकालें, और हर दिन नए बोनस प्राप्त करें। यह तेज़, सुरक्षित और पूरी तरह से विकेन्द्रीकृत है — {siteName} दुनिया भर के खिलाड़ियों के लिए ऑनलाइन गेमिंग को एक पायदान ऊपर ले जाता है। स्मार्ट खेलें। बड़ा जीतें। {siteName} पर विश्वास करें।"
+	},
+	"privacy": {
+		"title": "🔒 गोपनीयता नीति — {siteName}",
+		"subtitle": "सुरक्षित ब्लॉकचेन गेमिंग के लिए SSL, AML, और GDPR-अनुरूप गोपनीयता के साथ {siteName} वॉलेट पते और क्रिप्टो डेटा की सुरक्षा कैसे करता है।",
+		"lastUpdated": "अंतिम अपडेट: जनवरी 2025",
+		"meta": {
+			"title": "गोपनीयता नीति | {siteName} – क्रिप्टो वॉलेट कैसीनो सुरक्षा",
+			"description": "जानें कि {siteName} SSL, AML, और GDPR-अनुरूप गोपनीयता के साथ वॉलेट पते और क्रिप्टो डेटा को सुरक्षित ब्लॉकचेन गेमिंग के लिए कैसे सुरक्षित रखता है।",
+			"keywords": "{siteName} गोपनीयता नीति, {siteName} क्रिप्टो कैसीनो, {siteName} डेटा सुरक्षा, {siteName} वॉलेट सुरक्षा, क्रिप्टो जुआ गोपनीयता, GDPR क्रिप्टो कैसीनो, ब्लॉकचेन कैसीनो नीति, {siteName} गेम सुरक्षित, क्रिप्टो बेटिंग गोपनीयता",
+			"ogTitle": "गोपनीयता और डेटा सुरक्षा | {siteName} (क्रिप्टो कैसीनो)",
+			"ogDescription": "पता लगाएँ कि {siteName} उन्नत एन्क्रिप्शन और GDPR-अनुरूप सुरक्षा के साथ आपके क्रिप्टो वॉलेट और लेन-देन डेटा को कैसे सुरक्षित रखता है।"
+		},
+		"intro": {
+			"paragraph1": "{siteName} (\"{siteName},\" \"हम,\" \"हमारा,\" या \"हमारे\") में, हम {siteName} क्रिप्टो-कैसीनो प्लेटफ़ॉर्म का संचालन करते हैं। जब आप हमारी वेबसाइट, मोबाइल एप्लिकेशन या किसी भी संबंधित सेवाओं (\"सेवाएं\") का उपयोग करते हैं तो आपके व्यक्तिगत और लेन-देन डेटा के साथ क्या होता है, यह यहां बताया गया है।",
+			"paragraph2": "{siteName} एक क्रिप्टो-वॉलेट-ओनली कैसीनो है। इसका मतलब है कि सभी जमा और निकासी क्रिप्टोकरेंसी वॉलेट के माध्यम से होती हैं। हम आपकी गोपनीयता को गंभीरता से लेते हैं और इसकी सुरक्षा के लिए अपनी पूरी कोशिश करते हैं, साथ ही नियमों (जैसे AML/KYC आवश्यकताओं) का भी पालन करते हैं और प्लेटफ़ॉर्म को सभी के लिए सुरक्षित और निष्पक्ष रखते हैं।",
+			"paragraph3": "यदि आप {siteName} का उपयोग करते हैं, तो आप इस गोपनीयता नीति से सहमत हैं।"
+		},
+		"sections": {
+			"scope": {
+				"title": "दायरा और स्वीकृति",
+				"content": "यह नीति {siteName} का उपयोग करने वाले सभी को कवर करती है। कभी-कभी हम इसे अपडेट करते हैं। जब हम ऐसा करते हैं, तो नई नीति साइट पर लाइव हो जाती है, और यदि आप उसके बाद {siteName} का उपयोग करना जारी रखते हैं, तो इसका मतलब है कि आप परिवर्तनों से सहमत हैं।"
 			},
-			"responsibleGaming": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 34 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 33 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"points": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 33 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-			},
-			"ourPromise": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 32 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 31 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 31 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-			},
-			"description": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 30 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"intro": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 29 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"brand": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 29 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 28 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 27 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 26 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"dataCollection": {
+				"title": "हम कौन सा डेटा एकत्र करते हैं",
+				"intro": "चूंकि हम केवल क्रिप्टो वॉलेट हैं, इसलिए हम जो डेटा इकट्ठा करते हैं वह इसे दर्शाता है। यहां वह है जो हम एकत्र करते हैं:",
+				"accountData": {
+					"title": "A. खाता और पहचान डेटा (आवश्यकता पड़ने पर)",
+					"email": "ईमेल (यदि आप इसे देते हैं), प्रदर्शन नाम, खाता आईडी।",
+					"kyc": "ध्यान दें: क्रिप्टो वॉलेट आमतौर पर चीजों को गुमनाम रखते हैं, लेकिन कभी-कभी नियमों के लिए हमें आपकी पहचान (KYC) पूछने की आवश्यकता होती है। हम केवल तभी पूछेंगे जब यह बिल्कुल आवश्यक हो, और हम इसे स्पष्ट करेंगे।"
 				},
-				"games": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 26 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 25 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"count": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 24 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 24 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"slots": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 23 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 22 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				"walletData": {
+					"title": "B. वॉलेट और लेन-देन डेटा",
+					"addresses": "क्रिप्टो वॉलेट पते जिन्हें आप यहां कनेक्ट या उपयोग करते हैं।",
+					"transactions": "ऑन-चेन लेन-देन हैश और टाइमस्टैम्प (जमा और निकासी के लिए)।",
+					"metadata": "लेन-देन विवरण जिनकी हमें भुगतान का मिलान करने और धोखाधड़ी का पता लगाने के लिए आवश्यकता है।"
+				},
+				"technicalData": {
+					"title": "C. तकनीकी और उपयोग डेटा",
+					"ip": "आईपी एड्रेस, आईपी के आधार पर अनुमानित स्थान, डिवाइस प्रकार, ब्राउज़र और ऑपरेटिंग सिस्टम।",
+					"session": "सत्र लॉग, टाइमस्टैम्प, खेले गए गेम, दांव, परिणाम, आपके द्वारा देखे जाने वाले पेज।",
+					"cookies": "साइट को आपके लिए बेहतर और आसान बनाने के लिए कुकीज़ और एनालिटिक्स।"
+				},
+				"securityData": {
+					"title": "D. सुरक्षा और जोखिम डेटा",
+					"fraud": "धोखाधड़ी के संकेत, डिवाइस फिंगरप्रिंट, एंटी-फ्रॉड भागीदारों से जोखिम स्कोर।",
+					"disputes": "विवादों का रिकॉर्ड, शुल्क वापसी और अनुपालन जांच (यदि वे सामने आते हैं)।",
+					"note": "हम आपकी जाति, धर्म या स्वास्थ्य जैसे संवेदनशील सामान एकत्र नहीं करते हैं जब तक कि कानून इसकी मांग न करे और आप स्पष्ट अनुमति न दें।"
+				}
+			},
+			"purposes": {
+				"title": "हम डेटा क्यों एकत्र करते हैं",
+				"intro": "हम आपके डेटा का उपयोग केवल स्पष्ट, कानूनी कारणों से करते हैं:",
+				"items": [
+					{
+						"title": "सेवा संचालित करने के लिए",
+						"description": "खाते सेट अप और प्रबंधित करें, वॉलेट जमा/निकासी को संभालें, जीत का भुगतान करें।"
 					},
-					"liveCasino": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 21 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 21 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "सुरक्षा के लिए",
+						"description": "दुरुपयोग, धोखाधड़ी और मनी लॉन्ड्रिंग का पता लगाएं और रोकें।"
 					},
-					"sports": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 20 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 19 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "चीजों को सुचारू रूप से चलाने के लिए",
+						"description": "एनालिटिक्स, उत्पाद अपग्रेड, ग्राहक सहायता।"
 					},
-					"poker": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 19 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 18 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "विपणन के लिए (यदि आप हाँ कहते हैं)",
+						"description": "न्यूज़लेटर, प्रोमो ऑफ़र — आपके पास हमेशा बाद में ना कहने या अपना विचार बदलने का विकल्प होता है।"
+					},
+					{
+						"title": "प्लेटफ़ॉर्म की सुरक्षा के लिए",
+						"description": "और किसी भी दुरुपयोग की जांच करें।"
 					}
+				],
+				"outro": "यदि आप हमें विपणन जैसी किसी चीज के लिए सहमति देते हैं, तो आप इसे किसी भी समय वापस ले सकते हैं।"
+			},
+			"cryptoWallet": {
+				"title": "क्रिप्टो वॉलेट और ऑन-चेन डेटा",
+				"points": [
+					"हम वॉलेट पते और ऑन-चेन लेन-देन की जानकारी केवल तब तक संग्रहीत करते हैं जब तक हमें आपके खाते को क्रेडिट या डेबिट करने, लेन-देन का ऑडिट करने या कानूनी आवश्यकताओं को पूरा करने की आवश्यकता होती है।",
+					"ऑन-चेन डेटा प्रकृति में सार्वजनिक होता है। हम ब्लॉकचेन गतिविधि को छिपा नहीं सकते हैं, लेकिन हम आपके खाते को सटीक रखने के लिए इसे अपने रिकॉर्ड के साथ जोड़ते हैं।",
+					"यदि आप एक कस्टोडियल वॉलेट (जैसे किसी तीसरे पक्ष के प्रोवाइडर के माध्यम से) को कनेक्ट करते हैं, तो आप हमसे डेटा साझा करने के लिए सहमत होते हैं ताकि हम आपके लेन-देन को संसाधित कर सकें।"
+				]
+			},
+			"dataSharing": {
+				"title": "हम डेटा कब साझा करते हैं",
+				"intro": "हम आपकी जानकारी केवल कुछ मामलों में साझा करते हैं:",
+				"items": [
+					"नियामकों या कानून प्रवर्तन के साथ यदि कानून इसकी मांग करता है या अवैध गतिविधि को रोकने के लिए।",
+					"संबद्धों या तीसरे पक्षों के साथ यदि कोई व्यवसाय हस्तांतरण होता है (जैसे विलय या अधिग्रहण) — लेकिन हमेशा उचित सुरक्षा के साथ।",
+					"धोखाधड़ी निवारण नेटवर्क के साथ प्लेटफ़ॉर्म और हमारे उपयोगकर्ताओं को सुरक्षित रखने के लिए।"
+				],
+				"noSelling": "हम आपकी व्यक्तिगत जानकारी विज्ञापनदाताओं को कभी नहीं बेचते हैं।"
+			},
+			"security": {
+				"title": "सुरक्षा उपाय",
+				"intro": "हम उन सुरक्षा उपायों का उपयोग करते हैं जिनकी आप उम्मीद करते हैं:",
+				"items": [
+					"पारगमन में डेटा के लिए TLS/SSL एन्क्रिप्शन, संवेदनशील जानकारी के लिए एन्क्रिप्टेड स्टोरेज।",
+					"पहुंच नियंत्रण, विस्तृत लॉगिंग और भूमिका-आधारित अनुमतियाँ।",
+					"नियमित सुरक्षा ऑडिट और भेद्यता जांच।",
+					"हमारे कर्मचारियों के लिए बहु-कारक प्रमाणीकरण (MFA) — और आप इसे अपने खाते के लिए भी चालू कर सकते हैं।"
+				],
+				"warning": "याद रखें: अपनी वॉलेट निजी कुंजी और खाता विवरण सुरक्षित रखें। हम कभी भी आपकी निजी कुंजी नहीं पूछेंगे।"
+			},
+			"cookies": {
+				"title": "कुकीज़ और ट्रैकिंग",
+				"content": "हम साइट को काम करने, ट्रैफ़िक का विश्लेषण करने और (यदि आप सहमत हैं) विपणन के लिए कुकीज़ और समान उपकरणों का उपयोग करते हैं। आप अपने ब्राउज़र सेटिंग्स में कुकीज़ को नियंत्रित कर सकते हैं, लेकिन यदि आप आवश्यक कुकीज़ को बंद करते हैं, तो कुछ चीजें काम करना बंद कर सकती हैं।"
+			},
+			"minAge": {
+				"title": "बच्चे और न्यूनतम आयु",
+				"content": "{siteName} का उपयोग करने के लिए आपकी आयु 18 वर्ष या उससे अधिक (या आपके स्थानीय कानून के अनुसार) होनी चाहिए। हम सक्रिय रूप से कम उम्र के उपयोगकर्ताओं को ब्लॉक करते हैं और यदि हमें पता चलता है कि किसी नाबालिग ने साइन अप किया है तो कोई भी डेटा हटा देंगे।"
+			},
+			"breach": {
+				"title": "उल्लंघन सूचना",
+				"content": "यदि कभी कोई डेटा उल्लंघन होता है जो आपके अधिकारों को खतरे में डालता है, तो हम आपको और संबंधित अधिकारियों को कानून के अनुसार सूचित करेंगे, और हम चीजों को जल्दी से ठीक करने के लिए काम करेंगे।"
+			},
+			"changes": {
+				"title": "इस नीति में परिवर्तन",
+				"content": "हम इस गोपनीयता नीति को बदल सकते हैं। यदि कोई बड़ा अपडेट होता है, तो हम इसे साइट पर पोस्ट करेंगे और जब यह समझ में आएगा तो आपको सीधे बताएंगे।"
+			},
+			"contact": {
+				"title": "संपर्क",
+				"intro": "कोई प्रश्न या अनुरोध है?",
+				"link": "🌐 https://{siteDomain}"
+			}
+		}
+	},
+	"terms": {
+		"title": "नियम और शर्तें",
+		"subtitle": "उपयोगकर्ता समझौता और प्लेटफ़ॉर्म नियम",
+		"lastUpdated": "जनवरी 2025",
+		"intro": {
+			"paragraph1": "www.{siteDomain} पर पंजीकरण या अपना वॉलेट कनेक्ट करके, आप {siteName} N.V. के साथ एक बाध्यकारी समझौते में प्रवेश करते हैं।",
+			"paragraph2": "यदि आप इनमें से किसी भी शर्त से सहमत नहीं हैं, तो हमारी वेबसाइट तक न पहुंचें, उसका उपयोग न करें या उस पर पंजीकरण न करें। इन शर्तों को ध्यान से पढ़ें। यदि आप अपने अधिकारों या दायित्वों के बारे में अनिश्चित हैं, तो वेबसाइट का उपयोग करने से पहले अपने क्षेत्राधिकार में एक कानूनी सलाहकार से परामर्श करें।"
+		},
+		"sections": {
+			"ownership": {
+				"title": "1. {siteName} स्वामित्व",
+				"content1": "{siteName} {siteName} N.V. ('{siteName}', 'हम', 'हमारा', 'हमारे') के स्वामित्व और संचालित है।",
+				"content2": "{siteName} एक क्रिप्टो-वॉलेट-ओनली कैसीनो है। सभी जमा, दांव और निकासी उपयोगकर्ताओं के क्रिप्टोकरेंसी वॉलेट के माध्यम से संसाधित की जाती हैं। हम Dynamic.xyz और संगत वॉलेट कनेक्टर्स (जैसे WalletConnect / MetaMask) के माध्यम से वॉलेट लॉगिन का समर्थन करते हैं।"
+			},
+			"notice": {
+				"title": "2. महत्वपूर्ण सूचना",
+				"content1": "2.1 www.{siteDomain} ('वेबसाइट') पर पंजीकरण या अपना वॉलेट कनेक्ट करके, आप {siteName} N.V. के साथ एक बाध्यकारी समझौते में प्रवेश करते हैं और निम्नलिखित से सहमत होते हैं: (i) ये नियम और शर्तें; (ii) हमारी गोपनीयता नीति; (iii) हमारी कुकी नीति; (iv) हमारी रेफ़रल शर्तें; और (v) हमारी जिम्मेदार गेमिंग नीति।",
+				"content2": "2.2 यदि आप इनमें से किसी भी शर्त से सहमत नहीं हैं, तो हमारी वेबसाइट तक न पहुंचें, उसका उपयोग न करें या उस पर पंजीकरण न करें।",
+				"content3": "2.3 इन शर्तों को ध्यान से पढ़ें। यदि आप अपने अधिकारों या दायित्वों के बारे में अनिश्चित हैं, तो वेबसाइट का उपयोग करने से पहले अपने क्षेत्राधिकार में एक कानूनी सलाहकार से परामर्श करें।"
+			},
+			"general": {
+				"title": "3. सामान्य शर्तें",
+				"items": [
+					"पंजीकरण या वॉलेट कनेक्शन पर, आप ('उपयोगकर्ता', 'खिलाड़ी', 'आप', या 'आपका') {siteName} के सभी नियमों और नीतियों का पालन करने के लिए सहमत होते हैं।",
+					"यह समझौता आपके और {siteName} के बीच एक कानूनी रूप से बाध्यकारी अनुबंध है।",
+					"ये शर्तें उस क्षण प्रभावी हो जाती हैं जब आप अपना वॉलेट कनेक्ट करते हैं और साइट का उपयोग करना शुरू करते हैं।",
+					"{siteName} इन शर्तों को किसी भी समय संशोधित या अपडेट करने का अधिकार सुरक्षित रखता है। परिवर्तन वेबसाइट पर प्रकाशित किए जाएंगे; निरंतर उपयोग स्वीकृति का गठन करता है।",
+					"विरोध की स्थिति में, ये शर्तें किसी भी अन्य नियम, प्रचार, या बाहरी सामग्री पर प्रबल होती हैं।",
+					"इन शर्तों का केवल अंग्रेजी संस्करण कानूनी रूप से बाध्यकारी है। अनुवाद केवल सुविधा के लिए हैं।"
+				]
+			},
+			"account": {
+				"title": "4. खाता, वॉलेट लॉगिन और सुरक्षा",
+				"intro": "{siteName} आपके खाते की सुरक्षा के लिए वॉलेट-आधारित प्रमाणीकरण और सुरक्षा उपायों के लिए Dynamic.xyz का उपयोग करता है।",
+				"walletLogin": {
+					"title": "4.1 वॉलेट लॉगिन (Dynamic.xyz)",
+					"items": [
+						"{siteName} वॉलेट-आधारित लॉगिन और प्रमाणीकरण के लिए Dynamic.xyz (या अन्य समर्थित कनेक्टर्स) का उपयोग करता है। एक वॉलेट कनेक्ट करके, आप पुष्टि करते हैं कि आप उस वॉलेट के वैध मालिक हैं और {siteName} को उस वॉलेट को आपके खाते के रूप में पहचानने के लिए अधिकृत करते हैं।",
+						"हम कभी भी आपकी निजी कुंजी का अनुरोध नहीं करते हैं। आपको अपने वॉलेट क्रेडेंशियल और डिवाइस को सुरक्षित रखना होगा। {siteName} समझौता किए गए वॉलेट या लीक हुई निजी कुंजी के कारण होने वाले नुकसान के लिए ज़िम्मेदार नहीं है।"
+					]
 				},
-				"technology": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 17 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 16 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"blockchain": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 16 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 15 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 14 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 14 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"uptime": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 13 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph5": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				"registration": {
+					"title": "4.2 पंजीकरण विवरण",
+					"items": [
+						"आपसे खाता संचार के लिए संपर्क विवरण (ईमेल, उपयोगकर्ता नाम) प्रदान करने के लिए कहा जा सकता है। आपको सटीक जानकारी प्रदान करनी होगी और उसे अद्यतित रखना होगा।",
+						"आप अपने कनेक्टेड वॉलेट का उपयोग करके की गई सभी कार्रवाइयों के लिए ज़िम्मेदार हैं।"
+					]
 				},
 				"security": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 11 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"rng": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 09 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 08 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"global": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"players": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 06 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 05 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"countries": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 05 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 04 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 03 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"payments": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 02 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 02 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 01 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"instant": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 00 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 31 MINUTES 00 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"mobile": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 59 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 58 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 58 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"support": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 57 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 56 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"availability": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 55 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 55 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 54 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"responsible": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 53 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 53 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 52 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"whyChoose": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 51 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"point1": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 50 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 50 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point2": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 49 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 48 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point3": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 48 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 47 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point4": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 46 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 46 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point5": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 45 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 44 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point6": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 44 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 43 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					}
-				},
-				"closing": {
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 42 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"tagline": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 30 MINUTES 41 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					"title": "4.3 एकाधिक खाते और सुरक्षा",
+					"items": [
+						"प्रति व्यक्ति केवल एक खाते की अनुमति है। एकाधिक खाते या सीमाओं को दरकिनार करने के प्रयास के परिणामस्वरूप खाता निलंबन और फंड जब्त हो सकता है।",
+						"प्रस्तावित किसी भी प्लेटफ़ॉर्म सुरक्षा सुविधाओं (उदाहरण के लिए, संबंधित सेवाओं के लिए 2FA) को सक्षम करें और अपने स्वयं के वॉलेट को सुरक्षित करें।",
+						"यदि आपको अनधिकृत पहुंच का संदेह है तो तुरंत सहायता को सूचित करें।"
+					]
 				}
+			},
+			"eligibility": {
+				"title": "5. पात्रता और उपयोगकर्ता वारंटी",
+				"intro": "5.1 आप प्रतिनिधित्व करते हैं और वारंट करते हैं कि:",
+				"items": [
+					"आप कम से कम 18 वर्ष के हैं (या आपके क्षेत्राधिकार में न्यूनतम कानूनी जुआ आयु)।",
+					"आप कानूनी रूप से ऑनलाइन क्रिप्टो जुआ सेवाओं का उपयोग करने के लिए अधिकृत हैं जहां आप स्थित हैं।",
+					"आप जिस वॉलेट को कनेक्ट करते हैं उसके वैध मालिक हैं।",
+					"आप क्षेत्रीय प्रतिबंधों को दरकिनार करने के लिए वीपीएन या स्थान स्पूफिंग का उपयोग नहीं करेंगे।",
+					"आप अवैध या वाणिज्यिक उद्देश्यों के लिए सेवा का उपयोग नहीं करेंगे।",
+					"आप स्वीकार करते हैं कि क्रिप्टोक्यूरेंसी का मूल्य अस्थिर हो सकता है और आप सभी बाजार जोखिम उठाते हैं।"
+				],
+				"outro": "5.2 यदि आप इन वारंटी का उल्लंघन करते हैं, तो {siteName} पहुंच को निलंबित या समाप्त कर सकता है और जहां कानून द्वारा अनुमति दी जाती है वहां फंड रोक सकता है।"
+			},
+			"restricted": {
+				"title": "6. प्रतिबंधित क्षेत्राधिकार",
+				"content1": "6.1 {siteName} उन क्षेत्राधिकारों के खिलाड़ियों को स्वीकार नहीं करता है जहां क्रिप्टो जुआ निषिद्ध या प्रतिबंधित है। इसमें निम्नलिखित शामिल हैं, लेकिन इन्हीं तक सीमित नहीं हैं:",
+				"content2": "संयुक्त राज्य अमेरिका (और अमेरिकी क्षेत्र), यूनाइटेड किंगडम, फ्रांस, नीदरलैंड, स्पेन, जर्मनी, ऑस्ट्रेलिया, ऑस्ट्रिया, कोमोरोस, ईरान, उत्तर कोरिया, सूडान, सीरिया, और FATF ब्लैकलिस्ट पर सूचीबद्ध कोई भी क्षेत्राधिकार।",
+				"content3": "6.2 वीपीएन या प्रॉक्सी के माध्यम से सहित एक प्रतिबंधित क्षेत्राधिकार से सेवा तक पहुंचने का प्रयास, इन शर्तों का उल्लंघन है और इसके परिणामस्वरूप खाता बंद हो सकता है और फंड जब्त हो सकता है।"
+			},
+			"crypto": {
+				"title": "7. क्रिप्टो जमा और निकासी",
+				"policy": {
+					"title": "7.1 केवल क्रिप्टो नीति",
+					"items": [
+						"{siteName} केवल समर्थित क्रिप्टोकरेंसी (उदाहरण के लिए, BTC, ETH, USDT, TRX, BNB) में जमा और निकासी स्वीकार करता है। कोई फिएट, कार्ड, या बैंक-स्थानांतरण जमा स्वीकार नहीं किया जाता है।",
+						"सभी जमा आपके द्वारा नियंत्रित वॉलेट से उत्पन्न होने चाहिए। तीसरे पक्ष के वॉलेट से जमा निषिद्ध है।"
+					]
+				},
+				"deposits": {
+					"title": "7.2 जमा",
+					"items": [
+						"आवश्यक ब्लॉकचेन पुष्टिकरण के बाद जमा राशि जमा की जाती है। नेटवर्क (गैस) शुल्क आपके द्वारा देय हैं।",
+						"{siteName} उन जमाओं को अस्वीकार या उलट सकता है जो अवरुद्ध पते या प्रतिबंधित स्रोतों से उत्पन्न होते प्रतीत होते हैं।"
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 निकासी",
+					"items": [
+						"निकासी आपके द्वारा प्रदान किए गए वॉलेट पते पर संसाधित की जाती है। {siteName} को प्रसंस्करण से पहले गंतव्य वॉलेट की पुष्टि करने के लिए आपकी आवश्यकता हो सकती है।",
+						"आपके पास निकासी को कवर करने के लिए पर्याप्त स्पष्ट बैलेंस होना चाहिए। संदिग्ध दुरुपयोग या असामान्य गतिविधि की जांच के लिए निकासी में देरी हो सकती है।"
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 शुल्क वापसी और उलटफेर",
+					"items": [
+						"क्रिप्टो लेन-देन ऑन-चेन अंतिम होते हैं। यदि {siteName} तीसरे पक्ष के सेवा प्रोवाइडर्स (ऑन-चेन के साथ दुर्लभ) से शुल्क वापसी या उलटफेर के कारण नुकसान उठाता है, तो हम राशि वसूल करने या प्रशासनिक शुल्क लेने का अधिकार सुरक्षित रखते हैं।"
+					]
+				}
+			},
+			"kyc": {
+				"title": "8. कोई नियमित पहचान सत्यापन नहीं (कोई KYC नहीं)",
+				"content1": "8.1 {siteName} सामान्य खेल की शर्त के रूप में नियमित पहचान सत्यापन (KYC) नहीं करता है। उपयोगकर्ता Dynamic.xyz के माध्यम से एक वॉलेट कनेक्ट कर सकते हैं और पहचान दस्तावेज़ प्रदान किए बिना खेलना शुरू कर सकते हैं।",
+				"content2": "8.2 उपरोक्त के बावजूद, {siteName} को निम्नलिखित के लिए आवश्यक होने पर जानकारी का अनुरोध करने या लेन-देन को निलंबित करने का अधिकार सुरक्षित रखता है:",
+				"items": [
+					"सक्षम अधिकारियों से एक कानूनी आदेश का पालन करें:",
+					"धोखाधड़ी, मनी लॉन्ड्रिंग, या अन्य अवैध गतिविधि को रोकें, जांच करें, या ठीक करें",
+					"या प्लेटफ़ॉर्म की सुरक्षा और अखंडता की रक्षा करें।"
+				],
+				"content3": "8.3 यदि आप कानूनी रूप से आवश्यक होने पर ऐसी जानकारी प्रदान करने से इनकार करते हैं, तो {siteName} आपके खाते को प्रतिबंधित या बंद कर सकता है और कानून द्वारा अनुमति दी गई सीमा तक निकासी में देरी कर सकता है या उसे रोक सकता है।"
+			},
+			"fairPlay": {
+				"title": "9. निष्पक्ष खेल, निषिद्ध आचरण और सुरक्षा",
+				"intro": "आपको नहीं करना चाहिए:",
+				"items": [
+					"बॉट्स, स्क्रिप्ट, स्वचालित खेल उपकरण, या किसी भी अनधिकृत सॉफ़्टवेयर का उपयोग करें।",
+					"अन्य खिलाड़ियों के साथ मिलीभगत करें या गेम के परिणामों में हेरफेर करें।",
+					"बोनस या प्रचार का फायदा उठाने के लिए एकाधिक खाते बनाएं।",
+					"ऑन-चेन लेन-देन को उलटने या उसमें छेड़छाड़ करने का प्रयास करें।",
+					"गेम बग या प्लेटफ़ॉर्म कमजोरियों का फायदा उठाएँ।"
+				],
+				"outro1": "धोखाधड़ी, मिलीभगत, या प्लेटफ़ॉर्म का फायदा उठाने वाले खाते निलंबित, बंद, या बैलेंस जब्त हो सकते हैं।",
+				"outro2": "{siteName} प्लेटफ़ॉर्म अखंडता की रक्षा के लिए तकनीकी और व्यवहारिक निगरानी लागू करता है।"
+			},
+			"bonuses": {
+				"title": "10. बोनस और प्रमोशन",
+				"items": [
+					"सभी बोनस ऑफ़र और प्रमोशन प्रत्येक ऑफ़र के साथ बताए गए विशिष्ट बोनस शर्तों के अधीन हैं।",
+					"बोनस का दुरुपयोग (जिसमें एकाधिक खाते या तेजी से बोनस स्विचिंग शामिल है) बोनस से इनकार, उलटफेर, या जब्त और खातों को बंद करने का कारण बन सकता है।",
+					"बोनस-व्युत्पन्न फंड निकालने से पहले बोनस दांव लगाने की आवश्यकताओं को पूरा किया जाना चाहिए, जैसा कि प्रति प्रचार निर्दिष्ट है।"
+				]
+			},
+			"playingRules": {
+				"title": "11. खेलने के नियम और गेम सेटलमेंट",
+				"items": [
+					"बेट तभी स्वीकार किए जाते हैं जब आपको ऑन-स्क्रीन पुष्टि मिलती है। अपर्याप्त बैलेंस के साथ लगाए गए बेट रद्द होते हैं।",
+					"विवादों के मामले में {siteName} के आंतरिक लॉग और ब्लॉकचेन रिकॉर्ड आधिकारिक हैं।",
+					"यदि कोई इवेंट रद्द, निलंबित या अन्यथा समझौता किया जाता है, तो {siteName} प्रकाशित गेम और बाजार नियमों के अनुसार बेट का निपटान या रद्द कर देगा।",
+					"स्पष्ट रूप से निष्पक्ष गेम्स के लिए, सत्यापन उपकरण और सर्वर बीज (जहां लागू हो) प्रति गेम उपलब्ध कराए जाते हैं; सर्वर लॉग अंतिम होते हैं।"
+				]
+			},
+			"errors": {
+				"title": "12. त्रुटियाँ, रुकावटें और सीमाएँ",
+				"intro": "{siteName} निम्नलिखित के कारण होने वाले नुकसान के लिए ज़िम्मेदार नहीं है:",
+				"items": [
+					"इंटरनेट या डिवाइस विफलताएं",
+					"ब्लॉकचेन देरी, फोर्क्स, या नेटवर्क कंजेशन",
+					"सॉफ्टवेयर बग या तीसरे पक्ष की सेवा आउटेज"
+				],
+				"outro1": " {siteName} त्रुटियों या शोषण का पता चलने पर बेट को रद्द करने, बैलेंस को समायोजित करने या लेन-देन को रद्द करने का अधिकार सुरक्षित रखता है।",
+				"outro2": "हम उपयोगकर्ताओं और प्लेटफ़ॉर्म की सुरक्षा के लिए दांव लगाने की सीमाएं, अधिकतम जीत और अन्य नियंत्रण सेट कर सकते हैं।"
+			},
+			"suspension": {
+				"title": "13. निलंबन, बंद करना और फंड हैंडलिंग",
+				"intro": "{siteName} उन खातों को निलंबित या बंद कर सकता है जहां:",
+				"items": [
+					"शर्तों का उल्लंघन होता है",
+					"दुरुपयोग, धोखाधड़ी या संदिग्ध व्यवहार का पता चलता है",
+					"कानूनी या नियामक दायित्वों की आवश्यकता है"
+				],
+				"outro1": "खाता बंद होने पर, लंबित दांव रद्द किए जा सकते हैं और शेष फंड लागू कानून और प्लेटफ़ॉर्म नीति के अनुसार संभाले जाते हैं।",
+				"outro2": "{siteName} विवादों को हल करने, कानूनी अनुरोधों का पालन करने, या नुकसान को ठीक करने के लिए आवश्यक होने पर फंड को रोक सकता है।"
+			},
+			"responsibleGaming": {
+				"title": "14. जिम्मेदार गेमिंग",
+				"items": [
+					"{siteName} जिम्मेदार जुआ को बढ़ावा देता है। आप अनुरोध कर सकते हैं: आत्म-बहिष्करण, जमा सीमा, या अस्थायी निलंबन।",
+					"यदि आपको जुए की समस्या का संदेह है, तो तत्काल सहायता के लिए {siteDomain} पर जाएँ।",
+					"कम उम्र में जुआ (18 वर्ष से कम या स्थानीय कानूनी आयु) सख्ती से निषिद्ध है। नाबालिगों से संबंधित पाए गए खाते बंद कर दिए जाएंगे और फंड नीति के अनुसार संभाले जाएंगे।"
+				]
+			},
+			"ip": {
+				"title": "15. बौद्धिक संपदा",
+				"content1": "{siteName} पर सभी ट्रेडमार्क, लोगो, साइट सामग्री, सॉफ़्टवेयर, और गेम एसेट्स {siteName} के स्वामित्व या लाइसेंस प्राप्त हैं। अनधिकृत प्रतिलिपि, स्क्रैपिंग, या पुनर्वितरण निषिद्ध है।",
+				"content2": "आपको केवल व्यक्तिगत मनोरंजन के लिए सेवा तक पहुंचने के लिए एक सीमित, प्रतिसंहरणीय लाइसेंस दिया जाता है।"
+			},
+			"liability": {
+				"title": "16. दायित्व की सीमा",
+				"items": [
+					"कानून द्वारा अनुमत पूर्ण सीमा तक, {siteName} अप्रत्यक्ष, विशेष, परिणामी या आकस्मिक नुकसान के लिए ज़िम्मेदार नहीं होगा, जिसमें खोए हुए लाभ या अवसर लागत शामिल हैं।",
+					"इन शर्तों से संबंधित किसी भी दावे के लिए हमारी कुल देयता आपके अंतिम जमा के मूल्य या लागू कानून द्वारा निर्दिष्ट राशि से अधिक नहीं होगी।",
+					"इन शर्तों में कुछ भी लापरवाही के कारण होने वाली मौत या व्यक्तिगत चोट के लिए दायित्व को सीमित नहीं करता है जहां लागू कानून इस तरह के प्रतिबंध को प्रतिबंधित करता है।"
+				]
+			},
+			"disputes": {
+				"title": "17. विवाद समाधान और शासी कानून",
+				"content": "विवाद की स्थिति में, {siteDomain} पर जाएँ। हमारा लक्ष्य शिकायतों को जल्दी हल करना है; यदि आवश्यक हो तो प्रबंधन को बढ़ाएँ।"
+			},
+			"amendments": {
+				"title": "18. संशोधन",
+				"content": "{siteName} इन शर्तों को किसी भी समय संशोधित कर सकता है। अपडेट की गई शर्तें वेबसाइट पर पोस्ट की जाएंगी। निरंतर उपयोग स्वीकृति का गठन करता है।"
+			},
+			"miscellaneous": {
+				"title": "19. विविध",
+				"items": [
+					"ये शर्तें सेवा के संबंध में आपके और {siteName} के बीच पूरे समझौते का गठन करती हैं।",
+					"यदि कोई खंड अप्रवर्तनीय पाया जाता है, तो इसे आवश्यक न्यूनतम सीमा तक संशोधित किया जाएगा और शेष प्रावधान प्रभावी रहेंगे।",
+					"आप इन शर्तों के तहत अपने अधिकारों को असाइन नहीं कर सकते हैं। {siteName} अधिकार और दायित्व असाइन या उप-अनुबंध कर सकता है।"
+				]
+			},
+			"contact": {
+				"title": "20. संपर्क",
+				"intro": "समर्थन, शिकायतों, या कानूनी नोटिस के लिए:",
+				"supportEmail": "सामान्य समर्थन: {siteDomain} पर जाएँ",
+				"affiliateEmail": "रेफ़रल पूछताछ: {siteDomain} पर जाएँ",
+				"registeredOffice": "पंजीकृत कार्यालय: {siteDomain} N.V., Heelsumstraat 51, Willemstad, Curaçao"
+			}
+		}
+	},
+	"responsibleGambling": {
+		"title": "{siteName} पर जिम्मेदार जुआ",
+		"subtitle": "{siteName} में, हम चाहते हैं कि गेमिंग सुरक्षित, मजेदार हो, और कुछ ऐसा हो जिससे आप कभी भी दूर हो सकें। हम संतुलन बनाए रखने के बारे में हैं - ताकि आप आनंद के लिए खेलें, न कि पैसा कमाने या अपने वित्त को ठीक करने के लिए।",
+		"lastUpdated": "अंतिम अपडेट: जनवरी 2025",
+		"intro": {
+			"title": "{siteName} पर जिम्मेदार जुआ",
+			"paragraph1": "{siteName} में, हम चाहते हैं कि गेमिंग सुरक्षित, मजेदार हो, और कुछ ऐसा हो जिससे आप कभी भी दूर हो सकें। हम संतुलन बनाए रखने के बारे में हैं - ताकि आप आनंद के लिए खेलें, न कि पैसा कमाने या अपने वित्त को ठीक करने के लिए।",
+			"paragraph2": "अगर आपकी उम्र 18 साल से कम है, या आपके क्षेत्र में कानूनी उम्र से कम है, तो आप हमारे प्लेटफॉर्म का उपयोग नहीं कर सकते। हम इसे बहुत गंभीरता से लेते हैं।"
+		},
+		"mission": {
+			"title": "हमारा मिशन",
+			"paragraph1": "हम स्पष्ट, ईमानदार और सुरक्षित गेमिंग में विश्वास करते हैं। {siteName} आपको स्मार्ट विकल्प बनाने में मदद करने और जुआ को समस्या बनने से रोकने के लिए मौजूद है।",
+			"paragraph2": "यहां वह है जो हमारे लिए मायने रखता है:",
+			"beliefs": {
+				"0": "जुआ मनोरंजन है। यह अमीर बनने का तरीका नहीं है।",
+				"1": "खुद को जानें, सीमाएं निर्धारित करें और अति न करें।",
+				"2": "हम आपको नियंत्रण में रहने में मदद करने के लिए उपकरण और संसाधन देते हैं।"
+			}
+		},
+		"understanding": {
+			"title": "जिम्मेदार जुआ का वास्तव में क्या मतलब है",
+			"paragraph1": "ऑनलाइन जुआ आजकल हर जगह है। यह समय, धन, या यहां तक ​​कि आपने पहली बार खेलना क्यों शुरू किया, इस पर नज़र रखना आसान बनाता है।|जिम्मेदार जुआ का मतलब है अपनी सीमाओं को जानना, सतर्क रहना, और चीजों को नियंत्रण से बाहर नहीं जाने देना।",
+			"paragraph2": "याद रखने योग्य कुछ बातें:",
+			"tips": {
+				"0": "मज़े के लिए खेलें, लाभ के लिए नहीं।",
+				"1": "नुकसान की भरपाई करने की कोशिश न करें। यदि आपको ब्रेक की आवश्यकता है तो लें।",
+				"2": "अपने लिए खर्च और समय सीमा निर्धारित करें, और उस पर टिके रहें।",
+				"3": "जब आप थके हुए, तनावग्रस्त या परेशान हों तो कभी जुआ न खेलें।",
+				"4": "उस पैसे का उपयोग न करें जो बिलों या अन्य जरूरतों के लिए है।",
+				"5": "यदि यह मजेदार होना बंद कर देता है, तो दूर हो जाएं।"
+			}
+		},
+		"selfCheck": {
+			"title": "त्वरित आत्म-जाँच: क्या आप अभी भी नियंत्रण में हैं?",
+			"intro": "खुद के साथ ईमानदार रहें:",
+			"questions": {
+				"0": "क्या आप जुआ खेलते समय समय का ट्रैक खो देते हैं?",
+				"1": "क्या इसने आपके रिश्तों या काम को नुकसान पहुंचाया है?",
+				"2": "जब आप खेल नहीं सकते तो क्या आप परेशान होते हैं?",
+				"3": "क्या आप बोरियत या तनाव से बचने के लिए जुआ खेल रहे हैं?",
+				"4": "क्या आपने केवल खेलना जारी रखने के लिए पैसे या क्रिप्टो उधार लिए हैं?",
+				"5": "क्या आप नुकसान का पीछा करते हैं, उसे वापस जीतने की कोशिश करने के लिए अधिक दांव लगाते हैं?"
+			},
+			"warning": "यदि आपने कई का उत्तर \"हाँ\" दिया है, तो यह आपके खेलने के तरीके पर पुनर्विचार करने और शायद मदद के लिए पहुंचने का समय है।"
+		},
+		"tools": {
+			"title": "{siteName} आपको ट्रैक पर बने रहने में कैसे मदद करता है",
+			"intro": "हम चाहते हैं कि आप आनंद लें, लेकिन हम यह भी चाहते हैं कि आप सुरक्षित रहें।|यहां वह है जो हम प्रदान करते हैं:",
+			"selfExclusion": {
+				"title": "आत्म-बहिष्करण",
+				"description": "एक ब्रेक चाहिए? आप अस्थायी रूप से या हमेशा के लिए अपना खाता ब्लॉक करने का अनुरोध कर सकते हैं। इस दौरान, आप खेलने या प्रोमो ईमेल प्राप्त करने में सक्षम नहीं होंगे। बस {siteName} पर हमसे संपर्क करें और हम इसे निजी तौर पर संभाल लेंगे।"
+			},
+			"coolingOff": {
+				"title": "कूलिंग-ऑफ अवधि",
+				"paragraph1": "यदि आपको लगता है कि चीजें नियंत्रण से बाहर हो रही हैं, तो 24 घंटे, एक सप्ताह या एक महीने के लिए ब्रेक लें। इस दौरान, आप खेलने के लिए अपने वॉलेट को कनेक्ट नहीं कर सकते हैं।",
+				"periods": {
+					"0": "24 घंटे",
+					"1": "1 सप्ताह",
+					"2": "1 महीना"
+				},
+				"paragraph2": "इस दौरान, आप खेलने के लिए अपने वॉलेट को कनेक्ट नहीं कर सकते हैं।"
+			},
+			"depositAwareness": {
+				"title": "जमा और हानि जागरूकता",
+				"description": "चूंकि सब कुछ क्रिप्टो वॉलेट के माध्यम से चलता है, आप अपने सभी जमा और दांव सीधे ब्लॉकचेन पर देख सकते हैं। अपनी गतिविधि पर नज़र रखें ताकि आपको हमेशा पता रहे कि आप कहां खड़े हैं।"
+			}
+		},
+		"underagePrevention": {
+			"title": "नाबालिगों की सुरक्षा",
+			"paragraph1": "18 वर्ष से कम उम्र के किसी भी व्यक्ति के लिए कोई जुआ नहीं। हम गंभीर हैं।",
+			"tipsTitle": "माता-पिता और अभिभावकों, यहां कुछ सुझाव दिए गए हैं:",
+			"tips": {
+				"0": "पासवर्ड का उपयोग करें या अपने डिवाइस लॉक करें।",
+				"1": "साझा कंप्यूटर या फ़ोन पर वॉलेट जानकारी सहेजें नहीं।",
+				"2": "यदि आप दूर जा रहे हैं तो हमेशा लॉग आउट करें।",
+				"3": "जुआ साइटों को ब्लॉक करने के लिए NetNanny या GamBlock जैसे उपकरणों का उपयोग करें।",
+				"4": "अपने बच्चों की ऑनलाइन गतिविधि की जाँच करें।"
+			},
+			"warning": "अगर हमें पता चलता है कि कोई नाबालिग खेल रहा है, तो हम उनका खाता बंद कर देंगे और किसी भी जीत को रद्द कर देंगे।"
+		},
+		"helpSupport": {
+			"title": "समर्थन चाहिए? आप अकेले नहीं हैं",
+			"intro": "यदि जुआ आपके मूड, रिश्तों या वित्त को नुकसान पहुंचाना शुरू कर देता है, तो कृपया संपर्क करें। यहां कुछ संगठन हैं जो मदद कर सकते हैं, चाहे आप कहीं भी हों:",
+			"organizations": {
+				"0": {
+					"name": "GamCare",
+					"url": "https://www.gamcare.org.uk"
+				},
+				"1": {
+					"name": "Gambling Therapy",
+					"url": "https://www.gamblingtherapy.org"
+				},
+				"2": {
+					"name": "Gamblers Anonymous",
+					"url": "https://www.gamblersanonymous.org"
+				},
+				"3": {
+					"name": "National Council on Problem Gambling",
+					"url": "https://www.ncpgambling.org"
+				},
+				"4": {
+					"name": "GamTalk",
+					"url": "https://www.gamtalk.org"
+				}
+			},
+			"paragraph2": "वे आत्म-जाँच, लाइव चैट और स्थानीय सहायता समूह प्रदान करते हैं।"
+		},
+		"principles": {
+			"title": "{siteName} कैसे जिम्मेदार रहता है",
+			"intro": "हम इन सिद्धांतों पर टिके रहते हैं:",
+			"items": {
+				"0": {
+					"title": "पारदर्शिता",
+					"description": "हर गेम स्पष्ट रूप से निष्पक्ष है और ब्लॉकचेन-सत्यापित है।"
+				},
+				"1": {
+					"title": "सुरक्षा",
+					"description": "आपके सत्र हमेशा Dynamic.xyz वॉलेट लॉगिन द्वारा सुरक्षित रहते हैं। कोई पासवर्ड नहीं, कोई KYC नहीं।"
+				},
+				"2": {
+					"title": "स्वायत्तता",
+					"description": "आप प्रभारी हैं। कभी भी डिस्कनेक्ट करें।"
+				},
+				"3": {
+					"title": "शिक्षा",
+					"description": "हम आपको जोखिमों को समझने में मदद करते हैं और आपको सूचित रखते हैं।"
+				},
+				"4": {
+					"title": "सामुदायिक समर्थन",
+					"description": "हमारी टीम 24/7 आपके लिए यहां है।"
+				}
+			}
+		},
+		"playSmart": {
+			"title": "अंतिम विचार",
+			"intro": "जुआ सुखद, सामाजिक और संतुलित होना चाहिए। खेलने से पहले, समय सीमा निर्धारित करें। नुकसान का पीछा न करें या परेशान होने पर न खेलें। किसी भी जीत को एक अच्छा बोनस मानें, वेतन चेक नहीं। स्मार्ट खेलें, और अगर आपको मदद की ज़रूरत है तो पूछने से न डरें।",
+			"reminders": {
+				"0": "जुआ सुखद, सामाजिक और संतुलित होना चाहिए।",
+				"1": "खेलने से पहले, समय सीमा निर्धारित करें।",
+				"2": "नुकसान का पीछा न करें या परेशान होने पर न खेलें।",
+				"3": "किसी भी जीत को एक अच्छा बोनस मानें, वेतन चेक नहीं।",
+				"4": "स्मार्ट खेलें, और अगर आपको मदद की ज़रूरत है तो पूछने से न डरें।"
+			}
+		},
+		"finalMessage": {
+			"paragraph1": "जुआ को अपने काम या रिश्तों में न आने दें। यदि यह मजेदार होना बंद कर देता है, तो बस दूर हो जाएं।|{siteName} में, हम आपकी भलाई की परवाह करते हैं। स्मार्ट विकल्प चुनें, सुरक्षित खेलें और अपना ध्यान रखें।",
+			"paragraph2": "जुआ को अपने काम या रिश्तों में न आने दें। यदि यह मजेदार होना बंद कर देता है, तो बस दूर हो जाएं।",
+			"contact": "मदद, सलाह चाहिए या ब्रेक लेना चाहते हैं? {siteName} पर कभी भी संपर्क करें।"
+		}
+	},
+	"faqs": {
+		"title": "अक्सर पूछे जाने वाले प्रश्न (FAQ) – {siteName}",
+		"subtitle": "{siteName} के सामान्य प्रश्नों के उत्तर खोजें। वॉलेट लॉगिन, जमा, निकासी, निष्पक्ष खेल और ब्लॉकचेन पारदर्शिता के बारे में जानें।",
+		"lastUpdated": "अंतिम अपडेट: जनवरी 2025",
+		"introTitle": "FAQ {siteName}",
+		"intro": "{siteName} FAQ सेंटर में आपका स्वागत है, जहां आपको हमारे क्रिप्टो गेमिंग प्लेटफ़ॉर्म के बारे में सबसे सामान्य प्रश्नों के त्वरित उत्तर मिलेंगे।|यदि आपको यहां अपना उत्तर नहीं मिलता है, तो हमारी 24/7 सहायता टीम {siteName} पर हमेशा मदद के लिए तैयार है।",
+		"categories": {
+			"accountRegistration": {
+				"title": "🔹 खाता और पंजीकरण",
+				"items": {
+					"0": {
+						"question": "1. क्या मैं आपकी वेबसाइट पर पंजीकरण कर सकता हूं?",
+						"answer": "हाँ — पंजीकरण 18 वर्ष या उससे अधिक उम्र के (या आपके क्षेत्राधिकार में कानूनी वयस्कता की आयु) किसी भी व्यक्ति के लिए खुला है।|आपको यह भी सुनिश्चित करना होगा कि आप जहां रहते हैं वहां ऑनलाइन गेमिंग कानूनी है।|{siteName} में, आपको पारंपरिक साइन-अप या पासवर्ड की आवश्यकता नहीं है।|तत्काल खेलना शुरू करने के लिए बस Dynamic.xyz के माध्यम से अपना वॉलेट कनेक्ट करें।|👉 कानूनी और अनुपालन विवरण के लिए, कृपया हमारे नियम और शर्तें की समीक्षा करें।",
+						"reminder": "अनुस्मारक: जुआ की लत लग सकती है। कृपया जिम्मेदारी से खेलें और अपनी सीमाएं जानें।"
+					},
+					"1": {
+						"question": "2. अगर मैं अपने लॉगिन विवरण भूल जाऊं तो क्या होगा?",
+						"answer": "चूंकि {siteName} Dynamic.xyz के माध्यम से वॉलेट-आधारित लॉगिन का उपयोग करता है, इसलिए आप पारंपरिक पासवर्ड का उपयोग नहीं करते हैं।|अपने खाते तक फिर से पहुंचने के लिए:|उसी पते का उपयोग करके अपना वॉलेट पुन: कनेक्ट करें जिसका आपने मूल रूप से उपयोग किया था।|यदि आपने अपने वॉलेट तक पहुंच खो दी है, तो कृपया इसे अपने बीज वाक्यांश या बैकअप विधि से पुनर्स्थापित करें (हम सुरक्षा कारणों से निजी कुंजी को कभी संग्रहीत या नियंत्रित नहीं करते हैं)।| {siteName} सुरक्षा कारणों से आपके वॉलेट क्रेडेंशियल को रीसेट या पुनर्प्राप्त नहीं कर सकता है।"
+					},
+					"2": {
+						"question": "3. क्या मैं अपना उपयोगकर्ता नाम या लिंक किया गया वॉलेट बदल सकता हूं?",
+						"answer": "आपका {siteName} खाता आपके वॉलेट पते से जुड़ा हुआ है।|एक नया वॉलेट उपयोग करने के लिए, बस एक नया कनेक्ट करें — लेकिन ध्यान दें कि आपका पिछला गेमिंग इतिहास, वीआईपी स्थिति और बोनस स्वचालित रूप से स्थानांतरित नहीं होंगे।"
+					},
+					"3": {
+						"question": "4. मैं वीआईपी सदस्य कैसे बनूं?",
+						"answer": "हमारा वीआईपी कार्यक्रम अनन्य है और केवल आमंत्रण द्वारा है।|जैसे ही आप {siteName} समुदाय के साथ खेलते और जुड़ते हैं, आपकी गेमिंग गतिविधि स्वचालित रूप से ट्रैक की जाती है।|एक बार पात्र होने पर, आपको प्लेटफ़ॉर्म के भीतर अधिसूचना या {siteName} टीम से सीधे संदेश के माध्यम से एक आधिकारिक आमंत्रण प्राप्त होगा।|वीआईपी अनन्य बोनस, तेज निकासी और व्यक्तिगत पुरस्कारों तक पहुंच का आनंद लेते हैं।"
+					}
+				}
+			},
+			"depositsWithdrawals": {
+				"title": "💰 जमा और निकासी",
+				"items": {
+					"0": {
+						"question": "5. मैं क्रिप्टो कैसे जमा करूं?",
+						"answer": "{siteName} पर जमा करना तेज और सरल है:|मुख्य डैशबोर्ड पर \"मेरा वॉलेट\" पर जाएं।|जमा चुनें और अपनी पसंदीदा क्रिप्टोकरेंसी (उदा., BTC, ETH, USDT, BNB) चुनें।|अपना अद्वितीय वॉलेट पता कॉपी करें या QR कोड स्कैन करें।|अपने बाहरी वॉलेट से प्रदर्शित पते पर अपना क्रिप्टो भेजें।|एक बार ब्लॉकचेन पर पुष्टि होने के बाद, आपका फंड स्वचालित रूप से आपके {siteName} बैलेंस में दिखाई देगा।|⚠️ सुनिश्चित करें कि आप केवल समर्थित क्रिप्टोकरेंसी को सही पता नेटवर्क (उदा., ERC20, TRC20, BEP20) पर भेजते हैं।"
+					},
+					"1": {
+						"question": "6. जमा में कितना समय लगता है?",
+						"answer": "ब्लॉकचेन कंजेशन और लेन-देन शुल्क के आधार पर, जमा की पुष्टि आमतौर पर 5-10 मिनट के भीतर हो जाती है।|आप अपने लेन-देन हैश (TXID) का उपयोग करके एक ब्लॉक एक्सप्लोरर (उदा., Etherscan.io या BscScan.com) के माध्यम से अपने लेन-देन की प्रगति को ट्रैक कर सकते हैं।|आपके बैलेंस में आपकी जमा राशि दिखाई देने के लिए आमतौर पर न्यूनतम 3 पुष्टिकरण की आवश्यकता होती है।"
+					},
+					"2": {
+						"question": "7. न्यूनतम निकासी राशि क्या है?",
+						"answer": "न्यूनतम निकासी राशि आपके द्वारा उपयोग की जा रही क्रिप्टोकरेंसी पर निर्भर करती है।|प्रत्येक कॉइन का अपना नेटवर्क शुल्क और न्यूनतम सीमा होती है।|ये मान \"मेरा वॉलेट\" के तहत निकासी सेक्शन में प्रदर्शित होते हैं।"
+					},
+					"3": {
+						"question": "8. मैं अपनी जीत कैसे निकालूं?",
+						"answer": "अपना क्रिप्टो निकालने के लिए:|“मेरा वॉलेट” → “निकासी” पर जाएं।|अपना गंतव्य वॉलेट पता और वह राशि दर्ज करें जिसे आप निकालना चाहते हैं।|पुष्टि करने से पहले अपने पते और नेटवर्क प्रकार की दोबारा जांच करें।|निकासी तुरंत संसाधित हो जाती है, लेकिन ब्लॉकचेन नेटवर्क गतिविधि के आधार पर इसमें कुछ मिनट लग सकते हैं।|💡 हमेशा सुनिश्चित करें कि आपका प्राप्तकर्ता वॉलेट उस नेटवर्क का समर्थन करता है जिससे आप निकासी कर रहे हैं।"
+					},
+					"4": {
+						"question": "9. अगर मेरे लेन-देन में देरी हो तो क्या होगा?",
+						"answer": "नेटवर्क कंजेशन या कम गैस शुल्क के कारण ब्लॉकचेन लेन-देन में कभी-कभी अधिक समय लगता है।|यदि आपका जमा या निकासी नहीं आया है:|ब्लॉकचेन एक्सप्लोरर पर अपनी TXID जांचें।|पुष्टि करें कि आपने सही नेटवर्क और पते का उपयोग किया है।|यदि एक घंटे से अधिक समय हो गया है, तो अपनी TXID और वॉलेट विवरण के साथ {siteName} से संपर्क करें।"
+					}
+				}
+			},
+			"gamesSecurity": {
+				"title": "🎮 गेम्स, निष्पक्षता और सुरक्षा",
+				"items": {
+					"0": {
+						"question": "10. क्या {siteName} गेम्स निष्पक्ष हैं?",
+						"answer": "हाँ — सभी {siteName} गेम्स स्पष्ट रूप से निष्पक्ष तकनीक और सत्यापित स्मार्ट अनुबंधों का उपयोग करके बनाए गए हैं।|हर बेट, परिणाम और भुगतान को ब्लॉकचेन पर स्वतंत्र रूप से सत्यापित किया जा सकता है।|हम पारदर्शी, छेड़छाड़-प्रूफ सिस्टम पर काम करते हैं जो वास्तविक यादृच्छिकता, निष्पक्षता और खुलेपन की गारंटी देते हैं।|आप Etherscan या संबंधित नेटवर्क एक्सप्लोरर के माध्यम से ऑन-चेन गेम परिणाम और लेन-देन प्रमाण देख सकते हैं।"
+					},
+					"1": {
+						"question": "11. अगर कोई गेम फ्रीज या क्रैश हो जाए तो मुझे क्या करना चाहिए?",
+						"answer": "अगर आपका गेम जवाब देना बंद कर दे:|पेज को ताज़ा करें।|अपने ब्राउज़र कैश को साफ़ करें और अपना वॉलेट पुन: कनेक्ट करें।|अगर समस्या बनी रहती है, तो लाइव चैट या {siteName} के माध्यम से हमारी सहायता टीम से संपर्क करें।|अगर प्रभावित हुआ तो हमारी टीम आपके गेम सत्र या बैलेंस को पुनर्स्थापित करने में आपकी सहायता करेगी।"
+					},
+					"2": {
+						"question": "12. क्या मैं एक से अधिक वॉलेट या खाते का उपयोग कर सकता हूं?",
+						"answer": "नहीं।|प्रत्येक खिलाड़ी को अपने प्राथमिक खाते के रूप में एक वॉलेट पते का उपयोग करने की अनुमति है।|बोनस का दावा करने या प्रचार का फायदा उठाने के लिए एकाधिक खाते बनाना या वॉलेट रोटेशन का उपयोग करना सख्ती से निषिद्ध है और इसके परिणामस्वरूप खाता प्रतिबंध या बैलेंस जब्त हो सकता है।"
+					},
+					"3": {
+						"question": "13. क्या मेरा व्यक्तिगत डेटा सुरक्षित है?",
+						"answer": "हाँ।|{siteName} में, हम व्यक्तिगत डेटा एकत्र नहीं करते हैं — आपकी पहचान सुरक्षित रहती है।|एक्सेस Dynamic.xyz के माध्यम से प्रबंधित होता है, जो आपकी डिजिटल पहचान की पूर्ण गोपनीयता और स्वामित्व सुनिश्चित करता है।|हमारे द्वारा कोई पासवर्ड, ईमेल या संवेदनशील दस्तावेज़ संग्रहीत नहीं किया जाता है।|आपका वॉलेट = आपकी पहचान।"
+					}
+				}
+			},
+			"responsibleGambling": {
+				"title": "🧠 जिम्मेदार जुआ",
+				"items": {
+					"0": {
+						"question": "14. क्या {siteName} जिम्मेदार जुआ का समर्थन करता है?",
+						"answer": "बिल्कुल।|हम हर खिलाड़ी को संयम में गेमिंग का आनंद लेने के लिए प्रोत्साहित करते हैं।|आप {siteName} से संपर्क करके कभी भी आत्म-बहिष्करण अवधि का अनुरोध कर सकते हैं या कूलिंग-ऑफ ब्रेक ले सकते हैं।|यदि आपको लगता है कि जुआ आपके जीवन को प्रभावित कर रहा है, तो संसाधनों और सहायता संगठनों के लिए हमारे जिम्मेदार जुआ पेज पर जाएँ।"
+					},
+					"1": {
+						"question": "15. अगर मुझे जुए की समस्या का संदेह है तो मुझे क्या करना चाहिए?",
+						"answer": "यदि आपको लगता है कि आपका जुआ नियंत्रण से बाहर हो रहा है, तो ब्रेक लें और गोपनीय सहायता के लिए इनमें से किसी एक विश्वसनीय संगठन से संपर्क करें:|GamCare: https://www.gamcare.org.uk|Gambling Therapy: https://www.gamblingtherapy.org|Gamblers Anonymous: https://www.gamblersanonymous.org|हमारी सहायता टीम आपको सुरक्षित रूप से अपने खाते तक पहुंच को सीमित करने के बारे में भी मार्गदर्शन कर सकती है।"
+					}
+				}
+			},
+			"blockchainTransparency": {
+				"title": "🧩 ब्लॉकचेन पारदर्शिता",
+				"paragraph1": "{siteName} एथेरियम-आधारित स्मार्ट अनुबंधों द्वारा संचालित है, यह सुनिश्चित करता है कि हर बेट, लेन-देन और पुरस्कार पारदर्शी रूप से ऑन-चेन रिकॉर्ड किए जाते हैं।|सभी डेटा और गेम तर्क अपरिवर्तनीय और सत्यापन योग्य हैं, जो वास्तविक निष्पक्षता और ऑडिटबिलिटी की गारंटी देते हैं।|आप सार्वजनिक एक्सप्लोरर के माध्यम से सभी प्लेटफ़ॉर्म लेन-देन को ट्रैक कर सकते हैं जैसे:|Etherscan.io|BscScan.com|TronScan.org",
+				"paragraph2": "",
+				"explorersTitle": "",
+				"guarantee": "यह गारंटी देता है कि कोई हेरफेर या पूर्वाग्रह कभी नहीं हो सकता है।"
+			},
+			"needMoreHelp": {
+				"title": "💬 अधिक मदद चाहिए?",
+				"intro": "हमारी सहायता टीम 24/7 आपके माध्यम से मदद करने के लिए उपलब्ध है:",
+				"contactTitle": "",
+				"liveChat": "💬 लाइव चैट (आपके वॉलेट-कनेक्टेड डैशबोर्ड के अंदर उपलब्ध)"
+			}
+		}
+	},
+	"termsAndConditions": {
+		"title": "⚖️ नियम और शर्तें — {siteName}",
+		"subtitle": "{siteName} के नियम और शर्तें पढ़ें। वॉलेट लॉगिन (Dynamic.xyz), क्रिप्टो जमा, निकासी, निष्पक्ष खेल और जिम्मेदार जुआ नीतियों के बारे में जानें।",
+		"lastUpdated": "अंतिम अपडेट: जनवरी 2025",
+		"meta": {
+			"title": "नियम और शर्तें | {siteName} – क्रिप्टो कैसीनो नियम",
+			"description": "{siteName} के नियम और शर्तें पढ़ें। वॉलेट लॉगिन (Dynamic.xyz), क्रिप्टो जमा, निकासी, निष्पक्ष खेल और जिम्मेदार जुआ नीतियों के बारे में जानें।",
+			"keywords": "{siteName} नियम और शर्तें, {siteName} क्रिप्टो कैसीनो नियम, Dynamic.xyz वॉलेट लॉगिन, {siteName} निकासी नीति, {siteName} निष्पक्ष खेल",
+			"h1": "नियम और शर्तें – {siteName} क्रिप्टो वॉलेट कैसीनो",
+			"ogTitle": "नियम और शर्तें | {siteName} (क्रिप्टो वॉलेट कैसीनो)",
+			"ogDescription": "{siteName} के नियम और शर्तों की समीक्षा करें। Dynamic.xyz वॉलेट लॉगिन, क्रिप्टो जमा, निकासी और प्लेटफ़ॉर्म नियमों को समझें।"
+		},
+		"sections": {
+			"ownership": {
+				"number": "1",
+				"title": "{siteName} स्वामित्व",
+				"clauses": [
+					{
+						"number": "1.1",
+						"content": " {siteName} {siteName} N.V. (\" {siteName} \", \"हम\", \"हमारा\", \"हमारे\") के स्वामित्व और संचालित है।"
+					},
+					{
+						"number": "1.2",
+						"content": " {siteName} एक क्रिप्टो-वॉलेट-ओनली कैसीनो है। सभी जमा, दांव और निकासी उपयोगकर्ताओं के क्रिप्टोकरेंसी वॉलेट के माध्यम से संसाधित की जाती हैं। हम Dynamic.xyz और संगत वॉलेट कनेक्टर्स (जैसे WalletConnect / MetaMask) के माध्यम से वॉलेट लॉगिन का समर्थन करते हैं।"
+					}
+				]
+			},
+			"importantNotice": {
+				"number": "2",
+				"title": "महत्वपूर्ण सूचना",
+				"clauses": [
+					{
+						"number": "2.1",
+						"content": "www.{siteDomain} ('वेबसाइट') पर पंजीकरण या अपना वॉलेट कनेक्ट करके, आप {siteName} N.V. के साथ एक बाध्यकारी समझौते में प्रवेश करते हैं और निम्नलिखित से सहमत होते हैं: (i) ये नियम और शर्तें; (ii) हमारी गोपनीयता नीति; (iii) हमारी कुकी नीति; (iv) हमारी रेफ़रल शर्तें; और (v) हमारी जिम्मेदार गेमिंग नीति।"
+					},
+					{
+						"number": "2.2",
+						"content": "यदि आप इनमें से किसी भी शर्त से सहमत नहीं हैं, तो हमारी वेबसाइट तक न पहुंचें, उसका उपयोग न करें या उस पर पंजीकरण न करें।"
+					},
+					{
+						"number": "2.3",
+						"content": "इन शर्तों को ध्यान से पढ़ें। यदि आप अपने अधिकारों या दायित्वों के बारे में अनिश्चित हैं, तो वेबसाइट का उपयोग करने से पहले अपने क्षेत्राधिकार में एक कानूनी सलाहकार से परामर्श करें।"
+					}
+				]
+			},
+			"generalTerms": {
+				"number": "3",
+				"title": "सामान्य शर्तें",
+				"clauses": [
+					{
+						"number": "3.1",
+						"content": "पंजीकरण या वॉलेट कनेक्शन पर, आप ('उपयोगकर्ता', 'खिलाड़ी', 'आप', या 'आपका') {siteName} के सभी नियमों और नीतियों का पालन करने के लिए सहमत होते हैं।"
+					},
+					{
+						"number": "3.2",
+						"content": "यह समझौता आपके और {siteName} के बीच एक कानूनी रूप से बाध्यकारी अनुबंध है।"
+					},
+					{
+						"number": "3.3",
+						"content": "ये शर्तें उस क्षण प्रभावी हो जाती हैं जब आप अपना वॉलेट कनेक्ट करते हैं और साइट का उपयोग करना शुरू करते हैं।"
+					},
+					{
+						"number": "3.4",
+						"content": " {siteName} इन शर्तों को किसी भी समय संशोधित या अपडेट करने का अधिकार सुरक्षित रखता है। परिवर्तन वेबसाइट पर प्रकाशित किए जाएंगे; निरंतर उपयोग स्वीकृति का गठन करता है।"
+					},
+					{
+						"number": "3.5",
+						"content": "विरोध की स्थिति में, ये शर्तें किसी भी अन्य नियम, प्रचार, या बाहरी सामग्री पर प्रबल होती हैं।"
+					},
+					{
+						"number": "3.6",
+						"content": "इन शर्तों का केवल अंग्रेजी संस्करण कानूनी रूप से बाध्यकारी है। अनुवाद केवल सुविधा के लिए हैं।"
+					}
+				]
+			},
+			"accountSecurity": {
+				"number": "4",
+				"title": "खाता, वॉलेट लॉगिन और सुरक्षा",
+				"walletLogin": {
+					"title": "4.1 वॉलेट लॉगिन (Dynamic.xyz)",
+					"clauses": [
+						{
+							"number": "4.1.1",
+							"content": " {siteName} वॉलेट-आधारित लॉगिन और प्रमाणीकरण के लिए Dynamic.xyz (या अन्य समर्थित कनेक्टर्स) का उपयोग करता है। एक वॉलेट कनेक्ट करके, आप पुष्टि करते हैं कि आप उस वॉलेट के वैध मालिक हैं और {siteName} को उस वॉलेट को आपके खाते के रूप में पहचानने के लिए अधिकृत करते हैं।"
+						},
+						{
+							"number": "4.1.2",
+							"content": "हम कभी भी आपकी निजी कुंजी का अनुरोध नहीं करते हैं। आपको अपने वॉलेट क्रेडेंशियल और डिवाइस को सुरक्षित रखना होगा। {siteName} समझौता किए गए वॉलेट या लीक हुई निजी कुंजी के कारण होने वाले नुकसान के लिए ज़िम्मेदार नहीं है।"
+						}
+					]
+				},
+				"registration": {
+					"title": "4.2 पंजीकरण विवरण",
+					"clauses": [
+						{
+							"number": "4.2.1",
+							"content": "आपसे खाता संचार के लिए संपर्क विवरण (ईमेल, उपयोगकर्ता नाम) प्रदान करने के लिए कहा जा सकता है। आपको सटीक जानकारी प्रदान करनी होगी और उसे अद्यतित रखना होगा।"
+						},
+						{
+							"number": "4.2.2",
+							"content": "आप अपने कनेक्टेड वॉलेट का उपयोग करके की गई सभी कार्रवाइयों के लिए ज़िम्मेदार हैं।"
+						}
+					]
+				},
+				"multipleAccounts": {
+					"title": "4.3 एकाधिक खाते और सुरक्षा",
+					"clauses": [
+						{
+							"number": "4.3.1",
+							"content": "प्रति व्यक्ति केवल एक खाते की अनुमति है। एकाधिक खाते या सीमाओं को दरकिनार करने के प्रयास के परिणामस्वरूप खाता निलंबन और फंड जब्त हो सकता है।"
+						},
+						{
+							"number": "4.3.2",
+							"content": "प्रस्तावित किसी भी प्लेटफ़ॉर्म सुरक्षा सुविधाओं (उदाहरण के लिए, संबंधित सेवाओं के लिए 2FA) को सक्षम करें और अपने स्वयं के वॉलेट को सुरक्षित करें।"
+						},
+						{
+							"number": "4.3.3",
+							"content": "यदि आपको अनधिकृत पहुंच का संदेह है तो तुरंत सहायता को सूचित करें।"
+						}
+					]
+				}
+			},
+			"eligibility": {
+				"number": "5",
+				"title": "पात्रता और उपयोगकर्ता वारंटी",
+				"clauses": [
+					{
+						"number": "5.1",
+						"content": "आप प्रतिनिधित्व करते हैं और वारंट करते हैं कि:|• आप कम से कम 18 वर्ष के हैं (या आपके क्षेत्राधिकार में न्यूनतम कानूनी जुआ आयु)।|• आप कानूनी रूप से ऑनलाइन क्रिप्टो जुआ सेवाओं का उपयोग करने के लिए अधिकृत हैं जहां आप स्थित हैं।|• आप जिस वॉलेट को कनेक्ट करते हैं उसके वैध मालिक हैं।|• आप क्षेत्रीय प्रतिबंधों को दरकिनार करने के लिए वीपीएन या स्थान स्पूफिंग का उपयोग नहीं करेंगे।|• आप अवैध या वाणिज्यिक उद्देश्यों के लिए सेवा का उपयोग नहीं करेंगे।|• आप स्वीकार करते हैं कि क्रिप्टोक्यूरेंसी का मूल्य अस्थिर हो सकता है और आप सभी बाजार जोखिम उठाते हैं।"
+					},
+					{
+						"number": "5.2",
+						"content": "यदि आप इन वारंटी का उल्लंघन करते हैं, तो {siteName} पहुंच को निलंबित या समाप्त कर सकता है और जहां कानून द्वारा अनुमति दी जाती है वहां फंड रोक सकता है।"
+					}
+				]
+			},
+			"restrictedJurisdictions": {
+				"number": "6",
+				"title": "प्रतिबंधित क्षेत्राधिकार",
+				"clauses": [
+					{
+						"number": "6.1",
+						"content": " {siteName} उन क्षेत्राधिकारों के खिलाड़ियों को स्वीकार नहीं करता है जहां क्रिप्टो जुआ निषिद्ध या प्रतिबंधित है। इसमें निम्नलिखित शामिल हैं, लेकिन इन्हीं तक सीमित नहीं हैं:|संयुक्त राज्य अमेरिका (और अमेरिकी क्षेत्र), यूनाइटेड किंगडम, फ्रांस, नीदरलैंड, स्पेन, जर्मनी, ऑस्ट्रेलिया, ऑस्ट्रिया, कोमोरोस, ईरान, उत्तर कोरिया, सूडान, सीरिया, और FATF ब्लैकलिस्ट पर सूचीबद्ध कोई भी क्षेत्राधिकार।"
+					},
+					{
+						"number": "6.2",
+						"content": "वीपीएन या प्रॉक्सी के माध्यम से सहित एक प्रतिबंधित क्षेत्राधिकार से सेवा तक पहुंचने का प्रयास, इन शर्तों का उल्लंघन है और इसके परिणामस्वरूप खाता बंद हो सकता है और फंड जब्त हो सकता है।"
+					}
+				]
+			},
+			"cryptoTransactions": {
+				"number": "7",
+				"title": "क्रिप्टो जमा और निकासी",
+				"cryptoOnly": {
+					"title": "7.1 केवल क्रिप्टो नीति",
+					"clauses": [
+						{
+							"number": "7.1.1",
+							"content": " {siteName} केवल समर्थित क्रिप्टोकरेंसी (उदाहरण के लिए, BTC, ETH, USDT, TRX, BNB) में जमा और निकासी स्वीकार करता है। कोई फिएट, कार्ड, या बैंक-स्थानांतरण जमा स्वीकार नहीं किया जाता है।"
+						},
+						{
+							"number": "7.1.2",
+							"content": "सभी जमा आपके द्वारा नियंत्रित वॉलेट से उत्पन्न होने चाहिए। तीसरे पक्ष के वॉलेट से जमा निषिद्ध है।"
+						}
+					]
+				},
+				"deposits": {
+					"title": "7.2 जमा",
+					"clauses": [
+						{
+							"number": "7.2.1",
+							"content": "आवश्यक ब्लॉकचेन पुष्टिकरण के बाद जमा राशि जमा की जाती है। नेटवर्क (गैस) शुल्क आपके द्वारा देय हैं।"
+						},
+						{
+							"number": "7.2.2",
+							"content": " {siteName} उन जमाओं को अस्वीकार या उलट सकता है जो अवरुद्ध पते या प्रतिबंधित स्रोतों से उत्पन्न होते प्रतीत होते हैं।"
+						}
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 निकासी",
+					"clauses": [
+						{
+							"number": "7.3.1",
+							"content": "निकासी आपके द्वारा प्रदान किए गए वॉलेट पते पर संसाधित की जाती है। {siteName} को प्रसंस्करण से पहले गंतव्य वॉलेट की पुष्टि करने के लिए आपकी आवश्यकता हो सकती है।"
+						},
+						{
+							"number": "7.3.2",
+							"content": "आपके पास निकासी को कवर करने के लिए पर्याप्त स्पष्ट बैलेंस होना चाहिए। संदिग्ध दुरुपयोग या असामान्य गतिविधि की जांच के लिए निकासी में देरी हो सकती है।"
+						}
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 शुल्क वापसी और उलटफेर",
+					"clauses": [
+						{
+							"number": "7.4.1",
+							"content": "क्रिप्टो लेन-देन ऑन-चेन अंतिम होते हैं। यदि {siteName} तीसरे पक्ष के सेवा प्रोवाइडर्स (ऑन-चेन के साथ दुर्लभ) से शुल्क वापसी या उलटफेर के कारण नुकसान उठाता है, तो हम राशि वसूल करने या प्रशासनिक शुल्क लेने का अधिकार सुरक्षित रखते हैं।"
+						}
+					]
+				}
+			},
+			"noKyc": {
+				"number": "8",
+				"title": "कोई नियमित पहचान सत्यापन नहीं (कोई KYC नहीं)",
+				"clauses": [
+					{
+						"number": "8.1",
+						"content": " {siteName} सामान्य खेल की शर्त के रूप में नियमित पहचान सत्यापन (KYC) नहीं करता है। उपयोगकर्ता Dynamic.xyz के माध्यम से एक वॉलेट कनेक्ट कर सकते हैं और पहचान दस्तावेज़ प्रदान किए बिना खेलना शुरू कर सकते हैं।"
+					},
+					{
+						"number": "8.2",
+						"content": "खंड 8.1 के बावजूद, {siteName} को निम्नलिखित के लिए आवश्यक होने पर जानकारी का अनुरोध करने या लेन-देन को निलंबित करने का अधिकार सुरक्षित रखता है:|• सक्षम अधिकारियों से एक कानूनी आदेश का पालन करें;|• धोखाधड़ी, मनी लॉन्ड्रिंग, या अन्य अवैध गतिविधि को रोकें, जांच करें, या ठीक करें; या|• प्लेटफ़ॉर्म की सुरक्षा और अखंडता की रक्षा करें।"
+					},
+					{
+						"number": "8.3",
+						"content": "यदि आप कानूनी रूप से आवश्यक होने पर ऐसी जानकारी प्रदान करने से इनकार करते हैं, तो {siteName} आपके खाते को प्रतिबंधित या बंद कर सकता है और कानून द्वारा अनुमति दी गई सीमा तक निकासी में देरी कर सकता है या उसे रोक सकता है।"
+					}
+				]
+			},
+			"fairPlay": {
+				"number": "9",
+				"title": "निष्पक्ष खेल, निषिद्ध आचरण और सुरक्षा",
+				"clauses": [
+					{
+						"number": "9.1",
+						"content": "आपको नहीं करना चाहिए:|• बॉट्स, स्क्रिप्ट, स्वचालित खेल उपकरण, या किसी भी अनधिकृत सॉफ़्टवेयर का उपयोग करें।|• अन्य खिलाड़ियों के साथ मिलीभगत करें या गेम के परिणामों में हेरफेर करें।|• बोनस या प्रचार का फायदा उठाने के लिए एकाधिक खाते बनाएं।|• ऑन-चेन लेन-देन को उलटने या उसमें छेड़छाड़ करने का प्रयास करें।|• गेम बग या प्लेटफ़ॉर्म कमजोरियों का फायदा उठाएँ।"
+					},
+					{
+						"number": "9.2",
+						"content": "धोखाधड़ी, मिलीभगत, या प्लेटफ़ॉर्म का फायदा उठाने वाले खाते निलंबित, बंद, या बैलेंस जब्त हो सकते हैं।"
+					},
+					{
+						"number": "9.3",
+						"content": " {siteName} प्लेटफ़ॉर्म अखंडता की रक्षा के लिए तकनीकी और व्यवहारिक निगरानी लागू करता है।"
+					}
+				]
+			},
+			"bonuses": {
+				"number": "10",
+				"title": "बोनस और प्रमोशन",
+				"clauses": [
+					{
+						"number": "10.1",
+						"content": "सभी बोनस ऑफ़र और प्रमोशन प्रत्येक ऑफ़र के साथ बताए गए विशिष्ट बोनस शर्तों के अधीन हैं।"
+					},
+					{
+						"number": "10.2",
+						"content": "बोनस का दुरुपयोग (जिसमें एकाधिक खाते या तेजी से बोनस स्विचिंग शामिल है) बोनस से इनकार, उलटफेर, या जब्त और खातों को बंद करने का कारण बन सकता है।"
+					},
+					{
+						"number": "10.3",
+						"content": "बोनस-व्युत्पन्न फंड निकालने से पहले बोनस दांव लगाने की आवश्यकताओं को पूरा किया जाना चाहिए, जैसा कि प्रति प्रचार निर्दिष्ट है।"
+					}
+				]
+			},
+			"gameRules": {
+				"number": "11",
+				"title": "खेलने के नियम और गेम सेटलमेंट",
+				"clauses": [
+					{
+						"number": "11.1",
+						"content": "बेट तभी स्वीकार किए जाते हैं जब आपको ऑन-स्क्रीन पुष्टि मिलती है। अपर्याप्त बैलेंस के साथ लगाए गए बेट रद्द होते हैं।"
+					},
+					{
+						"number": "11.2",
+						"content": "विवादों के मामले में {siteName} के आंतरिक लॉग और ब्लॉकचेन रिकॉर्ड आधिकारिक हैं।"
+					},
+					{
+						"number": "11.3",
+						"content": "यदि कोई इवेंट रद्द, निलंबित या अन्यथा समझौता किया जाता है, तो {siteName} प्रकाशित गेम और बाजार नियमों के अनुसार बेट का निपटान या रद्द कर देगा।"
+					},
+					{
+						"number": "11.4",
+						"content": "स्पष्ट रूप से निष्पक्ष गेम्स के लिए, सत्यापन उपकरण और सर्वर बीज (जहां लागू हो) प्रति गेम उपलब्ध कराए जाते हैं; सर्वर लॉग अंतिम होते हैं।"
+					}
+				]
+			},
+			"errors": {
+				"number": "12",
+				"title": "त्रुटियाँ, रुकावटें और सीमाएँ",
+				"clauses": [
+					{
+						"number": "12.1",
+						"content": " {siteName} निम्नलिखित के कारण होने वाले नुकसान के लिए ज़िम्मेदार नहीं है:|• इंटरनेट या डिवाइस विफलताएं;|• ब्लॉकचेन देरी, फोर्क्स, या नेटवर्क कंजेशन;|• सॉफ्टवेयर बग या तीसरे पक्ष की सेवा आउटेज।"
+					},
+					{
+						"number": "12.2",
+						"content": " {siteName} त्रुटियों या शोषण का पता चलने पर बेट को रद्द करने, बैलेंस को समायोजित करने या लेन-देन को रद्द करने का अधिकार सुरक्षित रखता है।"
+					},
+					{
+						"number": "12.3",
+						"content": "हम उपयोगकर्ताओं और प्लेटफ़ॉर्म की सुरक्षा के लिए दांव लगाने की सीमाएं, अधिकतम जीत और अन्य नियंत्रण सेट कर सकते हैं।"
+					}
+				]
+			},
+			"suspension": {
+				"number": "13",
+				"title": "निलंबन, बंद करना और फंड हैंडलिंग",
+				"clauses": [
+					{
+						"number": "13.1",
+						"content": " {siteName} उन खातों को निलंबित या बंद कर सकता है जहां:|• शर्तों का उल्लंघन होता है;|• दुरुपयोग, धोखाधड़ी या संदिग्ध व्यवहार का पता चलता है;|• कानूनी या नियामक दायित्वों की आवश्यकता है।"
+					},
+					{
+						"number": "13.2",
+						"content": "खाता बंद होने पर, लंबित दांव रद्द किए जा सकते हैं और शेष फंड लागू कानून और प्लेटफ़ॉर्म नीति के अनुसार संभाले जाते हैं।"
+					},
+					{
+						"number": "13.3",
+						"content": " {siteName} विवादों को हल करने, कानूनी अनुरोधों का पालन करने, या नुकसान को ठीक करने के लिए आवश्यक होने पर फंड को रोक सकता है।"
+					}
+				]
+			},
+			"responsibleGaming": {
+				"number": "14",
+				"title": "जिम्मेदार गेमिंग",
+				"clauses": [
+					{
+						"number": "14.1",
+						"content": " {siteName} जिम्मेदार जुआ को बढ़ावा देता है। आप अनुरोध कर सकते हैं:|• आत्म-बहिष्करण;|• जमा सीमा;|• अस्थायी निलंबन।"
+					},
+					{
+						"number": "14.2",
+						"content": "यदि आपको जुए की समस्या का संदेह है, तो {siteName} पर तत्काल सहायता के लिए संपर्क करें।"
+					},
+					{
+						"number": "14.3",
+						"content": "कम उम्र में जुआ (18 वर्ष से कम या स्थानीय कानूनी आयु) सख्ती से निषिद्ध है। नाबालिगों से संबंधित पाए गए खाते बंद कर दिए जाएंगे और फंड नीति के अनुसार संभाले जाएंगे।"
+					}
+				]
+			},
+			"intellectualProperty": {
+				"number": "15",
+				"title": "बौद्धिक संपदा",
+				"clauses": [
+					{
+						"number": "15.1",
+						"content": "{siteName} पर सभी ट्रेडमार्क, लोगो, साइट सामग्री, सॉफ़्टवेयर, और गेम एसेट्स {siteName} के स्वामित्व या लाइसेंस प्राप्त हैं। अनधिकृत प्रतिलिपि, स्क्रैपिंग, या पुनर्वितरण निषिद्ध है।"
+					},
+					{
+						"number": "15.2",
+						"content": "आपको केवल व्यक्तिगत मनोरंजन के लिए सेवा तक पहुंचने के लिए एक सीमित, प्रतिसंहरणीय लाइसेंस दिया जाता है।"
+					}
+				]
+			},
+			"liability": {
+				"number": "16",
+				"title": "दायित्व की सीमा",
+				"clauses": [
+					{
+						"number": "16.1",
+						"content": "कानून द्वारा अनुमत पूर्ण सीमा तक, {siteName} अप्रत्यक्ष, विशेष, परिणामी या आकस्मिक नुकसान के लिए ज़िम्मेदार नहीं होगा, जिसमें खोए हुए लाभ या अवसर लागत शामिल हैं।"
+					},
+					{
+						"number": "16.2",
+						"content": "इन शर्तों से संबंधित किसी भी दावे के लिए हमारी कुल देयता आपके अंतिम जमा के मूल्य या लागू कानून द्वारा निर्दिष्ट राशि से अधिक नहीं होगी।"
+					},
+					{
+						"number": "16.3",
+						"content": "इन शर्तों में कुछ भी लापरवाही के कारण होने वाली मौत या व्यक्तिगत चोट के लिए दायित्व को सीमित नहीं करता है जहां लागू कानून इस तरह के प्रतिबंध को प्रतिबंधित करता है।"
+					}
+				]
+			},
+			"disputes": {
+				"number": "17",
+				"title": "विवाद समाधान और शासी कानून",
+				"clauses": [
+					{
+						"number": "17.1",
+						"content": "विवाद की स्थिति में, {siteName} पर संपर्क करें। हमारा लक्ष्य शिकायतों को जल्दी हल करना है; यदि आवश्यक हो तो प्रबंधन को बढ़ाएँ।"
+					}
+				]
+			},
+			"amendments": {
+				"number": "18",
+				"title": "संशोधन",
+				"clauses": [
+					{
+						"number": "18.1",
+						"content": " {siteName} इन शर्तों को किसी भी समय संशोधित कर सकता है। अपडेट की गई शर्तें वेबसाइट पर पोस्ट की जाएंगी। निरंतर उपयोग स्वीकृति का गठन करता है।"
+					}
+				]
+			},
+			"miscellaneous": {
+				"number": "19",
+				"title": "विविध",
+				"clauses": [
+					{
+						"number": "19.1",
+						"content": "ये शर्तें सेवा के संबंध में आपके और {siteName} के बीच पूरे समझौते का गठन करती हैं।"
+					},
+					{
+						"number": "19.2",
+						"content": "यदि कोई खंड अप्रवर्तनीय पाया जाता है, तो इसे आवश्यक न्यूनतम सीमा तक संशोधित किया जाएगा और शेष प्रावधान प्रभावी रहेंगे।"
+					},
+					{
+						"number": "19.3",
+						"content": "आप इन शर्तों के तहत अपने अधिकारों को असाइन नहीं कर सकते हैं। {siteName} अधिकार और दायित्व असाइन या उप-अनुबंध कर सकता है।"
+					}
+				]
+			},
+			"contact": {
+				"number": "20",
+				"title": "संपर्क",
+				"content": "समर्थन, शिकायतों, या कानूनी नोटिस के लिए:",
+				"link": "🌐 https://{siteDomain}"
 			}
 		}
 	}

@@ -2006,7 +2006,7 @@
 		"sections": {
 			"ownership": {
 				"number": "1",
-				"title": "HYPERBETZ.GAMES OWNERSHIP",
+				"title": "{siteName} OWNERSHIP",
 				"clauses": [
 					{
 						"number": "1.1",

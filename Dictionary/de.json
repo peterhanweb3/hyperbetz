@@ -17,10 +17,10 @@
 		"vip": "VIP",
 		"profile": "Profil",
 		"statistics": "Statistiken",
-		"wallet": "Ein-/Auszahlen",
+		"wallet": "Einzahlen/Auszahlen",
 		"cashier": "Kasse",
 		"winLoss": "Gewinn/Verlust",
-		"affiliate": "Partnerprogramm",
+		"affiliate": "Empfehlungsbonus",
 		"logout": "Abmelden",
 		"balance": "Guthaben",
 		"turnoverBonus": "Umsatzbonus"
@@ -29,13 +29,13 @@
 		"home": "Startseite",
 		"games": "Spiele",
 		"profile": "Profil",
-		"wallet": "Geldbörse",
+		"wallet": "Wallet",
 		"settings": "Einstellungen",
 		"promotions": "Aktionen",
-		"affiliate": "Partnerprogramm",
+		"affiliate": "Empfehlungsbonus",
+		"bonus": "Umsatzbonus",
 		"providers": "Anbieter",
 		"lobby": "Lobby",
-		"bonus": "Umsatzbonus",
 		"about": "Über uns"
 	},
 	"profile": {
@@ -49,44 +49,44 @@
 		"totalWithdrawals": "Gesamtauszahlungen",
 		"walletAddress": "Wallet-Adresse",
 		"copySuccess": "Wallet-Adresse in die Zwischenablage kopiert!",
-		"copyFailed": "Kopieren der Wallet-Adresse fehlgeschlagen",
+		"copyFailed": "Fehler beim Kopieren der Wallet-Adresse",
 		"notConnected": "Nicht verbunden",
 		"myProfile": "Mein Profil",
 		"history": {
 			"title": "Verlauf"
 		},
 		"logout": "Abmelden",
-		"pendingRegistration": "Registrierung ausstehend",
-		"noEmailProvided": "Keine E-Mail-Adresse angegeben",
+		"pendingRegistration": "Ausstehende Registrierung",
+		"noEmailProvided": "Keine E-Mail angegeben",
 		"balanceOverview": "Guthabenübersicht",
 		"gettingStarted": "Erste Schritte",
-		"verifyEmail": "Bestätige deine E-Mail",
+		"verifyEmail": "Bestätigen Sie Ihre E-Mail",
 		"completeEmailVerification": "E-Mail-Bestätigung abschließen",
-		"verifyPhone": "Bestätige deine Telefonnummer",
+		"verifyPhone": "Bestätigen Sie Ihre Telefonnummer",
 		"addPhoneVerification": "Telefonbestätigung hinzufügen",
 		"firstDeposit": "Erste Einzahlung",
-		"makeFirstDeposit": "Tätige deine erste Einzahlung",
+		"makeFirstDeposit": "Machen Sie Ihre erste Einzahlung",
 		"placeBetOrTrade": "Wette platzieren / Handel tätigen",
-		"startFirstGame": "Starte dein erstes Spiel",
-		"recentActivity": "Letzte Aktivitäten",
+		"startFirstGame": "Starten Sie Ihr erstes Spiel",
+		"recentActivity": "Letzte Aktivität",
 		"transactionHistory": "Transaktionsverlauf",
-		"activityGameWinDiceRoll": "Spielgewinn - Würfelwurf",
+		"activityGameWinDiceRoll": "Spielgewinn - Würfelspiel",
 		"activityGameLossBlackjack": "Spielverlust - Blackjack",
 		"twoHoursAgo": "Vor 2 Stunden",
 		"oneDayAgo": "Vor 1 Tag",
 		"twoDaysAgo": "Vor 2 Tagen",
-		"deposit": "Einzahlung",
-		"loggedOutTitle": "Oops! Du bist abgemeldet",
-		"loggedOutSubtitle": "Bitte melde dich an, um dein Profil anzuzeigen",
+		"deposit": "Einzahlen",
+		"loggedOutTitle": "Ups! Sie sind abgemeldet",
+		"loggedOutSubtitle": "Bitte melden Sie sich an, um Ihr Profil anzuzeigen",
 		"goHome": "Zur Startseite",
 		"withdrawal": "Auszahlung",
 		"transactions": {
 			"title": "Transaktionsverlauf",
-			"trackDepositsWithdrawals": "Verfolge deine Ein- und Auszahlungen",
+			"trackDepositsWithdrawals": "Verfolgen Sie Ihre Ein- und Auszahlungen",
 			"filters": "Filter",
 			"refresh": "Aktualisieren",
 			"advancedFilters": "Erweiterte Filter",
-			"searchTransactionComingSoon": "Transaktion suchen (in Kürze verfügbar)",
+			"searchTransactionComingSoon": "Transaktion suchen (Kommt bald)",
 			"searchPlaceholderDisabled": "Suchfunktion wird auf API-Ebene implementiert...",
 			"dateRange": "Datumsbereich",
 			"selectDateRange": "Datumsbereich auswählen",
@@ -94,14 +94,14 @@
 			"last7Days": "Letzte 7 Tage",
 			"last30Days": "Letzte 30 Tage",
 			"last90Days": "Letzte 90 Tage",
-			"thisMonth": "Dieser Monat",
-			"lastMonth": "Letzter Monat",
+			"thisMonth": "Diesen Monat",
+			"lastMonth": "Letzten Monat",
 			"customRange": "Benutzerdefinierter Bereich",
 			"fromDate": "Von Datum",
 			"toDate": "Bis Datum",
 			"transactionStatus": "Transaktionsstatus",
-			"allStatuses": "Alle Status",
-			"success": "Erfolgreich",
+			"allStatuses": "Alle Stati",
+			"success": "Erfolg",
 			"pending": "Ausstehend",
 			"rejected": "Abgelehnt",
 			"clearAll": "Alle löschen",
@@ -110,7 +110,7 @@
 			"activeFilters": "Aktive Filter:",
 			"statusLabel": "Status",
 			"dateLabel": "Datum",
-			"statsTotalTransactions": "{total} Transaktionen insgesamt",
+			"statsTotalTransactions": "{total} Gesamttransaktionen",
 			"pageOf": "Seite {current} von {total}",
 			"live": "Live",
 			"tabs": {
@@ -121,9 +121,9 @@
 			"errorLoadingTransactions": "Fehler beim Laden der Transaktionen",
 			"tryAgain": "Erneut versuchen",
 			"noTransactionsFound": "Keine Transaktionen gefunden",
-			"noTransactionsAvailableSelectedPeriod": "Für den ausgewählten Zeitraum sind keine Transaktionen verfügbar.",
-			"noDepositsFoundSelectedPeriod": "Für den ausgewählten Zeitraum wurden keine Einzahlungen gefunden.",
-			"noWithdrawalsFoundSelectedPeriod": "Für den ausgewählten Zeitraum wurden keine Auszahlungen gefunden.",
+			"noTransactionsAvailableSelectedPeriod": "Keine Transaktionen für den ausgewählten Zeitraum verfügbar.",
+			"noDepositsFoundSelectedPeriod": "Keine Einzahlungen für den ausgewählten Zeitraum gefunden.",
+			"noWithdrawalsFoundSelectedPeriod": "Keine Auszahlungen für den ausgewählten Zeitraum gefunden.",
 			"show": "Anzeigen",
 			"ofTransactions": "von {count} Transaktionen",
 			"showingRangeOfTotal": "Zeige {from}-{to} von {total}",
@@ -131,7 +131,7 @@
 		},
 		"betHistory": {
 			"title": "Wettverlauf",
-			"trackBetsResults": "Verfolge deine Spielwetten und Ergebnisse",
+			"trackBetsResults": "Verfolgen Sie Ihre Spielwetten und Ergebnisse",
 			"filters": "Filter",
 			"refresh": "Aktualisieren",
 			"advancedFilters": "Erweiterte Filter",
@@ -141,18 +141,18 @@
 			"last7Days": "Letzte 7 Tage",
 			"last30Days": "Letzte 30 Tage",
 			"last90Days": "Letzte 90 Tage",
-			"thisMonth": "Dieser Monat",
-			"lastMonth": "Letzter Monat",
+			"thisMonth": "Diesen Monat",
+			"lastMonth": "Letzten Monat",
 			"customRange": "Benutzerdefinierter Bereich",
 			"fromDate": "Von Datum",
 			"toDate": "Bis Datum",
 			"provider": "Anbieter",
 			"allProviders": "Alle Anbieter",
 			"status": "Status",
-			"allStatuses": "Alle Status",
+			"allStatuses": "Alle Stati",
 			"outstanding": "Ausstehend",
-			"win": "Gewinn",
-			"lose": "Verlust",
+			"win": "Gewonnen",
+			"lose": "Verloren",
 			"draw": "Unentschieden",
 			"void": "Ungültig",
 			"bonusWin": "Bonusgewinn",
@@ -163,19 +163,19 @@
 			"statusLabel": "Status",
 			"providerLabel": "Anbieter",
 			"dateLabel": "Datum",
-			"totalBets": "Gesamte Wetten",
-			"totalProfitLoss": "Gesamtgewinn/-verlust",
+			"totalBets": "Gesamtwetten",
+			"totalProfitLoss": "Gesamtgewinn/Verlust",
 			"pageOf": "Seite {current} von {total}",
 			"live": "Live",
 			"errorLoadingBets": "Fehler beim Laden des Wettverlaufs",
-			"failedToLoadBetHistory": "Laden des Wettverlaufs fehlgeschlagen. Bitte versuche es erneut.",
+			"failedToLoadBetHistory": "Fehler beim Laden des Wettverlaufs. Bitte versuchen Sie es erneut.",
 			"tryAgain": "Erneut versuchen",
 			"noBetsFound": "Keine Wetten gefunden",
-			"noBetsFoundSelectedPeriod": "Für den ausgewählten Zeitraum und die Filter wurde kein Wettverlauf gefunden.",
+			"noBetsFoundSelectedPeriod": "Kein Wettverlauf für den ausgewählten Zeitraum und die Filter gefunden.",
 			"show": "Anzeigen",
 			"ofBets": "von {count} Wetten",
 			"showingRangeOfTotal": "Zeige {from}-{to} von {total}",
-			"totalBet": "Gesamteinsatz",
+			"totalBet": "Gesamtwette",
 			"totalWin": "Gesamtgewinn",
 			"net": "Netto",
 			"tableHeaders": {
@@ -189,13 +189,13 @@
 				"hideAmounts": "Beträge ausblenden",
 				"showAmounts": "Beträge anzeigen",
 				"gameType": "Spieltyp",
-				"vendor": "Hersteller",
-				"lastUpdate": "Letzte Aktualisierung",
+				"vendor": "Anbieter",
+				"lastUpdate": "Letztes Update",
 				"netResult": "Nettoergebnis",
 				"betId": "Wett-ID"
 			},
 			"errorLoading": "Fehler beim Laden",
-			"noBetsFoundDescription": "Beginne zu spielen, um deinen Wettverlauf hier zu sehen.",
+			"noBetsFoundDescription": "Starten Sie Spiele, um Ihren Wettverlauf hier zu sehen.",
 			"betHistory": "Wettverlauf",
 			"hideAmounts": "Beträge ausblenden",
 			"showAmounts": "Beträge anzeigen",
@@ -206,11 +206,11 @@
 			"payout": "Auszahlung",
 			"player": "Spieler",
 			"gameType": "Spieltyp",
-			"vendor": "Hersteller",
-			"lastUpdate": "Letzte Aktualisierung",
+			"vendor": "Anbieter",
+			"lastUpdate": "Letztes Update",
 			"netResult": "Nettoergebnis",
-			"totalWagered": "Insgesamt gewettet",
-			"totalWon": "Insgesamt gewonnen",
+			"totalWagered": "Gesamteinsatz",
+			"totalWon": "Gesamtgewonnen",
 			"netProfit": "Nettogewinn",
 			"winRate": "Gewinnrate",
 			"showingResults": "Zeige {start}-{end} von {total} Ergebnissen",
@@ -222,39 +222,39 @@
 	},
 	"chat": {
 		"title": "Live-Chat",
-		"placeholder": "Schreibe deine Nachricht...",
+		"placeholder": "Geben Sie Ihre Nachricht ein...",
 		"send": "Senden",
 		"input": {
-			"replyPlaceholder": "Antworte {username}..."
+			"replyPlaceholder": "Antworten an {username}..."
 		},
 		"reply": {
-			"replyingTo": "Antwort an {username}",
+			"replyingTo": "Antwortet an {username}",
 			"types": {
-				"win": "{amount} {currency} gewonnen",
+				"win": "Gewonnen {amount} {currency}",
 				"gif": "GIF-Nachricht",
 				"image": "Bild",
 				"default": "Nachricht"
 			},
 			"preview": {
-				"winIn": "{amount} {currency} in {game} gewonnen",
+				"winIn": "Gewonnen {amount} {currency} in {game}",
 				"gifAlt": "GIF-Vorschau",
 				"imageAlt": "Bildvorschau",
 				"emoji": "Emoji-Nachricht",
-				"rain": "Regen: {amount} {currency}",
+				"rain": "Rain: {amount} {currency}",
 				"system": "System: {content}"
 			}
 		},
 		"imageDialog": {
-			"title": "Teile dein Bild 🎰",
-			"description": "Bereit, es im Chatraum zu zeigen?",
+			"title": "Teilen Sie Ihr Bild 🎰",
+			"description": "Bereit für den Chatraum?",
 			"previewLabel": "Vorschau",
 			"statusReady": "Bereit zum Teilen",
-			"roomLabel": "🎰 Casino-Chat",
-			"shareNotice": "Dein Bild wird mit allen Spielern im Chatraum geteilt",
+			"roomLabel": "🎰 Casino Chat",
+			"shareNotice": "Ihr Bild wird mit allen Spielern im Chatraum geteilt",
 			"closeAria": "Dialog schließen",
-			"cancelAria": "Bildupload abbrechen",
-			"sendAria": "Bild an den Chat senden",
-			"send": "An den Chat senden"
+			"cancelAria": "Bild-Upload abbrechen",
+			"sendAria": "Bild an Chat senden",
+			"send": "An Chat senden"
 		},
 		"picker": {
 			"searchEmojis": "Emojis suchen...",
@@ -266,70 +266,70 @@
 			"loadingEmojis": "Emojis werden geladen...",
 			"loadingGifs": "GIFs werden geladen...",
 			"retry": "Erneut versuchen",
-			"recent": "Kürzlich",
+			"recent": "Zuletzt",
 			"noEmojis": "Keine Emojis gefunden",
 			"noGifs": "Keine GIFs gefunden",
-			"tryDifferent": "Versuche einen anderen Suchbegriff",
+			"tryDifferent": "Versuchen Sie einen anderen Suchbegriff",
 			"gifCategories": {
 				"trending": "Im Trend",
 				"reactions": "Reaktionen",
-				"gaming": "Spielen",
-				"casino": "Kasino",
+				"gaming": "Gaming",
+				"casino": "Casino",
 				"celebration": "Feier",
 				"sports": "Sport"
 			},
 			"searchResults": "Suchergebnisse",
-			"availableToTag": "Verfügbare Benutzer zum Markieren 🎯",
-			"clickOrTab": "Klicken oder Tab zum Auswählen",
+			"availableToTag": "Verfügbare Benutzer zum Taggen 🎯",
+			"clickOrTab": "Klicken oder Tab drücken zum Auswählen",
 			"noUsers": "Keine Benutzer gefunden",
-			"noUsersMatching": "Keine passenden Benutzer",
-			"startTyping": "Beginne zu tippen, um zu suchen",
-			"typeAt": "Tippe",
-			"toSeeSuggestions": "um Vorschläge zu sehen 🎰",
+			"noUsersMatching": "Keine Benutzer passend zu",
+			"startTyping": "Beginnen Sie mit der Eingabe, um zu suchen",
+			"typeAt": "Geben Sie",
+			"toSeeSuggestions": "ein, um Vorschläge zu sehen 🎰",
 			"errors": {
-				"emojisLoad": "Laden der Emojis fehlgeschlagen",
-				"emojisSearch": "Suche nach Emojis fehlgeschlagen",
-				"gifsLoad": "Laden der GIFs fehlgeschlagen"
+				"emojisLoad": "Fehler beim Laden der Emojis",
+				"emojisSearch": "Fehler beim Suchen der Emojis",
+				"gifsLoad": "Fehler beim Laden der GIFs"
 			}
 		},
 		"messages": {
 			"emptyTitle": "Noch keine Nachrichten...",
-			"emptySubtitle": "Beginne das Gespräch und gewinne groß! 🎰",
+			"emptySubtitle": "Starten Sie die Konversation und gewinnen Sie groß! 🎰",
 			"loadingHistory": "Chat-Verlauf wird geladen...",
-			"loadingHistorySubtitle": "Neueste Nachrichten abrufen 📜",
-			"historyError": "Fehler beim Laden der Chat-Verlauf"
+			"loadingHistorySubtitle": "Letzte Nachrichten werden abgerufen 📜",
+			"historyError": "Fehler beim Laden des Chat-Verlaufs"
 		},
 		"message": {
-			"you": "Du",
+			"you": "Sie",
 			"winTitle": "Großer Gewinn in \"{game}\"! 🎰",
 			"gifAlt": "GIF",
 			"imageAlt": "Hochgeladenes Bild",
 			"rainTitle": "Geldregen! 🌧️💰",
 			"recipients": "→ {count} {count, plural, one {Empfänger} other {Empfänger}}",
-			"eachTo": "Jeweils {amount} {currency} an: {list}",
+			"eachTo": "{amount} {currency} jeweils an: {list}",
 			"replyCount": "{count} {count, plural, one {Antwort} other {Antworten}}",
 			"loadingHistory": "Chat-Verlauf wird geladen..."
 		},
 		"system": {
-			"slashDisabled": "Slash-Befehle sind vorübergehend deaktiviert. Bitte verwende normale Nachrichten.",
-			"rateLimit": "Ratenlimit überschritten. Bitte warte {seconds} Sekunden, bevor du eine weitere Nachricht sendest.",
-			"cannotTagSelf": "Du kannst dich nicht selbst in Nachrichten markieren.",
+			"slashDisabled": "Slash-Befehle sind vorübergehend deaktiviert. Bitte verwenden Sie reguläre Nachrichten.",
+			"rateLimit": "Ratenbegrenzung überschritten. Bitte warten Sie {seconds} Sekunden, bevor Sie eine weitere Nachricht senden.",
+			"cannotTagSelf": "Sie können sich selbst in Nachrichten nicht markieren.",
 			"processingImage": "Bild wird verarbeitet...",
-			"failedUploadPrefix": "Hochladen des Bildes fehlgeschlagen: {message}",
+			"failedUploadPrefix": "Fehler beim Hochladen des Bildes: {message}",
 			"unknownError": "Unbekannter Fehler"
 		}
 	},
 	"sidebar": {
-		"quest": "SUCHE",
-		"spin": "DREHEN",
-		"deposit": "EINZAHLEN",
-		"withdraw": "AUSZAHLEN",
+		"quest": "QUEST",
+		"spin": "SPIN",
+		"deposit": "EINZAHLUNG",
+		"withdraw": "AUSZAHLUNG",
 		"playOnTelegram": "Auf Telegram spielen",
 		"dailyBonus": "Täglicher Bonus",
 		"navigation": "Navigation",
 		"games": "Spiele",
 		"providers": "Anbieter",
-		"trendingNow": "Jetzt im Trend",
+		"trendingNow": "Im Trend",
 		"allProviders": "Alle Anbieter",
 		"allTopProviders": "Alle Top-Anbieter",
 		"hotBadge": "Heiß"
@@ -339,11 +339,11 @@
 		"subtitle": "Nach Name, Anbieter oder Kategorie suchen",
 		"placeholder": "Spiele, Anbieter, Kategorien suchen...",
 		"clear": "Löschen",
-		"recent": "Kürzlich:",
+		"recent": "Zuletzt:",
 		"popular": "Beliebt:",
-		"favoritesTry": "Du könntest versuchen — Deine Favoriten",
-		"hotPicks": "Heiße Tipps",
-		"resultsCount": "{count} {count, plural, one {Spiel} other {Spiele}} gefunden",
+		"favoritesTry": "Sie können versuchen — Ihre Favoriten",
+		"hotPicks": "Top-Auswahl",
+		"resultsCount": "Es wurden {count} {count, plural, one {Spiel} other {Spiele}} gefunden",
 		"noResults": "Keine Ergebnisse",
 		"filterApplied": "Gefiltert nach {count} {count, plural, one {Anbieter} other {Anbietern}}",
 		"suggestions": {
@@ -358,12 +358,12 @@
 			"providers": "Anbieter"
 		},
 		"results": {
-			"found": "{games} Spiele, {categories} Kategorien und {providers} Anbieter gefunden"
+			"found": "Es wurden {games} Spiele, {categories} Kategorien und {providers} Anbieter gefunden"
 		},
 		"gameTypes": {
 			"blackjack": "Blackjack",
 			"roulette": "Roulette",
-			"crash": "Absturz"
+			"crash": "Crash"
 		}
 	},
 	"query": {
@@ -397,7 +397,7 @@
 		"loadMore": "Mehr laden"
 	},
 	"commonExtra": {
-		"connecting": "Verbinde...",
+		"connecting": "Verbinden...",
 		"offline": "Offline",
 		"online": "Online",
 		"clear": "Löschen"
@@ -406,20 +406,20 @@
 		"topProviders": "Top-Spieleanbieter"
 	},
 	"lobby": {
-		"yourFavorites": "Deine Favoriten",
+		"yourFavorites": "Ihre Favoriten",
 		"featuredCasinoGames": "Empfohlene Casinospiele",
-		"hotPicks": "Heiße Tipps",
-		"slots": "Spielautomaten",
+		"hotPicks": "Top-Auswahl",
+		"slots": "Slots",
 		"sports": "Sport",
 		"realTimeScoreboard": "Echtzeit-Anzeigetafel"
 	},
 	"affiliate": {
-		"title": "Partnerprogramm",
-		"loginPromptTitle": "Empfehlungsprogramm",
-		"loginPromptSubtitle": "Melde dich an, um deine Empfehlungsstatistiken, Boni und Belohnungen einzusehen.",
+		"title": "Empfehlungsbonus-Programm",
+		"loginPromptTitle": "Empfehlungsbonus-Programm",
+		"loginPromptSubtitle": "Melden Sie sich an, um Ihre Empfehlungsstatistiken und Boni anzuzeigen und Prämien einzufordern.",
 		"goHome": "Zur Startseite",
 		"tabs": {
-			"dashboard": "Armaturenbrett",
+			"dashboard": "Dashboard",
 			"rates": "Provisionssätze",
 			"calculator": "Rechner"
 		},
@@ -427,47 +427,47 @@
 		"refreshing": "Wird aktualisiert...",
 		"refreshAllSuccess": "Alle Daten erfolgreich aktualisiert!",
 		"refreshPartial": "Teilweise aktualisiert: {success}/{total} Abschnitte aktualisiert",
-		"refreshFailed": "Aktualisierung der Daten fehlgeschlagen. Bitte versuche es erneut.",
+		"refreshFailed": "Fehler beim Aktualisieren der Daten. Bitte versuchen Sie es erneut.",
 		"dashboard": {
-			"title": "Partner-Dashboard",
-			"subtitle": "Verfolge deine Empfehlungen, Einnahmen und Provisionsleistungen",
+			"title": "Affiliate-Dashboard",
+			"subtitle": "Verfolgen Sie Ihre Empfehlungen, Einnahmen und Provisionsleistung",
 			"performanceOverview": "Leistungsübersicht",
-			"referralManagement": "Empfehlungsmanagement",
+			"referralManagement": "Empfehlungsverwaltung",
 			"termsAndCommission": "Bedingungen & Provisionsstruktur",
 			"unclaimedEarnings": "Nicht beanspruchte Einnahmen",
 			"claim": "Beanspruchen",
 			"claiming": "Wird beansprucht...",
-			"totalIncome": "Gesamteinkommen",
+			"totalIncome": "Gesamteinnahmen",
+			"claimButtonTitle": "Bonus beanspruchen",
 			"totalReferrals": "Gesamte Empfehlungen",
 			"usersUnit": "Benutzer",
-			"yourReferralLinks": "Deine Empfehlungslinks",
-			"referralLinksSubtitle": "Teile diese Links, um neue Benutzer zu werben und Provisionen zu verdienen",
-			"completeReferralLink": "Vollständiger Empfehlungslink",
-			"fullReferralPlaceholder": "Vollständiger Empfehlungslink wird hier angezeigt",
-			"fullReferralHelp": "Direkter Link, auf den Benutzer klicken können, um sich mit deinem Empfehlungscode zu registrieren",
+			"yourReferralLinks": "Ihre Empfehlungs-Links",
+			"referralLinksSubtitle": "Teilen Sie diese Links, um neue Benutzer zu werben und Provisionen zu verdienen",
+			"completeReferralLink": "Vollständiger Empfehlungs-Link",
+			"fullReferralPlaceholder": "Der vollständige Empfehlungs-Link wird hier angezeigt",
+			"fullReferralHelp": "Direkter Link, auf den Benutzer klicken können, um sich mit Ihrem Empfehlungscode zu registrieren",
 			"referralCodeOnly": "Nur Empfehlungscode",
-			"yourReferralId": "Deine Empfehlungs-ID",
-			"referralIdHelp": "Teile diesen Code, damit Benutzer ihn bei der Registrierung manuell eingeben können",
-			"copyFullSuccess": "Vollständiger Empfehlungslink in die Zwischenablage kopiert!",
-			"copyIdSuccess": "Empfehlungs-ID in die Zwischenablage kopiert!",
-			"claimButtonTitle": "Bonus beanspruchen"
+			"yourReferralId": "Ihre Empfehlungs-ID",
+			"referralIdHelp": "Teilen Sie diesen Code, damit Benutzer ihn manuell während der Registrierung eingeben können",
+			"copyFullSuccess": "Vollständiger Empfehlungs-Link in die Zwischenablage kopiert!",
+			"copyIdSuccess": "Empfehlungs-ID in die Zwischenablage kopiert!"
 		},
 		"referrals": {
 			"title": "Meine Empfehlungen",
-			"subtitle": "Verfolge und verwalte alle Benutzer, die über deine Partnerlinks geworben wurden",
-			"totalReferrals": "Empfehlungen insgesamt",
-			"monitorHelp": "Überwache die Aktivitäten, Einzahlungen und Spielmuster deiner Empfehlungen",
+			"subtitle": "Verfolgen und verwalten Sie alle Benutzer, die über Ihre Affiliate-Links geworben wurden",
+			"totalReferrals": "Gesamte Empfehlungen",
+			"monitorHelp": "Überwachen Sie die Aktivität, Einzahlungen und Spielmuster Ihrer Empfehlungen",
 			"sort": {
 				"placeholder": "Sortieren nach...",
 				"nicknameAsc": "Spitzname (A-Z)",
 				"nicknameDesc": "Spitzname (Z-A)",
-				"lastLogin": "Letzter Login",
+				"lastLogin": "Letzte Anmeldung",
 				"unclaimedAmount": "Nicht beanspruchter Betrag"
 			},
 			"table": {
 				"nickname": "Spitzname",
 				"totalWager": "Gesamteinsatz",
-				"lastLogin": "Letzter Login",
+				"lastLogin": "Letzte Anmeldung",
 				"registered": "Registriert",
 				"lastDeposit": "Letzte Einzahlung",
 				"depositDate": "Einzahlungsdatum",
@@ -475,116 +475,286 @@
 			},
 			"empty": {
 				"title": "Keine Empfehlungen gefunden",
-				"subtitle": "Beginne, Benutzer zu werben, um sie hier zu sehen."
+				"subtitle": "Beginnen Sie mit der Empfehlung von Benutzern, um sie hier zu sehen."
 			},
 			"pagination": {
 				"showing": "Zeige {from} bis {to} von {total} Ergebnissen",
-				"prev": "Zurück",
-				"next": "Weiter"
+				"prev": "Vorherige",
+				"next": "Nächste"
 			}
 		},
 		"rates": {
-			"title": "Provisionssatzstruktur",
-			"subtitle": "Gewinnprozentsätze nach Stufenlevel und Spielkategorie",
-			"howItWorks": {
-				"title": "Wie Provisionsstufen funktionieren",
-				"body": "Deine Provisionsstufe wird durch den täglichen Gesamteinsatz deiner Empfehlungen bestimmt. Höhere Stufen bieten bessere Provisionssätze für alle Spieltypen."
+			"title": "Provisionsstruktur",
+			"subtitle": "Prozentsätze der Einnahmen nach Stufe und Spielkategorie",
+			"overview": {
+				"title": "Übersicht",
+				"body": "Der Empfehlungsbonus belohnt Affiliates basierend auf dem Wetteinsatz von geworbenen Spielern in Slots, Live Casino, Sportwetten und Lotterie. Provisionen werden alle 24 Stunden berechnet, wobei die Einnahmen auf verschiedenen Umsatzstufen basieren."
 			},
 			"calculation": {
-				"title": "Wie Provisionen berechnet werden",
-				"desc": "Provisionen werden alle 24 Stunden basierend auf den Gesamteinsätzen der geworbenen Spieler berechnet. Beispiele:",
+				"title": "So werden Provisionen berechnet",
+				"desc": "Provisionen werden alle 24 Stunden basierend auf den Gesamteinsätzen der geworbenen Spieler berechnet. \nBeispiele:",
 				"exampleTitle": "Stufe {tier}:",
-				"wagerIn": "Einsatz von {amount} in {gameType}"
+				"wagerIn": "Einsatz {amount} in {gameType}"
 			},
 			"table": {
-				"tierLevel": "Stufenlevel",
+				"tierLevel": "Stufe",
 				"wagerRange": "Einsatzbereich",
-				"slots": "Spielautomaten",
-				"liveCasino": "Live-Casino",
+				"slots": "Slots",
+				"liveCasino": "Live Casino",
 				"sports": "Sport",
 				"tierPrefix": "STUFE",
-				"commissionLevel": "Provisionslevel",
+				"commissionLevel": "Provisionsstufe",
 				"dailyWager": "Tägliches Einsatzvolumen"
 			},
 			"claim": {
-				"title": "Beanspruchen und Abheben",
+				"title": "Beanspruchung und Auszahlung",
 				"points": {
-					"0": "Provisionen sind zur Abhebung verfügbar, sobald sie berechnet wurden.",
-					"1": "Es gibt kein Verfallsdatum für nicht beanspruchte Provisionen – sie sammeln sich an, bis sie beansprucht werden.",
-					"2": "Abhebungen folgen den Standardregeln der Plattform, wie z.B. Mindestlimits und Bearbeitungszeiten."
+					"0": "Provisionen stehen zur Auszahlung zur Verfügung, sobald sie berechnet wurden.",
+					"1": "Es gibt kein Ablaufdatum für nicht beanspruchte Provisionen – sie sammeln sich an, bis sie beansprucht werden.",
+					"2": "Auszahlungen folgen den Standardregeln der Plattform, wie Mindestgrenzen und Bearbeitungszeiten."
 				}
 			},
 			"system": {
-				"title": "Systemzeit und Betriebsabläufe",
+				"title": "Systemzeit und Operationen",
 				"dailyTimeframeLabel": "Täglicher Zeitrahmen:",
 				"dailyTimeframeValue": "00:00 UTC bis 23:59 UTC (jeden Tag).",
 				"claimDailyLabel": "Täglich beanspruchen:",
-				"claimDailyValue": "Täglich um 14:00 UTC verfügbar (Deine lokale Zeit: {local}).",
-				"note": "Hinweis: Obwohl wir mit Anbietern aus verschiedenen Zeitzonen arbeiten, folgen alle Berechnungen der UTC-Zeit, um Konsistenz zu gewährleisten und Verwirrung zu vermeiden."
+				"claimDailyValue": "Täglich um 14:00 UTC verfügbar (Ihre Ortszeit: {local}).",
+				"note": "Hinweis: Obwohl wir mit Anbietern aus verschiedenen Zeitzonen zusammenarbeiten, folgen alle Berechnungen UTC, um Konsistenz zu gewährleisten und Verwirrung zu vermeiden."
 			},
 			"amendments": {
 				"title": "Änderungen",
-				"body": "Wir können diese Bedingungen jederzeit aktualisieren. Änderungen treten sofort nach Veröffentlichung in Kraft, und die fortgesetzte Teilnahme bedeutet, dass du die neuen Bedingungen akzeptierst."
+				"body": "Wir können diese Bedingungen jederzeit aktualisieren. Änderungen treten sofort nach Veröffentlichung in Kraft, und die fortgesetzte Teilnahme bedeutet, dass Sie die neuen Bedingungen akzeptieren."
 			},
 			"footer": {
-				"schedule": "Provisionszeitplan:",
+				"schedule": "Provisionsplan:",
 				"availableDaily": "Täglich verfügbar um",
-				"localTimeLabel": "(Deine lokale Zeit: {time})"
-			},
-			"overview": {
-				"title": "Übersicht",
-				"body": "Das Affiliate-Programm belohnt Partner basierend auf dem Wettumsatz von geworbenen Spielern in Slots, Live-Casino, Sportwetten und Lotterie. Provisionen werden alle 24 Stunden berechnet und basieren auf unterschiedlichen Umsatztarifen."
+				"localTimeLabel": "(Ihre Ortszeit: {time})"
 			}
 		},
 		"calculator": {
 			"title": "Einnahmenrechner",
-			"subtitle": "Schätze deine Provisionseinnahmen basierend auf den Wetteinsätzen deiner Empfehlungen",
+			"subtitle": "Schätzen Sie Ihre Provisionseinnahmen basierend auf den Einsatzbeträgen Ihrer Empfehlungen",
 			"interactive": {
 				"title": "Interaktives Tool:",
-				"body": "Gib verschiedene Wetteinsätze ein, um potenzielle Einnahmen auf allen Stufen zu sehen"
+				"body": "Geben Sie verschiedene Einsatzbeträge ein, um potenzielle Einnahmen über alle Stufen hinweg zu sehen"
 			},
 			"potentialEarnings": "Potenzielle Einnahmen",
-			"basedOnRate": "Basierend auf einem Provisionssatz von {percentage}%",
+			"basedOnRate": "Basierend auf {percentage}% Provisionssatz",
 			"tier": "Stufe {level}",
-			"commissionLevel": "Provisionslevel {level}",
-			"enterWager": "Wetteinsatz eingeben (USD)",
+			"commissionLevel": "Provisionsstufe {level}",
+			"enterWager": "Einsatzbetrag eingeben (USD)",
 			"wagerPlaceholder": "z.B. 1000",
-			"calcFor": "Berechne Einnahmen für ${amount} Wetteinsatz",
+			"calcFor": "Berechnung der Einnahmen für ${amount} Einsatz",
 			"totalPotential": "Gesamte potenzielle Einnahmen:",
 			"combinedAtTier": "Kombinierte Einnahmen aus allen Spieltypen auf Stufe {level}"
 		}
 	},
+	"bonus": {
+		"title": "Umsatzbonus-Programm",
+		"loginPromptTitle": "Umsatzbonus-Programm",
+		"loginPromptSubtitle": "Melden Sie sich an, um Ihre Bonusstatistiken anzuzeigen und Ihre Prämien einzufordern.",
+		"goHome": "Zur Startseite",
+		"tabs": {
+			"dashboard": "Dashboard",
+			"claims": "Ansprüche",
+			"rates": "Bonussätze",
+			"calculator": "Rechner"
+		},
+		"refresh": "Aktualisieren",
+		"refreshing": "Wird aktualisiert...",
+		"refreshAllSuccess": "Alle Daten erfolgreich aktualisiert!",
+		"refreshPartial": "Teilweise aktualisiert: {success}/{total} Abschnitte aktualisiert",
+		"refreshFailed": "Fehler beim Aktualisieren der Daten. Bitte versuchen Sie es erneut.",
+		"dashboard": {
+			"title": "Bonus-Dashboard",
+			"subtitle": "Verfolgen Sie Ihre Einsätze, Boni und Prämieneinnahmen",
+			"claimButtonTitle": "Beanspruchen",
+			"performanceOverview": "Bonusübersicht",
+			"bonusRatesTitle": "Bonusratenstruktur",
+			"totalIncome": "Gesamtbonus",
+			"pendingBonus": "Ausstehender Bonus",
+			"lastClaim": "Letzter Anspruch",
+			"unclaimedEarnings": "Zur Beanspruchung verfügbar",
+			"claim": {
+				"title": "Beanspruchung und Auszahlung",
+				"points": {
+					"0": "Provisionen stehen zur Auszahlung zur Verfügung, sobald sie berechnet wurden.",
+					"1": "Es gibt kein Ablaufdatum für nicht beanspruchte Provisionen – sie sammeln sich an, bis sie beansprucht werden.",
+					"2": "Auszahlungen folgen den Standardregeln der Plattform, wie Mindestgrenzen und Bearbeitungszeiten."
+				}
+			},
+			"claiming": "Wird beansprucht...",
+			"section2": {
+				"title": "Berechtigung",
+				"content": "Zur Teilnahme:"
+			},
+			"section3": {
+				"title": "Umsatzstufen und Raten",
+				"content": "Boni werden basierend auf Ihren täglichen Einsatzbeträgen berechnet:",
+				"noteTitle": "Hinweis",
+				"noteContent": "Stufen werden täglich um 14:00 UTC bewertet. Ihr Einsatzvolumen des Vortages bestimmt Ihren heutigen Bonussatz. Die Sätze gelten für alle Spieltypen: Slots, Live Casino und Sport."
+			}
+		},
+		"claims": {
+			"title": "Anspruchsverlauf",
+			"subtitle": "Verfolgen Sie Ihre Bonusansprüche und Wettaktivitäten",
+			"tableHeaders": {
+				"date": "Wett-Datum",
+				"slots": "Slots",
+				"liveCasino": "Live Casino",
+				"sports": "Sport",
+				"total": "Gesamt",
+				"tier": "Stufe",
+				"unclaimed": "Nicht beansprucht",
+				"token": "Token"
+			},
+			"tierPrefix": "Stufe",
+			"availableToClaim": "Zur Beanspruchung verfügbar",
+			"totalBonus": "Gesamtbonus",
+			"claimed": "Beansprucht",
+			"progressPercentage": "Fortschritt",
+			"progressTitle": "Ihr Fortschritt",
+			"currentTier": "Aktuelle Stufe",
+			"nextTier": "Nächste Stufe",
+			"wagerProgress": "Einsatzfortschritt",
+			"totalWagered": "Gesamteinsatz heute",
+			"toNextTier": "um die nächste Stufe zu erreichen",
+			"empty": {
+				"title": "Noch keine Bonusansprüche",
+				"subtitle": "Beginnen Sie zu spielen, um Boni zu verdienen!"
+			}
+		},
+		"rates": {
+			"title": "Umsatzstufen und Raten",
+			"subtitle": "Bonusprozentsätze nach Einsatzstufe und Spielkategorie",
+			"overview": {
+				"title": "Übersicht",
+				"body": "Der Umsatzbonus belohnt Benutzer basierend auf ihren Einsätzen in Slots, Live Casino, Sportwetten und Lotterie. Boni werden alle 24 Stunden berechnet, und Benutzer können sie am nächsten Tag nach dem Einsatz beanspruchen. Es gibt sieben Stufen, jede mit unterschiedlichen Raten, abhängig vom Einsatzbetrag."
+			},
+			"eligibility": {
+				"title": "Berechtigung",
+				"content": "Zur Teilnahme:",
+				"points": {
+					"0": "Sie müssen ein aktives Konto haben.",
+					"1": "Platzieren Sie Einsätze in Slots, Live Casino, Sportwetten und Lotterie.",
+					"2": "Erfüllen Sie die Mindesteinsatzanforderungen für jede Stufe."
+				}
+			},
+			"calculation": {
+				"title": "So werden Boni berechnet",
+				"desc": "Boni werden alle 24 Stunden basierend auf Ihren Gesamteinsätzen berechnet. Beispiele:",
+				"exampleTitle": "Stufe {tier}:",
+				"wagerIn": "Einsatz {amount} in {gameType}"
+			},
+			"table": {
+				"tierLevel": "Stufe",
+				"wagerRange": "Einsatzbereich",
+				"slots": "Slots",
+				"liveCasino": "Live Casino",
+				"sports": "Sport",
+				"tierPrefix": "STUFE",
+				"commissionLevel": "Bonusstufe",
+				"dailyWager": "Tägliches Einsatzvolumen"
+			},
+			"claim": {
+				"title": "Beanspruchung und Auszahlung von Boni",
+				"points": {
+					"0": "Boni werden 24 Stunden nach dem Einsatz zur Beanspruchung berechtigt.",
+					"1": "Nicht beanspruchte Boni sammeln sich an und verfallen nicht.",
+					"2": "Der Beanspruchungs- und Auszahlungsprozess kann je nach plattformspezifischen Richtlinien variieren."
+				}
+			},
+			"system": {
+				"title": "Systemzeit und Operationen",
+				"dailyTimeframeLabel": "Täglicher Zeitrahmen:",
+				"dailyTimeframeValue": "00:00 UTC bis 23:59 UTC (jeden Tag).",
+				"claimDailyLabel": "Täglich beanspruchen:",
+				"claimDailyValue": "Täglich um 14:00 UTC verfügbar (Ihre Ortszeit: {local}).",
+				"note": "Hinweis: Obwohl wir mit Anbietern aus verschiedenen Zeitzonen zusammenarbeiten, folgen alle Berechnungen UTC, um Konsistenz zu gewährleisten und Verwirrung zu vermeiden."
+			},
+			"amendments": {
+				"title": "Änderungen und Disqualifikationen",
+				"body": "Wir können diese Bedingungen jederzeit aktualisieren, und Änderungen treten sofort nach Veröffentlichung in Kraft. Wenn Systemfehler, Fehlberechnungen oder Betrug vermutet werden, behalten wir uns das Recht vor, Boni und Konten anzupassen oder zu disqualifizieren, um Fairness zu gewährleisten"
+			},
+			"footer": {
+				"schedule": "Bonusplan:",
+				"availableDaily": "Täglich verfügbar um",
+				"localTimeLabel": "(Ihre Ortszeit: {time})"
+			}
+		},
+		"calculator": {
+			"title": "Bonusrechner",
+			"subtitle": "Schätzen Sie Ihre Bonuserträge basierend auf Ihren Einsatzbeträgen",
+			"interactive": {
+				"title": "Interaktives Tool:",
+				"body": "Geben Sie verschiedene Einsatzbeträge ein, um potenzielle Boni über alle Stufen hinweg zu sehen"
+			},
+			"potentialEarnings": "Potenzieller Bonus",
+			"basedOnRate": "Basierend auf {percentage}% Bonussatz",
+			"tier": "Stufe {level}",
+			"commissionLevel": "Bonusstufe {level}",
+			"enterWager": "Einsatzbetrag eingeben (USD)",
+			"wagerPlaceholder": "z.B. 1000",
+			"calcFor": "Berechnung des Bonus für ${amount} Einsatz",
+			"totalPotential": "Gesamter potenzieller Bonus:",
+			"combinedAtTier": "Kombinierter Bonus aus allen Spieltypen auf Stufe {level}"
+		},
+		"claimSuccessModal": {
+			"title": "Anspruch erfolgreich",
+			"statusCompleted": "Abgeschlossen",
+			"statusOnChain": "Auf der Kette",
+			"claimAmount": "Beanspruchter Betrag",
+			"logoAlt": "Logo von {siteName}",
+			"backgroundAlt": "Hintergrund für erfolgreichen Anspruch",
+			"creatingMagic": "Erstellt Magie...",
+			"downloadShare": "Herunterladen & Teilen",
+			"spreadTheWin": "VERBREITE DEN GEWINN",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "Telegram",
+			"socialReddit": "Reddit",
+			"socialMore": "Mehr",
+			"shareText": "Ich habe gerade {amount} Bonus beansprucht! Mach mit: {url}",
+			"referralLinkCopied": "Empfehlungs-Link kopiert!",
+			"referralLinkCopyFailed": "Fehler beim Kopieren des Empfehlungs-Links",
+			"screenshotFailed": "Screenshot fehlgeschlagen. Bitte versuchen Sie es erneut oder verwenden Sie einen anderen Browser.",
+			"shareTextCopied": "Text zum Teilen in die Zwischenablage kopiert!",
+			"shareFailed": "Teilen fehlgeschlagen. Bitte versuchen Sie es erneut."
+		}
+	},
 	"debug": {
-		"title": "Debug-Seite"
+		"title": "Debugging-Seite"
 	},
 	"getLobby": {
 		"enteringLobby": "Lobby wird betreten...",
-		"connectingWait": "Bitte warte, während wir dich verbinden.",
-		"invalidSession": "Deine Sitzung ist ungültig oder der Anbieter fehlt. Bitte versuche es erneut.",
-		"failedPrefix": "Betreten der Lobby fehlgeschlagen: {message}",
+		"connectingWait": "Bitte warten Sie, während wir Sie verbinden.",
+		"invalidSession": "Ihre Sitzung ist ungültig oder der Anbieter fehlt. Bitte versuchen Sie es erneut.",
+		"failedPrefix": "Fehler beim Betreten der Lobby: {message}",
 		"launchFailedTitle": "Start fehlgeschlagen",
-		"returnHome": "Zur Startseite"
+		"returnHome": "Zur Startseite zurückkehren"
 	},
 	"play": {
-		"connecting": "Verbindung zum Spieleserver wird hergestellt...",
-		"invalidSession": "Deine Sitzung ist ungültig oder abgelaufen. Bitte melde dich erneut an und versuche es noch einmal.",
+		"connecting": "Verbindung zum Spielserver wird hergestellt...",
+		"invalidSession": "Ihre Sitzung ist ungültig oder abgelaufen. Bitte melden Sie sich an und versuchen Sie es erneut.",
 		"launchFailedTitle": "Start fehlgeschlagen",
-		"returnHome": "Zur Startseite"
+		"returnHome": "Zur Startseite zurückkehren"
 	},
 	"modalsIdle": {
 		"badgeLimitedTime": "ZEITLICH BEGRENZTES ANGEBOT",
-		"headline": "Erhalte einen 200% Willkommensbonus!",
-		"subheadline": "Verbinde jetzt deine Krypto-Wallet und erhalte bis zu {amount} Bonus auf deine erste Einzahlung!",
-		"featureDepositMatch": "200% Einzahlungsbonus",
+		"headline": "Holen Sie sich 200% Willkommensbonus!",
+		"subheadline": "Verbinden Sie jetzt Ihre Krypto-Wallet und erhalten Sie bis zu {amount} Bonus auf Ihre erste Einzahlung!",
+		"featureDepositMatch": "200% Einzahlungsübereinstimmung",
 		"featureZeroFees": "Keine Transaktionsgebühren",
 		"featureInstantWithdrawals": "Sofortige Auszahlungen",
 		"featureNoKyc": "Kein KYC erforderlich",
 		"ctaClaim": "BONUS JETZT BEANSPRUCHEN!",
-		"offerExpires": "Angebot endet in:",
-		"disclaimer": "AGB gelten. Glücksspiel birgt Risiken. Spiele verantwortungsbewusst. 18+",
+		"offerExpires": "Angebot läuft ab in:",
+		"disclaimer": "AGB gelten. Glücksspiel beinhaltet Risiken. Spielen Sie verantwortungsbewusst. 18+",
 		"closeAria": "Modal schließen",
 		"bannerAlt": "Werbebanner",
-		"ctaOk": "Wallet verbinden & Wetten beginnen",
+		"ctaOk": "Wallet verbinden & Wetten starten",
 		"enterAmount": "Betrag eingeben",
 		"balance": "Guthaben",
 		"max": "Max",
@@ -593,7 +763,7 @@
 	},
 	"modalsSmall": {
 		"close": "Schließen",
-		"firstDepositBoost": "Bonus-Boost für die 1. Einzahlung",
+		"firstDepositBoost": "1. Einzahlungsbonus-Boost",
 		"bonus": "Bonus",
 		"min": "Min",
 		"sec": "Sek",
@@ -601,12 +771,12 @@
 	},
 	"auth": {
 		"email": {
-			"title": "E-Mail-Login",
-			"description": "Wir senden dir einen 6-stelligen Code",
+			"title": "E-Mail-Anmeldung",
+			"description": "Wir senden Ihnen einen 6-stelligen Code",
 			"emailLabel": "E-Mail-Adresse",
 			"emailPlaceholder": "name@email.com",
 			"cancel": "Abbrechen",
-			"sending": "Senden",
+			"sending": "Wird gesendet",
 			"continue": "Weiter",
 			"enterCodeTitle": "Code eingeben",
 			"sentTo": "Gesendet an {email}",
@@ -614,130 +784,175 @@
 			"resendCode": "Code erneut senden",
 			"resendIn": "Erneut senden in {seconds}s",
 			"verifying": "Wird überprüft",
-			"successTitle": "Du bist drin",
-			"successSubtitle": "Richte alles ein...",
+			"successTitle": "Sie sind drin",
+			"successSubtitle": "Wird eingerichtet…",
 			"modalAria": "E-Mail-Bestätigungs-Modal",
 			"errors": {
-				"invalidEmail": "Bitte gib eine gültige E-Mail-Adresse ein",
-				"sendFailed": "Senden des Bestätigungscodes fehlgeschlagen.",
-				"invalidCode": "Bitte gib einen 6-stelligen Bestätigungscode ein"
+				"invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+				"sendFailed": "Fehler beim Senden des Bestätigungscodes.",
+				"invalidCode": "Bitte geben Sie einen 6-stelligen Bestätigungscode ein"
 			}
 		},
 		"setNickname": {
-			"title": "Lege deinen Spitznamen fest",
+			"title": "Legen Sie Ihren Spitznamen fest",
 			"subtitle": "Dies ist eine einmalige Einrichtung und kann nicht geändert werden",
 			"logoutAria": "Abmelden",
-			"inputPlaceholder": "Wähle deinen einzigartigen Spitznamen",
+			"inputPlaceholder": "Wählen Sie Ihren eindeutigen Spitznamen",
 			"referrerCheckbox": "Ich habe eine Empfehlungs-ID",
 			"referrerPlaceholder": "Empfehlungs-ID eingeben",
-			"referrerHelp": "Optional. Dies verknüpft dein Konto mit dem Empfehlungsgeber für Bonusprogramme.",
+			"referrerHelp": "Optional. Dies verknüpft Ihr Konto mit dem Werber für Bonusprogramme.",
 			"status": {
 				"checking": "Verfügbarkeit wird geprüft...",
 				"available": "Spitzname ist verfügbar!",
 				"taken": "Dieser Spitzname ist bereits vergeben."
 			},
-			"register": "Registrieren und Spielen",
+			"register": "Registrieren und spielen",
 			"termsTitle": "Allgemeine Geschäftsbedingungen:",
-			"termsBody": "Durch das Unterschreiben dieses Dokuments mit deiner Wallet und/oder die weitere Nutzung dieser Web3-Anwendung akzeptierst du die Nutzungsbedingungen der Anwendung. Die Unterzeichnung deiner Zustimmung zu den Nutzungsbedingungen ist keine Blockchain-Transaktion und verursacht keine Kosten.",
+			"termsBody": "Durch die Unterzeichnung dieses Dokuments mit Ihrer Wallet und/oder die weitere Nutzung dieser Web3-Anwendung stimmen Sie den Nutzungsbedingungen der Anwendung zu. Die Unterzeichnung Ihrer Zustimmung zu den Nutzungsbedingungen ist keine Blockchain-Transaktion und verursacht keine Kosten.",
 			"errors": {
-				"verifyNicknameFailed": "Spitzname konnte nicht überprüft werden. Bitte versuche es erneut.",
+				"verifyNicknameFailed": "Spitzname konnte nicht überprüft werden. Bitte versuchen Sie es erneut.",
 				"registerFailed": "Registrierung fehlgeschlagen: {message}"
 			}
 		},
 		"walletConnect": {
 			"loginWithEmail": "Mit E-Mail anmelden",
 			"connectWalletBtn": "Wallet verbinden",
+			"loginWithWallet": "Mit Wallet anmelden",
 			"player": "Spieler",
 			"walletConnected": "Wallet verbunden",
 			"emailConnected": "E-Mail verbunden",
 			"disconnect": "Trennen",
 			"walletAddress": "Wallet-Adresse",
-			"balance": "Guthaben",
-			"loginWithWallet": "Mit Wallet anmelden"
+			"balance": "Guthaben"
 		}
 	},
 	"walletProvider": {
 		"transactionModal": {
+			"title": "WALLET",
 			"tabs": {
 				"deposit": "Einzahlen",
+				"tip": "Trinkgeld",
 				"withdraw": "Auszahlen",
 				"swap": "Tauschen",
-				"walletInfo": "Geldbörse",
-				"tip": "Trinkgeld",
+				"walletInfo": "Wallet",
 				"emailWallet": "E-Mail-Wallet",
-				"wallet": "Geldbörse"
+				"wallet": "Wallet"
 			},
 			"mobileDropdown": {
 				"emailWallet": "E-Mail-Wallet",
-				"wallet": "Geldbörse",
+				"wallet": "Wallet",
 				"deposit": "Einzahlen",
+				"tip": "Trinkgeld",
 				"withdraw": "Auszahlen",
-				"swap": "Tauschen",
-				"tip": "Trinkgeld"
-			},
-			"title": "GELDBÖRSE"
+				"swap": "Tauschen"
+			}
 		},
 		"networkSelector": {
 			"placeholder": "Netzwerk auswählen",
 			"switching": "Wird gewechselt...",
 			"walletNotConnected": "Wallet nicht verbunden.",
-			"failedToSwitch": "Netzwerkwechsel fehlgeschlagen. Bitte versuche es über deine Wallet.",
+			"failedToSwitch": "Netzwerkwechsel fehlgeschlagen. Bitte versuchen Sie es über Ihre Wallet.",
 			"altLogo": "Netzwerk-Logo"
 		},
 		"tokenList": {
-			"dialogTitle": "Einen Token auswählen",
+			"dialogTitle": "Token auswählen",
 			"instantDeposit": "Soforteinzahlung",
-			"yourWalletBalance": "Dein Wallet-Guthaben",
+			"yourWalletBalance": "Ihr Wallet-Guthaben",
 			"searchPlaceholder": "Namen suchen oder Adresse einfügen",
-			"emptySearch": "Keine Tokens gefunden, die deiner Suche entsprechen.",
-			"emptyOwned": "Keine Tokens mit Guthaben gefunden.",
+			"emptySearch": "Keine Token gefunden, die Ihrer Suche entsprechen.",
+			"emptyOwned": "Keine Token mit Guthaben gefunden.",
 			"searchResults": "Suchergebnisse",
-			"yourTokens": "Deine Tokens",
+			"yourTokens": "Ihre Token",
 			"otherResults": "Andere Ergebnisse"
 		},
 		"tabsSidebar": {
-			"walletInfo": "Geldbörse",
+			"walletInfo": "Wallet",
 			"emailWallet": "E-Mail-Wallet",
 			"deposit": "Einzahlen",
 			"withdraw": "Auszahlen",
 			"swap": "Tauschen"
 		},
 		"depositPanel": {
-			"youPay": "Du zahlst",
+			"youPay": "Sie zahlen",
 			"resetForm": "Formular zurücksetzen",
 			"enterAmount": "Betrag eingeben",
 			"selectToken": "Token auswählen",
 			"max": "Max",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} ist reserviert, um Gasgebühren zu decken und Transaktionsfehler zu vermeiden",
 			"balance": "Guthaben:",
 			"calculating": "Wird berechnet...",
 			"approxUsd": "~ ${amount} USD",
-			"minPrefix": "Min.:",
-			"ratesMayVary": "Kurse können variieren",
+			"minPrefix": "Min:",
+			"ratesMayVary": "Die Raten können variieren",
 			"emailWalletAddress": "E-Mail-Wallet-Adresse",
 			"walletAddress": "Wallet-Adresse",
 			"minimumIs": "Minimum ist {min}",
 			"errors": {
-				"selectTokenAndAmount": "Bitte wähle einen Token und gib einen Betrag ein",
+				"selectTokenAndAmount": "Bitte wählen Sie einen Token aus und geben Sie einen Betrag ein",
 				"insufficientBalance": "Unzureichendes Guthaben für diese Transaktion",
-				"amountTooHighGas": "Betrag ist unter Berücksichtigung der Gasgebühren zu hoch",
-				"checkForm": "Bitte überprüfe das Formular und versuche es erneut",
-				"pendingDeposit": "Du hast eine ausstehende Einzahlung. Bitte warte, bis sie abgeschlossen ist"
+				"amountTooHighGas": "Betrag ist zu hoch, wenn Gasgebühren berücksichtigt werden",
+				"checkForm": "Bitte überprüfen Sie das Formular und versuchen Sie es erneut",
+				"pendingDeposit": "Sie haben eine ausstehende Einzahlung. Bitte warten Sie, bis diese abgeschlossen ist"
 			},
 			"status": {
 				"processing": "Wird verarbeitet...",
-				"awaitingApproval": "Warte auf Genehmigung",
-				"calculatingRate": "Kurs wird berechnet...",
+				"awaitingApproval": "Wartet auf Genehmigung",
+				"calculatingRate": "Rate wird berechnet...",
 				"insufficientBalance": "Unzureichendes Guthaben"
 			},
 			"buttons": {
-				"depositUsd": "${amount} einzahlen"
+				"depositUsd": "Einzahlen ${amount}"
+			}
+		},
+		"tipPanel": {
+			"youTip": "Ihr Trinkgeld",
+			"resetForm": "Formular zurücksetzen",
+			"enterAmount": "Betrag eingeben",
+			"selectToken": "Token auswählen",
+			"minPrefix": "Minimum",
+			"balance": "Guthaben:",
+			"max": "Max",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} ist reserviert, um Gasgebühren zu decken und Transaktionsfehler zu vermeiden",
+			"approxUsd": "~ ${amount} USD",
+			"tipPanelWarningText": "Trinkgelder sind freiwillig und nicht erstattungsfähig.",
+			"emailWalletAddress": "E-Mail-Wallet-Adresse",
+			"errors": {
+				"selectTokenAndAmount": "Bitte wählen Sie einen Token aus und geben Sie einen Betrag ein.",
+				"insufficientBalance": "Unzureichendes Guthaben.",
+				"belowMinimum": "Der Betrag muss mindestens {min} betragen.",
+				"missingWallet": "Wallet für Trinkgeld konnte nicht abgerufen werden. Bitte versuchen Sie es später erneut.",
+				"checkForm": "Bitte überprüfen Sie Ihre Trinkgelddetails."
 			},
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} ist reserviert, um die Gasgebühren zu decken und Transaktionsfehler zu vermeiden"
+			"status": {
+				"processing": "Trinkgeld wird gesendet...",
+				"awaitingApproval": "Wartet auf Genehmigung...",
+				"calculatingRate": "Wird berechnet...",
+				"insufficientBalance": "Unzureichendes Guthaben",
+				"fetchingWallet": "Trinkgeld-Wallet wird vorbereitet..."
+			},
+			"prompts": {
+				"selectToken": "Token auswählen",
+				"enterAmount": "Betrag eingeben"
+			},
+			"buttons": {
+				"tipUsd": "Trinkgeld ${amount}",
+				"tip": "Trinkgeld"
+			},
+			"minimumIs": "Mindesttrinkgeld ist {min}"
+		},
+		"tipPending": {
+			"submittedTitle": "Trinkgeld ausstehend",
+			"submittedDesc": "Ihr Trinkgeld wird auf der Kette bestätigt.",
+			"confirmedTitle": "Trinkgeld bestätigt!",
+			"confirmedDesc": "Ihr Trinkgeld wurde erfolgreich zugestellt.",
+			"viewOnExplorer": "Im Explorer ansehen",
+			"newTipPending": "Weiteres Trinkgeld senden",
+			"newTipConfirmed": "Weiteres Trinkgeld senden"
 		},
 		"swapPanel": {
-			"selectTokens": "Tokens auswählen",
+			"selectTokens": "Token auswählen",
 			"enterAmount": "Betrag eingeben",
-			"gettingQuote": "Angebot wird eingeholt...",
+			"gettingQuote": "Angebot wird abgerufen...",
 			"confirming": "Wird bestätigt...",
 			"approving": "Wird genehmigt...",
 			"insufficientBalance": "Unzureichendes Guthaben für den Tausch",
@@ -746,61 +961,61 @@
 			"swap": "Tauschen",
 			"slippageTolerance": "Slippage-Toleranz",
 			"custom": "Benutzerdefiniert",
-			"set": "Setzen",
+			"set": "Festlegen",
 			"currentSlippage": "Aktuelle Slippage",
 			"swapSuccessful": "Tausch erfolgreich!",
-			"transactionConfirmed": "Deine Transaktion wurde bestätigt",
+			"transactionConfirmed": "Ihre Transaktion wurde übermittelt",
 			"hash": "Hash",
 			"newSwap": "Neuer Tausch",
-			"youPay": "Du zahlst",
+			"youPay": "Sie zahlen",
 			"max": "Max",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} ist reserviert, um Gasgebühren zu decken und Transaktionsfehler zu vermeiden",
 			"low": "Niedrig",
 			"amountPlaceholder": "0",
 			"selectToken": "Token auswählen",
-			"youReceive": "Du erhältst",
-			"gettingBestQuote": "Bestes Angebot wird eingeholt...",
+			"youReceive": "Sie erhalten",
+			"gettingBestQuote": "Bestes Angebot wird abgerufen...",
 			"gas": "Gas",
-			"minimumReceived": "Mindestens erhalten",
+			"minimumReceived": "Minimum erhalten",
 			"slippageToleranceLabel": "Slippage-Toleranz",
-			"gasFee": "Gas-Gebühr",
-			"priceWarning": "Preise werden in Echtzeit aktualisiert und können sich ändern, bevor deine Transaktion bestätigt wird",
+			"gasFee": "Gasgebühr",
+			"priceWarning": "Preise werden in Echtzeit aktualisiert und können sich ändern, bevor Ihre Transaktion bestätigt wird",
 			"emailWalletAddress": "E-Mail-Wallet-Adresse",
 			"walletAddress": "Wallet-Adresse",
 			"minimumIs": "Minimum ist {min}",
 			"errors": {
-				"selectTokenAndAmount": "Bitte wähle einen Token und gib einen Betrag ein",
+				"selectTokenAndAmount": "Bitte wählen Sie einen Token aus und geben Sie einen Betrag ein",
 				"insufficientBalance": "Unzureichendes Guthaben für diese Transaktion",
-				"amountTooHighGas": "Betrag ist unter Berücksichtigung der Gasgebühren zu hoch",
-				"checkForm": "Bitte überprüfe das Formular und versuche es erneut",
-				"pendingDeposit": "Du hast eine ausstehende Einzahlung. Bitte warte, bis sie abgeschlossen ist"
+				"amountTooHighGas": "Betrag ist zu hoch, wenn Gasgebühren berücksichtigt werden",
+				"checkForm": "Bitte überprüfen Sie das Formular und versuchen Sie es erneut",
+				"pendingDeposit": "Sie haben eine ausstehende Einzahlung. Bitte warten Sie, bis diese abgeschlossen ist"
 			},
 			"status": {
 				"processing": "Wird verarbeitet...",
-				"awaitingApproval": "Warte auf Genehmigung",
-				"calculatingRate": "Kurs wird berechnet...",
+				"awaitingApproval": "Wartet auf Genehmigung",
+				"calculatingRate": "Rate wird berechnet...",
 				"insufficientBalance": "Unzureichendes Guthaben"
 			},
 			"buttons": {
-				"depositUsd": "${amount} einzahlen"
-			},
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} ist reserviert, um Gasgebühren zu decken und Transaktionsfehler zu vermeiden"
+				"depositUsd": "Einzahlen ${amount}"
+			}
 		},
 		"depositPending": {
 			"confirmedTitle": "Einzahlung bestätigt!",
 			"submittedTitle": "Transaktion übermittelt",
-			"confirmedDesc": "Dein Guthaben wurde aktualisiert.",
-			"submittedDesc": "Warte auf Blockchain-Bestätigung. Dies kann einige Minuten dauern.",
+			"failedTitle": "Transaktion fehlgeschlagen",
+			"confirmedDesc": "Ihr Guthaben wurde aktualisiert.",
+			"submittedDesc": "Wartet auf Blockchain-Bestätigung. Dies kann einige Minuten dauern.",
+			"failedDesc": "Ihre Transaktion ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
 			"viewOnExplorer": "Im Explorer ansehen",
 			"newDepositConfirmed": "Weitere Einzahlung tätigen",
-			"newDepositPending": "Eine neue Einzahlung starten",
-			"failedTitle": "Transaktion fehlgeschlagen",
-			"failedDesc": "Ihre Transaktion ist fehlgeschlagen. ",
-			"newDepositFailed": "Versuchen Sie es erneut"
+			"newDepositPending": "Neue Einzahlung starten",
+			"newDepositFailed": "Erneut versuchen"
 		},
 		"withdrawPanel": {
 			"resetForm": "Formular zurücksetzen",
 			"networkNotSupported": "Auszahlungen werden nur auf Arbitrum, Polygon und BNB unterstützt",
-			"youWithdraw": "Du hebst ab",
+			"youWithdraw": "Sie zahlen aus",
 			"loading": "Wird geladen...",
 			"amount": "Betrag",
 			"max": "Max",
@@ -808,11 +1023,12 @@
 			"available": "Verfügbar:",
 			"insufficientBalance": "Unzureichendes Guthaben",
 			"minimumIs": "Minimum ist {min}",
-			"minLabel": "Min.:",
+			"minLabel": "Min:",
+			"calculating": "Wird berechnet",
 			"emailWalletAddress": "E-Mail-Wallet-Adresse",
 			"walletAddress": "Wallet-Adresse",
 			"errors": {
-				"pendingWithdrawal": "Du hast bereits eine ausstehende Auszahlung",
+				"pendingWithdrawal": "Sie haben bereits eine ausstehende Auszahlung",
 				"invalidAddress": "Ungültige Adresse",
 				"enterAmount": "Betrag eingeben",
 				"networkNotSupported": "Netzwerk nicht unterstützt"
@@ -820,90 +1036,44 @@
 			"status": {
 				"processing": "Wird verarbeitet...",
 				"insufficientBalance": "Unzureichendes Guthaben",
-				"pendingWithdrawal": "Bereits eine ausstehende Auszahlung"
+				"pendingWithdrawal": "Es ist bereits eine Auszahlung ausstehend"
 			},
 			"buttons": {
-				"withdraw": "{amount} {symbol} auszahlen",
-				"minimum": "Mindestens {amount} {symbol}"
-			},
-			"calculating": "Berechnen"
+				"withdraw": "Auszahlen {amount} {symbol}",
+				"minimum": "Minimum {amount} {symbol}"
+			}
 		},
 		"withdrawSuccess": {
 			"title": "Auszahlung erfolgreich!",
-			"successMessage": "🎉 Habe gerade {withdrawAmount} {tokenSymbol} von {siteName} abgehoben! 🚀 Mach mit bei der Siegesserie auf {shareUrl}",
-			"withdrawnAmount": "Abgehobener Betrag",
+			"successMessage": "🎉 Gerade {withdrawAmount} {tokenSymbol} von {siteName} ausgezahlt! 🚀 Nehmen Sie an der Gewinnsträhne teil unter {shareUrl}",
+			"withdrawnAmount": "Auszahlungsbetrag",
 			"shareText": "Teilen",
-			"subText": "🚀 MACH MIT BEI DER SIEGESSTRÄHNE! 🚀",
+			"subText": "🚀 NEHMEN SIE AN DER GEWINNSTRÄHNE TEIL! 🚀",
 			"generating": "Wird generiert...",
 			"screenshot": "Screenshot machen",
 			"download": "Bild herunterladen",
 			"close": "Schließen",
 			"copiedToClipboard": "Link zum Teilen erfolgreich kopiert",
-			"entryPrice": "Abhebungsbetrag",
+			"userName": "{siteName} Spieler",
+			"status": "Abgeschlossen",
+			"entryPrice": "Auszahlungsbetrag",
 			"lastPrice": "Token-Symbol",
 			"referralCode": "Empfehlungscode",
 			"screenshotFailed": "Screenshot fehlgeschlagen. Bitte versuchen Sie es erneut oder verwenden Sie einen anderen Browser.",
-			"shareFailed": "Teilen fehlgeschlagen. Bitte versuche es erneut.",
-			"status": "Abgeschlossen",
-			"userName": "{siteName}-Spieler"
+			"shareFailed": "Teilen fehlgeschlagen. Bitte versuchen Sie es erneut."
 		},
 		"withdrawPending": {
 			"confirmedTitle": "Auszahlung bestätigt!",
 			"submittedTitle": "Transaktion übermittelt",
-			"confirmedDesc": "Dein Geld ist unterwegs.",
-			"submittedDesc": "Warte auf Blockchain-Bestätigung...",
+			"confirmedDesc": "Ihr Geld ist unterwegs.",
+			"submittedDesc": "Wartet auf Blockchain-Bestätigung...",
 			"viewOnExplorer": "Im Explorer ansehen",
 			"manualApproval": "Diese Auszahlung erfordert eine manuelle Genehmigung.",
 			"newWithdrawalConfirmed": "Weitere Auszahlung tätigen",
-			"newWithdrawalPending": "Eine neue Auszahlung starten"
+			"newWithdrawalPending": "Neue Auszahlung starten"
 		},
 		"withdrawSummary": {
-			"youWillReceive": "Du wirst erhalten"
-		},
-		"tipPanel": {
-			"approxUsd": "~  USD",
-			"balance": "Kontostand:",
-			"buttons": {
-				"tip": "Trinkgeld",
-				"tipUsd": "Trinkgeld"
-			},
-			"emailWalletAddress": "E-Mail-Wallet-Adresse",
-			"enterAmount": "Betrag eingeben",
-			"errors": {
-				"belowMinimum": "Der Betrag muss mindestens {min} betragen.",
-				"checkForm": "Bitte überprüfen Sie Ihre Tipp-Details.",
-				"insufficientBalance": "Unzureichendes Guthaben.",
-				"missingWallet": "Trinkgeld-Wallet kann nicht abgerufen werden. Bitte versuchen Sie es später erneut.",
-				"selectTokenAndAmount": "Bitte wählen Sie ein Token und geben Sie einen Betrag ein."
-			},
-			"max": "Max",
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} werden reserviert, um die Gasgebühren zu decken und einen Transaktionsfehler zu vermeiden",
-			"minimumIs": "Das Mindesttrinkgeld beträgt {min}",
-			"minPrefix": "Minimum",
-			"prompts": {
-				"enterAmount": "Betrag eingeben",
-				"selectToken": "Token auswählen"
-			},
-			"resetForm": "Formular zurücksetzen",
-			"selectToken": "Token auswählen",
-			"status": {
-				"awaitingApproval": "Warten auf Genehmigung...",
-				"calculatingRate": "Wird berechnet...",
-				"fetchingWallet": "Trinkgeld-Wallet wird vorbereitet...",
-				"insufficientBalance": "Unzureichendes Guthaben",
-				"processing": "Trinkgeld wird gesendet..."
-			},
-			"tipPanelWarningText": "Trinkgelder sind freiwillig und nicht rückerstattbar.",
-			"youTip": "Ihr Trinkgeld"
-		},
-		"tipPending": {
-			"confirmedDesc": "Ihr Tipp wurde erfolgreich übermittelt.",
-			"confirmedTitle": "Trinkgeld bestätigt!",
-			"newTipConfirmed": "Noch einen Tipp senden",
-			"newTipPending": "Weiteres Trinkgeld senden",
-			"submittedDesc": "Ihr Tipp wird in der Blockchain bestätigt.",
-			"submittedTitle": "Trinkgeld ausstehend",
-			"viewOnExplorer": "Im Explorer ansehen"
+			"youWillReceive": "Sie erhalten"
 		}
 	},
 	"navUser": {
@@ -918,73 +1088,73 @@
 		"playNow": "Jetzt spielen",
 		"byProvider": "Von {name}",
 		"count": "{count} Spiele",
-		"noResults": "Keine Spiele gefunden, die deinen Kriterien entsprechen.",
-		"errorLoading": "Spiele konnten nicht geladen werden. Bitte versuche es später erneut.",
-		"slots": "Spielautomaten",
+		"noResults": "Keine Spiele gefunden, die Ihren Kriterien entsprechen.",
+		"errorLoading": "Spiele konnten nicht geladen werden. Bitte versuchen Sie es später erneut.",
+		"slots": "Slots",
 		"sports": "Sport",
-		"liveCasino": "Live-Casino",
+		"liveCasino": "Live Casino",
 		"explore": "Entdecken",
-		"exploreSubtitle": "Entdecke erstaunliche Spielerlebnisse",
+		"exploreSubtitle": "Entdecken Sie erstaunliche Spielerlebnisse",
 		"poker": "Poker",
 		"lottery": "Lotterie",
 		"futures": "Futures",
 		"vr": "VR",
 		"swap": "Tauschen",
-		"slotsDescription": "Drehe die Walzen und gewinne riesige Jackpots",
-		"liveCasinoDescription": "Erlebe Echtzeit-Casino-Action mit Live-Dealern",
-		"sportsDescription": "Wette auf deine Lieblingsteams und Sportereignisse",
-		"pokerDescription": "Teste deine Fähigkeiten in klassischen Pokerspielen",
-		"lotteryDescription": "Versuche dein Glück bei Lotterie- und Sofortgewinnspielen",
-		"futuresDescription": "Handle und prognostiziere Marktbewegungen",
-		"vrDescription": "Tauche ein in Virtual-Reality-Gaming",
-		"swapDescription": "Tausche Tokens und Kryptowährungen nahtlos",
+		"slotsDescription": "Drehen Sie die Walzen und gewinnen Sie riesige Jackpots",
+		"liveCasinoDescription": "Erleben Sie Casino-Action in Echtzeit mit Live-Dealern",
+		"sportsDescription": "Wetten Sie auf Ihre Lieblingsteams und Sportereignisse",
+		"pokerDescription": "Testen Sie Ihre Fähigkeiten in klassischen Pokerspielen",
+		"lotteryDescription": "Versuchen Sie Ihr Glück bei Lotterie- und Sofortgewinnspielen",
+		"futuresDescription": "Handeln und Marktveränderungen vorhersagen",
+		"vrDescription": "Tauchen Sie ein in Virtual-Reality-Spiele",
+		"swapDescription": "Tauschen Sie Token und Kryptowährungen nahtlos aus",
 		"categories": {
 			"slot": {
-				"title": "Spielautomaten"
+				"title": "Slot-Spiele"
 			},
 			"liveCasino": {
-				"title": "Live-Casino-Spiele"
+				"title": "Live Casino Spiele"
 			},
 			"sports": {
-				"title": "Sportwettenspiele"
+				"title": "Sportwetten-Spiele"
 			},
 			"rng": {
 				"title": "RNG-Spiele"
 			},
 			"other": {
-				"title": "{category}-Spiele"
+				"title": "{category} Spiele"
 			}
 		}
 	},
 	"providers": {
 		"pageTitle": "Alle Spieleanbieter",
-		"searchPlaceholder": "Suche nach einem Anbieter...",
-		"empty": "Keine Anbieter gefunden, die deiner Suche entsprechen.",
-		"logoAlt": "{name}-Logo",
+		"searchPlaceholder": "Anbieter suchen...",
+		"empty": "Keine Anbieter gefunden, die Ihrer Suche entsprechen.",
+		"logoAlt": "{name} Logo",
 		"filteredBy": "Gefiltert nach Kategorie:",
 		"clearFilter": "Filter löschen",
 		"categories": {
 			"slot": {
-				"title": "Anbieter von Spielautomaten"
+				"title": "Slot-Spieleanbieter"
 			},
 			"liveCasino": {
-				"title": "Anbieter von Live-Casinos"
+				"title": "Live Casino Anbieter"
 			},
 			"sports": {
-				"title": "Anbieter von Sportwetten"
+				"title": "Sportwetten-Anbieter"
 			},
 			"rng": {
-				"title": "Anbieter von RNG-Spielen"
+				"title": "RNG-Spieleanbieter"
 			},
 			"other": {
-				"title": "Anbieter von {category}-Spielen"
+				"title": "{category} Spieleanbieter"
 			}
 		}
 	},
 	"hero": {
 		"guest": {
-			"title": "Mach mit",
-			"subtitle": "Melde dich jetzt an und erhalte einen exklusiven Willkommensbonus!",
+			"title": "Werden Sie aktiv",
+			"subtitle": "Melden Sie sich jetzt an und erhalten Sie einen exklusiven Willkommensbonus!",
 			"cta": "Jetzt registrieren"
 		},
 		"welcome": {
@@ -995,54 +1165,54 @@
 		},
 		"jackpot": {
 			"title1": "Mega-Jackpot",
-			"title2": "1.000.000 $",
+			"title2": "$1,000,000",
 			"subtitle": "Jetzt spielen & groß gewinnen",
 			"cta": "Jetzt spielen"
 		},
 		"cards": {
 			"casino": {
-				"title": "Kasino",
+				"title": "Casino",
 				"badge": "590+ SPIELE",
-				"desc": "Genieße {siteName} Originals und andere Casinospiele von Top-Anbietern.",
+				"desc": "Genießen Sie {siteName} Originals und andere Casinospiele von Top-Anbietern.",
 				"link": "Zum Casino"
 			},
 			"slots": {
-				"title": "Spielautomaten",
+				"title": "Slots",
 				"badge": "5292 SPIELE",
-				"desc": "Drehe die Walzen und knacke riesige Jackpots mit unserer Premium-Spielautomaten-Sammlung.",
-				"link": "Zu den Spielautomaten"
+				"desc": "Drehen Sie die Walzen und knacken Sie riesige Jackpots mit unserer Premium-Slot-Kollektion.",
+				"link": "Zu Slots"
 			},
 			"sports": {
 				"title": "Sport",
 				"badge": "3 SPIELE",
-				"desc": "Wette auf deine Lieblingsteams und Sportereignisse mit wettbewerbsfähigen Quoten.",
+				"desc": "Wetten Sie auf Ihre Lieblingsteams und Sportereignisse mit wettbewerbsfähigen Quoten.",
 				"link": "Zum Sport"
 			},
 			"crypto": {
 				"title": "Krypto & Verdienen",
-				"badge": "60 % effektiver Jahreszins",
-				"desc": "Setze, handle und verdiene mit Kryptowährungen zu attraktiven Raten.",
+				"badge": "60% APR",
+				"desc": "Staken, handeln und mit Kryptowährung zu attraktiven Raten verdienen.",
 				"link": "Zu Krypto"
 			}
 		},
 		"layout3": {
 			"headerTitle": "Spiel im Rampenlicht",
-			"headerSubtitle": "Entdecke erstaunliche Spiele und neue Abenteuer in unserer kuratierten Sammlung",
+			"headerSubtitle": "Entdecken Sie erstaunliche Spiele und neue Abenteuer in unserer kuratierten Kollektion",
 			"slider1Title": "Empfohlene Spiele",
-			"slider1Badge": "Auswahl der Mitarbeiter",
+			"slider1Badge": "Mitarbeiter-Tipps",
 			"slider2Title": "Mehr zu entdecken",
 			"slider2Badge": "Im Trend",
 			"featuredGameLabel": "Empfohlenes Spiel"
 		},
 		"ctaExploreGames": "Spiele entdecken",
-		"ctaJoinAffiliate": "Dem Partnerprogramm beitreten"
+		"ctaJoinAffiliate": "Affiliate beitreten"
 	},
 	"betting": {
 		"live": {
 			"winRate": "Gewinnrate",
 			"biggestWin": "Größter Gewinn",
 			"bigWins50": "Große Gewinne (50+)",
-			"recentWins": "Kürzliche Gewinne",
+			"recentWins": "Letzte Gewinne",
 			"header": {
 				"title": "Live-Wettaktivität",
 				"subtitle": "Echtzeit-Wettaktivität • {count} Spiele geladen"
@@ -1052,7 +1222,7 @@
 				"paused": "Pausiert"
 			},
 			"actions": {
-				"pause": "Pausieren",
+				"pause": "Pause",
 				"resume": "Fortsetzen"
 			},
 			"tabs": {
@@ -1069,7 +1239,7 @@
 				"multiplier": "Multiplikator",
 				"profit": "Gewinn"
 			},
-			"empty": "Keine Wetteinträge gefunden"
+			"empty": "Keine Wettaufzeichnungen gefunden"
 		}
 	},
 	"fontChanger": {
@@ -1077,370 +1247,1157 @@
 		"fontSettings": "Schriftarteinstellungen",
 		"current": "Aktuell",
 		"browseGoogleFonts": "Google Fonts durchsuchen",
-		"uploadCustomFont": "Eigene Schriftart hochladen",
-		"quickUploadFontFile": "Schriftartdatei schnell hochladen",
+		"uploadCustomFont": "Benutzerdefinierte Schriftart hochladen",
+		"quickUploadFontFile": "Schneller Upload der Schriftartdatei",
 		"resetToDefault": "Auf Standard zurücksetzen",
 		"googleFonts": {
-			"title": "Google-Schriftarten",
+			"title": "Google Fonts",
 			"searchFonts": "Schriftarten suchen...",
 			"preview": "Vorschau",
-			"previewText": "Der schnelle braune Fuchs springt über den faulen Hund",
+			"previewText": "The quick brown fox jumps over the lazy dog",
 			"alphabetPreview": "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 1234567890",
 			"applyFont": "Schriftart anwenden",
 			"clearPreview": "Vorschau löschen",
-			"previewWith": "Vorschautext mit {font}",
-			"noFontsFound": "Keine Schriftarten gefunden, die mit \"{searchTerm}\" übereinstimmen"
+			"previewWith": "Textvorschau mit {font}",
+			"noFontsFound": "Keine Schriftarten gefunden, die \"{searchTerm}\" entsprechen"
 		},
 		"customUpload": {
-			"title": "Eigene Schriftart hochladen",
-			"description": "Lade deine eigene Schriftartdatei hoch, um die Website anzupassen",
+			"title": "Benutzerdefinierte Schriftart hochladen",
+			"description": "Laden Sie Ihre eigene Schriftartdatei hoch, um die Website anzupassen",
 			"fontFile": "Schriftartdatei",
-			"dragDropArea": "Ziehe deine Schriftartdatei hierher oder",
-			"clickToUpload": "klicke zum Hochladen",
+			"dragDropArea": "Ziehen Sie Ihre Schriftartdatei hierher oder",
+			"clickToUpload": "zum Hochladen klicken",
 			"supportedFormats": "Unterstützte Formate: .woff, .woff2, .ttf, .otf",
-			"maxFileSize": "Maximale Dateigröße: 10MB",
+			"maxFileSize": "Maximale Dateigröße: 10 MB",
 			"fontName": "Schriftartname",
-			"fontNamePlaceholder": "Gib einen Namen für deine Schriftart ein",
-			"previewYourFont": "Vorschau deiner Schriftart",
-			"uploadAndApply": "Hochladen & Anwenden",
+			"fontNamePlaceholder": "Geben Sie einen Namen für Ihre Schriftart ein",
+			"previewYourFont": "Vorschau Ihrer Schriftart",
+			"uploadAndApply": "Hochladen & Schriftart anwenden",
 			"cancel": "Abbrechen",
 			"uploading": "Wird hochgeladen...",
 			"errors": {
-				"invalidFileType": "Bitte lade eine gültige Schriftartdatei hoch (.woff, .woff2, .ttf, .otf)",
-				"fileTooLarge": "Dateigröße überschreitet das 10MB-Limit",
-				"uploadFailed": "Hochladen der Schriftartdatei fehlgeschlagen",
-				"enterFontName": "Bitte wähle eine Schriftartdatei aus und gib einen Namen an",
-				"readFileFailed": "Lesen der Schriftartdatei fehlgeschlagen"
+				"invalidFileType": "Bitte laden Sie eine gültige Schriftartdatei hoch (.woff, .woff2, .ttf, .otf)",
+				"fileTooLarge": "Dateigröße überschreitet das Limit von 10 MB",
+				"uploadFailed": "Fehler beim Hochladen der Schriftartdatei",
+				"enterFontName": "Bitte wählen Sie eine Schriftartdatei aus und geben Sie einen Namen an",
+				"readFileFailed": "Fehler beim Lesen der Schriftartdatei"
 			}
 		},
 		"messages": {
 			"fontAppliedSuccess": "Schriftart \"{fontName}\" erfolgreich angewendet!",
 			"fontUploadedSuccess": "Schriftart \"{fontName}\" erfolgreich hochgeladen und angewendet!",
 			"fontResetSuccess": "Schriftart auf Standard zurückgesetzt",
-			"invalidFileType": "Bitte lade eine gültige Schriftartdatei hoch (.woff, .woff2, .ttf, .otf)",
-			"uploadFailed": "Lesen der Schriftartdatei fehlgeschlagen"
-		}
-	},
-	"bonus": {
-		"title": "Umsatzbonusprogramm",
-		"loginPromptTitle": "Umsatzbonusprogramm",
-		"loginPromptSubtitle": "Melden Sie sich an, um Ihre Bonusstatistiken anzusehen und Ihre Belohnungen zu beanspruchen.",
-		"goHome": "Zur Startseite",
-		"tabs": {
-			"dashboard": "Armaturenbrett",
-			"claims": "Ansprüche",
-			"rates": "Bonusraten",
-			"calculator": "Rechner"
-		},
-		"refresh": "Aktualisieren",
-		"refreshing": "Aktualisieren...",
-		"refreshAllSuccess": "Alle Daten wurden erfolgreich aktualisiert!",
-		"refreshPartial": "Teilweise aktualisiert: {success}/{total} Abschnitte aktualisiert",
-		"refreshFailed": "Daten konnten nicht aktualisiert werden. Bitte versuchen Sie es erneut.",
-		"dashboard": {
-			"title": "Bonus-Dashboard",
-			"subtitle": "Verfolgen Sie Ihre Wetten, Boni und Belohnungserträge",
-			"performanceOverview": "Bonusübersicht",
-			"bonusRatesTitle": "Bonuszinssatzstruktur",
-			"totalIncome": "Gesamter Bonus",
-			"pendingBonus": "Ausstehender Bonus",
-			"lastClaim": "Letzte Beanspruchung",
-			"unclaimedEarnings": "Verfügbar zum Einlösen",
-			"claim": {
-				"title": "Beanspruchung und Abhebung",
-				"points": {
-					"0": "Provisionen stehen nach Berechnung zur Auszahlung bereit.",
-					"1": "Es gibt kein Ablaufdatum für nicht eingeforderte Provisionen – sie sammeln sich an, bis sie eingefordert werden.",
-					"2": "Auszahlungen folgen den Standardregeln der Plattform, wie Mindestauszahlungsbeträgen und Bearbeitungszeiten."
-				}
-			},
-			"claiming": "Wird beansprucht...",
-			"section2": {
-				"title": "Berechtigung",
-				"content": "Um teilzunehmen:"
-			},
-			"section3": {
-				"title": "Landwirtschaftsstufen und -raten",
-				"content": "Boni werden basierend auf Ihren täglichen Wetteinsätzen berechnet:",
-				"noteTitle": "Hinweis",
-				"noteContent": "Stufen werden täglich um 14:00 Uhr UTC ausgewertet. Das Einsatzvolumen des Vortages bestimmt die aktuelle Bonusrate. Die Raten gelten für alle Spieltypen: Slots, Live-Casino und Sport."
-			},
-			"claimButtonTitle": "Beanspruchen"
-		},
-		"claims": {
-			"title": "Anspruchsverlauf",
-			"subtitle": "Verfolgen Sie Ihre Bonusansprüche und Wettaktivitäten",
-			"tableHeaders": {
-				"date": "Wettdatum",
-				"slots": "Spielautomaten",
-				"liveCasino": "Live-Casino",
-				"sports": "Sport",
-				"total": "Gesamt",
-				"tier": "Stufe",
-				"unclaimed": "Nicht beansprucht",
-				"token": "Token"
-			},
-			"tierPrefix": "Stufe",
-			"availableToClaim": "Verfügbar zum Anspruch",
-			"totalBonus": "Gesamter Bonus",
-			"claimed": "Beansprucht",
-			"progressPercentage": "Fortschritt",
-			"progressTitle": "Ihr Fortschritt",
-			"currentTier": "Aktuelle Stufe",
-			"nextTier": "Nächste Stufe",
-			"wagerProgress": "Wettschritt",
-			"totalWagered": "Heute insgesamt gesetzt",
-			"toNextTier": "um die nächste Stufe zu erreichen",
-			"empty": {
-				"title": "Noch keine Bonusansprüche",
-				"subtitle": "Beginne zu spielen, um Boni zu verdienen!"
-			}
-		},
-		"rates": {
-			"title": "Anbau-Stufen und -Raten",
-			"subtitle": "Bonus-Prozentsätze nach Einsatzhöhe und Spielkategorie",
-			"overview": {
-				"title": "Übersicht",
-				"body": "Das Bonus Farming belohnt Benutzer basierend auf ihren Wetten in Slot, Live-Casino, Sportwetten und Lotterie. Boni werden alle 24 Stunden berechnet und können am nächsten Tag nach dem Wetten beansprucht werden. Es gibt sieben Stufen, jede mit unterschiedlichen Raten, abhängig vom Einsatzbetrag."
-			},
-			"eligibility": {
-				"title": "Berechtigung",
-				"content": "Zur Teilnahme:",
-				"points": {
-					"0": "Sie müssen ein aktives Konto haben.",
-					"1": "Setzen Sie Einsätze in Slots, Live-Casino, Sportwetten und Lotterie.",
-					"2": "Erfüllen Sie die Mindestwettanforderungen für jede Stufe."
-				}
-			},
-			"calculation": {
-				"title": "Wie Boni berechnet werden",
-				"desc": "Boni werden alle 24 Stunden basierend auf Ihren Gesamteinsätzen berechnet. Beispiele:",
-				"exampleTitle": "Stufe {tier}:",
-				"wagerIn": "Setze {amount} in {gameType}"
-			},
-			"table": {
-				"tierLevel": "Stufe",
-				"wagerRange": "Einsatzbereich",
-				"slots": "Spielautomaten",
-				"liveCasino": "Live-Casino",
-				"sports": "Sportarten",
-				"tierPrefix": "STUFE",
-				"commissionLevel": "Bonuslevel",
-				"dailyWager": "Tägliches Wettvolumen"
-			},
-			"claim": {
-				"title": "Bonus einfordern und abheben",
-				"points": {
-					"0": "Boni können 24 Stunden nach dem Einsatz beansprucht werden.",
-					"1": "Nicht beanspruchte Boni werden angesammelt und verfallen nicht.",
-					"2": "Der Anspruchs- und Auszahlungsprozess kann je nach plattformspezifischen Richtlinien variieren."
-				}
-			},
-			"system": {
-				"title": "Systemzeit und -operationen",
-				"dailyTimeframeLabel": "Täglicher Zeitrahmen:",
-				"dailyTimeframeValue": "00:00 UTC bis 23:59 UTC (jeden Tag).",
-				"claimDailyLabel": "Täglich beanspruchen:",
-				"claimDailyValue": "Täglich verfügbar um 14:00 UTC (Ihre Ortszeit: {local}).",
-				"note": "Hinweis: Während wir mit Anbietern aus verschiedenen Zeitzonen arbeiten, erfolgen alle Berechnungen nach UTC, um Konsistenz zu gewährleisten und Verwirrung zu vermeiden."
-			},
-			"amendments": {
-				"title": "Änderungen und Disqualifikationen",
-				"body": "Wir können diese Bedingungen jederzeit aktualisieren, und Änderungen treten mit der Veröffentlichung in Kraft. Bei Verdacht auf Systemfehler, Fehlberechnungen oder Betrug behalten wir uns das Recht vor, Boni und Konten nach Bedarf anzupassen oder zu disqualifizieren, um Fairness zu gewährleisten"
-			},
-			"footer": {
-				"schedule": "Bonusplan:",
-				"availableDaily": "Täglich verfügbar um",
-				"localTimeLabel": "(Ihre Ortszeit: {time})"
-			}
-		},
-		"calculator": {
-			"title": "Bonusrechner",
-			"subtitle": "Schätzen Sie Ihre Bonusgewinne basierend auf Ihren Einsatzbeträgen",
-			"interactive": {
-				"title": "Interaktives Werkzeug:",
-				"body": "Geben Sie verschiedene Einsatzbeträge ein, um potenzielle Boni in allen Stufen zu sehen"
-			},
-			"potentialEarnings": "Potenzieller Bonus",
-			"basedOnRate": "Basierend auf {percentage}% Bonusrate",
-			"tier": "Stufe {level}",
-			"commissionLevel": "Bonuslevel {level}",
-			"enterWager": "Einsatzbetrag eingeben (USD)",
-			"wagerPlaceholder": "z. B., 1000",
-			"calcFor": "Bonus für ${amount} Wetteinsatz berechnen",
-			"totalPotential": "Gesamtpotenzieller Bonus:",
-			"combinedAtTier": "Kombinierter Bonus aus allen Spieltypen auf Stufe {level}"
-		},
-		"claimSuccessModal": {
-			"title": "Beanspruchung erfolgreich",
-			"statusCompleted": "Abgeschlossen",
-			"statusOnChain": "On-Chain",
-			"claimAmount": "Beanspruchter Betrag",
-			"logoAlt": "{siteName}-Logo",
-			"backgroundAlt": "Anspruchserfolgshintergrund",
-			"creatingMagic": "Magie wird erstellt...",
-			"downloadShare": "Herunterladen & Teilen",
-			"spreadTheWin": "SPREAD THE WIN",
-			"socialX": "X",
-			"socialFacebook": "Facebook",
-			"socialWhatsApp": "WhatsApp",
-			"socialTelegram": "Telegram",
-			"socialReddit": "Reddit",
-			"socialMore": "Mehr",
-			"shareText": "I just claimed {amount} bonus! Join me: {url}",
-			"referralLinkCopied": "Referral Link kopiert",
-			"referralLinkCopyFailed": "Empfehlungslink konnte nicht kopiert werden",
-			"screenshotFailed": "Screenshot fehlgeschlagen. Bitte versuchen Sie es erneut oder verwenden Sie einen anderen Browser.",
-			"shareTextCopied": "Teilen Sie Text, der in die Zwischenablage kopiert wurde!",
-			"shareFailed": "Teilen fehlgeschlagen. Bitte versuchen Sie es erneut."
+			"invalidFileType": "Bitte laden Sie eine gültige Schriftartdatei hoch (.woff, .woff2, .ttf, .otf)",
+			"uploadFailed": "Fehler beim Lesen der Schriftartdatei"
 		}
 	},
 	"about": {
-		"title": "Über {siteName}",
-		"subtitle": "Eine globale Online-Gaming-Plattform, die Spieler mit hochwertigen Casino- und Wettspielen verbindet",
-		"stats": "[Objekt-Objekt],[Objekt-Objekt],[Objekt-Objekt],[Objekt-Objekt]",
-		"features": "[Objekt-Objekt],[Objekt-Objekt],[Objekt-Objekt],[Objekt-Objekt]",
+		"title": "🎮 Über {siteName}",
+		"subtitle": "Bei {siteName} geht es beim Spielen nicht nur darum, die Zeit zu füllen – es geht um echte Aufregung. Dieser Moment, in dem Sie einen großen Gewinn erzielen, oder wenn einfach alles passt, darum geht es uns.",
+		"meta": {
+			"title": "Über {siteName} | Vertrauenswürdige globale Online-Casino-Plattform",
+			"description": "Erfahren Sie mehr über {siteName}, eine sichere, globale Casino-Plattform, die Slots, Live Casino, Sportwetten und Poker anbietet. Fair, schnell und für echte Spieler gebaut."
+		},
+		"intro": {
+			"paragraph1": "Wir haben {siteName} für Spieler gebaut, die mehr aus ihrem Spiel herausholen wollen. Mehr Geschwindigkeit. Mehr Fairness. Mehr Nervenkitzel. Egal, ob Sie auf Live-Casinospiele, Sportwetten, Poker oder die Jagd nach Jackpots an High-Stakes-Slots stehen, Sie finden alles hier, und Sie können sich darauf verlassen, dass wir die Dinge seriös halten.",
+			"paragraph2": "Von Tag eins an wollten wir, dass sich {siteName} echt anfühlt. Nicht nur eine weitere Website, sondern ein Ort, an dem Sie jedes Mal, wenn Sie sich anmelden, ein sicheres, aufregendes Spielerlebnis erhalten."
+		},
+		"whoWeAre": {
+			"title": "💎 Wer wir sind",
+			"paragraph1": " {siteName} verbindet Spieler aus der ganzen Welt mit Tausenden von Top-Casino- und Wettspielen. Wir arbeiten mit den größten Namen der Branche zusammen – Pragmatic Play, Red Tiger, Microgaming, KA Gaming – damit jedes Spiel reibungslos läuft und gut aussieht, egal ob Sie auf Ihrem Handy oder Laptop spielen.",
+			"paragraph2": "Jeder Spin, jeder Deal, jeder Bonus – alles ist darauf ausgelegt, Ihnen diesen Rausch des echten Spiels zu geben. Und wir halten die Dinge unkompliziert. Keine Tricks, keine hinterhältigen Regeln. Nur ehrliches, klares Spiel."
+		},
+		"mission": {
+			"title": "🎯 Unsere Mission",
+			"paragraph1": "Wir möchten, dass Online-Glücksspiele einfach, sicher und tatsächlich unterhaltsam sind.",
+			"paragraph2": "Wir halten die Dinge persönlich. Schnelle Einzahlungen, schnelle Auszahlungen. Ein sauberes Aussehen, das angenehm für die Augen ist. Support, der tatsächlich hilft, wenn Sie ihn brauchen.|Bei {siteName} stehen Sie immer im Rampenlicht. Ihr Vertrauen treibt uns an, uns ständig zu verbessern."
+		},
+		"whatMakesUsDifferent": {
+			"title": "🏆 Was {siteName} anders macht",
+			"features": [
+				"Über 5.000 Spiele – Slots, Poker, Sport, Live Casino",
+				"Sofortige, zuverlässige Ein- und Auszahlungen",
+				"Jedes Spiel ist RNG-zertifiziert für Fairness",
+				"Ein sauberes Design, das überall funktioniert",
+				"Ständig neue Boni und Aktionen"
+			],
+			"closing": "Wir sind nicht nur hier, um Spiele anzubieten. Wir sind hier, um einen Ort aufzubauen, an dem Sie sich sicher und verbunden fühlen und bereit sind, Ihre nächste Herausforderung anzunehmen."
+		},
+		"fairGaming": {
+			"title": "🌍 Faires & verantwortungsbewusstes Spielen",
+			"paragraph1": "Wir nehmen Fairness ernst. Das bedeutet, sich an internationale Standards zu halten und die Dinge klar zu halten – nur Spieler ab 18 Jahren, keine Ausnahmen.",
+			"paragraph2": "Wir testen jedes Spiel auf Fairness, und unsere Verschlüsselungstechnologie schützt Ihre Informationen."
+		},
+		"promise": {
+			"title": "🤝 Unser Versprechen",
+			"paragraph1": "Wir sind nicht hier, um uns einzufügen. Wir sind hier, um die Messlatte für Online-Glücksspiele höher zu legen.",
+			"paragraph2": "Wenn Sie bei {siteName} spielen, verwenden Sie eine Plattform, die auf Vertrauen und neuen Ideen basiert. Jedes Update, jede neue Funktion oder Partnerschaft dient dazu, Ihr Erlebnis zu verbessern."
+		},
+		"joinCommunity": {
+			"title": "🚀 Treten Sie der {siteName} Community bei",
+			"paragraph1": "Online-Glücksspiele entwickeln sich schnell, und {siteName} ist bereits einen Schritt voraus – schneller, intelligenter und lohnender.",
+			"paragraph2": "Jetzt beitreten. Holen Sie sich Ihren Willkommensbonus. Sehen Sie, warum so viele Spieler auf der ganzen Welt {siteName} zu ihrem bevorzugten Ort machen.",
+			"tagline": "🎯 Spielen. Gewinnen. Erleben. {siteName}."
+		}
+	},
+	"footer": {
 		"sections": {
-			"whoWeAre": {
-				"title": "Über uns",
-				"paragraph1": "{siteName} ist eine globale Online-Gaming-Plattform, die Spieler mit Tausenden von hochwertigen Casino- und Wettspielen verbindet. Wir arbeiten mit den angesehensten Anbietern der Branche zusammen, um ein nahtloses Erlebnis auf jedem Gerät zu bieten.",
-				"paragraph2": "Jedes Feature, jede Drehung und jede ausgeteilte Karte wurde entwickelt, um Sie dem Nervenkitzel des echten Spiels näher zu bringen und gleichzeitig alles transparent und fair zu halten."
+			"company": {
+				"title": "Unternehmen",
+				"links": {
+					"about": "Über uns",
+					"providers": "Anbieter",
+					"affiliate": "Empfehlungsbonus",
+					"bonus": "Umsatzbonus"
+				}
 			},
-			"whatMakesUsDifferent": {
-				"title": "Was uns einzigartig macht"
+			"legal": {
+				"title": "Rechtliches",
+				"links": {
+					"privacy": "Datenschutzrichtlinie",
+					"terms": "Allgemeine Geschäftsbedingungen",
+					"gambling": "Verantwortungsbewusstes Spielen",
+					"faqs": "Häufig gestellte Fragen"
+				}
 			},
-			"providers": {
-				"title": "Vertrauenswürdige Spieleanbieter",
-				"seeAllButton": "Alle Anbieter",
-				"exploreGamesButton": "Spiele entdecken"
+			"games": {
+				"title": "Spiele",
+				"links": {
+					"lobby": "Spiele-Lobby",
+					"slots": "Slots",
+					"live": "Live Casino",
+					"sports": "Sportwetten"
+				}
 			},
-			"missionVisionValues": {
-				"title": "UNSERE MISSION, VISION &amp; WERTE",
-				"items": "[Objekt Objekt],[Objekt Objekt],[Objekt Objekt]"
+			"support": {
+				"title": "Support",
+				"links": {
+					"help": "Hilfe-Center",
+					"contact": "Kontaktieren Sie uns"
+				}
+			}
+		},
+		"seoContent": {
+			"title": "Beschreibung",
+			"paragraph1": "Willkommen bei {siteName}, wo Krypto auf den echten Nervenkitzel von Casinospielen trifft. Wenn Sie etwas Neues in der Welt des Online-Spiels suchen, haben Sie es gerade gefunden. {siteName} wurde für Menschen gebaut, die Geschwindigkeit, Sicherheit und vor allem Spiele wünschen, die tatsächlich unterhalten – egal, ob Sie sich für Slots, Live-Tische, Sportwetten interessieren oder die Krypto-Only-Spiele ausprobieren möchten, die Sie sonst nirgends finden.",
+			"paragraph2": "Alles läuft auf der Blockchain, sodass Sie jedem Ergebnis vertrauen können. Die Ergebnisse sind zufällig, werden sofort überprüft. Keine Tricks. Nur direkte Gewinne und echte Aufregung. High Roller? Strategie-Fan? Vielleicht möchten Sie einfach nur entspannen und ein bisschen spielen. Hier ist für jeden Stil etwas dabei.",
+			"paragraph3": "Der Einstieg könnte nicht einfacher sein – sofort einzahlen, schnell auszahlen lassen, sich mit Ihrer Dynamic.xyz Wallet anmelden und unterwegs einige einzigartige Boni abholen. {siteName} hält die Dinge am Laufen. Keine Wartezeiten. Keine Kopfschmerzen. Egal, wo Sie sich befinden – Kanada, Europa, Asien – unser Multi-Chain-Setup passt genau zu Ihren lokalen Krypto-Optionen.",
+			"paragraph4": "Tausende wissen bereits: Dies ist eine intelligentere Art, online zu spielen. Hier geht es nicht nur darum, Gewinne zu jagen – es geht um Datenschutz, Fairness und darum, Teil einer Community zu sein, die tatsächlich versteht, was Spieler wollen. {siteName} ist nicht nur ein weiteres Online-Casino. Dies ist Web3-Glücksspiel, neu aufgebaut für Menschen, die mehr erwarten.",
+			"tagline": "Sind Sie bereit, intelligenter zu spielen, sicherer zu wetten und vielleicht groß zu gewinnen? Besuchen Sie {siteName}.",
+			"showMore": "Mehr anzeigen",
+			"showLess": "Weniger anzeigen"
+		},
+		"copyright": "© {year} {siteName}. Alle Rechte vorbehalten.",
+		"followUs": "Folgen Sie uns:",
+		"disclaimer": {
+			"line1": "Nur 18+ | Spielen Sie verantwortungsbewusst",
+			"line2": "Glücksspiel kann süchtig machen. Bitte spielen Sie verantwortungsbewusst und setzen Sie nur, was Sie sich leisten können zu verlieren.",
+			"line3": "Wenn Sie der Meinung sind, ein Spielproblem zu haben, suchen Sie bitte Hilfe."
+		},
+		"description": " {siteName} ist Ihre Anlaufstelle für Krypto-Slots, Live-Tische und Sportwetten. Tauchen Sie ein in Blockchain-Spiele, denen Sie tatsächlich vertrauen können, holen Sie sich Ihre Gewinne in Sekundenschnelle direkt in Ihre Wallet und sammeln Sie jeden Tag neue Boni. Es ist schnell, sicher und völlig dezentralisiert – {siteName} hebt das Online-Spielen für Spieler überall auf ein neues Niveau. Spielen Sie smart. Gewinnen Sie groß. Vertrauen Sie {siteName}."
+	},
+	"privacy": {
+		"title": "🔒 Datenschutzrichtlinie — {siteName}",
+		"subtitle": "Wie {siteName} Wallet-Adressen und Krypto-Daten mit SSL, AML und DSGVO-konformem Datenschutz für sicheres Blockchain-Glücksspiel schützt.",
+		"lastUpdated": "Zuletzt aktualisiert: Januar 2025",
+		"meta": {
+			"title": "Datenschutzrichtlinie | {siteName} – Sicherheit des Krypto-Wallet-Casinos",
+			"description": "Erfahren Sie, wie {siteName} Wallet-Adressen und Krypto-Daten mit SSL, AML und DSGVO-konformem Datenschutz für sicheres Blockchain-Glücksspiel schützt.",
+			"keywords": "{siteName} Datenschutzrichtlinie, {siteName} Krypto-Casino, {siteName} Datenschutz, {siteName} Wallet-Sicherheit, Krypto-Glücksspiel-Datenschutz, DSGVO Krypto-Casino, Blockchain-Casino-Richtlinie, {siteName} Spiele sicher, Krypto-Wetten-Datenschutz",
+			"ogTitle": "Datenschutz & Datensicherheit | {siteName} (Krypto-Casino)",
+			"ogDescription": "Erfahren Sie, wie {siteName} Ihre Krypto-Wallet- und Transaktionsdaten mit fortschrittlicher Verschlüsselung und DSGVO-konformem Schutz schützt."
+		},
+		"intro": {
+			"paragraph1": "Bei {siteName} (\" {siteName} \", \"wir\", \"uns\" oder \"unser\") betreiben wir die {siteName} Krypto-Casino-Plattform. Hier erfahren Sie, was mit Ihren persönlichen und Transaktionsdaten geschieht, wenn Sie unsere Website, mobile Apps oder damit verbundene Dienste (\"Dienste\") nutzen.",
+			"paragraph2": " {siteName} ist ein Nur-Krypto-Wallet-Casino. Das bedeutet, alle Ein- und Auszahlungen erfolgen über Kryptowährungs-Wallets. Wir nehmen Ihren Datenschutz ernst und tun unser Bestes, um ihn zu schützen, während wir gleichzeitig die Regeln (wie AML/KYC-Anforderungen) befolgen und die Plattform für alle sicher und fair halten.",
+			"paragraph3": "Wenn Sie {siteName} nutzen, stimmen Sie dieser Datenschutzrichtlinie zu."
+		},
+		"sections": {
+			"scope": {
+				"title": "Umfang & Akzeptanz",
+				"content": "Diese Richtlinie gilt für alle, die {siteName} nutzen. Gelegentlich aktualisieren wir sie. Wenn wir dies tun, wird die neue Richtlinie auf der Website veröffentlicht, und wenn Sie {siteName} danach weiterhin nutzen, bedeutet dies, dass Sie mit den Änderungen einverstanden sind."
 			},
-			"responsibleGaming": {
-				"title": "Verantwortungsvolles Spielen",
-				"description": "Wir glauben, dass Spielen immer verantwortungsbewusst und transparent sein sollte. Aus diesem Grund befolgt {siteName} strenge internationale Glücksspielstandards und Altersrichtlinien.",
-				"points": "[Objekt Objekt],[Objekt Objekt]"
-			},
-			"ourPromise": {
-				"title": "Unser Versprechen,",
-				"paragraph1": "Wir sind nicht hier, um eine weitere Casino-Website zu sein — wir sind hier, um einen neuen Standard für Online-Glücksspiele zu setzen. Wenn Sie auf {siteName} spielen, spielen Sie auf einer Plattform, die auf Vertrauen, Innovation und echtem Wert basiert.",
-				"paragraph2": "Jedes Update, jede Funktion und jede Partnerschaft, die wir hinzufügen, konzentriert sich auf ein Ziel: den Spielern das bestmögliche Spielerlebnis zu bieten."
-			},
-			"description": {
-				"title": "Über {siteName} - Ihr erstklassiges Online-Gaming-Ziel",
-				"intro": {
-					"heading": "Willkommen bei {siteName}",
-					"brand": "{siteName}",
-					"paragraph1": "ist eine führende globale Online-Casino- und Wettplattform, die die Art und Weise, wie Spieler Online-Glücksspiele erleben, revolutioniert hat. Mit der Vision, die umfassendste, sicherste und unterhaltsamste Spieleplattform zu schaffen, hat sich {siteName} schnell zum Anlaufpunkt für Spieler entwickelt, die Premium-Casinospiele, Live-Dealer-Erlebnisse, Sportwetten und vieles mehr suchen.",
-					"paragraph2": "Unsere Plattform kombiniert modernste Technologie mit einer umfangreichen Spielebibliothek und arbeitet mit den weltweit vertrauenswürdigsten Spieleanbietern zusammen, um ein unvergleichliches Unterhaltungserlebnis zu bieten. Egal, ob Sie ein erfahrener Spieler oder neu im Online-Gaming sind, {siteName} bietet für jeden etwas.",
-					"paragraph3": "Wir bei {siteName} glauben, dass Online-Gaming mehr sein sollte als nur Wetten zu platzieren - es sollte eine immersive, sichere und lohnende Erfahrung sein, bei der die Spieler an erster Stelle stehen. Diese Philosophie bestimmt alles, was wir tun, von unserer Spielauswahl bis hin zu unserem Kundensupport."
+			"dataCollection": {
+				"title": "Welche Daten wir sammeln",
+				"intro": "Da wir nur Krypto-Wallets verwenden, spiegeln die von uns gesammelten Daten dies wider. Hier ist, was wir sammeln:",
+				"accountData": {
+					"title": "A. Konto- & Identitätsdaten (bei Bedarf)",
+					"email": "E-Mail (wenn Sie sie angeben), Anzeigename, Konto-ID.",
+					"kyc": "Achtung: Krypto-Wallets sind in der Regel anonym, aber manchmal verlangen Vorschriften, dass wir Ihre Identität abfragen (KYC). Wir fragen nur, wenn es absolut notwendig ist, und wir werden es klarstellen."
 				},
-				"games": {
-					"heading": "Massive Game Collection - Über 5.000 Premium-Titel",
-					"paragraph1": "{siteName} verfügt über eine beeindruckende Bibliothek von",
-					"count": "über 5.000 Premium-Spiele",
-					"paragraph2": "von den führenden Softwareanbietern der Branche. Unsere umfangreiche Sammlung stellt sicher, dass jeder Spielertyp sein perfektes Spiel findet, egal ob Sie klassische Spielautomaten, moderne Video-Slots, Tischspiele, Live-Casinos oder Sportwetten bevorzugen.",
-					"slots": {
-						"title": "Spielautomaten & Video-Spielautomaten:",
-						"description": "Von klassischen 3-Walzen-Spielautomaten bis hin zu funktionsreichen 5-Walzen-Video-Spielautomaten mit atemberaubender Grafik, Bonusrunden und progressiven Jackpots. Genießen Sie beliebte Titel von Anbietern wie Pragmatic Play, NetEnt, Play'n GO und Microgaming."
+				"walletData": {
+					"title": "B. Wallet- & Transaktionsdaten",
+					"addresses": "Die Krypto-Wallet-Adressen, die Sie hier verbinden oder verwenden.",
+					"transactions": "On-Chain-Transaktions-Hashes und Zeitstempel (für Ein- und Auszahlungen).",
+					"metadata": "Transaktionsdetails, die wir zur Abstimmung von Zahlungen und zur Erkennung von Betrug benötigen."
+				},
+				"technicalData": {
+					"title": "C. Technische & Nutzungsdaten",
+					"ip": "IP-Adresse, ungefähre Standort basierend auf IP, Gerätetyp, Browser und Betriebssystem.",
+					"session": "Sitzungsprotokolle, Zeitstempel, gespielte Spiele, Einsätze, Ergebnisse, besuchte Seiten.",
+					"cookies": "Cookies und Analysen, um die Website für Sie besser und reibungsloser zu gestalten."
+				},
+				"securityData": {
+					"title": "D. Sicherheits- & Risikodaten",
+					"fraud": "Betrugssignale, Geräte-Fingerabdrücke, Risikobewertungen von Anti-Betrugs-Partnern.",
+					"disputes": "Aufzeichnungen über Streitigkeiten, Rückbuchungen und Compliance-Prüfungen (falls sie auftreten).",
+					"note": "Wir sammeln keine sensiblen Daten wie Ihre Rasse, Religion oder Gesundheit, es sei denn, das Gesetz verlangt es und Sie geben eine klare Genehmigung."
+				}
+			},
+			"purposes": {
+				"title": "Warum wir Daten sammeln",
+				"intro": "Wir verwenden Ihre Daten nur aus klaren, rechtmäßigen Gründen:",
+				"items": [
+					{
+						"title": "Um den Dienst zu betreiben",
+						"description": "Konten einrichten und verwalten, Wallet-Ein-/Auszahlungen bearbeiten, Gewinne auszahlen."
 					},
-					"liveCasino": {
-						"title": "Live-Casino-Spiele",
-						"description": "Erleben Sie den Nervenkitzel echter Casino-Action mit unseren Live-Dealer-Spielen von Evolution Gaming. Spielen Sie Live-Blackjack, Roulette, Baccarat und Spielshows mit professionellen Dealern in Echtzeit-HD-Streaming."
+					{
+						"title": "Für die Sicherheit",
+						"description": "Missbrauch, Betrug und Geldwäsche erkennen und stoppen."
 					},
-					"sports": {
-						"title": "Sportwetten:",
-						"description": "Umfassende Sportwetten, die die wichtigsten Sportligen weltweit abdecken, darunter Fußball, Basketball, Tennis, Cricket und E-Sport. Genießen Sie wettbewerbsfähige Quoten, Live-Wetten und In-Play-Märkte."
+					{
+						"title": "Um die Dinge reibungslos am Laufen zu halten",
+						"description": "Analysen, Produkt-Upgrades, Kundensupport."
 					},
-					"poker": {
-						"title": "Poker & Tischspiele:",
-						"description": "Mehrere Pokervarianten, darunter Texas Hold'em, Caribbean Stud und Video Poker. Plus klassische Tischspiele wie Blackjack, Roulette und Baccarat mit verschiedenen Regeln und Einsatzlimits."
+					{
+						"title": "Für Marketing (wenn Sie zustimmen)",
+						"description": "Newsletter, Werbeangebote – Sie haben jederzeit die Möglichkeit, Nein zu sagen oder Ihre Meinung später zu ändern."
+					},
+					{
+						"title": "Um die Plattform zu schützen",
+						"description": "und jeglichen Missbrauch zu untersuchen."
 					}
+				],
+				"outro": "Wenn Sie uns eine Zustimmung für etwas wie Marketing geben, können Sie diese jederzeit widerrufen."
+			},
+			"cryptoWallet": {
+				"title": "Krypto-Wallets & On-Chain-Daten",
+				"points": [
+					"Wir speichern Wallet-Adressen und On-Chain-Transaktionsinformationen nur so lange, wie wir sie benötigen, um Ihr Konto gutzuschreiben oder zu belasten, Transaktionen zu prüfen oder gesetzliche Anforderungen zu erfüllen.",
+					"On-Chain-Daten sind von Natur aus öffentlich. Wir können Blockchain-Aktivitäten nicht verbergen, aber wir kombinieren sie mit unseren eigenen Aufzeichnungen, um Ihr Konto genau zu halten.",
+					"Wenn Sie eine verwahrte Wallet (z.B. über einen Drittanbieter) verbinden, stimmen Sie zu, dass dieser Daten mit uns teilt, damit wir Ihre Transaktionen verarbeiten können."
+				]
+			},
+			"dataSharing": {
+				"title": "Wann wir Daten teilen",
+				"intro": "Wir teilen Ihre Informationen nur in wenigen Fällen:",
+				"items": [
+					"Mit Aufsichtsbehörden oder Strafverfolgungsbehörden, wenn das Gesetz dies verlangt oder um illegale Aktivitäten zu stoppen.",
+					"Mit verbundenen Unternehmen oder Dritten bei einer Geschäftsübertragung (wie einer Fusion oder Übernahme) – aber immer mit den richtigen Schutzmaßnahmen.",
+					"Mit Betrugspräventionsnetzwerken, um die Plattform und unsere Benutzer zu schützen."
+				],
+				"noSelling": "Wir verkaufen Ihre persönlichen Daten niemals an Werbetreibende."
+			},
+			"security": {
+				"title": "Sicherheitsmaßnahmen",
+				"intro": "Wir verwenden Sicherheitsmaßnahmen, die Sie erwarten würden:",
+				"items": [
+					"TLS/SSL-Verschlüsselung für Daten während der Übertragung, verschlüsselte Speicherung für sensible Informationen.",
+					"Zugriffskontrollen, detaillierte Protokollierung und rollenbasierte Berechtigungen.",
+					"Regelmäßige Sicherheitsaudits und Schwachstellenprüfungen.",
+					"Multi-Faktor-Authentifizierung (MFA) für unsere Mitarbeiter – und Sie können diese auch für Ihr eigenes Konto aktivieren."
+				],
+				"warning": "Denken Sie daran: Halten Sie Ihre privaten Schlüssel der Wallet und Kontodaten sicher. Wir werden niemals nach Ihren privaten Schlüsseln fragen."
+			},
+			"cookies": {
+				"title": "Cookies & Tracking",
+				"content": "Wir verwenden Cookies und ähnliche Tools, um die Website zum Laufen zu bringen, den Verkehr zu analysieren und (wenn Sie zustimmen) für Marketingzwecke. Sie können Cookies in Ihren Browsereinstellungen steuern, aber wenn Sie essenzielle deaktivieren, funktionieren einige Dinge möglicherweise nicht mehr."
+			},
+			"minAge": {
+				"title": "Kinder & Mindestalter",
+				"content": "Sie müssen 18 Jahre oder älter sein (oder das von Ihrem lokalen Gesetz vorgeschriebene Alter), um {siteName} zu nutzen. Wir blockieren aktiv minderjährige Benutzer und werden alle Daten löschen, wenn wir feststellen, dass sich ein Minderjähriger angemeldet hat."
+			},
+			"breach": {
+				"title": "Benachrichtigung über Verletzung",
+				"content": "Sollte es jemals zu einer Datenverletzung kommen, die Ihre Rechte gefährdet, werden wir Sie und die zuständigen Behörden benachrichtigen, wie das Gesetz es verlangt, und wir werden daran arbeiten, die Dinge schnell zu beheben."
+			},
+			"changes": {
+				"title": "Änderungen dieser Richtlinie",
+				"content": "Wir können diese Datenschutzrichtlinie ändern. Wenn es ein großes Update gibt, werden wir es auf der Website veröffentlichen und Sie direkt informieren, wenn es sinnvoll ist."
+			},
+			"contact": {
+				"title": "Kontakt",
+				"intro": "Haben Sie Fragen oder Wünsche?",
+				"link": "🌐 https://{siteDomain}"
+			}
+		}
+	},
+	"terms": {
+		"title": "Allgemeine Geschäftsbedingungen",
+		"subtitle": "Benutzervereinbarung und Plattformregeln",
+		"lastUpdated": "Januar 2025",
+		"intro": {
+			"paragraph1": "Durch die Registrierung oder Verbindung Ihrer Wallet auf www.{siteDomain} gehen Sie eine verbindliche Vereinbarung mit {siteName} N.V. ein.",
+			"paragraph2": "Wenn Sie mit diesen Bedingungen nicht einverstanden sind, greifen Sie nicht auf unsere Website zu, nutzen Sie sie nicht und registrieren Sie sich nicht darauf. Lesen Sie diese Bedingungen sorgfältig durch. Wenn Sie sich über Ihre Rechte oder Pflichten unsicher sind, konsultieren Sie vor der Nutzung der Website einen Rechtsberater in Ihrer Gerichtsbarkeit."
+		},
+		"sections": {
+			"ownership": {
+				"title": "1. {siteName} Eigentum",
+				"content1": " {siteName} ist Eigentum von {siteName} N.V. ('{siteName}', 'Wir', 'Unser', 'Uns') und wird von dieser betrieben.",
+				"content2": " {siteName} ist ein Nur-Krypto-Wallet-Casino. Alle Einzahlungen, Einsätze und Auszahlungen werden über die Kryptowährungs-Wallets der Benutzer abgewickelt. Wir unterstützen die Wallet-Anmeldung über Dynamic.xyz und kompatible Wallet-Konnektoren (z.B. WalletConnect / MetaMask)."
+			},
+			"notice": {
+				"title": "2. Wichtiger Hinweis",
+				"content1": "2.1 Durch die Registrierung oder Verbindung Ihrer Wallet auf www.{siteDomain} (die 'Website') gehen Sie eine verbindliche Vereinbarung mit {siteName} N.V. ein und stimmen Folgendem zu: (i) diesen Allgemeinen Geschäftsbedingungen; (ii) unserer Datenschutzrichtlinie; (iii) unserer Cookie-Richtlinie; (iv) unseren Affiliate-Bedingungen; und (v) unserer Richtlinie zum verantwortungsbewussten Spielen.",
+				"content2": "2.2 Wenn Sie mit diesen Bedingungen nicht einverstanden sind, greifen Sie nicht auf unsere Website zu, nutzen Sie sie nicht und registrieren Sie sich nicht darauf.",
+				"content3": "2.3 Lesen Sie diese Bedingungen sorgfältig durch. Wenn Sie sich über Ihre Rechte oder Pflichten unsicher sind, konsultieren Sie vor der Nutzung der Website einen Rechtsberater in Ihrer Gerichtsbarkeit."
+			},
+			"general": {
+				"title": "3. Allgemeine Geschäftsbedingungen",
+				"items": [
+					"Bei der Registrierung oder Wallet-Verbindung stimmen Sie ('Benutzer', 'Spieler', 'Sie' oder 'Ihr') zu, alle Regeln und Richtlinien von {siteName} einzuhalten.",
+					"Diese Vereinbarung ist ein rechtsverbindlicher Vertrag zwischen Ihnen und {siteName}.",
+					"Diese Bedingungen treten in Kraft, sobald Sie Ihre Wallet verbinden und die Website nutzen.",
+					" {siteName} behält sich das Recht vor, diese Bedingungen jederzeit zu ändern oder zu aktualisieren. Änderungen werden auf der Website veröffentlicht; die fortgesetzte Nutzung stellt eine Akzeptanz dar.",
+					"Im Falle eines Konflikts haben diese Bedingungen Vorrang vor allen anderen Regeln, Aktionen oder externen Materialien.",
+					"Nur die englische Version dieser Bedingungen ist rechtsverbindlich. Übersetzungen dienen nur der Bequemlichkeit."
+				]
+			},
+			"account": {
+				"title": "4. Konto, Wallet-Anmeldung & Sicherheit",
+				"intro": " {siteName} verwendet Dynamic.xyz für die Wallet-basierte Authentifizierung und Sicherheitsmaßnahmen, um Ihr Konto zu schützen.",
+				"walletLogin": {
+					"title": "4.1 Wallet-Anmeldung (Dynamic.xyz)",
+					"items": [
+						" {siteName} verwendet Dynamic.xyz (oder andere unterstützte Konnektoren) für die Wallet-basierte Anmeldung und Authentifizierung. Durch das Verbinden einer Wallet bestätigen Sie, dass Sie der rechtmäßige Eigentümer dieser Wallet sind, und ermächtigen {siteName}, diese Wallet als Ihr Konto anzuerkennen.",
+						"Wir fordern niemals Ihre privaten Schlüssel an. Sie müssen Ihre Wallet-Anmeldedaten und Ihr Gerät sicher aufbewahren. {siteName} ist nicht verantwortlich für Verluste, die durch kompromittierte Wallets oder durchgesickerte private Schlüssel entstehen."
+					]
 				},
-				"technology": {
-					"heading": "Blockchain-Technologie der nächsten Generation",
-					"paragraph1": "Was {siteName} auszeichnet, ist unsere Implementierung von",
-					"blockchain": "fortschrittliche Blockchain-Technologie",
-					"paragraph2": "die vollständige Transparenz, Sicherheit und Fairness bei jeder Transaktion und jedem Spielergebnis gewährleistet. Unsere Blockchain-basierte Plattform bietet eine sofortige Überprüfung der Spielergebnisse, so dass es für niemanden - auch nicht für uns - möglich ist, die Ergebnisse zu manipulieren.",
-					"paragraph3": "Diese Technologie ermöglicht blitzschnelle Ein- und Auszahlungen von Kryptowährungen, die oft innerhalb von Minuten statt Tagen abgeschlossen werden. Spieler können mit verschiedenen Kryptowährungen wie Bitcoin, Ethereum, USDT und mehr mit minimalen Gebühren und maximaler Sicherheit einzahlen und abheben.",
-					"paragraph4": "Unsere Infrastruktur basiert auf redundanten Servern an mehreren Standorten, um sicherzustellen,",
-					"uptime": "99,9 % Uptime",
-					"paragraph5": "und ununterbrochenes Spielerlebnis. Selbst bei Verkehrsspitzen oder Wartungsarbeiten sorgen unsere Lastausgleichssysteme für einen reibungslosen Spielablauf ohne Verzögerungen oder Ausfallzeiten."
+				"registration": {
+					"title": "4.2 Registrierungsdetails",
+					"items": [
+						"Sie werden möglicherweise aufgefordert, Kontaktdaten (E-Mail, Benutzername) für die Kontokommunikation anzugeben. Sie müssen genaue Informationen bereitstellen und diese aktuell halten.",
+						"Sie sind verantwortlich für alle Handlungen, die mit Ihrer verbundenen Wallet ausgeführt werden."
+					]
 				},
 				"security": {
-					"heading": "Sicherheit & Fairplay - Zertifiziert und verifiziert",
-					"paragraph1": "Spielersicherheit und Fairplay sind bei {siteName} nicht verhandelbar. Alle unsere Spiele werden strengen Tests unterzogen und von unabhängigen Testagenturen zertifiziert. Jeder Spielautomat, jedes Tischspiel und jedes zufällige Ergebnis wird von",
-					"rng": "zertifizierte Zufallszahlengeneratoren (RNG)",
-					"paragraph2": "sicherstellung völlig fairer und unvorhersehbarer Ergebnisse.",
-					"paragraph3": "Wir verwenden eine militärische SSL-Verschlüsselung, um alle Datenübertragungen zwischen Ihrem Gerät und unseren Servern zu schützen. Ihre persönlichen Daten, finanziellen Daten und Spielaktivitäten werden verschlüsselt und sicher gespeichert und entsprechen den internationalen Datenschutzstandards, einschließlich der Einhaltung der DSGVO.",
-					"paragraph4": "Unsere Plattform wird regelmäßig von Cybersicherheitsunternehmen von Drittanbietern überprüft, um potenzielle Schwachstellen zu identifizieren und zu beheben. Wir implementieren auch die Zwei-Faktor-Authentifizierung (2FA) für alle Benutzerkonten und fügen eine zusätzliche Schutzebene gegen unbefugten Zugriff hinzu."
-				},
-				"global": {
-					"heading": "Globale Reichweite - Spieler auf der ganzen Welt bedienen",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 18 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"players": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 17 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 16 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"countries": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 15 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 15 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 14 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"payments": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 13 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"instant": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 11 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"mobile": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 09 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 08 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"support": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"availability": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 06 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 05 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 04 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"responsible": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 04 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 03 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 02 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"whyChoose": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 02 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"point1": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 01 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 00 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point2": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 35 MINUTES 00 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 59 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point3": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 58 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 57 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point4": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 56 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 56 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point5": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 55 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 55 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point6": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 54 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 53 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					}
-				},
-				"closing": {
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 52 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"tagline": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 34 MINUTES 52 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					"title": "4.3 Mehrere Konten & Sicherheit",
+					"items": [
+						"Pro Person ist nur ein Konto gestattet. Mehrere Konten oder Versuche, Grenzen zu umgehen, können zur Kontosperrung und zum Verfall von Geldern führen.",
+						"Aktivieren Sie alle angebotenen Plattform-Sicherheitsfunktionen (z. B. 2FA für zugehörige Dienste) und sichern Sie Ihre eigene Wallet.",
+						"Benachrichtigen Sie den Support sofort, wenn Sie unbefugten Zugriff vermuten."
+					]
 				}
+			},
+			"eligibility": {
+				"title": "5. Berechtigung & Benutzergarantien",
+				"intro": "5.1 Sie versichern und garantieren Folgendes:",
+				"items": [
+					"Sie sind mindestens 18 Jahre alt (oder das gesetzliche Mindestalter für Glücksspiele in Ihrer Gerichtsbarkeit).",
+					"Es ist Ihnen gesetzlich gestattet, Online-Krypto-Glücksspieldienste an Ihrem Standort zu nutzen.",
+					"Sie sind der rechtmäßige Eigentümer der Wallet, die Sie verbinden.",
+					"Sie werden keine VPNs oder Standort-Spoofing verwenden, um regionale Beschränkungen zu umgehen.",
+					"Sie werden den Dienst nicht für illegale oder kommerzielle Zwecke nutzen.",
+					"Sie akzeptieren, dass der Wert von Kryptowährung schwanken kann und Sie das gesamte Marktrisiko tragen."
+				],
+				"outro": "5.2 Wenn Sie diese Garantien verletzen, kann {siteName} den Zugriff sperren oder beenden und Gelder einbehalten, soweit dies gesetzlich zulässig ist."
+			},
+			"restricted": {
+				"title": "6. Eingeschränkte Gerichtsbarkeiten",
+				"content1": "6.1 {siteName} akzeptiert keine Spieler aus Gerichtsbarkeiten, in denen Krypto-Glücksspiel verboten oder eingeschränkt ist. Dazu gehören, sind aber nicht beschränkt auf:",
+				"content2": "Vereinigte Staaten (und US-Territorien), Vereinigtes Königreich, Frankreich, Niederlande, Spanien, Deutschland, Australien, Österreich, Komoren, Iran, Nordkorea, Sudan, Syrien und jede Gerichtsbarkeit, die auf FATF-Blacklists aufgeführt ist.",
+				"content3": "6.2 Der Versuch, auf den Dienst aus einer eingeschränkten Gerichtsbarkeit zuzugreifen, einschließlich über VPN oder Proxy, stellt eine Verletzung dieser Bedingungen dar und kann zur Kontoschließung und zum Verfall von Geldern führen."
+			},
+			"crypto": {
+				"title": "7. Krypto-Ein- & Auszahlungen",
+				"policy": {
+					"title": "7.1 Nur-Krypto-Richtlinie",
+					"items": [
+						" {siteName} akzeptiert Ein- und Auszahlungen nur in unterstützten Kryptowährungen (z.B. BTC, ETH, USDT, TRX, BNB). Es werden keine Fiat-, Karten- oder Banküberweisungseinzahlungen akzeptiert.",
+						"Alle Einzahlungen müssen von Wallets stammen, die Sie kontrollieren. Einzahlungen von Wallets Dritter sind untersagt."
+					]
+				},
+				"deposits": {
+					"title": "7.2 Einzahlungen",
+					"items": [
+						"Einzahlungen werden nach den erforderlichen Blockchain-Bestätigungen gutgeschrieben. Netzwerk- (Gas-) Gebühren sind von Ihnen zu zahlen.",
+						" {siteName} kann Einzahlungen ablehnen oder rückgängig machen, die von gesperrten Adressen oder eingeschränkten Quellen zu stammen scheinen."
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 Auszahlungen",
+					"items": [
+						"Auszahlungen werden an die von Ihnen angegebene Wallet-Adresse verarbeitet. {siteName} kann von Ihnen verlangen, die Ziel-Wallet vor der Verarbeitung zu bestätigen.",
+						"Sie müssen über ausreichend freies Guthaben verfügen, um eine Auszahlung zu decken. Auszahlungen können verzögert werden, um mutmaßlichen Missbrauch oder ungewöhnliche Aktivitäten zu untersuchen."
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 Rückbuchungen & Stornierungen",
+					"items": [
+						"Krypto-Transaktionen sind On-Chain endgültig. Wenn {siteName} Verluste aufgrund von Rückbuchungen oder Stornierungen von Drittanbietern erleidet (selten bei On-Chain-Transaktionen), behalten wir uns das Recht vor, Beträge zurückzufordern oder Verwaltungsgebühren zu erheben."
+					]
+				}
+			},
+			"kyc": {
+				"title": "8. Keine routinemäßige Identitätsprüfung (Kein KYC)",
+				"content1": "8.1 {siteName} führt keine routinemäßige Identitätsprüfung (KYC) als Bedingung für normales Spielen durch. Benutzer können eine Wallet über Dynamic.xyz verbinden und ohne Vorlage von Identitätsdokumenten mit dem Spielen beginnen.",
+				"content2": "8.2 Ungeachtet des Vorstehenden behält sich {siteName} das Recht vor, Informationen anzufordern oder Transaktionen auszusetzen, wenn dies erforderlich ist, um:",
+				"items": [
+					"Einer rechtmäßigen Anordnung der zuständigen Behörden nachzukommen:",
+					"Betrug, Geldwäsche oder andere illegale Aktivitäten zu verhindern, zu untersuchen oder zu beheben",
+					"Oder die Sicherheit und Integrität der Plattform zu schützen."
+				],
+				"content3": "8.3 Wenn Sie sich weigern, solche Informationen bereitzustellen, wenn dies gesetzlich vorgeschrieben ist, kann {siteName} Ihren Zugriff einschränken oder Ihr Konto schließen und Auszahlungen verzögern oder zurückhalten, soweit dies gesetzlich zulässig ist."
+			},
+			"fairPlay": {
+				"title": "9. Faires Spielen, Verbotenes Verhalten & Sicherheit",
+				"intro": "Sie dürfen nicht:",
+				"items": [
+					"Bots, Skripte, automatisierte Spielwerkzeuge oder nicht autorisierte Software verwenden.",
+					"Mit anderen Spielern kolludieren oder Spielergebnisse manipulieren.",
+					"Mehrere Konten erstellen, um Boni oder Aktionen auszunutzen.",
+					"Versuchen, On-Chain-Transaktionen rückgängig zu machen oder zu manipulieren.",
+					"Spielfehler oder Plattform-Schwachstellen ausnutzen."
+				],
+				"outro1": "Konten, bei denen festgestellt wird, dass sie betrügen, kolludieren oder die Plattform ausnutzen, können gesperrt, geschlossen oder Guthaben verfallen werden.",
+				"outro2": " {siteName} implementiert technische und verhaltensbezogene Überwachung, um die Integrität der Plattform zu schützen."
+			},
+			"bonuses": {
+				"title": "10. Boni & Aktionen",
+				"items": [
+					"Alle Bonusangebote und Aktionen unterliegen spezifischen Bonusbedingungen, die bei jedem Angebot angegeben sind.",
+					"Bonusmissbrauch (einschließlich mehrerer Konten oder schneller Bonuswechsel) kann zur Ablehnung, Stornierung oder zum Verfall von Boni und zur Schließung von Konten führen.",
+					"Bonus-Wettanforderungen müssen erfüllt werden, bevor aus Bonus abgeleitete Gelder ausgezahlt werden, wie pro Aktion angegeben."
+				]
+			},
+			"playingRules": {
+				"title": "11. Spielregeln & Spielabrechnung",
+				"items": [
+					"Wetten werden erst angenommen, wenn Sie eine Bestätigung auf dem Bildschirm erhalten. Wetten, die mit unzureichendem Guthaben platziert wurden, sind ungültig.",
+					"Die internen Protokolle von {siteName} und die Blockchain-Aufzeichnungen sind maßgebend im Falle von Streitigkeiten.",
+					"Wenn ein Ereignis abgesagt, ausgesetzt oder anderweitig kompromittiert wird, wird {siteName} Wetten gemäß den veröffentlichten Spiel- und Marktregeln abrechnen oder ungültig machen.",
+					"Für nachweislich faire Spiele stehen Verifizierungstools und Server-Seeds (falls zutreffend) pro Spiel zur Verfügung; Serverprotokolle sind endgültig."
+				]
+			},
+			"errors": {
+				"title": "12. Fehler, Unterbrechungen & Limits",
+				"intro": " {siteName} haftet nicht für Verluste, die verursacht werden durch:",
+				"items": [
+					"Internet- oder Geräteausfälle",
+					"Blockchain-Verzögerungen, Forks oder Netzwerküberlastungen",
+					"Softwarefehler oder Ausfälle von Drittanbieterdiensten"
+				],
+				"outro1": " {siteName} behält sich das Recht vor, Wetten für ungültig zu erklären, Guthaben anzupassen oder Transaktionen zu stornieren, wenn Fehler oder Ausnutzungen festgestellt werden.",
+				"outro2": "Wir können Einsatzlimits, maximale Gewinne und andere Kontrollen festlegen, um Benutzer und die Plattform zu schützen."
+			},
+			"suspension": {
+				"title": "13. Sperrung, Schließung & Umgang mit Geldern",
+				"intro": " {siteName} kann Konten sperren oder schließen, wenn:",
+				"items": [
+					"Bedingungen verletzt werden",
+					"Missbrauch, Betrug oder verdächtiges Verhalten festgestellt wird",
+					"Gesetzliche oder behördliche Verpflichtungen dies erfordern"
+				],
+				"outro1": "Bei Kontoschließung können ausstehende Einsätze storniert werden und verbleibende Gelder werden gemäß geltendem Recht und Plattformrichtlinien behandelt.",
+				"outro2": " {siteName} kann Gelder einbehalten, wenn dies zur Beilegung von Streitigkeiten, zur Einhaltung rechtmäßiger Anfragen oder zur Behebung von Verlusten erforderlich ist."
+			},
+			"responsibleGaming": {
+				"title": "14. Verantwortungsbewusstes Spielen",
+				"items": [
+					" {siteName} fördert verantwortungsbewusstes Glücksspiel. Sie können Folgendes beantragen: Selbstausschluss, Einzahlungslimits oder Vorübergehende Sperrung.",
+					"Wenn Sie Glücksspielschäden vermuten, besuchen Sie {siteDomain} für sofortige Hilfe.",
+					"Glücksspiel von Minderjährigen (unter 18 Jahren oder dem lokalen gesetzlichen Alter) ist strengstens untersagt. Konten, die Minderjährigen gehören, werden geschlossen und Gelder gemäß der Richtlinie behandelt."
+				]
+			},
+			"ip": {
+				"title": "15. Geistiges Eigentum",
+				"content1": "Alle Marken, Logos, Website-Inhalte, Software und Spiel-Assets auf {siteName} sind Eigentum von {siteName} oder an {siteName} lizenziert. Unbefugtes Kopieren, Scraping oder Weiterverbreiten ist untersagt.",
+				"content2": "Ihnen wird eine begrenzte, widerrufliche Lizenz für den Zugriff auf den Dienst nur zur persönlichen Unterhaltung gewährt."
+			},
+			"liability": {
+				"title": "16. Haftungsbeschränkung",
+				"items": [
+					"Soweit gesetzlich zulässig, haftet {siteName} nicht für indirekte, spezielle, Folge- oder zufällige Verluste, einschließlich entgangener Gewinne oder Opportunitätskosten.",
+					"Unsere Gesamthaftung für alle Ansprüche im Zusammenhang mit diesen Bedingungen übersteigt nicht den Wert Ihrer letzten Einzahlung oder einen durch geltendes Recht festgelegten Betrag.",
+					"Nichts in diesen Bedingungen beschränkt die Haftung für Tod oder Personenschäden, die durch Fahrlässigkeit verursacht wurden, wenn das geltende Recht eine solche Beschränkung untersagt."
+				]
+			},
+			"disputes": {
+				"title": "17. Streitbeilegung & Geltendes Recht",
+				"content": "Im Falle eines Streits besuchen Sie {siteDomain}. Wir bemühen uns, Beschwerden schnell zu lösen; eskalieren Sie bei Bedarf an das Management."
+			},
+			"amendments": {
+				"title": "18. Änderungen",
+				"content": " {siteName} kann diese Bedingungen jederzeit ändern. Aktualisierte Bedingungen werden auf der Website veröffentlicht. Die fortgesetzte Nutzung stellt eine Akzeptanz dar."
+			},
+			"miscellaneous": {
+				"title": "19. Verschiedenes",
+				"items": [
+					"Diese Bedingungen stellen die gesamte Vereinbarung zwischen Ihnen und {siteName} in Bezug auf den Dienst dar.",
+					"Sollte sich eine Klausel als nicht durchsetzbar erweisen, wird sie auf das erforderliche Mindestmaß geändert, und die übrigen Bestimmungen bleiben in Kraft.",
+					"Sie dürfen Ihre Rechte aus diesen Bedingungen nicht abtreten. {siteName} kann Rechte und Pflichten abtreten oder untervergeben."
+				]
+			},
+			"contact": {
+				"title": "20. Kontakt",
+				"intro": "Für Support, Beschwerden oder rechtliche Hinweise:",
+				"supportEmail": "Allgemeiner Support: Besuchen Sie {siteDomain}",
+				"affiliateEmail": "Affiliate-Anfragen: Besuchen Sie {siteDomain}",
+				"registeredOffice": "Eingetragener Sitz: {siteDomain} N.V., Heelsumstraat 51, Willemstad, Curaçao"
+			}
+		}
+	},
+	"responsibleGambling": {
+		"title": "Verantwortungsbewusstes Spielen bei {siteName}",
+		"subtitle": "Bei {siteName} möchten wir, dass das Spielen sicher und unterhaltsam ist und Sie jederzeit davon loskommen können. Es geht uns darum, das Gleichgewicht zu halten – damit Sie zum Vergnügen spielen und nicht, um Geld zu verdienen oder Ihre Finanzen in Ordnung zu bringen.",
+		"lastUpdated": "Zuletzt aktualisiert: Januar 2025",
+		"intro": {
+			"title": "Verantwortungsbewusstes Spielen bei {siteName}",
+			"paragraph1": "Bei {siteName} möchten wir, dass das Spielen sicher und unterhaltsam ist und Sie jederzeit davon loskommen können. Es geht uns darum, das Gleichgewicht zu halten – damit Sie zum Vergnügen spielen und nicht, um Geld zu verdienen oder Ihre Finanzen in Ordnung zu bringen.",
+			"paragraph2": "Wenn Sie unter 18 Jahre alt sind oder das gesetzliche Mindestalter in Ihrer Region noch nicht erreicht haben, dürfen Sie unsere Plattform nicht nutzen. Wir nehmen das sehr ernst."
+		},
+		"mission": {
+			"title": "Unsere Mission",
+			"paragraph1": "Wir glauben an klares, ehrliches und sicheres Spielen. {siteName} existiert, um Ihnen zu helfen, kluge Entscheidungen zu treffen und zu verhindern, dass Glücksspiel zu einem Problem wird.",
+			"paragraph2": "Darauf legen wir Wert:",
+			"beliefs": {
+				"0": "Glücksspiel ist Unterhaltung. Es ist kein Weg, um reich zu werden.",
+				"1": "Kennen Sie sich selbst, setzen Sie Grenzen und übertreiben Sie es nicht.",
+				"2": "Wir bieten Ihnen Tools und Ressourcen, um Ihnen zu helfen, die Kontrolle zu behalten."
+			}
+		},
+		"understanding": {
+			"title": "Was verantwortungsbewusstes Spielen wirklich bedeutet",
+			"paragraph1": "Online-Glücksspiele sind heutzutage überall. Das macht es einfacher, den Überblick über Zeit, Geld oder sogar den Grund, warum Sie überhaupt angefangen haben zu spielen, zu verlieren.|Verantwortungsbewusstes Spielen bedeutet, Ihre Grenzen zu kennen, wachsam zu bleiben und die Dinge nicht außer Kontrolle geraten zu lassen.",
+			"paragraph2": "Ein paar Dinge, an die Sie denken sollten:",
+			"tips": {
+				"0": "Spielen Sie zum Spaß, nicht für den Profit.",
+				"1": "Versuchen Sie nicht, Verluste zurückzugewinnen. Machen Sie Pausen, wenn Sie sie brauchen.",
+				"2": "Legen Sie ein Ausgaben- und Zeitlimit für sich selbst fest und halten Sie sich daran.",
+				"3": "Spielen Sie niemals, wenn Sie müde, gestresst oder verärgert sind.",
+				"4": "Verwenden Sie kein Geld, das für Rechnungen oder andere Bedürfnisse bestimmt ist.",
+				"5": "Wenn es keinen Spaß mehr macht, hören Sie auf."
+			}
+		},
+		"selfCheck": {
+			"title": "Kurzer Selbst-Check: Haben Sie noch die Kontrolle?",
+			"intro": "Seien Sie ehrlich zu sich selbst:",
+			"questions": {
+				"0": "Verlieren Sie beim Spielen den Überblick über die Zeit?",
+				"1": "Hat es Ihre Beziehungen oder Arbeit beeinträchtigt?",
+				"2": "Sind Sie verärgert, wenn Sie nicht spielen können?",
+				"3": "Spielen Sie, um Langeweile oder Stress zu entfliehen?",
+				"4": "Haben Sie Geld oder Krypto geliehen, nur um weiterzuspielen?",
+				"5": "Jagen Sie Verlusten hinterher und setzen mehr, um zu versuchen, sie zurückzugewinnen?"
+			},
+			"warning": "Wenn Sie mehrere Fragen mit „Ja“ beantwortet haben, ist es Zeit, Ihre Spielweise zu überdenken und vielleicht Hilfe zu suchen."
+		},
+		"tools": {
+			"title": "Wie {siteName} Ihnen hilft, auf dem richtigen Weg zu bleiben",
+			"intro": "Wir möchten, dass Sie Spaß haben, aber wir möchten auch, dass Sie sicher bleiben.|Hier ist, was wir anbieten:",
+			"selfExclusion": {
+				"title": "Selbstausschluss",
+				"description": "Brauchen Sie eine Pause? Sie können beantragen, Ihr Konto vorübergehend oder für immer zu sperren. Während dieser Zeit können Sie nicht spielen oder Werbe-E-Mails erhalten. Kontaktieren Sie uns einfach unter {siteName} und wir werden es vertraulich behandeln."
+			},
+			"coolingOff": {
+				"title": "Bedenkzeiten",
+				"paragraph1": "Wenn Sie das Gefühl haben, dass die Dinge außer Kontrolle geraten, machen Sie eine Pause für 24 Stunden, eine Woche oder einen Monat. Während dieser Zeit können Sie Ihre Wallet nicht zum Spielen verbinden.",
+				"periods": {
+					"0": "24 Stunden",
+					"1": "1 Woche",
+					"2": "1 Monat"
+				},
+				"paragraph2": "Während dieser Zeit können Sie Ihre Wallet nicht zum Spielen verbinden."
+			},
+			"depositAwareness": {
+				"title": "Einzahlungs- & Verlustbewusstsein",
+				"description": "Da alles über Krypto-Wallets läuft, können Sie alle Ihre Einzahlungen und Wetten direkt auf der Blockchain sehen. Behalten Sie Ihre Aktivität im Auge, damit Sie immer wissen, wo Sie stehen."
+			}
+		},
+		"underagePrevention": {
+			"title": "Schutz Minderjähriger",
+			"paragraph1": "Kein Glücksspiel für Personen unter 18 Jahren. Das meinen wir ernst.",
+			"tipsTitle": "Eltern und Erziehungsberechtigte, hier sind einige Tipps:",
+			"tips": {
+				"0": "Verwenden Sie Passwörter oder sperren Sie Ihre Geräte.",
+				"1": "Speichern Sie Wallet-Informationen nicht auf gemeinsam genutzten Computern oder Telefonen.",
+				"2": "Melden Sie sich immer ab, wenn Sie weggehen.",
+				"3": "Verwenden Sie Tools wie NetNanny oder GamBlock, um Glücksspiel-Websites zu blockieren.",
+				"4": "Überprüfen Sie die Online-Aktivitäten Ihrer Kinder."
+			},
+			"warning": "Wenn wir feststellen, dass ein Minderjähriger spielt, werden wir sein Konto schließen und alle Gewinne stornieren."
+		},
+		"helpSupport": {
+			"title": "Benötigen Sie Unterstützung? Sie sind nicht allein",
+			"intro": "Wenn Glücksspiel beginnt, Ihre Stimmung, Beziehungen oder Finanzen zu beeinträchtigen, wenden Sie sich bitte an uns. Hier sind einige Organisationen, die helfen können, egal wo Sie sich befinden:",
+			"organizations": {
+				"0": {
+					"name": "GamCare",
+					"url": "https://www.gamcare.org.uk"
+				},
+				"1": {
+					"name": "Gambling Therapy",
+					"url": "https://www.gamblingtherapy.org"
+				},
+				"2": {
+					"name": "Gamblers Anonymous",
+					"url": "https://www.gamblersanonymous.org"
+				},
+				"3": {
+					"name": "National Council on Problem Gambling",
+					"url": "https://www.ncpgambling.org"
+				},
+				"4": {
+					"name": "GamTalk",
+					"url": "https://www.gamtalk.org"
+				}
+			},
+			"paragraph2": "Sie bieten Selbsttests, Live-Chat und lokale Selbsthilfegruppen an."
+		},
+		"principles": {
+			"title": "Wie {siteName} verantwortungsbewusst bleibt",
+			"intro": "Wir halten uns an diese Prinzipien:",
+			"items": {
+				"0": {
+					"title": "Transparenz",
+					"description": "Jedes Spiel ist nachweislich fair und Blockchain-verifiziert."
+				},
+				"1": {
+					"title": "Sicherheit",
+					"description": "Ihre Sitzungen sind immer durch die Dynamic.xyz Wallet-Anmeldung geschützt. Keine Passwörter, kein KYC."
+				},
+				"2": {
+					"title": "Autonomie",
+					"description": "Sie haben die Kontrolle. Trennen Sie die Verbindung jederzeit."
+				},
+				"3": {
+					"title": "Aufklärung",
+					"description": "Wir helfen Ihnen, Risiken zu verstehen und halten Sie informiert."
+				},
+				"4": {
+					"title": "Community-Support",
+					"description": "Unser Team ist rund um die Uhr für Sie da."
+				}
+			}
+		},
+		"playSmart": {
+			"title": "Abschließende Gedanken",
+			"intro": "Glücksspiel sollte angenehm, sozial und ausgewogen sein. Bevor Sie spielen, legen Sie ein Zeitlimit fest. Jagen Sie keinen Verlusten hinterher und spielen Sie nicht, wenn Sie verärgert sind. Betrachten Sie Gewinne als einen schönen Bonus, nicht als Gehaltsscheck. Spielen Sie klug und scheuen Sie sich nicht, um Hilfe zu bitten, wenn Sie sie brauchen.",
+			"reminders": {
+				"0": "Glücksspiel sollte angenehm, sozial und ausgewogen sein.",
+				"1": "Bevor Sie spielen, legen Sie ein Zeitlimit fest.",
+				"2": "Jagen Sie keinen Verlusten hinterher und spielen Sie nicht, wenn Sie verärgert sind.",
+				"3": "Betrachten Sie Gewinne als einen schönen Bonus, nicht als Gehaltsscheck.",
+				"4": "Spielen Sie klug und scheuen Sie sich nicht, um Hilfe zu bitten, wenn Sie sie brauchen."
+			}
+		},
+		"finalMessage": {
+			"paragraph1": "Lassen Sie das Glücksspiel nicht auf Ihre Arbeit oder Ihre Beziehungen übergreifen. Wenn es keinen Spaß mehr macht, hören Sie einfach auf.|Bei {siteName} kümmern wir uns um Ihr Wohlbefinden. Treffen Sie kluge Entscheidungen, spielen Sie sicher und passen Sie auf sich auf.",
+			"paragraph2": "Lassen Sie das Glücksspiel nicht auf Ihre Arbeit oder Ihre Beziehungen übergreifen. Wenn es keinen Spaß mehr macht, hören Sie einfach auf.",
+			"contact": "Brauchen Sie Hilfe, Rat oder möchten Sie eine Pause machen? Kontaktieren Sie uns jederzeit unter {siteName}."
+		}
+	},
+	"faqs": {
+		"title": "Häufig gestellte Fragen (FAQ) – {siteName}",
+		"subtitle": "Hier finden Sie Antworten auf häufig gestellte Fragen zu {siteName}. Erfahren Sie mehr über die Wallet-Anmeldung, Ein- und Auszahlungen, faires Spielen und Blockchain-Transparenz.",
+		"lastUpdated": "Zuletzt aktualisiert: Januar 2025",
+		"introTitle": "Häufig gestellte Fragen (FAQ) {siteName}",
+		"intro": "Willkommen im FAQ-Center von {siteName}, wo Sie schnelle Antworten auf die häufigsten Fragen zu unserer Krypto-Gaming-Plattform finden.|Wenn Sie Ihre Antwort hier nicht finden, steht Ihnen unser 24/7-Support-Team jederzeit unter {siteName} zur Verfügung.",
+		"categories": {
+			"accountRegistration": {
+				"title": "🔹 Konto & Registrierung",
+				"items": {
+					"0": {
+						"question": "1. Kann ich mich auf Ihrer Website registrieren?",
+						"answer": "Ja – die Registrierung steht jedem offen, der 18 Jahre oder älter ist (oder das gesetzliche Volljährigkeitsalter in Ihrer Gerichtsbarkeit).|Sie müssen auch sicherstellen, dass Online-Glücksspiel in Ihrem Wohnsitzland legal ist.|Bei {siteName} benötigen Sie keine traditionellen Anmeldungen oder Passwörter.|Verbinden Sie einfach Ihre Wallet über Dynamic.xyz, um sofort mit dem Spielen zu beginnen.|👉 Für rechtliche und Compliance-Details lesen Sie bitte unsere Allgemeinen Geschäftsbedingungen.",
+						"reminder": "Zur Erinnerung: Glücksspiel kann süchtig machen. Bitte spielen Sie verantwortungsbewusst und kennen Sie Ihre Grenzen."
+					},
+					"1": {
+						"question": "2. Was passiert, wenn ich meine Anmeldedaten vergesse?",
+						"answer": "Da {siteName} die Wallet-basierte Anmeldung über Dynamic.xyz verwendet, verwenden Sie keine traditionellen Passwörter.|Um erneut auf Ihr Konto zuzugreifen:|Verbinden Sie Ihre Wallet erneut mit derselben Adresse, die Sie ursprünglich verwendet haben.|Wenn Sie den Zugriff auf Ihre Wallet verloren haben, stellen Sie sie bitte mit Ihrer Seed-Phrase oder Backup-Methode wieder her (wir speichern oder kontrollieren niemals private Schlüssel aus Sicherheitsgründen).| {siteName} kann Ihre Wallet-Anmeldedaten aus Sicherheitsgründen nicht zurücksetzen oder wiederherstellen."
+					},
+					"2": {
+						"question": "3. Kann ich meinen Benutzernamen oder die verknüpfte Wallet ändern?",
+						"answer": "Ihr {siteName}-Konto ist an Ihre Wallet-Adresse gebunden.|Um eine neue Wallet zu verwenden, verbinden Sie einfach eine neue – beachten Sie jedoch, dass Ihr früherer Spielverlauf, VIP-Status und Boni nicht automatisch übertragen werden."
+					},
+					"3": {
+						"question": "4. Wie werde ich VIP-Mitglied?",
+						"answer": "Unser VIP-Programm ist exklusiv und nur auf Einladung.|Während Sie spielen und sich in der {siteName}-Community engagieren, wird Ihre Spielaktivität automatisch verfolgt.|Sobald Sie berechtigt sind, erhalten Sie eine offizielle Einladung per In-Plattform-Benachrichtigung oder direkter Nachricht vom {siteName}-Team.|VIPs genießen Zugang zu exklusiven Boni, schnelleren Auszahlungen und personalisierten Prämien."
+					}
+				}
+			},
+			"depositsWithdrawals": {
+				"title": "💰 Ein- & Auszahlungen",
+				"items": {
+					"0": {
+						"question": "5. Wie zahle ich Krypto ein?",
+						"answer": "Das Einzahlen auf {siteName} ist schnell und einfach:|Gehen Sie zu \"Meine Wallet\" auf dem Haupt-Dashboard.|Wählen Sie Einzahlen und Ihre bevorzugte Kryptowährung (z.B. BTC, ETH, USDT, BNB).|Kopieren Sie Ihre eindeutige Wallet-Adresse oder scannen Sie den QR-Code.|Senden Sie Ihre Krypto von Ihrer externen Wallet an die angezeigte Adresse.|Sobald die Blockchain-Bestätigung erfolgt ist, erscheint Ihr Guthaben automatisch in Ihrem {siteName}-Guthaben.|⚠️ Stellen Sie sicher, dass Sie nur unterstützte Kryptowährungen an das korrekte Adressnetzwerk senden (z.B. ERC20, TRC20, BEP20)."
+					},
+					"1": {
+						"question": "6. Wie lange dauern Einzahlungen?",
+						"answer": "Einzahlungen werden normalerweise innerhalb von 5–10 Minuten bestätigt, abhängig von der Blockchain-Überlastung und den Transaktionsgebühren.|Sie können den Fortschritt Ihrer Transaktion über einen Block-Explorer (z.B. Etherscan.io oder BscScan.com) anhand Ihres Transaktions-Hashs (TXID) verfolgen.|In der Regel sind mindestens 3 Bestätigungen erforderlich, damit Ihre Einzahlung in Ihrem Guthaben erscheint."
+					},
+					"2": {
+						"question": "7. Was ist der Mindestauszahlungsbetrag?",
+						"answer": "Der Mindestauszahlungsbetrag hängt von der von Ihnen verwendeten Kryptowährung ab.|Jede Coin hat ihre eigene Netzwerkgebühr und ihren Mindestschwellenwert.|Diese Werte werden im Abschnitt Auszahlung unter \"Meine Wallet\" angezeigt."
+					},
+					"3": {
+						"question": "8. Wie zahle ich meine Gewinne aus?",
+						"answer": "Um Ihre Krypto auszuzahlen:|Gehen Sie zu \"Meine Wallet\" → \"Auszahlen\".|Geben Sie Ihre Ziel-Wallet-Adresse und den Betrag ein, den Sie auszahlen möchten.|Überprüfen Sie Ihre Adresse und den Netzwerktyp, bevor Sie bestätigen.|Auszahlungen werden sofort verarbeitet, können aber je nach Aktivität des Blockchain-Netzwerks einige Minuten dauern.|💡 Stellen Sie immer sicher, dass Ihre empfangende Wallet das Netzwerk unterstützt, von dem Sie auszahlen."
+					},
+					"4": {
+						"question": "9. Was passiert, wenn meine Transaktion verzögert wird?",
+						"answer": "Blockchain-Transaktionen können manchmal länger dauern, aufgrund von Netzwerküberlastung oder niedrigen Gasgebühren.|Wenn Ihre Ein- oder Auszahlung nicht angekommen ist:|Überprüfen Sie Ihre TXID im Blockchain-Explorer.|Bestätigen Sie, dass Sie das richtige Netzwerk und die richtige Adresse verwendet haben.|Wenn mehr als eine Stunde vergangen ist, kontaktieren Sie {siteName} mit Ihrer TXID und Ihren Wallet-Details."
+					}
+				}
+			},
+			"gamesSecurity": {
+				"title": "🎮 Spiele, Fairness & Sicherheit",
+				"items": {
+					"0": {
+						"question": "10. Sind {siteName}-Spiele fair?",
+						"answer": "Ja – alle {siteName}-Spiele werden mit nachweislich fairer Technologie und verifizierten Smart Contracts erstellt.|Jede Wette, jedes Ergebnis und jede Auszahlung kann unabhängig auf der Blockchain überprüft werden.|Wir arbeiten mit transparenten, manipulationssicheren Systemen, die echte Zufälligkeit, Fairness und Offenheit garantieren.|Sie können Spielergebnisse und Transaktionsnachweise On-Chain über Etherscan oder den jeweiligen Netzwerk-Explorer einsehen."
+					},
+					"1": {
+						"question": "11. Was soll ich tun, wenn ein Spiel einfriert oder abstürzt?",
+						"answer": "Wenn Ihr Spiel nicht mehr reagiert:|Aktualisieren Sie die Seite.|Löschen Sie Ihren Browser-Cache und verbinden Sie Ihre Wallet erneut.|Wenn das Problem weiterhin besteht, wenden Sie sich an unser Support-Team über den Live-Chat oder {siteName}.|Unser Team hilft Ihnen bei der Wiederherstellung Ihrer Spielsitzung oder Ihres Guthabens, falls betroffen."
+					},
+					"2": {
+						"question": "12. Kann ich mehr als eine Wallet oder ein Konto verwenden?",
+						"answer": "Nein.|Jedem Spieler ist es gestattet, eine Wallet-Adresse als primäres Konto zu verwenden.|Die Erstellung mehrerer Konten oder die Verwendung von Wallet-Rotationen, um Boni zu beanspruchen oder Aktionen auszunutzen, ist strengstens untersagt und kann zur Kontoeinschränkung oder zum Verfall des Guthabens führen."
+					},
+					"3": {
+						"question": "13. Sind meine persönlichen Daten sicher?",
+						"answer": "Ja.|Bei {siteName} sammeln wir keine persönlichen Daten – Ihre Identität bleibt sicher.|Der Zugriff wird über Dynamic.xyz verwaltet, was vollständigen Datenschutz und Eigentum an Ihrer digitalen Identität gewährleistet.|Es werden keine Passwörter, E-Mails oder sensiblen Dokumente von uns gespeichert.|Ihre Wallet = Ihre Identität."
+					}
+				}
+			},
+			"responsibleGambling": {
+				"title": "🧠 Verantwortungsbewusstes Spielen",
+				"items": {
+					"0": {
+						"question": "14. Unterstützt {siteName} verantwortungsbewusstes Glücksspiel?",
+						"answer": "Absolut.|Wir ermutigen jeden Spieler, das Spielen in Maßen zu genießen.|Sie können jederzeit eine Selbstausschlussfrist oder eine Bedenkzeit beantragen, indem Sie {siteName} kontaktieren.|Wenn Sie das Gefühl haben, dass Glücksspiel Ihr Leben beeinträchtigt, besuchen Sie unsere Seite für verantwortungsbewusstes Spielen, um Ressourcen und Hilfsorganisationen zu finden."
+					},
+					"1": {
+						"question": "15. Was soll ich tun, wenn ich ein Spielproblem vermute?",
+						"answer": "Wenn Sie das Gefühl haben, dass Ihr Glücksspiel außer Kontrolle gerät, machen Sie eine Pause und wenden Sie sich an eine dieser vertrauenswürdigen Organisationen, um vertrauliche Hilfe zu erhalten:|GamCare: https://www.gamcare.org.uk|Gambling Therapy: https://www.gamblingtherapy.org|Gamblers Anonymous: https://www.gamblersanonymous.org|Unser Support-Team kann Sie auch bei der sicheren Einschränkung des Zugriffs auf Ihr Konto beraten."
+					}
+				}
+			},
+			"blockchainTransparency": {
+				"title": "🧩 Blockchain-Transparenz",
+				"paragraph1": " {siteName} wird von Ethereum-basierten Smart Contracts betrieben, wodurch sichergestellt wird, dass jede Wette, Transaktion und Prämie transparent auf der Kette aufgezeichnet wird.|Alle Daten und die Spiellogik sind unveränderlich und überprüfbar, was echte Fairness und Prüfbarkeit garantiert.|Sie können alle Plattform-Transaktionen über öffentliche Explorer wie:|Etherscan.io|BscScan.com|TronScan.org verfolgen.",
+				"paragraph2": "",
+				"explorersTitle": "",
+				"guarantee": "Dies garantiert, dass keinerlei Manipulation oder Voreingenommenheit auftreten kann – niemals."
+			},
+			"needMoreHelp": {
+				"title": "💬 Brauchen Sie mehr Hilfe?",
+				"intro": "Unser Support-Team steht Ihnen rund um die Uhr zur Verfügung über:",
+				"contactTitle": "",
+				"liveChat": "💬 Live-Chat (verfügbar in Ihrem mit der Wallet verbundenen Dashboard)"
+			}
+		}
+	},
+	"termsAndConditions": {
+		"title": "⚖️ Allgemeine Geschäftsbedingungen — {siteName}",
+		"subtitle": "Lesen Sie die Allgemeinen Geschäftsbedingungen von {siteName}. Erfahren Sie mehr über Wallet-Anmeldung (Dynamic.xyz), Krypto-Einzahlungen, Auszahlungen, faires Spielen und Richtlinien für verantwortungsbewusstes Glücksspiel.",
+		"lastUpdated": "Zuletzt aktualisiert: Januar 2025",
+		"meta": {
+			"title": "Allgemeine Geschäftsbedingungen | {siteName} – Krypto-Casino-Regeln",
+			"description": "Lesen Sie die Allgemeinen Geschäftsbedingungen von {siteName}. Erfahren Sie mehr über Wallet-Anmeldung (Dynamic.xyz), Krypto-Einzahlungen, Auszahlungen, faires Spielen und Richtlinien für verantwortungsbewusstes Glücksspiel.",
+			"keywords": "{siteName} Allgemeine Geschäftsbedingungen, {siteName} Krypto-Casino-Regeln, Dynamic.xyz Wallet-Anmeldung, {siteName} Auszahlungsrichtlinie, {siteName} faires Spielen",
+			"h1": "Allgemeine Geschäftsbedingungen – {siteName} Krypto-Wallet-Casino",
+			"ogTitle": "Allgemeine Geschäftsbedingungen | {siteName} (Krypto-Wallet-Casino)",
+			"ogDescription": "Überprüfen Sie die Allgemeinen Geschäftsbedingungen von {siteName}. Verstehen Sie die Dynamic.xyz Wallet-Anmeldung, Krypto-Einzahlungen, Auszahlungen und Plattformregeln."
+		},
+		"sections": {
+			"ownership": {
+				"number": "1",
+				"title": "{siteName} EIGENTUM",
+				"clauses": [
+					{
+						"number": "1.1",
+						"content": " {siteName} ist Eigentum von {siteName} N.V. (\" {siteName} \", \"Wir\", \"Unser\", \"Uns\") und wird von dieser betrieben."
+					},
+					{
+						"number": "1.2",
+						"content": " {siteName} ist ein Nur-Krypto-Wallet-Casino. Alle Einzahlungen, Einsätze und Auszahlungen werden über die Kryptowährungs-Wallets der Benutzer abgewickelt. Wir unterstützen die Wallet-Anmeldung über Dynamic.xyz und kompatible Wallet-Konnektoren (z.B. WalletConnect / MetaMask)."
+					}
+				]
+			},
+			"importantNotice": {
+				"number": "2",
+				"title": "WICHTIGER HINWEIS",
+				"clauses": [
+					{
+						"number": "2.1",
+						"content": "Durch die Registrierung oder Verbindung Ihrer Wallet auf www.{siteDomain} (die \"Website\") gehen Sie eine verbindliche Vereinbarung mit {siteName} N.V. ein und stimmen Folgendem zu: (i) diesen Allgemeinen Geschäftsbedingungen; (ii) unserer Datenschutzrichtlinie; (iii) unserer Cookie-Richtlinie; (iv) unseren Affiliate-Bedingungen; und (v) unserer Richtlinie zum verantwortungsbewussten Spielen."
+					},
+					{
+						"number": "2.2",
+						"content": "Wenn Sie mit diesen Bedingungen nicht einverstanden sind, greifen Sie nicht auf unsere Website zu, nutzen Sie sie nicht und registrieren Sie sich nicht darauf."
+					},
+					{
+						"number": "2.3",
+						"content": "Lesen Sie diese Bedingungen sorgfältig durch. Wenn Sie sich über Ihre Rechte oder Pflichten unsicher sind, konsultieren Sie vor der Nutzung der Website einen Rechtsberater in Ihrer Gerichtsbarkeit."
+					}
+				]
+			},
+			"generalTerms": {
+				"number": "3",
+				"title": "ALLGEMEINE GESCHÄFTSBEDINGUNGEN",
+				"clauses": [
+					{
+						"number": "3.1",
+						"content": "Bei der Registrierung oder Wallet-Verbindung stimmen Sie (\"Benutzer\", \"Spieler\", \"Sie\" oder \"Ihr\") zu, alle Regeln und Richtlinien von {siteName} einzuhalten."
+					},
+					{
+						"number": "3.2",
+						"content": "Diese Vereinbarung ist ein rechtsverbindlicher Vertrag zwischen Ihnen und {siteName}."
+					},
+					{
+						"number": "3.3",
+						"content": "Diese Bedingungen treten in Kraft, sobald Sie Ihre Wallet verbinden und die Website nutzen."
+					},
+					{
+						"number": "3.4",
+						"content": " {siteName} behält sich das Recht vor, diese Bedingungen jederzeit zu ändern oder zu aktualisieren. Änderungen werden auf der Website veröffentlicht; die fortgesetzte Nutzung stellt eine Akzeptanz dar."
+					},
+					{
+						"number": "3.5",
+						"content": "Im Falle eines Konflikts haben diese Bedingungen Vorrang vor allen anderen Regeln, Aktionen oder externen Materialien."
+					},
+					{
+						"number": "3.6",
+						"content": "Nur die englische Version dieser Bedingungen ist rechtsverbindlich. Übersetzungen dienen nur der Bequemlichkeit."
+					}
+				]
+			},
+			"accountSecurity": {
+				"number": "4",
+				"title": "KONTO, WALLET-ANMELDUNG & SICHERHEIT",
+				"walletLogin": {
+					"title": "4.1 Wallet-Anmeldung (Dynamic.xyz)",
+					"clauses": [
+						{
+							"number": "4.1.1",
+							"content": " {siteName} verwendet Dynamic.xyz (oder andere unterstützte Konnektoren) für die Wallet-basierte Anmeldung und Authentifizierung. Durch das Verbinden einer Wallet bestätigen Sie, dass Sie der rechtmäßige Eigentümer dieser Wallet sind, und ermächtigen {siteName}, diese Wallet als Ihr Konto anzuerkennen."
+						},
+						{
+							"number": "4.1.2",
+							"content": "Wir fordern niemals Ihre privaten Schlüssel an. Sie müssen Ihre Wallet-Anmeldedaten und Ihr Gerät sicher aufbewahren. {siteName} ist nicht verantwortlich für Verluste, die durch kompromittierte Wallets oder durchgesickerte private Schlüssel entstehen."
+						}
+					]
+				},
+				"registration": {
+					"title": "4.2 Registrierungsdetails",
+					"clauses": [
+						{
+							"number": "4.2.1",
+							"content": "Sie werden möglicherweise aufgefordert, Kontaktdaten (E-Mail, Benutzername) für die Kontokommunikation anzugeben. Sie müssen genaue Informationen bereitstellen und diese aktuell halten."
+						},
+						{
+							"number": "4.2.2",
+							"content": "Sie sind verantwortlich für alle Handlungen, die mit Ihrer verbundenen Wallet ausgeführt werden."
+						}
+					]
+				},
+				"multipleAccounts": {
+					"title": "4.3 Mehrere Konten & Sicherheit",
+					"clauses": [
+						{
+							"number": "4.3.1",
+							"content": "Pro Person ist nur ein Konto gestattet. Mehrere Konten oder Versuche, Grenzen zu umgehen, können zur Kontosperrung und zum Verfall von Geldern führen."
+						},
+						{
+							"number": "4.3.2",
+							"content": "Aktivieren Sie alle angebotenen Plattform-Sicherheitsfunktionen (z. B. 2FA für zugehörige Dienste) und sichern Sie Ihre eigene Wallet."
+						},
+						{
+							"number": "4.3.3",
+							"content": "Benachrichtigen Sie den Support sofort, wenn Sie unbefugten Zugriff vermuten."
+						}
+					]
+				}
+			},
+			"eligibility": {
+				"number": "5",
+				"title": "BERECHTIGUNG & BENUTZERGARANTIEN",
+				"clauses": [
+					{
+						"number": "5.1",
+						"content": "Sie versichern und garantieren Folgendes:|• Sie sind mindestens 18 Jahre alt (oder das gesetzliche Mindestalter für Glücksspiele in Ihrer Gerichtsbarkeit).|• Es ist Ihnen gesetzlich gestattet, Online-Krypto-Glücksspieldienste an Ihrem Standort zu nutzen.|• Sie sind der rechtmäßige Eigentümer der Wallet, die Sie verbinden.|• Sie werden keine VPNs oder Standort-Spoofing verwenden, um regionale Beschränkungen zu umgehen.|• Sie werden den Dienst nicht für illegale oder kommerzielle Zwecke nutzen.|• Sie akzeptieren, dass der Wert von Kryptowährung schwanken kann und Sie das gesamte Marktrisiko tragen."
+					},
+					{
+						"number": "5.2",
+						"content": "Wenn Sie diese Garantien verletzen, kann {siteName} den Zugriff sperren oder beenden und Gelder einbehalten, soweit dies gesetzlich zulässig ist."
+					}
+				]
+			},
+			"restrictedJurisdictions": {
+				"number": "6",
+				"title": "EINGESCHRÄNKTE GERICHTSBARKEITEN",
+				"clauses": [
+					{
+						"number": "6.1",
+						"content": " {siteName} akzeptiert keine Spieler aus Gerichtsbarkeiten, in denen Krypto-Glücksspiel verboten oder eingeschränkt ist. Dazu gehören, sind aber nicht beschränkt auf:|Vereinigte Staaten (und US-Territorien), Vereinigtes Königreich, Frankreich, Niederlande, Spanien, Deutschland, Australien, Österreich, Komoren, Iran, Nordkorea, Sudan, Syrien und jede Gerichtsbarkeit, die auf FATF-Blacklists aufgeführt ist."
+					},
+					{
+						"number": "6.2",
+						"content": "Der Versuch, auf den Dienst aus einer eingeschränkten Gerichtsbarkeit zuzugreifen, einschließlich über VPN oder Proxy, stellt eine Verletzung dieser Bedingungen dar und kann zur Kontoschließung und zum Verfall von Geldern führen."
+					}
+				]
+			},
+			"cryptoTransactions": {
+				"number": "7",
+				"title": "KRYPTO-EIN- & AUSZAHLUNGEN",
+				"cryptoOnly": {
+					"title": "7.1 Nur-Krypto-Richtlinie",
+					"clauses": [
+						{
+							"number": "7.1.1",
+							"content": " {siteName} akzeptiert Ein- und Auszahlungen nur in unterstützten Kryptowährungen (z.B. BTC, ETH, USDT, TRX, BNB). Es werden keine Fiat-, Karten- oder Banküberweisungseinzahlungen akzeptiert."
+						},
+						{
+							"number": "7.1.2",
+							"content": "Alle Einzahlungen müssen von Wallets stammen, die Sie kontrollieren. Einzahlungen von Wallets Dritter sind untersagt."
+						}
+					]
+				},
+				"deposits": {
+					"title": "7.2 Einzahlungen",
+					"clauses": [
+						{
+							"number": "7.2.1",
+							"content": "Einzahlungen werden nach den erforderlichen Blockchain-Bestätigungen gutgeschrieben. Netzwerk- (Gas-) Gebühren sind von Ihnen zu zahlen."
+						},
+						{
+							"number": "7.2.2",
+							"content": " {siteName} kann Einzahlungen ablehnen oder rückgängig machen, die von gesperrten Adressen oder eingeschränkten Quellen zu stammen scheinen."
+						}
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 Auszahlungen",
+					"clauses": [
+						{
+							"number": "7.3.1",
+							"content": "Auszahlungen werden an die von Ihnen angegebene Wallet-Adresse verarbeitet. {siteName} kann von Ihnen verlangen, die Ziel-Wallet vor der Verarbeitung zu bestätigen."
+						},
+						{
+							"number": "7.3.2",
+							"content": "Sie müssen über ausreichend freies Guthaben verfügen, um eine Auszahlung zu decken. Auszahlungen können verzögert werden, um mutmaßlichen Missbrauch oder ungewöhnliche Aktivitäten zu untersuchen."
+						}
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 Rückbuchungen & Stornierungen",
+					"clauses": [
+						{
+							"number": "7.4.1",
+							"content": "Krypto-Transaktionen sind On-Chain endgültig. Wenn {siteName} Verluste aufgrund von Rückbuchungen oder Stornierungen von Drittanbietern erleidet (selten bei On-Chain-Transaktionen), behalten wir uns das Recht vor, Beträge zurückzufordern oder Verwaltungsgebühren zu erheben."
+						}
+					]
+				}
+			},
+			"noKyc": {
+				"number": "8",
+				"title": "KEINE ROUTINEMÄSSIGE IDENTITÄTSPRÜFUNG (KEIN KYC)",
+				"clauses": [
+					{
+						"number": "8.1",
+						"content": " {siteName} führt keine routinemäßige Identitätsprüfung (KYC) als Bedingung für normales Spielen durch. Benutzer können eine Wallet über Dynamic.xyz verbinden und ohne Vorlage von Identitätsdokumenten mit dem Spielen beginnen."
+					},
+					{
+						"number": "8.2",
+						"content": "Ungeachtet von Klausel 8.1 behält sich {siteName} das Recht vor, Informationen anzufordern oder Transaktionen auszusetzen, wenn dies erforderlich ist, um:|• Einer rechtmäßigen Anordnung der zuständigen Behörden nachzukommen;|• Betrug, Geldwäsche oder andere illegale Aktivitäten zu verhindern, zu untersuchen oder zu beheben; oder|• Die Sicherheit und Integrität der Plattform zu schützen."
+					},
+					{
+						"number": "8.3",
+						"content": "Wenn Sie sich weigern, solche Informationen bereitzustellen, wenn dies gesetzlich vorgeschrieben ist, kann {siteName} Ihren Zugriff einschränken oder Ihr Konto schließen und Auszahlungen verzögern oder zurückhalten, soweit dies gesetzlich zulässig ist."
+					}
+				]
+			},
+			"fairPlay": {
+				"number": "9",
+				"title": "FAIRES SPIELEN, VERBOTENES VERHALTEN & SICHERHEIT",
+				"clauses": [
+					{
+						"number": "9.1",
+						"content": "Sie dürfen nicht:|• Bots, Skripte, automatisierte Spielwerkzeuge oder nicht autorisierte Software verwenden.|• Mit anderen Spielern kolludieren oder Spielergebnisse manipulieren.|• Mehrere Konten erstellen, um Boni oder Aktionen auszunutzen.|• Versuchen, On-Chain-Transaktionen rückgängig zu machen oder zu manipulieren.|• Spielfehler oder Plattform-Schwachstellen ausnutzen."
+					},
+					{
+						"number": "9.2",
+						"content": "Konten, bei denen festgestellt wird, dass sie betrügen, kolludieren oder die Plattform ausnutzen, können gesperrt, geschlossen oder Guthaben verfallen werden."
+					},
+					{
+						"number": "9.3",
+						"content": " {siteName} implementiert technische und verhaltensbezogene Überwachung, um die Integrität der Plattform zu schützen."
+					}
+				]
+			},
+			"bonuses": {
+				"number": "10",
+				"title": "BONI & AKTIONEN",
+				"clauses": [
+					{
+						"number": "10.1",
+						"content": "Alle Bonusangebote und Aktionen unterliegen spezifischen Bonusbedingungen, die bei jedem Angebot angegeben sind."
+					},
+					{
+						"number": "10.2",
+						"content": "Bonusmissbrauch (einschließlich mehrerer Konten oder schneller Bonuswechsel) kann zur Ablehnung, Stornierung oder zum Verfall von Boni und zur Schließung von Konten führen."
+					},
+					{
+						"number": "10.3",
+						"content": "Bonus-Wettanforderungen müssen erfüllt werden, bevor aus Bonus abgeleitete Gelder ausgezahlt werden, wie pro Aktion angegeben."
+					}
+				]
+			},
+			"gameRules": {
+				"number": "11",
+				"title": "SPIELREGELN & SPIELABRECHNUNG",
+				"clauses": [
+					{
+						"number": "11.1",
+						"content": "Wetten werden erst angenommen, wenn Sie eine Bestätigung auf dem Bildschirm erhalten. Wetten, die mit unzureichendem Guthaben platziert wurden, sind ungültig."
+					},
+					{
+						"number": "11.2",
+						"content": "Die internen Protokolle von {siteName} und die Blockchain-Aufzeichnungen sind maßgebend im Falle von Streitigkeiten."
+					},
+					{
+						"number": "11.3",
+						"content": "Wenn ein Ereignis abgesagt, ausgesetzt oder anderweitig kompromittiert wird, wird {siteName} Wetten gemäß den veröffentlichten Spiel- und Marktregeln abrechnen oder ungültig machen."
+					},
+					{
+						"number": "11.4",
+						"content": "Für nachweislich faire Spiele stehen Verifizierungstools und Server-Seeds (falls zutreffend) pro Spiel zur Verfügung; Serverprotokolle sind endgültig."
+					}
+				]
+			},
+			"errors": {
+				"number": "12",
+				"title": "FEHLER, UNTERBRECHUNGEN & LIMITS",
+				"clauses": [
+					{
+						"number": "12.1",
+						"content": " {siteName} haftet nicht für Verluste, die verursacht werden durch:|• Internet- oder Geräteausfälle;|• Blockchain-Verzögerungen, Forks oder Netzwerküberlastungen;|• Softwarefehler oder Ausfälle von Drittanbieterdiensten."
+					},
+					{
+						"number": "12.2",
+						"content": " {siteName} behält sich das Recht vor, Wetten für ungültig zu erklären, Guthaben anzupassen oder Transaktionen zu stornieren, wenn Fehler oder Ausnutzungen festgestellt werden."
+					},
+					{
+						"number": "12.3",
+						"content": "Wir können Einsatzlimits, maximale Gewinne und andere Kontrollen festlegen, um Benutzer und die Plattform zu schützen."
+					}
+				]
+			},
+			"suspension": {
+				"number": "13",
+				"title": "SPERRUNG, SCHLIESSUNG & UMGANG MIT GELDERN",
+				"clauses": [
+					{
+						"number": "13.1",
+						"content": " {siteName} kann Konten sperren oder schließen, wenn:|• Bedingungen verletzt werden;|• Missbrauch, Betrug oder verdächtiges Verhalten festgestellt wird;|• Gesetzliche oder behördliche Verpflichtungen dies erfordern."
+					},
+					{
+						"number": "13.2",
+						"content": "Bei Kontoschließung können ausstehende Einsätze storniert werden und verbleibende Gelder werden gemäß geltendem Recht und Plattformrichtlinien behandelt."
+					},
+					{
+						"number": "13.3",
+						"content": " {siteName} kann Gelder einbehalten, wenn dies zur Beilegung von Streitigkeiten, zur Einhaltung rechtmäßiger Anfragen oder zur Behebung von Verlusten erforderlich ist."
+					}
+				]
+			},
+			"responsibleGaming": {
+				"number": "14",
+				"title": "VERANTWORTUNGSBEWUSSTES SPIELEN",
+				"clauses": [
+					{
+						"number": "14.1",
+						"content": " {siteName} fördert verantwortungsbewusstes Glücksspiel. Sie können Folgendes beantragen:|• Selbstausschluss;|• Einzahlungslimits;|• Vorübergehende Sperrung."
+					},
+					{
+						"number": "14.2",
+						"content": "Wenn Sie Glücksspielschäden vermuten, kontaktieren Sie {siteName} für sofortige Hilfe."
+					},
+					{
+						"number": "14.3",
+						"content": "Glücksspiel von Minderjährigen (unter 18 Jahren oder dem lokalen gesetzlichen Alter) ist strengstens untersagt. Konten, die Minderjährigen gehören, werden geschlossen und Gelder gemäß der Richtlinie behandelt."
+					}
+				]
+			},
+			"intellectualProperty": {
+				"number": "15",
+				"title": "GEISTIGES EIGENTUM",
+				"clauses": [
+					{
+						"number": "15.1",
+						"content": "Alle Marken, Logos, Website-Inhalte, Software und Spiel-Assets auf {siteName} sind Eigentum von {siteName} oder an {siteName} lizenziert. Unbefugtes Kopieren, Scraping oder Weiterverbreiten ist untersagt."
+					},
+					{
+						"number": "15.2",
+						"content": "Ihnen wird eine begrenzte, widerrufliche Lizenz für den Zugriff auf den Dienst nur zur persönlichen Unterhaltung gewährt."
+					}
+				]
+			},
+			"liability": {
+				"number": "16",
+				"title": "HAFTUNGSBESCHRÄNKUNG",
+				"clauses": [
+					{
+						"number": "16.1",
+						"content": "Soweit gesetzlich zulässig, haftet {siteName} nicht für indirekte, spezielle, Folge- oder zufällige Verluste, einschließlich entgangener Gewinne oder Opportunitätskosten."
+					},
+					{
+						"number": "16.2",
+						"content": "Unsere Gesamthaftung für alle Ansprüche im Zusammenhang mit diesen Bedingungen übersteigt nicht den Wert Ihrer letzten Einzahlung oder einen durch geltendes Recht festgelegten Betrag."
+					},
+					{
+						"number": "16.3",
+						"content": "Nichts in diesen Bedingungen beschränkt die Haftung für Tod oder Personenschäden, die durch Fahrlässigkeit verursacht wurden, wenn das geltende Recht eine solche Beschränkung untersagt."
+					}
+				]
+			},
+			"disputes": {
+				"number": "17",
+				"title": "STREITBEILEGUNG & GELTENDES RECHT",
+				"clauses": [
+					{
+						"number": "17.1",
+						"content": "Im Falle eines Streits kontaktieren Sie {siteName}. Wir bemühen uns, Beschwerden schnell zu lösen; eskalieren Sie bei Bedarf an das Management."
+					}
+				]
+			},
+			"amendments": {
+				"number": "18",
+				"title": "ÄNDERUNGEN",
+				"clauses": [
+					{
+						"number": "18.1",
+						"content": " {siteName} kann diese Bedingungen jederzeit ändern. Aktualisierte Bedingungen werden auf der Website veröffentlicht. Die fortgesetzte Nutzung stellt eine Akzeptanz dar."
+					}
+				]
+			},
+			"miscellaneous": {
+				"number": "19",
+				"title": "VERSCHIEDENES",
+				"clauses": [
+					{
+						"number": "19.1",
+						"content": "Diese Bedingungen stellen die gesamte Vereinbarung zwischen Ihnen und {siteName} in Bezug auf den Dienst dar."
+					},
+					{
+						"number": "19.2",
+						"content": "Sollte sich eine Klausel als nicht durchsetzbar erweisen, wird sie auf das erforderliche Mindestmaß geändert, und die übrigen Bestimmungen bleiben in Kraft."
+					},
+					{
+						"number": "19.3",
+						"content": "Sie dürfen Ihre Rechte aus diesen Bedingungen nicht abtreten. {siteName} kann Rechte und Pflichten abtreten oder untervergeben."
+					}
+				]
+			},
+			"contact": {
+				"number": "20",
+				"title": "KONTAKT",
+				"content": "Für Support, Beschwerden oder rechtliche Hinweise:",
+				"link": "🌐 https://{siteDomain}"
 			}
 		}
 	}

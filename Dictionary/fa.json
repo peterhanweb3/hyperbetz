@@ -3,25 +3,25 @@
 		"loading": "در حال بارگذاری...",
 		"save": "ذخیره",
 		"cancel": "لغو",
-		"confirm": "تایید",
+		"confirm": "تأیید",
 		"viewAll": "مشاهده همه"
 	},
 	"app": {
 		"name": "{siteName}"
 	},
 	"header": {
-		"toggleSidebar": "تغییر نوار کناری",
+		"toggleSidebar": "باز و بسته کردن نوار کناری",
 		"searchPlaceholder": "جستجوی بازی‌ها، ارائه‌دهندگان...",
-		"liveChat": "چت زنده",
+		"liveChat": "گفتگوی زنده",
 		"player": "بازیکن",
-		"vip": "وی‌آی‌پی",
+		"vip": "VIP",
 		"profile": "پروفایل",
 		"statistics": "آمار",
 		"wallet": "واریز/برداشت",
 		"cashier": "صندوق",
 		"winLoss": "برد/باخت",
-		"affiliate": "همکاری در فروش",
-		"logout": "خروج",
+		"affiliate": "پاداش ارجاع",
+		"logout": "خروج از سیستم",
 		"balance": "موجودی",
 		"turnoverBonus": "پاداش گردش مالی"
 	},
@@ -31,12 +31,12 @@
 		"profile": "پروفایل",
 		"wallet": "کیف پول",
 		"settings": "تنظیمات",
-		"promotions": "تخفیف‌ها",
-		"affiliate": "همکاری",
+		"promotions": "تبلیغات",
+		"affiliate": "پاداش ارجاع",
+		"bonus": "پاداش گردش مالی",
 		"providers": "ارائه‌دهندگان",
 		"lobby": "لابی",
-		"bonus": "پاداش گردش مالی",
-		"about": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 49 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+		"about": "درباره ما"
 	},
 	"profile": {
 		"language": "زبان",
@@ -44,65 +44,65 @@
 		"settingUp": "در حال راه‌اندازی",
 		"profileBtn": "مشاهده پروفایل",
 		"currentBalance": "موجودی فعلی",
-		"availableFunds": "موجودی قابل استفاده",
-		"totalDeposits": "مجموع واریزها",
-		"totalWithdrawals": "مجموع برداشت‌ها",
+		"availableFunds": "وجوه موجود",
+		"totalDeposits": "کل واریزها",
+		"totalWithdrawals": "کل برداشت‌ها",
 		"walletAddress": "آدرس کیف پول",
 		"copySuccess": "آدرس کیف پول در کلیپ‌بورد کپی شد!",
-		"copyFailed": "کپی کردن آدرس کیف پول ناموفق بود",
+		"copyFailed": "کپی آدرس کیف پول ناموفق بود",
 		"notConnected": "متصل نیست",
 		"myProfile": "پروفایل من",
 		"history": {
 			"title": "تاریخچه"
 		},
-		"logout": "خروج",
-		"pendingRegistration": "ثبت‌نام در انتظار تایید",
+		"logout": "خروج از سیستم",
+		"pendingRegistration": "ثبت نام در حال انتظار",
 		"noEmailProvided": "ایمیلی ارائه نشده است",
-		"balanceOverview": "نمای کلی موجودی",
+		"balanceOverview": "مرور کلی موجودی",
 		"gettingStarted": "شروع به کار",
-		"verifyEmail": "ایمیل خود را تایید کنید",
-		"completeEmailVerification": "تایید ایمیل را کامل کنید",
-		"verifyPhone": "شماره تلفن خود را تایید کنید",
-		"addPhoneVerification": "افزودن تایید تلفنی",
+		"verifyEmail": "ایمیل خود را تأیید کنید",
+		"completeEmailVerification": "تکمیل تأیید ایمیل",
+		"verifyPhone": "شماره تلفن خود را تأیید کنید",
+		"addPhoneVerification": "افزودن تأیید تلفنی",
 		"firstDeposit": "اولین واریز",
 		"makeFirstDeposit": "اولین واریز خود را انجام دهید",
-		"placeBetOrTrade": "شرط ببندید / معامله کنید",
+		"placeBetOrTrade": "شرط بندی / معامله کنید",
 		"startFirstGame": "اولین بازی خود را شروع کنید",
-		"recentActivity": "فعالیت‌های اخیر",
+		"recentActivity": "فعالیت اخیر",
 		"transactionHistory": "تاریخچه تراکنش‌ها",
-		"activityGameWinDiceRoll": "برد در بازی - پرتاب تاس",
-		"activityGameLossBlackjack": "باخت در بازی - بلک‌جک",
-		"twoHoursAgo": "۲ ساعت پیش",
-		"oneDayAgo": "۱ روز پیش",
-		"twoDaysAgo": "۲ روز پیش",
+		"activityGameWinDiceRoll": "برد بازی - تاس",
+		"activityGameLossBlackjack": "باخت بازی - بلک جک",
+		"twoHoursAgo": "2 ساعت پیش",
+		"oneDayAgo": "1 روز پیش",
+		"twoDaysAgo": "2 روز پیش",
 		"deposit": "واریز",
-		"loggedOutTitle": "اوه! شما از حساب خود خارج شده‌اید",
+		"loggedOutTitle": "اوه! شما از سیستم خارج شده‌اید",
 		"loggedOutSubtitle": "لطفاً برای مشاهده پروفایل خود وارد شوید",
-		"goHome": "رفتن به صفحه اصلی",
+		"goHome": "بازگشت به خانه",
 		"withdrawal": "برداشت",
 		"transactions": {
 			"title": "تاریخچه تراکنش‌ها",
 			"trackDepositsWithdrawals": "واریزها و برداشت‌های خود را دنبال کنید",
 			"filters": "فیلترها",
-			"refresh": "تازه‌سازی",
+			"refresh": "به‌روزرسانی",
 			"advancedFilters": "فیلترهای پیشرفته",
 			"searchTransactionComingSoon": "جستجوی تراکنش (به زودی)",
 			"searchPlaceholderDisabled": "قابلیت جستجو در سطح API پیاده‌سازی خواهد شد...",
-			"dateRange": "بازه زمانی",
-			"selectDateRange": "بازه زمانی را انتخاب کنید",
+			"dateRange": "محدوده تاریخ",
+			"selectDateRange": "انتخاب محدوده تاریخ",
 			"today": "امروز",
-			"last7Days": "۷ روز گذشته",
-			"last30Days": "۳۰ روز گذشته",
-			"last90Days": "۹۰ روز گذشته",
+			"last7Days": "7 روز گذشته",
+			"last30Days": "30 روز گذشته",
+			"last90Days": "90 روز گذشته",
 			"thisMonth": "این ماه",
 			"lastMonth": "ماه گذشته",
-			"customRange": "بازه سفارشی",
+			"customRange": "محدوده سفارشی",
 			"fromDate": "از تاریخ",
 			"toDate": "تا تاریخ",
 			"transactionStatus": "وضعیت تراکنش",
 			"allStatuses": "همه وضعیت‌ها",
-			"success": "موفق",
-			"pending": "در انتظار",
+			"success": "موفقیت",
+			"pending": "در حال انتظار",
 			"rejected": "رد شده",
 			"clearAll": "پاک کردن همه",
 			"cancel": "لغو",
@@ -110,7 +110,7 @@
 			"activeFilters": "فیلترهای فعال:",
 			"statusLabel": "وضعیت",
 			"dateLabel": "تاریخ",
-			"statsTotalTransactions": "مجموع {total} تراکنش",
+			"statsTotalTransactions": "{total} کل تراکنش‌ها",
 			"pageOf": "صفحه {current} از {total}",
 			"live": "زنده",
 			"tabs": {
@@ -121,40 +121,40 @@
 			"errorLoadingTransactions": "خطا در بارگذاری تراکنش‌ها",
 			"tryAgain": "تلاش مجدد",
 			"noTransactionsFound": "هیچ تراکنشی یافت نشد",
-			"noTransactionsAvailableSelectedPeriod": "هیچ تراکنشی برای دوره زمانی انتخاب شده موجود نیست.",
-			"noDepositsFoundSelectedPeriod": "هیچ واریزی برای دوره زمانی انتخاب شده یافت نشد.",
-			"noWithdrawalsFoundSelectedPeriod": "هیچ برداشتی برای دوره زمانی انتخاب شده یافت نشد.",
+			"noTransactionsAvailableSelectedPeriod": "هیچ تراکنشی برای دوره انتخاب شده موجود نیست.",
+			"noDepositsFoundSelectedPeriod": "هیچ واریزی برای دوره انتخاب شده یافت نشد.",
+			"noWithdrawalsFoundSelectedPeriod": "هیچ برداشتی برای دوره انتخاب شده یافت نشد.",
 			"show": "نمایش",
 			"ofTransactions": "از {count} تراکنش",
 			"showingRangeOfTotal": "نمایش {from}-{to} از {total}",
 			"pageShort": "صفحه {current}/{total}"
 		},
 		"betHistory": {
-			"title": "تاریخچه شرط‌ها",
-			"trackBetsResults": "شرط‌ها و نتایج بازی خود را دنبال کنید",
+			"title": "تاریخچه شرط‌بندی",
+			"trackBetsResults": "شرط‌بندی‌ها و نتایج بازی خود را دنبال کنید",
 			"filters": "فیلترها",
-			"refresh": "تازه‌سازی",
+			"refresh": "به‌روزرسانی",
 			"advancedFilters": "فیلترهای پیشرفته",
-			"dateRange": "بازه زمانی",
-			"selectDateRange": "بازه زمانی را انتخاب کنید",
+			"dateRange": "محدوده تاریخ",
+			"selectDateRange": "انتخاب محدوده تاریخ",
 			"today": "امروز",
-			"last7Days": "۷ روز گذشته",
-			"last30Days": "۳۰ روز گذشته",
-			"last90Days": "۹۰ روز گذشته",
+			"last7Days": "7 روز گذشته",
+			"last30Days": "30 روز گذشته",
+			"last90Days": "90 روز گذشته",
 			"thisMonth": "این ماه",
 			"lastMonth": "ماه گذشته",
-			"customRange": "بازه سفارشی",
+			"customRange": "محدوده سفارشی",
 			"fromDate": "از تاریخ",
 			"toDate": "تا تاریخ",
 			"provider": "ارائه‌دهنده",
 			"allProviders": "همه ارائه‌دهندگان",
 			"status": "وضعیت",
 			"allStatuses": "همه وضعیت‌ها",
-			"outstanding": "در جریان",
+			"outstanding": "برجسته",
 			"win": "برد",
 			"lose": "باخت",
-			"draw": "مساوی",
-			"void": "لغو شده",
+			"draw": "تساوی",
+			"void": "باطل",
 			"bonusWin": "برد بونوس",
 			"clearAll": "پاک کردن همه",
 			"cancel": "لغو",
@@ -163,20 +163,20 @@
 			"statusLabel": "وضعیت",
 			"providerLabel": "ارائه‌دهنده",
 			"dateLabel": "تاریخ",
-			"totalBets": "مجموع شرط‌ها",
-			"totalProfitLoss": "مجموع سود/زیان",
+			"totalBets": "کل شرط‌بندی‌ها",
+			"totalProfitLoss": "کل سود/زیان",
 			"pageOf": "صفحه {current} از {total}",
 			"live": "زنده",
-			"errorLoadingBets": "خطا در بارگذاری تاریخچه شرط‌ها",
-			"failedToLoadBetHistory": "بارگذاری تاریخچه شرط‌ها ناموفق بود. لطفاً دوباره تلاش کنید.",
+			"errorLoadingBets": "خطا در بارگذاری تاریخچه شرط‌بندی",
+			"failedToLoadBetHistory": "بارگذاری تاریخچه شرط‌بندی ناموفق بود. لطفاً دوباره امتحان کنید.",
 			"tryAgain": "تلاش مجدد",
-			"noBetsFound": "هیچ شرطی یافت نشد",
-			"noBetsFoundSelectedPeriod": "هیچ تاریخچه شرط‌بندی برای دوره زمانی و فیلترهای انتخاب شده یافت نشد.",
+			"noBetsFound": "هیچ شرط‌بندی یافت نشد",
+			"noBetsFoundSelectedPeriod": "هیچ تاریخچه شرط‌بندی برای دوره و فیلترهای انتخاب شده یافت نشد.",
 			"show": "نمایش",
-			"ofBets": "از {count} شرط",
+			"ofBets": "از {count} شرط‌بندی",
 			"showingRangeOfTotal": "نمایش {from}-{to} از {total}",
-			"totalBet": "مجموع شرط",
-			"totalWin": "مجموع برد",
+			"totalBet": "کل شرط‌بندی",
+			"totalWin": "کل برد",
 			"net": "خالص",
 			"tableHeaders": {
 				"date": "تاریخ",
@@ -186,7 +186,7 @@
 				"status": "وضعیت",
 				"betAmount": "مبلغ شرط",
 				"winAmount": "مبلغ برد",
-				"hideAmounts": "مخفی کردن مبالغ",
+				"hideAmounts": "پنهان کردن مبالغ",
 				"showAmounts": "نمایش مبالغ",
 				"gameType": "نوع بازی",
 				"vendor": "فروشنده",
@@ -195,9 +195,9 @@
 				"betId": "شناسه شرط"
 			},
 			"errorLoading": "خطا در بارگذاری",
-			"noBetsFoundDescription": "برای دیدن تاریخچه شرط‌بندی خود، شروع به بازی کنید.",
-			"betHistory": "تاریخچه شرط‌ها",
-			"hideAmounts": "مخفی کردن مبالغ",
+			"noBetsFoundDescription": "برای مشاهده تاریخچه شرط‌بندی خود در اینجا، بازی را شروع کنید.",
+			"betHistory": "تاریخچه شرط‌بندی",
+			"hideAmounts": "پنهان کردن مبالغ",
 			"showAmounts": "نمایش مبالغ",
 			"date": "تاریخ",
 			"game": "بازی",
@@ -209,11 +209,11 @@
 			"vendor": "فروشنده",
 			"lastUpdate": "آخرین به‌روزرسانی",
 			"netResult": "نتیجه خالص",
-			"totalWagered": "مجموع شرط‌بندی شده",
-			"totalWon": "مجموع برده شده",
+			"totalWagered": "کل شرط‌بندی شده",
+			"totalWon": "کل برده شده",
 			"netProfit": "سود خالص",
 			"winRate": "نرخ برد",
-			"showingResults": "نمایش نتایج {start}-{end} از {total}",
+			"showingResults": "نمایش {start}-{end} از {total} نتیجه",
 			"firstPage": "صفحه اول",
 			"previousPage": "صفحه قبلی",
 			"nextPage": "صفحه بعدی",
@@ -221,131 +221,131 @@
 		}
 	},
 	"chat": {
-		"title": "چت زنده",
+		"title": "گفتگوی زنده",
 		"placeholder": "پیام خود را تایپ کنید...",
 		"send": "ارسال",
 		"input": {
 			"replyPlaceholder": "پاسخ به {username}..."
 		},
 		"reply": {
-			"replyingTo": "در حال پاسخ به {username}",
+			"replyingTo": "پاسخ به {username}",
 			"types": {
-				"win": "{amount} {currency} برنده شد",
-				"gif": "پیام گیف",
+				"win": "برد {amount} {currency}",
+				"gif": "پیام GIF",
 				"image": "تصویر",
 				"default": "پیام"
 			},
 			"preview": {
-				"winIn": "در {game} {amount} {currency} برنده شد",
-				"gifAlt": "پیش‌نمایش گیف",
+				"winIn": "برد {amount} {currency} در {game}",
+				"gifAlt": "پیش‌نمایش GIF",
 				"imageAlt": "پیش‌نمایش تصویر",
-				"emoji": "پیام اموجی",
+				"emoji": "پیام شکلک",
 				"rain": "باران: {amount} {currency}",
 				"system": "سیستم: {content}"
 			}
 		},
 		"imageDialog": {
 			"title": "تصویر خود را به اشتراک بگذارید 🎰",
-			"description": "آماده‌اید آن را در اتاق چت نشان دهید؟",
+			"description": "آماده برای نمایش در اتاق گفتگو هستید؟",
 			"previewLabel": "پیش‌نمایش",
-			"statusReady": "آماده اشتراک‌گذاری",
-			"roomLabel": "🎰 چت کازینو",
-			"shareNotice": "تصویر شما با تمام بازیکنان در اتاق چت به اشتراک گذاشته خواهد شد",
-			"closeAria": "بستن دیالوگ",
-			"cancelAria": "لغو آپلود تصویر",
-			"sendAria": "ارسال تصویر به چت",
-			"send": "ارسال به چت"
+			"statusReady": "آماده برای اشتراک‌گذاری",
+			"roomLabel": "🎰 گفتگوی کازینو",
+			"shareNotice": "تصویر شما با همه بازیکنان در اتاق گفتگو به اشتراک گذاشته خواهد شد",
+			"closeAria": "بستن گفتگو",
+			"cancelAria": "لغو بارگذاری تصویر",
+			"sendAria": "ارسال تصویر به گفتگو",
+			"send": "ارسال به گفتگو"
 		},
 		"picker": {
-			"searchEmojis": "جستجوی اموجی‌ها...",
-			"searchGifs": "جستجوی گیف‌ها...",
+			"searchEmojis": "جستجوی شکلک‌ها...",
+			"searchGifs": "جستجوی GIF‌ها...",
 			"tabs": {
-				"emojis": "اموجی‌ها",
-				"gifs": "گیف‌ها"
+				"emojis": "شکلک‌ها",
+				"gifs": "GIF‌ها"
 			},
-			"loadingEmojis": "در حال بارگذاری اموجی‌ها...",
-			"loadingGifs": "در حال بارگذاری گیف‌ها...",
+			"loadingEmojis": "در حال بارگذاری شکلک‌ها...",
+			"loadingGifs": "در حال بارگذاری GIF‌ها...",
 			"retry": "تلاش مجدد",
 			"recent": "اخیر",
-			"noEmojis": "هیچ اموجی یافت نشد",
-			"noGifs": "هیچ گیفی یافت نشد",
+			"noEmojis": "هیچ شکلکی یافت نشد",
+			"noGifs": "هیچ GIFی یافت نشد",
 			"tryDifferent": "عبارت جستجوی دیگری را امتحان کنید",
 			"gifCategories": {
-				"trending": "پرطرفدار",
+				"trending": "روندهای داغ",
 				"reactions": "واکنش‌ها",
 				"gaming": "بازی",
 				"casino": "کازینو",
 				"celebration": "جشن",
-				"sports": "ورزشی"
+				"sports": "ورزش"
 			},
 			"searchResults": "نتایج جستجو",
-			"availableToTag": "کاربران موجود برای تگ کردن 🎯",
-			"clickOrTab": "برای انتخاب کلیک یا تب کنید",
+			"availableToTag": "کاربران موجود برای برچسب‌گذاری 🎯",
+			"clickOrTab": "برای انتخاب کلیک کنید یا Tab را فشار دهید",
 			"noUsers": "هیچ کاربری یافت نشد",
-			"noUsersMatching": "هیچ کاربر منطبقی وجود ندارد",
+			"noUsersMatching": "هیچ کاربری مطابق نیست",
 			"startTyping": "برای جستجو شروع به تایپ کنید",
 			"typeAt": "تایپ کنید",
-			"toSeeSuggestions": "تا پیشنهادات را ببینید 🎰",
+			"toSeeSuggestions": "برای دیدن پیشنهادات 🎰",
 			"errors": {
-				"emojisLoad": "بارگذاری اموجی‌ها ناموفق بود",
-				"emojisSearch": "جستجوی اموجی‌ها ناموفق بود",
-				"gifsLoad": "بارگذاری گیف‌ها ناموفق بود"
+				"emojisLoad": "بارگذاری شکلک‌ها ناموفق بود",
+				"emojisSearch": "جستجوی شکلک‌ها ناموفق بود",
+				"gifsLoad": "بارگذاری GIF‌ها ناموفق بود"
 			}
 		},
 		"messages": {
 			"emptyTitle": "هنوز پیامی وجود ندارد...",
-			"emptySubtitle": "گفتگو را شروع کنید و بزرگ برنده شوید! 🎰",
-			"loadingHistory": "در حال بارگیری تاریخچه چت...",
-			"loadingHistorySubtitle": "در حال دریافت پیام های اخیر 📜",
-			"historyError": "خطا در بارگیری تاریخچه چت"
+			"emptySubtitle": "مکالمه را شروع کنید و بردهای بزرگ داشته باشید! 🎰",
+			"loadingHistory": "در حال بارگذاری تاریخچه گفتگو...",
+			"loadingHistorySubtitle": "در حال واکشی پیام‌های اخیر 📜",
+			"historyError": "بارگذاری تاریخچه گفتگو ناموفق بود"
 		},
 		"message": {
 			"you": "شما",
-			"winTitle": "برد بزرگ در «{game}»! 🎰",
-			"gifAlt": "گیف",
-			"imageAlt": "تصویر آپلود شده",
+			"winTitle": "برد بزرگ در \"{game}\"! 🎰",
+			"gifAlt": "GIF",
+			"imageAlt": "تصویر بارگذاری شده",
 			"rainTitle": "باران پول! 🌧️💰",
-			"recipients": "→ {count} گیرنده",
-			"eachTo": "هر کدام {amount} {currency} به: {list}",
-			"replyCount": "{count} پاسخ",
-			"loadingHistory": "در حال بارگیری تاریخچه چت..."
+			"recipients": "← {count} {count, plural, one {گیرنده} other {گیرنده}}",
+			"eachTo": "{amount} {currency} برای هر یک به: {list}",
+			"replyCount": "{count} {count, plural, one {پاسخ} other {پاسخ}}",
+			"loadingHistory": "در حال بارگذاری تاریخچه گفتگو..."
 		},
 		"system": {
 			"slashDisabled": "دستورات اسلش موقتاً غیرفعال هستند. لطفاً از پیام‌های معمولی استفاده کنید.",
-			"rateLimit": "محدودیت نرخ ارسال پیام رد شده است. لطفاً {seconds} ثانیه قبل از ارسال پیام دیگر صبر کنید.",
-			"cannotTagSelf": "شما نمی‌توانید خودتان را در پیام‌ها تگ کنید.",
+			"rateLimit": "محدودیت نرخ بیش از حد مجاز است. لطفاً {seconds} ثانیه قبل از ارسال پیام دیگر صبر کنید.",
+			"cannotTagSelf": "شما نمی‌توانید خودتان را در پیام‌ها برچسب بزنید.",
 			"processingImage": "در حال پردازش تصویر...",
-			"failedUploadPrefix": "آپلود تصویر ناموفق بود: {message}",
+			"failedUploadPrefix": "بارگذاری تصویر ناموفق بود: {message}",
 			"unknownError": "خطای ناشناخته"
 		}
 	},
 	"sidebar": {
-		"quest": "مأموریت",
+		"quest": "ماموریت",
 		"spin": "چرخش",
 		"deposit": "واریز",
 		"withdraw": "برداشت",
 		"playOnTelegram": "بازی در تلگرام",
-		"dailyBonus": "بونوس روزانه",
+		"dailyBonus": "پاداش روزانه",
 		"navigation": "ناوبری",
 		"games": "بازی‌ها",
 		"providers": "ارائه‌دهندگان",
-		"trendingNow": "پرطرفدارهای کنونی",
+		"trendingNow": "روندهای داغ کنونی",
 		"allProviders": "همه ارائه‌دهندگان",
 		"allTopProviders": "همه ارائه‌دهندگان برتر",
 		"hotBadge": "داغ"
 	},
 	"search": {
 		"title": "جستجوی بازی‌ها",
-		"subtitle": "بر اساس نام، ارائه‌دهنده یا دسته پیدا کنید",
+		"subtitle": "جستجو بر اساس نام، ارائه‌دهنده یا دسته",
 		"placeholder": "جستجوی بازی‌ها، ارائه‌دهندگان، دسته‌ها...",
 		"clear": "پاک کردن",
 		"recent": "اخیر:",
 		"popular": "محبوب:",
-		"favoritesTry": "می‌توانید امتحان کنید — موارد دلخواه شما",
+		"favoritesTry": "می‌توانید امتحان کنید — موردعلاقه‌های شما",
 		"hotPicks": "انتخاب‌های داغ",
-		"resultsCount": "{count} بازی پیدا شد",
-		"noResults": "نتیجه‌ای یافت نشد",
-		"filterApplied": "فیلتر شده بر اساس {count} ارائه‌دهنده",
+		"resultsCount": "{count} {count, plural, one {بازی} other {بازی}} یافت شد",
+		"noResults": "هیچ نتیجه‌ای یافت نشد",
+		"filterApplied": "فیلتر شده بر اساس {count} {count, plural, one {ارائه‌دهنده} other {ارائه‌دهنده}}",
 		"suggestions": {
 			"category": "دسته",
 			"provider": "ارائه‌دهنده"
@@ -358,12 +358,12 @@
 			"providers": "ارائه‌دهندگان"
 		},
 		"results": {
-			"found": "{games} بازی، {categories} دسته و {providers} ارائه‌دهنده پیدا شد"
+			"found": "{games} بازی، {categories} دسته و {providers} ارائه‌دهنده یافت شد"
 		},
 		"gameTypes": {
-			"blackjack": "بلک‌جک",
+			"blackjack": "بلک جک",
 			"roulette": "رولت",
-			"crash": "انفجار"
+			"crash": "تصادف"
 		}
 	},
 	"query": {
@@ -391,8 +391,8 @@
 		},
 		"view": {
 			"toggleAria": "تغییر حالت نمایش",
-			"gridAria": "نمایش شبکه‌ای",
-			"listAria": "نمایش لیستی"
+			"gridAria": "نمای شبکه‌ای",
+			"listAria": "نمای لیستی"
 		},
 		"loadMore": "بارگذاری بیشتر"
 	},
@@ -406,152 +406,322 @@
 		"topProviders": "ارائه‌دهندگان برتر بازی"
 	},
 	"lobby": {
-		"yourFavorites": "موارد دلخواه شما",
-		"featuredCasinoGames": "بازی‌های کازینوی منتخب",
-		"hotPicks": "انتخاب‌های محبوب",
+		"yourFavorites": "موردعلاقه‌های شما",
+		"featuredCasinoGames": "بازی‌های کازینوی ویژه",
+		"hotPicks": "انتخاب‌های داغ",
 		"slots": "اسلات‌ها",
-		"sports": "ورزشی",
-		"realTimeScoreboard": "جدول امتیازات زنده"
+		"sports": "ورزش",
+		"realTimeScoreboard": "تابلوی امتیازات در زمان واقعی"
 	},
 	"affiliate": {
-		"title": "برنامه همکاری در فروش",
-		"loginPromptTitle": "برنامه ارجاع",
-		"loginPromptSubtitle": "برای مشاهده آمار ارجاع، بونوس‌ها و دریافت جوایز خود وارد شوید.",
-		"goHome": "رفتن به صفحه اصلی",
+		"title": "برنامه پاداش ارجاع",
+		"loginPromptTitle": "برنامه پاداش ارجاع",
+		"loginPromptSubtitle": "برای مشاهده آمار ارجاع، پاداش‌ها و دریافت جوایز، وارد شوید.",
+		"goHome": "بازگشت به خانه",
 		"tabs": {
 			"dashboard": "داشبورد",
 			"rates": "نرخ‌های کمیسیون",
-			"calculator": "ماشین‌حساب"
+			"calculator": "ماشین حساب"
 		},
-		"refresh": "تازه‌سازی",
-		"refreshing": "در حال تازه‌سازی...",
-		"refreshAllSuccess": "تمام داده‌ها با موفقیت تازه‌سازی شدند!",
-		"refreshPartial": "تا حدی تازه‌سازی شد: {success}/{total} بخش به‌روز شد",
-		"refreshFailed": "تازه‌سازی داده‌ها ناموفق بود. لطفاً دوباره تلاش کنید.",
+		"refresh": "به‌روزرسانی",
+		"refreshing": "در حال به‌روزرسانی...",
+		"refreshAllSuccess": "همه داده‌ها با موفقیت به‌روز شدند!",
+		"refreshPartial": "به‌روزرسانی جزئی: {success}/{total} بخش به‌روز شد",
+		"refreshFailed": "به‌روزرسانی داده‌ها ناموفق بود. لطفاً دوباره امتحان کنید.",
 		"dashboard": {
-			"title": "داشبورد همکاری",
-			"subtitle": "ارجاعات، درآمد و عملکرد کمیسیون خود را دنبال کنید",
-			"performanceOverview": "نمای کلی عملکرد",
-			"referralManagement": "مدیریت ارجاعات",
+			"title": "داشبورد ارجاع",
+			"subtitle": "ارجاعات، درآمدها و عملکرد کمیسیون خود را دنبال کنید",
+			"performanceOverview": "مرور کلی عملکرد",
+			"referralManagement": "مدیریت ارجاع",
 			"termsAndCommission": "شرایط و ساختار کمیسیون",
-			"unclaimedEarnings": "درآمدهای دریافت نشده",
-			"claim": "دریافت",
-			"claiming": "در حال دریافت...",
-			"totalIncome": "درآمد کل",
-			"totalReferrals": "مجموع ارجاعات",
+			"unclaimedEarnings": "درآمدهای مطالبه نشده",
+			"claim": "مطالبه",
+			"claiming": "در حال مطالبه...",
+			"totalIncome": "کل درآمد",
+			"claimButtonTitle": "مطالبه پاداش",
+			"totalReferrals": "کل ارجاعات",
 			"usersUnit": "کاربر",
 			"yourReferralLinks": "لینک‌های ارجاع شما",
-			"referralLinksSubtitle": "برای ارجاع کاربران جدید و کسب کمیسیون این لینک‌ها را به اشتراک بگذارید",
+			"referralLinksSubtitle": "این لینک‌ها را برای ارجاع کاربران جدید و کسب کمیسیون به اشتراک بگذارید",
 			"completeReferralLink": "لینک کامل ارجاع",
-			"fullReferralPlaceholder": "لینک کامل ارجاع در اینجا ظاهر خواهد شد",
-			"fullReferralHelp": "لینک مستقیمی که کاربران می‌توانند برای ثبت‌نام با کد ارجاع شما روی آن کلیک کنند",
+			"fullReferralPlaceholder": "لینک کامل ارجاع در اینجا ظاهر می‌شود",
+			"fullReferralHelp": "لینک مستقیمی که کاربران می‌توانند برای ثبت‌نام با کد ارجاع شما کلیک کنند",
 			"referralCodeOnly": "فقط کد ارجاع",
 			"yourReferralId": "شناسه ارجاع شما",
-			"referralIdHelp": "این کد را برای کاربرانی که می‌خواهند به صورت دستی در هنگام ثبت‌نام وارد کنند، به اشتراک بگذارید",
+			"referralIdHelp": "این کد را برای ورود دستی کاربران در طول ثبت‌نام به اشتراک بگذارید",
 			"copyFullSuccess": "لینک کامل ارجاع در کلیپ‌بورد کپی شد!",
-			"copyIdSuccess": "شناسه ارجاع در کلیپ‌بورد کپی شد!",
-			"claimButtonTitle": "مطالبه جایزه"
+			"copyIdSuccess": "شناسه ارجاع در کلیپ‌بورد کپی شد!"
 		},
 		"referrals": {
 			"title": "ارجاعات من",
-			"subtitle": "تمام کاربران ارجاع شده از طریق لینک‌های همکاری خود را دنبال و مدیریت کنید",
-			"totalReferrals": "مجموع ارجاعات",
-			"monitorHelp": "فعالیت، واریزها و الگوهای بازی ارجاعات خود را نظارت کنید",
+			"subtitle": "همه کاربران ارجاع داده شده از طریق لینک‌های وابسته خود را دنبال و مدیریت کنید",
+			"totalReferrals": "کل ارجاعات",
+			"monitorHelp": "فعالیت، واریزها و الگوهای بازی ارجاع‌دهندگان خود را نظارت کنید",
 			"sort": {
 				"placeholder": "مرتب‌سازی بر اساس...",
 				"nicknameAsc": "نام مستعار (الف-ی)",
 				"nicknameDesc": "نام مستعار (ی-الف)",
 				"lastLogin": "آخرین ورود",
-				"unclaimedAmount": "مبلغ دریافت نشده"
+				"unclaimedAmount": "مبلغ مطالبه نشده"
 			},
 			"table": {
 				"nickname": "نام مستعار",
-				"totalWager": "مجموع شرط",
+				"totalWager": "کل شرط",
 				"lastLogin": "آخرین ورود",
-				"registered": "ثبت‌نام شده",
+				"registered": "ثبت شده",
 				"lastDeposit": "آخرین واریز",
 				"depositDate": "تاریخ واریز",
-				"tier": "سطح"
+				"tier": "رتبه"
 			},
 			"empty": {
 				"title": "هیچ ارجاعی یافت نشد",
-				"subtitle": "برای دیدن کاربران در اینجا، شروع به ارجاع آن‌ها کنید."
+				"subtitle": "شروع به ارجاع کاربران کنید تا آنها را در اینجا ببینید."
 			},
 			"pagination": {
-				"showing": "نمایش نتایج {from} تا {to} از {total}",
+				"showing": "نمایش {from} تا {to} از {total} نتیجه",
 				"prev": "قبلی",
 				"next": "بعدی"
 			}
 		},
 		"rates": {
 			"title": "ساختار نرخ کمیسیون",
-			"subtitle": "درصدهای درآمد بر اساس سطح و دسته بازی",
-			"howItWorks": {
-				"title": "نحوه کار سطوح کمیسیون",
-				"body": "سطح کمیسیون شما بر اساس مجموع مبلغ شرط روزانه ارجاعات شما تعیین می‌شود. سطوح بالاتر نرخ‌های کمیسیون بهتری را در تمام انواع بازی ارائه می‌دهند."
+			"subtitle": "درصدهای درآمد بر اساس سطح رتبه و دسته بازی",
+			"overview": {
+				"title": "مرور کلی",
+				"body": "پاداش ارجاع به وابسته ها بر اساس گردش مالی شرط‌بندی بازیکنان ارجاع شده در اسلات‌ها، کازینوی زنده، کتاب‌های ورزشی و لاتاری پاداش می‌دهد. کمیسیون‌ها هر 24 ساعت محاسبه می‌شوند و درآمدها بر اساس رتبه‌های مختلف گردش مالی است."
 			},
 			"calculation": {
-				"title": "نحوه محاسبه کمیسیون‌ها",
-				"desc": "کمیسیون‌ها هر ۲۴ ساعت بر اساس مجموع شرط‌های بازیکنان ارجاع شده محاسبه می‌شوند. مثال‌ها:",
-				"exampleTitle": "سطح {tier}:",
+				"title": "چگونه کمیسیون‌ها محاسبه می‌شوند",
+				"desc": "کمیسیون‌ها هر 24 ساعت بر اساس کل شرط‌های بازیکنان ارجاع شده محاسبه می‌شوند. \nمثال‌ها:",
+				"exampleTitle": "رتبه {tier}:",
 				"wagerIn": "شرط {amount} در {gameType}"
 			},
 			"table": {
-				"tierLevel": "سطح",
+				"tierLevel": "سطح رتبه",
 				"wagerRange": "محدوده شرط",
 				"slots": "اسلات‌ها",
-				"liveCasino": "کازینو زنده",
-				"sports": "ورزشی",
-				"tierPrefix": "سطح",
+				"liveCasino": "کازینوی زنده",
+				"sports": "ورزش",
+				"tierPrefix": "رتبه",
 				"commissionLevel": "سطح کمیسیون",
-				"dailyWager": "حجم شرط روزانه"
+				"dailyWager": "حجم شرط‌بندی روزانه"
 			},
 			"claim": {
-				"title": "دریافت و برداشت",
+				"title": "مطالبه و برداشت",
 				"points": {
 					"0": "کمیسیون‌ها پس از محاسبه برای برداشت در دسترس هستند.",
-					"1": "کمیسیون‌های دریافت نشده تاریخ انقضا ندارند - تا زمان دریافت انباشته می‌شوند.",
-					"2": "برداشت‌ها از قوانین استاندارد پلتفرم مانند حداقل محدودیت‌ها و زمان‌های پردازش پیروی می‌کنند."
+					"1": "هیچ تاریخ انقضایی برای کمیسیون‌های مطالبه نشده وجود ندارد—آنها تا زمان مطالبه انباشته می‌شوند.",
+					"2": "برداشت‌ها از قوانین استاندارد پلتفرم، مانند حداقل محدودیت‌ها و زمان‌های پردازش، پیروی می‌کنند."
 				}
 			},
 			"system": {
 				"title": "زمان سیستم و عملیات",
 				"dailyTimeframeLabel": "بازه زمانی روزانه:",
-				"dailyTimeframeValue": "۰۰:۰۰ UTC تا ۲۳:۵۹ UTC (هر روز).",
-				"claimDailyLabel": "دریافت روزانه:",
-				"claimDailyValue": "روزانه در ساعت ۱۴:۰۰ UTC در دسترس است (زمان محلی شما: {local}).",
-				"note": "توجه: با اینکه ما با ارائه‌دهندگانی از مناطق زمانی مختلف کار می‌کنیم، تمام محاسبات برای اطمینان از یکنواختی و جلوگیری از سردرگمی از UTC پیروی می‌کنند."
+				"dailyTimeframeValue": "00:00 UTC تا 23:59 UTC (هر روز).",
+				"claimDailyLabel": "مطالبه روزانه:",
+				"claimDailyValue": "هر روز در ساعت 14:00 UTC در دسترس است (زمان محلی شما: {local}).",
+				"note": "توجه: در حالی که ما با ارائه‌دهندگان از مناطق زمانی مختلف کار می‌کنیم، همه محاسبات از UTC پیروی می‌کنند تا از یکپارچگی اطمینان حاصل شود و از سردرگمی جلوگیری شود."
 			},
 			"amendments": {
 				"title": "اصلاحات",
-				"body": "ما ممکن است این شرایط را در هر زمان به‌روزرسانی کنیم. تغییرات بلافاصله پس از ارسال اعمال می‌شوند و ادامه مشارکت به معنای پذیرش شرایط جدید توسط شما است."
+				"body": "ما می‌توانیم این شرایط را در هر زمان به‌روز کنیم. تغییرات بلافاصله پس از انتشار اعمال می‌شوند و ادامه مشارکت به این معنی است که شما شرایط جدید را می‌پذیرید."
 			},
 			"footer": {
 				"schedule": "برنامه کمیسیون:",
-				"availableDaily": "روزانه در دسترس در",
+				"availableDaily": "هر روز در دسترس است در",
 				"localTimeLabel": "(زمان محلی شما: {time})"
-			},
-			"overview": {
-				"title": "بررسی اجمالی",
-				"body": "برنامه همکاری در فروش براساس ارزش بازی‌های شرط بندی از بازیکنان معرفی شده در اسلات‌ها، کازینو زنده، کتاب‌های ورزشی و لاتاری به نمایندگان پاداش می‌دهد. کمیسیون‌ها هر ۲۴ ساعت محاسبه می‌شوند و درآمدها بر اساس سطوح مختلف چرخش محاسبه می‌شوند."
 			}
 		},
 		"calculator": {
-			"title": "ماشین‌حساب درآمد",
-			"subtitle": "درآمد کمیسیون خود را بر اساس مبالغ شرط ارجاعات خود تخمین بزنید",
+			"title": "ماشین حساب درآمد",
+			"subtitle": "درآمد کمیسیون خود را بر اساس مبالغ شرط‌بندی ارجاع‌دهندگان خود تخمین بزنید",
 			"interactive": {
 				"title": "ابزار تعاملی:",
-				"body": "مبالغ شرط مختلف را وارد کنید تا درآمدهای بالقوه را در تمام سطوح ببینید"
+				"body": "مبالغ شرط‌بندی مختلف را وارد کنید تا درآمدهای احتمالی را در تمام رتبه‌ها ببینید"
 			},
-			"potentialEarnings": "درآمدهای بالقوه",
-			"basedOnRate": "بر اساس نرخ کمیسیون {percentage}%",
-			"tier": "سطح {level}",
+			"potentialEarnings": "درآمدهای احتمالی",
+			"basedOnRate": "بر اساس نرخ کمیسیون {percentage}٪",
+			"tier": "رتبه {level}",
 			"commissionLevel": "سطح کمیسیون {level}",
-			"enterWager": "مبلغ شرط را وارد کنید (دلار آمریکا)",
-			"wagerPlaceholder": "مثلاً ۱۰۰۰",
-			"calcFor": "محاسبه درآمد برای شرط {amount}$",
-			"totalPotential": "مجموع درآمد بالقوه:",
-			"combinedAtTier": "درآمدهای ترکیبی از تمام انواع بازی در سطح {level}"
+			"enterWager": "مبلغ شرط (USD) را وارد کنید",
+			"wagerPlaceholder": "مثلاً، 1000",
+			"calcFor": "محاسبه درآمد برای {amount}$ شرط",
+			"totalPotential": "کل درآمدهای احتمالی:",
+			"combinedAtTier": "درآمدهای ترکیبی از همه انواع بازی در رتبه {level}"
+		}
+	},
+	"bonus": {
+		"title": "برنامه پاداش گردش مالی",
+		"loginPromptTitle": "برنامه پاداش گردش مالی",
+		"loginPromptSubtitle": "برای مشاهده آمار پاداش خود و دریافت جوایز خود وارد شوید.",
+		"goHome": "بازگشت به خانه",
+		"tabs": {
+			"dashboard": "داشبورد",
+			"claims": "مطالبات",
+			"rates": "نرخ‌های پاداش",
+			"calculator": "ماشین حساب"
+		},
+		"refresh": "به‌روزرسانی",
+		"refreshing": "در حال به‌روزرسانی...",
+		"refreshAllSuccess": "همه داده‌ها با موفقیت به‌روز شدند!",
+		"refreshPartial": "به‌روزرسانی جزئی: {success}/{total} بخش به‌روز شد",
+		"refreshFailed": "به‌روزرسانی داده‌ها ناموفق بود. لطفاً دوباره امتحان کنید.",
+		"dashboard": {
+			"title": "داشبورد پاداش",
+			"subtitle": "شرط‌ها، پاداش‌ها و درآمدهای جایزه خود را دنبال کنید",
+			"claimButtonTitle": "مطالبه",
+			"performanceOverview": "مرور کلی پاداش",
+			"bonusRatesTitle": "ساختار نرخ پاداش",
+			"totalIncome": "کل پاداش",
+			"pendingBonus": "پاداش در حال انتظار",
+			"lastClaim": "آخرین مطالبه",
+			"unclaimedEarnings": "در دسترس برای مطالبه",
+			"claim": {
+				"title": "مطالبه و برداشت",
+				"points": {
+					"0": "کمیسیون‌ها پس از محاسبه برای برداشت در دسترس هستند.",
+					"1": "هیچ تاریخ انقضایی برای کمیسیون‌های مطالبه نشده وجود ندارد—آنها تا زمان مطالبه انباشته می‌شوند.",
+					"2": "برداشت‌ها از قوانین استاندارد پلتفرم، مانند حداقل محدودیت‌ها و زمان‌های پردازش، پیروی می‌کنند."
+				}
+			},
+			"claiming": "در حال مطالبه...",
+			"section2": {
+				"title": "صلاحیت",
+				"content": "برای شرکت:"
+			},
+			"section3": {
+				"title": "رتبه‌ها و نرخ‌های گردش مالی",
+				"content": "پاداش‌ها بر اساس مبالغ شرط‌بندی روزانه شما محاسبه می‌شوند:",
+				"noteTitle": "توجه",
+				"noteContent": "رتبه‌ها روزانه در ساعت 14:00 UTC ارزیابی می‌شوند. حجم شرط‌بندی روز قبل شما نرخ پاداش امروز شما را تعیین می‌کند. نرخ‌ها برای همه انواع بازی اعمال می‌شوند: اسلات‌ها، کازینوی زنده و ورزش."
+			}
+		},
+		"claims": {
+			"title": "تاریخچه مطالبات",
+			"subtitle": "مطالبات پاداش و فعالیت شرط‌بندی خود را دنبال کنید",
+			"tableHeaders": {
+				"date": "تاریخ شرط‌بندی",
+				"slots": "اسلات‌ها",
+				"liveCasino": "کازینوی زنده",
+				"sports": "ورزش",
+				"total": "کل",
+				"tier": "رتبه",
+				"unclaimed": "مطالبه نشده",
+				"token": "توکن"
+			},
+			"tierPrefix": "رتبه",
+			"availableToClaim": "در دسترس برای مطالبه",
+			"totalBonus": "کل پاداش",
+			"claimed": "مطالبه شده",
+			"progressPercentage": "پیشرفت",
+			"progressTitle": "پیشرفت شما",
+			"currentTier": "رتبه فعلی",
+			"nextTier": "رتبه بعدی",
+			"wagerProgress": "پیشرفت شرط",
+			"totalWagered": "کل شرط‌بندی شده امروز",
+			"toNextTier": "برای رسیدن به رتبه بعدی",
+			"empty": {
+				"title": "هنوز هیچ مطالبه پاداشی وجود ندارد",
+				"subtitle": "بازی را شروع کنید تا پاداش کسب کنید!"
+			}
+		},
+		"rates": {
+			"title": "رتبه‌ها و نرخ‌های گردش مالی",
+			"subtitle": "درصدهای پاداش بر اساس سطح شرط و دسته بازی",
+			"overview": {
+				"title": "مرور کلی",
+				"body": "پاداش گردش مالی به کاربران بر اساس شرط‌های آنها در اسلات‌ها، کازینوی زنده، کتاب‌های ورزشی و لاتاری پاداش می‌دهد. پاداش‌ها هر 24 ساعت محاسبه می‌شوند و کاربران می‌توانند روز بعد از شرط‌بندی آنها را مطالبه کنند. هفت رتبه وجود دارد که هر کدام دارای نرخ‌های متفاوتی بسته به مبلغ شرط است."
+			},
+			"eligibility": {
+				"title": "صلاحیت",
+				"content": "برای شرکت:",
+				"points": {
+					"0": "شما باید یک حساب فعال داشته باشید.",
+					"1": "در اسلات، کازینوی زنده، کتاب ورزشی و لاتاری شرط‌بندی کنید.",
+					"2": "حداقل الزامات شرط‌بندی را برای هر رتبه برآورده کنید."
+				}
+			},
+			"calculation": {
+				"title": "چگونه پاداش‌ها محاسبه می‌شوند",
+				"desc": "پاداش‌ها هر 24 ساعت بر اساس کل شرط‌های شما محاسبه می‌شوند. مثال‌ها:",
+				"exampleTitle": "رتبه {tier}:",
+				"wagerIn": "شرط {amount} در {gameType}"
+			},
+			"table": {
+				"tierLevel": "سطح رتبه",
+				"wagerRange": "محدوده شرط",
+				"slots": "اسلات‌ها",
+				"liveCasino": "کازینوی زنده",
+				"sports": "ورزش",
+				"tierPrefix": "رتبه",
+				"commissionLevel": "سطح پاداش",
+				"dailyWager": "حجم شرط‌بندی روزانه"
+			},
+			"claim": {
+				"title": "مطالبه و برداشت پاداش‌ها",
+				"points": {
+					"0": "پاداش‌ها 24 ساعت پس از شرط‌بندی برای مطالبه واجد شرایط می‌شوند.",
+					"1": "پاداش‌های مطالبه نشده انباشته می‌شوند و منقضی نمی‌شوند.",
+					"2": "فرآیند مطالبه و برداشت ممکن است بر اساس سیاست‌های خاص پلتفرم متفاوت باشد."
+				}
+			},
+			"system": {
+				"title": "زمان سیستم و عملیات",
+				"dailyTimeframeLabel": "بازه زمانی روزانه:",
+				"dailyTimeframeValue": "00:00 UTC تا 23:59 UTC (هر روز).",
+				"claimDailyLabel": "مطالبه روزانه:",
+				"claimDailyValue": "هر روز در ساعت 14:00 UTC در دسترس است (زمان محلی شما: {local}).",
+				"note": "توجه: در حالی که ما با ارائه‌دهندگان از مناطق زمانی مختلف کار می‌کنیم، همه محاسبات از UTC پیروی می‌کنند تا از یکپارچگی اطمینان حاصل شود و از سردرگمی جلوگیری شود."
+			},
+			"amendments": {
+				"title": "اصلاحات و سلب صلاحیت",
+				"body": "ما می‌توانیم این شرایط را در هر زمان به‌روز کنیم، و تغییرات پس از انتشار اعمال می‌شوند. در صورت مشکوک بودن به خطاهای سیستم، محاسبات اشتباه یا تقلب، ما این حق را برای خود محفوظ می‌داریم که پاداش‌ها و حساب‌ها را در صورت لزوم برای تضمین عدالت تنظیم یا سلب صلاحیت کنیم."
+			},
+			"footer": {
+				"schedule": "برنامه پاداش:",
+				"availableDaily": "هر روز در دسترس است در",
+				"localTimeLabel": "(زمان محلی شما: {time})"
+			}
+		},
+		"calculator": {
+			"title": "ماشین حساب پاداش",
+			"subtitle": "درآمد پاداش خود را بر اساس مبالغ شرط‌بندی خود تخمین بزنید",
+			"interactive": {
+				"title": "ابزار تعاملی:",
+				"body": "مبالغ شرط‌بندی مختلف را وارد کنید تا پاداش‌های احتمالی را در تمام رتبه‌ها ببینید"
+			},
+			"potentialEarnings": "پاداش احتمالی",
+			"basedOnRate": "بر اساس نرخ پاداش {percentage}٪",
+			"tier": "رتبه {level}",
+			"commissionLevel": "سطح پاداش {level}",
+			"enterWager": "مبلغ شرط (USD) را وارد کنید",
+			"wagerPlaceholder": "مثلاً، 1000",
+			"calcFor": "محاسبه پاداش برای {amount}$ شرط",
+			"totalPotential": "کل پاداش احتمالی:",
+			"combinedAtTier": "پاداش ترکیبی از همه انواع بازی در رتبه {level}"
+		},
+		"claimSuccessModal": {
+			"title": "مطالبه موفق",
+			"statusCompleted": "تکمیل شد",
+			"statusOnChain": "روی بلاکچین",
+			"claimAmount": "مبلغ مطالبه",
+			"logoAlt": "لوگوی {siteName}",
+			"backgroundAlt": "پس‌زمینه موفقیت مطالبه",
+			"creatingMagic": "در حال ساخت جادو...",
+			"downloadShare": "دانلود و اشتراک‌گذاری",
+			"spreadTheWin": "برد را منتشر کنید",
+			"socialX": "X",
+			"socialFacebook": "فیس‌بوک",
+			"socialWhatsApp": "واتس‌اپ",
+			"socialTelegram": "تلگرام",
+			"socialReddit": "ردیت",
+			"socialMore": "بیشتر",
+			"shareText": "من همین حالا {amount} پاداش را مطالبه کردم! به من بپیوندید: {url}",
+			"referralLinkCopied": "لینک ارجاع کپی شد!",
+			"referralLinkCopyFailed": "کپی لینک ارجاع ناموفق بود",
+			"screenshotFailed": "گرفتن اسکرین‌شات ناموفق بود. لطفاً دوباره امتحان کنید یا از مرورگر دیگری استفاده کنید.",
+			"shareTextCopied": "متن اشتراک‌گذاری در کلیپ‌بورد کپی شد!",
+			"shareFailed": "اشتراک‌گذاری ناموفق بود. لطفاً دوباره امتحان کنید."
 		}
 	},
 	"debug": {
@@ -559,29 +729,29 @@
 	},
 	"getLobby": {
 		"enteringLobby": "در حال ورود به لابی...",
-		"connectingWait": "لطفاً منتظر بمانید تا شما را متصل کنیم.",
-		"invalidSession": "جلسه شما نامعتبر است یا ارائه‌دهنده وجود ندارد. لطفاً دوباره تلاش کنید.",
+		"connectingWait": "لطفاً در حین اتصال شما منتظر بمانید.",
+		"invalidSession": "نشست شما نامعتبر است یا ارائه‌دهنده از دست رفته است. لطفاً دوباره امتحان کنید.",
 		"failedPrefix": "ورود به لابی ناموفق بود: {message}",
-		"launchFailedTitle": "اجرا ناموفق بود",
-		"returnHome": "بازگشت به صفحه اصلی"
+		"launchFailedTitle": "راه‌اندازی ناموفق بود",
+		"returnHome": "بازگشت به خانه"
 	},
 	"play": {
 		"connecting": "در حال اتصال به سرور بازی...",
-		"invalidSession": "جلسه شما نامعتبر است یا منقضی شده است. لطفاً دوباره وارد شوید و تلاش کنید.",
-		"launchFailedTitle": "اجرا ناموفق بود",
-		"returnHome": "بازگشت به صفحه اصلی"
+		"invalidSession": "نشست شما نامعتبر است یا منقضی شده است. لطفاً وارد شوید و دوباره امتحان کنید.",
+		"launchFailedTitle": "راه‌اندازی ناموفق بود",
+		"returnHome": "بازگشت به خانه"
 	},
 	"modalsIdle": {
-		"badgeLimitedTime": "پیشنهاد با زمان محدود",
-		"headline": "۲۰۰٪ بونوس خوش‌آمدگویی دریافت کنید!",
-		"subheadline": "اکنون کیف پول ارز دیجیتال خود را متصل کنید و تا {amount} بونوس روی اولین واریز خود دریافت کنید!",
-		"featureDepositMatch": "۲۰۰٪ تطابق واریز",
+		"badgeLimitedTime": "پیشنهاد زمان محدود",
+		"headline": "200% پاداش خوش‌آمدگویی دریافت کنید!",
+		"subheadline": "اکنون کیف پول کریپتو خود را متصل کنید و تا {amount} پاداش در اولین واریز خود دریافت کنید!",
+		"featureDepositMatch": "200% مطابقت واریز",
 		"featureZeroFees": "بدون کارمزد تراکنش",
-		"featureInstantWithdrawals": "برداشت‌های آنی",
-		"featureNoKyc": "بدون نیاز به احراز هویت",
-		"ctaClaim": "اکنون بونوس را دریافت کنید!",
+		"featureInstantWithdrawals": "برداشت‌های فوری",
+		"featureNoKyc": "بدون نیاز به KYC",
+		"ctaClaim": "اکنون پاداش را مطالبه کنید!",
 		"offerExpires": "پیشنهاد منقضی می‌شود در:",
-		"disclaimer": "شرایط و ضوابط اعمال می‌شود. قمار شامل ریسک است. مسئولانه بازی کنید. +۱۸",
+		"disclaimer": "شرایط و ضوابط اعمال می‌شود. قمار شامل ریسک است. مسئولانه بازی کنید. 18+",
 		"closeAria": "بستن مودال",
 		"bannerAlt": "بنر تبلیغاتی",
 		"ctaOk": "اتصال کیف پول و شروع شرط‌بندی",
@@ -593,8 +763,8 @@
 	},
 	"modalsSmall": {
 		"close": "بستن",
-		"firstDepositBoost": "تقویت بونوس اولین واریز",
-		"bonus": "بونوس",
+		"firstDepositBoost": "افزایش پاداش اولین واریز",
+		"bonus": "پاداش",
 		"min": "دقیقه",
 		"sec": "ثانیه",
 		"deposit": "واریز"
@@ -602,68 +772,69 @@
 	"auth": {
 		"email": {
 			"title": "ورود با ایمیل",
-			"description": "یک کد ۶ رقمی برای شما ارسال خواهیم کرد",
+			"description": "ما یک کد 6 رقمی برای شما ارسال خواهیم کرد",
 			"emailLabel": "آدرس ایمیل",
 			"emailPlaceholder": "name@email.com",
 			"cancel": "لغو",
 			"sending": "در حال ارسال",
 			"continue": "ادامه",
 			"enterCodeTitle": "کد را وارد کنید",
-			"sentTo": "ارسال شد به {email}",
+			"sentTo": "ارسال شده به {email}",
 			"changeEmail": "تغییر ایمیل",
 			"resendCode": "ارسال مجدد کد",
-			"resendIn": "ارسال مجدد تا {seconds} ثانیه دیگر",
-			"verifying": "در حال تایید",
+			"resendIn": "ارسال مجدد در {seconds} ثانیه",
+			"verifying": "در حال تأیید",
 			"successTitle": "شما وارد شدید",
-			"successSubtitle": "در حال آماده‌سازی...",
-			"modalAria": "مودال تایید ایمیل",
+			"successSubtitle": "در حال راه‌اندازی...",
+			"modalAria": "مودال تأیید ایمیل",
 			"errors": {
 				"invalidEmail": "لطفاً یک آدرس ایمیل معتبر وارد کنید",
-				"sendFailed": "ارسال کد تایید ناموفق بود.",
-				"invalidCode": "لطفاً یک کد تایید ۶ رقمی وارد کنید"
+				"sendFailed": "ارسال کد تأیید ناموفق بود.",
+				"invalidCode": "لطفاً یک کد تأیید 6 رقمی وارد کنید"
 			}
 		},
 		"setNickname": {
 			"title": "نام مستعار خود را تنظیم کنید",
 			"subtitle": "این یک تنظیم یک‌باره است و قابل تغییر نیست",
-			"logoutAria": "خروج",
-			"inputPlaceholder": "نام مستعار منحصر به فرد خود را انتخاب کنید",
-			"referrerCheckbox": "من یک شناسه معرف دارم",
-			"referrerPlaceholder": "شناسه معرف را وارد کنید",
-			"referrerHelp": "اختیاری. این کار حساب شما را برای برنامه‌های بونوس به معرف متصل می‌کند.",
+			"logoutAria": "خروج از سیستم",
+			"inputPlaceholder": "نام مستعار منحصربه‌فرد خود را انتخاب کنید",
+			"referrerCheckbox": "من شناسه ارجاع دارم",
+			"referrerPlaceholder": "شناسه ارجاع را وارد کنید",
+			"referrerHelp": "اختیاری. این حساب شما را برای برنامه‌های پاداش به ارجاع‌دهنده متصل می‌کند.",
 			"status": {
 				"checking": "در حال بررسی در دسترس بودن...",
 				"available": "نام مستعار در دسترس است!",
 				"taken": "این نام مستعار قبلاً گرفته شده است."
 			},
-			"register": "ثبت‌نام و بازی",
+			"register": "ثبت نام و بازی",
 			"termsTitle": "شرایط و ضوابط:",
-			"termsBody": "با امضای این سند با کیف پول خود و/یا ادامه استفاده از این برنامه وب۳، شما شرایط استفاده از برنامه را می‌پذیرید. امضای رضایت شما به شرایط استفاده یک تراکنش بلاک‌چین نیست و هیچ هزینه‌ای ندارد.",
+			"termsBody": "با امضای این سند با کیف پول خود و/یا ادامه استفاده از این برنامه Web3، شرایط استفاده از برنامه را می‌پذیرید. امضای رضایت شما به شرایط استفاده یک تراکنش بلاکچین نیست و هیچ هزینه‌ای در بر ندارد.",
 			"errors": {
-				"verifyNicknameFailed": "تایید نام مستعار ممکن نبود. لطفاً دوباره تلاش کنید.",
-				"registerFailed": "ثبت‌نام ناموفق بود: {message}"
+				"verifyNicknameFailed": "تأیید نام مستعار ناموفق بود. لطفاً دوباره امتحان کنید.",
+				"registerFailed": "ثبت نام ناموفق بود: {message}"
 			}
 		},
 		"walletConnect": {
 			"loginWithEmail": "ورود با ایمیل",
 			"connectWalletBtn": "اتصال کیف پول",
+			"loginWithWallet": "ورود با کیف پول",
 			"player": "بازیکن",
 			"walletConnected": "کیف پول متصل شد",
 			"emailConnected": "ایمیل متصل شد",
 			"disconnect": "قطع اتصال",
 			"walletAddress": "آدرس کیف پول",
-			"balance": "موجودی",
-			"loginWithWallet": "ورود با کیف پول"
+			"balance": "موجودی"
 		}
 	},
 	"walletProvider": {
 		"transactionModal": {
+			"title": "کیف پول",
 			"tabs": {
 				"deposit": "واریز",
-				"withdraw": "برداشت",
-				"swap": "تبدیل",
-				"walletInfo": "کیف پول",
 				"tip": "انعام",
+				"withdraw": "برداشت",
+				"swap": "مبادله",
+				"walletInfo": "کیف پول",
 				"emailWallet": "کیف پول ایمیل",
 				"wallet": "کیف پول"
 			},
@@ -671,22 +842,21 @@
 				"emailWallet": "کیف پول ایمیل",
 				"wallet": "کیف پول",
 				"deposit": "واریز",
+				"tip": "انعام",
 				"withdraw": "برداشت",
-				"swap": "تبدیل",
-				"tip": "انعام"
-			},
-			"title": "کیف پول"
+				"swap": "مبادله"
+			}
 		},
 		"networkSelector": {
 			"placeholder": "انتخاب شبکه",
-			"switching": "در حال تغییر...",
+			"switching": "در حال تعویض...",
 			"walletNotConnected": "کیف پول متصل نیست.",
-			"failedToSwitch": "تغییر شبکه ناموفق بود. لطفاً از طریق کیف پول خود امتحان کنید.",
+			"failedToSwitch": "تعویض شبکه ناموفق بود. لطفاً از کیف پول خود امتحان کنید.",
 			"altLogo": "لوگوی شبکه"
 		},
 		"tokenList": {
-			"dialogTitle": "یک توکن انتخاب کنید",
-			"instantDeposit": "واریز آنی",
+			"dialogTitle": "انتخاب یک توکن",
+			"instantDeposit": "واریز فوری",
 			"yourWalletBalance": "موجودی کیف پول شما",
 			"searchPlaceholder": "جستجوی نام یا چسباندن آدرس",
 			"emptySearch": "هیچ توکنی مطابق با جستجوی شما یافت نشد.",
@@ -700,119 +870,165 @@
 			"emailWallet": "کیف پول ایمیل",
 			"deposit": "واریز",
 			"withdraw": "برداشت",
-			"swap": "تبدیل"
+			"swap": "مبادله"
 		},
 		"depositPanel": {
-			"youPay": "شما می‌پردازید",
+			"youPay": "شما پرداخت می‌کنید",
 			"resetForm": "بازنشانی فرم",
 			"enterAmount": "مبلغ را وارد کنید",
 			"selectToken": "انتخاب توکن",
 			"max": "حداکثر",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} برای پوشش کارمزدهای گس و جلوگیری از شکست تراکنش رزرو شده است",
 			"balance": "موجودی:",
 			"calculating": "در حال محاسبه...",
-			"approxUsd": "~ ${amount} دلار",
+			"approxUsd": "~ {amount} دلار آمریکا",
 			"minPrefix": "حداقل:",
 			"ratesMayVary": "نرخ‌ها ممکن است متفاوت باشند",
 			"emailWalletAddress": "آدرس کیف پول ایمیل",
 			"walletAddress": "آدرس کیف پول",
 			"minimumIs": "حداقل {min} است",
 			"errors": {
-				"selectTokenAndAmount": "لطفاً یک توکن انتخاب کرده و مبلغی را وارد کنید",
-				"insufficientBalance": "موجودی برای این تراکنش کافی نیست",
-				"amountTooHighGas": "مبلغ با در نظر گرفتن هزینه گس بسیار زیاد است",
-				"checkForm": "لطفاً فرم را بررسی کرده و دوباره تلاش کنید",
+				"selectTokenAndAmount": "لطفاً یک توکن انتخاب کرده و مبلغی وارد کنید",
+				"insufficientBalance": "موجودی کافی برای این تراکنش وجود ندارد",
+				"amountTooHighGas": "مبلغ هنگام محاسبه کارمزدهای گس بیش از حد زیاد است",
+				"checkForm": "لطفاً فرم را بررسی کرده و دوباره امتحان کنید",
 				"pendingDeposit": "شما یک واریز در حال انتظار دارید. لطفاً منتظر بمانید تا تکمیل شود"
 			},
 			"status": {
 				"processing": "در حال پردازش...",
-				"awaitingApproval": "در انتظار تایید",
+				"awaitingApproval": "در انتظار تأیید",
 				"calculatingRate": "در حال محاسبه نرخ...",
 				"insufficientBalance": "موجودی ناکافی"
 			},
 			"buttons": {
-				"depositUsd": "واریز ${amount}"
+				"depositUsd": "واریز {amount}$"
+			}
+		},
+		"tipPanel": {
+			"youTip": "انعام شما",
+			"resetForm": "بازنشانی فرم",
+			"enterAmount": "مبلغ را وارد کنید",
+			"selectToken": "انتخاب توکن",
+			"minPrefix": "حداقل",
+			"balance": "موجودی:",
+			"max": "حداکثر",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} برای پوشش کارمزدهای گس و جلوگیری از شکست تراکنش رزرو شده است",
+			"approxUsd": "~ {amount} دلار آمریکا",
+			"tipPanelWarningText": "انعام‌ها داوطلبانه و غیرقابل استرداد هستند.",
+			"emailWalletAddress": "آدرس کیف پول ایمیل",
+			"errors": {
+				"selectTokenAndAmount": "لطفاً یک توکن انتخاب کرده و مبلغی وارد کنید.",
+				"insufficientBalance": "موجودی ناکافی.",
+				"belowMinimum": "مبلغ باید حداقل {min} باشد.",
+				"missingWallet": "بازیابی کیف پول انعام ناموفق بود. لطفاً بعداً دوباره امتحان کنید.",
+				"checkForm": "لطفاً جزئیات انعام خود را تأیید کنید."
 			},
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} برای پوشش هزینه های گاز و جلوگیری از شکست تراکنش رزرو شده است"
+			"status": {
+				"processing": "در حال ارسال انعام...",
+				"awaitingApproval": "در انتظار تأیید...",
+				"calculatingRate": "در حال محاسبه...",
+				"insufficientBalance": "موجودی ناکافی",
+				"fetchingWallet": "در حال آماده‌سازی کیف پول انعام..."
+			},
+			"prompts": {
+				"selectToken": "انتخاب توکن",
+				"enterAmount": "مبلغ را وارد کنید"
+			},
+			"buttons": {
+				"tipUsd": "انعام {amount}$",
+				"tip": "انعام"
+			},
+			"minimumIs": "حداقل انعام {min} است"
+		},
+		"tipPending": {
+			"submittedTitle": "انعام در حال انتظار",
+			"submittedDesc": "انعام شما در حال تأیید روی بلاکچین است.",
+			"confirmedTitle": "انعام تأیید شد!",
+			"confirmedDesc": "انعام شما با موفقیت تحویل داده شد.",
+			"viewOnExplorer": "مشاهده در اکسپلورر",
+			"newTipPending": "ارسال انعام دیگر",
+			"newTipConfirmed": "ارسال انعام دیگر"
 		},
 		"swapPanel": {
 			"selectTokens": "انتخاب توکن‌ها",
-			"enterAmount": "وارد کردن مبلغ",
+			"enterAmount": "مبلغ را وارد کنید",
 			"gettingQuote": "در حال دریافت قیمت...",
-			"confirming": "در حال تایید...",
-			"approving": "در حال تایید...",
-			"insufficientBalance": "موجودی برای تبدیل کافی نیست",
-			"sameToken": "نمی‌توان همان توکن را تبدیل کرد",
-			"approveAndSwap": "تایید و تبدیل",
-			"swap": "تبدیل",
+			"confirming": "در حال تأیید...",
+			"approving": "در حال تأیید...",
+			"insufficientBalance": "موجودی کافی برای مبادله وجود ندارد",
+			"sameToken": "نمی‌توان توکن مشابه را مبادله کرد",
+			"approveAndSwap": "تأیید و مبادله",
+			"swap": "مبادله",
 			"slippageTolerance": "تحمل لغزش",
 			"custom": "سفارشی",
 			"set": "تنظیم",
 			"currentSlippage": "لغزش فعلی",
-			"swapSuccessful": "تبدیل موفق!",
-			"transactionConfirmed": "تراکنش شما تایید شد",
+			"swapSuccessful": "مبادله موفقیت‌آمیز بود!",
+			"transactionConfirmed": "تراکنش شما ارسال شد",
 			"hash": "هش",
-			"newSwap": "تبدیل جدید",
-			"youPay": "شما می‌پردازید",
+			"newSwap": "مبادله جدید",
+			"youPay": "شما پرداخت می‌کنید",
 			"max": "حداکثر",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} برای پوشش کارمزدهای گس و جلوگیری از شکست تراکنش رزرو شده است",
 			"low": "کم",
-			"amountPlaceholder": "۰",
+			"amountPlaceholder": "0",
 			"selectToken": "انتخاب توکن",
 			"youReceive": "شما دریافت می‌کنید",
 			"gettingBestQuote": "در حال دریافت بهترین قیمت...",
 			"gas": "گس",
 			"minimumReceived": "حداقل دریافتی",
 			"slippageToleranceLabel": "تحمل لغزش",
-			"gasFee": "هزینه گس",
-			"priceWarning": "قیمت‌ها به صورت لحظه‌ای به‌روز می‌شوند و ممکن است قبل از تایید تراکنش شما تغییر کنند",
+			"gasFee": "کارمزد گس",
+			"priceWarning": "قیمت‌ها در زمان واقعی به‌روز می‌شوند و ممکن است قبل از تأیید تراکنش شما تغییر کنند",
 			"emailWalletAddress": "آدرس کیف پول ایمیل",
 			"walletAddress": "آدرس کیف پول",
 			"minimumIs": "حداقل {min} است",
 			"errors": {
-				"selectTokenAndAmount": "لطفاً یک توکن انتخاب کرده و مبلغی را وارد کنید",
-				"insufficientBalance": "موجودی برای این تراکنش کافی نیست",
-				"amountTooHighGas": "مبلغ با در نظر گرفتن هزینه گس بسیار زیاد است",
-				"checkForm": "لطفاً فرم را بررسی کرده و دوباره تلاش کنید",
+				"selectTokenAndAmount": "لطفاً یک توکن انتخاب کرده و مبلغی وارد کنید",
+				"insufficientBalance": "موجودی کافی برای این تراکنش وجود ندارد",
+				"amountTooHighGas": "مبلغ هنگام محاسبه کارمزدهای گس بیش از حد زیاد است",
+				"checkForm": "لطفاً فرم را بررسی کرده و دوباره امتحان کنید",
 				"pendingDeposit": "شما یک واریز در حال انتظار دارید. لطفاً منتظر بمانید تا تکمیل شود"
 			},
 			"status": {
 				"processing": "در حال پردازش...",
-				"awaitingApproval": "در انتظار تایید",
+				"awaitingApproval": "در انتظار تأیید",
 				"calculatingRate": "در حال محاسبه نرخ...",
 				"insufficientBalance": "موجودی ناکافی"
 			},
 			"buttons": {
-				"depositUsd": "واریز ${amount}"
-			},
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} برای پوشش هزینه‌های گاز و جلوگیری از شکست تراکنش رزرو شده است"
+				"depositUsd": "واریز {amount}$"
+			}
 		},
 		"depositPending": {
-			"confirmedTitle": "واریز تایید شد!",
+			"confirmedTitle": "واریز تأیید شد!",
 			"submittedTitle": "تراکنش ارسال شد",
-			"confirmedDesc": "موجودی شما به‌روز شد.",
-			"submittedDesc": "در انتظار تایید بلاک‌چین. این ممکن است چند دقیقه طول بکشد.",
-			"viewOnExplorer": "مشاهده در اکسپلورر",
-			"newDepositConfirmed": "انجام یک واریز دیگر",
-			"newDepositPending": "شروع یک واریز جدید",
 			"failedTitle": "تراکنش ناموفق بود",
-			"failedDesc": "تراکنش شما ناموفق بوده است. ",
-			"newDepositFailed": "دوباره امتحان کنید"
+			"confirmedDesc": "موجودی شما به‌روز شد.",
+			"submittedDesc": "در انتظار تأیید بلاکچین. این ممکن است چند دقیقه طول بکشد.",
+			"failedDesc": "تراکنش شما ناموفق بود. لطفاً دوباره امتحان کنید.",
+			"viewOnExplorer": "مشاهده در اکسپلورر",
+			"newDepositConfirmed": "انجام واریز دیگر",
+			"newDepositPending": "شروع واریز جدید",
+			"newDepositFailed": "تلاش مجدد"
 		},
 		"withdrawPanel": {
 			"resetForm": "بازنشانی فرم",
-			"networkNotSupported": "برداشت‌ها فقط در شبکه‌های آربیتروم، پالیگان و بایننس پشتیبانی می‌شوند",
+			"networkNotSupported": "برداشت‌ها فقط در Arbitrum، Polygon و BNB پشتیبانی می‌شوند",
 			"youWithdraw": "شما برداشت می‌کنید",
 			"loading": "در حال بارگذاری...",
 			"amount": "مبلغ",
 			"max": "حداکثر",
 			"balance": "موجودی:",
-			"available": "در دسترس:",
+			"available": "موجود:",
 			"insufficientBalance": "موجودی ناکافی",
 			"minimumIs": "حداقل {min} است",
 			"minLabel": "حداقل:",
+			"calculating": "در حال محاسبه",
 			"emailWalletAddress": "آدرس کیف پول ایمیل",
 			"walletAddress": "آدرس کیف پول",
 			"errors": {
-				"pendingWithdrawal": "شما از قبل یک برداشت در حال انتظار دارید",
+				"pendingWithdrawal": "شما قبلاً یک برداشت در حال انتظار دارید",
 				"invalidAddress": "آدرس نامعتبر",
 				"enterAmount": "مبلغ را وارد کنید",
 				"networkNotSupported": "شبکه پشتیبانی نمی‌شود"
@@ -820,130 +1036,84 @@
 			"status": {
 				"processing": "در حال پردازش...",
 				"insufficientBalance": "موجودی ناکافی",
-				"pendingWithdrawal": "از قبل یک برداشت در حال انتظار دارید"
+				"pendingWithdrawal": "قبلاً یک برداشت در حال انتظار دارید"
 			},
 			"buttons": {
 				"withdraw": "برداشت {amount} {symbol}",
 				"minimum": "حداقل {amount} {symbol}"
-			},
-			"calculating": "در حال محاسبه"
+			}
 		},
 		"withdrawSuccess": {
-			"title": "برداشت موفق!",
-			"successMessage": "🎉 همین الان {withdrawAmount} {tokenSymbol} از {siteName} برداشت کردم! 🚀 در {shareUrl} به زنجیره پیروزی بپیوندید",
+			"title": "برداشت موفقیت‌آمیز بود!",
+			"successMessage": "🎉 همین الان {withdrawAmount} {tokenSymbol} از {siteName} برداشت کردم! 🚀 به زنجیره برد در {shareUrl} بپیوندید",
 			"withdrawnAmount": "مبلغ برداشت شده",
 			"shareText": "اشتراک‌گذاری",
-			"subText": "🚀 به زنجیره پیروزی بپیوندید! 🚀",
+			"subText": "🚀 به زنجیره برد بپیوندید! 🚀",
 			"generating": "در حال تولید...",
 			"screenshot": "گرفتن اسکرین‌شات",
 			"download": "دانلود تصویر",
 			"close": "بستن",
 			"copiedToClipboard": "لینک اشتراک‌گذاری با موفقیت کپی شد",
+			"userName": "بازیکن {siteName}",
+			"status": "تکمیل شد",
 			"entryPrice": "مبلغ برداشت",
 			"lastPrice": "نماد توکن",
 			"referralCode": "کد ارجاع",
-			"screenshotFailed": "گرفتن اسکرین‌شات با شکست مواجه شد. لطفاً دوباره تلاش کنید یا مرورگر دیگری استفاده کنید.",
-			"shareFailed": "اشتراک‌گذاری ناموفق بود. لطفا دوباره تلاش کنید.",
-			"status": "کامل شد",
-			"userName": "بازیکن {siteName}"
+			"screenshotFailed": "گرفتن اسکرین‌شات ناموفق بود. لطفاً دوباره امتحان کنید یا از مرورگر دیگری استفاده کنید.",
+			"shareFailed": "اشتراک‌گذاری ناموفق بود. لطفاً دوباره امتحان کنید."
 		},
 		"withdrawPending": {
-			"confirmedTitle": "برداشت تایید شد!",
+			"confirmedTitle": "برداشت تأیید شد!",
 			"submittedTitle": "تراکنش ارسال شد",
 			"confirmedDesc": "وجوه شما در راه است.",
-			"submittedDesc": "در انتظار تایید بلاک‌چین...",
+			"submittedDesc": "در انتظار تأیید بلاکچین...",
 			"viewOnExplorer": "مشاهده در اکسپلورر",
-			"manualApproval": "این برداشت نیاز به تایید دستی دارد.",
-			"newWithdrawalConfirmed": "انجام یک برداشت دیگر",
-			"newWithdrawalPending": "شروع یک برداشت جدید"
+			"manualApproval": "این برداشت نیاز به تأیید دستی دارد.",
+			"newWithdrawalConfirmed": "انجام برداشت دیگر",
+			"newWithdrawalPending": "شروع برداشت جدید"
 		},
 		"withdrawSummary": {
 			"youWillReceive": "شما دریافت خواهید کرد"
-		},
-		"tipPanel": {
-			"approxUsd": "~  دلار آمریکا",
-			"balance": "موجودی:",
-			"buttons": {
-				"tip": "انعام",
-				"tipUsd": "انعام"
-			},
-			"emailWalletAddress": "آدرس کیف پول ایمیل",
-			"enterAmount": "مقدار را وارد کنید",
-			"errors": {
-				"belowMinimum": "مبلغ باید حداقل {min} باشد.",
-				"checkForm": "لطفاً جزئیات انعام خود را بررسی کنید.",
-				"insufficientBalance": "موجودی کافی نیست.",
-				"missingWallet": "امکان دریافت کیف پول انعام نیست. لطفاً بعداً دوباره امتحان کنید.",
-				"selectTokenAndAmount": "لطفاً یک توکن را انتخاب کرده و مقداری وارد کنید."
-			},
-			"max": "حداکثر",
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} برای پوشش هزینه‌های گاز و جلوگیری از شکست تراکنش رزرو شده است",
-			"minimumIs": "حداقل مبلغ انعام {min} است",
-			"minPrefix": "حداقل",
-			"prompts": {
-				"enterAmount": "مبلغ را وارد کنید",
-				"selectToken": "انتخاب توکن"
-			},
-			"resetForm": "بازنشانی فرم",
-			"selectToken": "انتخاب توکن",
-			"status": {
-				"awaitingApproval": "در انتظار تأیید...",
-				"calculatingRate": "در حال محاسبه...",
-				"fetchingWallet": "در حال آماده‌سازی کیف پول انعام...",
-				"insufficientBalance": "موجودی ناکافی",
-				"processing": "در حال ارسال انعام..."
-			},
-			"tipPanelWarningText": "انعام‌ها داوطلبانه و غیرقابل بازپرداخت هستند.",
-			"youTip": "انعام شما"
-		},
-		"tipPending": {
-			"confirmedDesc": "پیشنهاد شما با موفقیت ارسال شد.",
-			"confirmedTitle": "انعام تایید شد!",
-			"newTipConfirmed": "نکته دیگری ارسال کنید",
-			"newTipPending": "ارسال انعام دیگر",
-			"submittedDesc": "نکته شما در حال تأیید در زنجیره است.",
-			"submittedTitle": "انعام در انتظار",
-			"viewOnExplorer": "مشاهده در کاوشگر"
 		}
 	},
 	"navUser": {
-		"upgradeToPro": "ارتقا به پرو",
-		"account": "حساب کاربری",
-		"billing": "صورتحساب",
+		"upgradeToPro": "ارتقاء به پرو",
+		"account": "حساب",
+		"billing": "صورت‌حساب",
 		"notifications": "اعلان‌ها",
-		"logout": "خروج"
+		"logout": "خروج از سیستم"
 	},
 	"games": {
 		"pageTitle": "همه بازی‌ها",
-		"playNow": "اکنون بازی کنید",
+		"playNow": "همین حالا بازی کنید",
 		"byProvider": "توسط {name}",
 		"count": "{count} بازی",
-		"noResults": "هیچ بازی منطبق با معیارهای شما یافت نشد.",
-		"errorLoading": "بارگذاری بازی‌ها ممکن نبود. لطفاً بعداً دوباره تلاش کنید.",
+		"noResults": "هیچ بازی مطابق با معیارهای شما یافت نشد.",
+		"errorLoading": "بارگذاری بازی‌ها ناموفق بود. لطفاً بعداً دوباره امتحان کنید.",
 		"slots": "اسلات‌ها",
-		"sports": "ورزشی",
-		"liveCasino": "کازینو زنده",
+		"sports": "ورزش",
+		"liveCasino": "کازینوی زنده",
 		"explore": "کاوش",
 		"exploreSubtitle": "تجربه‌های بازی شگفت‌انگیز را کشف کنید",
 		"poker": "پوکر",
 		"lottery": "لاتاری",
-		"futures": "فیوچرز",
+		"futures": "آتی",
 		"vr": "واقعیت مجازی",
-		"swap": "تبدیل",
-		"slotsDescription": "قرقره‌ها را بچرخانید و جک‌پات‌های عظیم برنده شوید",
-		"liveCasinoDescription": "هیجان کازینوی زنده را با دیلرهای واقعی تجربه کنید",
-		"sportsDescription": "روی تیم‌ها و رویدادهای ورزشی مورد علاقه خود شرط ببندید",
-		"pokerDescription": "مهارت‌های خود را در بازی‌های پوکر کلاسیک آزمایش کنید",
-		"lotteryDescription": "شانس خود را با لاتاری و بازی‌های برد آنی امتحان کنید",
-		"futuresDescription": "معامله کنید و حرکات بازار را پیش‌بینی کنید",
-		"vrDescription": "در بازی‌های واقعیت مجازی غرق شوید",
-		"swapDescription": "توکن‌ها و ارزهای دیجیتال را به صورت یکپارچه مبادله کنید",
+		"swap": "مبادله",
+		"slotsDescription": "رول‌ها را بچرخانید و جوایز بزرگ ببرید",
+		"liveCasinoDescription": "تجربه اکشن کازینوی زمان واقعی با دیلرهای زنده",
+		"sportsDescription": "روی تیم‌ها و رویدادهای ورزشی موردعلاقه خود شرط‌بندی کنید",
+		"pokerDescription": "مهارت‌های خود را در بازی‌های پوکر کلاسیک امتحان کنید",
+		"lotteryDescription": "شانس خود را با لاتاری و بازی‌های برد فوری امتحان کنید",
+		"futuresDescription": "معامله و پیش‌بینی حرکات بازار",
+		"vrDescription": "خود را در بازی واقعیت مجازی غوطه‌ور کنید",
+		"swapDescription": "توکن‌ها و ارزهای دیجیتال را به‌راحتی مبادله کنید",
 		"categories": {
 			"slot": {
 				"title": "بازی‌های اسلات"
 			},
 			"liveCasino": {
-				"title": "بازی‌های کازینو زنده"
+				"title": "بازی‌های کازینوی زنده"
 			},
 			"sports": {
 				"title": "بازی‌های شرط‌بندی ورزشی"
@@ -965,87 +1135,87 @@
 		"clearFilter": "پاک کردن فیلتر",
 		"categories": {
 			"slot": {
-				"title": "ارائه‌دهندگان بازی اسلات"
+				"title": "ارائه‌دهندگان بازی‌های اسلات"
 			},
 			"liveCasino": {
-				"title": "ارائه‌دهندگان کازینو زنده"
+				"title": "ارائه‌دهندگان کازینوی زنده"
 			},
 			"sports": {
 				"title": "ارائه‌دهندگان شرط‌بندی ورزشی"
 			},
 			"rng": {
-				"title": "ارائه‌دهندگان بازی RNG"
+				"title": "ارائه‌دهندگان بازی‌های RNG"
 			},
 			"other": {
-				"title": "ارائه‌دهندگان بازی {category}"
+				"title": "ارائه‌دهندگان بازی‌های {category}"
 			}
 		}
 	},
 	"hero": {
 		"guest": {
-			"title": "به هیجان بپیوندید",
-			"subtitle": "اکنون ثبت‌نام کنید و یک بونوس خوش‌آمدگویی انحصاری دریافت کنید!",
+			"title": "به اکشن بپیوندید",
+			"subtitle": "همین حالا ثبت‌نام کنید و یک پاداش خوش‌آمدگویی انحصاری دریافت کنید!",
 			"cta": "اکنون ثبت‌نام کنید"
 		},
 		"welcome": {
-			"title1": "بونوس خوش‌آمدگویی",
-			"title2": "تا ۵۹۰٪",
-			"subtitle": "+ ۲۲۵ چرخش رایگان",
-			"cta": "واریز کنید و بگیرید"
+			"title1": "پاداش خوش‌آمدگویی",
+			"title2": "تا 590%",
+			"subtitle": "+ 225 چرخش رایگان",
+			"cta": "واریز و دریافت کنید"
 		},
 		"jackpot": {
-			"title1": "جک‌پات بزرگ",
-			"title2": "۱,۰۰۰,۰۰۰ دلار",
-			"subtitle": "اکنون بازی کنید و بزرگ برنده شوید",
-			"cta": "اکنون بازی کنید"
+			"title1": "جایزه بزرگ مگا",
+			"title2": "1,000,000 دلار",
+			"subtitle": "همین حالا بازی کنید و بردهای بزرگ داشته باشید",
+			"cta": "همین حالا بازی کنید"
 		},
 		"cards": {
 			"casino": {
 				"title": "کازینو",
-				"badge": "+۵۹۰ بازی",
-				"desc": "از بازی‌های اصلی {siteName} و سایر بازی‌های کازینو از ارائه‌دهندگان برتر لذت ببرید.",
-				"link": "رفتن به کازینو"
+				"badge": "590+ بازی",
+				"desc": "از بازی‌های اورجینال {siteName} و سایر بازی‌های کازینو از ارائه‌دهندگان برتر لذت ببرید.",
+				"link": "برو به کازینو"
 			},
 			"slots": {
 				"title": "اسلات‌ها",
-				"badge": "۵۲۹۲ بازی",
-				"desc": "قرقره‌ها را بچرخانید و با مجموعه اسلات‌های برتر ما جک‌پات‌های عظیم را بزنید.",
-				"link": "رفتن به اسلات‌ها"
+				"badge": "5292 بازی",
+				"desc": "رول‌ها را بچرخانید و با مجموعه اسلات‌های برتر ما جوایز بزرگ ببرید.",
+				"link": "برو به اسلات‌ها"
 			},
 			"sports": {
-				"title": "ورزشی",
-				"badge": "۳ بازی",
-				"desc": "روی تیم‌ها و رویدادهای ورزشی مورد علاقه خود با ضرایب رقابتی شرط ببندید.",
-				"link": "رفتن به ورزشی"
+				"title": "ورزش",
+				"badge": "3 بازی",
+				"desc": "با شانس‌های رقابتی روی تیم‌ها و رویدادهای ورزشی موردعلاقه خود شرط‌بندی کنید.",
+				"link": "برو به ورزش"
 			},
 			"crypto": {
-				"title": "ارز دیجیتال و کسب درآمد",
-				"badge": "۶۰٪ سود سالانه",
-				"desc": "با نرخ‌های جذاب، ارز دیجیتال را استیک کنید، معامله کنید و کسب درآمد کنید.",
-				"link": "رفتن به ارز دیجیتال"
+				"title": "کریپتو و کسب درآمد",
+				"badge": "60% APR",
+				"desc": "استیک کنید، معامله کنید و با ارز دیجیتال با نرخ‌های جذاب کسب درآمد کنید.",
+				"link": "برو به کریپتو"
 			}
 		},
 		"layout3": {
 			"headerTitle": "بازی در کانون توجه",
-			"headerSubtitle": "بازی‌های شگفت‌انگیز را کشف کنید و ماجراهای جدید را در مجموعه منتخب ما کاوش کنید",
-			"slider1Title": "بازی‌های منتخب",
-			"slider1Badge": "انتخاب‌های کارکنان",
+			"headerSubtitle": "بازی‌های شگفت‌انگیز را کشف کنید و ماجراجویی‌های جدید را در مجموعه منتخب ما کاوش کنید",
+			"slider1Title": "بازی‌های ویژه",
+			"slider1Badge": "انتخاب کارکنان",
 			"slider2Title": "بیشتر برای کاوش",
-			"slider2Badge": "پرطرفدار",
-			"featuredGameLabel": "بازی منتخب"
+			"slider2Badge": "روندهای داغ",
+			"featuredGameLabel": "بازی ویژه"
 		},
 		"ctaExploreGames": "کاوش بازی‌ها",
-		"ctaJoinAffiliate": "عضویت در برنامه همکاری"
+		"ctaJoinAffiliate": "پیوستن به وابسته"
 	},
 	"betting": {
 		"live": {
 			"winRate": "نرخ برد",
 			"biggestWin": "بزرگترین برد",
-			"bigWins50": "بردهای بزرگ (+۵۰)",
+			"bigWins50": "بردهای بزرگ (50+)",
 			"recentWins": "بردهای اخیر",
 			"header": {
 				"title": "فعالیت شرط‌بندی زنده",
-				"subtitle": "فعالیت شرط‌بندی لحظه‌ای • {count} بازی بارگذاری شد"
+				"subtitle": "فعالیت شرط‌بندی در زمان واقعی • {count} بازی بارگذاری شده"
 			},
 			"status": {
 				"live": "زنده",
@@ -1069,7 +1239,7 @@
 				"multiplier": "ضریب",
 				"profit": "سود"
 			},
-			"empty": "هیچ رکورد شرط‌بندی یافت نشد"
+			"empty": "هیچ سابقه شرط‌بندی یافت نشد"
 		}
 	},
 	"fontChanger": {
@@ -1077,370 +1247,1157 @@
 		"fontSettings": "تنظیمات فونت",
 		"current": "فعلی",
 		"browseGoogleFonts": "مرور فونت‌های گوگل",
-		"uploadCustomFont": "آپلود فونت سفارشی",
-		"quickUploadFontFile": "آپلود سریع فایل فونت",
+		"uploadCustomFont": "بارگذاری فونت سفارشی",
+		"quickUploadFontFile": "بارگذاری سریع فایل فونت",
 		"resetToDefault": "بازنشانی به پیش‌فرض",
 		"googleFonts": {
 			"title": "فونت‌های گوگل",
 			"searchFonts": "جستجوی فونت‌ها...",
 			"preview": "پیش‌نمایش",
-			"previewText": "دو صد گفته چون نیم کردار نیست.",
-			"alphabetPreview": "ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی ۱۲۳۴۵۶۷۸۹۰",
+			"previewText": "The quick brown fox jumps over the lazy dog",
+			"alphabetPreview": "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 1234567890",
 			"applyFont": "اعمال فونت",
 			"clearPreview": "پاک کردن پیش‌نمایش",
 			"previewWith": "پیش‌نمایش متن با {font}",
-			"noFontsFound": "هیچ فونتی مطابق با «{searchTerm}» یافت نشد"
+			"noFontsFound": "هیچ فونتی مطابق با \"{searchTerm}\" یافت نشد"
 		},
 		"customUpload": {
-			"title": "آپلود فونت سفارشی",
-			"description": "فایل فونت خود را برای سفارشی‌سازی وب‌سایت آپلود کنید",
+			"title": "بارگذاری فونت سفارشی",
+			"description": "فایل فونت خود را برای سفارشی‌سازی وب‌سایت بارگذاری کنید",
 			"fontFile": "فایل فونت",
-			"dragDropArea": "فایل فونت خود را اینجا بکشید و رها کنید، یا",
-			"clickToUpload": "برای آپلود کلیک کنید",
+			"dragDropArea": "فایل فونت خود را به اینجا بکشید و رها کنید، یا",
+			"clickToUpload": "برای بارگذاری کلیک کنید",
 			"supportedFormats": "فرمت‌های پشتیبانی شده: .woff, .woff2, .ttf, .otf",
-			"maxFileSize": "حداکثر اندازه فایل: ۱۰ مگابایت",
+			"maxFileSize": "حداکثر حجم فایل: 10 مگابایت",
 			"fontName": "نام فونت",
 			"fontNamePlaceholder": "یک نام برای فونت خود وارد کنید",
 			"previewYourFont": "پیش‌نمایش فونت شما",
-			"uploadAndApply": "آپلود و اعمال فونت",
+			"uploadAndApply": "بارگذاری و اعمال فونت",
 			"cancel": "لغو",
-			"uploading": "در حال آپلود...",
+			"uploading": "در حال بارگذاری...",
 			"errors": {
-				"invalidFileType": "لطفاً یک فایل فونت معتبر آپلود کنید (.woff, .woff2, .ttf, .otf)",
-				"fileTooLarge": "اندازه فایل از محدودیت ۱۰ مگابایت بیشتر است",
-				"uploadFailed": "آپلود فایل فونت ناموفق بود",
-				"enterFontName": "لطفاً یک فایل فونت انتخاب کرده و یک نام ارائه دهید",
+				"invalidFileType": "لطفاً یک فایل فونت معتبر بارگذاری کنید (.woff, .woff2, .ttf, .otf)",
+				"fileTooLarge": "حجم فایل از حد 10 مگابایت تجاوز می‌کند",
+				"uploadFailed": "بارگذاری فایل فونت ناموفق بود",
+				"enterFontName": "لطفاً یک فایل فونت انتخاب کرده و نامی ارائه دهید",
 				"readFileFailed": "خواندن فایل فونت ناموفق بود"
 			}
 		},
 		"messages": {
-			"fontAppliedSuccess": "فونت «{fontName}» با موفقیت اعمال شد!",
-			"fontUploadedSuccess": "فونت «{fontName}» با موفقیت آپلود و اعمال شد!",
+			"fontAppliedSuccess": "فونت \"{fontName}\" با موفقیت اعمال شد!",
+			"fontUploadedSuccess": "فونت \"{fontName}\" با موفقیت بارگذاری و اعمال شد!",
 			"fontResetSuccess": "فونت به پیش‌فرض بازنشانی شد",
-			"invalidFileType": "لطفاً یک فایل فونت معتبر آپلود کنید (.woff, .woff2, .ttf, .otf)",
+			"invalidFileType": "لطفاً یک فایل فونت معتبر بارگذاری کنید (.woff, .woff2, .ttf, .otf)",
 			"uploadFailed": "خواندن فایل فونت ناموفق بود"
 		}
 	},
-	"bonus": {
-		"title": "برنامه پاداش گردش مالی",
-		"loginPromptTitle": "برنامه پاداش گردش مالی",
-		"loginPromptSubtitle": "وارد شوید تا آمار پاداش خود را مشاهده و جوایز خود را مطالبه کنید.",
-		"goHome": "بازگشت به صفحه اصلی",
-		"tabs": {
-			"dashboard": "داشبورد",
-			"claims": "ادعاها",
-			"rates": "نرخ‌های پاداش",
-			"calculator": "ماشین حساب"
+	"about": {
+		"title": "🎮 درباره {siteName}",
+		"subtitle": "در {siteName}، بازی فقط برای پر کردن وقت نیست—بلکه درباره هیجان واقعی است. آن لحظه‌ای که به یک برد بزرگ دست پیدا می‌کنید، یا وقتی همه چیز به درستی پیش می‌رود، هدف ما همین است.",
+		"meta": {
+			"title": "درباره {siteName} | پلتفرم کازینوی آنلاین جهانی معتبر",
+			"description": "درباره {siteName}، یک پلتفرم کازینوی جهانی امن که اسلات، کازینوی زنده، شرط‌بندی ورزشی و پوکر را ارائه می‌دهد، بیاموزید. عادلانه، سریع و ساخته شده برای بازیکنان واقعی."
 		},
-		"refresh": "تازه‌سازی",
-		"refreshing": "در حال تازه‌سازی...",
-		"refreshAllSuccess": "تمام داده‌ها با موفقیت تازه‌سازی شدند!",
-		"refreshPartial": "به طور جزئی به روز شد: {success}/{total} بخش به روز شد",
-		"refreshFailed": "به‌روزرسانی داده‌ها شکست خورد. لطفا دوباره تلاش کنید.",
-		"dashboard": {
-			"title": "داشبورد پاداش",
-			"subtitle": "پیگیری شرط‌ها، پاداش‌ها و درآمدهای پاداش",
-			"performanceOverview": "نمای کلی پاداش",
-			"bonusRatesTitle": "ساختار نرخ پاداش",
-			"totalIncome": "جمع جایزه",
-			"pendingBonus": "پاداش در انتظار",
-			"lastClaim": "آخرین درخواست",
-			"unclaimedEarnings": "قابل دریافت",
-			"claim": {
-				"title": "مطالبه و برداشت",
-				"points": {
-					"0": "کمیسیون‌ها پس از محاسبه برای برداشت در دسترس هستند.",
-					"1": "کمیسیون‌های مطالبه‌نشده تاریخ انقضا ندارند - تا زمان مطالبه انباشته می‌شوند.",
-					"2": "برداشت‌ها تابع قوانین استاندارد پلتفرم هستند، مانند حداقل محدودیت‌ها و زمان‌های پردازش."
-				}
-			},
-			"claiming": "در حال ادعا...",
-			"section2": {
-				"title": "واجد شرایط بودن",
-				"content": "برای شرکت:"
-			},
-			"section3": {
-				"title": "سطوح و نرخ‌های کشت",
-				"content": "پاداش‌ها بر اساس مقادیر شرط روزانه شما محاسبه می‌شوند:",
-				"noteTitle": "توجه",
-				"noteContent": "سطوح به صورت روزانه در ساعت ۱۴:۰۰ به وقت جهانی ارزیابی می‌شوند. حجم شرط بندی روز قبل تعیین‌کننده نرخ پاداش امروز است. نرخ‌ها به انواع بازی‌ها اعمال می‌شوند: اسلات‌ها، کازینو زنده و ورزش."
-			},
-			"claimButtonTitle": "دریافت"
+		"intro": {
+			"paragraph1": "ما {siteName} را برای بازیکنانی ساختیم که می‌خواهند از بازی خود بیشتر کسب کنند. سرعت بیشتر. انصاف بیشتر. هیجان بیشتر. چه به بازی‌های کازینوی زنده، شرط‌بندی ورزشی، پوکر، یا دنبال کردن جوایز بزرگ در اسلات‌های پرخطر علاقه‌مند باشید، همه چیز را در اینجا پیدا خواهید کرد و می‌توانید روی ما حساب کنید که همه چیز را قانونی نگه می‌داریم.",
+			"paragraph2": "از روز اول، می‌خواستیم {siteName} واقعی به نظر برسد. نه فقط یک وب‌سایت دیگر، بلکه مکانی که هر بار که وارد سیستم می‌شوید، یک تجربه بازی امن و هیجان‌انگیز داشته باشید."
 		},
-		"claims": {
-			"title": "تاریخچه مطالبات",
-			"subtitle": "ردیابی مطالبات پاداش و فعالیت‌های شرط‌بندی خود",
-			"tableHeaders": {
-				"date": "تاریخ شرط",
-				"slots": "اسلات",
-				"liveCasino": "کازینو زنده",
-				"sports": "ورزش‌ها",
-				"total": "مجموع",
-				"tier": "سطح",
-				"unclaimed": "بدون ادعا",
-				"token": "توکن"
-			},
-			"tierPrefix": "سطح",
-			"availableToClaim": "قابل دریافت",
-			"totalBonus": "کل جایزه",
-			"claimed": "مطالبه",
-			"progressPercentage": "پیشرفت",
-			"progressTitle": "پیشرفت شما",
-			"currentTier": "رده فعلی",
-			"nextTier": "سطح بعدی",
-			"wagerProgress": "پیشرفت شرط",
-			"totalWagered": "مجموع شرط‌های امروز",
-			"toNextTier": "برای رسیدن به سطح بعدی",
-			"empty": {
-				"title": "هنوز هیچ ادعای پاداشی نیست",
-				"subtitle": "بازی را شروع کنید تا پاداش بگیرید!"
-			}
+		"whoWeAre": {
+			"title": "💎 ما کی هستیم",
+			"paragraph1": " {siteName} بازیکنان سراسر جهان را به هزاران بازی برتر کازینو و شرط‌بندی متصل می‌کند. ما با بزرگترین نام‌های صنعت کار می‌کنیم—Pragmatic Play، Red Tiger، Microgaming، KA Gaming—بنابراین هر بازی روان اجرا می‌شود و عالی به نظر می‌رسد، چه در تلفن خود بازی کنید چه در لپ‌تاپ.",
+			"paragraph2": "هر چرخش، هر دست، هر پاداش—همه چیز تنظیم شده تا آن حس بازی واقعی را به شما بدهد. و ما همه چیز را ساده نگه می‌داریم. بدون ترفند، بدون قوانین پنهان. فقط بازی صادقانه و واضح."
 		},
-		"rates": {
-			"title": "سطوح و نرخ‌های کشاورزی",
-			"subtitle": "درصدهای پاداش بر اساس سطح شرط‌بندی و دسته‌بندی بازی",
-			"overview": {
-				"title": "بررسی اجمالی",
-				"body": "پاداش‌ کشاورزی بر اساس شرط‌بندی کاربران در اسلات، کازینو زنده، کتاب ورزشی و لاتاری به آن‌ها پاداش می‌دهد. پاداش‌ها هر ۲۴ ساعت محاسبه می‌شوند و کاربران می‌توانند روز بعد از شرط‌بندی آن‌ها را مطالبه کنند. هفت سطح وجود دارد، که هر کدام با نرخ‌های مختلفی بستگی به مبلغ شرط‌بندی دارند."
-			},
-			"eligibility": {
-				"title": "شرایط",
-				"content": "برای شرکت:",
-				"points": {
-					"0": "شما باید یک حساب فعال داشته باشید.",
-					"1": "در اسلات، کازینو زنده، شرط‌بندی ورزشی و لاتاری شرط ببندید.",
-					"2": "الزامات شرط بندی حداقل برای هر سطح را برآورده کنید."
-				}
-			},
-			"calculation": {
-				"title": "نحوه محاسبه پاداش‌ها",
-				"desc": "پاداش‌ها هر ۲۴ ساعت بر اساس کل شرط‌بندی‌های شما محاسبه می‌شوند. مثال‌ها:",
-				"exampleTitle": "مرحله {tier}:",
-				"wagerIn": "شرط {amount} در {gameType}"
-			},
-			"table": {
-				"tierLevel": "سطح لایه",
-				"wagerRange": "محدوده شرط",
-				"slots": "اسلات",
-				"liveCasino": "کازینو زنده",
-				"sports": "ورزش‌ها",
-				"tierPrefix": "سطح",
-				"commissionLevel": "سطح جایزه",
-				"dailyWager": "حجم شرط روزانه"
-			},
-			"claim": {
-				"title": "درخواست و برداشت پاداش‌ها",
-				"points": {
-					"0": "جوایز ۲۴ ساعت بعد از شرط‌بندی برای درخواست موجود می‌شوند.",
-					"1": "پاداش‌های مطالبه‌نشده انباشته خواهند شد و منقضی نمی‌شوند.",
-					"2": "فرآیند ادعا و برداشت ممکن است براساس سیاست‌های خاص پلتفرم متفاوت باشد."
-				}
-			},
-			"system": {
-				"title": "زمان و عملیات سیستم",
-				"dailyTimeframeLabel": "بازه زمانی روزانه:",
-				"dailyTimeframeValue": "00:00 به وقت هماهنگ جهانی تا 23:59 به وقت هماهنگ جهانی (هر روز).",
-				"claimDailyLabel": "دریافت روزانه:",
-				"claimDailyValue": "روزانه در ساعت 14:00 به وقت جهانی (ساعت محلی شما: {local}).",
-				"note": "توجه: در حالی که با ارائه‌دهندگان از مناطق زمانی مختلف کار می‌کنیم، تمام محاسبات مطابق زمان جهانی هماهنگ (UTC) انجام می‌شود تا از انسجام جلوگیری و از ابهامات جلوگیری شود."
-			},
-			"amendments": {
-				"title": "تغییرات و فقدان صلاحیت‌ها",
-				"body": "ما ممکن است در هر زمانی این شرایط را به‌روزرسانی کنیم و تغییرات با انتشار اجرا می‌شوند. اگر خطاهای سیستم، اشتباهات محاسباتی یا تقلب مشکوک باشند، ما حق داریم پاداش‌ها و حساب‌ها را برای تضمین عدالت اصلاح یا دستکاری کنیم"
-			},
-			"footer": {
-				"schedule": "برنامه زمانی جایزه:",
-				"availableDaily": "روزانه در دسترس در",
-				"localTimeLabel": "(زمان محلی شما: {time})"
-			}
+		"mission": {
+			"title": "🎯 مأموریت ما",
+			"paragraph1": "ما می‌خواهیم بازی آنلاین ساده، امن و واقعاً سرگرم‌کننده باشد.",
+			"paragraph2": "ما همه چیز را شخصی نگه می‌داریم. واریزهای سریع، برداشت‌های سریع. ظاهری تمیز که برای چشم‌ها راحت است. پشتیبانی که واقعاً در صورت نیاز کمک می‌کند.|در {siteName}، شما همیشه در کانون توجه هستید. اعتماد شما ما را به ادامه بهبود سوق می‌دهد."
 		},
-		"calculator": {
-			"title": "ماشین‌حساب پاداش",
-			"subtitle": "درآمدهای پاداش خود را بر اساس مقدار شرط خود برآورد کنید",
-			"interactive": {
-				"title": "ابزار تعاملی:",
-				"body": "مبلغ های مختلف شرط را وارد کنید تا جوایز احتمالی را در تمام سطوح ببینید"
-			},
-			"potentialEarnings": "پاداش احتمالی",
-			"basedOnRate": "بر اساس نرخ پاداش {percentage}%",
-			"tier": "سطح {level}",
-			"commissionLevel": "سطح جایزه {level}",
-			"enterWager": "مبلغ شرط را وارد کنید (USD)",
-			"wagerPlaceholder": "به عنوان مثال، 1000",
-			"calcFor": "محاسبه جایزه برای شرط ${amount}",
-			"totalPotential": "کل امتیاز بالقوه:",
-			"combinedAtTier": "پاداش ترکیبی از تمام انواع بازی‌ها در سطح {level}"
+		"whatMakesUsDifferent": {
+			"title": "🏆 چه چیزی {siteName} را متفاوت می‌کند",
+			"features": [
+				"بیش از 5000 بازی—اسلات، پوکر، ورزش، کازینوی زنده",
+				"واریز و برداشت فوری و قابل اعتماد",
+				"هر بازی برای انصاف دارای گواهی RNG است",
+				"طراحی تمیز که در هر جایی کار می‌کند",
+				"پاداش‌ها و تبلیغات جدید در تمام طول زمان"
+			],
+			"closing": "ما فقط اینجا نیستیم که بازی ارائه دهیم. ما اینجا هستیم تا مکانی بسازیم که در آن احساس امنیت، اتصال و آمادگی برای پذیرش چالش بعدی خود را داشته باشید."
 		},
-		"claimSuccessModal": {
-			"title": "ادعای موفقیت",
-			"statusCompleted": "تکمیل",
-			"statusOnChain": "درون زنجیره‌ای",
-			"claimAmount": "مبلغ مطالبه",
-			"logoAlt": "لوگو میم وین",
-			"backgroundAlt": "پیشینه موفقیت ادعا",
-			"creatingMagic": "خلق جادو...",
-			"downloadShare": "دانلود و اشتراک‌گذاری",
-			"spreadTheWin": "برد را گسترش دهید",
-			"socialX": "X",
-			"socialFacebook": "فیس‌بوک",
-			"socialWhatsApp": "واتس اپ - عنوان بلوک",
-			"socialTelegram": "تلگرام",
-			"socialReddit": "ردیت",
-			"socialMore": ".",
-			"shareText": "I just claimed {amount} bonus! Join me: {url}",
-			"referralLinkCopied": "لینک ارجاع کپی شد",
-			"referralLinkCopyFailed": "کپی کردن لینک ارجاع ناموفق بود",
-			"screenshotFailed": "اسکرین شات ناموفق بود. لطفا دوباره امتحان کنید یا از مرورگر دیگری استفاده کنید.",
-			"shareTextCopied": "متن کپی شده در کلیپ بورد را به اشتراک بگذارید!",
-			"shareFailed": "اشتراک‌گذاری ناموفق بود. لطفاً دوباره امتحان کنید."
+		"fairGaming": {
+			"title": "🌍 بازی عادلانه و مسئولانه",
+			"paragraph1": "ما انصاف را جدی می‌گیریم. این بدان معناست که به استانداردهای بین‌المللی پایبند هستیم و مسائل را واضح نگه می‌داریم—فقط بازیکنان 18 سال به بالا، بدون استثنا.",
+			"paragraph2": "ما هر بازی را برای انصاف آزمایش می‌کنیم، و فناوری رمزگذاری ما اطلاعات شما را امن و سالم نگه می‌دارد."
+		},
+		"promise": {
+			"title": "🤝 وعده ما",
+			"paragraph1": "ما اینجا نیستیم که ادغام شویم. ما اینجا هستیم تا استاندارد بازی آنلاین را بالاتر ببریم.",
+			"paragraph2": "وقتی در {siteName} بازی می‌کنید، از پلتفرمی استفاده می‌کنید که بر پایه اعتماد و ایده‌های جدید ساخته شده است. هر به‌روزرسانی، ویژگی جدید یا شراکت برای بهتر کردن تجربه شما است."
+		},
+		"joinCommunity": {
+			"title": "🚀 به انجمن {siteName} بپیوندید",
+			"paragraph1": "بازی آنلاین به سرعت در حال حرکت است و {siteName} از قبل جلوتر است—سریع‌تر، هوشمندتر و پاداش‌دهنده‌تر.",
+			"paragraph2": "همین حالا بپیوندید. پاداش خوش‌آمدگویی خود را بگیرید. ببینید چرا بسیاری از بازیکنان در سراسر جهان {siteName} را به مکان اصلی خود تبدیل می‌کنند.",
+			"tagline": "🎯 بازی کنید. ببرید. تجربه کنید. {siteName}."
 		}
 	},
-	"about": {
-		"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 48 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"subtitle": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 47 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"stats": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 47 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"features": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 46 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+	"footer": {
 		"sections": {
-			"whoWeAre": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 45 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 45 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 44 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"company": {
+				"title": "شرکت",
+				"links": {
+					"about": "درباره ما",
+					"providers": "ارائه‌دهندگان",
+					"affiliate": "پاداش ارجاع",
+					"bonus": "پاداش گردش مالی"
+				}
 			},
-			"whatMakesUsDifferent": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 43 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"legal": {
+				"title": "قانونی",
+				"links": {
+					"privacy": "سیاست حفظ حریم خصوصی",
+					"terms": "شرایط و ضوابط",
+					"gambling": "قمار مسئولانه",
+					"faqs": "سوالات متداول"
+				}
 			},
-			"providers": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 43 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"seeAllButton": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 42 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"exploreGamesButton": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 41 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"games": {
+				"title": "بازی‌ها",
+				"links": {
+					"lobby": "لابی بازی",
+					"slots": "اسلات‌ها",
+					"live": "کازینوی زنده",
+					"sports": "شرط‌بندی ورزشی"
+				}
 			},
-			"missionVisionValues": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 40 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"items": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 40 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"support": {
+				"title": "پشتیبانی",
+				"links": {
+					"help": "مرکز راهنمایی",
+					"contact": "تماس با ما"
+				}
+			}
+		},
+		"seoContent": {
+			"title": "توضیحات",
+			"paragraph1": "به {siteName} خوش آمدید، جایی که کریپتو با هیجان واقعی بازی کازینو روبرو می‌شود. اگر به دنبال چیز جدیدی در دنیای بازی آنلاین هستید، تازه آن را پیدا کرده‌اید. {siteName} برای افرادی ساخته شده که سرعت، امنیت و مهم‌تر از همه، بازی‌هایی را می‌خواهند که واقعاً سرگرم‌کننده باشند—چه به اسلات‌های چرخشی، میزهای زنده، شرط‌های ورزشی علاقه‌مند باشید یا بخواهید آن بازی‌های فقط کریپتویی را امتحان کنید که در هیچ جای دیگری نمی‌توانید پیدا کنید.",
+			"paragraph2": "همه چیز بر روی بلاکچین اجرا می‌شود، بنابراین می‌توانید به هر نتیجه‌ای اعتماد کنید. نتایج تصادفی هستند و درجا تأیید می‌شوند. بدون ترفند. فقط بردهای مستقیم و هیجان واقعی. آیا یک بازیکن بزرگ هستید؟ طرفدار استراتژی؟ شاید فقط می‌خواهید استراحت کنید و کمی بازی کنید. چیزی برای سبک شما در اینجا وجود دارد.",
+			"paragraph3": "شروع کار نمی‌توانست آسان‌تر باشد—فوراً واریز کنید، سریع پول نقد را برداشت کنید، با کیف پول Dynamic.xyz خود وارد شوید و در طول مسیر پاداش‌های منحصربه‌فردی دریافت کنید. {siteName} همه چیز را در حال حرکت نگه می‌دارد. بدون انتظار. بدون سردرد. مهم نیست کجا هستید—کانادا، اروپا، آسیا—تنظیم چند زنجیره‌ای ما با گزینه‌های کریپتوی محلی شما سازگار است.",
+			"paragraph4": "هزاران نفر از قبل می‌دانند: این روشی هوشمندانه‌تر برای قمار آنلاین است. در اینجا، موضوع فقط تعقیب بردها نیست—بلکه درباره حریم خصوصی، انصاف و بخشی از جامعه‌ای بودن است که واقعاً آنچه بازیکنان می‌خواهند را درک می‌کند. {siteName} فقط یک کازینوی آنلاین دیگر نیست. این قمار Web3 است که برای افرادی که انتظار بیشتری دارند، بازسازی شده است.",
+			"tagline": "بنابراین، آیا آماده‌اید که هوشمندانه‌تر بازی کنید، امن‌تر شرط‌بندی کنید و شاید بردهای بزرگ داشته باشید؟ به {siteName} بروید.",
+			"showMore": "نمایش بیشتر",
+			"showLess": "نمایش کمتر"
+		},
+		"copyright": "© {year} {siteName}. تمامی حقوق محفوظ است.",
+		"followUs": "ما را دنبال کنید:",
+		"disclaimer": {
+			"line1": "فقط 18+ | مسئولانه قمار کنید",
+			"line2": "قمار می‌تواند اعتیادآور باشد. لطفاً مسئولانه بازی کنید و فقط آنچه را که می‌توانید از دست بدهید شرط‌بندی کنید.",
+			"line3": "اگر احساس می‌کنید مشکل قمار دارید، لطفاً به دنبال کمک باشید."
+		},
+		"description": " {siteName} مقصد اصلی شما برای اسلات‌های کریپتو، میزهای زنده و شرط‌بندی ورزشی است. در بازی‌های بلاکچینی غوطه‌ور شوید که واقعاً می‌توانید به آنها اعتماد کنید، در عرض چند ثانیه بردهای خود را مستقیماً به کیف پول خود ببرید و هر روز پاداش‌های جدیدی دریافت کنید. سریع، امن و کاملاً غیرمتمرکز است— {siteName} بازی آنلاین را برای بازیکنان در سراسر جهان ارتقا می‌دهد. هوشمندانه بازی کنید. بردهای بزرگ داشته باشید. به {siteName} اعتماد کنید."
+	},
+	"privacy": {
+		"title": "🔒 سیاست حفظ حریم خصوصی — {siteName}",
+		"subtitle": "چگونگی محافظت {siteName} از آدرس‌های کیف پول و داده‌های کریپتو با SSL، AML و حریم خصوصی سازگار با GDPR برای قمار امن بلاکچین.",
+		"lastUpdated": "آخرین به‌روزرسانی: ژانویه 2025",
+		"meta": {
+			"title": "سیاست حفظ حریم خصوصی | {siteName} – امنیت کازینو کیف پول کریپتو",
+			"description": "بیاموزید چگونه {siteName} از آدرس‌های کیف پول و داده‌های کریپتو با SSL، AML و حریم خصوصی سازگار با GDPR برای قمار امن بلاکچین محافظت می‌کند.",
+			"keywords": "سیاست حفظ حریم خصوصی {siteName}، کازینو کریپتوی {siteName}، حفاظت از داده‌های {siteName}، امنیت کیف پول {siteName}، حریم خصوصی قمار کریپتو، کازینوی کریپتوی GDPR، سیاست کازینوی بلاکچین، امنیت بازی‌های {siteName}، حریم خصوصی شرط‌بندی کریپتو",
+			"ogTitle": "حریم خصوصی و حفاظت از داده‌ها | {siteName} (کازینوی کریپتو)",
+			"ogDescription": "کاوش کنید که چگونه {siteName} کیف پول کریپتو و داده‌های تراکنش شما را با رمزگذاری پیشرفته و حفاظت سازگار با GDPR حفظ می‌کند."
+		},
+		"intro": {
+			"paragraph1": "در {siteName} (\" {siteName} \"، \"ما\"، \"ما\"، یا \"ما\")، پلتفرم کریپتو-کازینوی {siteName} را اجرا می‌کنیم. در اینجا چیزی است که با داده‌های شخصی و تراکنش شما هنگام استفاده از وب‌سایت، برنامه‌های تلفن همراه یا هر سرویس مرتبط (\"خدمات\") ما اتفاق می‌افتد.",
+			"paragraph2": " {siteName} یک کازینو فقط با کیف پول کریپتو است. این بدان معنی است که تمام واریزها و برداشت‌ها از طریق کیف پول‌های ارز دیجیتال انجام می‌شود. ما حریم خصوصی شما را جدی می‌گیریم و تمام تلاش خود را می‌کنیم تا از آن محافظت کنیم، در عین حال از قوانین (مانند الزامات AML/KYC) پیروی می‌کنیم و پلتفرم را برای همه امن و عادلانه نگه می‌داریم.",
+			"paragraph3": "اگر از {siteName} استفاده می‌کنید، با این سیاست حفظ حریم خصوصی موافقت می‌کنید."
+		},
+		"sections": {
+			"scope": {
+				"title": "محدوده و پذیرش",
+				"content": "این سیاست همه کسانی را که از {siteName} استفاده می‌کنند، پوشش می‌دهد. گاهی اوقات آن را به‌روز می‌کنیم. وقتی این کار را انجام دهیم، سیاست جدید در سایت منتشر می‌شود و اگر بعد از آن به استفاده از {siteName} ادامه دهید، به این معنی است که با تغییرات موافق هستید."
 			},
-			"responsibleGaming": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 39 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 38 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"points": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 38 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-			},
-			"ourPromise": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 37 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 36 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 36 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-			},
-			"description": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 35 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"intro": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 34 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"brand": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 34 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 33 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 32 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 31 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"dataCollection": {
+				"title": "چه داده‌هایی را جمع‌آوری می‌کنیم",
+				"intro": "از آنجا که ما فقط کیف پول کریپتو هستیم، داده‌هایی که جمع‌آوری می‌کنیم این موضوع را منعکس می‌کند. در اینجا چیزی است که ما جمع‌آوری می‌کنیم:",
+				"accountData": {
+					"title": "الف. داده‌های حساب و هویت (در صورت نیاز)",
+					"email": "ایمیل (اگر آن را بدهید)، نام نمایشی، شناسه حساب.",
+					"kyc": "توجه: کیف پول‌های کریپتو معمولاً امور را ناشناس نگه می‌دارند، اما گاهی اوقات مقررات از ما می‌خواهند هویت شما را بپرسیم (KYC). ما فقط زمانی می‌پرسیم که کاملاً ضروری باشد و آن را واضح خواهیم کرد."
 				},
-				"games": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 30 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 30 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"count": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 29 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 28 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"slots": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 28 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 27 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				"walletData": {
+					"title": "ب. داده‌های کیف پول و تراکنش",
+					"addresses": "آدرس‌های کیف پول کریپتو که در اینجا متصل می‌کنید یا استفاده می‌کنید.",
+					"transactions": "هش تراکنش‌های روی بلاکچین و مهرهای زمانی (برای واریزها و برداشت‌ها).",
+					"metadata": "جزئیات تراکنش که برای تطبیق پرداخت‌ها و شناسایی کلاهبرداری به آنها نیاز داریم."
+				},
+				"technicalData": {
+					"title": "ج. داده‌های فنی و استفاده",
+					"ip": "آدرس IP، موقعیت مکانی تقریبی بر اساس IP، نوع دستگاه، مرورگر و سیستم عامل.",
+					"session": "سوابق نشست، مهرهای زمانی، بازی‌های انجام شده، شرط‌ها، نتایج، صفحاتی که بازدید می‌کنید.",
+					"cookies": "کوکی‌ها و تحلیل‌ها برای بهتر و روان‌تر کردن سایت برای شما."
+				},
+				"securityData": {
+					"title": "د. داده‌های امنیتی و ریسک",
+					"fraud": "سیگنال‌های کلاهبرداری، اثر انگشت دستگاه، امتیازات ریسک از شرکای ضد کلاهبرداری.",
+					"disputes": "سوابق اختلافات، برگشت شارژ و بررسی‌های انطباق (در صورت بروز).",
+					"note": "ما اطلاعات حساس مانند نژاد، دین یا سلامتی شما را جمع‌آوری نمی‌کنیم مگر اینکه قانون آن را الزامی کند و شما مجوز واضحی بدهید."
+				}
+			},
+			"purposes": {
+				"title": "چرا داده‌ها را جمع‌آوری می‌کنیم",
+				"intro": "ما داده‌های شما را فقط به دلایل واضح و قانونی استفاده می‌کنیم:",
+				"items": [
+					{
+						"title": "برای اجرای سرویس",
+						"description": "راه‌اندازی و مدیریت حساب‌ها، رسیدگی به واریزها/برداشت‌های کیف پول، پرداخت بردها."
 					},
-					"liveCasino": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 26 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 26 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "برای امنیت",
+						"description": "شناسایی و جلوگیری از سوء استفاده، کلاهبرداری و پولشویی."
 					},
-					"sports": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 25 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 24 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "برای نگه داشتن همه چیز روان",
+						"description": "تحلیل‌ها، ارتقاء محصول، پشتیبانی مشتری."
 					},
-					"poker": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 24 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 23 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "برای بازاریابی (اگر موافقت کنید)",
+						"description": "خبرنامه‌ها، پیشنهادات تبلیغاتی—شما همیشه این گزینه را دارید که بعداً بگویید نه یا نظر خود را تغییر دهید."
+					},
+					{
+						"title": "برای محافظت از پلتفرم",
+						"description": "و بررسی هرگونه سوء استفاده."
 					}
+				],
+				"outro": "اگر رضایت خود را برای چیزی مانند بازاریابی به ما بدهید، می‌توانید آن را در هر زمان پس بگیرید."
+			},
+			"cryptoWallet": {
+				"title": "کیف پول‌های کریپتو و داده‌های روی بلاکچین",
+				"points": [
+					"ما فقط آدرس‌های کیف پول و اطلاعات تراکنش روی بلاکچین را تا زمانی که برای اعتباردهی یا بدهکار کردن حساب شما، حسابرسی تراکنش‌ها یا برآورده کردن الزامات قانونی نیاز داریم، ذخیره می‌کنیم.",
+					"داده‌های روی بلاکچین ماهیت عمومی دارند. ما نمی‌توانیم فعالیت بلاکچین را پنهان کنیم، اما آن را با سوابق خود ترکیب می‌کنیم تا حساب شما دقیق بماند.",
+					"اگر یک کیف پول امانی (مانند از طریق یک ارائه‌دهنده شخص ثالث) متصل کنید، موافقت می‌کنید که آنها داده‌ها را با ما به اشتراک بگذارند تا بتوانیم تراکنش‌های شما را پردازش کنیم."
+				]
+			},
+			"dataSharing": {
+				"title": "چه زمانی داده‌ها را به اشتراک می‌گذاریم",
+				"intro": "ما اطلاعات شما را فقط در چند مورد به اشتراک می‌گذاریم:",
+				"items": [
+					"با تنظیم‌کننده‌ها یا مجریان قانون اگر قانون آن را الزامی کند یا برای جلوگیری از فعالیت غیرقانونی.",
+					"با شرکت‌های وابسته یا اشخاص ثالث در صورت انتقال کسب‌وکار (مانند ادغام یا تملک)—اما همیشه با حفاظت‌های مناسب.",
+					"با شبکه‌های پیشگیری از کلاهبرداری برای حفظ امنیت پلتفرم و کاربران ما."
+				],
+				"noSelling": "ما هرگز اطلاعات شخصی شما را به تبلیغ‌کنندگان نمی‌فروشیم."
+			},
+			"security": {
+				"title": "اقدامات امنیتی",
+				"intro": "ما از اقدامات امنیتی استفاده می‌کنیم که انتظار دارید:",
+				"items": [
+					"رمزگذاری TLS/SSL برای داده‌ها در حال انتقال، ذخیره‌سازی رمزگذاری شده برای اطلاعات حساس.",
+					"کنترل‌های دسترسی، ثبت دقیق و مجوزهای مبتنی بر نقش.",
+					"حسابرسی‌های امنیتی منظم و بررسی آسیب‌پذیری‌ها.",
+					"تأیید هویت چند عاملی (MFA) برای کارکنان ما—و شما همچنین می‌توانید آن را برای حساب خود فعال کنید."
+				],
+				"warning": "به یاد داشته باشید: کلیدهای خصوصی کیف پول و جزئیات حساب خود را ایمن نگه دارید. ما هرگز کلیدهای خصوصی شما را نمی‌خواهیم."
+			},
+			"cookies": {
+				"title": "کوکی‌ها و ردیابی",
+				"content": "ما از کوکی‌ها و ابزارهای مشابه برای کارکرد سایت، تجزیه و تحلیل ترافیک و (اگر موافقت کنید) برای بازاریابی استفاده می‌کنیم. می‌توانید کوکی‌ها را در تنظیمات مرورگر خود کنترل کنید، اما اگر کوکی‌های ضروری را غیرفعال کنید، ممکن است برخی چیزها از کار بیفتند."
+			},
+			"minAge": {
+				"title": "کودکان و حداقل سن",
+				"content": "شما باید 18 سال یا بیشتر (یا هر سنی که قانون محلی شما می‌گوید) داشته باشید تا از {siteName} استفاده کنید. ما به طور فعال کاربران زیر سن قانونی را مسدود می‌کنیم و اگر متوجه شویم یک خردسال ثبت‌نام کرده است، هر داده‌ای را حذف خواهیم کرد."
+			},
+			"breach": {
+				"title": "اعلان نقض",
+				"content": "اگر نقض داده‌ای رخ دهد که حقوق شما را در معرض خطر قرار دهد، ما به شما و مقامات مربوطه طبق قانون اطلاع خواهیم داد و برای رفع سریع مسائل اقدام خواهیم کرد."
+			},
+			"changes": {
+				"title": "تغییرات در این سیاست",
+				"content": "ما می‌توانیم این سیاست حفظ حریم خصوصی را تغییر دهیم. اگر یک به‌روزرسانی بزرگ وجود داشته باشد، آن را در سایت منتشر می‌کنیم و در صورت لزوم مستقیماً به شما اطلاع خواهیم داد."
+			},
+			"contact": {
+				"title": "تماس",
+				"intro": "سوال یا درخواستی دارید؟",
+				"link": "🌐 https://{siteDomain}"
+			}
+		}
+	},
+	"terms": {
+		"title": "شرایط و ضوابط",
+		"subtitle": "توافقنامه کاربر و قوانین پلتفرم",
+		"lastUpdated": "ژانویه 2025",
+		"intro": {
+			"paragraph1": "با ثبت‌نام یا اتصال کیف پول خود در www.{siteDomain}، شما وارد یک توافقنامه الزام‌آور با {siteName} N.V. می‌شوید.",
+			"paragraph2": "اگر با هیچ یک از این شرایط موافق نیستید، به وب‌سایت ما دسترسی پیدا نکنید، از آن استفاده نکنید یا در آن ثبت‌نام نکنید. این شرایط را با دقت بخوانید. اگر در مورد حقوق یا تعهدات خود مطمئن نیستید، قبل از استفاده از وب‌سایت با یک مشاور حقوقی در حوزه قضایی خود مشورت کنید."
+		},
+		"sections": {
+			"ownership": {
+				"title": "1. مالکیت {siteName}",
+				"content1": " {siteName} متعلق به {siteName} N.V. ('{siteName}'، 'ما'، 'ما'، یا 'ما') است و توسط آن اداره می‌شود.",
+				"content2": " {siteName} یک کازینو فقط با کیف پول کریپتو است. تمام واریزها، شرط‌ها و برداشت‌ها از طریق کیف پول‌های ارز دیجیتال کاربران پردازش می‌شود. ما از ورود با کیف پول از طریق Dynamic.xyz و اتصال‌دهنده‌های کیف پول سازگار (مانند WalletConnect / MetaMask) پشتیبانی می‌کنیم."
+			},
+			"notice": {
+				"title": "2. اخطار مهم",
+				"content1": "2.1 با ثبت‌نام یا اتصال کیف پول خود در www.{siteDomain} ('وب‌سایت')، شما وارد یک توافقنامه الزام‌آور با {siteName} N.V. می‌شوید و با موارد زیر موافقت می‌کنید: (i) این شرایط و ضوابط؛ (ii) سیاست حفظ حریم خصوصی ما؛ (iii) سیاست کوکی ما؛ (iv) شرایط وابسته ما؛ و (v) سیاست قمار مسئولانه ما.",
+				"content2": "2.2 اگر با هیچ یک از این شرایط موافق نیستید، به وب‌سایت ما دسترسی پیدا نکنید، از آن استفاده نکنید یا در آن ثبت‌نام نکنید.",
+				"content3": "2.3 این شرایط را با دقت بخوانید. اگر در مورد حقوق یا تعهدات خود مطمئن نیستید، قبل از استفاده از وب‌سایت با یک مشاور حقوقی در حوزه قضایی خود مشورت کنید."
+			},
+			"general": {
+				"title": "3. شرایط عمومی",
+				"items": [
+					"هنگام ثبت‌نام یا اتصال کیف پول، شما ('کاربر'، 'بازیکن'، 'شما'، یا 'شما') موافقت می‌کنید که از همه قوانین و سیاست‌های {siteName} پیروی کنید.",
+					"این توافقنامه یک قرارداد الزام‌آور قانونی بین شما و {siteName} است.",
+					"این شرایط از لحظه‌ای که کیف پول خود را متصل می‌کنید و شروع به استفاده از سایت می‌کنید، لازم‌الاجرا می‌شوند.",
+					" {siteName} حق دارد این شرایط را در هر زمان اصلاح یا به‌روز کند. تغییرات در وب‌سایت منتشر خواهد شد؛ استفاده مداوم به منزله پذیرش است.",
+					"در صورت تضاد، این شرایط بر هر قانون، تبلیغات یا مواد خارجی دیگر مقدم است.",
+					"فقط نسخه انگلیسی این شرایط از نظر قانونی الزام‌آور است. ترجمه‌ها فقط برای راحتی هستند."
+				]
+			},
+			"account": {
+				"title": "4. حساب، ورود با کیف پول و امنیت",
+				"intro": " {siteName} از Dynamic.xyz برای احراز هویت مبتنی بر کیف پول و اقدامات امنیتی برای محافظت از حساب شما استفاده می‌کند.",
+				"walletLogin": {
+					"title": "4.1 ورود با کیف پول (Dynamic.xyz)",
+					"items": [
+						" {siteName} از Dynamic.xyz (یا سایر اتصال‌دهنده‌های پشتیبانی شده) برای ورود و احراز هویت مبتنی بر کیف پول استفاده می‌کند. با اتصال یک کیف پول، تأیید می‌کنید که مالک قانونی آن کیف پول هستید و به {siteName} اجازه می‌دهید آن کیف پول را به عنوان حساب شما بشناسد.",
+						"ما هرگز کلیدهای خصوصی شما را درخواست نمی‌کنیم. شما باید اعتبارنامه‌های کیف پول و دستگاه خود را امن نگه دارید. {siteName} مسئولیت ضررهای ناشی از کیف پول‌های به خطر افتاده یا کلیدهای خصوصی فاش شده را ندارد."
+					]
 				},
-				"technology": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 22 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 22 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"blockchain": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 21 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 20 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 20 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 19 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"uptime": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 18 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph5": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 18 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				"registration": {
+					"title": "4.2 جزئیات ثبت نام",
+					"items": [
+						"ممکن است از شما خواسته شود جزئیات تماس (ایمیل، نام کاربری) را برای ارتباطات حساب ارائه دهید. شما باید اطلاعات دقیق ارائه دهید و آن را به‌روز نگه دارید.",
+						"شما مسئول تمام اقدامات انجام شده با استفاده از کیف پول متصل خود هستید."
+					]
 				},
 				"security": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 17 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 16 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"rng": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 16 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 15 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 14 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 13 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"global": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 13 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"players": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 11 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 11 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"countries": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 09 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 09 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"payments": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 08 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"instant": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 06 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 05 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"mobile": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 04 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 04 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 03 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"support": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 02 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 02 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"availability": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 01 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 33 MINUTES 00 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 59 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"responsible": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 59 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 58 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 57 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"whyChoose": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 57 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"point1": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 56 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 55 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point2": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 55 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 54 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point3": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 53 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 53 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point4": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 52 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 51 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point5": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 50 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 50 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point6": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 49 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 48 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					}
-				},
-				"closing": {
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 48 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"tagline": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 32 MINUTES 47 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					"title": "4.3 حساب‌های متعدد و امنیت",
+					"items": [
+						"فقط یک حساب برای هر فرد مجاز است. حساب‌های متعدد یا تلاش برای دور زدن محدودیت‌ها ممکن است منجر به تعلیق حساب و مصادره وجوه شود.",
+						"هرگونه ویژگی امنیتی پلتفرم ارائه شده (به عنوان مثال، 2FA برای خدمات مرتبط) را فعال کنید و کیف پول خود را امن کنید.",
+						"در صورت مشکوک بودن به دسترسی غیرمجاز، فوراً به پشتیبانی اطلاع دهید."
+					]
 				}
+			},
+			"eligibility": {
+				"title": "5. صلاحیت و ضمانت‌های کاربر",
+				"intro": "5.1 شما نمایندگی می‌کنید و تضمین می‌دهید که:",
+				"items": [
+					"حداقل 18 سال سن دارید (یا حداقل سن قانونی قمار در حوزه قضایی خود).",
+					"از نظر قانونی مجاز به استفاده از خدمات قمار کریپتوی آنلاین در محل زندگی خود هستید.",
+					"مالک قانونی کیف پولی هستید که متصل می‌کنید.",
+					"از VPN یا جعل موقعیت مکانی برای دور زدن محدودیت‌های منطقه‌ای استفاده نخواهید کرد.",
+					"از سرویس برای اهداف غیرقانونی یا تجاری استفاده نخواهید کرد.",
+					"می‌پذیرید که ارزش ارز دیجیتال ممکن است نوسان داشته باشد و شما تمام ریسک بازار را متحمل می‌شوید."
+				],
+				"outro": "5.2 اگر این ضمانت‌ها را نقض کنید، {siteName} می‌تواند دسترسی را تعلیق یا خاتمه دهد و وجوه را در جایی که قانون اجازه می‌دهد، توقیف کند."
+			},
+			"restricted": {
+				"title": "6. حوزه‌های قضایی محدود شده",
+				"content1": "6.1 {siteName} بازیکنان را از حوزه‌های قضایی که در آن قمار کریپتو ممنوع یا محدود شده است، نمی‌پذیرد. این شامل، اما محدود به موارد زیر نیست:",
+				"content2": "ایالات متحده (و قلمروهای ایالات متحده)، بریتانیا، فرانسه، هلند، اسپانیا، آلمان، استرالیا، اتریش، کومور، ایران، کره شمالی، سودان، سوریه و هر حوزه قضایی که در لیست‌های سیاه FATF ذکر شده است.",
+				"content3": "6.2 تلاش برای دسترسی به سرویس از یک حوزه قضایی محدود شده، از جمله از طریق VPN یا پروکسی، نقض این شرایط است و ممکن است منجر به بسته شدن حساب و مصادره وجوه شود."
+			},
+			"crypto": {
+				"title": "7. واریزها و برداشت‌های کریپتو",
+				"policy": {
+					"title": "7.1 سیاست فقط کریپتو",
+					"items": [
+						" {siteName} واریزها و برداشت‌ها را فقط در ارزهای دیجیتال پشتیبانی شده می‌پذیرد (به عنوان مثال، BTC، ETH، USDT، TRX، BNB). هیچ واریز فیات، کارت یا حواله بانکی پذیرفته نمی‌شود.",
+						"همه واریزها باید از کیف پول‌هایی که شما کنترل می‌کنید، منشا گرفته باشند. واریز از کیف پول‌های شخص ثالث ممنوع است."
+					]
+				},
+				"deposits": {
+					"title": "7.2 واریزها",
+					"items": [
+						"واریزها پس از تأییدیه‌های بلاکچین مورد نیاز اعتباردهی می‌شوند. کارمزدهای شبکه (گس) توسط شما قابل پرداخت است.",
+						" {siteName} می‌تواند واریزهایی را که به نظر می‌رسد از آدرس‌های مسدود شده یا منابع محدود شده منشا می‌گیرند، رد یا معکوس کند."
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 برداشت‌ها",
+					"items": [
+						"برداشت‌ها به آدرس کیف پولی که شما ارائه می‌دهید، پردازش می‌شود. {siteName} ممکن است از شما بخواهد قبل از پردازش، کیف پول مقصد را تأیید کنید.",
+						"شما باید موجودی کافی و تسویه شده برای پوشش یک برداشت داشته باشید. برداشت‌ها ممکن است برای بررسی سوء استفاده مشکوک یا فعالیت غیرمعمول به تأخیر بیفتد."
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 برگشت شارژ و معکوس‌ها",
+					"items": [
+						"تراکنش‌های کریپتو روی بلاکچین نهایی هستند. اگر {siteName} به دلیل برگشت شارژ یا معکوس‌ها از ارائه‌دهندگان خدمات شخص ثالث (نادر در مورد روی بلاکچین) متحمل ضرر شود، ما حق خود را برای بازیابی مبالغ یا دریافت هزینه‌های اداری محفوظ می‌داریم."
+					]
+				}
+			},
+			"kyc": {
+				"title": "8. بدون تأیید هویت روتین (بدون KYC)",
+				"content1": "8.1 {siteName} تأیید هویت روتین (KYC) را به عنوان شرط بازی عادی انجام نمی‌دهد. کاربران می‌توانند یک کیف پول را از طریق Dynamic.xyz متصل کرده و بدون ارائه اسناد هویتی شروع به بازی کنند.",
+				"content2": "8.2 علی‌رغم موارد فوق، {siteName} حق دارد اطلاعات را درخواست کند یا تراکنش‌ها را به حالت تعلیق درآورد در صورت لزوم برای:",
+				"items": [
+					"پیروی از یک دستور قانونی از مقامات ذی‌صلاح:",
+					"جلوگیری، تحقیق یا رفع کلاهبرداری، پولشویی یا سایر فعالیت‌های غیرقانونی",
+					"یا محافظت از امنیت و یکپارچگی پلتفرم."
+				],
+				"content3": "8.3 اگر از ارائه چنین اطلاعاتی در صورت لزوم قانونی خودداری کنید، {siteName} می‌تواند حساب شما را محدود یا ببندد و برداشت‌ها را تا حدی که قانون اجازه می‌دهد، به تأخیر اندازد یا توقیف کند."
+			},
+			"fairPlay": {
+				"title": "9. بازی عادلانه، رفتار ممنوع و امنیت",
+				"intro": "شما نباید:",
+				"items": [
+					"از ربات‌ها، اسکریپت‌ها، ابزارهای بازی خودکار یا هر نرم‌افزار غیرمجاز دیگری استفاده کنید.",
+					"با سایر بازیکنان تبانی کنید یا نتایج بازی را دستکاری کنید.",
+					"حساب‌های متعددی برای سوء استفاده از پاداش‌ها یا تبلیغات ایجاد کنید.",
+					"تلاش کنید تراکنش‌های روی بلاکچین را معکوس یا دستکاری کنید.",
+					"از اشکالات بازی یا آسیب‌پذیری‌های پلتفرم سوء استفاده کنید."
+				],
+				"outro1": "حساب‌هایی که مشخص شود تقلب می‌کنند، تبانی می‌کنند یا از پلتفرم سوء استفاده می‌کنند، ممکن است تعلیق، بسته یا موجودی‌شان مصادره شود.",
+				"outro2": " {siteName} نظارت فنی و رفتاری را برای محافظت از یکپارچگی پلتفرم پیاده‌سازی می‌کند."
+			},
+			"bonuses": {
+				"title": "10. پاداش‌ها و تبلیغات",
+				"items": [
+					"همه پیشنهادات پاداش و تبلیغات مشمول شرایط پاداش خاصی هستند که با هر پیشنهاد ذکر شده است.",
+					"سوء استفاده از پاداش (شامل حساب‌های متعدد یا تغییر سریع پاداش) می‌تواند منجر به رد، معکوس شدن یا مصادره پاداش‌ها و بسته شدن حساب‌ها شود.",
+					"الزامات شرط‌بندی پاداش باید قبل از برداشت وجوه مشتق شده از پاداش، همانطور که در هر تبلیغ مشخص شده است، برآورده شود."
+				]
+			},
+			"playingRules": {
+				"title": "11. قوانین بازی و تسویه بازی",
+				"items": [
+					"شرط‌ها فقط پس از دریافت تأیید روی صفحه پذیرفته می‌شوند. شرط‌های گذاشته شده با موجودی ناکافی باطل هستند.",
+					"سوابق داخلی {siteName} و سوابق بلاکچین در صورت بروز اختلافات معتبر هستند.",
+					"اگر رویدادی لغو شود، به حالت تعلیق درآید یا به نحو دیگری به خطر بیفتد، {siteName} شرط‌ها را طبق قوانین بازی و بازار منتشر شده تسویه یا باطل خواهد کرد.",
+					"برای بازی‌های قابل اثبات عادلانه، ابزارهای تأیید و بذر سرور (در صورت لزوم) برای هر بازی در دسترس قرار می‌گیرند؛ سوابق سرور نهایی هستند."
+				]
+			},
+			"errors": {
+				"title": "12. خطاها، وقفه‌ها و محدودیت‌ها",
+				"intro": " {siteName} مسئولیت ضررهای ناشی از موارد زیر را ندارد:",
+				"items": [
+					"خرابی‌های اینترنت یا دستگاه",
+					"تأخیرهای بلاکچین، فورک‌ها یا ازدحام شبکه",
+					"اشکالات نرم‌افزاری یا قطعی خدمات شخص ثالث"
+				],
+				"outro1": " {siteName} حق دارد شرط‌ها را باطل کند، موجودی‌ها را تنظیم کند یا تراکنش‌ها را در هنگام تشخیص خطاها یا سوء استفاده‌ها لغو کند.",
+				"outro2": "ما می‌توانیم محدودیت‌های شرط‌بندی، حداکثر بردها و سایر کنترل‌ها را برای محافظت از کاربران و پلتفرم تنظیم کنیم."
+			},
+			"suspension": {
+				"title": "13. تعلیق، بسته شدن و رسیدگی به وجوه",
+				"intro": " {siteName} می‌تواند حساب‌ها را در مواردی که:",
+				"items": [
+					"شرایط نقض شوند",
+					"سوء استفاده، کلاهبرداری یا رفتار مشکوک شناسایی شود",
+					"تعهدات قانونی یا نظارتی آن را الزامی کند"
+				],
+				"outro1": "هنگام بسته شدن حساب، شرط‌های در حال انتظار ممکن است لغو شوند و وجوه باقی‌مانده طبق قانون قابل اجرا و سیاست پلتفرم رسیدگی شود.",
+				"outro2": " {siteName} می‌تواند وجوه را در صورت لزوم برای حل اختلافات، پیروی از درخواست‌های قانونی یا رفع ضررها نگه دارد."
+			},
+			"responsibleGaming": {
+				"title": "14. قمار مسئولانه",
+				"items": [
+					" {siteName} قمار مسئولانه را ترویج می‌کند. شما می‌توانید درخواست کنید: خودحذفی، محدودیت‌های واریز، یا تعلیق موقت.",
+					"اگر به آسیب قمار مشکوک هستید، برای کمک فوری به {siteDomain} مراجعه کنید.",
+					"قمار زیر سن قانونی (زیر 18 سال یا سن قانونی محلی) اکیداً ممنوع است. حساب‌هایی که مشخص شود متعلق به خردسالان هستند، بسته خواهند شد و وجوه طبق سیاست رسیدگی خواهد شد."
+				]
+			},
+			"ip": {
+				"title": "15. مالکیت فکری",
+				"content1": "همه علائم تجاری، لوگوها، محتوای سایت، نرم‌افزار و دارایی‌های بازی در {siteName} متعلق به {siteName} است یا توسط آن مجوز داده شده است. کپی، خراش دادن یا توزیع مجدد غیرمجاز ممنوع است.",
+				"content2": "به شما یک مجوز محدود و قابل لغو برای دسترسی به سرویس فقط برای سرگرمی شخصی اعطا می‌شود."
+			},
+			"liability": {
+				"title": "16. محدودیت مسئولیت",
+				"items": [
+					"تا حداکثر حد مجاز قانونی، {siteName} مسئول ضررهای غیرمستقیم، خاص، تبعی یا اتفاقی، از جمله سودهای از دست رفته یا هزینه‌های فرصت، نخواهد بود.",
+					"کل مسئولیت ما برای هر ادعای مرتبط با این شرایط از ارزش آخرین واریز شما یا مبلغ مشخص شده توسط قانون قابل اجرا تجاوز نخواهد کرد.",
+					"هیچ چیز در این شرایط، مسئولیت برای مرگ یا آسیب شخصی ناشی از سهل‌انگاری را در جایی که قانون قابل اجرا چنین محدودیتی را ممنوع می‌کند، محدود نمی‌کند."
+				]
+			},
+			"disputes": {
+				"title": "17. حل اختلاف و قانون حاکم",
+				"content": "در صورت بروز اختلاف، به {siteDomain} مراجعه کنید. هدف ما حل سریع شکایات است؛ در صورت لزوم به مدیریت ارجاع دهید."
+			},
+			"amendments": {
+				"title": "18. اصلاحات",
+				"content": " {siteName} می‌تواند این شرایط را در هر زمان اصلاح کند. شرایط به‌روز شده در وب‌سایت منتشر خواهد شد. استفاده مداوم به منزله پذیرش است."
+			},
+			"miscellaneous": {
+				"title": "19. متفرقه",
+				"items": [
+					"این شرایط کل توافقنامه بین شما و {siteName} در مورد سرویس را تشکیل می‌دهد.",
+					"اگر بند یازدهی غیرقابل اجرا تشخیص داده شود، به حداقل میزان لازم اصلاح خواهد شد و سایر مفاد به قوت خود باقی خواهند ماند.",
+					"شما نمی‌توانید حقوق خود را تحت این شرایط واگذار کنید. {siteName} می‌تواند حقوق و تعهدات را واگذار یا برون‌سپاری کند."
+				]
+			},
+			"contact": {
+				"title": "20. تماس",
+				"intro": "برای پشتیبانی، شکایات یا اخطارهای قانونی:",
+				"supportEmail": "پشتیبانی عمومی: به {siteDomain} مراجعه کنید",
+				"affiliateEmail": "سوالات وابسته: به {siteDomain} مراجعه کنید",
+				"registeredOffice": "دفتر ثبت شده: {siteDomain} N.V., Heelsumstraat 51, Willemstad, Curaçao"
+			}
+		}
+	},
+	"responsibleGambling": {
+		"title": "قمار مسئولانه در {siteName}",
+		"subtitle": "در {siteName}، ما می‌خواهیم بازی امن، سرگرم‌کننده و چیزی باشد که بتوانید در هر زمان از آن فاصله بگیرید. ما همه چیز درباره حفظ تعادل است—بنابراین شما برای لذت بازی می‌کنید، نه برای کسب درآمد یا رفع امور مالی خود.",
+		"lastUpdated": "آخرین به‌روزرسانی: ژانویه 2025",
+		"intro": {
+			"title": "قمار مسئولانه در {siteName}",
+			"paragraph1": "در {siteName}، ما می‌خواهیم بازی امن، سرگرم‌کننده و چیزی باشد که بتوانید در هر زمان از آن فاصله بگیرید. ما همه چیز درباره حفظ تعادل است—بنابراین شما برای لذت بازی می‌کنید، نه برای کسب درآمد یا رفع امور مالی خود.",
+			"paragraph2": "اگر زیر 18 سال هستید، یا زیر سن قانونی در منطقه خود، نمی‌توانید از پلتفرم ما استفاده کنید. ما این موضوع را بسیار جدی می‌گیریم."
+		},
+		"mission": {
+			"title": "مأموریت ما",
+			"paragraph1": "ما به بازی واضح، صادقانه و امن اعتقاد داریم. {siteName} برای کمک به شما در گرفتن تصمیمات هوشمندانه و جلوگیری از تبدیل شدن قمار به یک مشکل وجود دارد.",
+			"paragraph2": "این چیزی است که برای ما مهم است:",
+			"beliefs": {
+				"0": "قمار سرگرمی است. راهی برای ثروتمند شدن نیست.",
+				"1": "خودتان را بشناسید، محدودیت تعیین کنید و زیاده‌روی نکنید.",
+				"2": "ما ابزارها و منابعی را برای کمک به شما در حفظ کنترل فراهم می‌کنیم."
+			}
+		},
+		"understanding": {
+			"title": "قمار مسئولانه واقعاً به چه معناست",
+			"paragraph1": "قمار آنلاین امروزه همه جا هست. این باعث می‌شود که از دست دادن ردیابی زمان، پول، یا حتی دلیل شروع بازی آسان‌تر شود.|قمار مسئولانه به معنای دانستن محدودیت‌های خود، هوشیار ماندن و عدم اجازه دادن به خروج امور از کنترل است.",
+			"paragraph2": "چند نکته برای به خاطر سپردن:",
+			"tips": {
+				"0": "برای سرگرمی بازی کنید، نه برای سود.",
+				"1": "سعی نکنید باخت‌ها را جبران کنید. اگر نیاز دارید استراحت کنید.",
+				"2": "یک محدودیت برای هزینه و زمان برای خود تعیین کنید و به آن پایبند باشید.",
+				"3": "هرگز زمانی که خسته، استرس‌زده یا ناراحت هستید، قمار نکنید.",
+				"4": "از پولی که برای صورت‌حساب‌ها یا سایر نیازها در نظر گرفته شده است، استفاده نکنید.",
+				"5": "اگر دیگر سرگرم‌کننده نیست، کنار بکشید."
+			}
+		},
+		"selfCheck": {
+			"title": "بررسی سریع شخصی: آیا هنوز کنترل دارید؟",
+			"intro": "با خودتان صادق باشید:",
+			"questions": {
+				"0": "آیا در حین قمار زمان را از دست می‌دهید؟",
+				"1": "آیا به روابط یا کار شما آسیب رسانده است؟",
+				"2": "آیا وقتی نمی‌توانید بازی کنید، عصبانی می‌شوید؟",
+				"3": "آیا برای فرار از کسالت یا استرس قمار می‌کنید؟",
+				"4": "آیا پول یا کریپتو قرض گرفته‌اید فقط برای ادامه بازی؟",
+				"5": "آیا به دنبال باخت‌ها هستید، بیشتر شرط‌بندی می‌کنید تا سعی کنید آن را برگردانید؟"
+			},
+			"warning": "اگر به چند مورد \"بله\" پاسخ دادید، زمان آن رسیده که در مورد نحوه بازی خود تجدید نظر کنید و شاید به دنبال کمک باشید."
+		},
+		"tools": {
+			"title": "چگونه {siteName} به شما کمک می‌کند در مسیر باقی بمانید",
+			"intro": "ما می‌خواهیم شما لذت ببرید، اما همچنین می‌خواهیم ایمن بمانید.|این چیزی است که ما ارائه می‌دهیم:",
+			"selfExclusion": {
+				"title": "خودحذفی",
+				"description": "به استراحت نیاز دارید؟ می‌توانید درخواست دهید که حساب شما به صورت موقت یا برای همیشه مسدود شود. در طول این مدت، قادر به بازی یا دریافت ایمیل‌های تبلیغاتی نخواهید بود. فقط با ما در {siteName} تماس بگیرید و ما به صورت خصوصی آن را مدیریت خواهیم کرد."
+			},
+			"coolingOff": {
+				"title": "دوره‌های خنک‌سازی",
+				"paragraph1": "اگر احساس می‌کنید امور از کنترل خارج می‌شوند، 24 ساعت، یک هفته یا یک ماه استراحت کنید. در طول این مدت، نمی‌توانید کیف پول خود را برای بازی متصل کنید.",
+				"periods": {
+					"0": "24 ساعت",
+					"1": "1 هفته",
+					"2": "1 ماه"
+				},
+				"paragraph2": "در طول این مدت، نمی‌توانید کیف پول خود را برای بازی متصل کنید."
+			},
+			"depositAwareness": {
+				"title": "آگاهی از واریز و باخت",
+				"description": "از آنجا که همه چیز از طریق کیف پول‌های کریپتو اجرا می‌شود، می‌توانید همه واریزها و شرط‌های خود را مستقیماً روی بلاکچین ببینید. فعالیت خود را زیر نظر داشته باشید تا همیشه بدانید در چه وضعیتی هستید."
+			}
+		},
+		"underagePrevention": {
+			"title": "حفاظت از خردسالان",
+			"paragraph1": "قمار برای افراد زیر 18 سال ممنوع است. ما این را جدی می‌گیریم.",
+			"tipsTitle": "والدین و سرپرستان، در اینجا چند نکته وجود دارد:",
+			"tips": {
+				"0": "از رمزهای عبور استفاده کنید یا دستگاه‌های خود را قفل کنید.",
+				"1": "اطلاعات کیف پول را در رایانه‌ها یا تلفن‌های مشترک ذخیره نکنید.",
+				"2": "اگر دور می‌شوید، همیشه از سیستم خارج شوید.",
+				"3": "از ابزارهایی مانند NetNanny یا GamBlock برای مسدود کردن سایت‌های قمار استفاده کنید.",
+				"4": "فعالیت آنلاین فرزندان خود را بررسی کنید."
+			},
+			"warning": "اگر متوجه شویم کسی زیر سن قانونی بازی می‌کند، حساب او را خواهیم بست و هرگونه بردی را لغو خواهیم کرد."
+		},
+		"helpSupport": {
+			"title": "به پشتیبانی نیاز دارید؟ تنها نیستید",
+			"intro": "اگر قمار شروع به آسیب رساندن به روحیه، روابط یا امور مالی شما کرد، لطفاً تماس بگیرید. در اینجا چند سازمان وجود دارد که می‌توانند کمک کنند، مهم نیست کجا هستید:",
+			"organizations": {
+				"0": {
+					"name": "GamCare",
+					"url": "https://www.gamcare.org.uk"
+				},
+				"1": {
+					"name": "Gambling Therapy",
+					"url": "https://www.gamblingtherapy.org"
+				},
+				"2": {
+					"name": "Gamblers Anonymous",
+					"url": "https://www.gamblersanonymous.org"
+				},
+				"3": {
+					"name": "National Council on Problem Gambling",
+					"url": "https://www.ncpgambling.org"
+				},
+				"4": {
+					"name": "GamTalk",
+					"url": "https://www.gamtalk.org"
+				}
+			},
+			"paragraph2": "آنها خودآزمایی، گفتگوی زنده و گروه‌های پشتیبانی محلی ارائه می‌دهند."
+		},
+		"principles": {
+			"title": "چگونه {siteName} مسئولانه باقی می‌ماند",
+			"intro": "ما به این اصول پایبند هستیم:",
+			"items": {
+				"0": {
+					"title": "شفافیت",
+					"description": "هر بازی قابل اثبات عادلانه و تأیید شده توسط بلاکچین است."
+				},
+				"1": {
+					"title": "امنیت",
+					"description": "نشست‌های شما همیشه با ورود کیف پول Dynamic.xyz محافظت می‌شوند. بدون رمز عبور، بدون KYC."
+				},
+				"2": {
+					"title": "خودمختاری",
+					"description": "شما مسئول هستید. هر زمان خواستید اتصال را قطع کنید."
+				},
+				"3": {
+					"title": "آموزش",
+					"description": "ما به شما کمک می‌کنیم تا ریسک‌ها را درک کنید و شما را مطلع نگه می‌داریم."
+				},
+				"4": {
+					"title": "پشتیبانی انجمن",
+					"description": "تیم ما 24/7 برای شما اینجاست."
+				}
+			}
+		},
+		"playSmart": {
+			"title": "افکار نهایی",
+			"intro": "قمار باید لذت‌بخش، اجتماعی و متعادل باشد. قبل از بازی، یک محدودیت زمانی تعیین کنید. به دنبال باخت‌ها نباشید و زمانی که ناراحت هستید بازی نکنید. با هر بردی به عنوان یک پاداش خوب برخورد کنید، نه یک چک حقوقی. هوشمندانه بازی کنید و از درخواست کمک نترسید اگر به آن نیاز دارید.",
+			"reminders": {
+				"0": "قمار باید لذت‌بخش، اجتماعی و متعادل باشد.",
+				"1": "قبل از بازی، یک محدودیت زمانی تعیین کنید.",
+				"2": "به دنبال باخت‌ها نباشید و زمانی که ناراحت هستید بازی نکنید.",
+				"3": "با هر بردی به عنوان یک پاداش خوب برخورد کنید، نه یک چک حقوقی.",
+				"4": "هوشمندانه بازی کنید و از درخواست کمک نترسید اگر به آن نیاز دارید."
+			}
+		},
+		"finalMessage": {
+			"paragraph1": "اجازه ندهید قمار به کار یا روابط شما سرایت کند. اگر دیگر سرگرم‌کننده نیست، فقط کنار بکشید.|در {siteName}، ما به رفاه شما اهمیت می‌دهیم. تصمیمات هوشمندانه بگیرید، ایمن بازی کنید و مراقب خود باشید.",
+			"paragraph2": "اجازه ندهید قمار به کار یا روابط شما سرایت کند. اگر دیگر سرگرم‌کننده نیست، فقط کنار بکشید.",
+			"contact": "به کمک، مشاوره نیاز دارید یا می‌خواهید استراحت کنید؟ در هر زمان در {siteName} تماس بگیرید."
+		}
+	},
+	"faqs": {
+		"title": "سوالات متداول – {siteName}",
+		"subtitle": "پاسخ سوالات متداول {siteName} را پیدا کنید. درباره ورود با کیف پول، واریزها، برداشت‌ها، بازی عادلانه و شفافیت بلاکچین بیاموزید.",
+		"lastUpdated": "آخرین به‌روزرسانی: ژانویه 2025",
+		"introTitle": "سوالات متداول {siteName}",
+		"intro": "به مرکز سوالات متداول {siteName} خوش آمدید، جایی که پاسخ‌های سریع به رایج‌ترین سوالات در مورد پلتفرم بازی کریپتوی ما را خواهید یافت.|اگر نتوانستید پاسخ خود را در اینجا پیدا کنید، تیم پشتیبانی 24/7 ما همیشه آماده کمک در {siteName} است.",
+		"categories": {
+			"accountRegistration": {
+				"title": "🔹 حساب و ثبت نام",
+				"items": {
+					"0": {
+						"question": "1. آیا می‌توانم در وب‌سایت شما ثبت نام کنم؟",
+						"answer": "بله—ثبت نام برای هر کسی که 18 سال یا بیشتر دارد (یا سن قانونی در حوزه قضایی خود) آزاد است.|شما همچنین باید مطمئن شوید که بازی آنلاین در محل زندگی شما قانونی است.|در {siteName}، نیازی به ثبت نام‌های سنتی یا رمزهای عبور ندارید.|به سادگی کیف پول خود را از طریق Dynamic.xyz متصل کنید تا فوراً بازی را شروع کنید.|👉 برای جزئیات قانونی و انطباق، لطفاً شرایط و ضوابط ما را مرور کنید.",
+						"reminder": "تذکر: قمار می‌تواند اعتیادآور باشد. لطفاً مسئولانه بازی کنید و محدودیت‌های خود را بدانید."
+					},
+					"1": {
+						"question": "2. اگر جزئیات ورود خود را فراموش کنم چه؟",
+						"answer": "از آنجا که {siteName} از ورود مبتنی بر کیف پول از طریق Dynamic.xyz استفاده می‌کند، شما از رمزهای عبور سنتی استفاده نمی‌کنید.|برای دسترسی مجدد به حساب خود:|کیف پول خود را با استفاده از همان آدرسی که در ابتدا استفاده کرده‌اید، دوباره متصل کنید.|اگر دسترسی به کیف پول خود را از دست داده‌اید، لطفاً آن را با عبارت seed یا روش پشتیبان خود بازیابی کنید (ما هرگز کلیدهای خصوصی را به دلایل امنیتی ذخیره یا کنترل نمی‌کنیم).| {siteName} نمی‌تواند اعتبارنامه‌های کیف پول شما را به دلایل امنیتی بازنشانی یا بازیابی کند."
+					},
+					"2": {
+						"question": "3. آیا می‌توانم نام کاربری یا کیف پول متصل خود را تغییر دهم؟",
+						"answer": "حساب {siteName} شما به آدرس کیف پول شما گره خورده است.|برای استفاده از یک کیف پول جدید، به سادگی یک کیف پول جدید متصل کنید—اما توجه داشته باشید که تاریخچه بازی قبلی، وضعیت VIP و پاداش‌های شما به طور خودکار منتقل نخواهد شد."
+					},
+					"3": {
+						"question": "4. چگونه می‌توانم عضو VIP شوم؟",
+						"answer": "برنامه VIP ما انحصاری و فقط با دعوت است.|همانطور که بازی می‌کنید و با انجمن {siteName} تعامل دارید، فعالیت بازی شما به طور خودکار ردیابی می‌شود.|هنگامی که واجد شرایط شدید، یک دعوت رسمی از طریق اعلان درون پلتفرم یا پیام مستقیم از تیم {siteName} دریافت خواهید کرد.|VIPها از دسترسی به پاداش‌های انحصاری، برداشت‌های سریع‌تر و جوایز شخصی‌سازی شده برخوردار هستند."
+					}
+				}
+			},
+			"depositsWithdrawals": {
+				"title": "💰 واریزها و برداشت‌ها",
+				"items": {
+					"0": {
+						"question": "5. چگونه ارز دیجیتال واریز کنم؟",
+						"answer": "واریز در {siteName} سریع و ساده است:|به \"کیف پول من\" در داشبورد اصلی بروید.|واریز را انتخاب کرده و ارز دیجیتال مورد نظر خود را انتخاب کنید (مثلاً BTC، ETH، USDT، BNB).|آدرس کیف پول منحصربه‌فرد خود را کپی کنید یا کد QR را اسکن کنید.|ارز دیجیتال خود را از کیف پول خارجی خود به آدرس نمایش داده شده ارسال کنید.|پس از تأیید در بلاکچین، وجوه شما به طور خودکار در موجودی {siteName} شما ظاهر می‌شود.|⚠️ مطمئن شوید که فقط ارزهای دیجیتال پشتیبانی شده را به شبکه آدرس صحیح ارسال می‌کنید (مثلاً ERC20، TRC20، BEP20)."
+					},
+					"1": {
+						"question": "6. واریزها چقدر طول می‌کشد؟",
+						"answer": "واریزها معمولاً در عرض 5 تا 10 دقیقه تأیید می‌شوند، بسته به ازدحام بلاکچین و کارمزدهای تراکنش.|می‌توانید پیشرفت تراکنش خود را از طریق یک اکسپلورر بلاک (مثلاً Etherscan.io یا BscScan.com) با استفاده از هش تراکنش (TXID) خود دنبال کنید.|حداقل 3 تأیید معمولاً برای ظاهر شدن واریز شما در موجودی‌تان مورد نیاز است."
+					},
+					"2": {
+						"question": "7. حداقل مبلغ برداشت چقدر است؟",
+						"answer": "حداقل مبلغ برداشت به ارز دیجیتالی که استفاده می‌کنید بستگی دارد.|هر کوین کارمزد شبکه و آستانه حداقل مخصوص به خود را دارد.|این مقادیر در بخش برداشت زیر \"کیف پول من\" نمایش داده می‌شوند."
+					},
+					"3": {
+						"question": "8. چگونه بردهای خود را برداشت کنم؟",
+						"answer": "برای برداشت ارز دیجیتال خود:|به \"کیف پول من\" ← \"برداشت\" بروید.|آدرس کیف پول مقصد و مبلغی را که می‌خواهید برداشت کنید وارد کنید.|قبل از تأیید، آدرس و نوع شبکه خود را دوباره بررسی کنید.|برداشت‌ها فوراً پردازش می‌شوند، اما بسته به فعالیت شبکه بلاکچین ممکن است چند دقیقه طول بکشد.|💡 همیشه مطمئن شوید که کیف پول گیرنده شما از شبکه‌ای که از آن برداشت می‌کنید پشتیبانی می‌کند."
+					},
+					"4": {
+						"question": "9. اگر تراکنش من به تأخیر بیفتد چه می‌شود؟",
+						"answer": "تراکنش‌های بلاکچین گاهی اوقات به دلیل ازدحام شبکه یا کارمزدهای پایین گس بیشتر طول می‌کشند.|اگر واریز یا برداشت شما نرسیده است:|TXID خود را در اکسپلورر بلاکچین بررسی کنید.|تأیید کنید که از شبکه و آدرس صحیح استفاده کرده‌اید.|اگر بیش از یک ساعت گذشته است، با {siteName} با TXID و جزئیات کیف پول خود تماس بگیرید."
+					}
+				}
+			},
+			"gamesSecurity": {
+				"title": "🎮 بازی‌ها، انصاف و امنیت",
+				"items": {
+					"0": {
+						"question": "10. آیا بازی‌های {siteName} عادلانه هستند؟",
+						"answer": "بله—همه بازی‌های {siteName} با استفاده از فناوری قابل اثبات عادلانه و قراردادهای هوشمند تأیید شده ساخته شده‌اند.|هر شرط، نتیجه و پرداخت را می‌توان به طور مستقل در بلاکچین تأیید کرد.|ما بر روی سیستم‌های شفاف و مقاوم در برابر دستکاری کار می‌کنیم که تصادفی بودن، انصاف و باز بودن واقعی را تضمین می‌کنند.|شما می‌توانید نتایج بازی و اثبات تراکنش را روی بلاکچین از طریق Etherscan یا اکسپلورر شبکه مربوطه مشاهده کنید."
+					},
+					"1": {
+						"question": "11. اگر یک بازی فریز یا کرش کرد چه کاری باید انجام دهم؟",
+						"answer": "اگر بازی شما از پاسخ دادن متوقف شد:|صفحه را به‌روزرسانی کنید.|حافظه پنهان مرورگر خود را پاک کرده و کیف پول خود را دوباره متصل کنید.|اگر مشکل ادامه داشت، از طریق گفتگوی زنده یا {siteName} با تیم پشتیبانی ما تماس بگیرید.|تیم ما به شما در بازیابی نشست بازی یا موجودی شما در صورت آسیب دیدن کمک خواهد کرد."
+					},
+					"2": {
+						"question": "12. آیا می‌توانم از بیش از یک کیف پول یا حساب استفاده کنم؟",
+						"answer": "خیر.|به هر بازیکن اجازه داده می‌شود که از یک آدرس کیف پول به عنوان حساب اصلی خود استفاده کند.|ایجاد حساب‌های متعدد یا استفاده از چرخش کیف پول برای مطالبه پاداش یا سوء استفاده از تبلیغات اکیداً ممنوع است و ممکن است منجر به محدودیت حساب یا مصادره موجودی شود."
+					},
+					"3": {
+						"question": "13. آیا داده‌های شخصی من امن هستند؟",
+						"answer": "بله.|در {siteName}، ما داده‌های شخصی را جمع‌آوری نمی‌کنیم—هویت شما امن باقی می‌ماند.|دسترسی از طریق Dynamic.xyz مدیریت می‌شود، که حریم خصوصی کامل و مالکیت هویت دیجیتال شما را تضمین می‌کند.|هیچ رمز عبور، ایمیل یا سند حساسی توسط ما ذخیره نمی‌شود.|کیف پول شما = هویت شما."
+					}
+				}
+			},
+			"responsibleGambling": {
+				"title": "🧠 قمار مسئولانه",
+				"items": {
+					"0": {
+						"question": "14. آیا {siteName} از قمار مسئولانه پشتیبانی می‌کند؟",
+						"answer": "قطعاً.|ما هر بازیکن را تشویق می‌کنیم که از بازی در حد اعتدال لذت ببرد.|می‌توانید با تماس با {siteName}، یک دوره خودحذفی یا یک دوره خنک‌سازی درخواست کنید.|اگر احساس می‌کنید قمار بر زندگی شما تأثیر می‌گذارد، برای دریافت منابع و سازمان‌های کمک‌رسانی، از صفحه قمار مسئولانه ما بازدید کنید."
+					},
+					"1": {
+						"question": "15. اگر به مشکل قمار مشکوک باشم چه کاری باید انجام دهم؟",
+						"answer": "اگر احساس می‌کنید قمار شما از کنترل خارج می‌شود، استراحت کنید و برای کمک محرمانه با یکی از این سازمان‌های معتبر تماس بگیرید:|GamCare: https://www.gamcare.org.uk|Gambling Therapy: https://www.gamblingtherapy.org|Gamblers Anonymous: https://www.gamblersanonymous.org|تیم پشتیبانی ما همچنین می‌تواند شما را در مورد محدود کردن امن دسترسی به حسابتان راهنمایی کند."
+					}
+				}
+			},
+			"blockchainTransparency": {
+				"title": "🧩 شفافیت بلاکچین",
+				"paragraph1": " {siteName} توسط قراردادهای هوشمند مبتنی بر اتریوم قدرت می‌گیرد، که تضمین می‌کند هر شرط، تراکنش و پاداش به صورت شفاف روی بلاکچین ثبت می‌شود.|همه داده‌ها و منطق بازی تغییرناپذیر و قابل تأیید هستند و انصاف و قابلیت حسابرسی واقعی را تضمین می‌کنند.|شما می‌توانید تمام تراکنش‌های پلتفرم را از طریق اکسپلوررهای عمومی مانند:|Etherscan.io|BscScan.com|TronScan.org دنبال کنید.",
+				"paragraph2": "",
+				"explorersTitle": "",
+				"guarantee": "این تضمین می‌کند که هیچ دستکاری یا سوء استفاده‌ای نمی‌تواند رخ دهد—هرگز."
+			},
+			"needMoreHelp": {
+				"title": "💬 به کمک بیشتری نیاز دارید؟",
+				"intro": "تیم پشتیبانی ما 24/7 برای کمک به شما از طریق:",
+				"contactTitle": "",
+				"liveChat": "💬 گفتگوی زنده (در داشبورد متصل به کیف پول شما موجود است)"
+			}
+		}
+	},
+	"termsAndConditions": {
+		"title": "⚖️ شرایط و ضوابط — {siteName}",
+		"subtitle": "شرایط و ضوابط {siteName} را بخوانید. درباره ورود با کیف پول (Dynamic.xyz)، واریزهای کریپتو، برداشت‌ها، بازی عادلانه و سیاست‌های قمار مسئولانه بیاموزید.",
+		"lastUpdated": "آخرین به‌روزرسانی: ژانویه 2025",
+		"meta": {
+			"title": "شرایط و ضوابط | {siteName} – قوانین کازینو کریپتو",
+			"description": "شرایط و ضوابط {siteName} را بخوانید. درباره ورود با کیف پول (Dynamic.xyz)، واریزهای کریپتو، برداشت‌ها، بازی عادلانه و سیاست‌های قمار مسئولانه بیاموزید.",
+			"keywords": "شرایط و ضوابط {siteName}، قوانین کازینو کریپتوی {siteName}، ورود با کیف پول Dynamic.xyz، سیاست برداشت {siteName}، بازی عادلانه {siteName}",
+			"h1": "شرایط و ضوابط – کازینوی کیف پول کریپتوی {siteName}",
+			"ogTitle": "شرایط و ضوابط | {siteName} (کازینوی کیف پول کریپتو)",
+			"ogDescription": "شرایط و ضوابط {siteName} را مرور کنید. ورود با کیف پول Dynamic.xyz، واریزهای کریپتو، برداشت‌ها و قوانین پلتفرم را درک کنید."
+		},
+		"sections": {
+			"ownership": {
+				"number": "1",
+				"title": "مالکیت {siteName}",
+				"clauses": [
+					{
+						"number": "1.1",
+						"content": " {siteName} متعلق به {siteName} N.V. (\" {siteName} \"، \"ما\"، \"ما\"، یا \"ما\") است و توسط آن اداره می‌شود."
+					},
+					{
+						"number": "1.2",
+						"content": " {siteName} یک کازینو فقط با کیف پول کریپتو است. تمام واریزها، شرط‌ها و برداشت‌ها از طریق کیف پول‌های ارز دیجیتال کاربران پردازش می‌شود. ما از ورود با کیف پول از طریق Dynamic.xyz و اتصال‌دهنده‌های کیف پول سازگار (مانند WalletConnect / MetaMask) پشتیبانی می‌کنیم."
+					}
+				]
+			},
+			"importantNotice": {
+				"number": "2",
+				"title": "اخطار مهم",
+				"clauses": [
+					{
+						"number": "2.1",
+						"content": "با ثبت‌نام یا اتصال کیف پول خود در www.{siteDomain} (\"وب‌سایت\")، شما وارد یک توافقنامه الزام‌آور با {siteName} N.V. می‌شوید و با موارد زیر موافقت می‌کنید: (i) این شرایط و ضوابط؛ (ii) سیاست حفظ حریم خصوصی ما؛ (iii) سیاست کوکی ما؛ (iv) شرایط وابسته ما؛ و (v) سیاست قمار مسئولانه ما."
+					},
+					{
+						"number": "2.2",
+						"content": "اگر با هیچ یک از این شرایط موافق نیستید، به وب‌سایت ما دسترسی پیدا نکنید، از آن استفاده نکنید یا در آن ثبت‌نام نکنید."
+					},
+					{
+						"number": "2.3",
+						"content": "این شرایط را با دقت بخوانید. اگر در مورد حقوق یا تعهدات خود مطمئن نیستید، قبل از استفاده از وب‌سایت با یک مشاور حقوقی در حوزه قضایی خود مشورت کنید."
+					}
+				]
+			},
+			"generalTerms": {
+				"number": "3",
+				"title": "شرایط عمومی",
+				"clauses": [
+					{
+						"number": "3.1",
+						"content": "هنگام ثبت‌نام یا اتصال کیف پول، شما (\"کاربر\"، \"بازیکن\"، \"شما\"، یا \"شما\") موافقت می‌کنید که از همه قوانین و سیاست‌های {siteName} پیروی کنید."
+					},
+					{
+						"number": "3.2",
+						"content": "این توافقنامه یک قرارداد الزام‌آور قانونی بین شما و {siteName} است."
+					},
+					{
+						"number": "3.3",
+						"content": "این شرایط از لحظه‌ای که کیف پول خود را متصل می‌کنید و شروع به استفاده از سایت می‌کنید، لازم‌الاجرا می‌شوند."
+					},
+					{
+						"number": "3.4",
+						"content": " {siteName} حق دارد این شرایط را در هر زمان اصلاح یا به‌روز کند. تغییرات در وب‌سایت منتشر خواهد شد؛ استفاده مداوم به منزله پذیرش است."
+					},
+					{
+						"number": "3.5",
+						"content": "در صورت تضاد، این شرایط بر هر قانون، تبلیغات یا مواد خارجی دیگر مقدم است."
+					},
+					{
+						"number": "3.6",
+						"content": "فقط نسخه انگلیسی این شرایط از نظر قانونی الزام‌آور است. ترجمه‌ها فقط برای راحتی هستند."
+					}
+				]
+			},
+			"accountSecurity": {
+				"number": "4",
+				"title": "حساب، ورود با کیف پول و امنیت",
+				"walletLogin": {
+					"title": "4.1 ورود با کیف پول (Dynamic.xyz)",
+					"clauses": [
+						{
+							"number": "4.1.1",
+							"content": " {siteName} از Dynamic.xyz (یا سایر اتصال‌دهنده‌های پشتیبانی شده) برای ورود و احراز هویت مبتنی بر کیف پول استفاده می‌کند. با اتصال یک کیف پول، شما تأیید می‌کنید که مالک قانونی آن کیف پول هستید و به {siteName} اجازه می‌دهید آن کیف پول را به عنوان حساب شما بشناسد."
+						},
+						{
+							"number": "4.1.2",
+							"content": "ما هرگز کلیدهای خصوصی شما را درخواست نمی‌کنیم. شما باید اعتبارنامه‌های کیف پول و دستگاه خود را امن نگه دارید. {siteName} مسئولیت ضررهای ناشی از کیف پول‌های به خطر افتاده یا کلیدهای خصوصی فاش شده را ندارد."
+						}
+					]
+				},
+				"registration": {
+					"title": "4.2 جزئیات ثبت نام",
+					"clauses": [
+						{
+							"number": "4.2.1",
+							"content": "ممکن است از شما خواسته شود جزئیات تماس (ایمیل، نام کاربری) را برای ارتباطات حساب ارائه دهید. شما باید اطلاعات دقیق ارائه دهید و آن را به‌روز نگه دارید."
+						},
+						{
+							"number": "4.2.2",
+							"content": "شما مسئول تمام اقدامات انجام شده با استفاده از کیف پول متصل خود هستید."
+						}
+					]
+				},
+				"multipleAccounts": {
+					"title": "4.3 حساب‌های متعدد و امنیت",
+					"clauses": [
+						{
+							"number": "4.3.1",
+							"content": "فقط یک حساب برای هر فرد مجاز است. حساب‌های متعدد یا تلاش برای دور زدن محدودیت‌ها ممکن است منجر به تعلیق حساب و مصادره وجوه شود."
+						},
+						{
+							"number": "4.3.2",
+							"content": "هرگونه ویژگی امنیتی پلتفرم ارائه شده (به عنوان مثال، 2FA برای خدمات مرتبط) را فعال کنید و کیف پول خود را امن کنید."
+						},
+						{
+							"number": "4.3.3",
+							"content": "در صورت مشکوک بودن به دسترسی غیرمجاز، فوراً به پشتیبانی اطلاع دهید."
+						}
+					]
+				}
+			},
+			"eligibility": {
+				"number": "5",
+				"title": "صلاحیت و ضمانت‌های کاربر",
+				"clauses": [
+					{
+						"number": "5.1",
+						"content": "شما نمایندگی می‌کنید و تضمین می‌دهید که:|• حداقل 18 سال سن دارید (یا حداقل سن قانونی قمار در حوزه قضایی خود).|• از نظر قانونی مجاز به استفاده از خدمات قمار کریپتوی آنلاین در محل زندگی خود هستید.|• مالک قانونی کیف پولی هستید که متصل می‌کنید.|• از VPN یا جعل موقعیت مکانی برای دور زدن محدودیت‌های منطقه‌ای استفاده نخواهید کرد.|• از سرویس برای اهداف غیرقانونی یا تجاری استفاده نخواهید کرد.|• می‌پذیرید که ارزش ارز دیجیتال ممکن است نوسان داشته باشد و شما تمام ریسک بازار را متحمل می‌شوید."
+					},
+					{
+						"number": "5.2",
+						"content": "اگر این ضمانت‌ها را نقض کنید، {siteName} می‌تواند دسترسی را تعلیق یا خاتمه دهد و وجوه را در جایی که قانون اجازه می‌دهد، توقیف کند."
+					}
+				]
+			},
+			"restrictedJurisdictions": {
+				"number": "6",
+				"title": "حوزه‌های قضایی محدود شده",
+				"clauses": [
+					{
+						"number": "6.1",
+						"content": " {siteName} بازیکنان را از حوزه‌های قضایی که در آن قمار کریپتو ممنوع یا محدود شده است، نمی‌پذیرد. این شامل، اما محدود به موارد زیر نیست:|ایالات متحده (و قلمروهای ایالات متحده)، بریتانیا، فرانسه، هلند، اسپانیا، آلمان، استرالیا، اتریش، کومور، ایران، کره شمالی، سودان، سوریه و هر حوزه قضایی که در لیست‌های سیاه FATF ذکر شده است."
+					},
+					{
+						"number": "6.2",
+						"content": "تلاش برای دسترسی به سرویس از یک حوزه قضایی محدود شده، از جمله از طریق VPN یا پروکسی، نقض این شرایط است و ممکن است منجر به بسته شدن حساب و مصادره وجوه شود."
+					}
+				]
+			},
+			"cryptoTransactions": {
+				"number": "7",
+				"title": "واریزها و برداشت‌های کریپتو",
+				"cryptoOnly": {
+					"title": "7.1 سیاست فقط کریپتو",
+					"clauses": [
+						{
+							"number": "7.1.1",
+							"content": " {siteName} واریزها و برداشت‌ها را فقط در ارزهای دیجیتال پشتیبانی شده می‌پذیرد (به عنوان مثال، BTC، ETH، USDT، TRX، BNB). هیچ واریز فیات، کارت یا حواله بانکی پذیرفته نمی‌شود."
+						},
+						{
+							"number": "7.1.2",
+							"content": "همه واریزها باید از کیف پول‌هایی که شما کنترل می‌کنید، منشا گرفته باشند. واریز از کیف پول‌های شخص ثالث ممنوع است."
+						}
+					]
+				},
+				"deposits": {
+					"title": "7.2 واریزها",
+					"clauses": [
+						{
+							"number": "7.2.1",
+							"content": "واریزها پس از تأییدیه‌های بلاکچین مورد نیاز اعتباردهی می‌شوند. کارمزدهای شبکه (گس) توسط شما قابل پرداخت است."
+						},
+						{
+							"number": "7.2.2",
+							"content": " {siteName} می‌تواند واریزهایی را که به نظر می‌رسد از آدرس‌های مسدود شده یا منابع محدود شده منشا می‌گیرند، رد یا معکوس کند."
+						}
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 برداشت‌ها",
+					"clauses": [
+						{
+							"number": "7.3.1",
+							"content": "برداشت‌ها به آدرس کیف پولی که شما ارائه می‌دهید، پردازش می‌شود. {siteName} ممکن است از شما بخواهد قبل از پردازش، کیف پول مقصد را تأیید کنید."
+						},
+						{
+							"number": "7.3.2",
+							"content": "شما باید موجودی کافی و تسویه شده برای پوشش یک برداشت داشته باشید. برداشت‌ها ممکن است برای بررسی سوء استفاده مشکوک یا فعالیت غیرمعمول به تأخیر بیفتد."
+						}
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 برگشت شارژ و معکوس‌ها",
+					"clauses": [
+						{
+							"number": "7.4.1",
+							"content": "تراکنش‌های کریپتو روی بلاکچین نهایی هستند. اگر {siteName} به دلیل برگشت شارژ یا معکوس‌ها از ارائه‌دهندگان خدمات شخص ثالث (نادر در مورد روی بلاکچین) متحمل ضرر شود، ما حق خود را برای بازیابی مبالغ یا دریافت هزینه‌های اداری محفوظ می‌داریم."
+						}
+					]
+				}
+			},
+			"noKyc": {
+				"number": "8",
+				"title": "بدون تأیید هویت روتین (بدون KYC)",
+				"clauses": [
+					{
+						"number": "8.1",
+						"content": " {siteName} تأیید هویت روتین (KYC) را به عنوان شرط بازی عادی انجام نمی‌دهد. کاربران می‌توانند یک کیف پول را از طریق Dynamic.xyz متصل کرده و بدون ارائه اسناد هویتی شروع به بازی کنند."
+					},
+					{
+						"number": "8.2",
+						"content": "علی‌رغم بند 8.1، {siteName} حق دارد اطلاعات را درخواست کند یا تراکنش‌ها را به حالت تعلیق درآورد در صورت لزوم برای:|• پیروی از یک دستور قانونی از مقامات ذی‌صلاح؛|• جلوگیری، تحقیق یا رفع کلاهبرداری، پولشویی یا سایر فعالیت‌های غیرقانونی؛ یا|• محافظت از امنیت و یکپارچگی پلتفرم."
+					},
+					{
+						"number": "8.3",
+						"content": "اگر از ارائه چنین اطلاعاتی در صورت لزوم قانونی خودداری کنید، {siteName} می‌تواند حساب شما را محدود یا ببندد و برداشت‌ها را تا حدی که قانون اجازه می‌دهد، به تأخیر اندازد یا توقیف کند."
+					}
+				]
+			},
+			"fairPlay": {
+				"number": "9",
+				"title": "بازی عادلانه، رفتار ممنوع و امنیت",
+				"clauses": [
+					{
+						"number": "9.1",
+						"content": "شما نباید:|• از ربات‌ها، اسکریپت‌ها، ابزارهای بازی خودکار یا هر نرم‌افزار غیرمجاز دیگری استفاده کنید.|• با سایر بازیکنان تبانی کنید یا نتایج بازی را دستکاری کنید.|• حساب‌های متعددی برای سوء استفاده از پاداش‌ها یا تبلیغات ایجاد کنید.|• تلاش کنید تراکنش‌های روی بلاکچین را معکوس یا دستکاری کنید.|• از اشکالات بازی یا آسیب‌پذیری‌های پلتفرم سوء استفاده کنید."
+					},
+					{
+						"number": "9.2",
+						"content": "حساب‌هایی که مشخص شود تقلب می‌کنند، تبانی می‌کنند یا از پلتفرم سوء استفاده می‌کنند، ممکن است تعلیق، بسته یا موجودی‌شان مصادره شود."
+					},
+					{
+						"number": "9.3",
+						"content": " {siteName} نظارت فنی و رفتاری را برای محافظت از یکپارچگی پلتفرم پیاده‌سازی می‌کند."
+					}
+				]
+			},
+			"bonuses": {
+				"number": "10",
+				"title": "پاداش‌ها و تبلیغات",
+				"clauses": [
+					{
+						"number": "10.1",
+						"content": "همه پیشنهادات پاداش و تبلیغات مشمول شرایط پاداش خاصی هستند که با هر پیشنهاد ذکر شده است."
+					},
+					{
+						"number": "10.2",
+						"content": "سوء استفاده از پاداش (شامل حساب‌های متعدد یا تغییر سریع پاداش) می‌تواند منجر به رد، معکوس شدن یا مصادره پاداش‌ها و بسته شدن حساب‌ها شود."
+					},
+					{
+						"number": "10.3",
+						"content": "الزامات شرط‌بندی پاداش باید قبل از برداشت وجوه مشتق شده از پاداش، همانطور که در هر تبلیغ مشخص شده است، برآورده شود."
+					}
+				]
+			},
+			"gameRules": {
+				"number": "11",
+				"title": "قوانین بازی و تسویه بازی",
+				"clauses": [
+					{
+						"number": "11.1",
+						"content": "شرط‌ها فقط پس از دریافت تأیید روی صفحه پذیرفته می‌شوند. شرط‌های گذاشته شده با موجودی ناکافی باطل هستند."
+					},
+					{
+						"number": "11.2",
+						"content": "سوابق داخلی {siteName} و سوابق بلاکچین در صورت بروز اختلافات معتبر هستند."
+					},
+					{
+						"number": "11.3",
+						"content": "اگر رویدادی لغو شود، به حالت تعلیق درآید یا به نحو دیگری به خطر بیفتد، {siteName} شرط‌ها را طبق قوانین بازی و بازار منتشر شده تسویه یا باطل خواهد کرد."
+					},
+					{
+						"number": "11.4",
+						"content": "برای بازی‌های قابل اثبات عادلانه، ابزارهای تأیید و بذر سرور (در صورت لزوم) برای هر بازی در دسترس قرار می‌گیرند؛ سوابق سرور نهایی هستند."
+					}
+				]
+			},
+			"errors": {
+				"number": "12",
+				"title": "خطاها، وقفه‌ها و محدودیت‌ها",
+				"clauses": [
+					{
+						"number": "12.1",
+						"content": " {siteName} مسئولیت ضررهای ناشی از موارد زیر را ندارد:|• خرابی‌های اینترنت یا دستگاه؛|• تأخیرهای بلاکچین، فورک‌ها یا ازدحام شبکه؛|• اشکالات نرم‌افزاری یا قطعی خدمات شخص ثالث."
+					},
+					{
+						"number": "12.2",
+						"content": " {siteName} حق دارد شرط‌ها را باطل کند، موجودی‌ها را تنظیم کند یا تراکنش‌ها را در هنگام تشخیص خطاها یا سوء استفاده‌ها لغو کند."
+					},
+					{
+						"number": "12.3",
+						"content": "ما می‌توانیم محدودیت‌های شرط‌بندی، حداکثر بردها و سایر کنترل‌ها را برای محافظت از کاربران و پلتفرم تنظیم کنیم."
+					}
+				]
+			},
+			"suspension": {
+				"number": "13",
+				"title": "تعلیق، بسته شدن و رسیدگی به وجوه",
+				"clauses": [
+					{
+						"number": "13.1",
+						"content": " {siteName} می‌تواند حساب‌ها را در مواردی که:|• شرایط نقض شوند؛|• سوء استفاده، کلاهبرداری یا رفتار مشکوک شناسایی شود؛|• تعهدات قانونی یا نظارتی آن را الزامی کند."
+					},
+					{
+						"number": "13.2",
+						"content": "هنگام بسته شدن حساب، شرط‌های در حال انتظار ممکن است لغو شوند و وجوه باقی‌مانده طبق قانون قابل اجرا و سیاست پلتفرم رسیدگی شود."
+					},
+					{
+						"number": "13.3",
+						"content": " {siteName} می‌تواند وجوه را در صورت لزوم برای حل اختلافات، پیروی از درخواست‌های قانونی یا رفع ضررها نگه دارد."
+					}
+				]
+			},
+			"responsibleGaming": {
+				"number": "14",
+				"title": "قمار مسئولانه",
+				"clauses": [
+					{
+						"number": "14.1",
+						"content": " {siteName} قمار مسئولانه را ترویج می‌کند. شما می‌توانید درخواست کنید:|• خودحذفی؛|• محدودیت‌های واریز؛|• تعلیق موقت."
+					},
+					{
+						"number": "14.2",
+						"content": "اگر به آسیب قمار مشکوک هستید، با {siteName} برای کمک فوری تماس بگیرید."
+					},
+					{
+						"number": "14.3",
+						"content": "قمار زیر سن قانونی (زیر 18 سال یا سن قانونی محلی) اکیداً ممنوع است. حساب‌هایی که مشخص شود متعلق به خردسالان هستند، بسته خواهند شد و وجوه طبق سیاست رسیدگی خواهد شد."
+					}
+				]
+			},
+			"intellectualProperty": {
+				"number": "15",
+				"title": "مالکیت فکری",
+				"clauses": [
+					{
+						"number": "15.1",
+						"content": "همه علائم تجاری، لوگوها، محتوای سایت، نرم‌افزار و دارایی‌های بازی در {siteName} متعلق به {siteName} است یا توسط آن مجوز داده شده است. کپی، خراش دادن یا توزیع مجدد غیرمجاز ممنوع است."
+					},
+					{
+						"number": "15.2",
+						"content": "به شما یک مجوز محدود و قابل لغو برای دسترسی به سرویس فقط برای سرگرمی شخصی اعطا می‌شود."
+					}
+				]
+			},
+			"liability": {
+				"number": "16",
+				"title": "محدودیت مسئولیت",
+				"clauses": [
+					{
+						"number": "16.1",
+						"content": "تا حداکثر حد مجاز قانونی، {siteName} مسئول ضررهای غیرمستقیم، خاص، تبعی یا اتفاقی، از جمله سودهای از دست رفته یا هزینه‌های فرصت، نخواهد بود."
+					},
+					{
+						"number": "16.2",
+						"content": "کل مسئولیت ما برای هر ادعای مرتبط با این شرایط از ارزش آخرین واریز شما یا مبلغ مشخص شده توسط قانون قابل اجرا تجاوز نخواهد کرد."
+					},
+					{
+						"number": "16.3",
+						"content": "هیچ چیز در این شرایط، مسئولیت برای مرگ یا آسیب شخصی ناشی از سهل‌انگاری را در جایی که قانون قابل اجرا چنین محدودیتی را ممنوع می‌کند، محدود نمی‌کند."
+					}
+				]
+			},
+			"disputes": {
+				"number": "17",
+				"title": "حل اختلاف و قانون حاکم",
+				"clauses": [
+					{
+						"number": "17.1",
+						"content": "در صورت بروز اختلاف، با {siteName} تماس بگیرید. هدف ما حل سریع شکایات است؛ در صورت لزوم به مدیریت ارجاع دهید."
+					}
+				]
+			},
+			"amendments": {
+				"number": "18",
+				"title": "اصلاحات",
+				"clauses": [
+					{
+						"number": "18.1",
+						"content": " {siteName} می‌تواند این شرایط را در هر زمان اصلاح کند. شرایط به‌روز شده در وب‌سایت منتشر خواهد شد. استفاده مداوم به منزله پذیرش است."
+					}
+				]
+			},
+			"miscellaneous": {
+				"number": "19",
+				"title": "متفرقه",
+				"clauses": [
+					{
+						"number": "19.1",
+						"content": "این شرایط کل توافقنامه بین شما و {siteName} در مورد سرویس را تشکیل می‌دهد."
+					},
+					{
+						"number": "19.2",
+						"content": "اگر بند یازدهی غیرقابل اجرا تشخیص داده شود، به حداقل میزان لازم اصلاح خواهد شد و سایر مفاد به قوت خود باقی خواهند ماند."
+					},
+					{
+						"number": "19.3",
+						"content": "شما نمی‌توانید حقوق خود را تحت این شرایط واگذار کنید. {siteName} می‌تواند حقوق و تعهدات را واگذار یا برون‌سپاری کند."
+					}
+				]
+			},
+			"contact": {
+				"number": "20",
+				"title": "تماس",
+				"content": "برای پشتیبانی، شکایات یا اخطارهای قانونی:",
+				"link": "🌐 https://{siteDomain}"
 			}
 		}
 	}
