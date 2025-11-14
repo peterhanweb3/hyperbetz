@@ -9,6 +9,7 @@ import { GetGameUrlRequestBody } from "@/types/games/gameUrl.types";
 import ApiService from "@/services/apiService";
 import LocalStorageService from "@/services/localStorageService";
 import { useT } from "@/hooks/useI18n";
+import { getAuthToken } from "@dynamic-labs/sdk-react-core";
 
 const GameLaunchLoader = ({ message }: { message: string }) => (
 	<div className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground">
@@ -42,7 +43,7 @@ export default function PlayGamePage() {
 
 			// 2. Get user data and auth token DIRECTLY and SYNCHRONOUSLY from localStorage.
 			const userData = storage.getUserData();
-			const authToken = storage.getAuthToken();
+			const authToken = getAuthToken();
 
 			// 3. Get game-specific data from the URL.
 			const game_id = String(params.game_id || "");

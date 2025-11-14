@@ -13,7 +13,7 @@
 // // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 // export default function AffiliatePage() {
-// 	const { user, isLoading } = useDynamicAuth();
+// 	const { primaryWallet, isLoading } = useDynamicAuth();
 
 // 	// Loading state placeholder (reuse primary skeleton theme but lighter here)
 // 	if (isLoading) {
@@ -25,7 +25,7 @@
 // 		);
 // 	}
 
-// 	if (!user) {
+// 	if (!primaryWallet) {
 // 		return (
 // 			<div className="container mx-auto py-16 max-w-3xl">
 // 				<div className="flex flex-col items-center justify-center text-center gap-6">
@@ -97,15 +97,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRefresh } from "@fortawesome/pro-light-svg-icons";
 import { ClientSEO } from "@/components/seo/client-seo";
 import { interpolateSiteName } from "@/lib/utils/site-config";
+import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 // import { ReferralsTab } from "@/components/features/affiliate/referral-tab";
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function AffiliatePage() {
 	const t = useT();
-	const { user, isLoading } = useDynamicAuth();
+	const { isLoading } = useDynamicAuth();
+	const { primaryWallet } = useDynamicContext();
 	const [isRefreshing, setIsRefreshing] = useState(false);
 	const [refreshCooldown, setRefreshCooldown] = useState(0);
 	const [activeTab, setActiveTab] = useState<string>(
-		user ? "dashboard" : "rates"
+		primaryWallet ? "dashboard" : "rates"
 	);
 	const cooldownTimerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -126,7 +128,9 @@ export default function AffiliatePage() {
 	const [indicatorStyle, setIndicatorStyle] = useState(
 		getTabStyle(activeTab)
 	);
-	const tabsRef = useRef<HTMLDivElement>(null); // Update sliding indicator position (only for fine-tuning, not initial display)
+	const tabsRef = useRef<HTMLDivElement>(null);
+
+	// Update sliding indicator position
 	useEffect(() => {
 		const updateIndicator = () => {
 			if (!tabsRef.current) return;
@@ -139,17 +143,20 @@ export default function AffiliatePage() {
 				const containerRect = tabsRef.current.getBoundingClientRect();
 				const buttonRect = activeButton.getBoundingClientRect();
 
+				// Calculate position relative to container
+				const left = buttonRect.left - containerRect.left;
+
 				setIndicatorStyle({
-					width: buttonRect.width - 8, // Account for padding
-					left: buttonRect.left - containerRect.left + 4, // Account for container padding
+					width: buttonRect.width,
+					left: left,
 				});
 			}
 		};
 
-		// Only update on tab change (not initial load since we have defaults)
-		if (activeTab) {
+		// Use requestAnimationFrame to ensure DOM is ready
+		requestAnimationFrame(() => {
 			updateIndicator();
-		}
+		});
 
 		window.addEventListener("resize", updateIndicator);
 
@@ -157,13 +164,39 @@ export default function AffiliatePage() {
 			window.removeEventListener("resize", updateIndicator);
 		};
 	}, [activeTab]); // Select needed actions from store to avoid getState in render
-	const fetchDownline = useAppStore(
-		(state) => state.affiliate.downline.fetchDownline
+	const refreshAll = useAppStore(
+		(state) => state.affiliate.manager.refreshAll
 	);
-	const fetchRates = useAppStore((state) => state.affiliate.rates.fetchRates);
-	const fetchReferrals = useAppStore(
-		(state) => state.affiliate.referrals.fetchReferrals
-	);
+
+	// Set default tab to dashboard when primaryWallet logs in
+	const prevUserRef = useRef(primaryWallet);
+	useEffect(() => {
+		prevUserRef.current = primaryWallet;
+		console.log("primaryWallet logged in, setting tab to dashboard...");
+		setActiveTab("dashboard");
+	}, [primaryWallet]);
+
+	// Refresh data when switching to dashboard tab
+	const prevActiveTabRef = useRef(activeTab);
+	useEffect(() => {
+		const prevTab = prevActiveTabRef.current;
+		prevActiveTabRef.current = activeTab;
+
+		// If switching TO dashboard tab (and primaryWallet is logged in), refresh downline data
+		if (
+			activeTab === "dashboard" &&
+			prevTab !== "dashboard" &&
+			primaryWallet
+		) {
+			console.log("Switching to dashboard tab, refreshing data...");
+			refreshAll(true).catch((error) => {
+				console.error(
+					"Failed to refresh on dashboard tab switch:",
+					error
+				);
+			});
+		}
+	}, [activeTab, primaryWallet, refreshAll]);
 
 	// Manual refresh function
 	const handleRefresh = async () => {
@@ -187,33 +220,12 @@ export default function AffiliatePage() {
 			});
 		}, 1000);
 
-		// Track success/failure for each refresh operation
-		const results = {
-			downline: false,
-			rates: false,
-			referrals: false,
-		};
-
-		// Refresh each data source independently
+		// Refresh all affiliate data
 		try {
-			await fetchDownline(true);
-			results.downline = true;
+			console.log("Refreshing all affiliate data...");
+			await refreshAll(true);
 		} catch (error) {
-			console.error("Failed to refresh downline data:", error);
-		}
-
-		try {
-			await fetchRates(true);
-			results.rates = true;
-		} catch (error) {
-			console.error("Failed to refresh rates data:", error);
-		}
-
-		try {
-			await fetchReferrals(true);
-			results.referrals = true;
-		} catch (error) {
-			console.error("Failed to refresh referrals data:", error);
+			console.error("Failed to refresh affiliate data:", error);
 		}
 
 		setIsRefreshing(false);
@@ -229,7 +241,7 @@ export default function AffiliatePage() {
 	}
 	const siteName = interpolateSiteName(`{siteName}`);
 
-	if (!user) {
+	if (!primaryWallet) {
 		return (
 			<div className="min-h-screen bg-background">
 				<ClientSEO
@@ -374,10 +386,12 @@ export default function AffiliatePage() {
 							>
 								{/* Sliding background indicator */}
 								<div
-									className="absolute h-[calc(100%-8px)] top-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
+									className="absolute h-[calc(100%-8px)] top-1 left-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
 									style={{
-										width: indicatorStyle.width,
-										transform: `translateX(${indicatorStyle.left}px)`,
+										width: `calc(${indicatorStyle.width}px - 8px)`,
+										transform: `translateX(${
+											indicatorStyle.left - 4
+										}px)`,
 									}}
 								/>
 

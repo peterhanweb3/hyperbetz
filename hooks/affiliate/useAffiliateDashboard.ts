@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useAppStore } from "@/store/store";
+import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import {
 	AffiliateRate,
 	GetDownlineResponse,
@@ -18,56 +19,37 @@ export interface UseAffiliateDashboardResult {
 }
 
 export default function useAffiliateDashboard(): UseAffiliateDashboardResult {
+	const { user } = useDynamicAuth();
+	const isAuthenticated = !!user;
+
+	// Get data from slices
 	const downlineSlice = useAppStore((state) => state.affiliate.downline);
 	const ratesSlice = useAppStore((state) => state.affiliate.rates);
 	const claimSlice = useAppStore((state) => state.affiliate.claim);
+	const managerSlice = useAppStore((state) => state.affiliate.manager);
 
-	// Select actions once to avoid reaching for getState
-	const initDownline = useAppStore(
-		(state) => state.affiliate.downline.initialize
+	// Select actions
+	const initializeManager = useAppStore(
+		(state) => state.affiliate.manager.initialize
 	);
-	const initRates = useAppStore((state) => state.affiliate.rates.initialize);
-	const fetchDownline = useAppStore(
-		(state) => state.affiliate.downline.fetchDownline
-	);
-	const fetchRates = useAppStore((state) => state.affiliate.rates.fetchRates);
+	const refreshAll = useAppStore((state) => state.affiliate.manager.refreshAll);
 
-	// Use proper useEffect for initialization to prevent multiple calls
+	// Initialize manager on mount or when auth status changes
 	useEffect(() => {
-		// Initialize both slices only once when component mounts
-		if (!downlineSlice.isInitialized) {
-			initDownline(false);
-		}
-
-		if (!ratesSlice.isInitialized) {
-			initRates(false);
-		}
-	}, [
-		downlineSlice.isInitialized,
-		ratesSlice.isInitialized,
-		initDownline,
-		initRates,
-	]);
+		// Initialize with current auth status
+		initializeManager(isAuthenticated);
+	}, [isAuthenticated, initializeManager]);
 
 	const downlineData = downlineSlice.data;
 	const affiliateRates = ratesSlice.data;
-	const isLoading =
-		downlineSlice.status === "loading" || ratesSlice.status === "loading";
+	const isLoading = managerSlice.status === "loading";
 	const isClaiming = claimSlice.isClaiming;
 	const handleClaim = claimSlice.claimBonus;
-	const refresh = async (force: boolean = true) => {
-		try {
-			await fetchDownline(force);
-		} catch (error) {
-			console.error("Failed to fetch downline:", error);
-		}
 
-		try {
-			await fetchRates(force);
-		} catch (error) {
-			console.error("Failed to fetch rates:", error);
-		}
+	const refresh = async (force: boolean = true) => {
+		await refreshAll(force);
 	};
+
 	const isClaimDisabled =
 		isClaiming ||
 		isLoading ||

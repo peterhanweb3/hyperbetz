@@ -35,7 +35,6 @@ export const useAffiliateReferrals = (): UseAffiliateReferralsResult => {
 	const {
 		setPage: setPageStore,
 		setSortOrder: setSortOrderStore,
-		initialize,
 		fetchReferrals,
 	} = useAppStore((state) => state.affiliate.referrals);
 
@@ -65,7 +64,6 @@ export const useAffiliateReferrals = (): UseAffiliateReferralsResult => {
 		isSyncingRef.current = true;
 		setPageStore(urlPage);
 		setSortOrderStore(sortOrder);
-		initialize(false);
 		isInitializedRef.current = true;
 
 		// Allow effects to run after a brief delay
@@ -125,9 +123,24 @@ export const useAffiliateReferrals = (): UseAffiliateReferralsResult => {
 	 * - Page changes
 	 * - Sort changes to/from API-based sorts (last_login, unclaimed_amount)
 	 * Do NOT fetch when switching between client-side nickname sorts
+	 * Do NOT fetch on initial mount (manager handles that)
 	 */
+	const prevPageRef = useRef(referralsSlice.currentPage);
+	const prevSortRef = useRef(referralsSlice.sortOrder);
+
 	useEffect(() => {
 		if (!isInitializedRef.current) return;
+
+		// Check if page or sort actually changed (not just initial mount)
+		const pageChanged = prevPageRef.current !== referralsSlice.currentPage;
+		const sortChanged = prevSortRef.current !== referralsSlice.sortOrder;
+
+		// Update refs
+		prevPageRef.current = referralsSlice.currentPage;
+		prevSortRef.current = referralsSlice.sortOrder;
+
+		// Only fetch if something actually changed
+		if (!pageChanged && !sortChanged) return;
 
 		const isClientSideSort =
 			referralsSlice.sortOrder === "nickname_asc" ||
@@ -136,7 +149,7 @@ export const useAffiliateReferrals = (): UseAffiliateReferralsResult => {
 		// Only fetch if it's not a client-side sort
 		// Client-side sorts will just re-sort existing data via getSortedData()
 		if (!isClientSideSort) {
-			fetchReferrals(true);
+			fetchReferrals(false); // Use false to respect cache/staleness
 		}
 	}, [referralsSlice.currentPage, referralsSlice.sortOrder, fetchReferrals]);
 

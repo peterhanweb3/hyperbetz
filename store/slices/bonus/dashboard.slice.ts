@@ -5,6 +5,7 @@ import {
 	GetMemberBonusSuccessResponse,
 	BonusRate,
 } from "@/types/bonus/bonus.types";
+import { getAuthToken } from "@dynamic-labs/sdk-react-core";
 
 export type BonusLoadingStatus = "idle" | "loading" | "success" | "error";
 
@@ -96,11 +97,10 @@ export const createBonusDashboardSlice: AppStateCreator<BonusDashboardSlice> = (
 			const storage = LocalStorageService.getInstance();
 			const api = ApiService.getInstance();
 			const user = storage.getUserData();
-			const token = storage.getAuthToken();
+			const token = getAuthToken();
 			const username = user?.username;
 
 			if (!username || !token) return;
-
 			const meta = storage.getItem<CachedMeta>(META_KEY) || {};
 			const now = Date.now();
 			const stale =

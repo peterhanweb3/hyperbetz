@@ -60,16 +60,20 @@ export default function BonusPage() {
 				const containerRect = tabsRef.current.getBoundingClientRect();
 				const buttonRect = activeButton.getBoundingClientRect();
 
+				// Calculate position relative to container
+				const left = buttonRect.left - containerRect.left;
+
 				setIndicatorStyle({
-					width: buttonRect.width - 8,
-					left: buttonRect.left - containerRect.left + 4,
+					width: buttonRect.width,
+					left: left,
 				});
 			}
 		};
 
-		if (activeTab) {
+		// Use requestAnimationFrame to ensure DOM is ready
+		requestAnimationFrame(() => {
 			updateIndicator();
-		}
+		});
 
 		window.addEventListener("resize", updateIndicator);
 
@@ -79,10 +83,7 @@ export default function BonusPage() {
 	}, [activeTab]);
 
 	// Select needed actions from store
-	const fetchDashboard = useAppStore(
-		(state) => state.bonus.dashboard.fetchData
-	);
-	const fetchRates = useAppStore((state) => state.bonus.rates.fetchRates);
+	const refreshAll = useAppStore((state) => state.bonus.manager.refreshAll);
 
 	// Get claims refresh function from hook
 	const { refresh: refreshClaims } = useBonusClaims();
@@ -96,10 +97,23 @@ export default function BonusPage() {
 		};
 	}, []);
 
+	// Set default tab to dashboard when user logs in
+	const prevUserRef = useRef(user);
+	useEffect(() => {
+		const prevUser = prevUserRef.current;
+		prevUserRef.current = user;
+
+		// If user just logged in, set tab to dashboard
+		if (user && !prevUser) {
+			console.log("User logged in, setting tab to dashboard...");
+			setActiveTab("dashboard");
+		}
+	}, [user]);
+
 	// Manual refresh function with cooldown
 	const handleRefresh = async () => {
 		// If already refreshing or in cooldown, do nothing
-		if (isRefreshing || refreshCooldown > 0) return;
+		if (isRefreshing) return;
 
 		setIsRefreshing(true);
 		setRefreshCooldown(10); // Start 10 second cooldown
@@ -118,31 +132,12 @@ export default function BonusPage() {
 			});
 		}, 1000);
 
-		const results = {
-			dashboard: false,
-			rates: false,
-			claims: false,
-		};
-
+		// Refresh all bonus data
 		try {
-			await fetchDashboard(true);
-			results.dashboard = true;
+			console.log("Refreshing all bonus data...");
+			await Promise.all([refreshAll(true), refreshClaims()]);
 		} catch (error) {
-			console.error("Failed to refresh dashboard data:", error);
-		}
-
-		try {
-			await fetchRates(true);
-			results.rates = true;
-		} catch (error) {
-			console.error("Failed to refresh rates data:", error);
-		}
-
-		try {
-			await refreshClaims();
-			results.claims = true;
-		} catch (error) {
-			console.error("Failed to refresh claims data:", error);
+			console.error("Failed to refresh bonus data:", error);
 		}
 
 		setIsRefreshing(false);
@@ -191,10 +186,12 @@ export default function BonusPage() {
 								>
 									{/* Sliding background indicator */}
 									<div
-										className="absolute h-[calc(100%-8px)] top-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
+										className="absolute h-[calc(100%-8px)] top-1 left-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
 										style={{
-											width: indicatorStyle.width,
-											transform: `translateX(${indicatorStyle.left}px)`,
+											width: `calc(${indicatorStyle.width}px - 8px)`,
+											transform: `translateX(${
+												indicatorStyle.left - 4
+											}px)`,
 										}}
 									/>
 
@@ -301,10 +298,12 @@ export default function BonusPage() {
 							>
 								{/* Sliding background indicator */}
 								<div
-									className="absolute h-[calc(100%-8px)] top-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
+									className="absolute h-[calc(100%-8px)] top-1 left-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
 									style={{
-										width: indicatorStyle.width,
-										transform: `translateX(${indicatorStyle.left}px)`,
+										width: `calc(${indicatorStyle.width}px - 8px)`,
+										transform: `translateX(${
+											indicatorStyle.left - 4
+										}px)`,
 									}}
 								/>
 

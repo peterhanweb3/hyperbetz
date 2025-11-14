@@ -1,5 +1,4 @@
 import { AppStateCreator } from "@/store/store";
-import ApiService from "@/services/apiService";
 import LocalStorageService from "@/services/localStorageService";
 import { BonusRate } from "@/types/bonus/bonus.types";
 
@@ -10,81 +9,32 @@ export interface BonusRatesState {
 	status: RatesLoadingStatus;
 	error: string | null;
 	lastFetched: number | null;
-	isInitialized: boolean;
 }
 
 export interface BonusRatesActions {
-	fetchRates: (force?: boolean) => Promise<void>;
 	setRatesData: (rates: BonusRate[]) => void;
 	clearRates: () => void;
 	initializeFromCache: () => void;
-	initialize: (force?: boolean) => void;
 }
 
 export type BonusRatesSlice = BonusRatesState & BonusRatesActions;
 
 const RATES_KEY = "bonus_rates_cache_v1";
 const RATES_META_KEY = "bonus_rates_meta_v1";
-const STALE_MS = 5 * 60 * 1000; // 5 minutes
-
-// Default static rates for non-logged-in users
-const DEFAULT_BONUS_RATES: BonusRate[] = [
-	{
-		level: "1",
-		min_to: "0",
-		max_to: "1000",
-		slot_percent: "0.10",
-		lc_percent: "0.15",
-		sport_percent: "0.00",
-		lottery_percent: null,
-	},
-	{
-		level: "2",
-		min_to: "1000",
-		max_to: "10000",
-		slot_percent: "0.15",
-		lc_percent: "0.20",
-		sport_percent: "0.00",
-		lottery_percent: null,
-	},
-	{
-		level: "3",
-		min_to: "10000",
-		max_to: "50000",
-		slot_percent: "0.25",
-		lc_percent: "0.30",
-		sport_percent: "0.00",
-		lottery_percent: null,
-	},
-	{
-		level: "4",
-		min_to: "50000",
-		max_to: "999999999",
-		slot_percent: "0.35",
-		lc_percent: "0.40",
-		sport_percent: "0.00",
-		lottery_percent: null,
-	},
-];
-
-// Global variable to prevent multiple simultaneous API calls
-let ratesFetchPromise: Promise<void> | null = null;
 
 interface RatesMeta {
 	lastFetched: number;
 }
 
 const initialState: BonusRatesState = {
-	data: DEFAULT_BONUS_RATES,
+	data: [],
 	status: "idle",
 	error: null,
 	lastFetched: null,
-	isInitialized: false,
 };
 
 export const createBonusRatesSlice: AppStateCreator<BonusRatesSlice> = (
-	set,
-	get
+	set
 ) => ({
 	...initialState,
 
@@ -100,92 +50,6 @@ export const createBonusRatesSlice: AppStateCreator<BonusRatesSlice> = (
 		const meta: RatesMeta = { lastFetched: Date.now() };
 		storage.setItem(RATES_KEY, rates);
 		storage.setItem(RATES_META_KEY, meta);
-	},
-
-	fetchRates: async (force = false) => {
-		// Return existing promise if already fetching (deduplication)
-		if (ratesFetchPromise && !force) {
-			return ratesFetchPromise;
-		}
-
-		const slice = get().bonus.rates;
-		if (slice.status === "loading" && !force) return;
-
-		const storage = LocalStorageService.getInstance();
-		const api = ApiService.getInstance();
-		const token = storage.getAuthToken();
-
-		// If no token, ensure default rates are set and return early
-		if (!token) {
-			// Make sure we have default rates loaded
-			if (slice.data.length === 0) {
-				set((state) => {
-					state.bonus.rates.data = DEFAULT_BONUS_RATES;
-					state.bonus.rates.status = "success";
-				});
-			}
-			return;
-		}
-
-		// Check if data is stale
-		const meta = storage.getItem<RatesMeta>(RATES_META_KEY);
-		const now = Date.now();
-		const isStale =
-			force || !meta?.lastFetched || now - meta.lastFetched > STALE_MS;
-
-		if (!isStale && slice.data.length > 0) return; // Use existing data
-
-		// Create and store the fetch promise
-		ratesFetchPromise = (async () => {
-			set((state) => {
-				state.bonus.rates.status = "loading";
-				state.bonus.rates.error = null;
-			});
-
-			try {
-				const response = await api.getBonusRate(token);
-
-				if (!response.error && response.error === false) {
-					get().bonus.rates.setRatesData(response.data);
-				} else {
-					throw new Error("Failed to fetch bonus rates");
-				}
-			} catch (e) {
-				const msg =
-					e instanceof Error
-						? e.message
-						: "Failed to load bonus rates";
-				set((state) => {
-					state.bonus.rates.status = "error";
-					state.bonus.rates.error = msg;
-				});
-			} finally {
-				// Clear the promise when done
-				ratesFetchPromise = null;
-			}
-		})();
-
-		return ratesFetchPromise;
-	},
-
-	initialize: (force = false) => {
-		const slice = get().bonus.rates;
-
-		// Prevent multiple initializations
-		if (slice.isInitialized && !force) return;
-
-		set((state) => {
-			state.bonus.rates.isInitialized = true;
-		});
-
-		// Load from cache first
-		get().bonus.rates.initializeFromCache();
-
-		// Only fetch if we don't have cached data or if it's stale
-		const hasValidCache = slice.data.length > 0;
-		if (!hasValidCache || force) {
-			get().bonus.rates.fetchRates(force);
-		}
 	},
 
 	initializeFromCache: () => {
@@ -212,14 +76,10 @@ export const createBonusRatesSlice: AppStateCreator<BonusRatesSlice> = (
 			state.bonus.rates.status = initialState.status;
 			state.bonus.rates.error = initialState.error;
 			state.bonus.rates.lastFetched = initialState.lastFetched;
-			state.bonus.rates.isInitialized = initialState.isInitialized;
 		});
 
 		const storage = LocalStorageService.getInstance();
 		storage.setItem(RATES_KEY, null);
 		storage.setItem(RATES_META_KEY, null);
-
-		// Also clear the fetch promise
-		ratesFetchPromise = null;
 	},
 });

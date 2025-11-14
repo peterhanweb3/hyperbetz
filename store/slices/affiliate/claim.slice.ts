@@ -2,6 +2,7 @@ import { AppStateCreator } from "@/store/store";
 import ApiService from "@/services/apiService";
 import LocalStorageService from "@/services/localStorageService";
 import { toast } from "sonner";
+import { getAuthToken } from "@dynamic-labs/sdk-react-core";
 
 export interface ClaimState {
 	isClaiming: boolean;
@@ -29,7 +30,7 @@ export const createClaimSlice: AppStateCreator<ClaimSlice> = (set, get) => ({
 		const storage = LocalStorageService.getInstance();
 		const api = ApiService.getInstance();
 		const user = storage.getUserData();
-		const token = storage.getAuthToken();
+		const token = getAuthToken();
 		const username = user?.username;
 
 		const claimState = get().affiliate.claim;
@@ -68,8 +69,8 @@ export const createClaimSlice: AppStateCreator<ClaimSlice> = (set, get) => ({
 				`Successfully claimed ₹${response.amount_claimed.toFixed(2)}!`
 			);
 
-			// Refresh downline data to reflect new unclaimed amount
-			await get().affiliate.downline.fetchDownline(true);
+			// Refresh affiliate data to reflect new unclaimed amount
+			await get().affiliate.manager.refreshAll(true);
 		} catch (e) {
 			const msg = e instanceof Error ? e.message : "Claim failed";
 			set((state) => {

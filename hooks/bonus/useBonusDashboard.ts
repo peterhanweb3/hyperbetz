@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useAppStore } from "@/store/store";
+import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import {
 	GetMemberBonusSuccessResponse,
 	BonusRate,
@@ -19,51 +20,38 @@ export interface UseBonusDashboardResult {
 }
 
 export default function useBonusDashboard(): UseBonusDashboardResult {
+	const { user } = useDynamicAuth();
+	const isAuthenticated = !!user;
+
+	// Get data from slices
 	const dashboardSlice = useAppStore((state) => state.bonus.dashboard);
 	const ratesSlice = useAppStore((state) => state.bonus.rates);
 	const claimSlice = useAppStore((state) => state.bonus.claim);
+	const managerSlice = useAppStore((state) => state.bonus.manager);
 
-	// Select actions once to avoid reaching for getState
-	const initDashboard = useAppStore(
-		(state) => state.bonus.dashboard.initialize
+	// Select actions
+	const initializeManager = useAppStore(
+		(state) => state.bonus.manager.initialize
 	);
-	const initRates = useAppStore((state) => state.bonus.rates.initialize);
-	const fetchDashboard = useAppStore(
-		(state) => state.bonus.dashboard.fetchData
-	);
-	const fetchRates = useAppStore((state) => state.bonus.rates.fetchRates);
+	const refreshAll = useAppStore((state) => state.bonus.manager.refreshAll);
 
-	// Use proper useEffect for initialization to prevent multiple calls
+	// Initialize manager on mount or when auth status changes
 	useEffect(() => {
-		// Initialize both slices only once when component mounts
-		if (!dashboardSlice.isInitialized) {
-			initDashboard(false);
-		}
-
-		if (!ratesSlice.isInitialized) {
-			initRates(false);
-		}
-	}, [
-		dashboardSlice.isInitialized,
-		ratesSlice.isInitialized,
-		initDashboard,
-		initRates,
-	]);
+		// Initialize with current auth status
+		initializeManager(isAuthenticated);
+	}, [isAuthenticated, initializeManager]);
 
 	const bonusData = dashboardSlice.bonusData;
 	const bonusRates = ratesSlice.data;
-	const isLoading =
-		dashboardSlice.status === "loading" || ratesSlice.status === "loading";
+	const isLoading = managerSlice.status === "loading";
 	const isClaiming = claimSlice.isClaiming;
 	const handleClaim = claimSlice.claimBonus;
 	const lastClaimAmount = claimSlice.lastClaimAmount;
+
 	const refresh = async (force: boolean = true) => {
-		try {
-			await Promise.all([fetchDashboard(force), fetchRates(force)]);
-		} catch (error) {
-			console.error("Failed to refresh bonus data:", error);
-		}
+		await refreshAll(force);
 	};
+
 	const isClaimDisabled =
 		isClaiming ||
 		isLoading ||

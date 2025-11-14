@@ -2,6 +2,7 @@ import { AppStateCreator } from "@/store/store";
 import ApiService from "@/services/apiService";
 import LocalStorageService from "@/services/localStorageService";
 import { toast } from "sonner";
+import { getAuthToken } from "@dynamic-labs/sdk-react-core";
 
 export interface BonusClaimState {
 	isClaiming: boolean;
@@ -32,7 +33,7 @@ export const createBonusClaimSlice: AppStateCreator<BonusClaimSlice> = (
 		const storage = LocalStorageService.getInstance();
 		const api = ApiService.getInstance();
 		const user = storage.getUserData();
-		const token = storage.getAuthToken();
+		const token = getAuthToken();
 		const username = user?.username;
 
 		const claimState = get().bonus.claim;
@@ -66,7 +67,7 @@ export const createBonusClaimSlice: AppStateCreator<BonusClaimSlice> = (
 			);
 
 			// Refresh bonus data to reflect new available amount
-			await get().bonus.dashboard.fetchData(true);
+			await get().bonus.manager.refreshAll(true);
 
 			// Return the claimed amount so caller can use it
 			return response.amount_claimed;

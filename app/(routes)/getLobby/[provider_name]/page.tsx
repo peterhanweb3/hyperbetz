@@ -8,6 +8,7 @@ import ApiService from "@/services/apiService";
 import LocalStorageService from "@/services/localStorageService";
 import { GetLobbyRequestBody } from "@/types/games/getLobby.types";
 import { useT } from "@/hooks/useI18n";
+import { getAuthToken } from "@dynamic-labs/sdk-react-core";
 
 type LoaderProps = { title: string; subtitle?: string };
 const LobbyLaunchLoader = ({ title, subtitle }: LoaderProps) => (
@@ -37,7 +38,7 @@ export default function GetLobbyPage() {
 		const launchLobby = async () => {
 			const storage = LocalStorageService.getInstance();
 			const userData = storage.getUserData();
-			const authToken = storage.getAuthToken();
+			const authToken = getAuthToken();
 
 			if (!authToken || !userData?.username || !provider_name) {
 				console.error("Missing authToken, userData, or provider_name");

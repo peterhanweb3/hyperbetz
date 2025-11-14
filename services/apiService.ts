@@ -51,7 +51,6 @@ import {
 	CheckTransactionStatusResponse,
 } from "@/types/walletProvider/transaction-service.types";
 import {
-	GetAffiliateRateRequest,
 	GetAffiliateBonusRequest,
 	GetAffiliateBonusResponse,
 	GetAffiliateBonusByDownlineRequest,
@@ -166,7 +165,10 @@ class ApiService {
 	): Promise<ApiResponse<UserInfoApiResponse>> {
 		const data = {
 			api_key: this.apiKey,
-			network: chainId || localStorage.getItem("app_chainId") || this.networkId,
+			network:
+				chainId ||
+				localStorage.getItem("app_chainId") ||
+				this.networkId,
 			jwt_type: this.jwtType,
 		};
 
@@ -389,20 +391,15 @@ class ApiService {
 	/**
 	 * Get affiliate rate levels for a user or API key.
 	 */
-	async getAffiliateRate(
-		body: Exclude<GetAffiliateRateRequest, "api_key" | "jwt_type">,
-		jwtToken?: string
-	): Promise<ApiResponse<AffiliateRate[]>> {
+	async getAffiliateRate(): Promise<ApiResponse<AffiliateRate[]>> {
 		const data = {
-			...body,
 			api_key: this.apiKey,
 			jwt_type: this.jwtType,
 		};
 		return this.makeRequest<AffiliateRate[]>(
 			"/api/getAffiliateRate",
 			"POST",
-			data,
-			jwtToken
+			data
 		);
 	}
 	/**

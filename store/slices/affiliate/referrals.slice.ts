@@ -6,6 +6,7 @@ import {
 	DownlineOrder,
 	DownlineEntry,
 } from "@/types/affiliate/affiliate.types";
+import { getAuthToken } from "@dynamic-labs/sdk-react-core";
 
 export type ReferralsLoadingStatus = "idle" | "loading" | "success" | "error";
 
@@ -20,7 +21,6 @@ export interface ReferralsState {
 	status: ReferralsLoadingStatus;
 	error: string | null;
 	lastFetched: number | null;
-	isInitialized: boolean;
 	// Pagination and sorting state
 	currentPage: number;
 	sortOrder: ReferralsSortOrder;
@@ -32,7 +32,6 @@ export interface ReferralsActions {
 	setReferralsData: (data: GetDownlineResponse) => void;
 	clearReferrals: () => void;
 	initializeFromCache: () => void;
-	initialize: (force?: boolean) => void;
 	// Pagination and sorting actions
 	setPage: (page: number) => void;
 	setSortOrder: (order: ReferralsSortOrder) => void;
@@ -60,7 +59,6 @@ const initialState: ReferralsState = {
 	status: "idle",
 	error: null,
 	lastFetched: null,
-	isInitialized: false,
 	currentPage: 1,
 	sortOrder: "last_login",
 	recordsPerPage: 10,
@@ -103,7 +101,7 @@ export const createReferralsSlice: AppStateCreator<ReferralsSlice> = (
 		const storage = LocalStorageService.getInstance();
 		const api = ApiService.getInstance();
 		const user = storage.getUserData();
-		const token = storage.getAuthToken();
+		const token = getAuthToken();
 		const username = user?.username;
 
 		if (!username || !token) return;
@@ -212,26 +210,6 @@ export const createReferralsSlice: AppStateCreator<ReferralsSlice> = (
 		return slice.data.data as DownlineEntry[];
 	},
 
-	initialize: (force = false) => {
-		const slice = get().affiliate.referrals;
-
-		// Prevent multiple initializations
-		if (slice.isInitialized && !force) return;
-
-		set((state) => {
-			state.affiliate.referrals.isInitialized = true;
-		});
-
-		// Load from cache first
-		get().affiliate.referrals.initializeFromCache();
-
-		// Only fetch if we don't have cached data or if it's stale
-		const hasValidCache = slice.data !== null;
-		if (!hasValidCache || force) {
-			get().affiliate.referrals.fetchReferrals(force);
-		}
-	},
-
 	initializeFromCache: () => {
 		const storage = LocalStorageService.getInstance();
 		try {
@@ -259,8 +237,6 @@ export const createReferralsSlice: AppStateCreator<ReferralsSlice> = (
 			state.affiliate.referrals.status = initialState.status;
 			state.affiliate.referrals.error = initialState.error;
 			state.affiliate.referrals.lastFetched = initialState.lastFetched;
-			state.affiliate.referrals.isInitialized =
-				initialState.isInitialized;
 			state.affiliate.referrals.currentPage = initialState.currentPage;
 			state.affiliate.referrals.sortOrder = initialState.sortOrder;
 			state.affiliate.referrals.recordsPerPage =

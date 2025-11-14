@@ -7,8 +7,13 @@ import {
 	AffiliateDashboardSlice,
 	createAffiliateDashboardSlice,
 } from "./dashboard.slice";
+import {
+	AffiliateManagerSlice,
+	createAffiliateManagerSlice,
+} from "./manager.slice";
 
 export interface AffiliateSliceBranch {
+	manager: AffiliateManagerSlice;
 	downline: DownlineSlice;
 	rates: RatesSlice;
 	claim: ClaimSlice;
@@ -20,6 +25,7 @@ export interface AffiliateSliceBranch {
 export const createAffiliateSlice: AppStateCreator<AffiliateSliceBranch> = (
 	...args
 ) => ({
+	manager: createAffiliateManagerSlice(...args),
 	downline: createDownlineSlice(...args),
 	rates: createRatesSlice(...args),
 	claim: createClaimSlice(...args),
