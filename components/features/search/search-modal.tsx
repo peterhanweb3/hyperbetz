@@ -389,7 +389,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
 
 	return (
 		<Dialog open={open} onOpenChange={onOpenChange}>
-			<DialogTitle>SearchBox</DialogTitle>
+			<DialogTitle className="hidden">SearchBox</DialogTitle>
 			<DialogContent className="min-w-[90dvw] h-[90dvh] p-0 scrollbar-thin border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 rounded-2xl overflow-hidden flex flex-col">
 				{/* Header with gradient */}
 				<div className="relative p-5 border-b bg-gradient-to-r from-primary/10 via-accent/10 to-transparent flex-shrink-0">
