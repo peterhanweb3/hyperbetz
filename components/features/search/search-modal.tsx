@@ -23,6 +23,7 @@ import {
 } from "@fortawesome/pro-light-svg-icons";
 import { useTranslations } from "@/lib/locale-provider";
 import { selectAllProviders } from "@/store/selectors/query/query.selectors";
+import { DialogTitle } from "@radix-ui/react-dialog";
 
 // Types for search suggestions
 type SearchSuggestion = {
@@ -388,6 +389,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
 
 	return (
 		<Dialog open={open} onOpenChange={onOpenChange}>
+			<DialogTitle>SearchBox</DialogTitle>
 			<DialogContent className="min-w-[90dvw] h-[90dvh] p-0 scrollbar-thin border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 rounded-2xl overflow-hidden flex flex-col">
 				{/* Header with gradient */}
 				<div className="relative p-5 border-b bg-gradient-to-r from-primary/10 via-accent/10 to-transparent flex-shrink-0">
@@ -620,6 +622,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
 									Icon={faBuilding}
 									firstRowFilter="live casino"
 									secondRowFilter="slot"
+									isSingleRow={selectedProviders.length < 6}
 									providers={providersForCarousel}
 									onViewAllClick={() => onOpenChange(false)}
 								/>

@@ -148,6 +148,7 @@ interface ProviderCarouselSectionProps {
 	maxProviders?: number;
 	Icon: IconDefinition;
 	firstRowFilter: string;
+	isSingleRow?: boolean;
 	secondRowFilter: string;
 	providers?: Array<{ name: string; count: number; icon_url?: string }>; // Optional override for providers
 	onViewAllClick?: () => void;
@@ -160,6 +161,7 @@ export const ProviderCarouselSection = memo(function ProviderCarouselSection({
 	Icon = faBuildings,
 	firstRowFilter,
 	secondRowFilter,
+	isSingleRow = false,
 	providers: overrideProviders,
 	onViewAllClick,
 }: ProviderCarouselSectionProps) {
@@ -374,42 +376,56 @@ export const ProviderCarouselSection = memo(function ProviderCarouselSection({
 				</div>
 
 				{/* DUAL ROW CONTAINER - Infinite scroll */}
-				<div className="space-y-3 sm:space-y-4">
-					{/* FIRST ROW - Casino Providers */}
-					<div className="infinite-scroll-container">
-						<div className="infinite-scroll-track scroll-right-to-left">
-							{displayFirstRow.map((provider, index) => (
-								<div
-									key={`row1-${provider.name}-${index}`}
-									className="provider-item"
-								>
-									<ProviderGridCard
-										name={provider.name}
-										gameCount={provider.count}
-										iconUrl={provider.icon_url}
-									/>
-								</div>
-							))}
+				{isSingleRow && overrideProviders ? (
+					<div className="flex gap-2 md:gap-4 w-full">
+						{overrideProviders.map((provider, index) => (
+							<ProviderGridCard
+								// className="provider-item"
+								name={provider.name}
+								key={`row-${provider.name}-${index}`}
+								gameCount={provider.count}
+								iconUrl={provider.icon_url}
+							/>
+						))}
+					</div>
+				) : (
+					<div className="space-y-3 sm:space-y-4">
+						{/* FIRST ROW - Casino Providers */}
+						<div className="infinite-scroll-container">
+							<div className="infinite-scroll-track scroll-right-to-left">
+								{displayFirstRow.map((provider, index) => (
+									<div
+										key={`row1-${provider.name}-${index}`}
+										className="provider-item"
+									>
+										<ProviderGridCard
+											name={provider.name}
+											gameCount={provider.count}
+											iconUrl={provider.icon_url}
+										/>
+									</div>
+								))}
+							</div>
+						</div>
+						{/* SECOND ROW - Slot Providers */}
+						<div className="infinite-scroll-container">
+							<div className="infinite-scroll-track scroll-left-to-right">
+								{displaySecondRow.map((provider, index) => (
+									<div
+										key={`row2-${provider.name}-${index}`}
+										className="provider-item"
+									>
+										<ProviderGridCard
+											name={provider.name}
+											gameCount={provider.count}
+											iconUrl={provider.icon_url}
+										/>
+									</div>
+								))}
+							</div>
 						</div>
 					</div>
-					{/* SECOND ROW - Slot Providers */}
-					<div className="infinite-scroll-container">
-						<div className="infinite-scroll-track scroll-left-to-right">
-							{displaySecondRow.map((provider, index) => (
-								<div
-									key={`row2-${provider.name}-${index}`}
-									className="provider-item"
-								>
-									<ProviderGridCard
-										name={provider.name}
-										gameCount={provider.count}
-										iconUrl={provider.icon_url}
-									/>
-								</div>
-							))}
-						</div>
-					</div>
-				</div>
+				)}
 			</div>
 		</>
 	);

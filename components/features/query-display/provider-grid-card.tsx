@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "@/lib/locale-provider";
+import { cn } from "@/lib/utils";
 
 interface ProviderCardProps {
+	className?: string;
 	name: string;
 	gameCount?: number;
 	iconUrl?: string;
@@ -12,16 +14,24 @@ export const ProviderGridCard = ({
 	name,
 	gameCount = 0,
 	iconUrl,
+	className,
 }: ProviderCardProps) => {
 	const tGames = useTranslations("games");
 	const tProviders = useTranslations("providers");
 
 	// Convert provider name to SEO-friendly URL format (lowercase with hyphens)
-	const seoProviderName = name.toLowerCase().trim().replace(/\s+/g, '-').replace(/\./g, '');
+	const seoProviderName = name
+		.toLowerCase()
+		.trim()
+		.replace(/\s+/g, "-")
+		.replace(/\./g, "");
 	const providerUrl = `/games/${seoProviderName}`;
 
 	return (
-		<Link href={providerUrl} className="block group h-full">
+		<Link
+			href={providerUrl}
+			className={cn("block group h-full", className)}
+		>
 			<div className="relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 h-full min-h-[200px] flex flex-col group-hover:scale-[1.02] group-hover:border-primary/30 overflow-hidden">
 				{/* Subtle gradient overlay */}
 				<div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/8 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
