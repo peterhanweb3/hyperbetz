@@ -1014,7 +1014,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "फॉर्म रीसेट करें",
-			"networkNotSupported": "निकासी केवल Arbitrum, Polygon और BNB पर समर्थित है",
+			"networkNotSupported": "निकासी केवल Arbitrum, Polygon, Optimism और BNB पर समर्थित है",
 			"youWithdraw": "आप निकालते हैं",
 			"loading": "लोड हो रहा है...",
 			"amount": "राशि",

@@ -1014,7 +1014,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "Réinitialiser le Formulaire",
-			"networkNotSupported": "Les retraits ne sont pris en charge que sur Arbitrum, Polygon et BNB",
+			"networkNotSupported": "Les retraits ne sont pris en charge que sur Arbitrum, Polygon, Optimism et BNB",
 			"youWithdraw": "Vous Retirez",
 			"loading": "Chargement...",
 			"amount": "Montant",

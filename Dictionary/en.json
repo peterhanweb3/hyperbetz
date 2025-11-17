@@ -1014,7 +1014,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "Reset Form",
-			"networkNotSupported": "Withdrawals are only supported on Arbitrum, Polygon, and BNB",
+			"networkNotSupported": "Withdrawals are only supported on Arbitrum, Polygon, Optimism and BNB",
 			"youWithdraw": "You Withdraw",
 			"loading": "Loading...",
 			"amount": "Amount",

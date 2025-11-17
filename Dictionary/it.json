@@ -1014,7 +1014,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "Reimposta Modulo",
-			"networkNotSupported": "I prelievi sono supportati solo su Arbitrum, Polygon e BNB",
+			"networkNotSupported": "I prelievi sono supportati solo su Arbitrum, Polygon, Optimism e BNB",
 			"youWithdraw": "Tu Prelevi",
 			"loading": "Caricamento in corso...",
 			"amount": "Importo",

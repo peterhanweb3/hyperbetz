@@ -799,7 +799,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "Сбросить форму",
-			"networkNotSupported": "Выводы поддерживаются только в сетях Arbitrum, Polygon и BNB",
+			"networkNotSupported": "Вывод средств поддерживается только в сетях Arbitrum, Polygon, Optimism и BNB",
 			"youWithdraw": "Вы выводите",
 			"loading": "Загрузка...",
 			"amount": "Сумма",

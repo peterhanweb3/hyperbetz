@@ -1014,7 +1014,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "بازنشانی فرم",
-			"networkNotSupported": "برداشت‌ها فقط در Arbitrum، Polygon و BNB پشتیبانی می‌شوند",
+			"networkNotSupported": "برداشت‌ها فقط در Arbitrum، Polygon، Optimism و BNB پشتیبانی می‌شوند",
 			"youWithdraw": "شما برداشت می‌کنید",
 			"loading": "در حال بارگذاری...",
 			"amount": "مبلغ",

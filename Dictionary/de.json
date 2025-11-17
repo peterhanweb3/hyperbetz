@@ -1014,7 +1014,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "Formular zurücksetzen",
-			"networkNotSupported": "Auszahlungen werden nur auf Arbitrum, Polygon und BNB unterstützt",
+			"networkNotSupported": "Auszahlungen werden nur auf Arbitrum, Polygon, Optimism und BNB unterstützt",
 			"youWithdraw": "Sie zahlen aus",
 			"loading": "Wird geladen...",
 			"amount": "Betrag",

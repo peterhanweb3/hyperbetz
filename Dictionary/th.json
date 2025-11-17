@@ -1014,7 +1014,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "รีเซ็ตฟอร์ม",
-			"networkNotSupported": "การถอนเงินรองรับเฉพาะบน Arbitrum, Polygon และ BNB",
+			"networkNotSupported": "การถอนเงินรองรับเฉพาะบน Arbitrum, Polygon, Optimism และ BNB เท่านั้น",
 			"youWithdraw": "คุณถอนเงิน",
 			"loading": "กำลังโหลด...",
 			"amount": "จำนวนเงิน",

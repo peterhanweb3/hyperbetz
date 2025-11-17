@@ -1014,7 +1014,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "Restablecer Formulario",
-			"networkNotSupported": "Los retiros solo son compatibles con Arbitrum, Polygon y BNB",
+			"networkNotSupported": "Los retiros solo son compatibles con Arbitrum, Polygon, Optimism y BNB",
 			"youWithdraw": "Usted Retira",
 			"loading": "Cargando...",
 			"amount": "Monto",

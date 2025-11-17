@@ -1014,7 +1014,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "إعادة تعيين النموذج",
-			"networkNotSupported": "عمليات السحب مدعومة فقط على Arbitrum و Polygon و BNB",
+			"networkNotSupported": "عمليات السحب مدعومة فقط على Arbitrum و Polygon و Optimism و BNB",
 			"youWithdraw": "أنت تسحب",
 			"loading": "جار التحميل...",
 			"amount": "المبلغ",

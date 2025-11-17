@@ -799,7 +799,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "Formu Sıfırla",
-			"networkNotSupported": "Çekimler sadece Arbitrum, Polygon ve BNB ağlarında desteklenmektedir",
+			"networkNotSupported": "Para çekme işlemleri yalnızca Arbitrum, Polygon, Optimism ve BNB'de desteklenmektedir",
 			"youWithdraw": "Çektiğin",
 			"loading": "Yükleniyor...",
 			"amount": "Miktar",

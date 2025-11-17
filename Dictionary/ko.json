@@ -799,7 +799,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "양식 초기화",
-			"networkNotSupported": "출금은 Arbitrum, Polygon, BNB에서만 지원됩니다",
+			"networkNotSupported": "출금은 Arbitrum, Polygon, Optimism, BNB에서만 지원됩니다",
 			"youWithdraw": "출금",
 			"loading": "로딩 중...",
 			"amount": "금액",

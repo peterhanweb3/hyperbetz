@@ -10,7 +10,7 @@ import {
 /**
  * An array of chain IDs where withdrawal functionality is supported.
  */
-export const SUPPORTED_WITHDRAWAL_NETWORKS: number[] = [42161, 137, 56];
+export const SUPPORTED_WITHDRAWAL_NETWORKS: number[] = [42161, 137, 56,10];
 
 /**
  * A specialized, self-contained hook that actively listens for network changes

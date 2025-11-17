@@ -1,6 +1,6 @@
 {
 	"common": {
-		"loading": "A carregar...",
+		"loading": "Carregando...",
 		"save": "Guardar",
 		"cancel": "Cancelar",
 		"confirm": "Confirmar",
@@ -799,7 +799,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "Repor Formulário",
-			"networkNotSupported": "Os levantamentos só são suportados em Arbitrum, Polygon e BNB",
+			"networkNotSupported": "Saques são suportados apenas em Arbitrum, Polygon, Optimism e BNB",
 			"youWithdraw": "Você Levanta",
 			"loading": "A carregar...",
 			"amount": "Montante",

@@ -216,7 +216,7 @@ export const SetNicknameModal = () => {
 									}
 									disabled={isRegistering}
 									className="h-14 text-lg font-medium bg-background/30 border-white/20 placeholder:text-muted-foreground focus:border-primary/50 focus:ring-2 focus:ring-primary/20 rounded-xl"
-									maxLength={20}
+									maxLength={14}
 								/>
 								{/* Input accent border
 								<div className="absolute inset-0 rounded-xl border border-gradient-to-r from-primary/20 via-transparent to-primary/20 pointer-events-none" /> */}

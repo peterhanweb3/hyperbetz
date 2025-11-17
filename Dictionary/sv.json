@@ -799,7 +799,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "Återställ formulär",
-			"networkNotSupported": "Uttag stöds endast på Arbitrum, Polygon och BNB",
+			"networkNotSupported": "Uttag stöds endast på Arbitrum, Polygon, Optimism och BNB",
 			"youWithdraw": "Du tar ut",
 			"loading": "Laddar...",
 			"amount": "Belopp",

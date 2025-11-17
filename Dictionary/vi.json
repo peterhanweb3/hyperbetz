@@ -799,7 +799,7 @@
 		},
 		"withdrawPanel": {
 			"resetForm": "Đặt lại biểu mẫu",
-			"networkNotSupported": "Việc rút tiền chỉ được hỗ trợ trên Arbitrum, Polygon và BNB",
+			"networkNotSupported": "Việc rút tiền chỉ được hỗ trợ trên Arbitrum, Polygon, Optimism và BNB",
 			"youWithdraw": "Bạn rút",
 			"loading": "Đang tải...",
 			"amount": "Số tiền",
