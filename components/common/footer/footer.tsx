@@ -201,22 +201,22 @@ export function Footer() {
 	const socialLinks = [
 		{
 			icon: Twitter,
-			href: "https://twitter.com/hyperbetz",
+			href: "https://x.com/HyperBetzz",
 			label: "Twitter",
 		},
 		{
 			icon: Facebook,
-			href: "https://facebook.com/hyperbetz",
+			href: "https://www.youtube.com/@HyperBetz",
 			label: "Facebook",
 		},
 		{
 			icon: Instagram,
-			href: "https://instagram.com/hyperbetz",
+			href: "https://www.instagram.com/hyperbetz.games/",
 			label: "Instagram",
 		},
 		{
 			icon: Youtube,
-			href: "https://youtube.com/@hyperbetz",
+			href: "https://www.youtube.com/@HyperBetz",
 			label: "YouTube",
 		},
 	];
@@ -230,7 +230,6 @@ export function Footer() {
 			{/* Main Footer */}
 			<footer className="border-t border-border bg-card mb-10 md:mb-0">
 				<div className="container mx-auto consistent-padding-x py-12">
-
 					{primaryWallet === null && (
 						<>
 							{/* Main Footer Content */}
@@ -241,18 +240,20 @@ export function Footer() {
 											{section.title}
 										</h3>
 										<ul className="space-y-2.5">
-											{section.links.map((link, linkIndex) => {
-												return (
-													<li key={linkIndex}>
-														<Link
-															href={link.href}
-															className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center gap-2"
-														>
-															{link.label}
-														</Link>
-													</li>
-												);
-											})}
+											{section.links.map(
+												(link, linkIndex) => {
+													return (
+														<li key={linkIndex}>
+															<Link
+																href={link.href}
+																className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center gap-2"
+															>
+																{link.label}
+															</Link>
+														</li>
+													);
+												}
+											)}
 										</ul>
 									</div>
 								))}
@@ -331,7 +332,6 @@ export function Footer() {
 							<div className="border-t border-border my-8" />
 						</>
 					)}
-
 
 					{/* Bottom Footer */}
 					<div className="flex flex-col md:flex-row justify-between items-center lg:items-start gap-6">
