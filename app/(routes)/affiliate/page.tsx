@@ -107,7 +107,7 @@ export default function AffiliatePage() {
 	const [isRefreshing, setIsRefreshing] = useState(false);
 	const [refreshCooldown, setRefreshCooldown] = useState(0);
 	const [activeTab, setActiveTab] = useState<string>(
-		primaryWallet ? "dashboard" : "rates"
+		primaryWallet !== null ? "dashboard" : "rates"
 	);
 	const cooldownTimerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -168,27 +168,24 @@ export default function AffiliatePage() {
 		(state) => state.affiliate.manager.refreshAll
 	);
 
-	// Set default tab to dashboard when primaryWallet logs in
 	const prevUserRef = useRef(primaryWallet);
 	useEffect(() => {
 		prevUserRef.current = primaryWallet;
-		console.log("primaryWallet logged in, setting tab to dashboard...");
-		setActiveTab("dashboard");
+		if (primaryWallet) {
+			setActiveTab("dashboard");
+		}
 	}, [primaryWallet]);
 
-	// Refresh data when switching to dashboard tab
 	const prevActiveTabRef = useRef(activeTab);
 	useEffect(() => {
 		const prevTab = prevActiveTabRef.current;
 		prevActiveTabRef.current = activeTab;
 
-		// If switching TO dashboard tab (and primaryWallet is logged in), refresh downline data
 		if (
 			activeTab === "dashboard" &&
 			prevTab !== "dashboard" &&
 			primaryWallet
 		) {
-			console.log("Switching to dashboard tab, refreshing data...");
 			refreshAll(true).catch((error) => {
 				console.error(
 					"Failed to refresh on dashboard tab switch:",
@@ -198,9 +195,7 @@ export default function AffiliatePage() {
 		}
 	}, [activeTab, primaryWallet, refreshAll]);
 
-	// Manual refresh function
 	const handleRefresh = async () => {
-		// If already refreshing or in cooldown, do nothing
 		if (isRefreshing || refreshCooldown > 0) return;
 
 		setIsRefreshing(true);
@@ -288,11 +283,10 @@ export default function AffiliatePage() {
 											onClick={() =>
 												setActiveTab("rates")
 											}
-											className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-												activeTab === "rates"
-													? "text-foreground"
-													: "text-muted-foreground hover:text-foreground"
-											}`}
+											className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${activeTab === "rates"
+												? "text-foreground"
+												: "text-muted-foreground hover:text-foreground"
+												}`}
 										>
 											{t("affiliate.tabs.rates")}
 										</button>
@@ -301,11 +295,10 @@ export default function AffiliatePage() {
 											onClick={() =>
 												setActiveTab("calculator")
 											}
-											className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-												activeTab === "calculator"
-													? "text-foreground"
-													: "text-muted-foreground hover:text-foreground"
-											}`}
+											className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${activeTab === "calculator"
+												? "text-foreground"
+												: "text-muted-foreground hover:text-foreground"
+												}`}
 										>
 											{t("affiliate.tabs.calculator")}
 										</button>
@@ -366,8 +359,8 @@ export default function AffiliatePage() {
 							{isRefreshing
 								? t("affiliate.refreshing")
 								: refreshCooldown > 0
-								? `${refreshCooldown}s`
-								: t("affiliate.refresh")}
+									? `${refreshCooldown}s`
+									: t("affiliate.refresh")}
 						</span>
 					</Button>
 				</div>
@@ -389,9 +382,8 @@ export default function AffiliatePage() {
 									className="absolute h-[calc(100%-8px)] top-1 left-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
 									style={{
 										width: `calc(${indicatorStyle.width}px - 8px)`,
-										transform: `translateX(${
-											indicatorStyle.left - 4
-										}px)`,
+										transform: `translateX(${indicatorStyle.left - 4
+											}px)`,
 									}}
 								/>
 
@@ -402,22 +394,20 @@ export default function AffiliatePage() {
 										onClick={() =>
 											setActiveTab("dashboard")
 										}
-										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-											activeTab === "dashboard"
-												? "text-foreground"
-												: "text-muted-foreground hover:text-foreground"
-										}`}
+										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${activeTab === "dashboard"
+											? "text-foreground"
+											: "text-muted-foreground hover:text-foreground"
+											}`}
 									>
 										{t("affiliate.tabs.dashboard")}
 									</button>
 									<button
 										data-value="rates"
 										onClick={() => setActiveTab("rates")}
-										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-											activeTab === "rates"
-												? "text-foreground"
-												: "text-muted-foreground hover:text-foreground"
-										}`}
+										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${activeTab === "rates"
+											? "text-foreground"
+											: "text-muted-foreground hover:text-foreground"
+											}`}
 									>
 										{t("affiliate.tabs.rates")}
 									</button>
@@ -426,11 +416,10 @@ export default function AffiliatePage() {
 										onClick={() =>
 											setActiveTab("calculator")
 										}
-										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-											activeTab === "calculator"
-												? "text-foreground"
-												: "text-muted-foreground hover:text-foreground"
-										}`}
+										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${activeTab === "calculator"
+											? "text-foreground"
+											: "text-muted-foreground hover:text-foreground"
+											}`}
 									>
 										{t("affiliate.tabs.calculator")}
 									</button>
