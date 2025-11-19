@@ -1,5 +1,6 @@
 // v1
 // import { AppStateCreator } from "@/store/store";
+import { safeLocalStorage } from "@/lib/utils/safe-storage";
 // import {
 // 	AppTransaction,
 // 	TransactionStatus,
@@ -32,7 +33,7 @@
 // const getInitialState = (): TransactionSliceState => {
 // 	if (typeof window === "undefined") return { transactions: [] };
 // 	try {
-// 		const stored = localStorage.getItem(STORAGE_KEY);
+// 		const stored = safeLocalStorage.getItem(STORAGE_KEY);
 // 		if (!stored) return { transactions: [] };
 
 // 		const parsed = JSON.parse(stored) as AppTransaction[];
@@ -63,7 +64,7 @@
 // 			state.blockchain.transaction.transactions = newTransactions;
 // 		});
 // 		try {
-// 			localStorage.setItem(STORAGE_KEY, JSON.stringify(newTransactions));
+// 			safeLocalStorage.setItem(STORAGE_KEY, JSON.stringify(newTransactions));
 // 		} catch (error) {
 // 			console.error("Error saving transaction state:", error);
 // 		}
@@ -211,7 +212,7 @@ const getInitialState = (): TransactionSliceState => {
 	if (typeof window === "undefined")
 		return { transactions: [], pendingCount: 0 };
 	try {
-		const stored = localStorage.getItem(STORAGE_KEY);
+		const stored = safeLocalStorage.getItem(STORAGE_KEY);
 		if (!stored) return { transactions: [], pendingCount: 0 };
 
 		const parsed = JSON.parse(stored) as AppTransaction[];
@@ -244,7 +245,7 @@ export const createTransactionSlice: AppStateCreator<
 			state.blockchain.transaction.pendingCount = pendingCount;
 		});
 		try {
-			localStorage.setItem(STORAGE_KEY, JSON.stringify(newTransactions));
+			safeLocalStorage.setItem(STORAGE_KEY, JSON.stringify(newTransactions));
 		} catch (error) {
 			console.error("Error saving transaction state:", error);
 		}

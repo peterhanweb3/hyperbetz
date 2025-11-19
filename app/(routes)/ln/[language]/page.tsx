@@ -17,13 +17,8 @@ export default function LanguageSwitchPage() {
 		const isValidLanguage = locales.includes(language as Locale);
 
 		if (isValidLanguage) {
-			// Set the locale
+			// Set the locale (this also syncs cookie and localStorage)
 			setLocale(language as Locale);
-
-			// Store in localStorage
-			if (typeof window !== "undefined") {
-				localStorage.setItem("hyperbetz-locale", language);
-			}
 
 			// Redirect to home page after a brief moment
 			setTimeout(() => {

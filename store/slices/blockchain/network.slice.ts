@@ -1,5 +1,6 @@
 import { AppStateCreator } from "@/store/store";
 
+import { safeLocalStorage } from "@/lib/utils/safe-storage";
 // --- TYPE DEFINITIONS ---
 interface EvmNetwork {
 	name: string;
@@ -26,14 +27,14 @@ const CHAIN_LOGO_KEY = "app_chainLogo";
  * It safely reads from localStorage, handling SSR and potential errors.
  */
 const getInitialState = (): NetworkSliceState => {
-	// On the server, there's no localStorage. Return a clean state.
+	// On the server, there's no safeLocalStorage. Return a clean state.
 	if (typeof window === "undefined") {
 		return { network: null, chainId: null, chainLogo: null };
 	}
 	try {
-		const storedNetwork = localStorage.getItem(NETWORK_KEY);
-		const storedChainId = localStorage.getItem(CHAIN_ID_KEY);
-		const storedChainLogo = localStorage.getItem(CHAIN_LOGO_KEY);
+		const storedNetwork = safeLocalStorage.getItem(NETWORK_KEY);
+		const storedChainId = safeLocalStorage.getItem(CHAIN_ID_KEY);
+		const storedChainLogo = safeLocalStorage.getItem(CHAIN_LOGO_KEY);
 
 		return {
 			network: storedNetwork ? JSON.parse(storedNetwork) : null,
@@ -56,17 +57,17 @@ export const createNetworkSlice: AppStateCreator<
 	...getInitialState(), // The slice is now initialized with data from localStorage!
 
 	setNetworkData: (data) => {
-		// This action now handles BOTH setting state and persisting to localStorage.
+		// This action now handles BOTH setting state and persisting to safeLocalStorage.
 		try {
 			if (!(data.network && data.chainId && data.chainLogo)) {
-				localStorage.removeItem(NETWORK_KEY);
-				localStorage.removeItem(CHAIN_ID_KEY);
-				localStorage.removeItem(CHAIN_LOGO_KEY);
+				safeLocalStorage.removeItem(NETWORK_KEY);
+				safeLocalStorage.removeItem(CHAIN_ID_KEY);
+				safeLocalStorage.removeItem(CHAIN_LOGO_KEY);
 				return;
 			}
-			localStorage.setItem(NETWORK_KEY, JSON.stringify(data.network));
-			localStorage.setItem(CHAIN_ID_KEY, String(data.chainId));
-			localStorage.setItem(CHAIN_LOGO_KEY, data.chainLogo);
+			safeLocalStorage.setItem(NETWORK_KEY, JSON.stringify(data.network));
+			safeLocalStorage.setItem(CHAIN_ID_KEY, String(data.chainId));
+			safeLocalStorage.setItem(CHAIN_LOGO_KEY, data.chainLogo);
 		} catch (error) {
 			console.error(
 				"Failed to persist network data to localStorage:",
@@ -83,10 +84,10 @@ export const createNetworkSlice: AppStateCreator<
 	},
 
 	clearNetworkData: () => {
-		// This action clears both the state and the localStorage.
-		localStorage.removeItem(NETWORK_KEY);
-		localStorage.removeItem(CHAIN_ID_KEY);
-		localStorage.removeItem(CHAIN_LOGO_KEY);
+		// This action clears both the state and the safeLocalStorage.
+		safeLocalStorage.removeItem(NETWORK_KEY);
+		safeLocalStorage.removeItem(CHAIN_ID_KEY);
+		safeLocalStorage.removeItem(CHAIN_LOGO_KEY);
 		set((state) => {
 			state.blockchain.network.network = null;
 			state.blockchain.network.chainId = null;
@@ -95,7 +96,7 @@ export const createNetworkSlice: AppStateCreator<
 	},
 
 	setChainLogo: (logo) => {
-		localStorage.setItem(CHAIN_LOGO_KEY, logo);
+		safeLocalStorage.setItem(CHAIN_LOGO_KEY, logo);
 		set((state) => {
 			state.blockchain.network.chainLogo = logo;
 		});

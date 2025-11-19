@@ -1,5 +1,6 @@
 import { StateCreator } from "zustand";
 import ApiService from "@/services/apiService";
+import { safeLocalStorage } from "@/lib/utils/safe-storage";
 import { TransactionRecord, DepoWdHistoryRequest, DepoWdHistoryResponse } from "@/types/transactions/transaction.types";
 
 type LoadingStatus = "idle" | "loading" | "success" | "error";
@@ -52,7 +53,7 @@ const createTransactionHistorySlice: StateCreator<TransactionHistorySlice, [["zu
       data: data, 
       timestamp: Date.now() 
     };
-    localStorage.setItem(TRANSACTION_HISTORY_LOCAL_STORAGE_KEY, JSON.stringify(newCacheData));
+    safeLocalStorage.setItem(TRANSACTION_HISTORY_LOCAL_STORAGE_KEY, JSON.stringify(newCacheData));
   },
 
   fetchTransactionHistory: async (params: DepoWdHistoryRequest, jwtToken?: string) => {
@@ -92,7 +93,7 @@ const createTransactionHistorySlice: StateCreator<TransactionHistorySlice, [["zu
       state.totalData = 0;
       state.page = "1";
     });
-    localStorage.removeItem(TRANSACTION_HISTORY_LOCAL_STORAGE_KEY);
+    safeLocalStorage.removeItem(TRANSACTION_HISTORY_LOCAL_STORAGE_KEY);
   },
 });
 

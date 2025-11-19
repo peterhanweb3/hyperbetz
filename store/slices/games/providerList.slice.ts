@@ -1,6 +1,7 @@
 import { ProviderWithIcon } from "@/types/games/providerIcon.types";
 import ApiService from "@/services/apiService";
 import { AppStateCreator } from "@/store/store";
+import { safeLocalStorage } from "@/lib/utils/safe-storage";
 
 type loadingStatus = "idle" | "loading" | "success" | "error";
 
@@ -48,7 +49,7 @@ const createProviderListSlice: AppStateCreator<
 
 		const newCacheData = { providers: providers, timestamp: Date.now() };
 		// console.log("Storing providers in localStorage:", newCacheData);
-		localStorage.setItem(
+		safeLocalStorage.setItem(
 			PROVIDERS_LIST_LOCAL_STORAGE_KEY,
 			JSON.stringify(newCacheData)
 		);
@@ -101,7 +102,7 @@ const createProviderListSlice: AppStateCreator<
 		// console.log("Initializing provider list...");
 
 		// Clear old cache format that might have count data
-		const oldCacheItem = localStorage.getItem(
+		const oldCacheItem = safeLocalStorage.getItem(
 			PROVIDERS_LIST_LOCAL_STORAGE_KEY
 		);
 		if (oldCacheItem) {
@@ -113,17 +114,17 @@ const createProviderListSlice: AppStateCreator<
 					cache.providers[0].hasOwnProperty("count")
 				) {
 					// console.log("Clearing old cache format with count data");
-					localStorage.removeItem(PROVIDERS_LIST_LOCAL_STORAGE_KEY);
+					safeLocalStorage.removeItem(PROVIDERS_LIST_LOCAL_STORAGE_KEY);
 				}
 			} catch (error) {
 				console.error("Error checking old cache format:", error);
-				localStorage.removeItem(PROVIDERS_LIST_LOCAL_STORAGE_KEY);
+				safeLocalStorage.removeItem(PROVIDERS_LIST_LOCAL_STORAGE_KEY);
 			}
 		}
 
 		// First, check the cache for providers
 		try {
-			const cachedItem = localStorage.getItem(
+			const cachedItem = safeLocalStorage.getItem(
 				PROVIDERS_LIST_LOCAL_STORAGE_KEY
 			);
 			if (cachedItem) {

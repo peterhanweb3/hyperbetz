@@ -1,3 +1,5 @@
+import type { AbstractIntlMessages } from "next-intl";
+
 export const locales = [
 	"en", // English
 	"es", // Spanish
@@ -95,5 +97,23 @@ export async function getMessages(locale: Locale) {
 		// Interpolate site name in fallback translations too
 		const { interpolateTranslations } = await import('./utils/site-config');
 		return interpolateTranslations(messages);
+	}
+}
+
+/**
+ * Server-side message loader for SEO
+ * Pre-loads default English messages server-side so crawlers can see content
+ */
+export async function getServerMessages(locale: Locale = defaultLocale): Promise<AbstractIntlMessages> {
+	try {
+		const messages = (await import(`../Dictionary/${locale}.json`)).default;
+		const { interpolateTranslations } = await import('./utils/site-config');
+		return interpolateTranslations(messages) as AbstractIntlMessages;
+	} catch (error) {
+		console.error(`Failed to load server messages for ${locale}:`, error);
+		// Fallback to English
+		const fallbackMessages = (await import(`../Dictionary/${defaultLocale}.json`)).default;
+		const { interpolateTranslations } = await import('./utils/site-config');
+		return interpolateTranslations(fallbackMessages) as AbstractIntlMessages;
 	}
 }

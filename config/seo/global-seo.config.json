@@ -3,7 +3,6 @@
 	"defaultLang": "en",
 	"defaultCountry": "global",
 	"environment": "production",
-
 	"regions": {
 		"global": {
 			"language": "en",
@@ -159,7 +158,6 @@
 			}
 		}
 	},
-
 	"defaults": {
 		"siteName": "Hyperbetz",
 		"siteDomain": "hyperbetz.games",
@@ -178,7 +176,6 @@
 		"enableAISO": true,
 		"enableASO": true
 	},
-
 	"schemaDefaults": {
 		"organization": {
 			"@type": "Organization",
@@ -208,34 +205,42 @@
 			}
 		}
 	},
-
 	"pageDefaults": {
 		"home": {
 			"title": "HyperBetz – Global Casino for Slots, Sports & Live Games",
 			"description": "Play at HyperBetz – a trusted online casino with 5000+ slots, live tables & sports betting. Secure play, fast payouts & daily rewards.",
 			"keywords": [
-				"gaming",
-				"rewards",
-				"crypto",
-				"slots",
-				"live casino",
-				"sports betting",
-				"online gaming",
-				"betting",
-				"jackpots"
+				"crypto casino",
+				"Bitcoin casino",
+				"blockchain casino",
+				"provably fair casino",
+				"no KYC crypto casino",
+				"instant withdrawal casino",
+				"anonymous crypto casino",
+				"Ethereum casino",
+				"live dealer crypto",
+				"fast payout casino",
+				"decentralized casino",
+				"Layer-2 casino",
+				"crash games crypto",
+				"crypto sports betting"
 			],
 			"ogType": "website",
 			"schemaType": "WebPage"
 		},
 		"lobby": {
-			"title": "Game Lobby - Browse All Games",
-			"description": "Explore our extensive collection of games including slots, live casino, table games, and more. Find your favorite games and start winning!",
+			"title": "Game Lobby - 5000+ Provably Fair Crypto Games",
+			"description": "Explore 5000+ provably fair blockchain games: crypto slots, live dealer games, crash games, and sports betting. Instant play with Bitcoin, Ethereum & more.",
 			"keywords": [
-				"game lobby",
-				"casino games",
-				"slots",
-				"table games",
-				"live casino"
+				"crypto games",
+				"blockchain games",
+				"provably fair games",
+				"crypto slots",
+				"live dealer crypto",
+				"crash games",
+				"crypto sports betting",
+				"Bitcoin gambling",
+				"instant play casino"
 			],
 			"ogType": "website",
 			"schemaType": "CollectionPage"
@@ -389,7 +394,6 @@
 			"schemaType": "FAQPage"
 		}
 	},
-
 	"robotsRules": {
 		"production": {
 			"allow": ["/"],
@@ -398,11 +402,12 @@
 		},
 		"staging": {
 			"allow": [],
-			"disallow": ["/"],
+			"disallow": [
+				"/"
+			],
 			"sitemap": null
 		}
 	},
-
 	"aeo": {
 		"enabled": true,
 		"generateFAQs": true,
@@ -410,7 +415,6 @@
 		"enableSpeakable": true,
 		"targetFeaturedSnippets": true
 	},
-
 	"aiso": {
 		"enabled": true,
 		"aiPlatforms": [
@@ -424,7 +428,6 @@
 		"entityMarkup": true,
 		"semanticContext": true
 	},
-
 	"aso": {
 		"enabled": true,
 		"androidAppId": "",
@@ -433,7 +436,6 @@
 		"appDeepLinkScheme": "hyperbetz://",
 		"pwaEnabled": true
 	},
-
 	"performance": {
 		"enablePreconnect": true,
 		"enableDNSPrefetch": true,
@@ -444,7 +446,6 @@
 			"https://fonts.gstatic.com"
 		]
 	},
-
 	"socialMedia": {
 		"twitter": {
 			"handle": "@hyperbetz",
@@ -458,7 +459,6 @@
 			"handle": "hyperbetz"
 		}
 	},
-
 	"analytics": {
 		"ga4": {
 			"enabled": true,

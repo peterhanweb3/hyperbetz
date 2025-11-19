@@ -19,7 +19,6 @@ import {
 	isRtlLocale,
 	locales,
 } from "./i18n";
-import Image from "next/image";
 
 type LocaleContextType = {
 	locale: Locale;
@@ -29,25 +28,65 @@ type LocaleContextType = {
 
 const LocaleContext = createContext<LocaleContextType | undefined>(undefined);
 
-export function LocaleProvider({ children }: { children: React.ReactNode }) {
-	const [locale, setLocaleState] = useState<Locale>(defaultLocale);
-	const [messages, setMessages] = useState<AbstractIntlMessages | null>(null);
+type LocaleProviderProps = {
+	children: React.ReactNode;
+	initialMessages: AbstractIntlMessages;
+	initialLocale?: Locale;
+};
 
-	// Bootstrap from localStorage or navigator
+/**
+ * SEO-Friendly LocaleProvider
+ * - Accepts server-loaded messages to avoid blocking render
+ * - Crawlers see content immediately with default English
+ * - Client-side: hydrates with user's preferred language
+ */
+export function LocaleProvider({
+	children,
+	initialMessages,
+	initialLocale = defaultLocale
+}: LocaleProviderProps) {
+	const [locale, setLocaleState] = useState<Locale>(initialLocale);
+	const [messages, setMessages] = useState<AbstractIntlMessages>(initialMessages);
+
+	// Bootstrap locale priority: cookie > localStorage > navigator
 	useEffect(() => {
-		const saved =
-			typeof window !== "undefined"
-				? localStorage.getItem("hyperbetz-locale")
-				: null;
+		if (typeof window === "undefined") return;
+
+		// 1. First check cookie (set by middleware when visiting /ja, /de, etc.)
+		const cookieLocale = document.cookie
+			.split("; ")
+			.find((row) => row.startsWith("NEXT_LOCALE="))
+			?.split("=")[1];
+
+		if (cookieLocale && locales.includes(cookieLocale as Locale)) {
+			// Cookie has highest priority - user just navigated to /ja
+			if (cookieLocale !== initialLocale) {
+				setLocaleState(cookieLocale as Locale);
+			}
+			// Sync to localStorage so it persists
+			localStorage.setItem("hyperbetz-locale", cookieLocale);
+			return;
+		}
+
+		// 2. Fallback to localStorage if no cookie
+		const saved = localStorage.getItem("hyperbetz-locale");
 		if (saved && locales.includes(saved as Locale)) {
 			setLocaleState(saved as Locale);
-		} else if (!saved && typeof navigator !== "undefined") {
-			const nav = navigator.language?.slice(0, 2) as Locale;
-			if (locales.includes(nav)) setLocaleState(nav);
+			return;
 		}
-	}, []);
 
+		// 3. Final fallback to browser language
+		const nav = navigator.language?.slice(0, 2) as Locale;
+		if (locales.includes(nav)) {
+			setLocaleState(nav);
+		}
+	}, [initialLocale]);
+
+	// Load messages when locale changes (client-side only)
 	useEffect(() => {
+		// Skip if already on initial locale
+		if (locale === initialLocale && messages === initialMessages) return;
+
 		let mounted = true;
 		(async () => {
 			const m = await getMessages(locale);
@@ -63,12 +102,15 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
 		return () => {
 			mounted = false;
 		};
-	}, [locale]);
+	}, [locale, initialLocale, initialMessages, messages]);
 
 	const setLocale = (l: Locale) => {
 		setLocaleState(l);
-		if (typeof window !== "undefined")
+		if (typeof window !== "undefined") {
+			// Sync both cookie and localStorage
 			localStorage.setItem("hyperbetz-locale", l);
+			document.cookie = `NEXT_LOCALE=${l}; path=/; max-age=31536000`; // 1 year
+		}
 	};
 
 	const ctx: LocaleContextType = useMemo(
@@ -76,43 +118,14 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
 		[locale]
 	);
 
-	if (!messages) {
-		return (
-			<div className="min-h-screen bg-background flex flex-col items-center justify-center">
-				{/* App Logo */}
-				<div className="mb-6 animate-pulse">
-					<Image
-						priority
-						width={800}
-						height={800}
-						src="/assets/site/Hyperbetz-logo.png"
-						alt="Hyperbetz Logo"
-						className="w-[80%] mx-auto"
-					/>
-				</div>
-
-				{/* Loading Animation */}
-				<div className="flex items-center gap-2 mb-4">
-					<div className="flex gap-1">
-						{[0, 1, 2].map((index) => (
-							<div
-								key={index}
-								className="w-2 h-2 bg-[#00C771] rounded-full animate-bounce"
-								style={{
-									animationDelay: `${index * 0.15}s`,
-									animationDuration: "0.8s",
-								}}
-							/>
-						))}
-					</div>
-				</div>
-			</div>
-		);
-	}
-
+	// ✅ NO BLOCKING RENDER - Content always shows immediately
 	return (
 		<LocaleContext.Provider value={ctx}>
-			<NextIntlClientProvider locale={locale} messages={messages}>
+			<NextIntlClientProvider
+				locale={locale}
+				messages={messages}
+				timeZone="UTC"
+			>
 				{children}
 			</NextIntlClientProvider>
 		</LocaleContext.Provider>

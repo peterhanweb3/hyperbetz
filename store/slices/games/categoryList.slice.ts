@@ -1,5 +1,6 @@
 import { CategoryWithIcon } from "@/types/games/categoryIcon.types";
 import { AppStateCreator } from "@/store/store";
+import { safeLocalStorage } from "@/lib/utils/safe-storage";
 
 type loadingStatus = "idle" | "loading" | "success" | "error";
 
@@ -45,7 +46,7 @@ const createCategoryListSlice: AppStateCreator<
 
 		const newCacheData = { categories: categories, timestamp: Date.now() };
 		// console.log("Storing categories in localStorage:", newCacheData);
-		localStorage.setItem(
+		safeLocalStorage.setItem(
 			CATEGORIES_LIST_LOCAL_STORAGE_KEY,
 			JSON.stringify(newCacheData)
 		);

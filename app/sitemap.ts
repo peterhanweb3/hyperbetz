@@ -97,15 +97,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	});
 
 	// ============================================
-	// TIER 4: Category Combos (Priority 0.6)
+	// TIER 4: Top Provider + Category Combos (Priority 0.65)
 	// Long-tail keywords - highest conversion rate
+	// "pragmatic play slots", "evolution live casino", etc.
 	// ============================================
-	https: categories.forEach((category) => {
-		sitemapEntries.push({
-			url: `${baseUrl}/games/${category}`,
-			lastModified: new Date(),
-			changeFrequency: "weekly",
-			priority: 0.6,
+	const topProvidersForCategories = topProviders.slice(0, 15); // Top 15 × 4 = 60 combos
+	topProvidersForCategories.forEach((provider) => {
+		categories.forEach((category) => {
+			sitemapEntries.push({
+				url: `${baseUrl}/games/${provider}/${category}`,
+				lastModified: new Date(),
+				changeFrequency: "weekly",
+				priority: 0.65,
+			});
 		});
 	});
 
@@ -161,14 +165,36 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	});
 
 	// ============================================
-	// SUMMARY
-	// Total URLs: ~180
+	// TIER 6: Legal & Info Pages (Priority 0.4)
+	// Required for trust signals and compliance
+	// ============================================
+	const legalPages = [
+		{ path: "/terms-and-conditions", priority: 0.4 },
+		{ path: "/privacy-policy", priority: 0.4 },
+		{ path: "/responsible-gambling", priority: 0.4 },
+		{ path: "/faqs", priority: 0.5 },
+		{ path: "/about-us", priority: 0.4 },
+	];
+
+	legalPages.forEach((page) => {
+		sitemapEntries.push({
+			url: `${baseUrl}${page.path}`,
+			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: page.priority,
+		});
+	});
+
+	// ============================================
+	// SUMMARY (Auto-calculated)
+	// Total URLs: ~${sitemapEntries.length}
 	// - 6 core pages
-	// - 4 category pages
+	// - 4 category pages (/providers/slot, etc.)
 	// - 20 top provider pages
-	// - 80 provider+category combos (20 × 4)
+	// - 60 provider+category combos (15 providers × 4 categories)
 	// - 34 secondary provider pages
-	// - 36 additional slots for future expansion
+	// - 5 legal/info pages
+	// = 129 URLs optimized for crawlers
 	// ============================================
 
 	return sitemapEntries;

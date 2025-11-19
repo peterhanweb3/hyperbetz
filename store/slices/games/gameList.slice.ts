@@ -1,6 +1,7 @@
 import { Game } from "@/types/games/gameList.types";
 import ApiService from "@/services/apiService";
 import { AppStateCreator } from "@/store/store";
+import { safeLocalStorage } from "@/lib/utils/safe-storage";
 
 type loadingStatus = "idle" | "loading" | "success" | "error";
 
@@ -47,7 +48,7 @@ const createGameListSlice: AppStateCreator<
 
 		const newCacheData = { games: games, timestamp: Date.now() };
 		// console.log(`setGamesList's newCachedData ${JSON.stringify(newCacheData)}`);
-		localStorage.setItem(
+		safeLocalStorage.setItem(
 			GAMES_LIST_LOCAL_STORAGE_KEY,
 			JSON.stringify(newCacheData)
 		);
@@ -95,7 +96,7 @@ const createGameListSlice: AppStateCreator<
 	initializeGameList: (jwtToken?: string) => {
 		// First, check the cache.
 		try {
-			const cachedItem = localStorage.getItem(
+			const cachedItem = safeLocalStorage.getItem(
 				GAMES_LIST_LOCAL_STORAGE_KEY
 			);
 			if (cachedItem) {

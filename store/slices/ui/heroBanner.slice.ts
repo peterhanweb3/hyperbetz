@@ -3,6 +3,7 @@ import { HeroBannerSectionProps } from "@/types/features/hero-banner-section.typ
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { heroBannerPropsFactory } from "@/components/features/banners/hero/hero-banner.factory";
 import { Game } from "@/types/games/gameList.types";
+import { safeLocalStorage } from "@/lib/utils/safe-storage";
 
 const LAYOUT_STORAGE_KEY = "hero-banner-layout";
 type SupportedLayouts =
@@ -54,7 +55,7 @@ export const createHeroBannerSlice: AppStateCreator<
 	heroBanner: null,
 	setHeroBanner: (props) => {
 		try {
-			localStorage.setItem(LAYOUT_STORAGE_KEY, props.layout);
+			safeLocalStorage.setItem(LAYOUT_STORAGE_KEY, props.layout);
 		} catch (error) {
 			console.warn("Could not save layout preference:", error);
 		}
@@ -68,7 +69,7 @@ export const createHeroBannerSlice: AppStateCreator<
 		if (get().uiDefinition.heroBanner.heroBanner) return;
 
 		try {
-			const savedLayout = localStorage.getItem(
+			const savedLayout = safeLocalStorage.getItem(
 				LAYOUT_STORAGE_KEY
 			) as SupportedLayouts | null;
 			const layoutToLoad: SupportedLayouts = "layout2";

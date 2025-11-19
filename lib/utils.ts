@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { safeLocalStorage } from "./utils/safe-storage";
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
@@ -150,7 +151,7 @@ export const saveToCache = <T>(key: string, data: T): void => {
 			data,
 			timestamp: Date.now(),
 		};
-		localStorage.setItem(key, JSON.stringify(cacheData));
+		safeLocalStorage.setItem(key, JSON.stringify(cacheData));
 	} catch (error) {
 		console.error(`Error saving to cache (${key}):`, error);
 	}
@@ -164,7 +165,7 @@ export const saveToCache = <T>(key: string, data: T): void => {
  */
 export const loadFromCache = <T>(key: string, maxAge: number): T | null => {
 	try {
-		const cached = localStorage.getItem(key);
+		const cached = safeLocalStorage.getItem(key);
 		if (cached) {
 			const { data, timestamp }: CacheData<T> = JSON.parse(cached);
 			const now = Date.now();
@@ -174,12 +175,12 @@ export const loadFromCache = <T>(key: string, maxAge: number): T | null => {
 				return data;
 			} else {
 				// Cache expired, remove it
-				localStorage.removeItem(key);
+				safeLocalStorage.removeItem(key);
 			}
 		}
 	} catch (error) {
 		console.error(`Error loading from cache (${key}):`, error);
-		localStorage.removeItem(key);
+		safeLocalStorage.removeItem(key);
 	}
 	return null;
 };
@@ -191,17 +192,17 @@ export const loadFromCache = <T>(key: string, maxAge: number): T | null => {
  */
 export const clearExpiredCache = (key: string, maxAge: number): void => {
 	try {
-		const cached = localStorage.getItem(key);
+		const cached = safeLocalStorage.getItem(key);
 		if (cached) {
 			const { timestamp }: CacheData<unknown> = JSON.parse(cached);
 			const now = Date.now();
 
 			if (now - timestamp >= maxAge) {
-				localStorage.removeItem(key);
+				safeLocalStorage.removeItem(key);
 			}
 		}
 	} catch (error) {
 		console.error(`Error clearing expired cache (${key}):`, error);
-		localStorage.removeItem(key);
+		safeLocalStorage.removeItem(key);
 	}
 };
