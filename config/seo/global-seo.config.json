@@ -1,19 +1,19 @@
 {
 	"defaultDomain": "https://hyperbetz.games",
 	"defaultLang": "en",
-	"defaultCountry": "global",
 	"environment": "production",
-	"regions": {
-		"global": {
-			"language": "en",
-			"currency": "USD",
+	"supportedTLDs": [
+		"hyperbetz.com",
+		"hyperbetz.games",
+		"hyperbetz.xyz",
+		"hyperbetz.io"
+	],
+	"languages": {
+		"en": {
+			"name": "English",
+			"nativeName": "English",
 			"hreflang": "en",
-			"countryCode": "INT",
-			"timezone": "UTC",
-			"metaTitleSuffix": " | Hyperbetz",
-			"canonicalBase": "https://hyperbetz.games",
-			"gtmId": "",
-			"ga4Id": "",
+			"direction": "ltr",
 			"localizedTerms": {
 				"gaming": "gaming",
 				"rewards": "rewards",
@@ -21,101 +21,23 @@
 				"betting": "betting"
 			}
 		},
-		"us": {
-			"language": "en",
-			"currency": "USD",
-			"hreflang": "en-us",
-			"countryCode": "US",
-			"timezone": "America/New_York",
-			"metaTitleSuffix": " | Hyperbetz USA",
-			"canonicalBase": "https://hyperbetz.games/us",
-			"gtmId": "",
-			"ga4Id": "",
+		"ar": {
+			"name": "Arabic",
+			"nativeName": "العربية",
+			"hreflang": "ar",
+			"direction": "rtl",
 			"localizedTerms": {
-				"gaming": "gaming",
-				"rewards": "rewards",
-				"casino": "casino",
-				"betting": "betting"
-			}
-		},
-		"uk": {
-			"language": "en",
-			"currency": "GBP",
-			"hreflang": "en-gb",
-			"countryCode": "GB",
-			"timezone": "Europe/London",
-			"metaTitleSuffix": " | Hyperbetz UK",
-			"canonicalBase": "https://hyperbetz.games/uk",
-			"gtmId": "",
-			"ga4Id": "",
-			"localizedTerms": {
-				"gaming": "gaming",
-				"rewards": "rewards",
-				"casino": "casino",
-				"betting": "betting"
-			}
-		},
-		"in": {
-			"language": "en",
-			"currency": "INR",
-			"hreflang": "en-in",
-			"countryCode": "IN",
-			"timezone": "Asia/Kolkata",
-			"metaTitleSuffix": " | Hyperbetz India",
-			"canonicalBase": "https://hyperbetz.games/in",
-			"gtmId": "",
-			"ga4Id": "",
-			"localizedTerms": {
-				"gaming": "gaming",
-				"rewards": "rewards",
-				"casino": "casino",
-				"betting": "betting"
-			}
-		},
-		"za": {
-			"language": "en",
-			"currency": "ZAR",
-			"hreflang": "en-za",
-			"countryCode": "ZA",
-			"timezone": "Africa/Johannesburg",
-			"metaTitleSuffix": " | Hyperbetz South Africa",
-			"canonicalBase": "https://hyperbetz.games/za",
-			"gtmId": "",
-			"ga4Id": "",
-			"localizedTerms": {
-				"gaming": "gaming",
-				"rewards": "rewards",
-				"casino": "casino",
-				"betting": "betting"
-			}
-		},
-		"ng": {
-			"language": "en",
-			"currency": "NGN",
-			"hreflang": "en-ng",
-			"countryCode": "NG",
-			"timezone": "Africa/Lagos",
-			"metaTitleSuffix": " | Hyperbetz Nigeria",
-			"canonicalBase": "https://hyperbetz.games/ng",
-			"gtmId": "",
-			"ga4Id": "",
-			"localizedTerms": {
-				"gaming": "gaming",
-				"rewards": "rewards",
-				"casino": "casino",
-				"betting": "betting"
+				"gaming": "الألعاب",
+				"rewards": "المكافآت",
+				"casino": "كازينو",
+				"betting": "المراهنات"
 			}
 		},
 		"de": {
-			"language": "de",
-			"currency": "EUR",
-			"hreflang": "de-de",
-			"countryCode": "DE",
-			"timezone": "Europe/Berlin",
-			"metaTitleSuffix": " | Hyperbetz Deutschland",
-			"canonicalBase": "https://hyperbetz.games/de",
-			"gtmId": "",
-			"ga4Id": "",
+			"name": "German",
+			"nativeName": "Deutsch",
+			"hreflang": "de",
+			"direction": "ltr",
 			"localizedTerms": {
 				"gaming": "Spielen",
 				"rewards": "Belohnungen",
@@ -123,16 +45,71 @@
 				"betting": "Wetten"
 			}
 		},
-		"jp": {
-			"language": "ja",
-			"currency": "JPY",
-			"hreflang": "ja-jp",
-			"countryCode": "JP",
-			"timezone": "Asia/Tokyo",
-			"metaTitleSuffix": " | Hyperbetz Japan",
-			"canonicalBase": "https://hyperbetz.games/jp",
-			"gtmId": "",
-			"ga4Id": "",
+		"es": {
+			"name": "Spanish",
+			"nativeName": "Español",
+			"hreflang": "es",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "juegos",
+				"rewards": "recompensas",
+				"casino": "casino",
+				"betting": "apuestas"
+			}
+		},
+		"fa": {
+			"name": "Persian",
+			"nativeName": "فارسی",
+			"hreflang": "fa",
+			"direction": "rtl",
+			"localizedTerms": {
+				"gaming": "بازی",
+				"rewards": "پاداش‌ها",
+				"casino": "کازینو",
+				"betting": "شرط‌بندی"
+			}
+		},
+		"fr": {
+			"name": "French",
+			"nativeName": "Français",
+			"hreflang": "fr",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "jeux",
+				"rewards": "récompenses",
+				"casino": "casino",
+				"betting": "paris"
+			}
+		},
+		"hi": {
+			"name": "Hindi",
+			"nativeName": "हिन्दी",
+			"hreflang": "hi",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "गेमिंग",
+				"rewards": "पुरस्कार",
+				"casino": "कैसीनो",
+				"betting": "सट्टेबाजी"
+			}
+		},
+		"it": {
+			"name": "Italian",
+			"nativeName": "Italiano",
+			"hreflang": "it",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "giochi",
+				"rewards": "ricompense",
+				"casino": "casinò",
+				"betting": "scommesse"
+			}
+		},
+		"ja": {
+			"name": "Japanese",
+			"nativeName": "日本語",
+			"hreflang": "ja",
+			"direction": "ltr",
 			"localizedTerms": {
 				"gaming": "ゲーム",
 				"rewards": "報酬",
@@ -140,21 +117,136 @@
 				"betting": "ベッティング"
 			}
 		},
-		"br": {
-			"language": "pt",
-			"currency": "BRL",
-			"hreflang": "pt-br",
-			"countryCode": "BR",
-			"timezone": "America/Sao_Paulo",
-			"metaTitleSuffix": " | Hyperbetz Brasil",
-			"canonicalBase": "https://hyperbetz.games/br",
-			"gtmId": "",
-			"ga4Id": "",
+		"ko": {
+			"name": "Korean",
+			"nativeName": "한국어",
+			"hreflang": "ko",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "게임",
+				"rewards": "보상",
+				"casino": "카지노",
+				"betting": "베팅"
+			}
+		},
+		"ms": {
+			"name": "Malay",
+			"nativeName": "Bahasa Melayu",
+			"hreflang": "ms",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "permainan",
+				"rewards": "ganjaran",
+				"casino": "kasino",
+				"betting": "pertaruhan"
+			}
+		},
+		"nl": {
+			"name": "Dutch",
+			"nativeName": "Nederlands",
+			"hreflang": "nl",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "gaming",
+				"rewards": "beloningen",
+				"casino": "casino",
+				"betting": "wedden"
+			}
+		},
+		"pl": {
+			"name": "Polish",
+			"nativeName": "Polski",
+			"hreflang": "pl",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "gry",
+				"rewards": "nagrody",
+				"casino": "kasyno",
+				"betting": "zakłady"
+			}
+		},
+		"pt": {
+			"name": "Portuguese",
+			"nativeName": "Português",
+			"hreflang": "pt",
+			"direction": "ltr",
 			"localizedTerms": {
 				"gaming": "jogos",
 				"rewards": "recompensas",
 				"casino": "cassino",
 				"betting": "apostas"
+			}
+		},
+		"ru": {
+			"name": "Russian",
+			"nativeName": "Русский",
+			"hreflang": "ru",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "игры",
+				"rewards": "награды",
+				"casino": "казино",
+				"betting": "ставки"
+			}
+		},
+		"sv": {
+			"name": "Swedish",
+			"nativeName": "Svenska",
+			"hreflang": "sv",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "spel",
+				"rewards": "belöningar",
+				"casino": "kasino",
+				"betting": "betting"
+			}
+		},
+		"th": {
+			"name": "Thai",
+			"nativeName": "ไทย",
+			"hreflang": "th",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "เกม",
+				"rewards": "รางวัล",
+				"casino": "คาสิโน",
+				"betting": "การเดิมพัน"
+			}
+		},
+		"tr": {
+			"name": "Turkish",
+			"nativeName": "Türkçe",
+			"hreflang": "tr",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "oyun",
+				"rewards": "ödüller",
+				"casino": "kumarhane",
+				"betting": "bahis"
+			}
+		},
+		"vi": {
+			"name": "Vietnamese",
+			"nativeName": "Tiếng Việt",
+			"hreflang": "vi",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "chơi game",
+				"rewards": "phần thưởng",
+				"casino": "sòng bạc",
+				"betting": "cá cược"
+			}
+		},
+		"zh": {
+			"name": "Chinese",
+			"nativeName": "中文",
+			"hreflang": "zh",
+			"direction": "ltr",
+			"localizedTerms": {
+				"gaming": "游戏",
+				"rewards": "奖励",
+				"casino": "赌场",
+				"betting": "投注"
 			}
 		}
 	},

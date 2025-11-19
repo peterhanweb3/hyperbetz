@@ -7,7 +7,7 @@
 import { Metadata } from "next";
 import {
 	getSEOConfig,
-	getRegionConfig,
+	getLanguageConfig,
 	generateCanonicalURL,
 	generateHrefLangTags,
 	interpolateString,
@@ -22,7 +22,8 @@ export interface SEOProps {
 	canonical?: string;
 	ogImage?: string;
 	ogType?: "website" | "article" | "profile" | "game";
-	region?: string;
+	language?: string; // Language code (e.g., "en", "ja", "hi")
+	region?: string; // @deprecated Use language instead
 	noindex?: boolean;
 	nofollow?: boolean;
 	path?: string;
@@ -37,12 +38,14 @@ export interface SEOProps {
 }
 
 /**
- * Generate complete metadata for Next.js pages
+ * Generate complete metadata for Next.js pages (DYNAMIC)
  */
 export function generateSEOMetadata(props: SEOProps): Metadata {
 	const config = getSEOConfig();
-	const region = props.region || config.defaultCountry;
-	const regionConfig = getRegionConfig(region);
+
+	// Support both language and region (for backward compatibility)
+	const language = props.language || props.region || config.defaultLang;
+	const languageConfig = getLanguageConfig(language);
 
 	// Get page defaults if pageType is provided
 	const pageDefaults = props.pageType
@@ -62,33 +65,38 @@ export function generateSEOMetadata(props: SEOProps): Metadata {
 		description = interpolateString(description, props.variables);
 	}
 
-	// Add region suffix to title
-	const fullTitle = `${title}${regionConfig.metaTitleSuffix}`;
+	// Add suffix to title
+	const fullTitle = `${title} | ${config.defaults.siteName}`;
 
-	// Generate canonical URL
+	// Generate canonical URL (DYNAMIC - uses current domain)
 	const canonical =
-		props.canonical || generateCanonicalURL(props.path || "/", region);
+		props.canonical || generateCanonicalURL(props.path || "/", language);
 
-	// Generate hreflang tags
+	// Generate hreflang tags (DYNAMIC - uses current domain)
 	const hrefLangTags = props.path ? generateHrefLangTags(props.path) : [];
 
-	// Determine OG image
+	// Determine OG image (DYNAMIC)
 	const ogImage =
-		props.ogImage || `${config.defaultDomain}${config.defaults.logo}`;
+		props.ogImage || `${canonical.split('/').slice(0, 3).join('/')}${config.defaults.logo}`;
 
 	// Build keywords
 	const keywords = props.keywords || pageDefaults?.keywords || [];
 
+	// Determine locale for Open Graph
+	const ogLocale = languageConfig.hreflang.includes('-')
+		? languageConfig.hreflang.replace("-", "_")
+		: `${languageConfig.hreflang}_${languageConfig.hreflang.toUpperCase()}`;
+
 	// Base metadata
 	const metadata: Metadata = {
-		metadataBase: new URL(config.defaultDomain),
+		metadataBase: new URL(canonical.split('/').slice(0, 3).join('/')),
 		title: fullTitle,
 		description,
 		keywords: keywords.join(", "),
 		authors: [
 			{
 				name: config.defaults.author,
-				url: config.defaultDomain,
+				url: canonical.split('/').slice(0, 3).join('/'),
 			},
 		],
 		creator: config.defaults.organization,
@@ -115,14 +123,11 @@ export function generateSEOMetadata(props: SEOProps): Metadata {
 				| "website"
 				| "article"
 				| "profile",
-			title: props.ogTitle || fullTitle, // Allow manual override of OG title
-			description: props.ogDescription || description, // Allow manual override of OG description
+			title: props.ogTitle || fullTitle,
+			description: props.ogDescription || description,
 			url: canonical,
 			siteName: config.defaults.siteName,
-			locale:
-				regionConfig.language === "en"
-					? "en_US"
-					: regionConfig.hreflang.replace("-", "_"),
+			locale: ogLocale,
 			images: [
 				{
 					url: ogImage,
@@ -154,7 +159,7 @@ export function generateSEOMetadata(props: SEOProps): Metadata {
 			apple: config.defaults.favicon,
 		},
 
-		// Alternates for hreflang
+		// Alternates for hreflang (DYNAMIC - based on current domain)
 		alternates: {
 			canonical,
 			languages: hrefLangTags.reduce((acc, tag) => {
@@ -185,12 +190,12 @@ export function generateSEOMetadata(props: SEOProps): Metadata {
  * Generate JSON-LD script tag content
  */
 export function generateJSONLD(props: SEOProps): string | null {
-	const region = props.region || "global";
+	const language = props.language || props.region || "en";
 	const schemas: Array<Record<string, unknown>> = [];
 
 	// Always include Organization and Website schemas
-	const orgSchema = generateSchema({ type: "organization", region });
-	const webSchema = generateSchema({ type: "website", region });
+	const orgSchema = generateSchema({ type: "organization", region: language });
+	const webSchema = generateSchema({ type: "website", region: language });
 
 	if (orgSchema) schemas.push(orgSchema);
 	if (webSchema) schemas.push(webSchema);
@@ -279,58 +284,58 @@ export function generatePageSEO(props: SEOProps) {
  * Helper function to generate SEO for common page types
  */
 export const SEOTemplates = {
-	home: (region?: string, customProps?: Partial<SEOProps>) =>
+	home: (language?: string, customProps?: Partial<SEOProps>) =>
 		generatePageSEO({
 			pageType: "home",
 			path: "/",
-			region,
+			language,
 			...customProps,
 		}),
 
-	lobby: (region?: string, customProps?: Partial<SEOProps>) =>
+	lobby: (language?: string, customProps?: Partial<SEOProps>) =>
 		generatePageSEO({
 			pageType: "lobby",
 			path: "/lobby",
-			region,
+			language,
 			...customProps,
 		}),
 
 	game: (
 		gameName: string,
-		region?: string,
+		language?: string,
 		customProps?: Partial<SEOProps>
 	) =>
 		generatePageSEO({
 			pageType: "game",
 			path: `/play/${gameName.toLowerCase().replace(/\s+/g, "-")}`,
-			region,
+			language,
 			variables: { gameName },
 			...customProps,
 		}),
 
-	profile: (region?: string, customProps?: Partial<SEOProps>) =>
+	profile: (language?: string, customProps?: Partial<SEOProps>) =>
 		generatePageSEO({
 			pageType: "profile",
 			path: "/profile",
-			region,
+			language,
 			ogType: "profile",
 			noindex: true, // Private page
 			...customProps,
 		}),
 
-	affiliate: (region?: string, customProps?: Partial<SEOProps>) =>
+	affiliate: (language?: string, customProps?: Partial<SEOProps>) =>
 		generatePageSEO({
 			pageType: "affiliate",
 			path: "/affiliate",
-			region,
+			language,
 			...customProps,
 		}),
 
-	providers: (region?: string, customProps?: Partial<SEOProps>) =>
+	providers: (language?: string, customProps?: Partial<SEOProps>) =>
 		generatePageSEO({
 			pageType: "providers",
 			path: "/providers",
-			region,
+			language,
 			...customProps,
 		}),
 };

@@ -4,9 +4,25 @@
  */
 
 import seoConfig from "@/config/seo/global-seo.config.json";
+import {
+	buildCanonicalURL,
+	buildAlternateURL,
+	getAvailableLanguages,
+	getLanguageConfig as getDomainLanguageConfig,
+	detectLanguageFromPath as detectLangFromPath,
+} from "./domain-utils";
 
-export type RegionCode = keyof typeof seoConfig.regions;
+export type LanguageCode = string;
 
+export interface LanguageConfig {
+	name: string;
+	nativeName: string;
+	hreflang: string;
+	direction: string;
+	localizedTerms: Record<string, string>;
+}
+
+// Legacy type for backward compatibility
 export interface RegionConfig {
 	language: string;
 	currency: string;
@@ -23,9 +39,9 @@ export interface RegionConfig {
 export interface SEOConfig {
 	defaultDomain: string;
 	defaultLang: string;
-	defaultCountry: string;
 	environment: string;
-	regions: Record<string, RegionConfig>;
+	supportedTLDs: string[];
+	languages: Record<string, LanguageConfig>;
 	defaults: {
 		siteName: string;
 		organization: string;
@@ -132,36 +148,71 @@ export function getSEOConfig(): SEOConfig {
 }
 
 /**
- * Get region-specific configuration
+ * Get language-specific configuration
  */
-export function getRegionConfig(region: string = "global"): RegionConfig {
+export function getLanguageConfig(language: string = "en"): LanguageConfig {
 	const config = getSEOConfig();
-	return config.regions[region] || config.regions[config.defaultCountry];
-}
+	const langConfig = config.languages[language];
 
-/**
- * Get all available regions
- */
-export function getAvailableRegions(): string[] {
-	const config = getSEOConfig();
-	return Object.keys(config.regions);
-}
-
-/**
- * Detect region from URL path or return default
- */
-export function detectRegionFromPath(pathname: string): string {
-	const config = getSEOConfig();
-	const pathSegments = pathname.split("/").filter(Boolean);
-
-	if (pathSegments.length > 0) {
-		const firstSegment = pathSegments[0].toLowerCase();
-		if (config.regions[firstSegment]) {
-			return firstSegment;
-		}
+	if (!langConfig) {
+		// Fallback to default language
+		return config.languages[config.defaultLang] as LanguageConfig;
 	}
 
-	return config.defaultCountry;
+	return langConfig as LanguageConfig;
+}
+
+/**
+ * Get all available languages
+ */
+export function getAvailableLanguagesList(): string[] {
+	return getAvailableLanguages();
+}
+
+/**
+ * Detect language from URL path or return default
+ */
+export function detectLanguageFromPath(pathname: string): string {
+	return detectLangFromPath(pathname);
+}
+
+/**
+ * Legacy function for backward compatibility - maps to language config
+ * @deprecated Use getLanguageConfig instead
+ */
+export function getRegionConfig(region: string = "global"): RegionConfig {
+	const language = region === "global" ? "en" : region;
+	const langConfig = getLanguageConfig(language);
+
+	// Create a legacy RegionConfig from LanguageConfig
+	return {
+		language: language,
+		currency: "USD", // Default currency
+		hreflang: langConfig.hreflang,
+		countryCode: "INT",
+		timezone: "UTC",
+		metaTitleSuffix: " | Hyperbetz",
+		canonicalBase: buildCanonicalURL("", language),
+		gtmId: "",
+		ga4Id: "",
+		localizedTerms: langConfig.localizedTerms,
+	};
+}
+
+/**
+ * Legacy function for backward compatibility
+ * @deprecated Use getAvailableLanguagesList instead
+ */
+export function getAvailableRegions(): string[] {
+	return getAvailableLanguages();
+}
+
+/**
+ * Legacy function for backward compatibility
+ * @deprecated Use detectLanguageFromPath instead
+ */
+export function detectRegionFromPath(pathname: string): string {
+	return detectLanguageFromPath(pathname);
 }
 
 /**
@@ -179,53 +230,41 @@ export function getPageDefaults(pageType: string): {
 }
 
 /**
- * Generate canonical URL for a path
+ * Generate canonical URL for a path (DYNAMIC - uses current domain)
  */
 export function generateCanonicalURL(
 	path: string,
-	region: string = "global"
+	language?: string
 ): string {
-	const regionConfig = getRegionConfig(region);
-	const cleanPath = path.startsWith("/") ? path : `/${path}`;
-
-	// Remove region prefix from path if it exists
-	const pathWithoutRegion = cleanPath.replace(new RegExp(`^/${region}`), "");
-
-	if (region === "global") {
-		return `${regionConfig.canonicalBase}${pathWithoutRegion}`;
-	}
-
-	return `${regionConfig.canonicalBase}${pathWithoutRegion}`;
+	return buildCanonicalURL(path, language);
 }
 
 /**
- * Generate hreflang tags for all regions
+ * Generate hreflang tags for all available languages (DYNAMIC)
  */
 export function generateHrefLangTags(
 	path: string
 ): Array<{ hreflang: string; href: string }> {
 	const config = getSEOConfig();
 	const tags: Array<{ hreflang: string; href: string }> = [];
+	const languages = getAvailableLanguages();
 
-	// Clean path
-	const cleanPath = path.replace(/^\/[a-z]{2}(\/|$)/, "/");
-
-	Object.entries(config.regions).forEach(([regionKey, regionConfig]) => {
-		const href =
-			regionKey === "global"
-				? `${regionConfig.canonicalBase}${cleanPath}`
-				: `${regionConfig.canonicalBase}${cleanPath}`;
+	// Generate alternate URLs for each language
+	languages.forEach((lang) => {
+		const langConfig = getLanguageConfig(lang);
+		const href = buildAlternateURL(path, lang);
 
 		tags.push({
-			hreflang: regionConfig.hreflang,
+			hreflang: langConfig.hreflang,
 			href,
 		});
 	});
 
-	// Add x-default
+	// Add x-default (points to default language)
+	const defaultHref = buildAlternateURL(path, config.defaultLang);
 	tags.push({
 		hreflang: "x-default",
-		href: `${config.defaultDomain}${cleanPath}`,
+		href: defaultHref,
 	});
 
 	return tags;

@@ -5,6 +5,7 @@
  */
 
 import { getSEOConfig } from "./seo-config-loader";
+import { getCurrentDomainWithProtocol } from "./domain-utils";
 
 export interface SchemaOptions {
 	type:
@@ -19,7 +20,8 @@ export interface SchemaOptions {
 		| "product"
 		| "mobileapp";
 	data?: Record<string, unknown>;
-	region?: string;
+	region?: string; // @deprecated Use language instead
+	language?: string;
 }
 
 /**
@@ -34,25 +36,23 @@ export function generateOrganizationSchema(): Record<string, unknown> {
 }
 
 /**
- * Generate Website schema
+ * Generate Website schema (DYNAMIC - uses current domain)
  */
 export function generateWebsiteSchema(
-	region: string = "global"
+	language?: string
 ): Record<string, unknown> {
 	const config = getSEOConfig();
-	const regionConfig = config.regions[region];
+	const currentDomain = getCurrentDomainWithProtocol();
 
 	return {
 		"@context": "https://schema.org",
 		"@type": "WebSite",
 		name: config.defaults.siteName,
-		url: regionConfig?.canonicalBase || config.defaultDomain,
+		url: currentDomain,
 		description: config.defaults.description,
 		potentialAction: {
 			"@type": "SearchAction",
-			target: `${
-				regionConfig?.canonicalBase || config.defaultDomain
-			}/search?q={search_term_string}`,
+			target: `${currentDomain}/search?q={search_term_string}`,
 			"query-input": "required name=search_term_string",
 		},
 		publisher: {
@@ -60,14 +60,15 @@ export function generateWebsiteSchema(
 			name: config.defaults.organization,
 			logo: {
 				"@type": "ImageObject",
-				url: `${config.defaultDomain}${config.defaults.logo}`,
+				url: `${currentDomain}${config.defaults.logo}`,
 			},
 		},
+		...(language && { inLanguage: language }),
 	};
 }
 
 /**
- * Generate WebPage schema
+ * Generate WebPage schema (DYNAMIC - uses current domain)
  */
 export function generateWebPageSchema(data: {
 	title: string;
@@ -75,9 +76,10 @@ export function generateWebPageSchema(data: {
 	url: string;
 	datePublished?: string;
 	dateModified?: string;
-	region?: string;
+	language?: string;
 }): Record<string, unknown> {
 	const config = getSEOConfig();
+	const currentDomain = getCurrentDomainWithProtocol();
 
 	return {
 		"@context": "https://schema.org",
@@ -87,10 +89,11 @@ export function generateWebPageSchema(data: {
 		url: data.url,
 		isPartOf: {
 			"@type": "WebSite",
-			url: config.defaultDomain,
+			url: currentDomain,
 		},
 		...(data.datePublished && { datePublished: data.datePublished }),
 		...(data.dateModified && { dateModified: data.dateModified }),
+		...(data.language && { inLanguage: data.language }),
 		publisher: {
 			"@type": "Organization",
 			name: config.defaults.organization,
@@ -195,12 +198,12 @@ export function generateHowToSchema(data: {
 }
 
 /**
- * Generate BreadcrumbList schema
+ * Generate BreadcrumbList schema (DYNAMIC - uses current domain)
  */
 export function generateBreadcrumbSchema(
 	breadcrumbs: Array<{ name: string; url: string }>
 ): Record<string, unknown> {
-	const config = getSEOConfig();
+	const currentDomain = getCurrentDomainWithProtocol();
 
 	return {
 		"@context": "https://schema.org",
@@ -209,13 +212,15 @@ export function generateBreadcrumbSchema(
 			"@type": "ListItem",
 			position: index + 1,
 			name: crumb.name,
-			item: `${config.defaultDomain}${crumb.url}`,
+			item: crumb.url.startsWith('http')
+				? crumb.url
+				: `${currentDomain}${crumb.url}`,
 		})),
 	};
 }
 
 /**
- * Generate Article schema
+ * Generate Article schema (DYNAMIC - uses current domain)
  */
 export function generateArticleSchema(data: {
 	title: string;
@@ -225,8 +230,10 @@ export function generateArticleSchema(data: {
 	author?: string;
 	datePublished: string;
 	dateModified?: string;
+	language?: string;
 }): Record<string, unknown> {
 	const config = getSEOConfig();
+	const currentDomain = getCurrentDomainWithProtocol();
 
 	return {
 		"@context": "https://schema.org",
@@ -240,6 +247,7 @@ export function generateArticleSchema(data: {
 				url: data.image,
 			},
 		}),
+		...(data.language && { inLanguage: data.language }),
 		author: {
 			"@type": "Person",
 			name: data.author || config.defaults.author,
@@ -249,7 +257,7 @@ export function generateArticleSchema(data: {
 			name: config.defaults.organization,
 			logo: {
 				"@type": "ImageObject",
-				url: `${config.defaultDomain}${config.defaults.logo}`,
+				url: `${currentDomain}${config.defaults.logo}`,
 			},
 		},
 		datePublished: data.datePublished,
@@ -352,12 +360,13 @@ export function generateSchema(
 	options: SchemaOptions
 ): Record<string, unknown> | null {
 	const { type, data = {} } = options;
+	const language = options.language || options.region; // Support both for backward compatibility
 
 	switch (type) {
 		case "organization":
 			return generateOrganizationSchema();
 		case "website":
-			return generateWebsiteSchema(options.region);
+			return generateWebsiteSchema(language);
 		case "webpage":
 			return generateWebPageSchema(
 				data as {
@@ -366,7 +375,7 @@ export function generateSchema(
 					url: string;
 					datePublished?: string;
 					dateModified?: string;
-					region?: string;
+					language?: string;
 				}
 			);
 		case "game":
@@ -412,6 +421,7 @@ export function generateSchema(
 					author?: string;
 					datePublished: string;
 					dateModified?: string;
+					language?: string;
 				}
 			);
 		case "product":

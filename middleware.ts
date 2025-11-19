@@ -4,6 +4,7 @@ import { locales } from '@/lib/i18n';
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  const host = request.headers.get('host') || '';
 
   // Skip middleware for language switching route
   if (pathname.startsWith('/ln/')) {
@@ -31,8 +32,9 @@ export function middleware(request: NextRequest) {
       maxAge: 60 * 60 * 24 * 365, // 1 year
     });
 
-    // Also set it in a header that can be read by server components
+    // Set headers for server components to access
     response.headers.set('x-locale', locale);
+    response.headers.set('x-hostname', host);
 
     return response;
   }
@@ -66,7 +68,11 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  return NextResponse.next();
+  // For all other requests, add the host header
+  const response = NextResponse.next();
+  response.headers.set('x-hostname', host);
+
+  return response;
 }
 
 export const config = {
