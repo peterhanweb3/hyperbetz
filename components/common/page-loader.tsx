@@ -53,12 +53,12 @@ export function PageLoader() {
 				{/* Logo with pulse animation */}
 				<div className="animate-pulse">
 					<Image
-						src="/assets/site/meme-win-logo.png"
-						alt="Meme Win"
-						width={200}
-						height={200}
+						src="/assets/site/Hyperbetz-logo.png"
+						alt="Hyperbetz Logo"
+						width={800}
+						height={800}
 						priority
-						className="w-48 h-auto"
+						className="w-[80%] mx-auto"
 					/>
 				</div>
 
