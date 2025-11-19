@@ -1,25 +1,23 @@
 # ==========================================================
-# HyperBetz Gaming Network — Robots.txt
-# Version: SEO + AI + Compliance Optimized
+# HyperBetz Gaming Network — robots.txt
+# SEO + AI + Compliance Optimized (Final Version)
 # ==========================================================
 # Purpose:
-# - Maximize search visibility for games, providers, and offers
-# - Allow AI indexing (not training)
-# - Protect user-sensitive and backend routes
-# - Ensure full discoverability of legal & trust pages
+# - Maximize Google/Bing discoverability
+# - Allow AI summarization + input (NOT training)
+# - Protect sensitive, private, & dynamic routes
+# - Remove conflicts with Cloudflare Managed rules
 # ==========================================================
 
 User-agent: *
 Content-signal: search=yes,ai-input=yes,ai-train=no
 
 # ==========================================================
-# ✅ ALLOWED PUBLIC CONTENT
+# ✅ ALLOWED PUBLIC CONTENT (FULLY INDEXABLE)
 # ==========================================================
 Allow: /
 Allow: /lobby
-Allow: /games
 Allow: /games/
-Allow: /providers
 Allow: /providers/
 Allow: /bonus
 Allow: /affiliate
@@ -33,7 +31,7 @@ Allow: /terms-and-conditions
 Allow: /responsible-gambling
 
 # ==========================================================
-# 🚫 DISALLOWED SENSITIVE / DYNAMIC PATHS
+# 🚫 DISALLOWED SENSITIVE / PRIVATE / DYNAMIC PATHS
 # ==========================================================
 Disallow: /admin/
 Disallow: /api/
@@ -47,11 +45,17 @@ Disallow: /transactions/
 Disallow: /settings/
 Disallow: /my-bets/
 Disallow: /favourites/
+
+# Block gameplay endpoints
 Disallow: */casino/games/*/play*
 Disallow: */casino/games/*/demo*
+
+# Block heavy sports data pages
 Disallow: */sports/home/live*
 Disallow: */sports/home/upcoming*
 Disallow: */sports/home/promotion*
+
+# Block parameters / tracking / session identifiers
 Disallow: *?ref=*
 Disallow: *?utm_*
 Disallow: *?page=*
@@ -66,54 +70,59 @@ Disallow: *clientSeed=*
 Disallow: *currency=*
 Disallow: *drop=*
 Disallow: *auth*
+
+# Block low-quality blog category
 Disallow: */blog/category/uncategorized*
 
 # ==========================================================
-# 📰 ALLOW BLOG SEO CONTENT
+# 📰 ALLOW BLOG SEO CONTENT (High-value keywords)
 # ==========================================================
 Allow: */blog/*transactions*
 Allow: */blog/*updates*
 Allow: */blog/*news*
 
 # ==========================================================
-# 🤖 SEARCH + AI BOT PERMISSIONS
+# 🤖 SEARCH ENGINE BOTS (PRIORITIZED)
 # ==========================================================
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 2
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 2
+Crawl-delay: 1
 
+# ==========================================================
+# 🤖 AI BOTS — Allowed for INPUT, Not TRAINING
+# ==========================================================
 User-agent: GPTBot
 Allow: /
-Disallow: /api/
 Disallow: /admin/
+Disallow: /api/
 Disallow: /private/
 
 User-agent: ClaudeBot
 Allow: /
-Disallow: /api/
 Disallow: /admin/
+Disallow: /api/
 Disallow: /private/
 
 User-agent: Claude-Web
 Allow: /
-Disallow: /api/
 Disallow: /admin/
+Disallow: /api/
 Disallow: /private/
 
 User-agent: PerplexityBot
 Allow: /
-Disallow: /api/
 Disallow: /admin/
+Disallow: /api/
 Disallow: /private/
 
 User-agent: ChatGPT-User
 Allow: /
-Disallow: /api/
 Disallow: /admin/
+Disallow: /api/
 Disallow: /private/
 
 User-agent: Google-Extended
@@ -135,5 +144,6 @@ User-agent: Omgili
 User-agent: YouBot
 Disallow: /
 
-
+# ==========================================================
 # © HyperBetz Gaming Network 2025 — All Rights Reserved.
+# ==========================================================
