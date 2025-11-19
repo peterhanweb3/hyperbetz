@@ -9,48 +9,31 @@ export type SupportedTLD = string;
 
 /**
  * Get the current domain from various sources (server/client)
- * Priority: headers -> window -> env -> default
+ * Priority: window -> env -> default
+ * Note: Server-side domain detection happens in middleware via headers
  */
 export function getCurrentDomain(): string {
-	// 1. Server-side: Check headers (Next.js)
-	if (typeof window === "undefined") {
-		// Try to get from headers in middleware or server components
-		try {
-			// This will be set by middleware or can be accessed in server components
-			const headersList = require("next/headers").headers;
-			const headers = headersList();
-			const host = headers.get("host");
-			if (host) {
-				// Clean up the host (remove port if present)
-				const cleanHost = host.split(":")[0];
-				return cleanHost;
-			}
-		} catch {
-			// Headers not available, continue to next method
-		}
-
-		// Try environment variable
-		if (process.env.NEXT_PUBLIC_SITE_DOMAIN) {
-			return process.env.NEXT_PUBLIC_SITE_DOMAIN;
-		}
-
-		// Try to extract from NEXT_PUBLIC_SITE_URL
-		if (process.env.NEXT_PUBLIC_SITE_URL) {
-			try {
-				const url = new URL(process.env.NEXT_PUBLIC_SITE_URL);
-				return url.hostname;
-			} catch {
-				// Invalid URL, continue
-			}
-		}
-	}
-
-	// 2. Client-side: Use window.location
+	// 1. Client-side: Use window.location (most reliable on client)
 	if (typeof window !== "undefined") {
 		return window.location.hostname;
 	}
 
-	// 3. Fallback to default domain from config
+	// 2. Server-side: Try environment variable
+	if (process.env.NEXT_PUBLIC_SITE_DOMAIN) {
+		return process.env.NEXT_PUBLIC_SITE_DOMAIN;
+	}
+
+	// 3. Try to extract from NEXT_PUBLIC_SITE_URL
+	if (process.env.NEXT_PUBLIC_SITE_URL) {
+		try {
+			const url = new URL(process.env.NEXT_PUBLIC_SITE_URL);
+			return url.hostname;
+		} catch {
+			// Invalid URL, continue
+		}
+	}
+
+	// 4. Fallback to default domain from config
 	const defaultUrl = seoConfig.defaultDomain;
 	try {
 		const url = new URL(defaultUrl);
@@ -191,16 +174,21 @@ export function getAvailableLanguages(): string[] {
 }
 
 /**
- * Get language configuration
+ * Language configuration interface
  */
-export function getLanguageConfig(language: string): {
+interface LanguageConfig {
 	name: string;
 	nativeName: string;
 	hreflang: string;
 	direction: string;
 	localizedTerms: Record<string, string>;
-} | null {
-	const config = seoConfig.languages as Record<string, any>;
+}
+
+/**
+ * Get language configuration
+ */
+export function getLanguageConfig(language: string): LanguageConfig | null {
+	const config = seoConfig.languages as Record<string, LanguageConfig>;
 	return config[language] || null;
 }
 

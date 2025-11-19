@@ -8,7 +8,6 @@ import {
 	buildCanonicalURL,
 	buildAlternateURL,
 	getAvailableLanguages,
-	getLanguageConfig as getDomainLanguageConfig,
 	detectLanguageFromPath as detectLangFromPath,
 } from "./domain-utils";
 
