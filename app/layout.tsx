@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { cookies } from "next/headers";
 import { ThemeProvider } from "@/components/theme/theme-provider";
@@ -7,12 +6,15 @@ import { LocaleProvider } from "@/lib/locale-provider";
 import { IOSViewportFix } from "@/components/common/ios-viewport-fix";
 import { ServiceWorkerRegister } from "@/components/common/service-worker-register";
 import { PageLoader } from "@/components/common/page-loader";
-import { SEOTemplates } from "@/lib/seo/seo-provider";
 import { JsonLd } from "@/components/seo/json-ld";
-import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/seo/schema-generator";
+import {
+	generateOrganizationSchema,
+	generateWebsiteSchema,
+} from "@/lib/utils/seo/schema-generator";
 import { getServerMessages, type Locale } from "@/lib/i18n";
 // Avoid bundling public images via import to skip sharp at build time
 import "./globals.css";
+import { getDynamicSEOConfig } from "@/lib/utils/seo/seo-config-loader";
 
 const poppins = Poppins({
 	style: "normal",
@@ -24,21 +26,22 @@ const poppins = Poppins({
 	adjustFontFallback: true, // Reduce layout shift
 });
 
-// Global SEO metadata from centralized SEO system
-export const metadata: Metadata = SEOTemplates.home().metadata;
+// Root layout should NOT generate metadata - let page-specific layouts handle it
+// This prevents duplicate meta tags when nested layouts both use generateMetadata()
 
 export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const config = await getDynamicSEOConfig();
 	// Generate SEO schemas for rich snippets
-	const organizationSchema = generateOrganizationSchema();
-	const websiteSchema = generateWebsiteSchema();
+	const organizationSchema = generateOrganizationSchema(config);
+	const websiteSchema = generateWebsiteSchema("global", config);
 
 	// Get user's locale from cookies for proper HTML lang attribute (SEO)
 	const cookieStore = await cookies();
-	const locale = (cookieStore.get('NEXT_LOCALE')?.value || 'en') as Locale;
+	const locale = (cookieStore.get("NEXT_LOCALE")?.value || "en") as Locale;
 	const initialMessages = await getServerMessages(locale);
 
 	return (
@@ -124,7 +127,10 @@ export default async function RootLayout({
 					enableSystem
 					themes={["light", "dark"]} // IMPORTANT: Only manage light/dark here
 				>
-					<LocaleProvider initialMessages={initialMessages} initialLocale={locale}>
+					<LocaleProvider
+						initialMessages={initialMessages}
+						initialLocale={locale}
+					>
 						<ThemeColorProvider defaultTheme="green">
 							<PageLoader />
 							<IOSViewportFix />

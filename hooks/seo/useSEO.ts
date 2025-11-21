@@ -1,6 +1,7 @@
 /**
  * useSEO Hook
  * React hook for managing SEO in client components
+ * Language-based SEO system
  */
 
 "use client";
@@ -8,33 +9,45 @@
 import { usePathname } from "next/navigation";
 import { useMemo, useEffect } from "react";
 import {
-	detectRegionFromPath,
-	getRegionConfig,
-} from "@/lib/seo/seo-config-loader";
+	detectLanguageFromPath,
+	getSEOConfig,
+} from "@/lib/utils/seo/seo-config-loader";
 
 export function useSEO() {
 	const pathname = usePathname();
+	const config = getSEOConfig();
 
-	const region = useMemo(() => detectRegionFromPath(pathname), [pathname]);
-	const regionConfig = useMemo(() => getRegionConfig(region), [region]);
+	const language = useMemo(
+		() => detectLanguageFromPath(pathname),
+		[pathname]
+	);
 
 	// Track page views for analytics
 	useEffect(() => {
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		if (typeof window !== "undefined" && (window as any).gtag) {
-			(window as any).gtag("config", regionConfig.ga4Id || "", {
-				page_path: pathname,
-			});
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+			(window as any).gtag(
+				"config",
+				config.analytics.ga4.measurementId || "",
+				{
+					page_path: pathname,
+				}
+			);
 		}
-	}, [pathname, regionConfig.ga4Id]);
+	}, [pathname, config.analytics.ga4.measurementId]);
 
 	return {
-		region,
-		regionConfig,
+		language,
 		pathname,
-		canonicalUrl: `${regionConfig.canonicalBase}${pathname}`,
-		language: regionConfig.language,
-		currency: regionConfig.currency,
-		timezone: regionConfig.timezone,
+		canonicalUrl:
+			language === "en"
+				? `${config.defaultDomain}${pathname}`
+				: `${config.defaultDomain}/${language}${pathname.replace(
+						`/${language}`,
+						""
+				  )}`,
+		metaTitleSuffix: config.metaTitleSuffix,
 	};
 }
 
@@ -50,13 +63,7 @@ export function useBreadcrumbs() {
 		const crumbs = [{ name: "Home", url: "/" }];
 
 		let currentPath = "";
-		paths.forEach((path, index) => {
-			// Skip region code
-			if (index === 0 && path.length === 2) {
-				currentPath += `/${path}`;
-				return;
-			}
-
+		paths.forEach((path) => {
 			currentPath += `/${path}`;
 			const name = path
 				.split("-")
@@ -76,7 +83,7 @@ export function useBreadcrumbs() {
  * useStructuredData Hook
  * Inject structured data into the page
  */
-export function useStructuredData(schema: Record<string, any> | null) {
+export function useStructuredData(schema: Record<string, unknown> | null) {
 	useEffect(() => {
 		if (!schema || typeof window === "undefined") return;
 

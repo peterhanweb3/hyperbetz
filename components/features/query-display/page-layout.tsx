@@ -40,6 +40,8 @@ export const QueryPageLayout = () => {
 		sortBy,
 	} = useAppStore((state) => state.query);
 	const { showMoreItems } = useAppStore((state) => state.query);
+
+	console.log("Active-filters:", activeFilters);
 	const {
 		handleToggleFilter,
 		handleClearFilters,

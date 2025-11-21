@@ -95,8 +95,6 @@ import { useAppStore } from "@/store/store";
 import { useT } from "@/hooks/useI18n";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRefresh } from "@fortawesome/pro-light-svg-icons";
-import { ClientSEO } from "@/components/seo/client-seo";
-import { interpolateSiteName } from "@/lib/utils/site-config";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 // import { ReferralsTab } from "@/components/features/affiliate/referral-tab";
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -234,17 +232,10 @@ export default function AffiliatePage() {
 			</div>
 		);
 	}
-	const siteName = interpolateSiteName(`{siteName}`);
 
 	if (!primaryWallet) {
 		return (
 			<div className="min-h-screen bg-background">
-				<ClientSEO
-					title={`Affiliate Program - Earn Commissions | ${siteName}`}
-					description={`Join the ${siteName} affiliate program and earn up to 50% commission on player wagers. Track referrals, bonuses, and claim rewards.`}
-					keywords={`affiliate program ${siteName}, casino affiliate, betting commissions, referral rewards, earn money online, ${siteName}`}
-					ogImage="/assets/seo/AFFILIATE.png"
-				/>
 				<div className="py-4 sm:py-6 space-y-6 sm:space-y-8 px-4 sm:px-6 lg:px-8">
 					{/* Header Section */}
 					<div className="flex items-center justify-between flex-wrap gap-4">
@@ -283,10 +274,11 @@ export default function AffiliatePage() {
 											onClick={() =>
 												setActiveTab("rates")
 											}
-											className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${activeTab === "rates"
-												? "text-foreground"
-												: "text-muted-foreground hover:text-foreground"
-												}`}
+											className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+												activeTab === "rates"
+													? "text-foreground"
+													: "text-muted-foreground hover:text-foreground"
+											}`}
 										>
 											{t("affiliate.tabs.rates")}
 										</button>
@@ -295,10 +287,11 @@ export default function AffiliatePage() {
 											onClick={() =>
 												setActiveTab("calculator")
 											}
-											className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${activeTab === "calculator"
-												? "text-foreground"
-												: "text-muted-foreground hover:text-foreground"
-												}`}
+											className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+												activeTab === "calculator"
+													? "text-foreground"
+													: "text-muted-foreground hover:text-foreground"
+											}`}
 										>
 											{t("affiliate.tabs.calculator")}
 										</button>
@@ -326,12 +319,6 @@ export default function AffiliatePage() {
 	}
 	return (
 		<div className="min-h-screen bg-background">
-			<ClientSEO
-				title={`Affiliate Program - Earn Commissions | ${siteName}`}
-				description={`Join the ${siteName} affiliate program and earn up to 50% commission on player wagers. Track referrals, bonuses, and claim rewards.`}
-				keywords={`affiliate program ${siteName}, casino affiliate, betting commissions, referral rewards, earn money online, ${siteName}`}
-				ogImage="/assets/seo/og.png"
-			/>
 			<div className="py-4 sm:py-6 space-y-6 sm:space-y-8 px-4 sm:px-6 lg:px-8">
 				{/* Header Section with Refresh Button */}
 				<div className="flex items-center justify-between flex-wrap gap-4">
@@ -359,8 +346,8 @@ export default function AffiliatePage() {
 							{isRefreshing
 								? t("affiliate.refreshing")
 								: refreshCooldown > 0
-									? `${refreshCooldown}s`
-									: t("affiliate.refresh")}
+								? `${refreshCooldown}s`
+								: t("affiliate.refresh")}
 						</span>
 					</Button>
 				</div>
@@ -382,8 +369,9 @@ export default function AffiliatePage() {
 									className="absolute h-[calc(100%-8px)] top-1 left-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
 									style={{
 										width: `calc(${indicatorStyle.width}px - 8px)`,
-										transform: `translateX(${indicatorStyle.left - 4
-											}px)`,
+										transform: `translateX(${
+											indicatorStyle.left - 4
+										}px)`,
 									}}
 								/>
 
@@ -394,20 +382,22 @@ export default function AffiliatePage() {
 										onClick={() =>
 											setActiveTab("dashboard")
 										}
-										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${activeTab === "dashboard"
-											? "text-foreground"
-											: "text-muted-foreground hover:text-foreground"
-											}`}
+										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+											activeTab === "dashboard"
+												? "text-foreground"
+												: "text-muted-foreground hover:text-foreground"
+										}`}
 									>
 										{t("affiliate.tabs.dashboard")}
 									</button>
 									<button
 										data-value="rates"
 										onClick={() => setActiveTab("rates")}
-										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${activeTab === "rates"
-											? "text-foreground"
-											: "text-muted-foreground hover:text-foreground"
-											}`}
+										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+											activeTab === "rates"
+												? "text-foreground"
+												: "text-muted-foreground hover:text-foreground"
+										}`}
 									>
 										{t("affiliate.tabs.rates")}
 									</button>
@@ -416,10 +406,11 @@ export default function AffiliatePage() {
 										onClick={() =>
 											setActiveTab("calculator")
 										}
-										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${activeTab === "calculator"
-											? "text-foreground"
-											: "text-muted-foreground hover:text-foreground"
-											}`}
+										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+											activeTab === "calculator"
+												? "text-foreground"
+												: "text-muted-foreground hover:text-foreground"
+										}`}
 									>
 										{t("affiliate.tabs.calculator")}
 									</button>

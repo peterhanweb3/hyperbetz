@@ -110,9 +110,7 @@ export const createAffiliateManagerSlice: AppStateCreator<
 	refreshAll: async (force = false) => {
 		// Return existing promise if already fetching (deduplication)
 
-		console.log("yha se gya");
 		const slice = get().affiliate.manager;
-		console.log("lele");
 		const storage = LocalStorageService.getInstance();
 		const api = ApiService.getInstance();
 
@@ -126,8 +124,6 @@ export const createAffiliateManagerSlice: AppStateCreator<
 		if (!isStale && slice.status === "success") {
 			return; // Use existing data
 		}
-
-		console.log("yha agfya ");
 
 		// Create and store the fetch promise
 		fetchPromise = (async () => {

@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Metadata } from "next";
-import { generateSEOMetadata } from "@/lib/seo/seo-provider";
+import { generateSEOMetadata } from "@/lib/utils/seo/seo-provider";
 import { GamesPageLayoutWrapper } from "./games-page-layout-wrapper";
 import { QueryPageSkeleton } from "@/components/features/query-display/query-page-skeleton";
 import { interpolateSiteName } from "@/lib/utils/site-config";
@@ -105,7 +105,8 @@ export function generateStaticParams() {
 	// Get all unique provider slugs (69 providers)
 	const allProviderSlugs = Object.keys(PROVIDER_SLUG_MAP).filter(
 		// Filter out aliases to avoid duplicates
-		(slug) => !["relax-gaming", "hacksaw-gaming", "nolimit-city"].includes(slug)
+		(slug) =>
+			!["relax-gaming", "hacksaw-gaming", "nolimit-city"].includes(slug)
 	);
 
 	const categories = ["slot", "live-casino", "sports", "rng"];
@@ -134,7 +135,7 @@ export function generateStaticParams() {
 		"relax",
 		"no-limit",
 		"fa-chai",
-		...allProviderSlugs.slice(0, 30) // Add more providers
+		...allProviderSlugs.slice(0, 30), // Add more providers
 	];
 
 	// Provider only pages (50 providers)

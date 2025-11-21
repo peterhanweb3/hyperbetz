@@ -2,75 +2,61 @@
  * SEO Provider Component
  * Central SEO management system for Next.js App Router
  * Handles metadata generation, schema, hreflang, and AI optimization
+ * Language-based SEO using Dictionary files
  */
 
 import { Metadata } from "next";
 import {
 	getSEOConfig,
-	getRegionConfig,
+	getDynamicSEOConfig,
 	generateCanonicalURL,
 	generateHrefLangTags,
 	interpolateString,
 	getPageDefaults,
 } from "./seo-config-loader";
 import { generateSchema, generateMultipleSchemas } from "./schema-generator";
-
-export interface SEOProps {
-	title?: string;
-	description?: string;
-	keywords?: string[];
-	canonical?: string;
-	ogImage?: string;
-	ogType?: "website" | "article" | "profile" | "game";
-	region?: string;
-	noindex?: boolean;
-	nofollow?: boolean;
-	path?: string;
-	pageType?: string;
-	variables?: Record<string, string>;
-	schemas?: Array<Record<string, unknown>>;
-	customMetadata?: Partial<Metadata>;
-
-	// Optional properties for overriding OG title and description
-	ogTitle?: string;
-	ogDescription?: string;
-}
+import { SEOConfig, SEOProps } from "@/types/seo/seo.types";
 
 /**
  * Generate complete metadata for Next.js pages
+ * Language-based SEO system
  */
-export function generateSEOMetadata(props: SEOProps): Metadata {
-	const config = getSEOConfig();
-	const region = props.region || config.defaultCountry;
-	const regionConfig = getRegionConfig(region);
+export async function generateSEOMetadata(props: SEOProps): Promise<Metadata> {
+	const config = await getDynamicSEOConfig();
+	const language = props.language || config.defaultLang;
 
 	// Get page defaults if pageType is provided
 	const pageDefaults = props.pageType
-		? getPageDefaults(props.pageType)
+		? getPageDefaults(props.pageType, config)
 		: null;
 
 	// Interpolate variables in title and description
-	let title =
-		props.title || pageDefaults?.title || config.defaults.description;
+	let title = props.title || pageDefaults?.title || "";
 	let description =
 		props.description ||
 		pageDefaults?.description ||
 		config.defaults.description;
+
+	console.log("PageDefaults:", pageDefaults, "props:", props);
 
 	if (props.variables) {
 		title = interpolateString(title, props.variables);
 		description = interpolateString(description, props.variables);
 	}
 
-	// Add region suffix to title
-	const fullTitle = `${title}${regionConfig.metaTitleSuffix}`;
+	// Add title suffix
+	const fullTitle = `${title}${config.metaTitleSuffix}`;
 
 	// Generate canonical URL
-	const canonical =
-		props.canonical || generateCanonicalURL(props.path || "/", region);
+	const canonical = !(props.nocanonical??true)
+		? props.canonical ||
+		  generateCanonicalURL(props.path || "/", language, config)
+		: undefined;
 
-	// Generate hreflang tags
-	const hrefLangTags = props.path ? generateHrefLangTags(props.path) : [];
+	// Generate hreflang tags (based on Dictionary languages)
+	const hrefLangTags = props.path
+		? generateHrefLangTags(props.path, config)
+		: [];
 
 	// Determine OG image
 	const ogImage =
@@ -79,7 +65,8 @@ export function generateSEOMetadata(props: SEOProps): Metadata {
 	// Build keywords
 	const keywords = props.keywords || pageDefaults?.keywords || [];
 
-	// Base metadata
+	// Determine locale for Open Graph
+	const ogLocale = getLanguageLocale(language); // Base metadata
 	const metadata: Metadata = {
 		metadataBase: new URL(config.defaultDomain),
 		title: fullTitle,
@@ -119,10 +106,7 @@ export function generateSEOMetadata(props: SEOProps): Metadata {
 			description: props.ogDescription || description, // Allow manual override of OG description
 			url: canonical,
 			siteName: config.defaults.siteName,
-			locale:
-				regionConfig.language === "en"
-					? "en_US"
-					: regionConfig.hreflang.replace("-", "_"),
+			locale: ogLocale,
 			images: [
 				{
 					url: ogImage,
@@ -156,7 +140,7 @@ export function generateSEOMetadata(props: SEOProps): Metadata {
 
 		// Alternates for hreflang
 		alternates: {
-			canonical,
+			...(canonical && { canonical }),
 			languages: hrefLangTags.reduce((acc, tag) => {
 				if (tag.hreflang !== "x-default") {
 					acc[tag.hreflang] = tag.href;
@@ -166,10 +150,10 @@ export function generateSEOMetadata(props: SEOProps): Metadata {
 		},
 
 		// Verification (can be added via env)
-		verification: {
-			google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
-			yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
-		},
+		// verification: {
+		// 	google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+		// 	yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
+		// },
 
 		// Additional metadata
 		category: "Gaming",
@@ -184,13 +168,19 @@ export function generateSEOMetadata(props: SEOProps): Metadata {
 /**
  * Generate JSON-LD script tag content
  */
-export function generateJSONLD(props: SEOProps): string | null {
-	const region = props.region || "global";
+export function generateJSONLD(
+	props: SEOProps,
+	config: SEOConfig
+): string | null {
+	const language = props.language || config.defaultLang;
 	const schemas: Array<Record<string, unknown>> = [];
 
 	// Always include Organization and Website schemas
-	const orgSchema = generateSchema({ type: "organization", region });
-	const webSchema = generateSchema({ type: "website", region });
+	const orgSchema = generateSchema(
+		{ type: "organization", language },
+		config
+	);
+	const webSchema = generateSchema({ type: "website", language }, config);
 
 	if (orgSchema) schemas.push(orgSchema);
 	if (webSchema) schemas.push(webSchema);
@@ -206,8 +196,11 @@ export function generateJSONLD(props: SEOProps): string | null {
 /**
  * Generate meta tags for AI Search Optimization (AISO)
  */
-export function generateAISOTags(props: SEOProps): Record<string, string> {
-	const config = getSEOConfig();
+export function generateAISOTags(
+	props: SEOProps,
+	passedConfig: SEOConfig
+): Record<string, string> {
+	const config = passedConfig || getSEOConfig();
 
 	if (!config.aiso.enabled) {
 		return {};
@@ -234,12 +227,12 @@ export function generateAISOTags(props: SEOProps): Record<string, string> {
 /**
  * Generate performance hints (preconnect, dns-prefetch, preload)
  */
-export function generatePerformanceHints(): {
+export function generatePerformanceHints(passedConfig?: SEOConfig): {
 	preconnect: string[];
 	dnsPrefetch: string[];
 	preload: Array<{ href: string; as: string; type?: string }>;
 } {
-	const config = getSEOConfig();
+	const config = passedConfig || getSEOConfig();
 
 	return {
 		preconnect: config.performance.enablePreconnect
@@ -266,12 +259,18 @@ export function generatePerformanceHints(): {
 /**
  * Complete SEO configuration for a page
  */
-export function generatePageSEO(props: SEOProps) {
+export async function generatePageSEO(props: SEOProps) {
+	// 1. Fetch config asynchronously
+	const config = await getDynamicSEOConfig();
+
 	return {
-		metadata: generateSEOMetadata(props),
-		jsonld: generateJSONLD(props),
-		aisoTags: generateAISOTags(props),
-		performanceHints: generatePerformanceHints(),
+		// 2. Metadata is generated via the async function we defined above
+		metadata: await generateSEOMetadata(props),
+
+		// 3. Others are generated synchronously but injected with the dynamic config
+		jsonld: generateJSONLD(props, config),
+		aisoTags: generateAISOTags(props, config),
+		performanceHints: generatePerformanceHints(config),
 	};
 }
 
@@ -279,60 +278,96 @@ export function generatePageSEO(props: SEOProps) {
  * Helper function to generate SEO for common page types
  */
 export const SEOTemplates = {
-	home: (region?: string, customProps?: Partial<SEOProps>) =>
+	home: async (language?: string, customProps?: Partial<SEOProps>) =>
 		generatePageSEO({
 			pageType: "home",
 			path: "/",
-			region,
+			language,
 			...customProps,
 		}),
 
-	lobby: (region?: string, customProps?: Partial<SEOProps>) =>
+	lobby: async (language?: string, customProps?: Partial<SEOProps>) =>
 		generatePageSEO({
 			pageType: "lobby",
 			path: "/lobby",
-			region,
+			language,
 			...customProps,
 		}),
 
-	game: (
+	game: async (
 		gameName: string,
-		region?: string,
+		language?: string,
 		customProps?: Partial<SEOProps>
 	) =>
 		generatePageSEO({
 			pageType: "game",
 			path: `/play/${gameName.toLowerCase().replace(/\s+/g, "-")}`,
-			region,
+			language,
 			variables: { gameName },
 			...customProps,
 		}),
 
-	profile: (region?: string, customProps?: Partial<SEOProps>) =>
+	profile: async (language?: string, customProps?: Partial<SEOProps>) =>
 		generatePageSEO({
 			pageType: "profile",
 			path: "/profile",
-			region,
+			language,
 			ogType: "profile",
 			noindex: true, // Private page
 			...customProps,
 		}),
 
-	affiliate: (region?: string, customProps?: Partial<SEOProps>) =>
+	affiliate: async (language?: string, customProps?: Partial<SEOProps>) =>
 		generatePageSEO({
 			pageType: "affiliate",
 			path: "/affiliate",
-			region,
+			language,
 			...customProps,
 		}),
 
-	providers: (region?: string, customProps?: Partial<SEOProps>) =>
+	providers: async (language?: string, customProps?: Partial<SEOProps>) =>
 		generatePageSEO({
 			pageType: "providers",
 			path: "/providers",
-			region,
+			language,
 			...customProps,
 		}),
 };
+
+/**
+ * Helper: Detect if a string is a language code from Dictionary
+ */
+export { isLanguageCode } from "./seo-config-loader";
+
+/**
+ * Helper: Get language-specific locale string for Open Graph
+ * Maps language codes to proper locale strings
+ */
+export function getLanguageLocale(langCode: string): string {
+	const localeMap: Record<string, string> = {
+		en: "en_US",
+		es: "es_ES",
+		ar: "ar_SA",
+		zh: "zh_CN",
+		nl: "nl_NL",
+		fr: "fr_FR",
+		de: "de_DE",
+		hi: "hi_IN",
+		it: "it_IT",
+		ja: "ja_JP",
+		ko: "ko_KR",
+		ms: "ms_MY",
+		fa: "fa_IR",
+		pl: "pl_PL",
+		pt: "pt_PT",
+		ru: "ru_RU",
+		sv: "sv_SE",
+		th: "th_TH",
+		tr: "tr_TR",
+		vi: "vi_VN",
+	};
+
+	return localeMap[langCode] || "en_US";
+}
 
 export default generatePageSEO;

@@ -169,15 +169,15 @@ export function Footer() {
 				},
 				{
 					label: t("footer.sections.games.links.slots"),
-					href: "/games?category=slots",
+					href: "/games/providers/slot",
 				},
 				{
 					label: t("footer.sections.games.links.live"),
-					href: "/games?category=live",
+					href: "/games/providers/live-casino",
 				},
 				{
 					label: t("footer.sections.games.links.sports"),
-					href: "/games?category=sports",
+					href: "/games/sbo",
 				},
 			],
 		},
@@ -206,7 +206,7 @@ export function Footer() {
 		},
 		{
 			icon: Facebook,
-			href: "https://www.youtube.com/@HyperBetz",
+			href: "https://www.facebook.com/profile.php?id=61583594652093",
 			label: "Facebook",
 		},
 		{

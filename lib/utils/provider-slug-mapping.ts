@@ -48,7 +48,6 @@ export const PROVIDER_SLUG_MAP: Record<string, ProviderName> = {
 	playtech: "Playtech",
 	"poggi-play": "Poggi Play",
 	"pragmatic-live": "Pragmatic Live",
-	"pragmatic-slot": "Pragmatic Play",
 	"pragmatic-play": "Pragmatic Play", // Alias
 	"red-tiger": "Red Tiger",
 	relax: "Relax",

@@ -4,29 +4,16 @@
  * Supports: Organization, Website, WebPage, Game, FAQPage, HowTo, BreadcrumbList, etc.
  */
 
+import { SchemaOptions, SEOConfig } from "@/types/seo/seo.types";
 import { getSEOConfig } from "./seo-config-loader";
-
-export interface SchemaOptions {
-	type:
-		| "organization"
-		| "website"
-		| "webpage"
-		| "game"
-		| "faq"
-		| "howto"
-		| "breadcrumb"
-		| "article"
-		| "product"
-		| "mobileapp";
-	data?: Record<string, unknown>;
-	region?: string;
-}
 
 /**
  * Generate Organization schema
  */
-export function generateOrganizationSchema(): Record<string, unknown> {
-	const config = getSEOConfig();
+export function generateOrganizationSchema(
+	passedConfig?: SEOConfig
+): Record<string, unknown> {
+	const config = passedConfig || getSEOConfig();
 	return {
 		"@context": "https://schema.org",
 		...config.schemaDefaults.organization,
@@ -35,24 +22,29 @@ export function generateOrganizationSchema(): Record<string, unknown> {
 
 /**
  * Generate Website schema
+ * @param language - Language code (en, de, ja, etc.)
  */
 export function generateWebsiteSchema(
-	region: string = "global"
+	language: string = "en",
+	passedConfig?: SEOConfig
 ): Record<string, unknown> {
-	const config = getSEOConfig();
-	const regionConfig = config.regions[region];
+	const config = passedConfig || getSEOConfig();
+
+	// Build base URL with language prefix (except for English)
+	const baseUrl =
+		language === "en"
+			? config.defaultDomain
+			: `${config.defaultDomain}/${language}`;
 
 	return {
 		"@context": "https://schema.org",
 		"@type": "WebSite",
 		name: config.defaults.siteName,
-		url: regionConfig?.canonicalBase || config.defaultDomain,
+		url: baseUrl,
 		description: config.defaults.description,
 		potentialAction: {
 			"@type": "SearchAction",
-			target: `${
-				regionConfig?.canonicalBase || config.defaultDomain
-			}/search?q={search_term_string}`,
+			target: `${baseUrl}/search?q={search_term_string}`,
 			"query-input": "required name=search_term_string",
 		},
 		publisher: {
@@ -69,15 +61,18 @@ export function generateWebsiteSchema(
 /**
  * Generate WebPage schema
  */
-export function generateWebPageSchema(data: {
-	title: string;
-	description: string;
-	url: string;
-	datePublished?: string;
-	dateModified?: string;
-	region?: string;
-}): Record<string, unknown> {
-	const config = getSEOConfig();
+export function generateWebPageSchema(
+	data: {
+		title: string;
+		description: string;
+		url: string;
+		datePublished?: string;
+		dateModified?: string;
+		language?: string;
+	},
+	passedConfig?: SEOConfig
+): Record<string, unknown> {
+	const config = passedConfig || getSEOConfig();
 
 	return {
 		"@context": "https://schema.org",
@@ -110,8 +105,6 @@ export function generateGameSchema(data: {
 	category?: string;
 	rating?: number;
 }): Record<string, unknown> {
-	getSEOConfig();
-
 	const schema: Record<string, unknown> = {
 		"@context": "https://schema.org",
 		"@type": "Game",
@@ -198,9 +191,10 @@ export function generateHowToSchema(data: {
  * Generate BreadcrumbList schema
  */
 export function generateBreadcrumbSchema(
-	breadcrumbs: Array<{ name: string; url: string }>
+	breadcrumbs: Array<{ name: string; url: string }>,
+	passedConfig?: SEOConfig
 ): Record<string, unknown> {
-	const config = getSEOConfig();
+	const config = passedConfig || getSEOConfig();
 
 	return {
 		"@context": "https://schema.org",
@@ -217,16 +211,19 @@ export function generateBreadcrumbSchema(
 /**
  * Generate Article schema
  */
-export function generateArticleSchema(data: {
-	title: string;
-	description: string;
-	url: string;
-	image?: string;
-	author?: string;
-	datePublished: string;
-	dateModified?: string;
-}): Record<string, unknown> {
-	const config = getSEOConfig();
+export function generateArticleSchema(
+	data: {
+		title: string;
+		description: string;
+		url: string;
+		image?: string;
+		author?: string;
+		datePublished: string;
+		dateModified?: string;
+	},
+	passedConfig?: SEOConfig
+): Record<string, unknown> {
+	const config = passedConfig || getSEOConfig();
 
 	return {
 		"@context": "https://schema.org",
@@ -260,8 +257,10 @@ export function generateArticleSchema(data: {
 /**
  * Generate MobileApplication schema (ASO - App Store Optimization)
  */
-export function generateMobileAppSchema(): Record<string, unknown> | null {
-	const config = getSEOConfig();
+export function generateMobileAppSchema(
+	passedConfig?: SEOConfig
+): Record<string, unknown> | null {
+	const config = passedConfig || getSEOConfig();
 
 	if (
 		!config.aso.enabled ||
@@ -349,15 +348,16 @@ export function generateMultipleSchemas(
  * Main schema generator with auto-detection
  */
 export function generateSchema(
-	options: SchemaOptions
+	options: SchemaOptions,
+	passedConfig?: SEOConfig
 ): Record<string, unknown> | null {
 	const { type, data = {} } = options;
 
 	switch (type) {
 		case "organization":
-			return generateOrganizationSchema();
+			return generateOrganizationSchema(passedConfig);
 		case "website":
-			return generateWebsiteSchema(options.region);
+			return generateWebsiteSchema(options.language, passedConfig);
 		case "webpage":
 			return generateWebPageSchema(
 				data as {
@@ -367,7 +367,8 @@ export function generateSchema(
 					datePublished?: string;
 					dateModified?: string;
 					region?: string;
-				}
+				},
+				passedConfig
 			);
 		case "game":
 			return generateGameSchema(
@@ -400,7 +401,9 @@ export function generateSchema(
 			);
 		case "breadcrumb":
 			return generateBreadcrumbSchema(
-				(data.breadcrumbs as Array<{ name: string; url: string }>) || []
+				(data.breadcrumbs as Array<{ name: string; url: string }>) ||
+					[],
+				passedConfig
 			);
 		case "article":
 			return generateArticleSchema(
@@ -412,7 +415,8 @@ export function generateSchema(
 					author?: string;
 					datePublished: string;
 					dateModified?: string;
-				}
+				},
+				passedConfig
 			);
 		case "product":
 			return generateProductSchema(
@@ -430,7 +434,7 @@ export function generateSchema(
 				}
 			);
 		case "mobileapp":
-			return generateMobileAppSchema();
+			return generateMobileAppSchema(passedConfig);
 		default:
 			return null;
 	}
