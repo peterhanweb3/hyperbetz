@@ -62,7 +62,7 @@ export type ProviderName =
 	| "Playtech"
 	| "Poggi Play"
 	| "Pragmatic Live"
-	| "Pragmatic Slot"
+	| "Pragmatic Play"
 	| "Red Tiger"
 	| "Relax"
 	| "Rich88"

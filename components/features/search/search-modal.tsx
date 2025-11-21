@@ -735,6 +735,9 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
 											Icon={faBuilding}
 											firstRowFilter="live casino"
 											secondRowFilter="slot"
+											isSingleRow={
+												selectedProviders.length < 6
+											}
 											providers={searchResults.providers}
 										/>
 									</div>

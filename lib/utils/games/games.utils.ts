@@ -17,11 +17,14 @@ import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.share
  * const uniqueGameTypes = getUniqueValuesByKey(allGames, 'category');
  * // Returns: ["SLOT", "LIVE CASINO", "SPORT BOOK", "RNG"]
  */
-export const getUniqueValuesByKey = <K extends keyof Game>(games: Game[], key: K): Array<Game[K]> => {
-  // Use a Set to automatically handle uniqueness, which is highly efficient.
-  const uniqueValues = new Set(games.map(game => game[key]));
-  // Convert the Set back to an array for standard use.
-  return Array.from(uniqueValues);
+export const getUniqueValuesByKey = <K extends keyof Game>(
+	games: Game[],
+	key: K
+): Array<Game[K]> => {
+	// Use a Set to automatically handle uniqueness, which is highly efficient.
+	const uniqueValues = new Set(games.map((game) => game[key]));
+	// Convert the Set back to an array for standard use.
+	return Array.from(uniqueValues);
 };
 
 /**
@@ -44,29 +47,29 @@ export const getUniqueValuesByKey = <K extends keyof Game>(games: Game[], key: K
  * // }
  */
 export const getUniqueValuesForKeys = <K extends keyof Game>(
-  games: Game[],
-  keys: readonly K[] // `readonly` helps with type inference
+	games: Game[],
+	keys: readonly K[] // `readonly` helps with type inference
 ): Record<K, Array<Game[K]>> => {
-  // Initialize a result object that will hold Sets for efficient uniqueness checks.
-  const result = {} as Record<K, Set<Game[K]>>;
-  for (const key of keys) {
-    result[key] = new Set();
-  }
+	// Initialize a result object that will hold Sets for efficient uniqueness checks.
+	const result = {} as Record<K, Set<Game[K]>>;
+	for (const key of keys) {
+		result[key] = new Set();
+	}
 
-  // Iterate through the games ONCE to populate all the sets. This is highly efficient.
-  for (const game of games) {
-    for (const key of keys) {
-      result[key].add(game[key]);
-    }
-  }
+	// Iterate through the games ONCE to populate all the sets. This is highly efficient.
+	for (const game of games) {
+		for (const key of keys) {
+			result[key].add(game[key]);
+		}
+	}
 
-  // Convert all sets to arrays for the final, usable output object.
-  const finalResult = {} as Record<K, Array<Game[K]>>;
-  for (const key of keys) {
-    finalResult[key] = Array.from(result[key]);
-  }
+	// Convert all sets to arrays for the final, usable output object.
+	const finalResult = {} as Record<K, Array<Game[K]>>;
+	for (const key of keys) {
+		finalResult[key] = Array.from(result[key]);
+	}
 
-  return finalResult;
+	return finalResult;
 };
 
 // --- GAME FILTERING UTILITIES ---
@@ -80,10 +83,16 @@ export const getUniqueValuesForKeys = <K extends keyof Game>(
  * @param size - (Optional) The maximum number of games to return. Returns all matches if not provided.
  * @returns A new array of game objects matching the specified category.
  */
-export const getGamesByCategory = (games: Game[], category: GameType, size?: number): Game[] => {
-  const filteredGames = games.filter(game => game.category.toUpperCase() === category.toUpperCase());
-  // If a size is specified, return a slice of the array. Otherwise, return the whole filtered list.
-  return size ? filteredGames.slice(0, size) : filteredGames;
+export const getGamesByCategory = (
+	games: Game[],
+	category: GameType,
+	size?: number
+): Game[] => {
+	const filteredGames = games.filter(
+		(game) => game.category.toUpperCase() === category.toUpperCase()
+	);
+	// If a size is specified, return a slice of the array. Otherwise, return the whole filtered list.
+	return size ? filteredGames.slice(0, size) : filteredGames;
 };
 
 // --- BANNER DATA SELECTION UTILITIES (will shift to Back-end APi + zustand store later) ---
@@ -99,12 +108,15 @@ export const getGamesByCategory = (games: Game[], category: GameType, size?: num
  * @returns A new array of game objects from the specified provider.
  */
 export const getGamesByProviderName = (
-  games: Game[],
-  providerName: ProviderName | string, // Allow string for flexibility with URL params
-  size?: number
+	games: Game[],
+	providerName: ProviderName | string, // Allow string for flexibility with URL params
+	size?: number
 ): Game[] => {
-  const filteredGames = games.filter(game => game.provider_name.toLowerCase() === providerName.toLowerCase());
-  return size ? filteredGames.slice(0, size) : filteredGames;
+	const filteredGames = games.filter(
+		(game) =>
+			game.provider_name.toLowerCase() === providerName.toLowerCase()
+	);
+	return size ? filteredGames.slice(0, size) : filteredGames;
 };
 
 /**
@@ -117,18 +129,20 @@ export const getGamesByProviderName = (
  * const result = getProviderGameCounts(games);
  * // Returns: [{ provider_name: "EVOLUTION", count: 12 }, { provider_name: "SBO", count: 5 }]
  */
-export const getProviderGameCounts = (games: Game[]): Array<{ provider_name: ProviderName | string; count: number }> => {
-  const providerCounts: Record<string, number> = {};
+export const getProviderGameCounts = (
+	games: Game[]
+): Array<{ provider_name: ProviderName | string; count: number }> => {
+	const providerCounts: Record<string, number> = {};
 
-  for (const game of games) {
-    const provider = game.provider_name;
-    providerCounts[provider] = (providerCounts[provider] || 0) + 1;
-  }
+	for (const game of games) {
+		const provider = game.provider_name;
+		providerCounts[provider] = (providerCounts[provider] || 0) + 1;
+	}
 
-  return Object.entries(providerCounts).map(([provider_name, count]) => ({
-    provider_name,
-    count,
-  }));
+	return Object.entries(providerCounts).map(([provider_name, count]) => ({
+		provider_name,
+		count,
+	}));
 };
 
 /**
@@ -140,26 +154,29 @@ export const getProviderGameCounts = (games: Game[]): Array<{ provider_name: Pro
  *
  * @example
  * const result = getProvidersForCategory(games, "SLOT");
- * // Returns: [{ provider_name: "Pragmatic Slot", count: 8 }, { provider_name: "NetEnt", count: 5 }]
+ * // Returns: [{ provider_name: "Pragmatic Play", count: 8 }, { provider_name: "NetEnt", count: 5 }]
  */
-export const getProvidersForCategory = (games: Game[], category: GameType): Array<{ provider_name: ProviderName | string; count: number }> => {
-  // First filter games by category
-  const categoryGames = getGamesByCategory(games, category);
+export const getProvidersForCategory = (
+	games: Game[],
+	category: GameType
+): Array<{ provider_name: ProviderName | string; count: number }> => {
+	// First filter games by category
+	const categoryGames = getGamesByCategory(games, category);
 
-  // Then count games by provider within that category
-  const providerCounts: Record<string, number> = {};
+	// Then count games by provider within that category
+	const providerCounts: Record<string, number> = {};
 
-  for (const game of categoryGames) {
-    const provider = game.provider_name;
-    providerCounts[provider] = (providerCounts[provider] || 0) + 1;
-  }
+	for (const game of categoryGames) {
+		const provider = game.provider_name;
+		providerCounts[provider] = (providerCounts[provider] || 0) + 1;
+	}
 
-  return Object.entries(providerCounts)
-    .map(([provider_name, count]) => ({
-      provider_name,
-      count,
-    }))
-    .sort((a, b) => b.count - a.count); // Sort by count descending
+	return Object.entries(providerCounts)
+		.map(([provider_name, count]) => ({
+			provider_name,
+			count,
+		}))
+		.sort((a, b) => b.count - a.count); // Sort by count descending
 };
 
 /**
@@ -172,7 +189,7 @@ export const getProvidersForCategory = (games: Game[], category: GameType): Arra
  * @returns An array containing the first `count` games.
  */
 export const getNewestGames = (games: Game[], count: number): Game[] => {
-  return games.slice(0, count);
+	return games.slice(0, count);
 };
 
 /**
@@ -185,8 +202,8 @@ export const getNewestGames = (games: Game[], count: number): Game[] => {
  * @returns An array of games to be featured as "popular".
  */
 export const getPopularGames = (games: Game[], count: number): Game[] => {
-  // Taking a slice from a different index to ensure it's not the same as "newest".
-  return games.slice(10, 10 + count);
+	// Taking a slice from a different index to ensure it's not the same as "newest".
+	return games.slice(10, 10 + count);
 };
 
 /**
@@ -197,24 +214,28 @@ export const getPopularGames = (games: Game[], count: number): Game[] => {
  * @param router - The Next.js App Router instance, used to programmatically navigate.
  * @returns An array of `HeroSlideData` objects, ready to be passed to a hero banner.
  */
-export const convertGamesToHeroSlides = (games: Game[], router: AppRouterInstance): HeroSlideData[] => {
-  return games.map(game => {
-    // Construct the unique play URL for each game.
-    const queryParams = new URLSearchParams({
-      vendor: game.vendor_name,
-      gameType: game.own_game_type,
-      gpId: String(game.gp_id),
-    }).toString();
-    const gameUrl = `/play/${game.game_id}?${queryParams}`;
+export const convertGamesToHeroSlides = (
+	games: Game[],
+	router: AppRouterInstance
+): HeroSlideData[] => {
+	return games.map((game) => {
+		// Construct the unique play URL for each game.
+		const queryParams = new URLSearchParams({
+			vendor: game.vendor_name,
+			gameType: game.own_game_type,
+			gpId: String(game.gp_id),
+		}).toString();
+		const gameUrl = `/play/${game.game_id}?${queryParams}`;
 
-    return {
-      game: game, // Attach the original game object
-      backgroundImageUrl: game.full_url_game_image || "/placeholder-bg.jpg",
-      title: game.game_name,
-      subtitle: `By ${game.provider_name}`,
-      buttonText: "Play Now",
-      // The button's action is to navigate to the game's middleware page.
-      onButtonClick: () => router.push(gameUrl),
-    };
-  });
+		return {
+			game: game, // Attach the original game object
+			backgroundImageUrl:
+				game.full_url_game_image || "/placeholder-bg.jpg",
+			title: game.game_name,
+			subtitle: `By ${game.provider_name}`,
+			buttonText: "Play Now",
+			// The button's action is to navigate to the game's middleware page.
+			onButtonClick: () => router.push(gameUrl),
+		};
+	});
 };
