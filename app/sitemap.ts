@@ -16,7 +16,7 @@ import { headers } from "next/headers";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	// Get the current domain from headers (supports multi-TLD)
 	const headersList = await headers();
-	const host = headersList.get("host") || "hyperbetz.games";
+	const host = headersList.get("host") || "hyperbetz.com";
 	const protocol = host.includes("localhost") ? "http" : "https";
 	const baseUrl = `${protocol}://${host}`;
 
