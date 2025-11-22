@@ -37,8 +37,6 @@ export async function generateSEOMetadata(props: SEOProps): Promise<Metadata> {
 		pageDefaults?.description ||
 		config.defaults.description;
 
-	console.log("PageDefaults:", pageDefaults, "props:", props);
-
 	if (props.variables) {
 		title = interpolateString(title, props.variables);
 		description = interpolateString(description, props.variables);
