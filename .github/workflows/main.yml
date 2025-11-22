@@ -23,4 +23,4 @@ jobs:
             git pull origin main
             npm i
             npm run build
-            pm2 restart web_hyperbetz
+            pm2 restart web_hyperbetzv2
