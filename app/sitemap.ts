@@ -186,16 +186,46 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	});
 
 	// ============================================
-	// SUMMARY (Auto-calculated)
-	// Total URLs: ~${sitemapEntries.length}
-	// - 6 core pages
-	// - 4 category pages (/providers/slot, etc.)
-	// - 20 top provider pages
-	// - 60 provider+category combos (15 providers × 4 categories)
-	// - 34 secondary provider pages
-	// - 5 legal/info pages
-	// = 129 URLs optimized for crawlers
+	// TIER 7: Dynamic SEO Pages (Priority 0.9)
+	// High-value landing pages for specific keywords
 	// ============================================
+	try {
+		const { getSeoPages } = await import('@/modules/seo/actions')
+		const seoPages = await getSeoPages()
+
+		seoPages.forEach((page) => {
+			if (page.published) {
+				sitemapEntries.push({
+					url: `${baseUrl}/${page.slug}`,
+					lastModified: page.updatedAt,
+					changeFrequency: 'weekly',
+					priority: 0.9,
+				})
+			}
+		})
+	} catch (error) {
+		console.error('Error fetching SEO pages for sitemap:', error)
+	}
+
+	// ============================================
+	// TIER 8: Blog Posts (Priority 0.7)
+	// Content marketing pages
+	// ============================================
+	try {
+		const { getPosts } = await import('@/modules/blog/lib/api')
+		const { posts } = await getPosts(1, 1000, '', 'published') // Fetch all published posts
+
+		posts.forEach((post) => {
+			sitemapEntries.push({
+				url: `${baseUrl}/blog/${post.slug}`,
+				lastModified: post.updatedAt,
+				changeFrequency: 'weekly',
+				priority: 0.7,
+			})
+		})
+	} catch (error) {
+		console.error('Error fetching blog posts for sitemap:', error)
+	}
 
 	return sitemapEntries;
 }

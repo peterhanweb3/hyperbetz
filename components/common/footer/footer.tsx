@@ -133,6 +133,39 @@ export function Footer() {
 					label: t("footer.sections.company.links.bonus"),
 					href: "/bonus",
 				},
+				{
+					label: "Blog",
+					href: "/blog",
+				},
+			],
+		},
+		{
+			title: "Crypto Casino",
+			links: [
+				{ label: "Crypto Casino", href: "/crypto-casino" },
+				{ label: "Bitcoin Casino", href: "/bitcoin-casino" },
+				{ label: "Ethereum Casino", href: "/ethereum-casino" },
+				{ label: "Best Crypto Casinos", href: "/best-crypto-casinos" },
+				{ label: "Provably Fair", href: "/provably-fair" },
+			],
+		},
+		{
+			title: "Games",
+			links: [
+				{ label: "Crypto Slots", href: "/crypto-slots" },
+				{ label: "Crypto Blackjack", href: "/crypto-blackjack" },
+				{ label: "Crypto Roulette", href: "/crypto-roulette" },
+				{ label: "Live Casino", href: "/crypto-live-casino" },
+				{ label: "All Games", href: "/lobby" },
+			],
+		},
+		{
+			title: "More Casinos",
+			links: [
+				{ label: "Dogecoin Casino", href: "/dogecoin-casino" },
+				{ label: "Litecoin Casino", href: "/litecoin-casino" },
+				{ label: "Tron Casino", href: "/tron-casino" },
+				{ label: "Online Gambling", href: "/online-gambling" },
 			],
 		},
 		{
@@ -158,42 +191,6 @@ export function Footer() {
 					href: "/faqs",
 					icon: HelpCircle,
 				},
-			],
-		},
-		{
-			title: t("footer.sections.games.title"),
-			links: [
-				{
-					label: t("footer.sections.games.links.lobby"),
-					href: "/lobby",
-				},
-				{
-					label: t("footer.sections.games.links.slots"),
-					href: "/games/providers/slot",
-				},
-				{
-					label: t("footer.sections.games.links.live"),
-					href: "/games/providers/live-casino",
-				},
-				{
-					label: t("footer.sections.games.links.sports"),
-					href: "/games/sbo",
-				},
-			],
-		},
-		{
-			title: t("footer.sections.support.title"),
-			links: [
-				{
-					label: t("footer.sections.support.links.help"),
-					href: "/faqs",
-					icon: HelpCircle,
-				},
-				// {
-				// 	label: t("footer.sections.support.links.contact"),
-				// 	href: "mailto:support@hyperbetz.games",
-				// 	icon: Mail,
-				// },
 			],
 		},
 	];
@@ -233,7 +230,7 @@ export function Footer() {
 					{primaryWallet === null && (
 						<>
 							{/* Main Footer Content */}
-							<div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+							<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
 								{footerSections.map((section, index) => (
 									<div key={index} className="space-y-4">
 										<h3 className="font-semibold text-foreground text-sm">

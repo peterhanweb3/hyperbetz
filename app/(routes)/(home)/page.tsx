@@ -13,6 +13,8 @@ import { faTrophy } from "@fortawesome/pro-light-svg-icons";
 import dynamic from "next/dynamic";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useDeferredRender } from "@/hooks/use-deferred-render";
+import { BlogCardsSlider } from "@/modules/blog/components/BlogCardsSlider";
+import { getLatestPostsAction } from "@/modules/blog/actions/home";
 
 const LazyGameCarouselList = dynamic(
 	() =>
@@ -75,6 +77,7 @@ const BettingSkeleton = () => (
 export default function HomePage() {
 	const t = useT();
 	const router = useRouter();
+	const [blogPosts, setBlogPosts] = useState<Record<string, unknown>[]>([]);
 
 	// --- 1. Get Authentication and UI State ---
 	const {
@@ -175,6 +178,18 @@ export default function HomePage() {
 
 	useEffect(() => setIsClient(true), []);
 
+	useEffect(() => {
+		const fetchPosts = async () => {
+			try {
+				const posts = await getLatestPostsAction();
+				setBlogPosts(posts);
+			} catch (error) {
+				console.error("Failed to fetch blog posts:", error);
+			}
+		};
+		fetchPosts();
+	}, []);
+
 	const shouldRenderSecondary = useMemo(
 		() => isClient && deferredSecondary,
 		[deferredSecondary, isClient]
@@ -213,6 +228,11 @@ export default function HomePage() {
 						<BettingSkeleton />
 					)}
 				</section>
+
+				<section className="w-full">
+					<BlogCardsSlider posts={blogPosts} />
+				</section>
+
 			</div>
 		</>
 	);

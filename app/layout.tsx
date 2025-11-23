@@ -6,15 +6,11 @@ import { LocaleProvider } from "@/lib/locale-provider";
 import { IOSViewportFix } from "@/components/common/ios-viewport-fix";
 import { ServiceWorkerRegister } from "@/components/common/service-worker-register";
 import { PageLoader } from "@/components/common/page-loader";
-import { JsonLd } from "@/components/seo/json-ld";
-import {
-	generateOrganizationSchema,
-	generateWebsiteSchema,
-} from "@/lib/utils/seo/schema-generator";
+import { OrganizationSchema, WebsiteSchema } from "@/components/seo/StructuredData";
 import { getServerMessages, type Locale } from "@/lib/i18n";
 // Avoid bundling public images via import to skip sharp at build time
 import "./globals.css";
-import { getDynamicSEOConfig } from "@/lib/utils/seo/seo-config-loader";
+
 
 const poppins = Poppins({
 	style: "normal",
@@ -34,11 +30,6 @@ export default async function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	const config = await getDynamicSEOConfig();
-	// Generate SEO schemas for rich snippets
-	const organizationSchema = generateOrganizationSchema(config);
-	const websiteSchema = generateWebsiteSchema("global", config);
-
 	// Get user's locale from cookies for proper HTML lang attribute (SEO)
 	const cookieStore = await cookies();
 	const locale = (cookieStore.get("NEXT_LOCALE")?.value || "en") as Locale;
@@ -48,8 +39,9 @@ export default async function RootLayout({
 		<html lang={locale} suppressHydrationWarning>
 			<head>
 				{/* SEO: Structured Data for Knowledge Graph & Rich Snippets */}
-				<JsonLd data={organizationSchema} />
-				<JsonLd data={websiteSchema} />
+				{/* SEO: Structured Data for Knowledge Graph & Rich Snippets */}
+				<OrganizationSchema />
+				<WebsiteSchema />
 				<meta
 					name="trustpilot-one-time-domain-verification-id"
 					content="d33fb497-a8d9-492c-8dcb-5878599febec"

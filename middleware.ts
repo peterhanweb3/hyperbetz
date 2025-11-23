@@ -1,9 +1,28 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { locales } from '@/lib/i18n';
+import { decrypt } from '@/modules/blog/lib/auth';
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+
+  // Protect admin routes
+  if (pathname.startsWith('/admin') && pathname !== '/admin/login') {
+    const sessionCookie = request.cookies.get('blog_session')?.value;
+
+    if (!sessionCookie) {
+      return NextResponse.redirect(new URL('/admin/login', request.url));
+    }
+
+    try {
+      const session = await decrypt(sessionCookie);
+      if (!session || !session.id) {
+        return NextResponse.redirect(new URL('/admin/login', request.url));
+      }
+    } catch (error) {
+      return NextResponse.redirect(new URL('/admin/login', request.url));
+    }
+  }
 
   // Skip middleware for language switching route
   if (pathname.startsWith('/ln/')) {
