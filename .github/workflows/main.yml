@@ -18,7 +18,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 2222 
           script: |
-            cd /var/www/html/production/Live/hyperbetz/
+            cd /var/www/html/production/Live/hyperbetzv2/hyperbetz
             GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_leon -o IdentitiesOnly=yes' \
             git pull origin main
             npm i
