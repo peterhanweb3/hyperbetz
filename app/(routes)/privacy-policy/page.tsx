@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function PrivacyPage() {
 	const t = useT();
 
-	const siteDomain = window?.location?.hostname || "hyperbetz.games";
+	const siteDomain = window?.location?.hostname || "hyperbetz.com";
 	return (
 		<div className="container mx-auto space-y-8 consistent-padding-x consistent-padding-y">
 			<PageHeader

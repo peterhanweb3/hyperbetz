@@ -7,8 +7,8 @@
 
 // Site name mapping based on domain
 const DOMAIN_TO_SITE_NAME: Record<string, string> = {
-	"hyperbetz.games": "HyperBetz",
-	"www.hyperbetz.games": "HyperBetz",
+	"hyperbetz.com": "HyperBetz",
+	"www.hyperbetz.com": "HyperBetz",
 	localhost: "HyperBetz", // Default for local development
 	// Add your other domains here:
 	// 'site2.com': 'Site2Name',
@@ -60,7 +60,7 @@ export function getSiteDomain(): string {
 	}
 
 	// 4. Fallback to default
-	return "hyperbetz.games";
+	return "hyperbetz.com";
 }
 
 /**

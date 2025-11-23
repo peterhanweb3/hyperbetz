@@ -1,11 +1,11 @@
 {
-	"defaultDomain": "https://hyperbetz.games",
+	"defaultDomain": "https://hyperbetz.com",
 	"defaultLang": "en",
 	"environment": "production",
 	"metaTitleSuffix": " | Hyperbetz",
 	"defaults": {
 		"siteName": "Hyperbetz",
-		"siteDomain": "hyperbetz.games",
+		"siteDomain": "hyperbetz.com",
 		"organization": "Hyperbetz Gaming",
 		"description": "Your Gateway to Fun and Rewards - Experience the best online gaming with crypto, slots, live casino, and sports betting.",
 		"author": "Hyperbetz Team",
@@ -25,8 +25,8 @@
 		"organization": {
 			"@type": "Organization",
 			"name": "Hyperbetz Gaming",
-			"url": "https://hyperbetz.games",
-			"logo": "https://hyperbetz.games/assets/site/Hyperbetz-logo.png",
+			"url": "https://hyperbetz.com",
+			"logo": "https://hyperbetz.com/assets/site/Hyperbetz-logo.png",
 			"description": "Leading online gaming platform offering crypto gaming, slots, live casino, and sports betting worldwide.",
 			"sameAs": [
 				"https://twitter.com/hyperbetz",
@@ -36,16 +36,16 @@
 			"contactPoint": {
 				"@type": "ContactPoint",
 				"contactType": "customer support",
-				"email": "support@hyperbetz.games"
+				"email": "support@hyperbetz.com"
 			}
 		},
 		"website": {
 			"@type": "WebSite",
 			"name": "Hyperbetz",
-			"url": "https://hyperbetz.games",
+			"url": "https://hyperbetz.com",
 			"potentialAction": {
 				"@type": "SearchAction",
-				"target": "https://hyperbetz.games/search?q={search_term_string}",
+				"target": "https://hyperbetz.com/search?q={search_term_string}",
 				"query-input": "required name=search_term_string"
 			}
 		}
@@ -243,7 +243,7 @@
 		"production": {
 			"allow": ["/"],
 			"disallow": ["/api/", "/admin/", "/_next/", "/private/"],
-			"sitemap": "https://hyperbetz.games/sitemap.xml"
+			"sitemap": "https://hyperbetz.com/sitemap.xml"
 		},
 		"staging": {
 			"allow": [],
