@@ -12,36 +12,55 @@ import Link from 'next/link'
 import { BlogCard } from '@/modules/blog/components/BlogCard'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-    const { slug } = await params
-    const post = await getPostBySlug(slug)
-    if (!post) return {}
+    try {
+        const { slug } = await params
+        const post = await getPostBySlug(slug)
+        if (!post) return {}
 
-    return {
-        title: post.seoTitle || post.title,
-        description: post.seoDescription || post.excerpt,
-        openGraph: {
+        return {
             title: post.seoTitle || post.title,
-            description: post.seoDescription || post.excerpt || undefined,
-            images: post.coverImage ? [post.coverImage] : [],
-        },
+            description: post.seoDescription || post.excerpt,
+            openGraph: {
+                title: post.seoTitle || post.title,
+                description: post.seoDescription || post.excerpt || undefined,
+                images: post.coverImage ? [post.coverImage] : [],
+            },
+        }
+    } catch (error) {
+        console.error('Error generating metadata for blog post:', error);
+        return {
+            title: 'Blog Post',
+        }
     }
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params
-    const post = await getPostBySlug(slug)
+    let post;
+    try {
+        post = await getPostBySlug(slug)
+    } catch (error) {
+        console.error('Error fetching post:', error);
+        notFound();
+    }
 
     if (!post || !post.published) {
         notFound()
     }
 
     // Get related posts
-    const { posts: relatedPosts } = await getPosts(1, 3, '', 'published')
-    const filteredRelated = relatedPosts.filter(p => p.id !== post.id).slice(0, 3)
+    let filteredRelated: any[] = [];
+    try {
+        const { posts: relatedPosts } = await getPosts(1, 3, '', 'published')
+        filteredRelated = relatedPosts.filter(p => p.id !== post.id).slice(0, 3)
+    } catch (error) {
+        console.error('Error fetching related posts:', error);
+        // Continue without related posts
+    }
 
     // Calculate reading time
     const wordsPerMinute = 200
-    const wordCount = post.content.replace(/<[^>]*>/g, '').split(/\s+/).length
+    const wordCount = (post.content || '').replace(/<[^>]*>/g, '').split(/\s+/).length
     const readingTime = Math.ceil(wordCount / wordsPerMinute)
 
     return (

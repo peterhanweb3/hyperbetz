@@ -10,6 +10,7 @@ const RUNTIME_CACHE = 'memewin-runtime-v2';
 const PRECACHE_ASSETS = [
   '/',
   '/assets/site/meme-win-logo.png',
+  '/offline.html',
   // Add other critical assets here
 ];
 
@@ -25,6 +26,15 @@ const NETWORK_FIRST_PATTERNS = [
   /\/api\//,
   /apiv2\.xx88zz77\.site/,
 ];
+
+// Timeout helper for fetch to avoid hanging/long retries when offline
+function fetchWithTimeout(request, timeout = 4000) {
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeout);
+
+  return fetch(request, { signal: controller.signal })
+    .finally(() => clearTimeout(id));
+}
 
 // Install event: precache critical assets
 self.addEventListener('install', (event) => {
@@ -94,13 +104,16 @@ self.addEventListener('fetch', (event) => {
   // Network-first for API calls (with fallback to cache)
   if (NETWORK_FIRST_PATTERNS.some(pattern => pattern.test(url.href))) {
     event.respondWith(
-      fetch(request)
+      fetchWithTimeout(request, 4000)
         .then((response) => {
           // Clone and cache successful responses
           if (response && response.status === 200) {
             const responseToCache = response.clone();
             caches.open(RUNTIME_CACHE).then((cache) => {
-              cache.put(request, responseToCache);
+              // Avoid caching opaque/cross-origin responses without CORS
+              if (response.type !== 'opaque') {
+                cache.put(request, responseToCache);
+              }
             });
           }
           return response;
@@ -120,23 +133,38 @@ self.addEventListener('fetch', (event) => {
 
   // Default: try network first, fallback to cache
   event.respondWith(
-    fetch(request)
-      .then((response) => {
+    (async () => {
+      // For navigation requests (pages), serve an offline fallback from cache
+      if (request.mode === 'navigate') {
+        try {
+          const response = await fetchWithTimeout(request, 4000);
+          if (response && response.status === 200) {
+            const responseToCache = response.clone();
+            caches.open(RUNTIME_CACHE).then((cache) => {
+              if (response.type !== 'opaque') cache.put(request, responseToCache);
+            });
+          }
+          return response;
+        } catch (err) {
+          const cached = await caches.match('/offline.html');
+          return cached || new Response('Offline', { status: 503 });
+        }
+      }
+
+      try {
+        const response = await fetchWithTimeout(request, 4000);
         if (response && response.status === 200) {
           const responseToCache = response.clone();
           caches.open(RUNTIME_CACHE).then((cache) => {
-            cache.put(request, responseToCache);
+            if (response.type !== 'opaque') cache.put(request, responseToCache);
           });
         }
         return response;
-      })
-      .catch(() => {
-        return caches.match(request).then((cachedResponse) => {
-          if (cachedResponse) {
-            return cachedResponse;
-          }
-          return new Response('Offline', { status: 503 });
-        });
-      })
+      } catch (err) {
+        const cachedResponse = await caches.match(request);
+        if (cachedResponse) return cachedResponse;
+        return new Response('Offline', { status: 503 });
+      }
+    })()
   );
 });

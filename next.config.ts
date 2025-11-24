@@ -64,6 +64,7 @@ const nextConfig: NextConfig = {
 			{ protocol: "https", hostname: "apiv2.xx88zz77.site" },
 			{ protocol: "http", hostname: "apiv2.xx88zz77.site" },
 			{ protocol: "https", hostname: "images.unsplash.com" },
+			{ protocol: "https", hostname: "**" },
 		],
 	},
 

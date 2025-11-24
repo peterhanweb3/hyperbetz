@@ -4,25 +4,38 @@ import { Metadata } from 'next'
 import { StructuredData } from '@/components/seo/StructuredData'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-    const { slug } = await params
-    const page = await getSeoPageBySlug(slug)
-    if (!page) return {}
+    try {
+        const { slug } = await params
+        const page = await getSeoPageBySlug(slug)
+        if (!page) return {}
 
-    return {
-        title: page.title,
-        description: page.description,
-        keywords: page.keywords?.split(',').map((k: string) => k.trim()),
-        openGraph: {
+        return {
             title: page.title,
             description: page.description,
-            type: 'website',
-        },
+            keywords: page.keywords?.split(',').map((k: string) => k.trim()),
+            openGraph: {
+                title: page.title,
+                description: page.description,
+                type: 'website',
+            },
+        }
+    } catch (error) {
+        console.error('Error generating metadata for SEO page:', error);
+        return {
+            title: 'Page',
+        }
     }
 }
 
 export default async function SeoPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params
-    const page = await getSeoPageBySlug(slug)
+    let page;
+    try {
+        page = await getSeoPageBySlug(slug)
+    } catch (error) {
+        console.error('Error fetching SEO page:', error);
+        notFound();
+    }
 
     if (!page || !page.published) {
         notFound()
