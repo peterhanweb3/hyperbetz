@@ -8,23 +8,14 @@ import { useEffect } from "react";
  */
 export function ServiceWorkerRegister() {
 	useEffect(() => {
-		// Only register in production
-		if (
-			typeof window !== "undefined" &&
-			"serviceWorker" in navigator &&
-			process.env.NODE_ENV === "production"
-		) {
-			navigator.serviceWorker
-				.register("/sw.js")
-				.then((registration) => {
-					// Check for updates periodically
-					setInterval(() => {
-						registration.update();
-					}, 60000); // Check every minute
-				})
-				.catch((error) => {
-					console.error("Service Worker registration failed:", error);
-				});
+		// Unregister existing service workers to fix caching issues
+		if (typeof window !== "undefined" && "serviceWorker" in navigator) {
+			navigator.serviceWorker.getRegistrations().then((registrations) => {
+				for (const registration of registrations) {
+					registration.unregister();
+					console.log("Service Worker unregistered");
+				}
+			});
 		}
 	}, []);
 
