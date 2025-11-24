@@ -147,11 +147,11 @@ const nextConfig: NextConfig = {
 		};
 
 		// Force single React version to avoid "Invalid Hook Call" with legacy-peer-deps
-		config.resolve.alias = {
-			...config.resolve.alias,
-			react: path.resolve('./node_modules/react'),
-			'react-dom': path.resolve('./node_modules/react-dom'),
-		};
+		// config.resolve.alias = {
+		// 	...config.resolve.alias,
+		// 	react: path.resolve('./node_modules/react'),
+		// 	'react-dom': path.resolve('./node_modules/react-dom'),
+		// };
 
 		// Optimize chunks in production
 		if (!isServer && process.env.NODE_ENV === "production") {
