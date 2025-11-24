@@ -2,7 +2,8 @@
 
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { encrypt, verifyPassword } from './lib/auth'
+import { encrypt } from './lib/auth'
+import { verifyPassword } from './lib/password'
 import prisma from './lib/db'
 
 export async function loginAction(prevState: any, formData: FormData) {

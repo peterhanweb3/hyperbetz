@@ -1,5 +1,5 @@
 import prisma from '@/modules/blog/lib/db'
-import { hashPassword } from '@/modules/blog/lib/auth'
+import { hashPassword } from '@/modules/blog/lib/password'
 
 async function main() {
     // Create admin user

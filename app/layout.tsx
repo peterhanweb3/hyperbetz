@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import { cookies } from "next/headers";
+import Script from "next/script";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ThemeColorProvider } from "@/components/theme/theme-color-provider";
 import { LocaleProvider } from "@/lib/locale-provider";
@@ -47,20 +48,18 @@ export default async function RootLayout({
 					content="d33fb497-a8d9-492c-8dcb-5878599febec"
 				/>
 
-				<script
-					async
+				<Script
 					src="https://www.googletagmanager.com/gtag/js?id=G-CM98Y8Y7K3"
-				></script>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-	  						window.dataLayer = window.dataLayer || [];
-	  						function gtag(){dataLayer.push(arguments);}
-	  						gtag('js', new Date());
-	  						gtag('config', 'G-CM98Y8Y7K3');
-						`,
-					}}
+					strategy="afterInteractive"
 				/>
+				<Script id="google-analytics" strategy="afterInteractive">
+					{`
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'G-CM98Y8Y7K3');
+					`}
+				</Script>
 
 				{/* Viewport optimization for mobile */}
 				<meta

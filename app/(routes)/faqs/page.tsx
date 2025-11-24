@@ -102,7 +102,7 @@ function FAQItem({ question, answer, reminder }: FAQItemProps) {
 export default function FAQsPage() {
 	const t = useT();
 
-	const faqCategories = [
+	const faqCategories = useMemo(() => [
 		{
 			title: t("faqs.categories.accountRegistration.title"),
 			items: Array.from({ length: 4 }).map((_, i) => {
@@ -165,7 +165,7 @@ export default function FAQsPage() {
 				};
 			}),
 		},
-	];
+	], [t]);
 
 	// Generate FAQ schema for SEO (rich snippets in Google)
 	const faqSchema = useMemo(() => {

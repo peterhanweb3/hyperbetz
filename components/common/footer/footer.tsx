@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useT } from "@/hooks/useI18n";
 import {
@@ -267,7 +268,7 @@ export function Footer() {
 											key={index}
 											className="relative h-8 w-auto opacity-70 hover:opacity-100 transition-opacity"
 										>
-											<img
+											<Image
 												src={network.src}
 												alt={network.name}
 												width={80}
@@ -290,7 +291,7 @@ export function Footer() {
 											key={index}
 											className="relative h-8 w-auto opacity-70 hover:opacity-100 transition-opacity"
 										>
-											<img
+											<Image
 												src={crypto.src}
 												alt={crypto.name}
 												width={80}
@@ -313,7 +314,7 @@ export function Footer() {
 											key={index}
 											className="relative h-8 w-auto opacity-70 hover:opacity-100 transition-opacity"
 										>
-											<img
+											<Image
 												src={logo.src}
 												alt={logo.name}
 												width={80}

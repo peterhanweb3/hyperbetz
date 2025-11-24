@@ -49,6 +49,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     }
 
     // Get related posts
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let filteredRelated: any[] = [];
     try {
         const { posts: relatedPosts } = await getPosts(1, 3, '', 'published')

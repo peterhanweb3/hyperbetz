@@ -2,7 +2,8 @@
 
 import { revalidatePath } from 'next/cache'
 import prisma from '../lib/db'
-import { getSession, hashPassword, verifyPassword } from '../lib/auth'
+import { getSession } from '../lib/auth'
+import { hashPassword, verifyPassword } from '../lib/password'
 
 export async function createUser(prevState: any, formData: FormData) {
     const session = await getSession()
