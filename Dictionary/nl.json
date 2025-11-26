@@ -11,8 +11,8 @@
 	},
 	"header": {
 		"toggleSidebar": "Zijbalk wisselen",
-		"searchPlaceholder": "Zoek spellen, providers...",
-		"liveChat": "Livechat",
+		"searchPlaceholder": "Zoek spellen, aanbieders...",
+		"liveChat": "Live Chat",
 		"player": "Speler",
 		"vip": "VIP",
 		"profile": "Profiel",
@@ -20,55 +20,55 @@
 		"wallet": "Storten/Opnemen",
 		"cashier": "Kassa",
 		"winLoss": "Winst/Verlies",
-		"affiliate": "Partner",
+		"affiliate": "Verwijzingsbonus",
 		"logout": "Uitloggen",
 		"balance": "Saldo",
 		"turnoverBonus": "Omzetbonus"
 	},
 	"navigation": {
-		"home": "Thuis",
+		"home": "Home",
 		"games": "Spellen",
 		"profile": "Profiel",
 		"wallet": "Portemonnee",
 		"settings": "Instellingen",
 		"promotions": "Promoties",
-		"affiliate": "Partner",
+		"affiliate": "Verwijzingsbonus",
+		"bonus": "Omzetbonus",
 		"providers": "Aanbieders",
 		"lobby": "Lobby",
-		"bonus": "Omzetbonus",
-		"about": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 29 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+		"about": "Over ons"
 	},
 	"profile": {
 		"language": "Taal",
 		"welcome": "Welkom, {name}!",
-		"settingUp": "Bezig met instellen",
-		"profileBtn": "Bekijk Profiel",
-		"currentBalance": "Huidig Saldo",
-		"availableFunds": "Beschikbaar geld",
-		"totalDeposits": "Totaal Stortingen",
-		"totalWithdrawals": "Totaal Opnames",
-		"walletAddress": "Wallet Adres",
-		"copySuccess": "Wallet adres gekopieerd naar klembord!",
-		"copyFailed": "Kopiëren van wallet adres mislukt",
+		"settingUp": "Instellen",
+		"profileBtn": "Profiel bekijken",
+		"currentBalance": "Huidig saldo",
+		"availableFunds": "Beschikbare middelen",
+		"totalDeposits": "Totaal stortingen",
+		"totalWithdrawals": "Totaal opnames",
+		"walletAddress": "Portemonnee-adres",
+		"copySuccess": "Portemonnee-adres gekopieerd naar klembord!",
+		"copyFailed": "Kopiëren van portemonnee-adres mislukt",
 		"notConnected": "Niet verbonden",
-		"myProfile": "Mijn Profiel",
+		"myProfile": "Mijn profiel",
 		"history": {
 			"title": "Geschiedenis"
 		},
 		"logout": "Uitloggen",
 		"pendingRegistration": "Registratie in behandeling",
 		"noEmailProvided": "Geen e-mailadres opgegeven",
-		"balanceOverview": "Saldo Overzicht",
+		"balanceOverview": "Saldo-overzicht",
 		"gettingStarted": "Aan de slag",
 		"verifyEmail": "Verifieer je e-mail",
-		"completeEmailVerification": "Voltooi e-mailverificatie",
+		"completeEmailVerification": "E-mailverificatie voltooien",
 		"verifyPhone": "Verifieer je telefoonnummer",
-		"addPhoneVerification": "Voeg telefoonverificatie toe",
-		"firstDeposit": "Eerste Storting",
+		"addPhoneVerification": "Telefoonverificatie toevoegen",
+		"firstDeposit": "Eerste storting",
 		"makeFirstDeposit": "Maak je eerste storting",
 		"placeBetOrTrade": "Plaats een weddenschap / Maak een transactie",
 		"startFirstGame": "Start je eerste spel",
-		"recentActivity": "Recente Activiteit",
+		"recentActivity": "Recente activiteit",
 		"transactionHistory": "Transactiegeschiedenis",
 		"activityGameWinDiceRoll": "Spelwinst - Dobbelsteenworp",
 		"activityGameLossBlackjack": "Spelverlies - Blackjack",
@@ -85,29 +85,29 @@
 			"trackDepositsWithdrawals": "Volg je stortingen en opnames",
 			"filters": "Filters",
 			"refresh": "Vernieuwen",
-			"advancedFilters": "Geavanceerde Filters",
-			"searchTransactionComingSoon": "Transactie zoeken (Binnenkort beschikbaar)",
-			"searchPlaceholderDisabled": "Zoekfunctionaliteit wordt op API-niveau geïmplementeerd...",
+			"advancedFilters": "Geavanceerde filters",
+			"searchTransactionComingSoon": "Transactie zoeken (binnenkort beschikbaar)",
+			"searchPlaceholderDisabled": "Zoekfunctionaliteit wordt geïmplementeerd op API-niveau...",
 			"dateRange": "Datumbereik",
 			"selectDateRange": "Selecteer datumbereik",
 			"today": "Vandaag",
-			"last7Days": "Laatste 7 Dagen",
-			"last30Days": "Laatste 30 Dagen",
-			"last90Days": "Laatste 90 Dagen",
-			"thisMonth": "Deze Maand",
-			"lastMonth": "Vorige Maand",
-			"customRange": "Aangepast Bereik",
-			"fromDate": "Vanaf Datum",
-			"toDate": "Tot Datum",
+			"last7Days": "Laatste 7 dagen",
+			"last30Days": "Laatste 30 dagen",
+			"last90Days": "Laatste 90 dagen",
+			"thisMonth": "Deze maand",
+			"lastMonth": "Vorige maand",
+			"customRange": "Aangepast bereik",
+			"fromDate": "Vanaf datum",
+			"toDate": "Tot datum",
 			"transactionStatus": "Transactiestatus",
-			"allStatuses": "Alle Statussen",
-			"success": "Geslaagd",
+			"allStatuses": "Alle statussen",
+			"success": "Succesvol",
 			"pending": "In behandeling",
 			"rejected": "Afgewezen",
-			"clearAll": "Alles Wissen",
+			"clearAll": "Alles wissen",
 			"cancel": "Annuleren",
-			"applyFilters": "Filters Toepassen",
-			"activeFilters": "Actieve Filters:",
+			"applyFilters": "Filters toepassen",
+			"activeFilters": "Actieve filters:",
 			"statusLabel": "Status",
 			"dateLabel": "Datum",
 			"statsTotalTransactions": "{total} transacties in totaal",
@@ -118,7 +118,7 @@
 				"deposits": "Stortingen",
 				"withdrawals": "Opnames"
 			},
-			"errorLoadingTransactions": "Fout bij het laden van transacties",
+			"errorLoadingTransactions": "Fout bij laden van transacties",
 			"tryAgain": "Probeer opnieuw",
 			"noTransactionsFound": "Geen transacties gevonden",
 			"noTransactionsAvailableSelectedPeriod": "Geen transacties beschikbaar voor de geselecteerde periode.",
@@ -134,40 +134,40 @@
 			"trackBetsResults": "Volg je spelweddenschappen en resultaten",
 			"filters": "Filters",
 			"refresh": "Vernieuwen",
-			"advancedFilters": "Geavanceerde Filters",
+			"advancedFilters": "Geavanceerde filters",
 			"dateRange": "Datumbereik",
 			"selectDateRange": "Selecteer datumbereik",
 			"today": "Vandaag",
-			"last7Days": "Laatste 7 Dagen",
-			"last30Days": "Laatste 30 Dagen",
-			"last90Days": "Laatste 90 Dagen",
-			"thisMonth": "Deze Maand",
-			"lastMonth": "Vorige Maand",
-			"customRange": "Aangepast Bereik",
-			"fromDate": "Vanaf Datum",
-			"toDate": "Tot Datum",
+			"last7Days": "Laatste 7 dagen",
+			"last30Days": "Laatste 30 dagen",
+			"last90Days": "Laatste 90 dagen",
+			"thisMonth": "Deze maand",
+			"lastMonth": "Vorige maand",
+			"customRange": "Aangepast bereik",
+			"fromDate": "Vanaf datum",
+			"toDate": "Tot datum",
 			"provider": "Aanbieder",
-			"allProviders": "Alle Providers",
+			"allProviders": "Alle aanbieders",
 			"status": "Status",
-			"allStatuses": "Alle Statussen",
+			"allStatuses": "Alle statussen",
 			"outstanding": "Openstaand",
 			"win": "Winst",
 			"lose": "Verlies",
 			"draw": "Gelijkspel",
 			"void": "Ongeldig",
 			"bonusWin": "Bonuswinst",
-			"clearAll": "Alles Wissen",
+			"clearAll": "Alles wissen",
 			"cancel": "Annuleren",
-			"applyFilters": "Filters Toepassen",
-			"activeFilters": "Actieve Filters",
+			"applyFilters": "Filters toepassen",
+			"activeFilters": "Actieve filters",
 			"statusLabel": "Status",
 			"providerLabel": "Aanbieder",
 			"dateLabel": "Datum",
-			"totalBets": "Totaal Weddenschappen",
-			"totalProfitLoss": "Totaal Winst/Verlies",
+			"totalBets": "Totaal aantal weddenschappen",
+			"totalProfitLoss": "Totaal winst/verlies",
 			"pageOf": "Pagina {current} van {total}",
 			"live": "Live",
-			"errorLoadingBets": "Fout bij het laden van wedgeschiedenis",
+			"errorLoadingBets": "Fout bij laden van wedgeschiedenis",
 			"failedToLoadBetHistory": "Laden van wedgeschiedenis mislukt. Probeer het opnieuw.",
 			"tryAgain": "Probeer opnieuw",
 			"noBetsFound": "Geen weddenschappen gevonden",
@@ -175,8 +175,8 @@
 			"show": "Toon",
 			"ofBets": "van {count} weddenschappen",
 			"showingRangeOfTotal": "Toont {from}-{to} van {total}",
-			"totalBet": "Totale Inzet",
-			"totalWin": "Totale Winst",
+			"totalBet": "Totale inzet",
+			"totalWin": "Totale winst",
 			"net": "Netto",
 			"tableHeaders": {
 				"date": "Datum",
@@ -186,57 +186,57 @@
 				"status": "Status",
 				"betAmount": "Inzetbedrag",
 				"winAmount": "Winstbedrag",
-				"hideAmounts": "Bedragen Verbergen",
-				"showAmounts": "Bedragen Tonen",
+				"hideAmounts": "Bedragen verbergen",
+				"showAmounts": "Bedragen tonen",
 				"gameType": "Speltype",
 				"vendor": "Leverancier",
-				"lastUpdate": "Laatste Update",
-				"netResult": "Netto Resultaat",
-				"betId": "Weddenschap ID"
+				"lastUpdate": "Laatste update",
+				"netResult": "Nettoresultaat",
+				"betId": "Weddenschap-ID"
 			},
 			"errorLoading": "Fout bij laden",
-			"noBetsFoundDescription": "Begin met spelen om hier je wedgeschiedenis te zien.",
+			"noBetsFoundDescription": "Begin met spelen om je wedgeschiedenis hier te zien.",
 			"betHistory": "Wedgeschiedenis",
 			"hideAmounts": "Bedragen verbergen",
 			"showAmounts": "Bedragen tonen",
 			"date": "Datum",
 			"game": "Spel",
-			"betId": "Weddenschap ID",
+			"betId": "Weddenschap-ID",
 			"amount": "Bedrag",
 			"payout": "Uitbetaling",
 			"player": "Speler",
 			"gameType": "Speltype",
 			"vendor": "Leverancier",
 			"lastUpdate": "Laatste update",
-			"netResult": "Netto resultaat",
+			"netResult": "Nettoresultaat",
 			"totalWagered": "Totaal ingezet",
 			"totalWon": "Totaal gewonnen",
 			"netProfit": "Nettowinst",
 			"winRate": "Winstpercentage",
 			"showingResults": "Toont {start}-{end} van {total} resultaten",
-			"firstPage": "Eerste Pagina",
-			"previousPage": "Vorige Pagina",
-			"nextPage": "Volgende Pagina",
-			"lastPage": "Laatste Pagina"
+			"firstPage": "Eerste pagina",
+			"previousPage": "Vorige pagina",
+			"nextPage": "Volgende pagina",
+			"lastPage": "Laatste pagina"
 		}
 	},
 	"chat": {
-		"title": "Livechat",
+		"title": "Live Chat",
 		"placeholder": "Typ je bericht...",
 		"send": "Verstuur",
 		"input": {
 			"replyPlaceholder": "Antwoord aan {username}..."
 		},
 		"reply": {
-			"replyingTo": "Antwoord aan {username}",
+			"replyingTo": "Antwoordt aan {username}",
 			"types": {
-				"win": "Heeft {amount} {currency} gewonnen",
+				"win": "{amount} {currency} gewonnen",
 				"gif": "GIF-bericht",
 				"image": "Afbeelding",
 				"default": "Bericht"
 			},
 			"preview": {
-				"winIn": "Heeft {amount} {currency} gewonnen in {game}",
+				"winIn": "{amount} {currency} gewonnen in {game}",
 				"gifAlt": "GIF-voorbeeld",
 				"imageAlt": "Afbeeldingsvoorbeeld",
 				"emoji": "Emoji-bericht",
@@ -249,12 +249,12 @@
 			"description": "Klaar om de chatroom te laten zien?",
 			"previewLabel": "Voorbeeld",
 			"statusReady": "Klaar om te delen",
-			"roomLabel": "🎰 Casinochat",
+			"roomLabel": "🎰 Casino Chat",
 			"shareNotice": "Je afbeelding wordt gedeeld met alle spelers in de chatroom",
-			"closeAria": "Sluit dialoogvenster",
-			"cancelAria": "Annuleer afbeelding uploaden",
-			"sendAria": "Verstuur afbeelding naar chat",
-			"send": "Verstuur naar Chat"
+			"closeAria": "Dialoog sluiten",
+			"cancelAria": "Afbeelding uploaden annuleren",
+			"sendAria": "Afbeelding naar chat sturen",
+			"send": "Naar chat sturen"
 		},
 		"picker": {
 			"searchEmojis": "Zoek emoji's...",
@@ -271,9 +271,9 @@
 			"noGifs": "Geen GIF's gevonden",
 			"tryDifferent": "Probeer een andere zoekterm",
 			"gifCategories": {
-				"trending": "Populair",
+				"trending": "Trending",
 				"reactions": "Reacties",
-				"gaming": "Gamen",
+				"gaming": "Gaming",
 				"casino": "Casino",
 				"celebration": "Viering",
 				"sports": "Sport"
@@ -282,22 +282,22 @@
 			"availableToTag": "Beschikbare gebruikers om te taggen 🎯",
 			"clickOrTab": "Klik of Tab om te selecteren",
 			"noUsers": "Geen gebruikers gevonden",
-			"noUsersMatching": "Geen overeenkomende gebruikers",
+			"noUsersMatching": "Geen gebruikers gevonden die overeenkomen",
 			"startTyping": "Begin met typen om te zoeken",
 			"typeAt": "Typ",
 			"toSeeSuggestions": "om suggesties te zien 🎰",
 			"errors": {
 				"emojisLoad": "Laden van emoji's mislukt",
-				"emojisSearch": "Zoeken van emoji's mislukt",
+				"emojisSearch": "Zoeken naar emoji's mislukt",
 				"gifsLoad": "Laden van GIF's mislukt"
 			}
 		},
 		"messages": {
 			"emptyTitle": "Nog geen berichten...",
 			"emptySubtitle": "Start het gesprek en win groots! 🎰",
-			"loadingHistory": "Chat-geschiedenis laden...",
+			"loadingHistory": "Chatgeschiedenis laden...",
 			"loadingHistorySubtitle": "Recente berichten ophalen 📜",
-			"historyError": "Kan chat-geschiedenis niet laden"
+			"historyError": "Laden van chatgeschiedenis mislukt"
 		},
 		"message": {
 			"you": "Jij",
@@ -306,13 +306,13 @@
 			"imageAlt": "Geüploade afbeelding",
 			"rainTitle": "Geldregen! 🌧️💰",
 			"recipients": "→ {count} {count, plural, one {ontvanger} other {ontvangers}}",
-			"eachTo": "{amount} {currency} elk aan: {list}",
+			"eachTo": "{amount} {currency} elk naar: {list}",
 			"replyCount": "{count} {count, plural, one {antwoord} other {antwoorden}}",
-			"loadingHistory": "Chat-geschiedenis laden..."
+			"loadingHistory": "Chatgeschiedenis laden..."
 		},
 		"system": {
-			"slashDisabled": "Slash-commando's zijn tijdelijk uitgeschakeld. Gebruik alstublieft gewone berichten.",
-			"rateLimit": "Snelheidslimiet overschreden. Wacht {seconds} seconden voordat je een nieuw bericht verzendt.",
+			"slashDisabled": "Slash-commando's zijn tijdelijk uitgeschakeld. Gebruik alstublieft reguliere berichten.",
+			"rateLimit": "Snelheidslimiet overschreden. Wacht {seconds} seconden voordat je een ander bericht stuurt.",
 			"cannotTagSelf": "Je kunt jezelf niet taggen in berichten.",
 			"processingImage": "Afbeelding verwerken...",
 			"failedUploadPrefix": "Uploaden van afbeelding mislukt: {message}",
@@ -320,45 +320,45 @@
 		}
 	},
 	"sidebar": {
-		"quest": "SPEURTOCHT",
-		"spin": "DRAAI",
+		"quest": "QUEST",
+		"spin": "SPIN",
 		"deposit": "STORTEN",
 		"withdraw": "OPNEMEN",
 		"playOnTelegram": "Speel op Telegram",
-		"dailyBonus": "Dagelijkse Bonus",
+		"dailyBonus": "Dagelijkse bonus",
 		"navigation": "Navigatie",
 		"games": "Spellen",
 		"providers": "Aanbieders",
-		"trendingNow": "Nu Trending",
-		"allProviders": "Alle Providers",
-		"allTopProviders": "Alle Top Providers",
-		"hotBadge": "Heet"
+		"trendingNow": "Nu populair",
+		"allProviders": "Alle aanbieders",
+		"allTopProviders": "Alle topaanbieders",
+		"hotBadge": "Populair"
 	},
 	"search": {
 		"title": "Zoek spellen",
-		"subtitle": "Vind op naam, provider of categorie",
-		"placeholder": "Zoek spellen, providers, categorieën...",
+		"subtitle": "Vind op naam, aanbieder of categorie",
+		"placeholder": "Zoek spellen, aanbieders, categorieën...",
 		"clear": "Wissen",
 		"recent": "Recent:",
 		"popular": "Populair:",
-		"favoritesTry": "Je kunt proberen — Jouw favorieten",
+		"favoritesTry": "Je kunt proberen — Je favorieten",
 		"hotPicks": "Populaire keuzes",
 		"resultsCount": "{count} {count, plural, one {spel} other {spellen}} gevonden",
 		"noResults": "Geen resultaten",
-		"filterApplied": "Gefilterd op {count} {count, plural, one {provider} other {providers}}",
+		"filterApplied": "Gefilterd op {count} {count, plural, one {aanbieder} other {aanbieders}}",
 		"suggestions": {
 			"category": "Categorie",
 			"provider": "Aanbieder"
 		},
 		"sections": {
 			"topProviders": "Topaanbieders",
-			"selectedProviders": "Geselecteerde Providers",
+			"selectedProviders": "Geselecteerde aanbieders",
 			"categories": "Categorieën",
 			"games": "Spellen",
 			"providers": "Aanbieders"
 		},
 		"results": {
-			"found": "{games} spellen, {categories} categorieën en {providers} providers gevonden"
+			"found": "{games} spellen, {categories} categorieën en {providers} aanbieders gevonden"
 		},
 		"gameTypes": {
 			"blackjack": "Blackjack",
@@ -375,16 +375,16 @@
 		"filters": {
 			"filter": "Filter",
 			"optionsTitle": "Filteropties",
-			"clearAll": "Alle Filters Wissen",
+			"clearAll": "Alle filters wissen",
 			"activeLabel": "Actief:"
 		},
 		"searchPlaceholderGeneric": "Zoeken...",
 		"providersDropdown": {
 			"title": "Aanbieders",
 			"selected": "{count} geselecteerd",
-			"searchPlaceholder": "Zoek providers...",
-			"empty": "Geen provider gevonden.",
-			"clear": "Providerfilters Wissen"
+			"searchPlaceholder": "Zoek aanbieders...",
+			"empty": "Geen aanbieder gevonden.",
+			"clear": "Aanbiederfilters wissen"
 		},
 		"category": {
 			"label": "Categorie:"
@@ -394,7 +394,7 @@
 			"gridAria": "Rasterweergave",
 			"listAria": "Lijstweergave"
 		},
-		"loadMore": "Meer Laden"
+		"loadMore": "Meer laden"
 	},
 	"commonExtra": {
 		"connecting": "Verbinden...",
@@ -403,25 +403,25 @@
 		"clear": "Wissen"
 	},
 	"home": {
-		"topProviders": "Top Spelproviders"
+		"topProviders": "Top spelaanbieders"
 	},
 	"lobby": {
-		"yourFavorites": "Jouw Favorieten",
-		"featuredCasinoGames": "Uitgelichte Casinospellen",
-		"hotPicks": "Populaire Keuzes",
-		"slots": "Gokkasten",
+		"yourFavorites": "Jouw favorieten",
+		"featuredCasinoGames": "Uitgelichte casinospellen",
+		"hotPicks": "Populaire keuzes",
+		"slots": "Slots",
 		"sports": "Sport",
-		"realTimeScoreboard": "Real-Time Scorebord"
+		"realTimeScoreboard": "Real-time scorebord"
 	},
 	"affiliate": {
-		"title": "Partnerprogramma",
-		"loginPromptTitle": "Verwijzingsprogramma",
+		"title": "Verwijzingsbonusprogramma",
+		"loginPromptTitle": "Verwijzingsbonusprogramma",
 		"loginPromptSubtitle": "Log in om je verwijzingsstatistieken, bonussen te bekijken en beloningen te claimen.",
 		"goHome": "Ga naar Home",
 		"tabs": {
 			"dashboard": "Dashboard",
 			"rates": "Commissietarieven",
-			"calculator": "Rekenmachine"
+			"calculator": "Calculator"
 		},
 		"refresh": "Vernieuwen",
 		"refreshing": "Vernieuwen...",
@@ -429,47 +429,47 @@
 		"refreshPartial": "Gedeeltelijk vernieuwd: {success}/{total} secties bijgewerkt",
 		"refreshFailed": "Gegevens vernieuwen mislukt. Probeer het opnieuw.",
 		"dashboard": {
-			"title": "Partner Dashboard",
+			"title": "Affiliate Dashboard",
 			"subtitle": "Volg je verwijzingen, inkomsten en commissieprestaties",
 			"performanceOverview": "Prestatieoverzicht",
 			"referralManagement": "Verwijzingsbeheer",
 			"termsAndCommission": "Voorwaarden & Commissiestructuur",
-			"unclaimedEarnings": "Niet-geclaimde Inkomsten",
-			"claim": "Claimen",
-			"claiming": "Bezig met claimen...",
-			"totalIncome": "Totaal Inkomen",
-			"totalReferrals": "Totaal Verwijzingen",
+			"unclaimedEarnings": "Ongeclaimde inkomsten",
+			"claim": "Claim",
+			"claiming": "Claimen...",
+			"totalIncome": "Totaal inkomen",
+			"claimButtonTitle": "Bonus claimen",
+			"totalReferrals": "Totaal verwijzingen",
 			"usersUnit": "gebruikers",
-			"yourReferralLinks": "Jouw Verwijzingslinks",
+			"yourReferralLinks": "Jouw verwijzingslinks",
 			"referralLinksSubtitle": "Deel deze links om nieuwe gebruikers te verwijzen en commissies te verdienen",
-			"completeReferralLink": "Volledige Verwijzingslink",
+			"completeReferralLink": "Volledige verwijzingslink",
 			"fullReferralPlaceholder": "Volledige verwijzingslink verschijnt hier",
 			"fullReferralHelp": "Directe link die gebruikers kunnen aanklikken om zich te registreren met jouw verwijzingscode",
-			"referralCodeOnly": "Alleen Verwijzingscode",
+			"referralCodeOnly": "Alleen verwijzingscode",
 			"yourReferralId": "Jouw verwijzings-ID",
-			"referralIdHelp": "Deel deze code zodat gebruikers deze handmatig kunnen invoeren bij registratie",
+			"referralIdHelp": "Deel deze code zodat gebruikers deze handmatig kunnen invoeren tijdens de registratie",
 			"copyFullSuccess": "Volledige verwijzingslink gekopieerd naar klembord!",
-			"copyIdSuccess": "Verwijzings-ID gekopieerd naar klembord!",
-			"claimButtonTitle": "Claim Bonus"
+			"copyIdSuccess": "Verwijzings-ID gekopieerd naar klembord!"
 		},
 		"referrals": {
-			"title": "Mijn Verwijzingen",
-			"subtitle": "Volg en beheer alle gebruikers die via jouw partnerlinks zijn doorverwezen",
+			"title": "Mijn verwijzingen",
+			"subtitle": "Volg en beheer alle gebruikers die via jouw affiliate links zijn verwezen",
 			"totalReferrals": "totaal verwijzingen",
 			"monitorHelp": "Monitor de activiteit, stortingen en spelpatronen van je verwijzingen",
 			"sort": {
 				"placeholder": "Sorteer op...",
 				"nicknameAsc": "Bijnaam (A-Z)",
 				"nicknameDesc": "Bijnaam (Z-A)",
-				"lastLogin": "Laatste Login",
-				"unclaimedAmount": "Niet-geclaimd Bedrag"
+				"lastLogin": "Laatste login",
+				"unclaimedAmount": "Ongeclaimd bedrag"
 			},
 			"table": {
 				"nickname": "Bijnaam",
-				"totalWager": "Totale Inzet",
-				"lastLogin": "Laatste Login",
+				"totalWager": "Totale inzet",
+				"lastLogin": "Laatste login",
 				"registered": "Geregistreerd",
-				"lastDeposit": "Laatste Storting",
+				"lastDeposit": "Laatste storting",
 				"depositDate": "Stortingsdatum",
 				"tier": "Niveau"
 			},
@@ -486,41 +486,41 @@
 		"rates": {
 			"title": "Commissietariefstructuur",
 			"subtitle": "Verdienstenpercentages per niveau en spelcategorie",
-			"howItWorks": {
-				"title": "Hoe Commissieniveaus Werken",
-				"body": "Je commissieniveau wordt bepaald door het totale dagelijkse inzetbedrag van je verwijzingen. Hogere niveaus bieden betere commissietarieven voor alle speltypen."
+			"overview": {
+				"title": "Overzicht",
+				"body": "De verwijzingsbonus beloont affiliates op basis van de omzet van doorverwezen spelers in Slots, Live Casino, Sportweddenschappen en Loterij. Commissies worden elke 24 uur berekend, waarbij de inkomsten gebaseerd zijn op verschillende omzetniveaus."
 			},
 			"calculation": {
-				"title": "Hoe Commissies Worden Berekend",
-				"desc": "Commissies worden elke 24 uur berekend op basis van de totale inzetten van doorverwezen spelers. Voorbeelden:",
+				"title": "Hoe commissies worden berekend",
+				"desc": "Commissies worden elke 24 uur berekend op basis van de totale inzetten van doorverwezen spelers. \nVoorbeelden:",
 				"exampleTitle": "Niveau {tier}:",
-				"wagerIn": "Inzet {amount} in {gameType}"
+				"wagerIn": "Zet {amount} in op {gameType}"
 			},
 			"table": {
-				"tierLevel": "Niveau",
+				"tierLevel": "Niveauniveau",
 				"wagerRange": "Inzetbereik",
-				"slots": "Gokkasten",
-				"liveCasino": "Livecasino",
+				"slots": "Slots",
+				"liveCasino": "Live Casino",
 				"sports": "Sport",
 				"tierPrefix": "NIVEAU",
 				"commissionLevel": "Commissieniveau",
 				"dailyWager": "Dagelijks inzetvolume"
 			},
 			"claim": {
-				"title": "Claimen en Opnemen",
+				"title": "Claimen en opnemen",
 				"points": {
 					"0": "Commissies zijn beschikbaar voor opname zodra ze zijn berekend.",
-					"1": "Er is geen vervaldatum voor niet-geclaimde commissies - ze stapelen zich op totdat ze worden geclaimd.",
+					"1": "Er is geen vervaldatum voor ongeclaimde commissies—ze stapelen zich op totdat ze worden geclaimd.",
 					"2": "Opnames volgen de standaardregels van het platform, zoals minimumlimieten en verwerkingstijden."
 				}
 			},
 			"system": {
-				"title": "Systeemtijd en Operaties",
-				"dailyTimeframeLabel": "Dagelijks Tijdsbestek:",
+				"title": "Systeemtijd en -operaties",
+				"dailyTimeframeLabel": "Dagelijks tijdsbestek:",
 				"dailyTimeframeValue": "00:00 UTC tot 23:59 UTC (elke dag).",
-				"claimDailyLabel": "Dagelijks Claimen:",
-				"claimDailyValue": "Dagelijks beschikbaar om 14:00 UTC (Jouw Lokale Tijd: {local}).",
-				"note": "Opmerking: Hoewel we werken met providers uit verschillende tijdzones, volgen alle berekeningen UTC om consistentie te garanderen en verwarring te voorkomen."
+				"claimDailyLabel": "Dagelijks claimen:",
+				"claimDailyValue": "Dagelijks beschikbaar om 14:00 UTC (Jouw lokale tijd: {local}).",
+				"note": "Let op: Hoewel we samenwerken met aanbieders uit verschillende tijdzones, volgen alle berekeningen UTC om consistentie te garanderen en verwarring te voorkomen."
 			},
 			"amendments": {
 				"title": "Wijzigingen",
@@ -529,29 +529,199 @@
 			"footer": {
 				"schedule": "Commissieschema:",
 				"availableDaily": "Dagelijks beschikbaar om",
-				"localTimeLabel": "(Jouw Lokale Tijd: {time})"
-			},
-			"overview": {
-				"title": "Overzicht",
-				"body": "Het Affiliate Programma beloont affiliates op basis van de inzetomzet van doorverwezen spelers in Slots, Live Casino, Sportweddenschappen en Loterij. Commissies worden elke 24 uur berekend, met inkomsten gebaseerd op verschillende omzetniveaus."
+				"localTimeLabel": "(Jouw lokale tijd: {time})"
 			}
 		},
 		"calculator": {
 			"title": "Inkomstencalculator",
 			"subtitle": "Schat je commissie-inkomsten op basis van de inzetbedragen van je verwijzingen",
 			"interactive": {
-				"title": "Interactieve Tool:",
+				"title": "Interactieve tool:",
 				"body": "Voer verschillende inzetbedragen in om potentiële inkomsten over alle niveaus te zien"
 			},
-			"potentialEarnings": "Potentiële Inkomsten",
+			"potentialEarnings": "Potentiële inkomsten",
 			"basedOnRate": "Gebaseerd op {percentage}% commissietarief",
 			"tier": "Niveau {level}",
 			"commissionLevel": "Commissieniveau {level}",
-			"enterWager": "Voer Inzetbedrag in (USD)",
+			"enterWager": "Voer inzetbedrag in (USD)",
 			"wagerPlaceholder": "bijv., 1000",
-			"calcFor": "Berekening van inkomsten voor ${amount} inzet",
-			"totalPotential": "Totaal Potentiële Inkomsten:",
-			"combinedAtTier": "Gecombineerde inkomsten van alle speltypen op Niveau {level}"
+			"calcFor": "Inkomsten berekenen voor ${amount} inzet",
+			"totalPotential": "Totaal potentiële inkomsten:",
+			"combinedAtTier": "Gecombineerde inkomsten van alle speltypes op niveau {level}"
+		}
+	},
+	"bonus": {
+		"title": "Omzetbonusprogramma",
+		"loginPromptTitle": "Omzetbonusprogramma",
+		"loginPromptSubtitle": "Log in om je bonusstatistieken te bekijken en je beloningen te claimen.",
+		"goHome": "Ga naar Home",
+		"tabs": {
+			"dashboard": "Dashboard",
+			"claims": "Claims",
+			"rates": "Bonustarieven",
+			"calculator": "Calculator"
+		},
+		"refresh": "Vernieuwen",
+		"refreshing": "Vernieuwen...",
+		"refreshAllSuccess": "Alle gegevens succesvol vernieuwd!",
+		"refreshPartial": "Gedeeltelijk vernieuwd: {success}/{total} secties bijgewerkt",
+		"refreshFailed": "Gegevens vernieuwen mislukt. Probeer het opnieuw.",
+		"dashboard": {
+			"title": "Bonus Dashboard",
+			"subtitle": "Volg je inzetten, bonussen en beloningsinkomsten",
+			"claimButtonTitle": "Claim",
+			"performanceOverview": "Bonusoverzicht",
+			"bonusRatesTitle": "Bonusstariefstructuur",
+			"totalIncome": "Totaal bonus",
+			"pendingBonus": "Bonus in behandeling",
+			"lastClaim": "Laatste claim",
+			"unclaimedEarnings": "Beschikbaar om te claimen",
+			"claim": {
+				"title": "Claimen en opnemen",
+				"points": {
+					"0": "Commissies zijn beschikbaar voor opname zodra ze zijn berekend.",
+					"1": "Er is geen vervaldatum voor ongeclaimde commissies—ze stapelen zich op totdat ze worden geclaimd.",
+					"2": "Opnames volgen de standaardregels van het platform, zoals minimumlimieten en verwerkingstijden."
+				}
+			},
+			"claiming": "Claimen...",
+			"section2": {
+				"title": "Geschiktheid",
+				"content": "Om deel te nemen:"
+			},
+			"section3": {
+				"title": "Omzetniveaus en -tarieven",
+				"content": "Bonussen worden berekend op basis van je dagelijkse inzetbedragen:",
+				"noteTitle": "Let op",
+				"noteContent": "Niveaus worden dagelijks om 14:00 UTC geëvalueerd. Je inzetvolume van de vorige dag bepaalt het bonustarief van vandaag. Tarieven zijn van toepassing op alle speltypes: Slots, Live Casino en Sport."
+			}
+		},
+		"claims": {
+			"title": "Claimgeschiedenis",
+			"subtitle": "Volg je bonusclaims en inzetactiviteit",
+			"tableHeaders": {
+				"date": "Weddenschapsdatum",
+				"slots": "Slots",
+				"liveCasino": "Live Casino",
+				"sports": "Sport",
+				"total": "Totaal",
+				"tier": "Niveau",
+				"unclaimed": "Ongeclaimd",
+				"token": "Token"
+			},
+			"tierPrefix": "Niveau",
+			"availableToClaim": "Beschikbaar om te claimen",
+			"totalBonus": "Totaal bonus",
+			"claimed": "Geclaimd",
+			"progressPercentage": "Voortgang",
+			"progressTitle": "Jouw voortgang",
+			"currentTier": "Huidig niveau",
+			"nextTier": "Volgend niveau",
+			"wagerProgress": "Inzetvoortgang",
+			"totalWagered": "Totaal ingezet vandaag",
+			"toNextTier": "om volgend niveau te bereiken",
+			"empty": {
+				"title": "Nog geen bonusclaims",
+				"subtitle": "Begin met spelen om bonussen te verdienen!"
+			}
+		},
+		"rates": {
+			"title": "Omzetniveaus en -tarieven",
+			"subtitle": "Bonuspercentages per inzetniveau en spelcategorie",
+			"overview": {
+				"title": "Overzicht",
+				"body": "De Omzetbonus beloont gebruikers op basis van hun inzetten in Slot, Live Casino, Sportweddenschappen en Loterij. Bonussen worden elke 24 uur berekend, en gebruikers kunnen ze de volgende dag na het inzetten claimen. Er zijn zeven niveaus, elk met verschillende tarieven afhankelijk van het inzetbedrag."
+			},
+			"eligibility": {
+				"title": "Geschiktheid",
+				"content": "Om deel te nemen:",
+				"points": {
+					"0": "Je moet een actief account hebben.",
+					"1": "Plaats inzetten in Slot, Live Casino, Sportweddenschappen en Loterij.",
+					"2": "Voldoe aan de minimale inzetvereisten voor elk niveau."
+				}
+			},
+			"calculation": {
+				"title": "Hoe bonussen worden berekend",
+				"desc": "Bonussen worden elke 24 uur berekend op basis van je totale inzetten. Voorbeelden:",
+				"exampleTitle": "Niveau {tier}:",
+				"wagerIn": "Zet {amount} in op {gameType}"
+			},
+			"table": {
+				"tierLevel": "Niveauniveau",
+				"wagerRange": "Inzetbereik",
+				"slots": "Slots",
+				"liveCasino": "Live Casino",
+				"sports": "Sport",
+				"tierPrefix": "NIVEAU",
+				"commissionLevel": "Bonusniveau",
+				"dailyWager": "Dagelijks inzetvolume"
+			},
+			"claim": {
+				"title": "Bonussen claimen en opnemen",
+				"points": {
+					"0": "Bonussen komen 24 uur na de inzet in aanmerking om te worden geclaimd.",
+					"1": "Ongeclaimde bonussen stapelen zich op en vervallen niet.",
+					"2": "Het claim- en opnameproces kan variëren op basis van platformspecifiek beleid."
+				}
+			},
+			"system": {
+				"title": "Systeemtijd en -operaties",
+				"dailyTimeframeLabel": "Dagelijks tijdsbestek:",
+				"dailyTimeframeValue": "00:00 UTC tot 23:59 UTC (elke dag).",
+				"claimDailyLabel": "Dagelijks claimen:",
+				"claimDailyValue": "Dagelijks beschikbaar om 14:00 UTC (Jouw lokale tijd: {local}).",
+				"note": "Let op: hoewel we samenwerken met aanbieders uit verschillende tijdzones, volgen alle berekeningen UTC om consistentie te garanderen en verwarring te voorkomen."
+			},
+			"amendments": {
+				"title": "Wijzigingen en diskwalificaties",
+				"body": "We kunnen deze voorwaarden op elk moment bijwerken, en wijzigingen worden van kracht na publicatie. Als systeemfouten, misrekeningen of valsspelen worden vermoed, behouden we ons het recht voor om bonussen en accounts aan te passen of te diskwalificeren als dat nodig is om eerlijkheid te garanderen"
+			},
+			"footer": {
+				"schedule": "Bonusschema:",
+				"availableDaily": "Dagelijks beschikbaar om",
+				"localTimeLabel": "(Jouw lokale tijd: {time})"
+			}
+		},
+		"calculator": {
+			"title": "Bonuscalculator",
+			"subtitle": "Schat je bonusinkomsten op basis van je inzetbedragen",
+			"interactive": {
+				"title": "Interactieve tool:",
+				"body": "Voer verschillende inzetbedragen in om potentiële bonussen over alle niveaus te zien"
+			},
+			"potentialEarnings": "Potentiële bonus",
+			"basedOnRate": "Gebaseerd op {percentage}% bonustarief",
+			"tier": "Niveau {level}",
+			"commissionLevel": "Bonusniveau {level}",
+			"enterWager": "Voer inzetbedrag in (USD)",
+			"wagerPlaceholder": "bijv., 1000",
+			"calcFor": "Bonus berekenen voor ${amount} inzet",
+			"totalPotential": "Totaal potentiële bonus:",
+			"combinedAtTier": "Gecombineerde bonus van alle speltypes op niveau {level}"
+		},
+		"claimSuccessModal": {
+			"title": "Claim succesvol",
+			"statusCompleted": "Voltooid",
+			"statusOnChain": "On-Chain",
+			"claimAmount": "Claimbedrag",
+			"logoAlt": "{siteName} Logo",
+			"backgroundAlt": "Claim succes achtergrond",
+			"creatingMagic": "Magie creëren...",
+			"downloadShare": "Downloaden & delen",
+			"spreadTheWin": "VERSPREID DE WINST",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "Telegram",
+			"socialReddit": "Reddit",
+			"socialMore": "Meer",
+			"shareText": "Ik heb net {amount} bonus geclaimd! Doe mee: {url}",
+			"referralLinkCopied": "Verwijzingslink gekopieerd!",
+			"referralLinkCopyFailed": "Kopiëren van verwijzingslink mislukt",
+			"screenshotFailed": "Screenshot mislukt. Probeer het opnieuw of gebruik een andere browser.",
+			"shareTextCopied": "Deeltekst gekopieerd naar klembord!",
+			"shareFailed": "Delen mislukt. Probeer het opnieuw."
 		}
 	},
 	"debug": {
@@ -560,63 +730,63 @@
 	"getLobby": {
 		"enteringLobby": "Lobby betreden...",
 		"connectingWait": "Even geduld terwijl we je verbinden.",
-		"invalidSession": "Je sessie is ongeldig of de provider ontbreekt. Probeer het opnieuw.",
+		"invalidSession": "Je sessie is ongeldig of de aanbieder ontbreekt. Probeer het opnieuw.",
 		"failedPrefix": "Lobby betreden mislukt: {message}",
-		"launchFailedTitle": "Starten Mislukt",
+		"launchFailedTitle": "Starten mislukt",
 		"returnHome": "Terug naar Home"
 	},
 	"play": {
-		"connecting": "Verbinden met gameserver...",
-		"invalidSession": "Je sessie is ongeldig of verlopen. Log opnieuw in en probeer het nogmaals.",
-		"launchFailedTitle": "Starten Mislukt",
+		"connecting": "Verbinden met spelserver...",
+		"invalidSession": "Je sessie is ongeldig of verlopen. Log in en probeer het opnieuw.",
+		"launchFailedTitle": "Starten mislukt",
 		"returnHome": "Terug naar Home"
 	},
 	"modalsIdle": {
 		"badgeLimitedTime": "TIJDELIJKE AANBIEDING",
-		"headline": "Ontvang 200% Welkomstbonus!",
-		"subheadline": "Verbind nu je crypto wallet en ontvang tot {amount} bonus op je eerste storting!",
-		"featureDepositMatch": "200% Stortingsmatch",
-		"featureZeroFees": "Geen Transactiekosten",
-		"featureInstantWithdrawals": "Directe Opnames",
-		"featureNoKyc": "Geen KYC Vereist",
+		"headline": "Ontvang 200% welkomstbonus!",
+		"subheadline": "Verbind nu je crypto-portemonnee en ontvang tot {amount} bonus op je eerste storting!",
+		"featureDepositMatch": "200% stortingsmatch",
+		"featureZeroFees": "Geen transactiekosten",
+		"featureInstantWithdrawals": "Directe opnames",
+		"featureNoKyc": "Geen KYC vereist",
 		"ctaClaim": "CLAIM BONUS NU!",
 		"offerExpires": "Aanbieding vervalt over:",
 		"disclaimer": "Algemene voorwaarden zijn van toepassing. Gokken brengt risico's met zich mee. Speel verantwoord. 18+",
-		"closeAria": "Sluit venster",
-		"bannerAlt": "Promotiebanner",
-		"ctaOk": "Verbind Wallet & Begin met Wedden",
-		"enterAmount": "Voer Bedrag in",
+		"closeAria": "Modal sluiten",
+		"bannerAlt": "Promotionele banner",
+		"ctaOk": "Verbind portemonnee & begin met wedden",
+		"enterAmount": "Voer bedrag in",
 		"balance": "Saldo",
 		"max": "Max",
-		"deposit": "Storten",
+		"deposit": "Storting",
 		"ethereum": "Ethereum"
 	},
 	"modalsSmall": {
 		"close": "Sluiten",
-		"firstDepositBoost": "1e Stortingsbonus Boost",
+		"firstDepositBoost": "1e stortingsbonusboost",
 		"bonus": "Bonus",
 		"min": "Min",
 		"sec": "Sec",
-		"deposit": "Storten"
+		"deposit": "Storting"
 	},
 	"auth": {
 		"email": {
-			"title": "E-mail Login",
+			"title": "E-mail login",
 			"description": "We sturen je een 6-cijferige code",
 			"emailLabel": "E-mailadres",
 			"emailPlaceholder": "naam@email.com",
 			"cancel": "Annuleren",
 			"sending": "Verzenden",
 			"continue": "Doorgaan",
-			"enterCodeTitle": "Voer Code in",
+			"enterCodeTitle": "Voer code in",
 			"sentTo": "Verzonden naar {email}",
-			"changeEmail": "Wijzig e-mail",
+			"changeEmail": "E-mail wijzigen",
 			"resendCode": "Code opnieuw verzenden",
 			"resendIn": "Opnieuw verzenden over {seconds}s",
 			"verifying": "Verifiëren",
 			"successTitle": "Je bent binnen",
-			"successSubtitle": "Bezig met instellen...",
-			"modalAria": "E-mail Verificatie Venster",
+			"successSubtitle": "Instellingen worden voorbereid...",
+			"modalAria": "E-mailverificatie modal",
 			"errors": {
 				"invalidEmail": "Voer een geldig e-mailadres in",
 				"sendFailed": "Verificatiecode verzenden mislukt.",
@@ -624,7 +794,7 @@
 			}
 		},
 		"setNickname": {
-			"title": "Stel je Bijnaam in",
+			"title": "Stel je bijnaam in",
 			"subtitle": "Dit is een eenmalige instelling en kan niet worden gewijzigd",
 			"logoutAria": "Uitloggen",
 			"inputPlaceholder": "Kies je unieke bijnaam",
@@ -636,85 +806,86 @@
 				"available": "Bijnaam is beschikbaar!",
 				"taken": "Deze bijnaam is al in gebruik."
 			},
-			"register": "Registreer en Speel",
-			"termsTitle": "Algemene Voorwaarden:",
-			"termsBody": "Door dit document te ondertekenen met je Wallet en/of door te gaan met het gebruik van deze Web3-applicatie, accepteer je de gebruiksvoorwaarden van de applicatie. Het ondertekenen van je toestemming voor de Gebruiksvoorwaarden is geen blockchain-transactie en brengt geen kosten met zich mee.",
+			"register": "Registreren en spelen",
+			"termsTitle": "Algemene voorwaarden:",
+			"termsBody": "Door dit document te ondertekenen met je portemonnee en/of door te gaan met het gebruik van deze Web3-applicatie, accepteer je de gebruiksvoorwaarden van de applicatie. Het ondertekenen van je toestemming voor de gebruiksvoorwaarden is geen blockchain-transactie en brengt geen kosten met zich mee.",
 			"errors": {
 				"verifyNicknameFailed": "Kon bijnaam niet verifiëren. Probeer het opnieuw.",
 				"registerFailed": "Registratie mislukt: {message}"
 			}
 		},
 		"walletConnect": {
-			"loginWithEmail": "Inloggen met E-mail",
-			"connectWalletBtn": "Verbind Wallet",
+			"loginWithEmail": "Inloggen met e-mail",
+			"connectWalletBtn": "Portemonnee verbinden",
+			"loginWithWallet": "Inloggen met portemonnee",
 			"player": "Speler",
-			"walletConnected": "Wallet Verbonden",
-			"emailConnected": "E-mail Verbonden",
+			"walletConnected": "Portemonnee verbonden",
+			"emailConnected": "E-mail verbonden",
 			"disconnect": "Verbinding verbreken",
-			"walletAddress": "Wallet Adres",
-			"balance": "Saldo",
-			"loginWithWallet": "Inloggen met Wallet"
+			"walletAddress": "Portemonnee-adres",
+			"balance": "Saldo"
 		}
 	},
 	"walletProvider": {
 		"transactionModal": {
+			"title": "PORTEMONNEE",
 			"tabs": {
-				"deposit": "Storten",
-				"withdraw": "Opnemen",
-				"swap": "Wisselen",
-				"walletInfo": "Portemonnee",
+				"deposit": "Storting",
 				"tip": "Fooi",
-				"emailWallet": "E-mailportemonnee",
+				"withdraw": "Opname",
+				"swap": "Ruilen",
+				"walletInfo": "Portemonnee",
+				"emailWallet": "E-mail portemonnee",
 				"wallet": "Portemonnee"
 			},
 			"mobileDropdown": {
-				"emailWallet": "E-mail Wallet",
+				"emailWallet": "E-mail portemonnee",
 				"wallet": "Portemonnee",
-				"deposit": "Storten",
-				"withdraw": "Opnemen",
-				"swap": "Wisselen",
-				"tip": "Fooi"
-			},
-			"title": "PORTEMONNEE"
+				"deposit": "Storting",
+				"tip": "Fooi",
+				"withdraw": "Opname",
+				"swap": "Ruilen"
+			}
 		},
 		"networkSelector": {
-			"placeholder": "Selecteer Netwerk",
-			"switching": "Wisselen...",
-			"walletNotConnected": "Wallet niet verbonden.",
-			"failedToSwitch": "Netwerk wisselen mislukt. Probeer het vanuit je wallet.",
+			"placeholder": "Selecteer netwerk",
+			"switching": "Schakelen...",
+			"walletNotConnected": "Portemonnee niet verbonden.",
+			"failedToSwitch": "Netwerk wisselen mislukt. Probeer het vanuit je portemonnee.",
 			"altLogo": "Netwerklogo"
 		},
 		"tokenList": {
-			"dialogTitle": "Selecteer een Token",
-			"instantDeposit": "Directe Storting",
-			"yourWalletBalance": "Je Wallet Saldo",
+			"dialogTitle": "Selecteer een token",
+			"instantDeposit": "Directe storting",
+			"yourWalletBalance": "Je portemonneesaldo",
 			"searchPlaceholder": "Zoek naam of plak adres",
 			"emptySearch": "Geen tokens gevonden die overeenkomen met je zoekopdracht.",
 			"emptyOwned": "Geen tokens met saldo gevonden.",
 			"searchResults": "Zoekresultaten",
-			"yourTokens": "Jouw Tokens",
-			"otherResults": "Andere Resultaten"
+			"yourTokens": "Jouw tokens",
+			"otherResults": "Andere resultaten"
 		},
 		"tabsSidebar": {
 			"walletInfo": "Portemonnee",
-			"emailWallet": "E-mail Wallet",
-			"deposit": "Storten",
-			"withdraw": "Opnemen",
-			"swap": "Wisselen"
+			"emailWallet": "E-mail portemonnee",
+			"deposit": "Storting",
+			"withdraw": "Opname",
+			"swap": "Ruilen"
 		},
 		"depositPanel": {
-			"youPay": "Je Betaalt",
-			"resetForm": "Formulier Resetten",
-			"enterAmount": "Voer Bedrag in",
+			"youPay": "Je betaalt",
+			"resetForm": "Formulier resetten",
+			"enterAmount": "Voer bedrag in",
 			"selectToken": "Selecteer token",
 			"max": "Max",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} is gereserveerd om gaskosten te dekken en transactiefalen te voorkomen",
 			"balance": "Saldo:",
 			"calculating": "Berekenen...",
 			"approxUsd": "~ ${amount} USD",
 			"minPrefix": "Min:",
 			"ratesMayVary": "Tarieven kunnen variëren",
-			"emailWalletAddress": "E-mail Wallet Adres",
-			"walletAddress": "Wallet Adres",
+			"emailWalletAddress": "E-mail portemonnee-adres",
+			"walletAddress": "Portemonnee-adres",
 			"minimumIs": "Minimum is {min}",
 			"errors": {
 				"selectTokenAndAmount": "Selecteer een token en voer een bedrag in",
@@ -725,14 +896,58 @@
 			},
 			"status": {
 				"processing": "Verwerken...",
-				"awaitingApproval": "Wachten op Goedkeuring",
-				"calculatingRate": "Tarief Berekenen...",
-				"insufficientBalance": "Onvoldoende Saldo"
+				"awaitingApproval": "Wachten op goedkeuring",
+				"calculatingRate": "Tarief berekenen...",
+				"insufficientBalance": "Onvoldoende saldo"
 			},
 			"buttons": {
 				"depositUsd": "Stort ${amount}"
+			}
+		},
+		"tipPanel": {
+			"youTip": "Je geeft fooi",
+			"resetForm": "Formulier resetten",
+			"enterAmount": "Voer bedrag in",
+			"selectToken": "Selecteer token",
+			"minPrefix": "Minimum",
+			"balance": "Saldo:",
+			"max": "Max",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} is gereserveerd om gaskosten te dekken en transactiefalen te voorkomen",
+			"approxUsd": "~ ${amount} USD",
+			"tipPanelWarningText": "Fooien zijn vrijwillig en niet-restitueerbaar.",
+			"emailWalletAddress": "E-mail portemonnee-adres",
+			"errors": {
+				"selectTokenAndAmount": "Selecteer een token en voer een bedrag in.",
+				"insufficientBalance": "Onvoldoende saldo.",
+				"belowMinimum": "Bedrag moet minimaal {min} zijn.",
+				"missingWallet": "Kan fooiportemonnee niet ophalen. Probeer het later opnieuw.",
+				"checkForm": "Controleer je fooigegevens."
 			},
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} is gereserveerd om de gaskosten te dekken en het mislukken van transacties te voorkomen"
+			"status": {
+				"processing": "Fooi verzenden...",
+				"awaitingApproval": "Wachten op goedkeuring...",
+				"calculatingRate": "Berekenen...",
+				"insufficientBalance": "Onvoldoende saldo",
+				"fetchingWallet": "Fooiportemonnee voorbereiden..."
+			},
+			"prompts": {
+				"selectToken": "Selecteer token",
+				"enterAmount": "Voer bedrag in"
+			},
+			"buttons": {
+				"tipUsd": "Geef ${amount} fooi",
+				"tip": "Fooi"
+			},
+			"minimumIs": "Minimale fooi is {min}"
+		},
+		"tipPending": {
+			"submittedTitle": "Fooi in behandeling",
+			"submittedDesc": "Je fooi wordt on-chain bevestigd.",
+			"confirmedTitle": "Fooi bevestigd!",
+			"confirmedDesc": "Je fooi is succesvol afgeleverd.",
+			"viewOnExplorer": "Bekijk op verkenner",
+			"newTipPending": "Stuur nog een fooi",
+			"newTipConfirmed": "Stuur nog een fooi"
 		},
 		"swapPanel": {
 			"selectTokens": "Selecteer tokens",
@@ -740,32 +955,33 @@
 			"gettingQuote": "Offerte ophalen...",
 			"confirming": "Bevestigen...",
 			"approving": "Goedkeuren...",
-			"insufficientBalance": "Onvoldoende saldo voor de Wissel",
-			"sameToken": "Kan niet dezelfde token wisselen",
-			"approveAndSwap": "Goedkeuren & Wisselen",
-			"swap": "Wisselen",
-			"slippageTolerance": "Slippage Tolerantie",
+			"insufficientBalance": "Onvoldoende saldo voor de ruil",
+			"sameToken": "Kan niet dezelfde token ruilen",
+			"approveAndSwap": "Goedkeuren & ruilen",
+			"swap": "Ruilen",
+			"slippageTolerance": "Slippage-tolerantie",
 			"custom": "Aangepast",
 			"set": "Instellen",
 			"currentSlippage": "Huidige slippage",
-			"swapSuccessful": "Wissel Geslaagd!",
-			"transactionConfirmed": "Je transactie is bevestigd",
-			"hash": "Hasj",
-			"newSwap": "Nieuwe Wissel",
+			"swapSuccessful": "Ruil succesvol!",
+			"transactionConfirmed": "Je transactie is ingediend",
+			"hash": "Hash",
+			"newSwap": "Nieuwe ruil",
 			"youPay": "Je betaalt",
 			"max": "Max",
+			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} is gereserveerd om gaskosten te dekken en transactiefalen te voorkomen",
 			"low": "Laag",
 			"amountPlaceholder": "0",
-			"selectToken": "Selecteer Token",
+			"selectToken": "Selecteer token",
 			"youReceive": "Je ontvangt",
 			"gettingBestQuote": "Beste offerte ophalen...",
 			"gas": "Gas",
 			"minimumReceived": "Minimum ontvangen",
-			"slippageToleranceLabel": "Slippage tolerantie",
+			"slippageToleranceLabel": "Slippage-tolerantie",
 			"gasFee": "Gaskosten",
-			"priceWarning": "Prijzen worden in real-time bijgewerkt en kunnen veranderen voordat je transactie wordt bevestigd",
-			"emailWalletAddress": "E-mail Wallet Adres",
-			"walletAddress": "Wallet Adres",
+			"priceWarning": "Prijzen worden in realtime bijgewerkt en kunnen veranderen voordat je transactie wordt bevestigd",
+			"emailWalletAddress": "E-mail portemonnee-adres",
+			"walletAddress": "Portemonnee-adres",
 			"minimumIs": "Minimum is {min}",
 			"errors": {
 				"selectTokenAndAmount": "Selecteer een token en voer een bedrag in",
@@ -776,31 +992,30 @@
 			},
 			"status": {
 				"processing": "Verwerken...",
-				"awaitingApproval": "Wachten op Goedkeuring",
-				"calculatingRate": "Tarief Berekenen...",
-				"insufficientBalance": "Onvoldoende Saldo"
+				"awaitingApproval": "Wachten op goedkeuring",
+				"calculatingRate": "Tarief berekenen...",
+				"insufficientBalance": "Onvoldoende saldo"
 			},
 			"buttons": {
 				"depositUsd": "Stort ${amount}"
-			},
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} is gereserveerd om gaskosten te dekken en transactie mislukkingen te voorkomen"
+			}
 		},
 		"depositPending": {
-			"confirmedTitle": "Storting Bevestigd!",
-			"submittedTitle": "Transactie Verzonden",
-			"confirmedDesc": "Je saldo is bijgewerkt.",
-			"submittedDesc": "Wachten op blockchain bevestiging. Dit kan enkele minuten duren.",
-			"viewOnExplorer": "Bekijk op Explorer",
-			"newDepositConfirmed": "Doe nog een storting",
-			"newDepositPending": "Start een nieuwe storting",
+			"confirmedTitle": "Storting bevestigd!",
+			"submittedTitle": "Transactie ingediend",
 			"failedTitle": "Transactie mislukt",
-			"failedDesc": "Uw transactie is mislukt. ",
-			"newDepositFailed": "Probeer het opnieuw"
+			"confirmedDesc": "Je saldo is bijgewerkt.",
+			"submittedDesc": "Wachten op blockchain-bevestiging. Dit kan enkele minuten duren.",
+			"failedDesc": "Je transactie is mislukt. Probeer het opnieuw.",
+			"viewOnExplorer": "Bekijk op verkenner",
+			"newDepositConfirmed": "Maak nog een storting",
+			"newDepositPending": "Start een nieuwe storting",
+			"newDepositFailed": "Probeer opnieuw"
 		},
 		"withdrawPanel": {
-			"resetForm": "Formulier Resetten",
+			"resetForm": "Formulier resetten",
 			"networkNotSupported": "Opnames worden alleen ondersteund op Arbitrum, Polygon, Optimism en BNB",
-			"youWithdraw": "Je Neemt op",
+			"youWithdraw": "Je neemt op",
 			"loading": "Laden...",
 			"amount": "Bedrag",
 			"max": "Max",
@@ -809,127 +1024,82 @@
 			"insufficientBalance": "Onvoldoende saldo",
 			"minimumIs": "Minimum is {min}",
 			"minLabel": "Min:",
-			"emailWalletAddress": "E-mail Wallet Adres",
-			"walletAddress": "Wallet Adres",
+			"calculating": "Berekenen",
+			"emailWalletAddress": "E-mail portemonnee-adres",
+			"walletAddress": "Portemonnee-adres",
 			"errors": {
 				"pendingWithdrawal": "Je hebt al een openstaande opname",
-				"invalidAddress": "Ongeldig Adres",
-				"enterAmount": "Voer Bedrag in",
-				"networkNotSupported": "Netwerk Niet Ondersteund"
+				"invalidAddress": "Ongeldig adres",
+				"enterAmount": "Voer bedrag in",
+				"networkNotSupported": "Netwerk niet ondersteund"
 			},
 			"status": {
 				"processing": "Verwerken...",
-				"insufficientBalance": "Onvoldoende Saldo",
-				"pendingWithdrawal": "Al een Openstaande Opname"
+				"insufficientBalance": "Onvoldoende saldo",
+				"pendingWithdrawal": "Heeft al een openstaande opname"
 			},
 			"buttons": {
 				"withdraw": "Neem {amount} {symbol} op",
-				"minimum": "Minimaal {amount} {symbol}"
-			},
-			"calculating": "Berekenen"
+				"minimum": "Minimum {amount} {symbol}"
+			}
 		},
 		"withdrawSuccess": {
-			"title": "Opname Geslaagd!",
-			"successMessage": "🎉 Zojuist {withdrawAmount} {tokenSymbol} opgenomen van {siteName}! 🚀 Sluit je aan bij de winnende reeks op {shareUrl}",
-			"withdrawnAmount": "Opgenomen Bedrag",
+			"title": "Opname succesvol!",
+			"successMessage": "🎉 Zojuist {withdrawAmount} {tokenSymbol} opgenomen van {siteName}! 🚀 Doe mee met de winnende reeks op {shareUrl}",
+			"withdrawnAmount": "Opgenomen bedrag",
 			"shareText": "Delen",
-			"subText": "🚀 SLUIT JE AAN BIJ DE WINNENDE REEKS! 🚀",
+			"subText": "🚀 DOE MEE MET DE WINNENDE REEKS! 🚀",
 			"generating": "Genereren...",
-			"screenshot": "Maak Schermafbeelding",
-			"download": "Download Afbeelding",
+			"screenshot": "Maak screenshot",
+			"download": "Afbeelding downloaden",
 			"close": "Sluiten",
 			"copiedToClipboard": "Deellink succesvol gekopieerd",
+			"userName": "{siteName} Speler",
+			"status": "Voltooid",
 			"entryPrice": "Opnamebedrag",
 			"lastPrice": "Tokensymbool",
-			"referralCode": "Een verwijzingscode",
-			"screenshotFailed": "Schermafbeelding mislukt. Probeer het opnieuw of gebruik een andere browser.",
-			"shareFailed": "Delen mislukt. Probeer het alstublieft opnieuw.",
-			"status": "Voltooid",
-			"userName": "{siteName}-speler"
+			"referralCode": "Verwijzingscode",
+			"screenshotFailed": "Screenshot mislukt. Probeer het opnieuw of gebruik een andere browser.",
+			"shareFailed": "Delen mislukt. Probeer het opnieuw."
 		},
 		"withdrawPending": {
-			"confirmedTitle": "Opname Bevestigd!",
-			"submittedTitle": "Transactie Verzonden",
+			"confirmedTitle": "Opname bevestigd!",
+			"submittedTitle": "Transactie ingediend",
 			"confirmedDesc": "Je geld is onderweg.",
-			"submittedDesc": "Wachten op blockchain bevestiging...",
-			"viewOnExplorer": "Bekijk op Explorer",
+			"submittedDesc": "Wachten op blockchain-bevestiging...",
+			"viewOnExplorer": "Bekijk op verkenner",
 			"manualApproval": "Deze opname vereist handmatige goedkeuring.",
-			"newWithdrawalConfirmed": "Doe nog een opname",
-			"newWithdrawalPending": "Start een Nieuwe Opname"
+			"newWithdrawalConfirmed": "Maak nog een opname",
+			"newWithdrawalPending": "Start een nieuwe opname"
 		},
 		"withdrawSummary": {
-			"youWillReceive": "Je Zult Ontvangen"
-		},
-		"tipPanel": {
-			"approxUsd": "~  USD",
-			"balance": "Balans:",
-			"buttons": {
-				"tip": "Fooi",
-				"tipUsd": "Fooi"
-			},
-			"emailWalletAddress": "E-mail portemonnee-adres",
-			"enterAmount": "Voer bedrag in",
-			"errors": {
-				"belowMinimum": "Het bedrag moet minstens {min} zijn.",
-				"checkForm": "Controleer a.u.b. uw fooigegevens.",
-				"insufficientBalance": "Onvoldoende saldo.",
-				"missingWallet": "Kan fooi-portemonnee niet ophalen. Probeer het later opnieuw.",
-				"selectTokenAndAmount": "Selecteer alstublieft een token en voer een bedrag in."
-			},
-			"max": "Max",
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} is gereserveerd om gasvergoedingen te dekken en transactiefouten te voorkomen",
-			"minimumIs": "De minimale fooi is {min}",
-			"minPrefix": "Minimum",
-			"prompts": {
-				"enterAmount": "Voer bedrag in",
-				"selectToken": "Kies token"
-			},
-			"resetForm": "Formulier resetten",
-			"selectToken": "Token selecteren",
-			"status": {
-				"awaitingApproval": "In afwachting van goedkeuring...",
-				"calculatingRate": "Bezig met berekenen...",
-				"fetchingWallet": "Fooienportefeuille aan het voorbereiden...",
-				"insufficientBalance": "Onvoldoende saldo",
-				"processing": "Fooi wordt verzonden..."
-			},
-			"tipPanelWarningText": "Fooien zijn vrijwillig en niet-terugbetaalbaar.",
-			"youTip": "Uw fooi"
-		},
-		"tipPending": {
-			"confirmedDesc": "Uw fooi is succesvol bezorgd.",
-			"confirmedTitle": "Fooi bevestigd!",
-			"newTipConfirmed": "Nog een tip sturen",
-			"newTipPending": "Stuur nog een fooi",
-			"submittedDesc": "Je fooi wordt bevestigd op de blockchain.",
-			"submittedTitle": "Fooi in afwachting",
-			"viewOnExplorer": "Bekijken in de verkenner"
+			"youWillReceive": "Je ontvangt"
 		}
 	},
 	"navUser": {
 		"upgradeToPro": "Upgrade naar Pro",
-		"account": "Rekening",
+		"account": "Account",
 		"billing": "Facturering",
-		"notifications": "Notificaties",
+		"notifications": "Meldingen",
 		"logout": "Uitloggen"
 	},
 	"games": {
-		"pageTitle": "Alle Spellen",
-		"playNow": "Speel Nu",
+		"pageTitle": "Alle spellen",
+		"playNow": "Speel nu",
 		"byProvider": "Door {name}",
-		"count": "{count} Spellen",
+		"count": "{count} spellen",
 		"noResults": "Geen spellen gevonden die aan je criteria voldoen.",
 		"errorLoading": "Kon spellen niet laden. Probeer het later opnieuw.",
-		"slots": "Gokkasten",
+		"slots": "Slots",
 		"sports": "Sport",
-		"liveCasino": "Livecasino",
-		"explore": "Verkennen",
+		"liveCasino": "Live Casino",
+		"explore": "Ontdek",
 		"exploreSubtitle": "Ontdek geweldige spelervaringen",
 		"poker": "Poker",
 		"lottery": "Loterij",
-		"futures": "Toekomsten",
+		"futures": "Futures",
 		"vr": "VR",
-		"swap": "Wisselen",
+		"swap": "Ruilen",
 		"slotsDescription": "Draai aan de rollen en win enorme jackpots",
 		"liveCasinoDescription": "Ervaar real-time casino-actie met live dealers",
 		"sportsDescription": "Wed op je favoriete teams en sportevenementen",
@@ -940,119 +1110,119 @@
 		"swapDescription": "Wissel tokens en cryptocurrencies naadloos uit",
 		"categories": {
 			"slot": {
-				"title": "Gokkast Spellen"
+				"title": "Slotspellen"
 			},
 			"liveCasino": {
-				"title": "Live Casino Spellen"
+				"title": "Live casinospellen"
 			},
 			"sports": {
-				"title": "Sportweddenschappen Spellen"
+				"title": "Sportweddenschapsspellen"
 			},
 			"rng": {
-				"title": "RNG Spellen"
+				"title": "RNG-spellen"
 			},
 			"other": {
-				"title": "{category} Spellen"
+				"title": "{category} spellen"
 			}
 		}
 	},
 	"providers": {
-		"pageTitle": "Alle Spelproviders",
-		"searchPlaceholder": "Zoek naar een provider...",
-		"empty": "Geen providers gevonden die overeenkomen met je zoekopdracht.",
-		"logoAlt": "{name}-logo",
+		"pageTitle": "Alle spelaanbieders",
+		"searchPlaceholder": "Zoek naar een aanbieder...",
+		"empty": "Geen aanbieders gevonden die overeenkomen met je zoekopdracht.",
+		"logoAlt": "{name} logo",
 		"filteredBy": "Gefilterd op categorie:",
 		"clearFilter": "Filter wissen",
 		"categories": {
 			"slot": {
-				"title": "Gokkast Providers"
+				"title": "Slotspelaanbieders"
 			},
 			"liveCasino": {
 				"title": "Live casino-aanbieders"
 			},
 			"sports": {
-				"title": "Sportweddenschappen Providers"
+				"title": "Sportweddenschapsaanbieders"
 			},
 			"rng": {
-				"title": "RNG Spelproviders"
+				"title": "RNG-spelaanbieders"
 			},
 			"other": {
-				"title": "{category} Spelproviders"
+				"title": "{category} spelaanbieders"
 			}
 		}
 	},
 	"hero": {
 		"guest": {
-			"title": "Doe mee aan de Actie",
-			"subtitle": "Meld je nu aan en ontvang een exclusieve welkomstbonus!",
-			"cta": "Registreer Nu"
+			"title": "Doe mee aan de actie",
+			"subtitle": "Registreer nu en ontvang een exclusieve welkomstbonus!",
+			"cta": "Registreer nu"
 		},
 		"welcome": {
 			"title1": "Welkomstbonus",
 			"title2": "Tot 590%",
-			"subtitle": "+ 225 Gratis Spins",
-			"cta": "Stort & Ontvang"
+			"subtitle": "+ 225 gratis spins",
+			"cta": "Stort & ontvang"
 		},
 		"jackpot": {
-			"title1": "Mega-jackpot",
+			"title1": "Mega Jackpot",
 			"title2": "$1.000.000",
-			"subtitle": "Speel Nu & Win Groots",
-			"cta": "Speel Nu"
+			"subtitle": "Speel nu & win groots",
+			"cta": "Speel nu"
 		},
 		"cards": {
 			"casino": {
 				"title": "Casino",
 				"badge": "590+ SPELLEN",
-				"desc": "Geniet van {siteName} Originals en andere casinospellen van top providers.",
+				"desc": "Geniet van {siteName} Originals en andere casinospellen van topaanbieders.",
 				"link": "Ga naar Casino"
 			},
 			"slots": {
-				"title": "Gokkasten",
+				"title": "Slots",
 				"badge": "5292 SPELLEN",
-				"desc": "Draai aan de rollen en win enorme jackpots met onze premium gokkastencollectie.",
-				"link": "Ga naar Gokkasten"
+				"desc": "Draai aan de rollen en win enorme jackpots met onze premium slotcollectie.",
+				"link": "Ga naar Slots"
 			},
 			"sports": {
 				"title": "Sport",
 				"badge": "3 SPELLEN",
-				"desc": "Wed op je favoriete teams en sportevenementen met competitieve odds.",
+				"desc": "Wed op je favoriete teams en sportevenementen met concurrerende odds.",
 				"link": "Ga naar Sport"
 			},
 			"crypto": {
-				"title": "Crypto & Verdien",
-				"badge": "60% april",
-				"desc": "Stake, handel en verdien met cryptocurrency tegen aantrekkelijke tarieven.",
+				"title": "Crypto & verdienen",
+				"badge": "60% APR",
+				"desc": "St stake, handel en verdien met cryptocurrency tegen aantrekkelijke tarieven.",
 				"link": "Ga naar Crypto"
 			}
 		},
 		"layout3": {
-			"headerTitle": "Spel in de Spotlight",
+			"headerTitle": "Spel in de schijnwerpers",
 			"headerSubtitle": "Ontdek geweldige spellen en verken nieuwe avonturen in onze samengestelde collectie",
-			"slider1Title": "Uitgelichte Spellen",
+			"slider1Title": "Uitgelichte spellen",
 			"slider1Badge": "Keuzes van het personeel",
-			"slider2Title": "Meer te Ontdekken",
-			"slider2Badge": "Populair",
-			"featuredGameLabel": "Uitgelicht Spel"
+			"slider2Title": "Meer te ontdekken",
+			"slider2Badge": "Trending",
+			"featuredGameLabel": "Uitgelicht spel"
 		},
-		"ctaExploreGames": "Verken Spellen",
-		"ctaJoinAffiliate": "Word Partner"
+		"ctaExploreGames": "Ontdek spellen",
+		"ctaJoinAffiliate": "Word affiliate"
 	},
 	"betting": {
 		"live": {
 			"winRate": "Winstpercentage",
-			"biggestWin": "Grootste Winst",
-			"bigWins50": "Grote Winsten (50+)",
-			"recentWins": "Recente Winsten",
+			"biggestWin": "Grootste winst",
+			"bigWins50": "Grote winsten (50+)",
+			"recentWins": "Recente winsten",
 			"header": {
-				"title": "Live Weddenschapsactiviteit",
-				"subtitle": "Real-time weddenschapsactiviteit • {count} spellen geladen"
+				"title": "Live wedactiviteit",
+				"subtitle": "Real-time wedactiviteit • {count} spellen geladen"
 			},
 			"status": {
 				"live": "LIVE",
 				"paused": "Gepauzeerd"
 			},
 			"actions": {
-				"pause": "Pauzeren",
+				"pause": "Pauze",
 				"resume": "Hervatten"
 			},
 			"tabs": {
@@ -1069,40 +1239,40 @@
 				"multiplier": "Vermenigvuldiger",
 				"profit": "Winst"
 			},
-			"empty": "Geen weddenschapsrecords gevonden"
+			"empty": "Geen weddenschapsgegevens gevonden"
 		}
 	},
 	"fontChanger": {
-		"changeFont": "Verander Lettertype",
-		"fontSettings": "Lettertype Instellingen",
+		"changeFont": "Lettertype wijzigen",
+		"fontSettings": "Lettertype-instellingen",
 		"current": "Huidig",
 		"browseGoogleFonts": "Blader door Google Fonts",
-		"uploadCustomFont": "Upload Aangepast Lettertype",
-		"quickUploadFontFile": "Snel Lettertypebestand Uploaden",
-		"resetToDefault": "Herstel naar Standaard",
+		"uploadCustomFont": "Aangepast lettertype uploaden",
+		"quickUploadFontFile": "Snel lettertypebestand uploaden",
+		"resetToDefault": "Terugzetten naar standaard",
 		"googleFonts": {
-			"title": "Google-lettertypen",
+			"title": "Google Fonts",
 			"searchFonts": "Zoek lettertypen...",
 			"preview": "Voorbeeld",
 			"previewText": "De snelle bruine vos springt over de luie hond",
 			"alphabetPreview": "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 1234567890",
-			"applyFont": "Lettertype Toepassen",
-			"clearPreview": "Voorbeeld Wissen",
+			"applyFont": "Lettertype toepassen",
+			"clearPreview": "Voorbeeld wissen",
 			"previewWith": "Voorbeeldtekst met {font}",
 			"noFontsFound": "Geen lettertypen gevonden die overeenkomen met \"{searchTerm}\""
 		},
 		"customUpload": {
-			"title": "Upload Aangepast Lettertype",
+			"title": "Aangepast lettertype uploaden",
 			"description": "Upload je eigen lettertypebestand om de website aan te passen",
 			"fontFile": "Lettertypebestand",
 			"dragDropArea": "Sleep je lettertypebestand hierheen, of",
 			"clickToUpload": "klik om te uploaden",
 			"supportedFormats": "Ondersteunde formaten: .woff, .woff2, .ttf, .otf",
 			"maxFileSize": "Maximale bestandsgrootte: 10MB",
-			"fontName": "Naam van Lettertype",
+			"fontName": "Lettertypenaam",
 			"fontNamePlaceholder": "Voer een naam in voor je lettertype",
-			"previewYourFont": "Voorbeeld van Jouw Lettertype",
-			"uploadAndApply": "Upload & Pas Lettertype Toe",
+			"previewYourFont": "Voorbeeld van je lettertype",
+			"uploadAndApply": "Uploaden & lettertype toepassen",
 			"cancel": "Annuleren",
 			"uploading": "Uploaden...",
 			"errors": {
@@ -1116,331 +1286,1201 @@
 		"messages": {
 			"fontAppliedSuccess": "Lettertype \"{fontName}\" succesvol toegepast!",
 			"fontUploadedSuccess": "Lettertype \"{fontName}\" succesvol geüpload en toegepast!",
-			"fontResetSuccess": "Lettertype hersteld naar standaard",
+			"fontResetSuccess": "Lettertype teruggezet naar standaard",
 			"invalidFileType": "Upload een geldig lettertypebestand (.woff, .woff2, .ttf, .otf)",
 			"uploadFailed": "Lezen van lettertypebestand mislukt"
 		}
 	},
-	"bonus": {
-		"title": "Omzetbonusprogramma",
-		"loginPromptTitle": "Omzetbonusprogramma",
-		"loginPromptSubtitle": "Log in om je bonusstatistieken te bekijken en je beloningen op te eisen.",
-		"goHome": "Ga naar Home",
-		"tabs": {
-			"dashboard": "Dashboard",
-			"claims": "Claims",
-			"rates": "Bonuspercentages",
-			"calculator": "Rekenmachine"
-		},
-		"refresh": "Vernieuwen",
-		"refreshing": "Vernieuwen...",
-		"refreshAllSuccess": "Alle gegevens zijn succesvol vernieuwd!",
-		"refreshPartial": "Gedeeltelijk vernieuwd: {success}/{total} secties bijgewerkt",
-		"refreshFailed": "Gegevens verversen mislukt. Probeer het opnieuw alstublieft.",
-		"dashboard": {
-			"title": "Bonusdashboard",
-			"subtitle": "Volg uw weddenschappen, bonussen en beloningsverdiensten",
-			"performanceOverview": "Bonusoverzicht",
-			"bonusRatesTitle": "Bonus tariefstructuur",
-			"totalIncome": "Totale Bonus",
-			"pendingBonus": "In Afwachting van Bonus",
-			"lastClaim": "Laatste Claim",
-			"unclaimedEarnings": "Beschikbaar om te claimen",
-			"claim": {
-				"title": "Claimen en Opnemen",
-				"points": {
-					"0": "Commissies zijn beschikbaar voor opname zodra ze zijn berekend.",
-					"1": "Er is geen vervaldatum voor niet opgeëiste commissies - ze stapelen zich op totdat ze worden opgeëist.",
-					"2": "Opnames volgen de standaardregels van het platform, zoals minimumbedragen en verwerkingstijden."
-				}
+	"contact": {
+		"title": "Neem contact met ons op",
+		"subtitle": "Heeft u vragen of heeft u hulp nodig? Ons toegewijde ondersteuningsteam staat de klok rond voor u klaar.",
+		"methods": {
+			"liveChat": {
+				"title": "Live Chat",
+				"description": "Krijg direct hulp van ons ondersteuningsteam via live chat.",
+				"availability": "24/7 beschikbaar"
 			},
-			"claiming": "Claimen...",
-			"section2": {
-				"title": "Geschiktheid",
-				"content": "Om deel te nemen:"
+			"email": {
+				"title": "E-mailondersteuning",
+				"description": "Stuur ons een e-mail en we reageren binnen 24 uur.",
+				"availability": "Reactie binnen 24 uur"
 			},
-			"section3": {
-				"title": "Landbouwniveaus en Tarieven",
-				"content": "Bonussen worden berekend op basis van uw dagelijkse inzetbedragen:",
-				"noteTitle": "Opmerking",
-				"noteContent": "Niveaus worden dagelijks om 14:00 UTC geëvalueerd. Het inzetvolume van de vorige dag bepaalt het bonuspercentage van vandaag. De tarieven gelden voor alle speltypes: Slots, Live Casino en Sport."
-			},
-			"claimButtonTitle": "Claimen"
-		},
-		"claims": {
-			"title": "Claimhistorie",
-			"subtitle": "Volg je bonusclaims en gokactiviteiten",
-			"tableHeaders": {
-				"date": "Weddatum",
-				"slots": "Gleuven",
-				"liveCasino": "Livecasino",
-				"sports": "Sporten",
-				"total": "Totaal",
-				"tier": "Niveau",
-				"unclaimed": "Onopgeëist",
-				"token": "Token"
-			},
-			"tierPrefix": "Laag",
-			"availableToClaim": "Beschikbaar om te claimen",
-			"totalBonus": "Totale Bonus",
-			"claimed": "Geclaimd",
-			"progressPercentage": "Voortgang",
-			"progressTitle": "Je voortgang",
-			"currentTier": "Huidig niveau",
-			"nextTier": "Volgende niveau",
-			"wagerProgress": "Weddenschap voortgang",
-			"totalWagered": "Totaal vandaag ingezet",
-			"toNextTier": "om de volgende niveau te bereiken",
-			"empty": {
-				"title": "Nog geen bonusclaims",
-				"subtitle": "Begin met spelen om bonussen te verdienen!"
+			"support": {
+				"title": "Helpcentrum",
+				"description": "Doorzoek onze uitgebreide kennisbank voor snelle antwoorden.",
+				"availability": "Zelfbediening beschikbaar"
 			}
 		},
-		"rates": {
-			"title": "Landbouwniveaus en -tarieven",
-			"subtitle": "Bonuspercentages per inzethoogte en spelcategorie",
-			"overview": {
-				"title": "Overzicht",
-				"body": "De Bonus Farming beloont gebruikers op basis van hun inzetten in Slot, Live Casino, Sportsbook en Loterij. Bonussen worden elke 24 uur berekend en gebruikers kunnen ze de volgende dag na het inzetten claimen. Er zijn zeven niveaus, elk met verschillende tarieven afhankelijk van het inzetbedrag."
-			},
-			"eligibility": {
-				"title": "Geschiktheid",
-				"content": "Om deel te nemen:",
-				"points": {
-					"0": "U moet een actief account hebben.",
-					"1": "Plaats inzetten in Slot, Live Casino, Sportweddenschappen en Loterij.",
-					"2": "Voldoen aan de minimale inzetvereisten voor elk niveau."
-				}
-			},
-			"calculation": {
-				"title": "Hoe bonussen worden berekend",
-				"desc": "Bonussen worden elke 24 uur berekend op basis van je totale inzetten. Voorbeelden:",
-				"exampleTitle": "Niveau {tier}:",
-				"wagerIn": "Weddenschap van {amount} in {gameType}"
-			},
-			"table": {
-				"tierLevel": "Niveauniveau",
-				"wagerRange": "Inzetbereik",
-				"slots": "Slots",
-				"liveCasino": "Livecasino",
-				"sports": "Sporten",
-				"tierPrefix": "NIVEAU",
-				"commissionLevel": "Bonusniveau",
-				"dailyWager": "Dagelijks inzetvolume"
-			},
-			"claim": {
-				"title": "Bonussen claimen en opnemen",
-				"points": {
-					"0": "Bonussen komen 24 uur na de inzet in aanmerking voor claimen.",
-					"1": "Niet-opgeëiste bonussen zullen zich ophopen en niet vervallen.",
-					"2": "Het claim- en opnameproces kan variëren op basis van platformspecifieke beleidsregels."
-				}
-			},
-			"system": {
-				"title": "Systeemtijd en -operaties",
-				"dailyTimeframeLabel": "Dagelijkse tijdsbestek:",
-				"dailyTimeframeValue": "00:00 UTC tot 23:59 UTC (elke dag).",
-				"claimDailyLabel": "Dagelijks claimen:",
-				"claimDailyValue": "Dagelijks beschikbaar om 14:00 UTC (Uw lokale tijd: {local}).",
-				"note": "Opmerking: terwijl we samenwerken met providers uit verschillende tijdzones, volgen alle berekeningen de UTC om consistentie te waarborgen en verwarring te voorkomen."
-			},
-			"amendments": {
-				"title": "Wijzigingen en diskwalificaties",
-				"body": "Wij kunnen deze voorwaarden op elk moment bijwerken, en wijzigingen worden van kracht bij publicatie. Bij verdenking van systeemfouten, rekenfouten of fraude behouden we ons het recht voor om bonussen en accounts aan te passen of te diskwalificeren indien nodig om eerlijkheid te waarborgen"
-			},
-			"footer": {
-				"schedule": "Bonusschema:",
-				"availableDaily": "Dagelijks beschikbaar om",
-				"localTimeLabel": "(Uw lokale tijd: {time})"
+		"form": {
+			"title": "Stuur ons een bericht",
+			"name": "Volledige naam",
+			"namePlaceholder": "Voer uw volledige naam in",
+			"email": "E-mailadres",
+			"emailPlaceholder": "Voer uw e-mailadres in",
+			"subject": "Onderwerp",
+			"subjectPlaceholder": "Waar gaat uw vraag over?",
+			"message": "Bericht",
+			"messagePlaceholder": "Beschrijf uw vraag gedetailleerd...",
+			"submit": "Bericht verzenden",
+			"sending": "Verzenden...",
+			"errors": {
+				"nameRequired": "Voer uw naam in",
+				"emailRequired": "Voer uw e-mailadres in",
+				"emailInvalid": "Voer een geldig e-mailadres in",
+				"subjectRequired": "Voer een onderwerp in",
+				"messageRequired": "Voer uw bericht in",
+				"messageTooShort": "Bericht moet minimaal 10 tekens lang zijn"
 			}
 		},
-		"calculator": {
-			"title": "Bonuscalculator",
-			"subtitle": "Schat uw bonusinkomsten op basis van uw inzetbedragen",
-			"interactive": {
-				"title": "Interactieve tool:",
-				"body": "Voer verschillende inzetbedragen in om potentiële bonussen over alle niveaus te zien"
+		"responseTime": {
+			"title": "Verwachte responstijden",
+			"description": "We streven ernaar om alle vragen zo snel mogelijk te beantwoorden.",
+			"liveChat": {
+				"title": "Live Chat",
+				"time": "Minder dan 2 minuten"
 			},
-			"potentialEarnings": "Potentiële Bonus",
-			"basedOnRate": "Gebaseerd op een bonuspercentage van {percentage}%",
-			"tier": "Niveau {level}",
-			"commissionLevel": "Bonusniveau {level}",
-			"enterWager": "Voer het inzetbedrag in (USD)",
-			"wagerPlaceholder": "bijv., 1000",
-			"calcFor": "Bonus berekenen voor ${amount} inzet",
-			"totalPotential": "Totale Potentiële Bonus:",
-			"combinedAtTier": "Gecombineerde bonus van alle spelsystemen op niveau {level}"
+			"email": {
+				"title": "E-mail",
+				"time": "Binnen 24 uur"
+			},
+			"priority": {
+				"title": "VIP-ondersteuning",
+				"time": "Prioritaire afhandeling"
+			}
 		},
-		"claimSuccessModal": {
-			"title": "Claim geslaagd",
-			"statusCompleted": "Voltooid",
-			"statusOnChain": "On-Chain",
-			"claimAmount": "Claimbedrag",
-			"logoAlt": "{siteName}-logo",
-			"backgroundAlt": "Claim succes achtergrond",
-			"creatingMagic": "Magie maken...",
-			"downloadShare": "Downloaden en delen",
-			"spreadTheWin": "VERSPREID DE WINST",
-			"socialX": "X",
-			"socialFacebook": "Facebook",
-			"socialWhatsApp": "WhatsApp",
-			"socialTelegram": "Telegram",
-			"socialReddit": "Reddit",
-			"socialMore": "Meer",
-			"shareText": "I just claimed {amount} bonus! Join me: {url}",
-			"referralLinkCopied": "Doorverwijzingslink gekopieerd!",
-			"referralLinkCopyFailed": "Kon doorverwijzingslink niet kopiëren",
-			"screenshotFailed": "Screenshot mislukt. Probeer het opnieuw of gebruik een andere browser.",
-			"shareTextCopied": "Deel tekst gekopieerd naar klembord!",
-			"shareFailed": "Delen mislukt. Probeer het opnieuw."
+		"faq": {
+			"title": "Veelgestelde vragen",
+			"items": [
+				{
+					"question": "Hoe reset ik mijn wachtwoord?",
+					"answer": "U kunt uw wachtwoord opnieuw instellen door op de link 'Wachtwoord vergeten' op de inlogpagina te klikken. Voer uw geregistreerde e-mailadres in en volg de instructies die naar uw inbox zijn verzonden."
+				},
+				{
+					"question": "Hoe lang duurt het om opnames te verwerken?",
+					"answer": "De meeste opnames van cryptocurrency worden onmiddellijk verwerkt. In sommige gevallen kan handmatige verificatie vereist zijn, wat tot 24 uur kan duren."
+				},
+				{
+					"question": "Welke cryptocurrencies accepteert u?",
+					"answer": "We accepteren belangrijke cryptocurrencies, waaronder Bitcoin (BTC), Ethereum (ETH), USDT, USDC en verschillende andere populaire tokens op meerdere blockchain-netwerken."
+				},
+				{
+					"question": "Hoe kan ik mijn account verifiëren?",
+					"answer": "Accountverificatie kan worden voltooid via uw profielinstellingen. Mogelijk moet u identificatiedocumenten verstrekken, afhankelijk van uw accountniveau en opnamelimieten."
+				},
+				{
+					"question": "Is mijn persoonlijke informatie veilig?",
+					"answer": "Ja, we gebruiken industriestandaard versleuteling en beveiligingsmaatregelen om alle persoonlijke en financiële informatie te beschermen. Ons platform ondergaat regelmatig veiligheidsaudits."
+				}
+			]
 		}
 	},
 	"about": {
-		"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 29 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"subtitle": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 28 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"stats": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 27 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"features": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 26 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+		"title": "🎮 Over {siteName}",
+		"subtitle": "Bij {siteName} is gamen niet zomaar iets om de tijd te doden—het gaat om echte opwinding. Dat moment waarop je een grote winst behaalt, of wanneer alles gewoon klopt, dat is waar wij voor staan.",
+		"meta": {
+			"title": "Over {siteName} | Betrouwbaar wereldwijd online casinoplatform",
+			"description": "Lees meer over {siteName}, een veilig, wereldwijd casinoplatform dat slots, live casino, sportweddenschappen en poker aanbiedt. Eerlijk, snel en gebouwd voor echte spelers."
+		},
+		"intro": {
+			"paragraph1": "We hebben {siteName} gebouwd voor spelers die meer uit hun spel willen halen. Meer snelheid. Meer eerlijkheid. Meer spanning. Of je nu van live casinospellen, sportweddenschappen, poker houdt, of jackpots najaagt op high-stakes slots, je vindt het hier allemaal, en je kunt op ons rekenen om de zaken legitiem te houden.",
+			"paragraph2": "Vanaf de eerste dag wilden we dat {siteName} echt aanvoelde. Niet zomaar een andere website, maar een plek waar je elke keer dat je inlogt een veilige, opwindende spelervaring krijgt."
+		},
+		"whoWeAre": {
+			"title": "💎 Wie we zijn",
+			"paragraph1": "{siteName} verbindt spelers van over de hele wereld met duizenden top casino- en weddenschapsspellen. We werken samen met de grootste namen in de branche—Pragmatic Play, Red Tiger, Microgaming, KA Gaming—zodat elk spel soepel loopt en er geweldig uitziet, of je nu op je telefoon of je laptop speelt.",
+			"paragraph2": "Elke draai, elke deal, elke bonus—alles is ingesteld om je die kick van echt gamen te geven. En we houden de zaken eenvoudig. Geen trucs, geen stiekeme regels. Gewoon eerlijk, duidelijk spel."
+		},
+		"mission": {
+			"title": "🎯 Onze missie",
+			"paragraph1": "We willen dat online gamen eenvoudig, veilig en echt leuk is.",
+			"paragraph2": "We houden het persoonlijk. Snelle stortingen, snelle opnames. Een strak uiterlijk dat prettig is voor de ogen. Ondersteuning die echt helpt wanneer je het nodig hebt. | Bij {siteName} sta jij altijd in de schijnwerpers. Jouw vertrouwen drijft ons om te blijven verbeteren."
+		},
+		"whatMakesUsDifferent": {
+			"title": "🏆 Wat maakt {siteName} anders",
+			"features": [
+				"Meer dan 5.000 spellen—slots, poker, sport, live casino",
+				"Directe, betrouwbare stortingen en opnames",
+				"Elk spel is RNG-gecertificeerd voor eerlijkheid",
+				"Een strak ontwerp dat overal werkt",
+				"Voortdurend nieuwe bonussen en promo's"
+			],
+			"closing": "We zijn hier niet alleen om spellen aan te bieden. We zijn hier om een plek te bouwen waar je je veilig, verbonden en klaar voelt om je volgende uitdaging aan te gaan."
+		},
+		"fairGaming": {
+			"title": "🌍 Eerlijk & verantwoord spelen",
+			"paragraph1": "We nemen eerlijkheid serieus. Dat betekent dat we ons houden aan internationale normen en de zaken duidelijk houden—alleen spelers van 18 jaar en ouder, geen uitzonderingen.",
+			"paragraph2": "We testen elk spel op eerlijkheid, en onze encryptietechnologie houdt je informatie veilig en gezond."
+		},
+		"promise": {
+			"title": "🤝 Onze belofte",
+			"paragraph1": "We zijn hier niet om op te gaan in de massa. We zijn hier om de lat voor online gamen hoger te leggen.",
+			"paragraph2": "Wanneer je bij {siteName} speelt, gebruik je een platform gebouwd op vertrouwen en nieuwe ideeën. Elke update, nieuwe functie of partnerschap is bedoeld om je ervaring beter te maken."
+		},
+		"joinCommunity": {
+			"title": "🚀 Word lid van de {siteName} gemeenschap",
+			"paragraph1": "Online gamen ontwikkelt zich snel, en {siteName} loopt al voorop—sneller, slimmer en lonender.",
+			"paragraph2": "Word nu lid. Pak je welkomstbonus. Ontdek waarom zoveel spelers over de hele wereld {siteName} hun favoriete plek maken.",
+			"tagline": "🎯 Speel. Win. Ervaar. {siteName}."
+		}
+	},
+	"footer": {
 		"sections": {
-			"whoWeAre": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 26 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 25 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 24 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"company": {
+				"title": "Bedrijf",
+				"links": {
+					"about": "Over ons",
+					"providers": "Aanbieders",
+					"affiliate": "Verwijzingsbonus",
+					"bonus": "Omzetbonus"
+				}
 			},
-			"whatMakesUsDifferent": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 24 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"legal": {
+				"title": "Juridisch",
+				"links": {
+					"privacy": "Privacybeleid",
+					"terms": "Algemene voorwaarden",
+					"gambling": "Verantwoord gokken",
+					"faqs": "Veelgestelde vragen"
+				}
 			},
-			"providers": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 23 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"seeAllButton": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 22 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"exploreGamesButton": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 21 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"games": {
+				"title": "Spellen",
+				"links": {
+					"lobby": "Spel Lobby",
+					"slots": "Slots",
+					"live": "Live Casino",
+					"sports": "Sportweddenschappen"
+				}
 			},
-			"missionVisionValues": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 21 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"items": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 20 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"support": {
+				"title": "Ondersteuning",
+				"links": {
+					"help": "Helpcentrum",
+					"contact": "Neem contact op"
+				}
+			}
+		},
+		"seoContent": {
+			"title": "Beschrijving",
+			"paragraph1": "Welkom bij {siteName}, waar crypto de echte kick van casinogaming ontmoet. Als je op zoek bent naar iets nieuws in de wereld van online spelen, heb je het zojuist gevonden. {siteName} is gebouwd voor mensen die snelheid, veiligheid en, bovenal, spellen willen die echt vermaken, of je nu van gokkasten, live tafels, sportweddenschappen houdt, of die crypto-only spellen wilt uitproberen die je nergens anders kunt vinden.",
+			"paragraph2": "Alles draait op blockchain, dus je kunt elk resultaat vertrouwen. Resultaten zijn willekeurig, ter plekke geverifieerd. Geen trucs. Alleen maar eerlijke winsten en echte opwinding. High roller? Strategiefan? Misschien wil je gewoon even ontspannen en een spelletje spelen. Er is hier iets voor jouw stijl.",
+			"paragraph3": "Aan de slag gaan kan niet eenvoudiger—stort direct, neem snel op, log in met je Dynamic.xyz-portemonnee en pak onderweg een aantal unieke bonussen. {siteName} houdt de vaart erin. Geen wachttijden. Geen hoofdpijn. Waar je ook bent—Canada, Europa, Azië—onze multi-chain opzet past perfect bij je lokale crypto-opties.",
+			"paragraph4": "Duizenden weten het al: dit is een slimmere manier om online te gokken. Hier gaat het niet alleen om het najagen van winsten—het gaat om privacy, eerlijkheid en deel uitmaken van een gemeenschap die echt begrijpt wat spelers willen. {siteName} is niet zomaar een online casino. Dit is Web3-gokken, opnieuw opgebouwd voor mensen die meer verwachten.",
+			"tagline": "Dus, ben je klaar om slimmer te spelen, veiliger te wedden en misschien wel de hoofdprijs te winnen? Ga naar {siteName}.",
+			"showMore": "Meer tonen",
+			"showLess": "Minder tonen"
+		},
+		"copyright": "© {year} {siteName}. Alle rechten voorbehouden.",
+		"followUs": "Volg ons:",
+		"disclaimer": {
+			"line1": "Alleen 18+ | Gok verantwoord",
+			"line2": "Gokken kan verslavend zijn. Speel alsjeblieft verantwoord en zet alleen in wat je je kunt veroorloven te verliezen.",
+			"line3": "Als je het gevoel hebt dat je een gokprobleem hebt, zoek dan alsjeblieft hulp."
+		},
+		"description": "{siteName} is jouw go-to plek voor crypto slots, live tafels en sportweddenschappen. Duik in blockchain-spellen die je echt kunt vertrouwen, pak je winst direct in je portemonnee binnen enkele seconden, en ontvang elke dag nieuwe bonussen. Het is snel, veilig en volledig gedecentraliseerd—{siteName} tilt online gamen naar een hoger niveau voor spelers overal. Speel slim. Win groots. Vertrouw op {siteName}."
+	},
+	"privacy": {
+		"title": "🔒 Privacybeleid — {siteName}",
+		"subtitle": "Hoe {siteName} portemonnee-adressen en crypto-gegevens beschermt met SSL, AML en GDPR-conforme privacy voor veilig blockchain-gamen.",
+		"lastUpdated": "Laatst bijgewerkt: januari 2025",
+		"meta": {
+			"title": "Privacybeleid | {siteName} – Crypto Wallet Casino Beveiliging",
+			"description": "Lees hoe {siteName} portemonnee-adressen en crypto-gegevens beschermt met geavanceerde versleuteling en GDPR-conforme bescherming voor veilig blockchain-gamen.",
+			"keywords": "{siteName} privacybeleid, {siteName} crypto casino, {siteName} gegevensbescherming, {siteName} portemonneebeveiliging, crypto gokken privacy, GDPR crypto casino, blockchain casino beleid, {siteName} spellen veilig, crypto wedden privacy",
+			"ogTitle": "Privacy & Gegevensbescherming | {siteName} (Crypto Casino)",
+			"ogDescription": "Ontdek hoe {siteName} uw crypto-portemonnee en transactiegegevens beschermt met geavanceerde versleuteling en GDPR-conforme bescherming."
+		},
+		"intro": {
+			"paragraph1": "Bij {siteName} (\"{siteName},\" \"wij,\" \"ons,\" of \"onze\"), exploiteren we het {siteName} crypto-casino platform. Hier leest u wat er gebeurt met uw persoonlijke en transactiegegevens wanneer u onze website, mobiele apps of gerelateerde diensten (\"Diensten\") gebruikt.",
+			"paragraph2": "{siteName} is een casino dat uitsluitend met crypto-portemonnees werkt. Dat betekent dat alle stortingen en opnames via cryptocurrency-portemonnees plaatsvinden. We nemen uw privacy serieus en doen ons best om deze te beschermen, terwijl we ons ook houden aan de regels (zoals AML/KYC-vereisten) en het platform veilig en eerlijk houden voor iedereen.",
+			"paragraph3": "Als u {siteName} gebruikt, gaat u akkoord met dit Privacybeleid."
+		},
+		"sections": {
+			"scope": {
+				"title": "Reikwijdte & Acceptatie",
+				"content": "Dit beleid is van toepassing op iedereen die {siteName} gebruikt. Soms werken we het bij. Wanneer we dat doen, wordt het nieuwe beleid live gezet op de site, en als u {siteName} daarna blijft gebruiken, betekent dit dat u akkoord gaat met de wijzigingen."
 			},
-			"responsibleGaming": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 19 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 19 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"points": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 18 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-			},
-			"ourPromise": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 17 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 16 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 16 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-			},
-			"description": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 15 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"intro": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 14 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"brand": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 14 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 13 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"dataCollection": {
+				"title": "Welke gegevens we verzamelen",
+				"intro": "Aangezien we alleen crypto-portemonnees gebruiken, weerspiegelen de gegevens die we verzamelen dat. Dit is wat we verzamelen:",
+				"accountData": {
+					"title": "A. Account- & Identiteitsgegevens (indien nodig)",
+					"email": "E-mail (als u die geeft), weergavenaam, account-ID.",
+					"kyc": "Let op: Crypto-portemonnees houden de zaken meestal anoniem, maar soms vereisen regelgevingen dat we om uw identiteit vragen (KYC). We zullen dit alleen vragen als het absoluut noodzakelijk is, en we zullen het duidelijk maken."
 				},
-				"games": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 11 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"count": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 09 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 09 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"slots": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 08 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				"walletData": {
+					"title": "B. Portemonnee- & Transactiegegevens",
+					"addresses": "De crypto-portemonnee-adressen die u hier verbindt of gebruikt.",
+					"transactions": "On-chain transactie-hashes en tijdstempels (voor stortingen en opnames).",
+					"metadata": "Transactiegegevens die we nodig hebben om betalingen af te stemmen en fraude op te sporen."
+				},
+				"technicalData": {
+					"title": "C. Technische & Gebruiksgegevens",
+					"ip": "IP-adres, geschatte locatie op basis van IP, apparaattype, browser en besturingssysteem.",
+					"session": "Sessielogboeken, tijdstempels, gespeelde spellen, inzetten, uitkomsten, pagina's die u bezoekt.",
+					"cookies": "Cookies en analyses om de site beter en soepeler voor u te maken."
+				},
+				"securityData": {
+					"title": "D. Beveiligings- & Risicogegevens",
+					"fraud": "Fraudsignalen, apparaatvingerafdrukken, risicoscores van fraudebestrijdingspartners.",
+					"disputes": "Registraties van geschillen, terugboekingen en nalevingscontroles (als die zich voordoen).",
+					"note": "We verzamelen geen gevoelige zaken zoals uw ras, religie of gezondheid, tenzij de wet dit vereist en u duidelijke toestemming geeft."
+				}
+			},
+			"purposes": {
+				"title": "Waarom we gegevens verzamelen",
+				"intro": "We gebruiken uw gegevens alleen voor duidelijke, wettige redenen:",
+				"items": [
+					{
+						"title": "Om de dienst te beheren",
+						"description": "accounts opzetten en beheren, portemonnee-stortingen/opnames afhandelen, winsten uitbetalen."
 					},
-					"liveCasino": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 06 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "Voor de veiligheid",
+						"description": "misbruik, fraude en witwassen opsporen en stoppen."
 					},
-					"sports": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 05 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 05 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "Om alles soepel te laten verlopen",
+						"description": "analyses, productupgrades, klantenondersteuning."
 					},
-					"poker": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 04 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 03 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "Voor marketing (als u ja zegt)",
+						"description": "nieuwsbrieven, promo-aanbiedingen—u hebt altijd de mogelijkheid om nee te zeggen of later van gedachten te veranderen."
+					},
+					{
+						"title": "Om het platform te beschermen",
+						"description": "en eventueel misbruik te onderzoeken."
 					}
+				],
+				"outro": "Als u ons toestemming geeft voor iets als marketing, kunt u die op elk moment intrekken."
+			},
+			"cryptoWallet": {
+				"title": "Crypto-portemonnees & On-Chain Gegevens",
+				"points": [
+					"We slaan alleen portemonnee-adressen en on-chain transactie-informatie op zolang we die nodig hebben om uw account te crediteren of te debiteren, transacties te controleren of aan wettelijke vereisten te voldoen.",
+					"On-chain gegevens zijn van nature openbaar. We kunnen blockchain-activiteit niet verbergen, maar we combineren deze met onze eigen records om uw account accuraat te houden.",
+					"Als u een bewaarportemonnee verbindt (zoals via een externe aanbieder), gaat u ermee akkoord dat zij gegevens met ons delen zodat we uw transacties kunnen verwerken."
+				]
+			},
+			"dataSharing": {
+				"title": "Wanneer we gegevens delen",
+				"intro": "We delen uw informatie alleen in enkele gevallen:",
+				"items": [
+					"Met toezichthouders of wetshandhavers als de wet dit vereist of om illegale activiteiten te stoppen.",
+					"Met filialen of derden als er een bedrijfsoverdracht is (zoals een fusie of overname)—maar altijd met de juiste bescherming.",
+					"Met fraudepreventienetwerken om het platform en onze gebruikers veilig te houden."
+				],
+				"noSelling": "We verkopen uw persoonlijke informatie nooit aan adverteerders."
+			},
+			"security": {
+				"title": "Beveiligingsmaatregelen",
+				"intro": "We gebruiken beveiligingsmaatregelen die u zou verwachten:",
+				"items": [
+					"TLS/SSL-versleuteling voor gegevens tijdens verzending, versleutelde opslag voor gevoelige informatie.",
+					"Toegangscontroles, gedetailleerde logging en op rollen gebaseerde machtigingen.",
+					"Regelmatige veiligheidsaudits en kwetsbaarheidscontroles.",
+					"Multi-factor authenticatie (MFA) voor onze medewerkers—en u kunt dit ook voor uw eigen account inschakelen."
+				],
+				"warning": "Onthoud: houd uw privé-sleutels en accountgegevens van uw portemonnee veilig. We zullen nooit om uw privé-sleutels vragen."
+			},
+			"cookies": {
+				"title": "Cookies & Tracking",
+				"content": "We gebruiken cookies en vergelijkbare tools om de site te laten werken, verkeer te analyseren en (als u akkoord gaat) voor marketing. U kunt cookies beheren in uw browserinstellingen, maar als u essentiële cookies uitschakelt, werken sommige dingen mogelijk niet meer."
+			},
+			"minAge": {
+				"title": "Kinderen & Minimumleeftijd",
+				"content": "U moet 18 jaar of ouder zijn (of wat uw lokale wetgeving ook zegt) om {siteName} te gebruiken. We blokkeren actief minderjarige gebruikers en zullen alle gegevens verwijderen als we ontdekken dat een minderjarige zich heeft aangemeld."
+			},
+			"breach": {
+				"title": "Melding van datalek",
+				"content": "Als er ooit een datalek is dat uw rechten in gevaar brengt, zullen we u en de relevante autoriteiten op de hoogte stellen zoals de wet vereist, en we zullen eraan werken om de zaken snel op te lossen."
+			},
+			"changes": {
+				"title": "Wijzigingen in dit beleid",
+				"content": "We kunnen dit Privacybeleid wijzigen. Als er een grote update is, zullen we deze op de site publiceren en u direct op de hoogte stellen wanneer dit zinvol is."
+			},
+			"contact": {
+				"title": "Contact",
+				"intro": "Heeft u vragen of verzoeken?",
+				"link": "🌐 https://{siteDomain}"
+			}
+		}
+	},
+	"terms": {
+		"title": "Algemene voorwaarden",
+		"subtitle": "Gebruikersovereenkomst en platformregels",
+		"lastUpdated": "januari 2025",
+		"intro": {
+			"paragraph1": "Door u te registreren of uw portemonnee te verbinden op www.{siteDomain}, gaat u een bindende overeenkomst aan met {siteName} N.V.",
+			"paragraph2": "Als u niet akkoord gaat met een van deze voorwaarden, mag u onze website niet openen, gebruiken of registreren. Lees deze voorwaarden zorgvuldig door. Als u onzeker bent over uw rechten of plichten, raadpleeg dan een juridisch adviseur in uw rechtsgebied voordat u de website gebruikt."
+		},
+		"sections": {
+			"ownership": {
+				"title": "1. {siteName} Eigendom",
+				"content1": "{siteName} is eigendom van en wordt geëxploiteerd door {siteName} N.V. ('{siteName}', 'Wij', 'Onze', 'Ons').",
+				"content2": "{siteName} is een casino dat uitsluitend met crypto-portemonnees werkt. Alle stortingen, inzetten en opnames worden verwerkt via de cryptocurrency-portemonnees van gebruikers. We ondersteunen inloggen met portemonnee via Dynamic.xyz en compatibele portemonnee-connectoren (bijv. WalletConnect / MetaMask)."
+			},
+			"notice": {
+				"title": "2. Belangrijke mededeling",
+				"content1": "2.1 Door u te registreren of uw portemonnee te verbinden op www.{siteDomain} (de 'Website'), gaat u een bindende overeenkomst aan met {siteName} N.V. en gaat u akkoord met: (i) deze Algemene voorwaarden; (ii) ons Privacybeleid; (iii) ons Cookiebeleid; (iv) onze Affiliatevoorwaarden; en (v) ons Beleid voor verantwoord spelen.",
+				"content2": "2.2 Als u niet akkoord gaat met een van deze voorwaarden, mag u onze website niet openen, gebruiken of registreren.",
+				"content3": "2.3 Lees deze voorwaarden zorgvuldig door. Als u onzeker bent over uw rechten of plichten, raadpleeg dan een juridisch adviseur in uw rechtsgebied voordat u de website gebruikt."
+			},
+			"general": {
+				"title": "3. Algemene voorwaarden",
+				"items": [
+					"Bij registratie of verbinding met een portemonnee, gaat u ('Gebruiker', 'Speler', 'U' of 'Uw') akkoord met alle regels en beleidsregels van {siteName}.",
+					"Deze overeenkomst is een juridisch bindend contract tussen u en {siteName}.",
+					"Deze voorwaarden worden van kracht op het moment dat u uw portemonnee verbindt en de site begint te gebruiken.",
+					"{siteName} behoudt zich het recht voor om deze voorwaarden op elk moment te wijzigen of bij te werken. Wijzigingen worden op de website gepubliceerd; voortgezet gebruik houdt acceptatie in.",
+					"In geval van conflict prevaleren deze voorwaarden boven alle andere regels, promoties of externe materialen.",
+					"Alleen de Engelse versie van deze voorwaarden is juridisch bindend. Vertalingen zijn uitsluitend voor het gemak."
+				]
+			},
+			"account": {
+				"title": "4. Account, inloggen met portemonnee & beveiliging",
+				"intro": "{siteName} gebruikt Dynamic.xyz voor op portemonnee gebaseerde authenticatie en beveiligingsmaatregelen om uw account te beschermen.",
+				"walletLogin": {
+					"title": "4.1 Inloggen met portemonnee (Dynamic.xyz)",
+					"items": [
+						"{siteName} gebruikt Dynamic.xyz (of andere ondersteunde connectoren) voor op portemonnee gebaseerd inloggen en authenticatie. Door een portemonnee te verbinden, bevestigt u dat u de rechtmatige eigenaar van die portemonnee bent en machtigt u {siteName} om die portemonnee als uw account te erkennen.",
+						"We vragen nooit om uw privésleutels. U moet uw portemonneegegevens en apparaat veilig houden. {siteName} is niet verantwoordelijk voor verliezen veroorzaakt door gecompromitteerde portemonnees of gelekte privésleutels."
+					]
 				},
-				"technology": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 03 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 02 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"blockchain": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 01 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 00 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 26 MINUTES 00 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 59 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"uptime": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 58 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph5": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 58 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				"registration": {
+					"title": "4.2 Registratiegegevens",
+					"items": [
+						"U kunt worden gevraagd om contactgegevens (e-mail, gebruikersnaam) te verstrekken voor accountcommunicatie. U moet nauwkeurige informatie verstrekken en deze up-to-date houden.",
+						"U bent verantwoordelijk voor alle acties die worden ondernomen met uw verbonden portemonnee."
+					]
 				},
 				"security": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 57 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 56 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"rng": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 56 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 55 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 54 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 54 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"global": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 53 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 52 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"players": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 51 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 51 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"countries": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 50 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 49 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 49 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"payments": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 48 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 47 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 47 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"instant": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 46 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 45 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"mobile": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 45 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 44 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 43 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"support": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 42 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 42 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"availability": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 41 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 40 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 39 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"responsible": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 39 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 38 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 37 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"whyChoose": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 37 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"point1": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 36 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 35 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point2": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 35 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 34 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point3": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 33 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 33 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point4": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 32 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 31 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point5": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 31 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 30 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point6": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 29 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 28 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					}
-				},
-				"closing": {
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 28 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"tagline": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 25 MINUTES 27 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					"title": "4.3 Meerdere accounts & beveiliging",
+					"items": [
+						"Slechts één account per persoon is toegestaan. Meerdere accounts of pogingen om limieten te omzeilen kunnen leiden tot opschorting van het account en verbeurdverklaring van fondsen.",
+						"Schakel alle aangeboden platformbeveiligingsfuncties in (bijvoorbeeld 2FA voor bijbehorende services) en beveilig uw eigen portemonnee.",
+						"Stel de ondersteuning onmiddellijk op de hoogte als u ongeautoriseerde toegang vermoedt."
+					]
 				}
+			},
+			"eligibility": {
+				"title": "5. Geschiktheid & gebruikersgaranties",
+				"intro": "5.1 U verklaart en garandeert dat:",
+				"items": [
+					"U bent ten minste 18 jaar oud (of de wettelijke minimumleeftijd voor gokken in uw rechtsgebied).",
+					"U bent wettelijk bevoegd om online crypto-gokdiensten te gebruiken waar u zich bevindt.",
+					"U bent de rechtmatige eigenaar van de portemonnee die u verbindt.",
+					"U zult geen VPN's of locatiespoofing gebruiken om regionale beperkingen te omzeilen.",
+					"U zult de service niet gebruiken voor illegale of commerciële doeleinden.",
+					"U accepteert dat de waarde van cryptocurrency kan fluctueren en u draagt alle marktrisico's."
+				],
+				"outro": "5.2 Als u deze garanties schendt, kan {siteName} de toegang opschorten of beëindigen en fondsen inhouden waar toegestaan door de wet."
+			},
+			"restricted": {
+				"title": "6. Beperkte rechtsgebieden",
+				"content1": "6.1 {siteName} accepteert geen spelers uit rechtsgebieden waar crypto-gokken verboden of beperkt is. Dit omvat, maar is niet beperkt tot:",
+				"content2": "Verenigde Staten (en Amerikaanse territoria), Verenigd Koninkrijk, Frankrijk, Nederland, Spanje, Duitsland, Australië, Oostenrijk, Comoren, Iran, Noord-Korea, Soedan, Syrië en elk rechtsgebied dat op de zwarte lijsten van de FATF staat.",
+				"content3": "6.2 Pogingen om toegang te krijgen tot de service vanuit een beperkt rechtsgebied, inclusief via VPN of proxy, is een schending van deze voorwaarden en kan leiden tot sluiting van het account en verbeurdverklaring van fondsen."
+			},
+			"crypto": {
+				"title": "7. Crypto-stortingen & -opnames",
+				"policy": {
+					"title": "7.1 Beleid voor alleen crypto",
+					"items": [
+						"{siteName} accepteert alleen stortingen en opnames in ondersteunde cryptocurrencies (bijv. BTC, ETH, USDT, TRX, BNB). Er worden geen stortingen in fiat, met kaart of via bankoverschrijving geaccepteerd.",
+						"Alle stortingen moeten afkomstig zijn van portemonnees die u beheert. Stortingen van portemonnees van derden zijn verboden."
+					]
+				},
+				"deposits": {
+					"title": "7.2 Stortingen",
+					"items": [
+						"Stortingen worden bijgeschreven na de vereiste blockchain-bevestigingen. Netwerkkosten (gas) zijn voor uw rekening.",
+						"{siteName} kan stortingen weigeren of terugdraaien die afkomstig lijken te zijn van geblokkeerde adressen of beperkte bronnen."
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 Opnames",
+					"items": [
+						"Opnames worden verwerkt naar het portemonnee-adres dat u opgeeft. {siteName} kan u vragen de bestemmingsportemonnee te bevestigen voordat de verwerking plaatsvindt.",
+						"U moet voldoende vrij saldo hebben om een opname te dekken. Opnames kunnen worden vertraagd om vermoedelijk misbruik of ongebruikelijke activiteiten te onderzoeken."
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 Terugboekingen & terugdraaiingen",
+					"items": [
+						"Crypto-transacties zijn definitief op de chain. Als {siteName} verliezen lijdt als gevolg van terugboekingen of terugdraaiingen van externe dienstverleners (zeldzaam bij on-chain), behouden we ons het recht voor om bedragen terug te vorderen of administratieve kosten in rekening te brengen."
+					]
+				}
+			},
+			"kyc": {
+				"title": "8. Geen routine-identiteitsverificatie (geen KYC)",
+				"content1": "8.1 {siteName} voert geen routine-identiteitsverificatie (KYC) uit als voorwaarde voor normaal spel. Gebruikers kunnen een portemonnee verbinden via Dynamic.xyz en beginnen met spelen zonder identiteitsdocumenten te verstrekken.",
+				"content2": "8.2 Niettegenstaande het bovenstaande, behoudt {siteName} zich het recht voor om informatie te vragen of transacties op te schorten indien nodig om:",
+				"items": [
+					"Te voldoen aan een wettig bevel van de bevoegde autoriteiten:",
+					"Fraude, witwassen van geld of andere illegale activiteiten te voorkomen, te onderzoeken of te verhelpen",
+					"Of de veiligheid en integriteit van het platform te beschermen."
+				],
+				"content3": "8.3 Als u weigert dergelijke informatie te verstrekken wanneer dit wettelijk vereist is, kan {siteName} uw account beperken of sluiten en opnames vertragen of inhouden voor zover toegestaan door de wet."
+			},
+			"fairPlay": {
+				"title": "9. Eerlijk spel, verboden gedrag & beveiliging",
+				"intro": "U mag niet:",
+				"items": [
+					"Bots, scripts, geautomatiseerde speeltools of enige ongeautoriseerde software gebruiken.",
+					"Samenspannen met andere spelers of spelresultaten manipuleren.",
+					"Meerdere accounts aanmaken om bonussen of promoties te misbruiken.",
+					"Proberen on-chain transacties terug te draaien of te manipuleren.",
+					"Spelbugs of platformkwetsbaarheden misbruiken."
+				],
+				"outro1": "Accounts die worden betrapt op valsspelen, samenspannen of het misbruiken van het platform kunnen worden opgeschort, gesloten of hun saldi verbeurdverklaard.",
+				"outro2": "{siteName} implementeert technische en gedragsmonitoring om de integriteit van het platform te beschermen."
+			},
+			"bonuses": {
+				"title": "10. Bonussen & promoties",
+				"items": [
+					"Alle bonusaanbiedingen en promoties zijn onderworpen aan specifieke bonusvoorwaarden die bij elke aanbieding worden vermeld.",
+					"Bonusmisbruik (inclusief meerdere accounts of snel wisselen van bonussen) kan leiden tot weigering, terugdraaiing of verbeurdverklaring van bonussen en sluiting van accounts.",
+					"Bonusinzetvereisten moeten worden voldaan voordat bonus-afgeleide fondsen worden opgenomen, zoals gespecificeerd per promotie."
+				]
+			},
+			"playingRules": {
+				"title": "11. Spelregels & spelafwikkeling",
+				"items": [
+					"Weddenschappen worden pas geaccepteerd nadat u een bevestiging op het scherm hebt ontvangen. Weddenschappen geplaatst met onvoldoende saldo zijn ongeldig.",
+					"De interne logboeken en blockchain-records van {siteName} zijn gezaghebbend in geval van geschillen.",
+					"Als een evenement wordt geannuleerd, opgeschort of anderszins gecompromitteerd, zal {siteName} weddenschappen afwikkelen of ongeldig verklaren volgens de gepubliceerde spel- en marktregels.",
+					"Voor bewijsbaar eerlijke spellen worden verificatietools en server seeds (indien van toepassing) per spel beschikbaar gesteld; serverlogboeken zijn definitief."
+				]
+			},
+			"errors": {
+				"title": "12. Fouten, onderbrekingen & limieten",
+				"intro": "{siteName} is niet aansprakelijk voor verliezen veroorzaakt door:",
+				"items": [
+					"Internet- of apparaatstoringen",
+					"Blockchain-vertragingen, forks of netwerkcongestie",
+					"Softwarebugs of storingen van externe services"
+				],
+				"outro1": "{siteName} behoudt zich het recht voor om weddenschappen ongeldig te verklaren, saldi aan te passen of transacties te annuleren wanneer fouten of exploits worden gedetecteerd.",
+				"outro2": "We kunnen inzetlimieten, maximale winsten en andere controles instellen om gebruikers en het platform te beschermen."
+			},
+			"suspension": {
+				"title": "13. Opschorting, sluiting & fondsbeheer",
+				"intro": "{siteName} kan accounts opschorten of sluiten waar:",
+				"items": [
+					"Voorwaarden worden geschonden",
+					"Misbruik, fraude of verdacht gedrag wordt gedetecteerd",
+					"Wettelijke of regelgevende verplichtingen dit vereisen"
+				],
+				"outro1": "Bij sluiting van een account kunnen openstaande weddenschappen worden geannuleerd en resterende fondsen worden afgehandeld volgens de toepasselijke wetgeving en het platformbeleid.",
+				"outro2": "{siteName} kan fondsen vasthouden waar nodig om geschillen op te lossen, te voldoen aan wettige verzoeken of verliezen te verhelpen."
+			},
+			"responsibleGaming": {
+				"title": "14. Verantwoord spelen",
+				"items": [
+					"{siteName} promoot verantwoord gokken. U kunt vragen om: Zelfuitsluiting, stortingslimieten of tijdelijke opschorting.",
+					"Als u gokschade vermoedt, bezoek dan {siteDomain} voor onmiddellijke hulp.",
+					"Minderjarig gokken (jonger dan 18 jaar of de lokale wettelijke leeftijd) is ten strengste verboden. Accounts die toebehoren aan minderjarigen zullen worden gesloten en fondsen worden afgehandeld volgens het beleid."
+				]
+			},
+			"ip": {
+				"title": "15. Intellectueel eigendom",
+				"content1": "Alle handelsmerken, logo's, site-inhoud, software en spelactiva op {siteName} zijn eigendom van of in licentie gegeven door {siteName}. Ongeautoriseerd kopiëren, scrapen of herdistribueren is verboden.",
+				"content2": "U krijgt een beperkte, herroepbare licentie om toegang te krijgen tot de service voor uitsluitend persoonlijk vermaak."
+			},
+			"liability": {
+				"title": "16. Beperking van aansprakelijkheid",
+				"items": [
+					"Voor zover toegestaan door de wet, is {siteName} niet aansprakelijk voor indirecte, speciale, gevolg- of incidentele verliezen, inclusief gederfde winst of opportunitykosten.",
+					"Onze totale aansprakelijkheid voor enige claim met betrekking tot deze voorwaarden zal niet hoger zijn dan de waarde van uw laatste storting of een bedrag gespecificeerd door de toepasselijke wetgeving.",
+					"Niets in deze voorwaarden beperkt de aansprakelijkheid voor overlijden of persoonlijk letsel veroorzaakt door nalatigheid waar de toepasselijke wetgeving een dergelijke beperking verbiedt."
+				]
+			},
+			"disputes": {
+				"title": "17. Geschillenbeslechting & toepasselijk recht",
+				"content": "In geval van een geschil, bezoek {siteDomain}. We streven ernaar klachten snel op te lossen; escaleer indien nodig naar het management."
+			},
+			"amendments": {
+				"title": "18. Wijzigingen",
+				"content": "{siteName} kan deze voorwaarden op elk moment wijzigen. Bijgewerkte voorwaarden worden op de website geplaatst. Voortgezet gebruik houdt acceptatie in."
+			},
+			"miscellaneous": {
+				"title": "19. Diversen",
+				"items": [
+					"Deze voorwaarden vormen de volledige overeenkomst tussen u en {siteName} met betrekking tot de service.",
+					"Als een clausule onafdwingbaar wordt bevonden, zal deze worden gewijzigd tot de minimaal noodzakelijke omvang en blijven de overige bepalingen van kracht.",
+					"U mag uw rechten onder deze voorwaarden niet overdragen. {siteName} mag rechten en verplichtingen overdragen of uitbesteden."
+				]
+			},
+			"contact": {
+				"title": "20. Contact",
+				"intro": "Voor ondersteuning, klachten of juridische mededelingen:",
+				"supportEmail": "Algemene ondersteuning: bezoek {siteDomain}",
+				"affiliateEmail": "Affiliate-vragen: bezoek {siteDomain}",
+				"registeredOffice": "Geregistreerd kantoor: {siteDomain} N.V., Heelsumstraat 51, Willemstad, Curaçao"
+			}
+		}
+	},
+	"responsibleGambling": {
+		"title": "Verantwoord spelen bij {siteName}",
+		"subtitle": "Bij {siteName} willen we dat gamen veilig, leuk en iets is waar je op elk moment mee kunt stoppen. We gaan allemaal voor balans—zodat je speelt voor je plezier, niet om geld te verdienen of je financiën op orde te brengen.",
+		"lastUpdated": "Laatst bijgewerkt: januari 2025",
+		"intro": {
+			"title": "Verantwoord spelen bij {siteName}",
+			"paragraph1": "Bij {siteName} willen we dat gamen veilig, leuk en iets is waar je op elk moment mee kunt stoppen. We gaan allemaal voor balans—zodat je speelt voor je plezier, niet om geld te verdienen of je financiën op orde te brengen.",
+			"paragraph2": "Als je jonger dan 18 bent, of onder de wettelijke leeftijd in jouw regio, kun je ons platform niet gebruiken. Dat nemen we serieus."
+		},
+		"mission": {
+			"title": "Onze missie",
+			"paragraph1": "Wij geloven in duidelijk, eerlijk en veilig gamen. {siteName} bestaat om je te helpen slimme keuzes te maken en te voorkomen dat gokken een probleem wordt.",
+			"paragraph2": "Dit is wat voor ons belangrijk is:",
+			"beliefs": {
+				"0": "Gokken is entertainment. Het is geen manier om rijk te worden.",
+				"1": "Ken jezelf, stel grenzen en overdrijf niet.",
+				"2": "We geven je tools en middelen om je te helpen de controle te behouden."
+			}
+		},
+		"understanding": {
+			"title": "Wat verantwoord spelen echt betekent",
+			"paragraph1": "Online gokken is tegenwoordig overal. Dat maakt het makkelijker om de tijd, het geld of zelfs waarom je überhaupt bent begonnen met spelen uit het oog te verliezen. | Verantwoord gokken betekent je grenzen kennen, scherp blijven en de dingen niet uit de hand laten lopen.",
+			"paragraph2": "Een paar dingen om te onthouden:",
+			"tips": {
+				"0": "Speel voor de lol, niet voor winst.",
+				"1": "Probeer verliezen niet terug te winnen. Neem pauzes als je ze nodig hebt.",
+				"2": "Stel een uitgaven- en tijdslimiet voor jezelf in, en houd je eraan.",
+				"3": "Gok nooit als je moe, gestrest of van streek bent.",
+				"4": "Gebruik geen geld dat bedoeld is voor rekeningen of andere behoeften.",
+				"5": "Als het niet meer leuk is, stop er dan mee."
+			}
+		},
+		"selfCheck": {
+			"title": "Snelle zelfcontrole: Heb je nog steeds de controle?",
+			"intro": "Wees eerlijk tegen jezelf:",
+			"questions": {
+				"0": "Verlies je de tijd uit het oog tijdens het gokken?",
+				"1": "Heeft het je relaties of werk geschaad?",
+				"2": "Raak je geïrriteerd als je niet kunt spelen?",
+				"3": "Gok je om verveling of stress te ontvluchten?",
+				"4": "Heb je geld of crypto geleend om te kunnen blijven spelen?",
+				"5": "Jaag je verliezen na, door meer in te zetten om het terug te winnen?"
+			},
+			"warning": "Als je op meerdere vragen \"ja\" hebt geantwoord, is het tijd om na te denken over hoe je speelt en misschien hulp te zoeken."
+		},
+		"tools": {
+			"title": "Hoe {siteName} je helpt op het goede spoor te blijven",
+			"intro": "We willen dat je je vermaakt, maar we willen ook dat je veilig blijft. | Dit is wat we bieden:",
+			"selfExclusion": {
+				"title": "Zelfuitsluiting",
+				"description": "Een pauze nodig? Je kunt vragen om je account tijdelijk of voorgoed te blokkeren. Gedurende deze tijd kun je niet spelen of promo-e-mails ontvangen. Neem gewoon contact met ons op via {siteName} en we zullen het privé afhandelen."
+			},
+			"coolingOff": {
+				"title": "Afkoelingsperiodes",
+				"paragraph1": "Als je voelt dat de dingen uit de hand lopen, neem dan een pauze van 24 uur, een week of een maand. Gedurende deze tijd kun je je portemonnee niet verbinden om te spelen.",
+				"periods": {
+					"0": "24 uur",
+					"1": "1 week",
+					"2": "1 maand"
+				},
+				"paragraph2": "Gedurende deze tijd kun je je portemonnee niet verbinden om te spelen."
+			},
+			"depositAwareness": {
+				"title": "Bewustzijn van stortingen & verliezen",
+				"description": "Aangezien alles via crypto-portemonnees loopt, kun je al je stortingen en inzetten direct op de blockchain zien. Houd je activiteit in de gaten, zodat je altijd weet waar je aan toe bent."
+			}
+		},
+		"underagePrevention": {
+			"title": "Bescherming van minderjarigen",
+			"paragraph1": "Geen gokken voor iedereen onder de 18. We menen het.",
+			"tipsTitle": "Ouders en voogden, hier zijn enkele tips:",
+			"tips": {
+				"0": "Gebruik wachtwoorden of vergrendel je apparaten.",
+				"1": "Sla geen portemonnee-informatie op gedeelde computers of telefoons op.",
+				"2": "Log altijd uit als je weggaat.",
+				"3": "Gebruik tools zoals NetNanny of GamBlock om goksites te blokkeren.",
+				"4": "Controleer de online activiteiten van je kinderen."
+			},
+			"warning": "Als we erachter komen dat iemand minderjarig speelt, zullen we hun account sluiten en eventuele winsten annuleren."
+		},
+		"helpSupport": {
+			"title": "Hulp nodig? Je bent niet alleen",
+			"intro": "Als gokken je humeur, relaties of financiën begint te schaden, neem dan contact op. Hier zijn enkele organisaties die kunnen helpen, waar je ook bent:",
+			"organizations": {
+				"0": {
+					"name": "GamCare",
+					"url": "https://www.gamcare.org.uk"
+				},
+				"1": {
+					"name": "Gambling Therapy",
+					"url": "https://www.gamblingtherapy.org"
+				},
+				"2": {
+					"name": "Gamblers Anonymous",
+					"url": "https://www.gamblersanonymous.org"
+				},
+				"3": {
+					"name": "National Council on Problem Gambling",
+					"url": "https://www.ncpgambling.org"
+				},
+				"4": {
+					"name": "GamTalk",
+					"url": "https://www.gamtalk.org"
+				}
+			},
+			"paragraph2": "Ze bieden zelftests, live chat en lokale steungroepen."
+		},
+		"principles": {
+			"title": "Hoe {siteName} verantwoord blijft",
+			"intro": "We houden ons aan deze principes:",
+			"items": {
+				"0": {
+					"title": "Transparantie",
+					"description": "Elk spel is bewijsbaar eerlijk en blockchain-geverifieerd."
+				},
+				"1": {
+					"title": "Veiligheid",
+					"description": "Je sessies zijn altijd beschermd door Dynamic.xyz portemonnee-login. Geen wachtwoorden, geen KYC."
+				},
+				"2": {
+					"title": "Autonomie",
+					"description": "Jij hebt de leiding. Verbreek de verbinding op elk moment."
+				},
+				"3": {
+					"title": "Educatie",
+					"description": "We helpen je risico's te begrijpen en houden je op de hoogte."
+				},
+				"4": {
+					"title": "Gemeenschapsondersteuning",
+					"description": "Ons team staat 24/7 voor je klaar."
+				}
+			}
+		},
+		"playSmart": {
+			"title": "Laatste gedachten",
+			"intro": "Gokken moet plezierig, sociaal en evenwichtig zijn. Voordat je speelt, stel een tijdslimiet in. Jaag geen verliezen na of speel niet als je van streek bent. Behandel eventuele winsten als een leuke bonus, niet als een salaris. Speel slim, en wees niet bang om hulp te vragen als je die nodig hebt.",
+			"reminders": {
+				"0": "Gokken moet plezierig, sociaal en evenwichtig zijn.",
+				"1": "Voordat je speelt, stel een tijdslimiet in.",
+				"2": "Jaag geen verliezen na of speel niet als je van streek bent.",
+				"3": "Behandel eventuele winsten als een leuke bonus, niet als een salaris.",
+				"4": "Speel slim, en wees niet bang om hulp te vragen als je die nodig hebt."
+			}
+		},
+		"finalMessage": {
+			"paragraph1": "Laat gokken niet overslaan naar je werk of relaties. Als het niet meer leuk is, loop dan gewoon weg. | Bij {siteName} geven we om je welzijn. Maak slimme keuzes, speel veilig en let op jezelf.",
+			"paragraph2": "Laat gokken niet overslaan naar je werk of relaties. Als het niet meer leuk is, loop dan gewoon weg.",
+			"contact": "Hulp, advies nodig, of wil je een pauze nemen? Neem op elk moment contact op via {siteName}."
+		}
+	},
+	"faqs": {
+		"title": "Veelgestelde vragen – {siteName}",
+		"subtitle": "Vind antwoorden op veelgestelde vragen over {siteName}. Leer over inloggen met portemonnee, stortingen, opnames, eerlijk spel en blockchain-transparantie.",
+		"lastUpdated": "Laatst bijgewerkt: januari 2025",
+		"introTitle": "Veelgestelde vragen {siteName}",
+		"intro": "Welkom bij het {siteName} FAQ Centrum, waar u snelle antwoorden vindt op de meest gestelde vragen over ons crypto gaming platform. | Als u hier uw antwoord niet kunt vinden, staat ons 24/7 ondersteuningsteam altijd klaar om te helpen via {siteName}.",
+		"categories": {
+			"accountRegistration": {
+				"title": "🔹 Account & Registratie",
+				"items": {
+					"0": {
+						"question": "1. Kan ik me registreren op uw website?",
+						"answer": "Ja — registratie is open voor iedereen van 18 jaar of ouder (of de wettelijke meerderjarigheidsleeftijd in uw rechtsgebied). | U moet er ook voor zorgen dat online gokken legaal is waar u woont. | Bij {siteName} heeft u geen traditionele aanmeldingen of wachtwoorden nodig. | Verbind gewoon uw portemonnee via Dynamic.xyz om direct te beginnen met spelen. | 👉 Voor juridische en nalevingsdetails, raadpleeg onze Algemene voorwaarden.",
+						"reminder": "Herinnering: Gokken kan verslavend zijn. Speel alsjeblieft verantwoord en ken uw grenzen."
+					},
+					"1": {
+						"question": "2. Wat als ik mijn inloggegevens vergeet?",
+						"answer": "Aangezien {siteName} gebruikmaakt van op portemonnee gebaseerde login via Dynamic.xyz, gebruikt u geen traditionele wachtwoorden. | Om weer toegang te krijgen tot uw account: | Verbind uw portemonnee opnieuw met hetzelfde adres dat u oorspronkelijk gebruikte. | Als u de toegang tot uw portemonnee bent verloren, herstel deze dan met uw seed phrase of back-upmethode (wij slaan nooit privésleutels op of hebben er controle over). | {siteName} kan uw portemonneegegevens om veiligheidsredenen niet resetten of herstellen."
+					},
+					"2": {
+						"question": "3. Kan ik mijn gebruikersnaam of gekoppelde portemonnee wijzigen?",
+						"answer": "Uw {siteName}-account is gekoppeld aan uw portemonnee-adres. | Om een nieuwe portemonnee te gebruiken, verbindt u er gewoon een nieuwe — maar let op dat uw eerdere spelgeschiedenis, VIP-status en bonussen niet automatisch worden overgedragen."
+					},
+					"3": {
+						"question": "4. Hoe word ik een VIP-lid?",
+						"answer": "Ons VIP-programma is exclusief en alleen op uitnodiging. | Terwijl u speelt en deelneemt aan de {siteName}-community, wordt uw spelactiviteit automatisch bijgehouden. | Zodra u in aanmerking komt, ontvangt u een officiële uitnodiging via een melding in het platform of een direct bericht van het {siteName}-team. | VIP's genieten van toegang tot exclusieve bonussen, snellere opnames en gepersonaliseerde beloningen."
+					}
+				}
+			},
+			"depositsWithdrawals": {
+				"title": "💰 Stortingen & Opnames",
+				"items": {
+					"0": {
+						"question": "5. Hoe stort ik crypto?",
+						"answer": "Storten op {siteName} is snel en eenvoudig: | Ga naar \"Mijn portemonnee\" op het hoofddashboard. | Kies Storten en selecteer uw favoriete cryptocurrency (bijv. BTC, ETH, USDT, BNB). | Kopieer uw unieke portemonnee-adres of scan de QR-code. | Stuur uw crypto van uw externe portemonnee naar het weergegeven adres. | Zodra dit op de blockchain is bevestigd, verschijnt uw geld automatisch in uw {siteName}-saldo. | ⚠️ Zorg ervoor dat u alleen ondersteunde cryptocurrencies naar het juiste adresnetwerk verzendt (bijv. ERC20, TRC20, BEP20)."
+					},
+					"1": {
+						"question": "6. Hoe lang duren stortingen?",
+						"answer": "Stortingen worden meestal binnen 5-10 minuten bevestigd, afhankelijk van de congestie op de blockchain en transactiekosten. | U kunt de voortgang van uw transactie volgen via een block explorer (bijv. Etherscan.io of BscScan.com) met uw transactie-hash (TXID). | Er zijn doorgaans minimaal 3 bevestigingen vereist voordat uw storting in uw saldo verschijnt."
+					},
+					"2": {
+						"question": "7. Wat is het minimale opnamebedrag?",
+						"answer": "Het minimale opnamebedrag is afhankelijk van de cryptocurrency die u gebruikt. | Elke munt heeft zijn eigen netwerkkosten en minimumdrempel. | Deze waarden worden weergegeven in de sectie Opnemen onder \"Mijn portemonnee.\""
+					},
+					"3": {
+						"question": "8. Hoe neem ik mijn winsten op?",
+						"answer": "Om uw crypto op te nemen: | Ga naar \"Mijn portemonnee\" → \"Opnemen.\" | Voer uw bestemmingsportemonnee-adres en het bedrag in dat u wilt opnemen. | Controleer uw adres en netwerktype dubbel voordat u bevestigt. | Opnames worden onmiddellijk verwerkt, maar kunnen enkele minuten duren, afhankelijk van de activiteit op het blockchain-netwerk. | 💡 Zorg er altijd voor dat uw ontvangende portemonnee het netwerk ondersteunt waarvan u opneemt."
+					},
+					"4": {
+						"question": "9. Wat als mijn transactie vertraagd is?",
+						"answer": "Blockchain-transacties duren soms langer vanwege netwerkcongestie of lage gaskosten. | Als uw storting of opname nog niet is aangekomen: | Controleer uw TXID op de blockchain explorer. | Bevestig dat u het juiste netwerk en adres heeft gebruikt. | Als het meer dan een uur geleden is, neem dan contact op met {siteName} met uw TXID en portemonneegegevens."
+					}
+				}
+			},
+			"gamesSecurity": {
+				"title": "🎮 Spellen, Eerlijkheid & Veiligheid",
+				"items": {
+					"0": {
+						"question": "10. Zijn {siteName}-spellen eerlijk?",
+						"answer": "Ja — alle {siteName}-spellen zijn gebouwd met behulp van bewijsbaar eerlijke technologie en geverifieerde slimme contracten. | Elke weddenschap, resultaat en uitbetaling kan onafhankelijk op de blockchain worden geverifieerd. | We werken op transparante, fraudebestendige systemen die willekeur, eerlijkheid en openheid garanderen. | U kunt spelresultaten en transactiebewijzen on-chain bekijken via Etherscan of de respectieve netwerkverkenner."
+					},
+					"1": {
+						"question": "11. Wat moet ik doen als een spel vastloopt of crasht?",
+						"answer": "Als uw spel niet meer reageert: | Ververs de pagina. | Wis uw browsercache en verbind uw portemonnee opnieuw. | Als het probleem aanhoudt, neem dan contact op met ons ondersteuningsteam via Live Chat of {siteName}. | Ons team zal u helpen bij het herstellen van uw spelsessie of saldo indien beïnvloed."
+					},
+					"2": {
+						"question": "12. Kan ik meer dan één portemonnee of account gebruiken?",
+						"answer": "Nee. | Elke speler mag één portemonnee-adres als zijn primaire account gebruiken. | Het aanmaken van meerdere accounts of het gebruik van portemonnee-rotaties om bonussen te claimen of promoties te misbruiken is ten strengste verboden en kan leiden tot accountbeperking of verbeurdverklaring van het saldo."
+					},
+					"3": {
+						"question": "13. Zijn mijn persoonlijke gegevens veilig?",
+						"answer": "Ja. | Bij {siteName} verzamelen we geen persoonlijke gegevens — uw identiteit blijft veilig. | Toegang wordt beheerd via Dynamic.xyz, wat volledige privacy en eigendom van uw digitale identiteit garandeert. | Er worden geen wachtwoorden, e-mails of gevoelige documenten door ons opgeslagen. | Uw portemonnee = uw identiteit."
+					}
+				}
+			},
+			"responsibleGambling": {
+				"title": "🧠 Verantwoord spelen",
+				"items": {
+					"0": {
+						"question": "14. Ondersteunt {siteName} verantwoord gokken?",
+						"answer": "Absoluut. | We moedigen elke speler aan om met mate van gamen te genieten. | U kunt op elk moment een zelfuitsluitingsperiode aanvragen of een afkoelingspauze nemen door contact op te nemen met {siteName}. | Als u het gevoel heeft dat gokken uw leven beïnvloedt, bezoek dan onze pagina Verantwoord gokken voor bronnen en hulporganisaties."
+					},
+					"1": {
+						"question": "15. Wat moet ik doen als ik een gokprobleem vermoed?",
+						"answer": "Als u het gevoel heeft dat uw gokken uit de hand loopt, neem dan een pauze en neem contact op met een van deze vertrouwde organisaties voor vertrouwelijke hulp: | GamCare: https://www.gamcare.org.uk | Gambling Therapy: https://www.gamblingtherapy.org | Gamblers Anonymous: https://www.gamblersanonymous.org | Ons ondersteuningsteam kan u ook begeleiden bij het veilig beperken van de toegang tot uw account."
+					}
+				}
+			}
+		},
+		"blockchainTransparency": {
+			"title": "🧩 Blockchain-transparantie",
+			"paragraph1": "{siteName} wordt aangedreven door op Ethereum gebaseerde slimme contracten, die ervoor zorgen dat elke weddenschap, transactie en beloning transparant on-chain wordt vastgelegd. | Alle gegevens en spellogica zijn onveranderlijk en verifieerbaar, wat zorgt voor echte eerlijkheid en controleerbaarheid. | U kunt alle platformtransacties volgen via openbare verkenners zoals: | Etherscan.io | BscScan.com | TronScan.org",
+			"paragraph2": "",
+			"explorersTitle": "",
+			"guarantee": "Dit garandeert dat er nooit manipulatie of vooringenomenheid kan optreden."
+		},
+		"needMoreHelp": {
+			"title": "💬 Meer hulp nodig?",
+			"intro": "Ons ondersteuningsteam is 24/7 beschikbaar om u te helpen via:",
+			"contactTitle": "",
+			"liveChat": "💬 Live Chat (beschikbaar in uw met portemonnee verbonden dashboard)"
+		}
+	},
+	"termsAndConditions": {
+		"title": "⚖️ Algemene voorwaarden — {siteName}",
+		"subtitle": "Lees de algemene voorwaarden van {siteName}. Leer over inloggen met portemonnee (Dynamic.xyz), crypto-stortingen, opnames, eerlijk spel en beleid voor verantwoord spelen.",
+		"lastUpdated": "Laatst bijgewerkt: januari 2025",
+		"meta": {
+			"title": "Algemene voorwaarden | {siteName} – Crypto Casino Regels",
+			"description": "Lees de algemene voorwaarden van {siteName}. Leer over inloggen met portemonnee (Dynamic.xyz), crypto-stortingen, opnames, eerlijk spel en beleid voor verantwoord spelen.",
+			"keywords": "{siteName} Algemene voorwaarden, {siteName} crypto casino regels, Dynamic.xyz portemonnee login, {siteName} opnamebeleid, {siteName} eerlijk spel",
+			"h1": "Algemene voorwaarden – {siteName} Crypto Wallet Casino",
+			"ogTitle": "Algemene voorwaarden | {siteName} (Crypto Wallet Casino)",
+			"ogDescription": "Bekijk de algemene voorwaarden van {siteName}. Begrijp Dynamic.xyz portemonnee login, crypto-stortingen, opnames en platformregels."
+		},
+		"sections": {
+			"ownership": {
+				"number": "1",
+				"title": "{siteName} EIGENDOM",
+				"clauses": [
+					{
+						"number": "1.1",
+						"content": "{siteName} is eigendom van en wordt geëxploiteerd door {siteName} N.V. (\"{siteName}\", \"Wij\", \"Onze\", \"Ons\"),"
+					},
+					{
+						"number": "1.2",
+						"content": "{siteName} is een casino dat uitsluitend met crypto-portemonnees werkt. Alle stortingen, inzetten en opnames worden verwerkt via de cryptocurrency-portemonnees van gebruikers. We ondersteunen inloggen met portemonnee via Dynamic.xyz en compatibele portemonnee-connectoren (bijv. WalletConnect / MetaMask)."
+					}
+				]
+			},
+			"importantNotice": {
+				"number": "2",
+				"title": "BELANGRIJKE MEDEDELING",
+				"clauses": [
+					{
+						"number": "2.1",
+						"content": "Door u te registreren of uw portemonnee te verbinden op www.{siteDomain} (de \"Website\"), gaat u een bindende overeenkomst aan met {siteName} N.V. en gaat u akkoord met: (i) deze Algemene voorwaarden; (ii) ons Privacybeleid; (iii) ons Cookiebeleid; (iv) onze Affiliatevoorwaarden; en (v) ons Beleid voor verantwoord spelen."
+					},
+					{
+						"number": "2.2",
+						"content": "Als u niet akkoord gaat met een van deze voorwaarden, mag u onze website niet openen, gebruiken of registreren."
+					},
+					{
+						"number": "2.3",
+						"content": "Lees deze voorwaarden zorgvuldig door. Als u onzeker bent over uw rechten of plichten, raadpleeg dan een juridisch adviseur in uw rechtsgebied voordat u de website gebruikt."
+					}
+				]
+			},
+			"generalTerms": {
+				"number": "3",
+				"title": "ALGEMENE VOORWAARDEN",
+				"clauses": [
+					{
+						"number": "3.1",
+						"content": "Bij registratie of verbinding met een portemonnee, gaat u (\"Gebruiker\", \"Speler\", \"U\" of \"Uw\") akkoord met alle regels en beleidsregels van {siteName}."
+					},
+					{
+						"number": "3.2",
+						"content": "Deze overeenkomst is een juridisch bindend contract tussen u en {siteName}."
+					},
+					{
+						"number": "3.3",
+						"content": "Deze voorwaarden worden van kracht op het moment dat u uw portemonnee verbindt en de site begint te gebruiken."
+					},
+					{
+						"number": "3.4",
+						"content": "{siteName} behoudt zich het recht voor om deze voorwaarden op elk moment te wijzigen of bij te werken. Wijzigingen worden op de website gepubliceerd; voortgezet gebruik houdt acceptatie in."
+					},
+					{
+						"number": "3.5",
+						"content": "In geval van conflict prevaleren deze voorwaarden boven alle andere regels, promoties of externe materialen."
+					},
+					{
+						"number": "3.6",
+						"content": "Alleen de Engelse versie van deze voorwaarden is juridisch bindend. Vertalingen zijn uitsluitend voor het gemak."
+					}
+				]
+			},
+			"accountSecurity": {
+				"number": "4",
+				"title": "ACCOUNT, INLOGGEN MET PORTEMONNEE & BEVEILIGING",
+				"walletLogin": {
+					"title": "4.1 Inloggen met portemonnee (Dynamic.xyz)",
+					"clauses": [
+						{
+							"number": "4.1.1",
+							"content": "{siteName} gebruikt Dynamic.xyz (of andere ondersteunde connectoren) voor op portemonnee gebaseerd inloggen en authenticatie. Door een portemonnee te verbinden, bevestigt u dat u de rechtmatige eigenaar van die portemonnee bent en machtigt u {siteName} om die portemonnee als uw account te erkennen."
+						},
+						{
+							"number": "4.1.2",
+							"content": "We vragen nooit om uw privésleutels. U moet uw portemonneegegevens en apparaat veilig houden. {siteName} is niet verantwoordelijk voor verliezen veroorzaakt door gecompromitteerde portemonnees of gelekte privésleutels."
+						}
+					]
+				},
+				"registration": {
+					"title": "4.2 Registratiegegevens",
+					"clauses": [
+						{
+							"number": "4.2.1",
+							"content": "U kunt worden gevraagd om contactgegevens (e-mail, gebruikersnaam) te verstrekken voor accountcommunicatie. U moet nauwkeurige informatie verstrekken en deze up-to-date houden."
+						},
+						{
+							"number": "4.2.2",
+							"content": "U bent verantwoordelijk voor alle acties die worden ondernomen met uw verbonden portemonnee."
+						}
+					]
+				},
+				"multipleAccounts": {
+					"title": "4.3 Meerdere accounts & beveiliging",
+					"clauses": [
+						{
+							"number": "4.3.1",
+							"content": "Slechts één account per persoon is toegestaan. Meerdere accounts of pogingen om limieten te omzeilen kunnen leiden tot opschorting van het account en verbeurdverklaring van fondsen."
+						},
+						{
+							"number": "4.3.2",
+							"content": "Schakel alle aangeboden platformbeveiligingsfuncties in (bijvoorbeeld 2FA voor bijbehorende services) en beveilig uw eigen portemonnee."
+						},
+						{
+							"number": "4.3.3",
+							"content": "Stel de ondersteuning onmiddellijk op de hoogte als u ongeautoriseerde toegang vermoedt."
+						}
+					]
+				}
+			},
+			"eligibility": {
+				"number": "5",
+				"title": "GESCHIKTHEID & GEBRUIKERSGARANTIES",
+				"clauses": [
+					{
+						"number": "5.1",
+						"content": "U verklaart en garandeert dat:|• U bent ten minste 18 jaar oud (of de wettelijke minimumleeftijd voor gokken in uw rechtsgebied).|• U bent wettelijk bevoegd om online crypto-gokdiensten te gebruiken waar u zich bevindt.|• U bent de rechtmatige eigenaar van de portemonnee die u verbindt.|• U zult geen VPN's of locatiespoofing gebruiken om regionale beperkingen te omzeilen.|• U zult de service niet gebruiken voor illegale of commerciële doeleinden.|• U accepteert dat de waarde van cryptocurrency kan fluctueren en u draagt alle marktrisico's."
+					},
+					{
+						"number": "5.2",
+						"content": "Als u deze garanties schendt, kan {siteName} de toegang opschorten of beëindigen en fondsen inhouden waar toegestaan door de wet."
+					}
+				]
+			},
+			"restrictedJurisdictions": {
+				"number": "6",
+				"title": "BEPERKTE RECHTSGEBIEDEN",
+				"clauses": [
+					{
+						"number": "6.1",
+						"content": "{siteName} accepteert geen spelers uit rechtsgebieden waar crypto-gokken verboden of beperkt is. Dit omvat, maar is niet beperkt tot:|Verenigde Staten (en Amerikaanse territoria), Verenigd Koninkrijk, Frankrijk, Nederland, Spanje, Duitsland, Australië, Oostenrijk, Comoren, Iran, Noord-Korea, Soedan, Syrië en elk rechtsgebied dat op de zwarte lijsten van de FATF staat."
+					},
+					{
+						"number": "6.2",
+						"content": "Pogingen om toegang te krijgen tot de service vanuit een beperkt rechtsgebied, inclusief via VPN of proxy, is een schending van deze voorwaarden en kan leiden tot sluiting van het account en verbeurdverklaring van fondsen."
+					}
+				]
+			},
+			"cryptoTransactions": {
+				"number": "7",
+				"title": "CRYPTO-STORTINGEN & -OPNAMES",
+				"cryptoOnly": {
+					"title": "7.1 Beleid voor alleen crypto",
+					"clauses": [
+						{
+							"number": "7.1.1",
+							"content": "{siteName} accepteert alleen stortingen en opnames in ondersteunde cryptocurrencies (bijv. BTC, ETH, USDT, TRX, BNB). Er worden geen stortingen in fiat, met kaart of via bankoverschrijving geaccepteerd."
+						},
+						{
+							"number": "7.1.2",
+							"content": "Alle stortingen moeten afkomstig zijn van portemonnees die u beheert. Stortingen van portemonnees van derden zijn verboden."
+						}
+					]
+				},
+				"deposits": {
+					"title": "7.2 Stortingen",
+					"clauses": [
+						{
+							"number": "7.2.1",
+							"content": "Stortingen worden bijgeschreven na de vereiste blockchain-bevestigingen. Netwerkkosten (gas) zijn voor uw rekening."
+						},
+						{
+							"number": "7.2.2",
+							"content": "{siteName} kan stortingen weigeren of terugdraaien die afkomstig lijken te zijn van geblokkeerde adressen of beperkte bronnen."
+						}
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 Opnames",
+					"clauses": [
+						{
+							"number": "7.3.1",
+							"content": "Opnames worden verwerkt naar het portemonnee-adres dat u opgeeft. {siteName} kan u vragen de bestemmingsportemonnee te bevestigen voordat de verwerking plaatsvindt."
+						},
+						{
+							"number": "7.3.2",
+							"content": "U moet voldoende vrij saldo hebben om een opname te dekken. Opnames kunnen worden vertraagd om vermoedelijk misbruik of ongebruikelijke activiteiten te onderzoeken."
+						}
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 Terugboekingen & terugdraaiingen",
+					"clauses": [
+						{
+							"number": "7.4.1",
+							"content": "Crypto-transacties zijn definitief op de chain. Als {siteName} verliezen lijdt als gevolg van terugboekingen of terugdraaiingen van externe dienstverleners (zeldzaam bij on-chain), behouden we ons het recht voor om bedragen terug te vorderen of administratieve kosten in rekening te brengen."
+						}
+					]
+				}
+			},
+			"noKyc": {
+				"number": "8",
+				"title": "GEEN ROUTINE-IDENTITEITSVERIFICATIE (GEEN KYC)",
+				"clauses": [
+					{
+						"number": "8.1",
+						"content": "{siteName} voert geen routine-identiteitsverificatie (KYC) uit als voorwaarde voor normaal spel. Gebruikers kunnen een portemonnee verbinden via Dynamic.xyz en beginnen met spelen zonder identiteitsdocumenten te verstrekken."
+					},
+					{
+						"number": "8.2",
+						"content": "Niettegenstaande clausule 8.1, behoudt {siteName} zich het recht voor om informatie te vragen of transacties op te schorten indien nodig om:|• Te voldoen aan een wettig bevel van bevoegde autoriteiten;|• Fraude, witwassen van geld of andere illegale activiteiten te voorkomen, te onderzoeken of te verhelpen; of|• De veiligheid en integriteit van het platform te beschermen."
+					},
+					{
+						"number": "8.3",
+						"content": "Als u weigert dergelijke informatie te verstrekken wanneer dit wettelijk vereist is, kan {siteName} uw account beperken of sluiten en opnames vertragen of inhouden voor zover toegestaan door de wet."
+					}
+				]
+			},
+			"fairPlay": {
+				"number": "9",
+				"title": "EERLIJK SPEL, VERBODEN GEDRAG & BEVEILIGING",
+				"clauses": [
+					{
+						"number": "9.1",
+						"content": "U mag niet:|• Bots, scripts, geautomatiseerde speeltools of enige ongeautoriseerde software gebruiken.|• Samenspannen met andere spelers of spelresultaten manipuleren.|• Meerdere accounts aanmaken om bonussen of promoties te misbruiken.|• Proberen on-chain transacties terug te draaien of te manipuleren.|• Spelbugs of platformkwetsbaarheden misbruiken."
+					},
+					{
+						"number": "9.2",
+						"content": "Accounts die worden betrapt op valsspelen, samenspannen of het misbruiken van het platform kunnen worden opgeschort, gesloten of hun saldi verbeurdverklaard."
+					},
+					{
+						"number": "9.3",
+						"content": "{siteName} implementeert technische en gedragsmonitoring om de integriteit van het platform te beschermen."
+					}
+				]
+			},
+			"bonuses": {
+				"number": "10",
+				"title": "BONUSSEN & PROMOTIES",
+				"clauses": [
+					{
+						"number": "10.1",
+						"content": "Alle bonusaanbiedingen en promoties zijn onderworpen aan specifieke bonusvoorwaarden die bij elke aanbieding worden vermeld."
+					},
+					{
+						"number": "10.2",
+						"content": "Bonusmisbruik (inclusief meerdere accounts of snel wisselen van bonussen) kan leiden tot weigering, terugdraaiing of verbeurdverklaring van bonussen en sluiting van accounts."
+					},
+					{
+						"number": "10.3",
+						"content": "Bonusinzetvereisten moeten worden voldaan voordat bonus-afgeleide fondsen worden opgenomen, zoals gespecificeerd per promotie."
+					}
+				]
+			},
+			"gameRules": {
+				"number": "11",
+				"title": "SPELREGELS & SPELAFWIKKELING",
+				"clauses": [
+					{
+						"number": "11.1",
+						"content": "Weddenschappen worden pas geaccepteerd nadat u een bevestiging op het scherm hebt ontvangen. Weddenschappen geplaatst met onvoldoende saldo zijn ongeldig."
+					},
+					{
+						"number": "11.2",
+						"content": "De interne logboeken en blockchain-records van {siteName} zijn gezaghebbend in geval van geschillen."
+					},
+					{
+						"number": "11.3",
+						"content": "Als een evenement wordt geannuleerd, opgeschort of anderszins gecompromitteerd, zal {siteName} weddenschappen afwikkelen of ongeldig verklaren volgens de gepubliceerde spel- en marktregels."
+					},
+					{
+						"number": "11.4",
+						"content": "Voor bewijsbaar eerlijke spellen worden verificatietools en server seeds (indien van toepassing) per spel beschikbaar gesteld; serverlogboeken zijn definitief."
+					}
+				]
+			},
+			"errors": {
+				"number": "12",
+				"title": "FOUTEN, ONDERBREKINGEN & LIMIETEN",
+				"clauses": [
+					{
+						"number": "12.1",
+						"content": "{siteName} is niet aansprakelijk voor verliezen veroorzaakt door:|• Internet- of apparaatstoringen;|• Blockchain-vertragingen, forks of netwerkcongestie;|• Softwarebugs of storingen van externe services."
+					},
+					{
+						"number": "12.2",
+						"content": "{siteName} behoudt zich het recht voor om weddenschappen ongeldig te verklaren, saldi aan te passen of transacties te annuleren wanneer fouten of exploits worden gedetecteerd."
+					},
+					{
+						"number": "12.3",
+						"content": "We kunnen inzetlimieten, maximale winsten en andere controles instellen om gebruikers en het platform te beschermen."
+					}
+				]
+			},
+			"suspension": {
+				"number": "13",
+				"title": "OPSCHORTING, SLUITING & FONDSBEHEER",
+				"clauses": [
+					{
+						"number": "13.1",
+						"content": "{siteName} kan accounts opschorten of sluiten waar:|• Voorwaarden worden geschonden;|• Misbruik, fraude of verdacht gedrag wordt gedetecteerd;|• Wettelijke of regelgevende verplichtingen dit vereisen."
+					},
+					{
+						"number": "13.2",
+						"content": "Bij sluiting van een account kunnen openstaande weddenschappen worden geannuleerd en resterende fondsen worden afgehandeld volgens de toepasselijke wetgeving en het platformbeleid."
+					},
+					{
+						"number": "13.3",
+						"content": "{siteName} kan fondsen vasthouden waar nodig om geschillen op te lossen, te voldoen aan wettige verzoeken of verliezen te verhelpen."
+					}
+				]
+			},
+			"responsibleGaming": {
+				"number": "14",
+				"title": "VERANTWOORD SPELEN",
+				"clauses": [
+					{
+						"number": "14.1",
+						"content": "{siteName} promoot verantwoord gokken. U kunt vragen om:|• Zelfuitsluiting;|• Stortingslimieten;|• Tijdelijke opschorting."
+					},
+					{
+						"number": "14.2",
+						"content": "Als u gokschade vermoedt, neem dan contact op met {siteName} voor onmiddellijke hulp."
+					},
+					{
+						"number": "14.3",
+						"content": "Minderjarig gokken (jonger dan 18 jaar of de lokale wettelijke leeftijd) is ten strengste verboden. Accounts die toebehoren aan minderjarigen zullen worden gesloten en fondsen worden afgehandeld volgens het beleid."
+					}
+				]
+			},
+			"intellectualProperty": {
+				"number": "15",
+				"title": "INTELLECTUEEL EIGENDOM",
+				"clauses": [
+					{
+						"number": "15.1",
+						"content": "Alle handelsmerken, logo's, site-inhoud, software en spelactiva op {siteName} zijn eigendom van of in licentie gegeven door {siteName}. Ongeautoriseerd kopiëren, scrapen of herdistribueren is verboden."
+					},
+					{
+						"number": "15.2",
+						"content": "U krijgt een beperkte, herroepbare licentie om toegang te krijgen tot de service voor uitsluitend persoonlijk vermaak."
+					}
+				]
+			},
+			"liability": {
+				"number": "16",
+				"title": "BEPERKING VAN AANSPRAKELIJKHEID",
+				"clauses": [
+					{
+						"number": "16.1",
+						"content": "Voor zover toegestaan door de wet, is {siteName} niet aansprakelijk voor indirecte, speciale, gevolg- of incidentele verliezen, inclusief gederfde winst of opportunitykosten."
+					},
+					{
+						"number": "16.2",
+						"content": "Onze totale aansprakelijkheid voor enige claim met betrekking tot deze voorwaarden zal niet hoger zijn dan de waarde van uw laatste storting of een bedrag gespecificeerd door de toepasselijke wetgeving."
+					},
+					{
+						"number": "16.3",
+						"content": "Niets in deze voorwaarden beperkt de aansprakelijkheid voor overlijden of persoonlijk letsel veroorzaakt door nalatigheid waar de toepasselijke wetgeving een dergelijke beperking verbiedt."
+					}
+				]
+			},
+			"disputes": {
+				"number": "17",
+				"title": "GESCHILLENBESLECHTING & TOEPASSELIJK RECHT",
+				"clauses": [
+					{
+						"number": "17.1",
+						"content": "In geval van een geschil, neem contact op met {siteName}. We streven ernaar klachten snel op te lossen; escaleer indien nodig naar het management."
+					}
+				]
+			},
+			"amendments": {
+				"number": "18",
+				"title": "WIJZIGINGEN",
+				"clauses": [
+					{
+						"number": "18.1",
+						"content": "{siteName} kan deze voorwaarden op elk moment wijzigen. Bijgewerkte voorwaarden worden op de website geplaatst. Voortgezet gebruik houdt acceptatie in."
+					}
+				]
+			},
+			"miscellaneous": {
+				"number": "19",
+				"title": "DIVERSEN",
+				"clauses": [
+					{
+						"number": "19.1",
+						"content": "Deze voorwaarden vormen de volledige overeenkomst tussen u en {siteName} met betrekking tot de service."
+					},
+					{
+						"number": "19.2",
+						"content": "Als een clausule onafdwingbaar wordt bevonden, zal deze worden gewijzigd tot de minimaal noodzakelijke omvang en blijven de overige bepalingen van kracht."
+					},
+					{
+						"number": "19.3",
+						"content": "U mag uw rechten onder deze voorwaarden niet overdragen. {siteName} mag rechten en verplichtingen overdragen of uitbesteden."
+					}
+				]
+			},
+			"contact": {
+				"number": "20",
+				"title": "CONTACT",
+				"content": "Voor ondersteuning, klachten of juridische mededelingen:",
+				"link": "🌐 https://{siteDomain}"
 			}
 		}
 	}

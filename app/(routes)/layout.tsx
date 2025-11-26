@@ -18,7 +18,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { PageHeader } from "@/components/common/header/header";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
-import { SetNicknameModal } from "@/components/auth/set-nickname-modal";
+import { SetNicknameModal } from "@/components/features/auth/set-nickname-modal";
 import { useAppStore } from "@/store/store";
 import {
 	arbitrum,

@@ -1291,6 +1291,89 @@
 			"uploadFailed": "Échec de la lecture du fichier de police"
 		}
 	},
+	"contact": {
+		"title": "Contactez-nous",
+		"subtitle": "Vous avez des questions ou besoin d'aide ? Notre équipe de support dédiée est là pour vous aider 24 heures sur 24.",
+		"methods": {
+			"liveChat": {
+				"title": "Chat en direct",
+				"description": "Obtenez une aide instantanée de notre équipe de support via le chat en direct.",
+				"availability": "Disponible 24/7"
+			},
+			"email": {
+				"title": "Support par e-mail",
+				"description": "Envoyez-nous un e-mail et nous vous répondrons dans les 24 heures.",
+				"availability": "Réponse sous 24h"
+			},
+			"support": {
+				"title": "Centre d'aide",
+				"description": "Consultez notre base de connaissances complète pour des réponses rapides.",
+				"availability": "Libre-service disponible"
+			}
+		},
+		"form": {
+			"title": "Envoyez-nous un message",
+			"name": "Nom complet",
+			"namePlaceholder": "Entrez votre nom complet",
+			"email": "Adresse e-mail",
+			"emailPlaceholder": "Entrez votre adresse e-mail",
+			"subject": "Sujet",
+			"subjectPlaceholder": "Quel est l'objet de votre demande ?",
+			"message": "Message",
+			"messagePlaceholder": "Veuillez décrire votre demande en détail...",
+			"submit": "Envoyer le message",
+			"sending": "Envoi en cours...",
+			"errors": {
+				"nameRequired": "Veuillez entrer votre nom",
+				"emailRequired": "Veuillez entrer votre e-mail",
+				"emailInvalid": "Veuillez entrer une adresse e-mail valide",
+				"subjectRequired": "Veuillez entrer un sujet",
+				"messageRequired": "Veuillez entrer votre message",
+				"messageTooShort": "Le message doit contenir au moins 10 caractères"
+			}
+		},
+		"responseTime": {
+			"title": "Délais de réponse prévus",
+			"description": "Nous nous efforçons de répondre à toutes les demandes le plus rapidement possible.",
+			"liveChat": {
+				"title": "Chat en direct",
+				"time": "Moins de 2 minutes"
+			},
+			"email": {
+				"title": "E-mail",
+				"time": "Dans les 24 heures"
+			},
+			"priority": {
+				"title": "Support VIP",
+				"time": "Traitement prioritaire"
+			}
+		},
+		"faq": {
+			"title": "Foire aux questions",
+			"items": [
+				{
+					"question": "Comment réinitialiser mon mot de passe ?",
+					"answer": "Vous pouvez réinitialiser votre mot de passe en cliquant sur le lien 'Mot de passe oublié' sur la page de connexion. Entrez votre adresse e-mail enregistrée et suivez les instructions envoyées dans votre boîte de réception."
+				},
+				{
+					"question": "Combien de temps prennent les retraits pour être traités ?",
+					"answer": "La plupart des retraits de cryptomonnaies sont traités instantanément. Dans certains cas, une vérification manuelle peut être nécessaire, ce qui peut prendre jusqu'à 24 heures."
+				},
+				{
+					"question": "Quelles cryptomonnaies acceptez-vous ?",
+					"answer": "Nous acceptons les principales cryptomonnaies, notamment le Bitcoin (BTC), l'Ethereum (ETH), l'USDT, l'USDC et plusieurs autres jetons populaires sur plusieurs réseaux blockchain."
+				},
+				{
+					"question": "Comment puis-je vérifier mon compte ?",
+					"answer": "La vérification du compte peut être effectuée via les paramètres de votre profil. Vous devrez peut-être fournir des documents d'identité en fonction de votre niveau de compte et de vos limites de retrait."
+				},
+				{
+					"question": "Mes informations personnelles sont-elles sécurisées ?",
+					"answer": "Oui, nous utilisons un cryptage et des mesures de sécurité conformes aux normes de l'industrie pour protéger toutes les informations personnelles et financières. Notre plateforme est soumise à des audits de sécurité réguliers."
+				}
+			]
+		}
+	},
 	"about": {
 		"title": "🎮 À propos de {siteName}",
 		"subtitle": "Chez {siteName}, le jeu n'est pas seulement quelque chose pour passer le temps – c'est une question d'excitation réelle. Ce moment où vous réalisez un gros gain, ou lorsque tout se passe bien, c'est ce qui nous motive.",

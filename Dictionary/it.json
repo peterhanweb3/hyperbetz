@@ -1291,6 +1291,89 @@
 			"uploadFailed": "Impossibile leggere il file carattere"
 		}
 	},
+	"contact": {
+		"title": "Contattaci",
+		"subtitle": "Hai domande o hai bisogno di assistenza? Il nostro team di supporto dedicato è qui per aiutarti 24 ore su 24.",
+		"methods": {
+			"liveChat": {
+				"title": "Chat dal vivo",
+				"description": "Ottieni aiuto immediato dal nostro team di supporto tramite la chat dal vivo.",
+				"availability": "Disponibile 24/7"
+			},
+			"email": {
+				"title": "Supporto via e-mail",
+				"description": "Inviaci un'e-mail e ti risponderemo entro 24 ore.",
+				"availability": "Risposta entro 24 ore"
+			},
+			"support": {
+				"title": "Centro assistenza",
+				"description": "Sfoglia la nostra base di conoscenza completa per risposte rapide.",
+				"availability": "Servizio self-service disponibile"
+			}
+		},
+		"form": {
+			"title": "Inviaci un messaggio",
+			"name": "Nome e cognome",
+			"namePlaceholder": "Inserisci il tuo nome e cognome",
+			"email": "Indirizzo e-mail",
+			"emailPlaceholder": "Inserisci il tuo indirizzo e-mail",
+			"subject": "Oggetto",
+			"subjectPlaceholder": "Qual è l'oggetto della tua richiesta?",
+			"message": "Messaggio",
+			"messagePlaceholder": "Descrivi la tua richiesta in dettaglio...",
+			"submit": "Invia messaggio",
+			"sending": "Invio in corso...",
+			"errors": {
+				"nameRequired": "Inserisci il tuo nome",
+				"emailRequired": "Inserisci la tua e-mail",
+				"emailInvalid": "Inserisci un indirizzo e-mail valido",
+				"subjectRequired": "Inserisci un oggetto",
+				"messageRequired": "Inserisci il tuo messaggio",
+				"messageTooShort": "Il messaggio deve contenere almeno 10 caratteri"
+			}
+		},
+		"responseTime": {
+			"title": "Tempi di risposta previsti",
+			"description": "Ci impegniamo a rispondere a tutte le richieste il più rapidamente possibile.",
+			"liveChat": {
+				"title": "Chat dal vivo",
+				"time": "Meno di 2 minuti"
+			},
+			"email": {
+				"title": "E-mail",
+				"time": "Entro 24 ore"
+			},
+			"priority": {
+				"title": "Supporto VIP",
+				"time": "Gestione prioritaria"
+			}
+		},
+		"faq": {
+			"title": "Domande frequenti",
+			"items": [
+				{
+					"question": "Come posso reimpostare la mia password?",
+					"answer": "Puoi reimpostare la password facendo clic sul link 'Password dimenticata' nella pagina di accesso. Inserisci il tuo indirizzo e-mail registrato e segui le istruzioni inviate alla tua casella di posta."
+				},
+				{
+					"question": "Quanto tempo impiegano i prelievi per essere elaborati?",
+					"answer": "La maggior parte dei prelievi di criptovaluta viene elaborata istantaneamente. In alcuni casi, potrebbe essere richiesta una verifica manuale, che può richiedere fino a 24 ore."
+				},
+				{
+					"question": "Quali criptovalute accettate?",
+					"answer": "Accettiamo le principali criptovalute tra cui Bitcoin (BTC), Ethereum (ETH), USDT, USDC e molti altri token popolari su più reti blockchain."
+				},
+				{
+					"question": "Come posso verificare il mio account?",
+					"answer": "La verifica dell'account può essere completata tramite le impostazioni del tuo profilo. Potrebbe essere necessario fornire documenti di identità a seconda del livello del tuo account e dei limiti di prelievo."
+				},
+				{
+					"question": "Le mie informazioni personali sono al sicuro?",
+					"answer": "Sì, utilizziamo la crittografia e le misure di sicurezza standard del settore per proteggere tutte le informazioni personali e finanziarie. La nostra piattaforma viene sottoposta a regolari controlli di sicurezza."
+				}
+			]
+		}
+	},
 	"about": {
 		"title": "🎮 Informazioni su {siteName}",
 		"subtitle": "Su {siteName}, il gioco non è solo un modo per riempire il tempo, ma una vera emozione. Quel momento in cui ottieni una grande vincita, o quando tutto va per il verso giusto, è ciò che ci appassiona.",

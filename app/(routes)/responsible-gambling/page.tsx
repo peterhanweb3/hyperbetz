@@ -5,7 +5,7 @@ import {
 	SectionCard,
 	ListSection,
 	ContentSection,
-} from "@/components/legal";
+} from "@/components/features/legal";
 import {
 	Shield,
 	Heart,

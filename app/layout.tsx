@@ -10,7 +10,7 @@ import { PageLoader } from "@/components/common/page-loader";
 import {
 	OrganizationSchema,
 	WebsiteSchema,
-} from "@/components/seo/StructuredData";
+} from "@/components/features/seo/StructuredData";
 import { getServerMessages, type Locale } from "@/lib/i18n";
 // Avoid bundling public images via import to skip sharp at build time
 import "./globals.css";

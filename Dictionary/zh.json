@@ -12,37 +12,37 @@
 	"header": {
 		"toggleSidebar": "切换侧边栏",
 		"searchPlaceholder": "搜索游戏、提供商...",
-		"liveChat": "在线聊天",
+		"liveChat": "在线客服",
 		"player": "玩家",
-		"vip": "贵宾",
-		"profile": "个人资料",
+		"vip": "VIP",
+		"profile": "个人中心",
 		"statistics": "统计数据",
 		"wallet": "存款/取款",
-		"cashier": "出纳",
-		"winLoss": "盈亏",
-		"affiliate": "联盟",
-		"logout": "登出",
+		"cashier": "收银台",
+		"winLoss": "输/赢",
+		"affiliate": "推荐奖金",
+		"logout": "退出登录",
 		"balance": "余额",
-		"turnoverBonus": "营业额奖金"
+		"turnoverBonus": "流水奖金"
 	},
 	"navigation": {
-		"home": "首页",
+		"home": "主页",
 		"games": "游戏",
-		"profile": "个人资料",
+		"profile": "个人中心",
 		"wallet": "钱包",
 		"settings": "设置",
-		"promotions": "促销活动",
-		"affiliate": "联盟",
+		"promotions": "优惠活动",
+		"affiliate": "推荐奖金",
+		"bonus": "流水奖金",
 		"providers": "提供商",
 		"lobby": "大厅",
-		"bonus": "营业额奖励",
-		"about": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 11 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+		"about": "关于我们"
 	},
 	"profile": {
 		"language": "语言",
-		"welcome": "欢迎，{name}！",
-		"settingUp": "正在设置中",
-		"profileBtn": "查看个人资料",
+		"welcome": "欢迎, {name}!",
+		"settingUp": "正在设置",
+		"profileBtn": "查看个人中心",
 		"currentBalance": "当前余额",
 		"availableFunds": "可用资金",
 		"totalDeposits": "总存款",
@@ -51,11 +51,11 @@
 		"copySuccess": "钱包地址已复制到剪贴板！",
 		"copyFailed": "复制钱包地址失败",
 		"notConnected": "未连接",
-		"myProfile": "我的个人资料",
+		"myProfile": "我的个人中心",
 		"history": {
 			"title": "历史记录"
 		},
-		"logout": "登出",
+		"logout": "退出登录",
 		"pendingRegistration": "待注册",
 		"noEmailProvided": "未提供电子邮件",
 		"balanceOverview": "余额概览",
@@ -66,9 +66,9 @@
 		"addPhoneVerification": "添加电话验证",
 		"firstDeposit": "首次存款",
 		"makeFirstDeposit": "进行您的首次存款",
-		"placeBetOrTrade": "下注/进行交易",
+		"placeBetOrTrade": "下注 / 进行交易",
 		"startFirstGame": "开始您的第一场游戏",
-		"recentActivity": "近期活动",
+		"recentActivity": "最近活动",
 		"transactionHistory": "交易历史",
 		"activityGameWinDiceRoll": "游戏胜利 - 掷骰子",
 		"activityGameLossBlackjack": "游戏失败 - 二十一点",
@@ -76,18 +76,18 @@
 		"oneDayAgo": "1天前",
 		"twoDaysAgo": "2天前",
 		"deposit": "存款",
-		"loggedOutTitle": "哎呀！您已登出",
-		"loggedOutSubtitle": "请登录以查看您的个人资料",
-		"goHome": "返回首页",
+		"loggedOutTitle": "哎呀！您已退出登录",
+		"loggedOutSubtitle": "请登录以查看您的个人中心",
+		"goHome": "返回主页",
 		"withdrawal": "取款",
 		"transactions": {
 			"title": "交易历史",
-			"trackDepositsWithdrawals": "追踪您的存款和取款",
+			"trackDepositsWithdrawals": "跟踪您的存款和取款",
 			"filters": "筛选",
 			"refresh": "刷新",
 			"advancedFilters": "高级筛选",
-			"searchTransactionComingSoon": "搜索交易（即将推出）",
-			"searchPlaceholderDisabled": "搜索功能将在API层面实现...",
+			"searchTransactionComingSoon": "交易搜索（即将推出）",
+			"searchPlaceholderDisabled": "搜索功能将在API级别实现...",
 			"dateRange": "日期范围",
 			"selectDateRange": "选择日期范围",
 			"today": "今天",
@@ -97,12 +97,12 @@
 			"thisMonth": "本月",
 			"lastMonth": "上个月",
 			"customRange": "自定义范围",
-			"fromDate": "从日期",
-			"toDate": "至日期",
+			"fromDate": "起始日期",
+			"toDate": "结束日期",
 			"transactionStatus": "交易状态",
 			"allStatuses": "所有状态",
 			"success": "成功",
-			"pending": "待处理",
+			"pending": "处理中",
 			"rejected": "已拒绝",
 			"clearAll": "全部清除",
 			"cancel": "取消",
@@ -111,27 +111,27 @@
 			"statusLabel": "状态",
 			"dateLabel": "日期",
 			"statsTotalTransactions": "共 {total} 笔交易",
-			"pageOf": "第 {current} 页 / 共 {total} 页",
+			"pageOf": "第 {current} 页，共 {total} 页",
 			"live": "直播",
 			"tabs": {
 				"all": "全部",
 				"deposits": "存款",
 				"withdrawals": "取款"
 			},
-			"errorLoadingTransactions": "加载交易出错",
+			"errorLoadingTransactions": "加载交易时出错",
 			"tryAgain": "重试",
-			"noTransactionsFound": "未找到交易记录",
-			"noTransactionsAvailableSelectedPeriod": "选定时期内无可用交易。",
-			"noDepositsFoundSelectedPeriod": "选定时期内未找到存款记录。",
-			"noWithdrawalsFoundSelectedPeriod": "选定时期内未找到取款记录。",
+			"noTransactionsFound": "未找到任何交易",
+			"noTransactionsAvailableSelectedPeriod": "在选定时间段内没有可用的交易。",
+			"noDepositsFoundSelectedPeriod": "在选定时间段内未找到任何存款。",
+			"noWithdrawalsFoundSelectedPeriod": "在选定时间段内未找到任何取款。",
 			"show": "显示",
 			"ofTransactions": "共 {count} 笔交易",
-			"showingRangeOfTotal": "显示 {from}-{to} / 共 {total}",
+			"showingRangeOfTotal": "显示第 {from}-{to} 条，共 {total} 条",
 			"pageShort": "第 {current}/{total} 页"
 		},
 		"betHistory": {
 			"title": "投注历史",
-			"trackBetsResults": "追踪您的游戏投注和结果",
+			"trackBetsResults": "跟踪您的游戏投注和结果",
 			"filters": "筛选",
 			"refresh": "刷新",
 			"advancedFilters": "高级筛选",
@@ -144,8 +144,8 @@
 			"thisMonth": "本月",
 			"lastMonth": "上个月",
 			"customRange": "自定义范围",
-			"fromDate": "从日期",
-			"toDate": "至日期",
+			"fromDate": "起始日期",
+			"toDate": "结束日期",
 			"provider": "提供商",
 			"allProviders": "所有提供商",
 			"status": "状态",
@@ -155,7 +155,7 @@
 			"lose": "输",
 			"draw": "平局",
 			"void": "作废",
-			"bonusWin": "奖金赢取",
+			"bonusWin": "奖金赢",
 			"clearAll": "全部清除",
 			"cancel": "取消",
 			"applyFilters": "应用筛选",
@@ -165,18 +165,18 @@
 			"dateLabel": "日期",
 			"totalBets": "总投注数",
 			"totalProfitLoss": "总盈亏",
-			"pageOf": "第 {current} 页 / 共 {total} 页",
+			"pageOf": "第 {current} 页，共 {total} 页",
 			"live": "直播",
-			"errorLoadingBets": "加载投注历史出错",
+			"errorLoadingBets": "加载投注历史时出错",
 			"failedToLoadBetHistory": "加载投注历史失败。请重试。",
 			"tryAgain": "重试",
-			"noBetsFound": "未找到投注记录",
-			"noBetsFoundSelectedPeriod": "在选定的时期和筛选条件下未找到投注历史。",
+			"noBetsFound": "未找到任何投注",
+			"noBetsFoundSelectedPeriod": "在选定时间段和筛选条件下未找到任何投注历史。",
 			"show": "显示",
-			"ofBets": "共 {count} 条投注",
-			"showingRangeOfTotal": "显示 {from}-{to} / 共 {total}",
-			"totalBet": "总投注",
-			"totalWin": "总赢取",
+			"ofBets": "共 {count} 笔投注",
+			"showingRangeOfTotal": "显示第 {from}-{to} 条，共 {total} 条",
+			"totalBet": "总投注额",
+			"totalWin": "总赢额",
 			"net": "净额",
 			"tableHeaders": {
 				"date": "日期",
@@ -194,8 +194,8 @@
 				"netResult": "净结果",
 				"betId": "投注ID"
 			},
-			"errorLoading": "加载出错",
-			"noBetsFoundDescription": "开始玩游戏以在此处查看您的投注历史。",
+			"errorLoading": "加载错误",
+			"noBetsFoundDescription": "开始玩游戏，您的投注历史将在此处显示。",
 			"betHistory": "投注历史",
 			"hideAmounts": "隐藏金额",
 			"showAmounts": "显示金额",
@@ -213,15 +213,15 @@
 			"totalWon": "总赢额",
 			"netProfit": "净利润",
 			"winRate": "胜率",
-			"showingResults": "显示 {start}-{end} / 共 {total} 条结果",
-			"firstPage": "首页",
+			"showingResults": "显示第 {start}-{end} 条，共 {total} 条结果",
+			"firstPage": "第一页",
 			"previousPage": "上一页",
 			"nextPage": "下一页",
-			"lastPage": "末页"
+			"lastPage": "最后一页"
 		}
 	},
 	"chat": {
-		"title": "在线聊天",
+		"title": "在线客服",
 		"placeholder": "输入您的消息...",
 		"send": "发送",
 		"input": {
@@ -230,14 +230,14 @@
 		"reply": {
 			"replyingTo": "正在回复 {username}",
 			"types": {
-				"win": "赢得 {amount} {currency}",
-				"gif": "GIF 消息",
+				"win": "赢了 {amount} {currency}",
+				"gif": "GIF消息",
 				"image": "图片",
 				"default": "消息"
 			},
 			"preview": {
-				"winIn": "在 {game} 中赢得 {amount} {currency}",
-				"gifAlt": "GIF 预览",
+				"winIn": "在 {game} 中赢了 {amount} {currency}",
+				"gifAlt": "GIF预览",
 				"imageAlt": "图片预览",
 				"emoji": "表情消息",
 				"rain": "红包雨: {amount} {currency}",
@@ -285,7 +285,7 @@
 			"noUsersMatching": "未找到匹配的用户",
 			"startTyping": "开始输入以搜索",
 			"typeAt": "输入",
-			"toSeeSuggestions": "查看建议 🎰",
+			"toSeeSuggestions": "以查看建议 🎰",
 			"errors": {
 				"emojisLoad": "加载表情失败",
 				"emojisSearch": "搜索表情失败",
@@ -293,25 +293,25 @@
 			}
 		},
 		"messages": {
-			"emptyTitle": "暂无消息...",
+			"emptyTitle": "还没有消息...",
 			"emptySubtitle": "开始对话，赢取大奖！🎰",
-			"loadingHistory": "加载聊天历史...",
-			"loadingHistorySubtitle": "获取最新消息 📜",
+			"loadingHistory": "正在加载聊天历史...",
+			"loadingHistorySubtitle": "正在获取最近的消息 📜",
 			"historyError": "加载聊天历史失败"
 		},
 		"message": {
 			"you": "您",
 			"winTitle": "在“{game}”中大获全胜！🎰",
-			"gifAlt": "动图",
+			"gifAlt": "GIF",
 			"imageAlt": "已上传的图片",
-			"rainTitle": "天降财运！🌧️💰",
+			"rainTitle": "天降财神！🌧️💰",
 			"recipients": "→ {count} 位接收者",
-			"eachTo": "每人 {amount} {currency} 发给: {list}",
+			"eachTo": "每人 {amount} {currency}，发给: {list}",
 			"replyCount": "{count} 条回复",
-			"loadingHistory": "加载聊天历史..."
+			"loadingHistory": "正在加载聊天历史..."
 		},
 		"system": {
-			"slashDisabled": "斜杠命令暂时禁用。请使用普通消息。",
+			"slashDisabled": "斜杠命令暂时禁用。请使用常规消息。",
 			"rateLimit": "超出频率限制。请等待 {seconds} 秒后再发送另一条消息。",
 			"cannotTagSelf": "您不能在消息中@自己。",
 			"processingImage": "正在处理图片...",
@@ -325,11 +325,11 @@
 		"deposit": "存款",
 		"withdraw": "取款",
 		"playOnTelegram": "在Telegram上玩",
-		"dailyBonus": "每日奖励",
+		"dailyBonus": "每日奖金",
 		"navigation": "导航",
 		"games": "游戏",
 		"providers": "提供商",
-		"trendingNow": "热门趋势",
+		"trendingNow": "热门推荐",
 		"allProviders": "所有提供商",
 		"allTopProviders": "所有顶级提供商",
 		"hotBadge": "热门"
@@ -339,8 +339,8 @@
 		"subtitle": "按名称、提供商或类别查找",
 		"placeholder": "搜索游戏、提供商、类别...",
 		"clear": "清除",
-		"recent": "最近:",
-		"popular": "热门:",
+		"recent": "最近搜索:",
+		"popular": "热门搜索:",
 		"favoritesTry": "您可以尝试 — 您的收藏",
 		"hotPicks": "热门精选",
 		"resultsCount": "找到 {count} 个游戏",
@@ -358,12 +358,12 @@
 			"providers": "提供商"
 		},
 		"results": {
-			"found": "找到 {games} 个游戏, {categories} 个类别, 和 {providers} 个提供商"
+			"found": "找到 {games} 个游戏、{categories} 个类别和 {providers} 个提供商"
 		},
 		"gameTypes": {
 			"blackjack": "二十一点",
 			"roulette": "轮盘",
-			"crash": "碰撞游戏"
+			"crash": "碰撞"
 		}
 	},
 	"query": {
@@ -407,55 +407,55 @@
 	},
 	"lobby": {
 		"yourFavorites": "您的收藏",
-		"featuredCasinoGames": "特色赌场游戏",
+		"featuredCasinoGames": "精选赌场游戏",
 		"hotPicks": "热门精选",
 		"slots": "老虎机",
 		"sports": "体育",
 		"realTimeScoreboard": "实时记分板"
 	},
 	"affiliate": {
-		"title": "联盟计划",
-		"loginPromptTitle": "推荐计划",
+		"title": "推荐奖金计划",
+		"loginPromptTitle": "推荐奖金计划",
 		"loginPromptSubtitle": "登录以查看您的推荐统计、奖金并领取奖励。",
-		"goHome": "返回首页",
+		"goHome": "返回主页",
 		"tabs": {
 			"dashboard": "仪表盘",
-			"rates": "佣金率",
+			"rates": "佣金费率",
 			"calculator": "计算器"
 		},
 		"refresh": "刷新",
 		"refreshing": "刷新中...",
 		"refreshAllSuccess": "所有数据已成功刷新！",
-		"refreshPartial": "部分刷新: {success}/{total} 部分已更新",
-		"refreshFailed": "刷新数据失败。请重试。",
+		"refreshPartial": "部分刷新：{success}/{total} 个部分已更新",
+		"refreshFailed": "数据刷新失败。请重试。",
 		"dashboard": {
-			"title": "联盟仪表盘",
-			"subtitle": "追踪您的推荐、收益和佣金表现",
-			"performanceOverview": "表现概览",
+			"title": "代理仪表盘",
+			"subtitle": "跟踪您的推荐、收益和佣金表现",
+			"performanceOverview": "业绩概览",
 			"referralManagement": "推荐管理",
 			"termsAndCommission": "条款与佣金结构",
 			"unclaimedEarnings": "未领取收益",
 			"claim": "领取",
 			"claiming": "领取中...",
 			"totalIncome": "总收入",
-			"totalReferrals": "总推荐数",
+			"claimButtonTitle": "领取奖金",
+			"totalReferrals": "总推荐人数",
 			"usersUnit": "用户",
 			"yourReferralLinks": "您的推荐链接",
 			"referralLinksSubtitle": "分享这些链接以推荐新用户并赚取佣金",
 			"completeReferralLink": "完整推荐链接",
-			"fullReferralPlaceholder": "完整推荐链接将显示在此处",
-			"fullReferralHelp": "用户可点击此直接链接使用您的推荐码进行注册",
+			"fullReferralPlaceholder": "完整推荐链接将在此处显示",
+			"fullReferralHelp": "用户可直接点击此链接，使用您的推荐码进行注册",
 			"referralCodeOnly": "仅推荐码",
 			"yourReferralId": "您的推荐ID",
-			"referralIdHelp": "分享此代码供用户在注册时手动输入",
+			"referralIdHelp": "分享此代码，用户可在注册时手动输入",
 			"copyFullSuccess": "完整推荐链接已复制到剪贴板！",
-			"copyIdSuccess": "推荐ID已复制到剪贴板！",
-			"claimButtonTitle": "领取奖励"
+			"copyIdSuccess": "推荐ID已复制到剪贴板！"
 		},
 		"referrals": {
 			"title": "我的推荐",
-			"subtitle": "追踪和管理通过您的联盟链接推荐的所有用户",
-			"totalReferrals": "总推荐数",
+			"subtitle": "跟踪和管理通过您的代理链接推荐的所有用户",
+			"totalReferrals": "总推荐人数",
 			"monitorHelp": "监控您推荐用户的活动、存款和游戏模式",
 			"sort": {
 				"placeholder": "排序方式...",
@@ -474,25 +474,25 @@
 				"tier": "等级"
 			},
 			"empty": {
-				"title": "未找到推荐用户",
-				"subtitle": "开始推荐用户以在此处看到他们。"
+				"title": "未找到任何推荐",
+				"subtitle": "开始推荐用户，他们将在此处显示。"
 			},
 			"pagination": {
-				"showing": "显示 {from} 到 {to} / 共 {total} 条结果",
+				"showing": "显示第 {from} 至 {to} 条，共 {total} 条结果",
 				"prev": "上一页",
 				"next": "下一页"
 			}
 		},
 		"rates": {
-			"title": "佣金率结构",
+			"title": "佣金费率结构",
 			"subtitle": "按等级和游戏类别划分的收益百分比",
-			"howItWorks": {
-				"title": "佣金等级如何运作",
-				"body": "您的佣金等级由您推荐用户的每日总投注额决定。等级越高，所有游戏类型的佣金率也越高。"
+			"overview": {
+				"title": "概览",
+				"body": "推荐奖金根据被推荐玩家在老虎机、真人娱乐场、体育博彩和彩票中的投注流水向代理商发放奖励。佣金每24小时计算一次，收益基于不同的流水等级。"
 			},
 			"calculation": {
 				"title": "佣金如何计算",
-				"desc": "佣金每24小时根据被推荐玩家的总投注额计算。例如：",
+				"desc": "佣金每24小时根据被推荐玩家的总投注额计算。\n示例：",
 				"exampleTitle": "等级 {tier}:",
 				"wagerIn": "在 {gameType} 中投注 {amount}"
 			},
@@ -507,33 +507,29 @@
 				"dailyWager": "每日投注量"
 			},
 			"claim": {
-				"title": "领取和提款",
+				"title": "领取和提现",
 				"points": {
-					"0": "佣金一旦计算完毕即可提款。",
-					"1": "未领取的佣金没有有效期——它们会累积直到被领取。",
-					"2": "提款遵循平台的标准规则，如最低限额和处理时间。"
+					"0": "佣金一旦计算完成即可提现。",
+					"1": "未领取的佣金没有有效期——它们会一直累积直到被领取。",
+					"2": "提现遵循平台的标准规则，例如最低限额和处理时间。"
 				}
 			},
 			"system": {
-				"title": "系统时间和操作",
+				"title": "系统时间与操作",
 				"dailyTimeframeLabel": "每日时间范围:",
-				"dailyTimeframeValue": "UTC 00:00 至 UTC 23:59 (每天)。",
+				"dailyTimeframeValue": "每日 00:00 UTC 至 23:59 UTC。",
 				"claimDailyLabel": "每日领取:",
-				"claimDailyValue": "每日 UTC 14:00 可用 (您的本地时间: {local})。",
-				"note": "注意：尽管我们与不同时区的提供商合作，但所有计算均遵循UTC以确保一致性并避免混淆。"
+				"claimDailyValue": "每日 14:00 UTC 可用（您的本地时间: {local}）。",
+				"note": "注意：虽然我们与不同时区的提供商合作，但所有计算都遵循UTC以确保一致性并避免混淆。"
 			},
 			"amendments": {
 				"title": "修订",
-				"body": "我们可能随时更新这些条款。更改在发布后立即生效，继续参与意味着您接受新条款。"
+				"body": "我们可能随时更新这些条款。更改在发布后立即生效，继续参与即表示您接受新条款。"
 			},
 			"footer": {
 				"schedule": "佣金时间表:",
-				"availableDaily": "每日可用时间为",
-				"localTimeLabel": "(您的本地时间: {time})"
-			},
-			"overview": {
-				"title": "概览",
-				"body": "联盟计划根据推荐玩家在老虎机、真人娱乐场、体育博彩和彩票中的下注营业额来奖励联盟。佣金每24小时计算一次，收入基于不同营业额层级。"
+				"availableDaily": "每日可用时间",
+				"localTimeLabel": "（您的本地时间: {time}）"
 			}
 		},
 		"calculator": {
@@ -541,17 +537,191 @@
 			"subtitle": "根据您推荐用户的投注额估算您的佣金收益",
 			"interactive": {
 				"title": "互动工具:",
-				"body": "输入不同的投注额以查看所有等级的潜在收益"
+				"body": "输入不同的投注额，查看所有等级的潜在收益"
 			},
 			"potentialEarnings": "潜在收益",
-			"basedOnRate": "基于 {percentage}% 的佣金率",
+			"basedOnRate": "基于 {percentage}% 的佣金费率",
 			"tier": "等级 {level}",
 			"commissionLevel": "佣金等级 {level}",
 			"enterWager": "输入投注额 (USD)",
 			"wagerPlaceholder": "例如, 1000",
 			"calcFor": "正在计算 ${amount} 投注的收益",
 			"totalPotential": "总潜在收益:",
-			"combinedAtTier": "等级 {level}下所有游戏类型的合并收益"
+			"combinedAtTier": "在等级 {level} 下所有游戏类型的合并收益"
+		}
+	},
+	"bonus": {
+		"title": "流水奖金计划",
+		"loginPromptTitle": "流水奖金计划",
+		"loginPromptSubtitle": "登录以查看您的奖金统计并领取您的奖励。",
+		"goHome": "返回主页",
+		"tabs": {
+			"dashboard": "仪表盘",
+			"claims": "领取记录",
+			"rates": "奖金费率",
+			"calculator": "计算器"
+		},
+		"refresh": "刷新",
+		"refreshing": "刷新中...",
+		"refreshAllSuccess": "所有数据已成功刷新！",
+		"refreshPartial": "部分刷新：{success}/{total} 个部分已更新",
+		"refreshFailed": "数据刷新失败。请重试。",
+		"dashboard": {
+			"title": "奖金仪表盘",
+			"subtitle": "跟踪您的投注、奖金和奖励收益",
+			"claimButtonTitle": "领取",
+			"performanceOverview": "奖金概览",
+			"bonusRatesTitle": "奖金费率结构",
+			"totalIncome": "总奖金",
+			"pendingBonus": "待处理奖金",
+			"lastClaim": "上次领取",
+			"unclaimedEarnings": "可领取",
+			"claim": {
+				"title": "领取和提现",
+				"points": {
+					"0": "佣金一旦计算完成即可提现。",
+					"1": "未领取的佣金没有有效期——它们会一直累积直到被领取。",
+					"2": "提现遵循平台的标准规则，例如最低限额和处理时间。"
+				}
+			},
+			"claiming": "领取中...",
+			"section2": {
+				"title": "资格",
+				"content": "要参与："
+			},
+			"section3": {
+				"title": "流水等级和费率",
+				"content": "奖金根据您的每日投注额计算：",
+				"noteTitle": "注意",
+				"noteContent": "等级每天在 14:00 UTC 进行评估。您前一天的投注量决定了今天的奖金费率。费率适用于所有游戏类型：老虎机、真人娱乐场和体育。"
+			}
+		},
+		"claims": {
+			"title": "领取历史",
+			"subtitle": "跟踪您的奖金领取和投注活动",
+			"tableHeaders": {
+				"date": "投注日期",
+				"slots": "老虎机",
+				"liveCasino": "真人娱乐场",
+				"sports": "体育",
+				"total": "总计",
+				"tier": "等级",
+				"unclaimed": "未领取",
+				"token": "代币"
+			},
+			"tierPrefix": "等级",
+			"availableToClaim": "可领取",
+			"totalBonus": "总奖金",
+			"claimed": "已领取",
+			"progressPercentage": "进度",
+			"progressTitle": "您的进度",
+			"currentTier": "当前等级",
+			"nextTier": "下一等级",
+			"wagerProgress": "投注进度",
+			"totalWagered": "今日总投注额",
+			"toNextTier": "以达到下一等级",
+			"empty": {
+				"title": "尚无奖金领取记录",
+				"subtitle": "开始游戏以赚取奖金！"
+			}
+		},
+		"rates": {
+			"title": "流水等级和费率",
+			"subtitle": "按投注等级和游戏类别划分的奖金百分比",
+			"overview": {
+				"title": "概览",
+				"body": "流水奖金根据用户在老虎机、真人娱乐场、体育博彩和彩票中的投注额进行奖励。奖金每24小时计算一次，用户可以在投注后第二天领取。共有七个等级，每个等级根据投注额有不同的费率。"
+			},
+			"eligibility": {
+				"title": "资格",
+				"content": "要参与：",
+				"points": {
+					"0": "您必须拥有一个活跃账户。",
+					"1": "在老虎机、真人娱乐场、体育博彩和彩票中进行投注。",
+					"2": "满足每个等级的最低投注要求。"
+				}
+			},
+			"calculation": {
+				"title": "奖金如何计算",
+				"desc": "奖金每24小时根据您的总投注额计算。示例：",
+				"exampleTitle": "等级 {tier}:",
+				"wagerIn": "在 {gameType} 中投注 {amount}"
+			},
+			"table": {
+				"tierLevel": "等级",
+				"wagerRange": "投注范围",
+				"slots": "老虎机",
+				"liveCasino": "真人娱乐场",
+				"sports": "体育",
+				"tierPrefix": "等级",
+				"commissionLevel": "奖金等级",
+				"dailyWager": "每日投注量"
+			},
+			"claim": {
+				"title": "领取和提取奖金",
+				"points": {
+					"0": "奖金在投注后24小时即可领取。",
+					"1": "未领取的奖金将累积且不会过期。",
+					"2": "领取和提取过程可能因平台特定政策而异。"
+				}
+			},
+			"system": {
+				"title": "系统时间与操作",
+				"dailyTimeframeLabel": "每日时间范围:",
+				"dailyTimeframeValue": "每日 00:00 UTC 至 23:59 UTC。",
+				"claimDailyLabel": "每日领取:",
+				"claimDailyValue": "每日 14:00 UTC 可用（您的本地时间: {local}）。",
+				"note": "注意：虽然我们与不同时区的提供商合作，但所有计算都遵循UTC以确保一致性并避免混淆。"
+			},
+			"amendments": {
+				"title": "修订与取消资格",
+				"body": "我们可能随时更新这些条款，更改在发布后生效。如果怀疑存在系统错误、计算错误或作弊行为，我们保留根据需要调整或取消奖金和账户资格的权利，以确保公平。"
+			},
+			"footer": {
+				"schedule": "奖金时间表:",
+				"availableDaily": "每日可用时间",
+				"localTimeLabel": "（您的本地时间: {time}）"
+			}
+		},
+		"calculator": {
+			"title": "奖金计算器",
+			"subtitle": "根据您的投注额估算您的奖金收益",
+			"interactive": {
+				"title": "互动工具:",
+				"body": "输入不同的投注额，查看所有等级的潜在奖金"
+			},
+			"potentialEarnings": "潜在奖金",
+			"basedOnRate": "基于 {percentage}% 的奖金费率",
+			"tier": "等级 {level}",
+			"commissionLevel": "奖金等级 {level}",
+			"enterWager": "输入投注额 (USD)",
+			"wagerPlaceholder": "例如, 1000",
+			"calcFor": "正在计算 ${amount} 投注的奖金",
+			"totalPotential": "总潜在奖金:",
+			"combinedAtTier": "在等级 {level} 下所有游戏类型的合并奖金"
+		},
+		"claimSuccessModal": {
+			"title": "领取成功",
+			"statusCompleted": "已完成",
+			"statusOnChain": "链上",
+			"claimAmount": "领取金额",
+			"logoAlt": "{siteName} 标志",
+			"backgroundAlt": "领取成功背景",
+			"creatingMagic": "正在创造奇迹...",
+			"downloadShare": "下载并分享",
+			"spreadTheWin": "分享胜利",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "Telegram",
+			"socialReddit": "Reddit",
+			"socialMore": "更多",
+			"shareText": "我刚领取了 {amount} 奖金！加入我吧: {url}",
+			"referralLinkCopied": "推荐链接已复制！",
+			"referralLinkCopyFailed": "复制推荐链接失败",
+			"screenshotFailed": "截图失败。请重试或使用其他浏览器。",
+			"shareTextCopied": "分享文本已复制到剪贴板！",
+			"shareFailed": "分享失败。请重试。"
 		}
 	},
 	"debug": {
@@ -563,13 +733,13 @@
 		"invalidSession": "您的会话无效或提供商丢失。请重试。",
 		"failedPrefix": "进入大厅失败: {message}",
 		"launchFailedTitle": "启动失败",
-		"returnHome": "返回首页"
+		"returnHome": "返回主页"
 	},
 	"play": {
 		"connecting": "正在连接到游戏服务器...",
 		"invalidSession": "您的会话无效或已过期。请重新登录并重试。",
 		"launchFailedTitle": "启动失败",
-		"returnHome": "返回首页"
+		"returnHome": "返回主页"
 	},
 	"modalsIdle": {
 		"badgeLimitedTime": "限时优惠",
@@ -580,22 +750,21 @@
 		"featureInstantWithdrawals": "即时取款",
 		"featureNoKyc": "无需KYC",
 		"ctaClaim": "立即领取奖金！",
-		"offerExpires": "优惠到期时间:",
-		"disclaimer": "条款与条件适用。赌博涉及风险。请负责任地玩。18+",
+		"offerExpires": "优惠截止于：",
+		"disclaimer": "适用条款与条件。赌博涉及风险。请负责任地游戏。18+",
 		"closeAria": "关闭模态框",
 		"bannerAlt": "促销横幅",
 		"ctaOk": "连接钱包并开始投注",
 		"enterAmount": "输入金额",
 		"balance": "余额",
 		"max": "最大",
-		"deposit": "存款",
-		"ethereum": "以太坊"
+		"deposit": "存款"
 	},
 	"modalsSmall": {
 		"close": "关闭",
 		"firstDepositBoost": "首次存款奖金提升",
 		"bonus": "奖金",
-		"min": "分",
+		"min": "分钟",
 		"sec": "秒",
 		"deposit": "存款"
 	},
@@ -603,8 +772,8 @@
 		"email": {
 			"title": "邮箱登录",
 			"description": "我们将向您发送一个6位数的验证码",
-			"emailLabel": "电子邮件地址",
-			"emailPlaceholder": "姓名@email.com",
+			"emailLabel": "邮箱地址",
+			"emailPlaceholder": "name@email.com",
 			"cancel": "取消",
 			"sending": "发送中",
 			"continue": "继续",
@@ -615,30 +784,30 @@
 			"resendIn": "{seconds}秒后重新发送",
 			"verifying": "验证中",
 			"successTitle": "您已登录",
-			"successSubtitle": "正在设置...",
+			"successSubtitle": "正在设置…",
 			"modalAria": "邮箱验证模态框",
 			"errors": {
-				"invalidEmail": "请输入有效的电子邮件地址",
+				"invalidEmail": "请输入有效的邮箱地址",
 				"sendFailed": "发送验证码失败。",
-				"invalidCode": "请输入6位数的验证码"
+				"invalidCode": "请输入一个6位数的验证码"
 			}
 		},
 		"setNickname": {
 			"title": "设置您的昵称",
-			"subtitle": "这是一次性设置，无法更改",
-			"logoutAria": "登出",
+			"subtitle": "这是一次性设置，不可更改",
+			"logoutAria": "退出登录",
 			"inputPlaceholder": "选择您独特的昵称",
 			"referrerCheckbox": "我有推荐人ID",
 			"referrerPlaceholder": "输入推荐人ID",
-			"referrerHelp": "可选。这将您的账户与推荐人关联以获得奖励计划。",
+			"referrerHelp": "可选。这将您的账户与推荐人关联，以参与奖金计划。",
 			"status": {
 				"checking": "正在检查可用性...",
 				"available": "昵称可用！",
-				"taken": "该昵称已被占用。"
+				"taken": "此昵称已被占用。"
 			},
 			"register": "注册并开始游戏",
 			"termsTitle": "条款与条件:",
-			"termsBody": "通过使用您的钱包签署本文件和/或继续使用此Web3应用程序，即表示您接受该应用程序的使用条款。签署您对使用条款的同意并非区块链交易，不产生任何费用。",
+			"termsBody": "通过使用您的钱包签署此文件和/或继续使用此Web3应用程序，您即接受该应用程序的使用条款。签署您对使用条款的同意并非区块链交易，不产生任何费用。",
 			"errors": {
 				"verifyNicknameFailed": "无法验证昵称。请重试。",
 				"registerFailed": "注册失败: {message}"
@@ -647,41 +816,41 @@
 		"walletConnect": {
 			"loginWithEmail": "使用邮箱登录",
 			"connectWalletBtn": "连接钱包",
+			"loginWithWallet": "使用钱包登录",
 			"player": "玩家",
 			"walletConnected": "钱包已连接",
 			"emailConnected": "邮箱已连接",
 			"disconnect": "断开连接",
 			"walletAddress": "钱包地址",
-			"balance": "余额",
-			"loginWithWallet": "使用钱包登录"
+			"balance": "余额"
 		}
 	},
 	"walletProvider": {
 		"transactionModal": {
+			"title": "钱包",
 			"tabs": {
 				"deposit": "存款",
+				"tip": "打赏",
 				"withdraw": "取款",
 				"swap": "兑换",
 				"walletInfo": "钱包",
-				"tip": "小费",
-				"emailWallet": "电子邮件钱包",
+				"emailWallet": "邮箱钱包",
 				"wallet": "钱包"
 			},
 			"mobileDropdown": {
 				"emailWallet": "邮箱钱包",
 				"wallet": "钱包",
 				"deposit": "存款",
+				"tip": "打赏",
 				"withdraw": "取款",
-				"swap": "兑换",
-				"tip": "小费"
-			},
-			"title": "钱包"
+				"swap": "兑换"
+			}
 		},
 		"networkSelector": {
 			"placeholder": "选择网络",
 			"switching": "切换中...",
 			"walletNotConnected": "钱包未连接。",
-			"failedToSwitch": "切换网络失败。请从您的钱包尝试。",
+			"failedToSwitch": "切换网络失败。请从您的钱包中尝试。",
 			"altLogo": "网络标志"
 		},
 		"tokenList": {
@@ -689,7 +858,7 @@
 			"instantDeposit": "即时存款",
 			"yourWalletBalance": "您的钱包余额",
 			"searchPlaceholder": "搜索名称或粘贴地址",
-			"emptySearch": "未找到与您搜索匹配的代币。",
+			"emptySearch": "未找到与您的搜索匹配的代币。",
 			"emptyOwned": "未找到有余额的代币。",
 			"searchResults": "搜索结果",
 			"yourTokens": "您的代币",
@@ -708,18 +877,19 @@
 			"enterAmount": "输入金额",
 			"selectToken": "选择代币",
 			"max": "最大",
+			"maxButtonToolTipText": "为支付Gas费并避免交易失败，已预留 {gasReservationAmount} {selectedTokenSymbol}",
 			"balance": "余额:",
 			"calculating": "计算中...",
-			"approxUsd": "约 ${amount} 美元",
+			"approxUsd": "~ ${amount} USD",
 			"minPrefix": "最小:",
-			"ratesMayVary": "汇率可能会有变动",
+			"ratesMayVary": "汇率可能变动",
 			"emailWalletAddress": "邮箱钱包地址",
 			"walletAddress": "钱包地址",
-			"minimumIs": "最小为 {min}",
+			"minimumIs": "最小金额为 {min}",
 			"errors": {
-				"selectTokenAndAmount": "请选择代币并输入金额",
+				"selectTokenAndAmount": "请选择一个代币并输入金额",
 				"insufficientBalance": "此交易余额不足",
-				"amountTooHighGas": "考虑到燃料费，金额过高",
+				"amountTooHighGas": "考虑到Gas费，金额过高",
 				"checkForm": "请检查表单并重试",
 				"pendingDeposit": "您有待处理的存款。请等待其完成"
 			},
@@ -731,8 +901,52 @@
 			},
 			"buttons": {
 				"depositUsd": "存款 ${amount}"
+			}
+		},
+		"tipPanel": {
+			"youTip": "您打赏",
+			"resetForm": "重置表单",
+			"enterAmount": "输入金额",
+			"selectToken": "选择代币",
+			"minPrefix": "最小",
+			"balance": "余额:",
+			"max": "最大",
+			"maxButtonToolTipText": "为支付Gas费并避免交易失败，已预留 {gasReservationAmount} {selectedTokenSymbol}",
+			"approxUsd": "~ ${amount} USD",
+			"tipPanelWarningText": "打赏是自愿的，不可退款。",
+			"emailWalletAddress": "邮箱钱包地址",
+			"errors": {
+				"selectTokenAndAmount": "请选择一个代币并输入金额。",
+				"insufficientBalance": "余额不足。",
+				"belowMinimum": "金额必须至少为 {min}。",
+				"missingWallet": "无法获取打赏钱包。请稍后再试。",
+				"checkForm": "请验证您的打赏详情。"
 			},
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} 保留用于支付汽油费并避免交易失败"
+			"status": {
+				"processing": "发送打赏中...",
+				"awaitingApproval": "等待批准中...",
+				"calculatingRate": "计算中...",
+				"insufficientBalance": "余额不足",
+				"fetchingWallet": "准备打赏钱包中..."
+			},
+			"prompts": {
+				"selectToken": "选择代币",
+				"enterAmount": "输入金额"
+			},
+			"buttons": {
+				"tipUsd": "打赏 ${amount}",
+				"tip": "打赏"
+			},
+			"minimumIs": "最小打赏金额为 {min}"
+		},
+		"tipPending": {
+			"submittedTitle": "打赏处理中",
+			"submittedDesc": "您的打赏正在链上确认。",
+			"confirmedTitle": "打赏已确认！",
+			"confirmedDesc": "您的打赏已成功送达。",
+			"viewOnExplorer": "在浏览器中查看",
+			"newTipPending": "发送另一笔打赏",
+			"newTipConfirmed": "发送另一笔打赏"
 		},
 		"swapPanel": {
 			"selectTokens": "选择代币",
@@ -749,28 +963,29 @@
 			"set": "设置",
 			"currentSlippage": "当前滑点",
 			"swapSuccessful": "兑换成功！",
-			"transactionConfirmed": "您的交易已确认",
+			"transactionConfirmed": "您的交易已提交",
 			"hash": "哈希",
 			"newSwap": "新的兑换",
 			"youPay": "您支付",
 			"max": "最大",
+			"maxButtonToolTipText": "为支付Gas费并避免交易失败，已预留 {gasReservationAmount} {selectedTokenSymbol}",
 			"low": "低",
 			"amountPlaceholder": "0",
 			"selectToken": "选择代币",
 			"youReceive": "您收到",
 			"gettingBestQuote": "正在获取最佳报价...",
-			"gas": "燃料费",
+			"gas": "Gas",
 			"minimumReceived": "最少收到",
 			"slippageToleranceLabel": "滑点容差",
-			"gasFee": "燃料费",
-			"priceWarning": "价格实时更新，可能会在您的交易确认前发生变化",
+			"gasFee": "Gas费",
+			"priceWarning": "价格实时更新，可能在您的交易确认前发生变化",
 			"emailWalletAddress": "邮箱钱包地址",
 			"walletAddress": "钱包地址",
-			"minimumIs": "最小为 {min}",
+			"minimumIs": "最小金额为 {min}",
 			"errors": {
-				"selectTokenAndAmount": "请选择代币并输入金额",
+				"selectTokenAndAmount": "请选择一个代币并输入金额",
 				"insufficientBalance": "此交易余额不足",
-				"amountTooHighGas": "考虑到燃料费，金额过高",
+				"amountTooHighGas": "考虑到Gas费，金额过高",
 				"checkForm": "请检查表单并重试",
 				"pendingDeposit": "您有待处理的存款。请等待其完成"
 			},
@@ -782,24 +997,23 @@
 			},
 			"buttons": {
 				"depositUsd": "存款 ${amount}"
-			},
-			"maxButtonToolTipText": "预留{gasReservationAmount} {selectedTokenSymbol}以支付燃气费，避免交易失败"
+			}
 		},
 		"depositPending": {
 			"confirmedTitle": "存款已确认！",
 			"submittedTitle": "交易已提交",
+			"failedTitle": "交易失败",
 			"confirmedDesc": "您的余额已更新。",
 			"submittedDesc": "等待区块链确认。这可能需要几分钟。",
-			"viewOnExplorer": "在浏览器上查看",
+			"failedDesc": "您的交易失败。请重试。",
+			"viewOnExplorer": "在浏览器中查看",
 			"newDepositConfirmed": "进行另一笔存款",
 			"newDepositPending": "开始新的存款",
-			"failedTitle": "交易失败",
-			"failedDesc": "您的交易失败。",
-			"newDepositFailed": "再试一次"
+			"newDepositFailed": "重试"
 		},
 		"withdrawPanel": {
 			"resetForm": "重置表单",
-			"networkNotSupported": "仅支持在Arbitrum、Polygon、Optimism和BNB上提款",
+			"networkNotSupported": "仅在Arbitrum、Polygon、Optimism和BNB上支持取款",
 			"youWithdraw": "您取款",
 			"loading": "加载中...",
 			"amount": "金额",
@@ -807,15 +1021,16 @@
 			"balance": "余额:",
 			"available": "可用:",
 			"insufficientBalance": "余额不足",
-			"minimumIs": "最小为 {min}",
+			"minimumIs": "最小金额为 {min}",
 			"minLabel": "最小:",
+			"calculating": "计算中",
 			"emailWalletAddress": "邮箱钱包地址",
 			"walletAddress": "钱包地址",
 			"errors": {
 				"pendingWithdrawal": "您已有待处理的取款",
 				"invalidAddress": "无效地址",
 				"enterAmount": "输入金额",
-				"networkNotSupported": "不支持的网络"
+				"networkNotSupported": "网络不支持"
 			},
 			"status": {
 				"processing": "处理中...",
@@ -825,85 +1040,39 @@
 			"buttons": {
 				"withdraw": "取款 {amount} {symbol}",
 				"minimum": "最小 {amount} {symbol}"
-			},
-			"calculating": "计算"
+			}
 		},
 		"withdrawSuccess": {
 			"title": "取款成功！",
-			"successMessage": "🎉 刚从 {siteName} 提取了 {withdrawAmount} {tokenSymbol}！🚀 在 {shareUrl} 加入胜利的行列",
+			"successMessage": "🎉 刚从 {siteName} 提取了 {withdrawAmount} {tokenSymbol}！🚀 在 {shareUrl} 加入连胜行列",
 			"withdrawnAmount": "已取款金额",
 			"shareText": "分享",
-			"subText": "🚀 加入胜利的行列！🚀",
+			"subText": "🚀 加入连胜行列！🚀",
 			"generating": "生成中...",
-			"screenshot": "截屏",
+			"screenshot": "截图",
 			"download": "下载图片",
 			"close": "关闭",
 			"copiedToClipboard": "分享链接已成功复制",
-			"entryPrice": "提款金额",
+			"userName": "{siteName} 玩家",
+			"status": "已完成",
+			"entryPrice": "取款金额",
 			"lastPrice": "代币符号",
 			"referralCode": "推荐码",
 			"screenshotFailed": "截图失败。请重试或使用其他浏览器。",
-			"shareFailed": "分享失败。请再试一次。",
-			"status": "已完成",
-			"userName": "{siteName} 玩家"
+			"shareFailed": "分享失败。请重试。"
 		},
 		"withdrawPending": {
 			"confirmedTitle": "取款已确认！",
 			"submittedTitle": "交易已提交",
 			"confirmedDesc": "您的资金正在路上。",
 			"submittedDesc": "等待区块链确认...",
-			"viewOnExplorer": "在浏览器上查看",
+			"viewOnExplorer": "在浏览器中查看",
 			"manualApproval": "此取款需要手动批准。",
-			"newWithdrawalConfirmed": "进行另一笔取款",
+			"newWithdrawalConfirmed": "进行另一次取款",
 			"newWithdrawalPending": "开始新的取款"
 		},
 		"withdrawSummary": {
 			"youWillReceive": "您将收到"
-		},
-		"tipPanel": {
-			"approxUsd": "~  USD",
-			"balance": "余额：",
-			"buttons": {
-				"tip": "小费",
-				"tipUsd": "小费"
-			},
-			"emailWalletAddress": "电子邮件钱包地址",
-			"enterAmount": "输入金额",
-			"errors": {
-				"belowMinimum": "金额必须至少为 {min}。",
-				"checkForm": "请核实您的小费详情。",
-				"insufficientBalance": "余额不足。",
-				"missingWallet": "无法获取小费钱包。请稍后再试。",
-				"selectTokenAndAmount": "请选择一个代币并输入金额。"
-			},
-			"max": "最大",
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol} 被保留用于支付燃气费用及避免交易失败",
-			"minimumIs": "最低小费为{min}",
-			"minPrefix": "最小值",
-			"prompts": {
-				"enterAmount": "输入金额",
-				"selectToken": "选择代币"
-			},
-			"resetForm": "重置表单",
-			"selectToken": "选择代币",
-			"status": {
-				"awaitingApproval": "等待批准中...",
-				"calculatingRate": "正在计算...",
-				"fetchingWallet": "正在准备小费钱包...",
-				"insufficientBalance": "余额不足",
-				"processing": "正在发送小费..."
-			},
-			"tipPanelWarningText": "小费是自愿的且不可退还。",
-			"youTip": "您的小费"
-		},
-		"tipPending": {
-			"confirmedDesc": "您的小费已成功送达。",
-			"confirmedTitle": "小费已确认!",
-			"newTipConfirmed": "发送另一个提示",
-			"newTipPending": "发送另一个小费",
-			"submittedDesc": "您的小费正在链上确认。",
-			"submittedTitle": "小费待处理",
-			"viewOnExplorer": "在浏览器中查看"
 		}
 	},
 	"navUser": {
@@ -911,15 +1080,15 @@
 		"account": "账户",
 		"billing": "账单",
 		"notifications": "通知",
-		"logout": "登出"
+		"logout": "退出登录"
 	},
 	"games": {
 		"pageTitle": "所有游戏",
 		"playNow": "立即游戏",
 		"byProvider": "由 {name} 提供",
-		"count": "{count} 款游戏",
+		"count": "{count} 个游戏",
 		"noResults": "未找到符合您条件的游戏。",
-		"errorLoading": "无法加载游戏。请稍后重试。",
+		"errorLoading": "无法加载游戏。请稍后再试。",
 		"slots": "老虎机",
 		"sports": "体育",
 		"liveCasino": "真人娱乐场",
@@ -928,16 +1097,16 @@
 		"poker": "扑克",
 		"lottery": "彩票",
 		"futures": "期货",
-		"vr": "虚拟现实",
+		"vr": "VR",
 		"swap": "兑换",
 		"slotsDescription": "旋转卷轴，赢取巨额头奖",
 		"liveCasinoDescription": "与真人荷官一起体验实时赌场行动",
 		"sportsDescription": "为您最喜爱的球队和体育赛事下注",
-		"pokerDescription": "在经典扑克游戏中测试您的技巧",
+		"pokerDescription": "在经典扑克游戏中测试您的技能",
 		"lotteryDescription": "通过彩票和即时赢取游戏试试您的运气",
 		"futuresDescription": "交易并预测市场动向",
 		"vrDescription": "沉浸在虚拟现实游戏中",
-		"swapDescription": "无缝交换代币和加密货币",
+		"swapDescription": "无缝兑换代币和加密货币",
 		"categories": {
 			"slot": {
 				"title": "老虎机游戏"
@@ -949,7 +1118,7 @@
 				"title": "体育博彩游戏"
 			},
 			"rng": {
-				"title": "随机数游戏"
+				"title": "RNG游戏"
 			},
 			"other": {
 				"title": "{category} 游戏"
@@ -959,7 +1128,7 @@
 	"providers": {
 		"pageTitle": "所有游戏提供商",
 		"searchPlaceholder": "搜索提供商...",
-		"empty": "未找到符合您搜索的提供商。",
+		"empty": "未找到与您的搜索匹配的提供商。",
 		"logoAlt": "{name} 标志",
 		"filteredBy": "按类别筛选:",
 		"clearFilter": "清除筛选",
@@ -974,7 +1143,7 @@
 				"title": "体育博彩提供商"
 			},
 			"rng": {
-				"title": "随机数游戏提供商"
+				"title": "RNG游戏提供商"
 			},
 			"other": {
 				"title": "{category} 游戏提供商"
@@ -984,7 +1153,7 @@
 	"hero": {
 		"guest": {
 			"title": "加入行动",
-			"subtitle": "立即注册并获得独家欢迎奖金！",
+			"subtitle": "立即注册，获取独家欢迎奖金！",
 			"cta": "立即注册"
 		},
 		"welcome": {
@@ -994,8 +1163,8 @@
 			"cta": "存款并获取"
 		},
 		"jackpot": {
-			"title1": "巨额头奖",
-			"title2": "1,000,000 美元",
+			"title1": "超级大奖",
+			"title2": "1,000,000美元",
 			"subtitle": "立即游戏，赢取大奖",
 			"cta": "立即游戏"
 		},
@@ -1003,13 +1172,13 @@
 			"casino": {
 				"title": "赌场",
 				"badge": "590+ 游戏",
-				"desc": "享受 {siteName} 原创和其他顶级提供商的赌场游戏。",
+				"desc": "享受{siteName}原创游戏及其他顶级提供商的赌场游戏。",
 				"link": "前往赌场"
 			},
 			"slots": {
 				"title": "老虎机",
 				"badge": "5292 游戏",
-				"desc": "旋转卷轴，通过我们的高级老虎机系列赢取巨额头奖。",
+				"desc": "旋转卷轴，赢取我们高级老虎机系列的巨额头奖。",
 				"link": "前往老虎机"
 			},
 			"sports": {
@@ -1020,32 +1189,32 @@
 			},
 			"crypto": {
 				"title": "加密货币与收益",
-				"badge": "60% 年利率",
-				"desc": "以诱人的利率进行质押、交易和赚取加密货币。",
+				"badge": "60% 年化收益率",
+				"desc": "以诱人的利率进行加密货币的质押、交易和赚取收益。",
 				"link": "前往加密货币"
 			}
 		},
 		"layout3": {
 			"headerTitle": "游戏焦点",
 			"headerSubtitle": "在我们精选的系列中发现惊人的游戏并探索新的冒险",
-			"slider1Title": "特色游戏",
+			"slider1Title": "精选游戏",
 			"slider1Badge": "员工精选",
 			"slider2Title": "更多探索",
 			"slider2Badge": "热门",
-			"featuredGameLabel": "特色游戏"
+			"featuredGameLabel": "精选游戏"
 		},
 		"ctaExploreGames": "探索游戏",
-		"ctaJoinAffiliate": "加入联盟计划"
+		"ctaJoinAffiliate": "加入联盟"
 	},
 	"betting": {
 		"live": {
 			"winRate": "胜率",
-			"biggestWin": "最大赢额",
-			"bigWins50": "大赢 (50+)",
-			"recentWins": "最近赢取",
+			"biggestWin": "最大胜利",
+			"bigWins50": "大胜 (50+)",
+			"recentWins": "最近胜利",
 			"header": {
 				"title": "实时投注活动",
-				"subtitle": "实时投注活动 • 已加载 {count} 场游戏"
+				"subtitle": "实时投注活动 • 已加载 {count} 个游戏"
 			},
 			"status": {
 				"live": "直播",
@@ -1057,8 +1226,8 @@
 			},
 			"tabs": {
 				"all": "全部",
-				"wins": "赢",
-				"losses": "输"
+				"wins": "胜利",
+				"losses": "失败"
 			},
 			"table": {
 				"game": "游戏名称",
@@ -1069,7 +1238,7 @@
 				"multiplier": "乘数",
 				"profit": "利润"
 			},
-			"empty": "未找到投注记录"
+			"empty": "未找到任何投注记录"
 		}
 	},
 	"fontChanger": {
@@ -1084,363 +1253,1233 @@
 			"title": "谷歌字体",
 			"searchFonts": "搜索字体...",
 			"preview": "预览",
-			"previewText": "敏捷的棕色狐狸跳过了懒惰的狗",
+			"previewText": "敏捷的棕色狐狸跳过懒惰的狗",
 			"alphabetPreview": "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 1234567890",
 			"applyFont": "应用字体",
 			"clearPreview": "清除预览",
 			"previewWith": "使用 {font} 预览文本",
-			"noFontsFound": "未找到匹配 “{searchTerm}” 的字体"
+			"noFontsFound": "未找到与“{searchTerm}”匹配的字体"
 		},
 		"customUpload": {
 			"title": "上传自定义字体",
 			"description": "上传您自己的字体文件以自定义网站",
 			"fontFile": "字体文件",
-			"dragDropArea": "将您的字体文件拖放到此处，或",
+			"dragDropArea": "在此处拖放您的字体文件，或",
 			"clickToUpload": "点击上传",
-			"supportedFormats": "支持的格式: .woff, .woff2, .ttf, .otf",
-			"maxFileSize": "最大文件大小: 10MB",
+			"supportedFormats": "支持的格式：.woff, .woff2, .ttf, .otf",
+			"maxFileSize": "最大文件大小：10MB",
 			"fontName": "字体名称",
-			"fontNamePlaceholder": "为您的字体输入一个名称",
+			"fontNamePlaceholder": "为您的字体输入名称",
 			"previewYourFont": "预览您的字体",
 			"uploadAndApply": "上传并应用字体",
 			"cancel": "取消",
 			"uploading": "上传中...",
 			"errors": {
-				"invalidFileType": "请上传有效的字体文件 (.woff, .woff2, .ttf, .otf)",
+				"invalidFileType": "请上传有效的字体文件（.woff, .woff2, .ttf, .otf）",
 				"fileTooLarge": "文件大小超过10MB限制",
 				"uploadFailed": "上传字体文件失败",
-				"enterFontName": "请选择字体文件并提供名称",
+				"enterFontName": "请选择一个字体文件并提供名称",
 				"readFileFailed": "读取字体文件失败"
 			}
 		},
 		"messages": {
-			"fontAppliedSuccess": "字体 “{fontName}” 应用成功！",
-			"fontUploadedSuccess": "字体 “{fontName}” 上传并应用成功！",
+			"fontAppliedSuccess": "字体“{fontName}”已成功应用！",
+			"fontUploadedSuccess": "字体“{fontName}”已成功上传并应用！",
 			"fontResetSuccess": "字体已重置为默认",
-			"invalidFileType": "请上传有效的字体文件 (.woff, .woff2, .ttf, .otf)",
+			"invalidFileType": "请上传有效的字体文件（.woff, .woff2, .ttf, .otf）",
 			"uploadFailed": "读取字体文件失败"
 		}
 	},
-	"bonus": {
-		"title": "营业额奖金计划",
-		"loginPromptTitle": "营业额奖金计划",
-		"loginPromptSubtitle": "登录以查看您的奖金统计和领取奖励。",
-		"goHome": "返回主页",
-		"tabs": {
-			"dashboard": "仪表板",
-			"claims": "索赔",
-			"rates": "奖金率",
-			"calculator": "计算器"
-		},
-		"refresh": "刷新",
-		"refreshing": "正在刷新...",
-		"refreshAllSuccess": "所有数据刷新成功！",
-		"refreshPartial": "部分刷新：已更新 {success}/{total} 部分",
-		"refreshFailed": "无法刷新数据。请再试一次。",
-		"dashboard": {
-			"title": "奖金仪表板",
-			"subtitle": "跟踪您的投注、奖金和奖励收益",
-			"performanceOverview": "奖励概况",
-			"bonusRatesTitle": "奖金率结构",
-			"totalIncome": "总奖金",
-			"pendingBonus": "待处理奖金",
-			"lastClaim": "最后一次索赔",
-			"unclaimedEarnings": "可领取",
-			"claim": {
-				"title": "申领和提现",
-				"points": {
-					"0": "佣金在计算后即可提款。",
-					"1": "未领取的佣金没有截止日期—它们会累积直到被领取。",
-					"2": "提款遵循平台的标准规则，如最低限额和处理时间。"
-				}
+	"contact": {
+		"title": "联系我们",
+		"subtitle": "有任何问题或需要帮助吗？我们专业的支持团队全天候为您服务。",
+		"methods": {
+			"liveChat": {
+				"title": "在线客服",
+				"description": "通过在线客服即时获得我们支持团队的帮助。",
+				"availability": "全天候可用"
 			},
-			"claiming": "正在认领...",
-			"section2": {
-				"title": "资格",
-				"content": "要参与："
+			"email": {
+				"title": "邮件支持",
+				"description": "发送电子邮件给我们，我们将在24小时内回复。",
+				"availability": "24小时内回复"
 			},
-			"section3": {
-				"title": "耕作等级与费率",
-				"content": "奖励是根据您的每日投注金额计算的：",
-				"noteTitle": "注意",
-				"noteContent": "等级每天在14:00 UTC进行评估。前一天的投注量决定了当天的奖金率。该比率适用于所有游戏类型：老虎机、真人娱乐场和体育。"
-			},
-			"claimButtonTitle": "领取"
-		},
-		"claims": {
-			"title": "索赔历史",
-			"subtitle": "跟踪您的奖金申领和投注活动",
-			"tableHeaders": {
-				"date": "投注日期",
-				"slots": "老虎机",
-				"liveCasino": "真人赌场",
-				"sports": "体育",
-				"total": "总计",
-				"tier": "级别",
-				"unclaimed": "未认领",
-				"token": "代币"
-			},
-			"tierPrefix": "级别",
-			"availableToClaim": "可领取",
-			"totalBonus": "总奖金",
-			"claimed": "已索取",
-			"progressPercentage": "进度",
-			"progressTitle": "您的进度",
-			"currentTier": "当前等级",
-			"nextTier": "下一阶",
-			"wagerProgress": "投注进度",
-			"totalWagered": "今日投注总额",
-			"toNextTier": "达到下一层级",
-			"empty": {
-				"title": "尚未有奖金索赔",
-				"subtitle": "开始游戏以赚取奖励！"
+			"support": {
+				"title": "帮助中心",
+				"description": "浏览我们全面的知识库以快速找到答案。",
+				"availability": "自助服务可用"
 			}
 		},
-		"rates": {
-			"title": "农业等级和费率",
-			"subtitle": "按投注等级和游戏类别划分的奖金百分比",
-			"overview": {
-				"title": "概览",
-				"body": "奖金农场根据用户在老虎机、真人赌场、体育博彩和彩票中的投注给予奖励。奖金每24小时计算一次，用户可以在投注后的第二天领取。共有七个等级，每个等级的费率根据投注额不同。"
-			},
-			"eligibility": {
-				"title": "资格",
-				"content": "要参与：",
-				"points": {
-					"0": "您必须拥有一个活跃的账户。",
-					"1": "在老虎机、真人娱乐场、体育博彩和彩票中投注。",
-					"2": "满足每个级别的最低投注要求。"
-				}
-			},
-			"calculation": {
-				"title": "奖金如何计算",
-				"desc": "奖金每24小时根据您的总投注额计算。示例：",
-				"exampleTitle": "等级 {tier}:",
-				"wagerIn": "在{gameType}中投注{amount}"
-			},
-			"table": {
-				"tierLevel": "层级",
-				"wagerRange": "下注范围",
-				"slots": "老虎机",
-				"liveCasino": "真人娱乐场",
-				"sports": "体育",
-				"tierPrefix": "等级",
-				"commissionLevel": "奖励等级",
-				"dailyWager": "每日下注量"
-			},
-			"claim": {
-				"title": "领取和提款奖金",
-				"points": {
-					"0": "奖金在下注后的24小时后才有资格领取。",
-					"1": "未领取的奖金将累积且不会过期。",
-					"2": "申领和提款过程可能会根据平台的具体政策而有所不同。"
-				}
-			},
-			"system": {
-				"title": "系统时间和操作",
-				"dailyTimeframeLabel": "日时间框架：",
-				"dailyTimeframeValue": "00:00 UTC 到 23:59 UTC（每天）。",
-				"claimDailyLabel": "每日领取：",
-				"claimDailyValue": "每天的14:00 UTC可用（您的本地时间：{local}）。",
-				"note": "注意：虽然我们与来自不同时区的供应商合作，但所有计算均遵循UTC，以确保一致性并避免混淆。"
-			},
-			"amendments": {
-				"title": "修正和取消资格",
-				"body": "我们可能随时更新这些条款，变更在发布时生效。如果怀疑系统错误、计算错误或作弊行为，我们保留根据需要调整或取消奖金和账户的权利，以确保公正性"
-			},
-			"footer": {
-				"schedule": "奖金计划：",
-				"availableDaily": "每天可用时间",
-				"localTimeLabel": "(您的本地时间：{time})"
+		"form": {
+			"title": "给我们发送消息",
+			"name": "全名",
+			"namePlaceholder": "输入您的全名",
+			"email": "邮箱地址",
+			"emailPlaceholder": "输入您的邮箱地址",
+			"subject": "主题",
+			"subjectPlaceholder": "您的咨询内容是关于？",
+			"message": "消息",
+			"messagePlaceholder": "请详细描述您的咨询...",
+			"submit": "发送消息",
+			"sending": "发送中...",
+			"errors": {
+				"nameRequired": "请输入您的姓名",
+				"emailRequired": "请输入您的邮箱",
+				"emailInvalid": "请输入有效的邮箱地址",
+				"subjectRequired": "请输入主题",
+				"messageRequired": "请输入您的消息",
+				"messageTooShort": "消息必须至少包含10个字符"
 			}
 		},
-		"calculator": {
-			"title": "奖金计算器",
-			"subtitle": "根据您的投注金额估算您的奖金收入",
-			"interactive": {
-				"title": "互动工具:",
-				"body": "输入不同的赌注金额以查看所有级别的潜在奖金"
+		"responseTime": {
+			"title": "预计响应时间",
+			"description": "我们努力尽快回复所有咨询。",
+			"liveChat": {
+				"title": "在线客服",
+				"time": "2分钟内"
 			},
-			"potentialEarnings": "潜在奖金",
-			"basedOnRate": "基于{percentage}%的奖金率",
-			"tier": "等级 {level}",
-			"commissionLevel": "奖励关卡 {level}",
-			"enterWager": "输入投注金额 (USD)",
-			"wagerPlaceholder": "例如，1000",
-			"calcFor": "正在计算 ${amount} 投注的奖金",
-			"totalPotential": "总潜在奖金:",
-			"combinedAtTier": "在级别{level}的所有游戏类型中获得的综合奖金"
+			"email": {
+				"title": "邮件",
+				"time": "24小时内"
+			},
+			"priority": {
+				"title": "VIP支持",
+				"time": "优先处理"
+			}
 		},
-		"claimSuccessModal": {
-			"title": "领取成功",
-			"statusCompleted": "已完成",
-			"statusOnChain": "上链",
-			"claimAmount": "报销金额",
-			"logoAlt": "{siteName}徽标",
-			"backgroundAlt": "领取成功背景",
-			"creatingMagic": "创造魔术",
-			"downloadShare": "下载和分享",
-			"spreadTheWin": "传播胜利",
-			"socialX": "X",
-			"socialFacebook": "Facebook",
-			"socialWhatsApp": "什么APP",
-			"socialTelegram": "电报",
-			"socialReddit": "保存此",
-			"socialMore": "更多",
-			"shareText": "I just claimed {amount} bonus! Join me: {url}",
-			"referralLinkCopied": "推荐链接已复制",
-			"referralLinkCopyFailed": "复制邀请链接失败",
-			"screenshotFailed": "屏幕截图失败。请重试或使用其他浏览器。",
-			"shareTextCopied": "共享复制到剪贴板的文本！",
-			"shareFailed": "分享失败，请重试"
+		"faq": {
+			"title": "常见问题",
+			"items": [
+				{
+					"question": "如何重置我的密码？",
+					"answer": "您可以通过点击登录页面上的“忘记密码”链接来重置密码。输入您注册的邮箱地址，并按照发送到您收件箱的说明操作。"
+				},
+				{
+					"question": "提款处理需要多长时间？",
+					"answer": "大多数加密货币提款都会立即处理。在某些情况下，可能需要手动验证，这最多可能需要24小时。"
+				},
+				{
+					"question": "你们接受哪些加密货币？",
+					"answer": "我们接受包括比特币（BTC）、以太坊（ETH）、USDT、USDC在内的主要加密货币，以及多个区块链网络上的其他几种流行代币。"
+				},
+				{
+					"question": "如何验证我的账户？",
+					"answer": "账户验证可以通过您的个人中心设置完成。根据您的账户等级和提款限额，您可能需要提供身份证明文件。"
+				},
+				{
+					"question": "我的个人信息安全吗？",
+					"answer": "是的，我们使用行业标准的加密和安全措施来保护所有个人和财务信息。我们的平台会定期进行安全审计。"
+				}
+			]
 		}
 	},
 	"about": {
-		"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 11 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"subtitle": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"stats": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 09 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"features": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 09 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+		"title": "🎮 关于 {siteName}",
+		"subtitle": "在 {siteName}，游戏不仅仅是打发时间——它是真正的激情。当您赢得大奖的那一刻，或者当一切都恰到好处时，那正是我们所追求的。",
+		"meta": {
+			"title": "关于 {siteName} | 值得信赖的全球在线赌场平台",
+			"description": "了解 {siteName}，一个安全的全球赌场平台，提供老虎机、真人娱乐场、体育博彩和扑克。公平、快速，为真正的玩家打造。"
+		},
+		"intro": {
+			"paragraph1": "我们为那些希望从游戏中获得更多的玩家打造了 {siteName}。更快的速度。更强的公平性。更多的刺激。无论您是喜欢真人娱乐场游戏、体育博彩、扑克，还是追逐高风险老虎机的巨额奖金，您都可以在这里找到，并且您可以信赖我们，一切都是合法的。",
+			"paragraph2": "从第一天起，我们就希望 {siteName} 感觉真实。不仅仅是另一个网站，而是一个每次登录都能获得安全、刺激游戏体验的地方。"
+		},
+		"whoWeAre": {
+			"title": "💎 我们是谁",
+			"paragraph1": "{siteName} 连接来自世界各地的玩家，提供数千种顶级赌场和博彩游戏。我们与行业内最知名的公司合作——Pragmatic Play、Red Tiger、Microgaming、KA Gaming——因此无论您是在手机还是笔记本电脑上玩，每款游戏都能流畅运行，画面精美。",
+			"paragraph2": "每一次旋转、每一次发牌、每一次奖励——一切都旨在给您带来真实游戏的快感。我们保持一切简单明了。没有花招，没有隐藏规则。只有诚实、清晰的游戏。"
+		},
+		"mission": {
+			"title": "🎯 我们的使命",
+			"paragraph1": "我们希望在线游戏变得简单、安全且真正有趣。",
+			"paragraph2": "我们保持个性化。快速存款，快速取款。简洁的界面，视觉舒适。在您需要时真正提供帮助的支持。| 在 {siteName}，您永远是焦点。您的信任是我们不断进步的动力。"
+		},
+		"whatMakesUsDifferent": {
+			"title": "🏆 {siteName} 的与众不同之处",
+			"features": [
+				"超过5000款游戏——老虎机、扑克、体育、真人娱乐场",
+				"即时、可靠的存款和取款",
+				"每款游戏都经过RNG认证，保证公平",
+				"简洁的设计，可在任何设备上运行",
+				"持续更新的奖金和促销活动"
+			],
+			"closing": "我们不仅提供游戏。我们致力于打造一个让您感到安全、有归属感并准备好迎接下一次挑战的地方。"
+		},
+		"fairGaming": {
+			"title": "🌍 公平与负责任的游戏",
+			"paragraph1": "我们非常重视公平性。这意味着遵守国际标准，并保持一切透明——只允许18岁及以上的玩家，无一例外。",
+			"paragraph2": "我们对每款游戏进行公平性测试，我们的加密技术确保您的信息安全无虞。"
+		},
+		"promise": {
+			"title": "🤝 我们的承诺",
+			"paragraph1": "我们不只是为了融入。我们是为了提升在线游戏行业的标准。",
+			"paragraph2": "当您在 {siteName} 玩游戏时，您使用的是一个建立在信任和创新之上的平台。每一次更新、新功能或合作都是为了让您的体验更好。"
+		},
+		"joinCommunity": {
+			"title": "🚀 加入 {siteName} 社区",
+			"paragraph1": "在线游戏发展迅速，而 {siteName} 已经走在了前沿——更快、更智能、更有回报。",
+			"paragraph2": "立即加入。领取您的欢迎奖金。看看为什么全球这么多玩家选择 {siteName} 作为他们的首选之地。",
+			"tagline": "🎯 游戏。胜利。体验。{siteName}。"
+		}
+	},
+	"footer": {
 		"sections": {
-			"whoWeAre": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 08 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"company": {
+				"title": "公司",
+				"links": {
+					"about": "关于我们",
+					"providers": "提供商",
+					"affiliate": "推荐奖金",
+					"bonus": "流水奖金"
+				}
 			},
-			"whatMakesUsDifferent": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 06 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"legal": {
+				"title": "法律",
+				"links": {
+					"privacy": "隐私政策",
+					"terms": "条款与条件",
+					"gambling": "负责任的博彩",
+					"faqs": "常见问题"
+				}
 			},
-			"providers": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 05 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"seeAllButton": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 05 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"exploreGamesButton": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 04 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"games": {
+				"title": "游戏",
+				"links": {
+					"lobby": "游戏大厅",
+					"slots": "老虎机",
+					"live": "真人娱乐场",
+					"sports": "体育博彩"
+				}
 			},
-			"missionVisionValues": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 03 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"items": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 02 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"support": {
+				"title": "支持",
+				"links": {
+					"help": "帮助中心",
+					"contact": "联系我们"
+				}
+			}
+		},
+		"seoContent": {
+			"title": "描述",
+			"paragraph1": "欢迎来到 {siteName}，这里是加密货币与真实赌场游戏激情的交汇点。如果您正在在线游戏世界中寻找新鲜感，您刚刚找到了。{siteName} 专为追求速度、安全以及最重要、真正娱乐性游戏的玩家而设，无论您是喜欢老虎机、真人牌桌、体育博彩，还是想尝试其他地方找不到的纯加密货币游戏。",
+			"paragraph2": "一切都在区块链上运行，因此您可以信任每一个结果。结果是随机的，当场验证。没有花招。只有纯粹的胜利和真正的刺激。无论您是豪赌客、策略迷，还是只想放松一下玩一会儿，这里都有适合您的风格。",
+			"paragraph3": "入门再简单不过了——即时存款，快速提现，用您的 Dynamic.xyz 钱包登录，并沿途领取一些独特的奖金。{siteName} 让一切保持运转。无需等待。没有烦恼。无论您身在何处——加拿大、欧洲、亚洲——我们的多链设置都能与您当地的加密货币选项完美契合。",
+			"paragraph4": "成千上万的人已经知道：这是一种更智能的在线赌博方式。在这里，不仅仅是追逐胜利——更是关于隐私、公平，以及成为一个真正了解玩家需求的社区的一部分。{siteName} 不仅仅是另一个在线赌场。这是为期望更多的玩家重新打造的 Web3 赌博。",
+			"tagline": "那么，您准备好玩得更聪明、赌得更安全，也许还能大赚一笔了吗？前往 {siteName} 吧。",
+			"showMore": "显示更多",
+			"showLess": "显示更少"
+		},
+		"copyright": "© {year} {siteName}. 保留所有权利。",
+		"followUs": "关注我们:",
+		"disclaimer": {
+			"line1": "仅限18岁以上 | 请负责任地赌博",
+			"line2": "赌博可能会上瘾。请负责任地游戏，并只下注您能承受损失的金额。",
+			"line3": "如果您觉得自己有赌博问题，请寻求帮助。"
+		},
+		"description": "{siteName} 是您体验加密老虎机、真人牌桌和体育博彩的首选之地。沉浸在您真正可以信赖的区块链游戏中，几秒钟内将您的奖金直接提到您的钱包，并每天领取新的奖金。它快速、安全且完全去中心化——{siteName} 为全球玩家将在线游戏提升到一个新的水平。玩得聪明。赢得大奖。信赖 {siteName}。"
+	},
+	"privacy": {
+		"title": "🔒 隐私政策 — {siteName}",
+		"subtitle": "{siteName} 如何通过SSL、AML和符合GDPR的隐私政策保护钱包地址和加密数据，以实现安全的区块链游戏。",
+		"lastUpdated": "最后更新：2025年1月",
+		"meta": {
+			"title": "隐私政策 | {siteName} – 加密钱包赌场安全",
+			"description": "{siteName} 如何通过高级加密和符合GDPR的保护措施保护钱包地址和加密数据，以实现安全的区块链游戏。",
+			"keywords": "{siteName} 隐私政策, {siteName} 加密赌场, {siteName} 数据保护, {siteName} 钱包安全, 加密赌博隐私, GDPR 加密赌场, 区块链赌场政策, {siteName} 游戏安全, 加密投注隐私",
+			"ogTitle": "隐私与数据保护 | {siteName} (加密赌场)",
+			"ogDescription": "了解 {siteName} 如何通过高级加密和符合GDPR的保护措施保护您的加密钱包和交易数据。"
+		},
+		"intro": {
+			"paragraph1": "在 {siteName}（“{siteName}”、“我们”、“我们的”），我们运营着 {siteName} 加密赌场平台。当您使用我们的网站、移动应用程序或任何相关服务（“服务”）时，您的个人和交易数据会发生什么情况，这里将进行说明。",
+			"paragraph2": "{siteName} 是一个仅限加密钱包的赌场。这意味着所有存款和取款都通过加密货币钱包进行。我们严肃对待您的隐私，并尽最大努力保护它，同时遵守规则（如AML/KYC要求），并为所有人保持平台的安全和公平。",
+			"paragraph3": "如果您使用 {siteName}，即表示您同意本隐私政策。"
+		},
+		"sections": {
+			"scope": {
+				"title": "范围与接受",
+				"content": "本政策适用于所有使用 {siteName} 的人。我们有时会更新它。当我们这样做时，新政策将在网站上生效，如果您在此之后继续使用 {siteName}，即表示您同意这些更改。"
 			},
-			"responsibleGaming": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 02 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 01 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"points": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 18 MINUTES 00 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-			},
-			"ourPromise": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 59 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 59 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 58 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-			},
-			"description": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 57 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"intro": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 57 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"brand": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 56 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 55 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 55 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 54 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"dataCollection": {
+				"title": "我们收集哪些数据",
+				"intro": "由于我们只使用加密钱包，我们收集的数据反映了这一点。以下是我们收集的内容：",
+				"accountData": {
+					"title": "A. 账户和身份数据（需要时）",
+					"email": "电子邮件（如果您提供）、显示名称、账户ID。",
+					"kyc": "请注意：加密钱包通常保持匿名，但有时法规要求我们索取您的身份（KYC）。我们只在绝对必要时才会提出要求，并且会明确说明。"
 				},
-				"games": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 53 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 53 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"count": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 52 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 51 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"slots": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 51 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 50 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				"walletData": {
+					"title": "B. 钱包和交易数据",
+					"addresses": "您在此处连接或使用的加密钱包地址。",
+					"transactions": "链上交易哈希和时间戳（用于存款和取款）。",
+					"metadata": "我们需要用来核对付款和检测欺诈的交易详情。"
+				},
+				"technicalData": {
+					"title": "C. 技术和使用数据",
+					"ip": "IP地址、基于IP的大致位置、设备类型、浏览器和操作系统。",
+					"session": "会话日志、时间戳、玩过的游戏、投注、结果、您访问的页面。",
+					"cookies": "Cookie和分析数据，以使网站对您更好、更流畅。"
+				},
+				"securityData": {
+					"title": "D. 安全和风险数据",
+					"fraud": "欺诈信号、设备指纹、来自反欺诈合作伙伴的风险评分。",
+					"disputes": "争议、退款和合规性检查记录（如果出现）。",
+					"note": "除非法律要求并且您明确同意，否则我们不收集您的种族、宗教或健康等敏感信息。"
+				}
+			},
+			"purposes": {
+				"title": "我们为什么收集数据",
+				"intro": "我们只出于明确、合法的原因使用您的数据：",
+				"items": [
+					{
+						"title": "为了运营服务",
+						"description": "设置和管理账户，处理钱包存款/取款，支付奖金。"
 					},
-					"liveCasino": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 49 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 48 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "为了安全",
+						"description": "发现并阻止滥用、欺诈和洗钱。"
 					},
-					"sports": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 48 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 47 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "为了保持一切顺利运行",
+						"description": "分析、产品升级、客户支持。"
 					},
-					"poker": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 46 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 46 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "为了营销（如果您同意）",
+						"description": "新闻通讯、促销优惠——您总是有权选择拒绝或稍后改变主意。"
+					},
+					{
+						"title": "为了保护平台",
+						"description": "并调查任何滥用行为。"
 					}
+				],
+				"outro": "如果您同意我们将您的数据用于营销等目的，您可以随时撤回同意。"
+			},
+			"cryptoWallet": {
+				"title": "加密钱包和链上数据",
+				"points": [
+					"我们只在为您的账户充值或扣款、审计交易或满足法律要求所需的时间内存储钱包地址和链上交易信息。",
+					"链上数据本质上是公开的。我们无法隐藏区块链活动，但我们会将其与我们自己的记录相结合，以保持您的账户准确。",
+					"如果您连接了一个托管钱包（例如通过第三方提供商），您即同意他们与我们共享数据，以便我们处理您的交易。"
+				]
+			},
+			"dataSharing": {
+				"title": "我们何时共享数据",
+				"intro": "我们只在少数情况下共享您的信息：",
+				"items": [
+					"如果法律要求或为了阻止非法活动，我们会与监管机构或执法部门共享。",
+					"如果发生业务转让（如合并或收购），我们会与关联公司或第三方共享——但始终采取适当的保护措施。",
+					"为了保护平台和我们的用户安全，我们会与防欺诈网络共享。"
+				],
+				"noSelling": "我们绝不会将您的个人信息出售给广告商。"
+			},
+			"security": {
+				"title": "安全措施",
+				"intro": "我们采取了您所期望的安全措施：",
+				"items": [
+					"传输中的数据采用TLS/SSL加密，敏感信息采用加密存储。",
+					"访问控制、详细日志记录和基于角色的权限。",
+					"定期的安全审计和漏洞检查。",
+					"为我们的员工提供多因素认证（MFA）——您也可以为自己的账户启用此功能。"
+				],
+				"warning": "请记住：妥善保管您的钱包私钥和账户详情。我们绝不会索要您的私钥。"
+			},
+			"cookies": {
+				"title": "Cookie和跟踪",
+				"content": "我们使用Cookie和类似工具来使网站正常运行、分析流量以及（如果您同意）用于营销。您可以在浏览器设置中控制Cookie，但如果您关闭了必要的Cookie，某些功能可能会停止工作。"
+			},
+			"minAge": {
+				"title": "儿童和最低年龄",
+				"content": "您必须年满18岁（或您当地法律规定的年龄）才能使用 {siteName}。我们积极阻止未成年用户，如果我们发现有未成年人注册，将删除其所有数据。"
+			},
+			"breach": {
+				"title": "违规通知",
+				"content": "如果发生危及您权利的数据泄露事件，我们将根据法律要求通知您和相关当局，并努力迅速解决问题。"
+			},
+			"changes": {
+				"title": "本政策的变更",
+				"content": "我们可能会更改本隐私政策。如果有重大更新，我们将在网站上公布，并在适当时直接通知您。"
+			},
+			"contact": {
+				"title": "联系方式",
+				"intro": "有问题或请求吗？",
+				"link": "🌐 https://{siteDomain}"
+			}
+		}
+	},
+	"terms": {
+		"title": "条款与条件",
+		"subtitle": "用户协议和平台规则",
+		"lastUpdated": "2025年1月",
+		"intro": {
+			"paragraph1": "通过在 www.{siteDomain} 上注册或连接您的钱包，您即与 {siteName} N.V. 签订具有约束力的协议。",
+			"paragraph2": "如果您不同意这些条款中的任何一条，请不要访问、使用或在我们的网站上注册。请仔细阅读这些条款。如果您不确定自己的权利或义务，请在使用本网站前咨询您所在司法管辖区的法律顾问。"
+		},
+		"sections": {
+			"ownership": {
+				"title": "1. {siteName} 所有权",
+				"content1": "{siteName} 由 {siteName} N.V.（“{siteName}”、“我们”、“我们的”）拥有和运营。",
+				"content2": "{siteName} 是一个仅限加密钱包的赌场。所有存款、投注和取款都通过用户的加密货币钱包处理。我们支持通过 Dynamic.xyz 和兼容的钱包连接器（例如 WalletConnect / MetaMask）进行钱包登录。"
+			},
+			"notice": {
+				"title": "2. 重要通知",
+				"content1": "2.1 通过在 www.{siteDomain}（“网站”）上注册或连接您的钱包，您即与 {siteName} N.V. 签订具有约束力的协议，并同意：(i) 本条款与条件；(ii) 我们的隐私政策；(iii) 我们的Cookie政策；(iv) 我们的联盟条款；以及 (v) 我们的负责任博彩政策。",
+				"content2": "2.2 如果您不同意这些条款中的任何一条，请不要访问、使用或在我们的网站上注册。",
+				"content3": "2.3 请仔细阅读这些条款。如果您不确定自己的权利或义务，请在使用本网站前咨询您所在司法管辖区的法律顾问。"
+			},
+			"general": {
+				"title": "3. 一般条款",
+				"items": [
+					"注册或连接钱包后，您（“用户”、“玩家”、“您”或“您的”）同意遵守 {siteName} 的所有规则和政策。",
+					"本协议是您与 {siteName} 之间具有法律约束力的合同。",
+					"这些条款在您连接钱包并开始使用本网站的那一刻生效。",
+					"{siteName} 保留随时修改或更新这些条款的权利。更改将在网站上公布；继续使用即表示接受。",
+					"如果发生冲突，这些条款优先于任何其他规则、促销或外部材料。",
+					"只有这些条款的英文版本具有法律约束力。翻译仅为方便起见。"
+				]
+			},
+			"account": {
+				"title": "4. 账户、钱包登录和安全",
+				"intro": "{siteName} 使用 Dynamic.xyz 进行基于钱包的身份验证和安全措施，以保护您的账户。",
+				"walletLogin": {
+					"title": "4.1 钱包登录 (Dynamic.xyz)",
+					"items": [
+						"{siteName} 使用 Dynamic.xyz（或其他支持的连接器）进行基于钱包的登录和身份验证。通过连接钱包，您确认您是该钱包的合法所有者，并授权 {siteName} 将该钱包识别为您的账户。",
+						"我们绝不会索要您的私钥。您必须确保您的钱包凭据和设备安全。{siteName} 对因钱包被盗或私钥泄露造成的损失不承担责任。"
+					]
 				},
-				"technology": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 45 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 44 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"blockchain": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 44 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 43 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 42 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 42 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"uptime": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 41 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph5": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 40 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				"registration": {
+					"title": "4.2 注册详情",
+					"items": [
+						"我们可能会要求您提供联系方式（电子邮件、用户名）以进行账户沟通。您必须提供准确的信息并保持其最新。",
+						"您对使用您连接的钱包进行的所有操作负责。"
+					]
 				},
 				"security": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 40 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 39 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"rng": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 38 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 37 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 37 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 36 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"global": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 35 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 35 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"players": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 34 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 33 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"countries": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 33 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 32 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 31 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"payments": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 31 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 30 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 29 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"instant": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 28 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 28 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"mobile": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 27 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 26 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 26 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"support": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 25 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 24 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"availability": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 24 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 23 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 22 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"responsible": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 21 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 21 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 20 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"whyChoose": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 19 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"point1": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 19 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 18 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point2": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 17 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 16 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point3": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 16 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 15 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point4": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 14 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 14 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point5": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 13 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point6": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 11 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					}
-				},
-				"closing": {
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"tagline": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 17 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					"title": "4.3 多个账户和安全",
+					"items": [
+						"每人只允许拥有一个账户。多个账户或试图规避限制的行为可能导致账户暂停和资金没收。",
+						"启用平台提供的任何安全功能（例如，相关服务的2FA）并保护您自己的钱包。",
+						"如果您怀疑有未经授权的访问，请立即通知支持团队。"
+					]
 				}
+			},
+			"eligibility": {
+				"title": "5. 资格和用户保证",
+				"intro": "5.1 您声明并保证：",
+				"items": [
+					"您至少年满18岁（或您所在司法管辖区的最低法定赌博年龄）。",
+					"您在您所在的位置合法允许使用在线加密赌博服务。",
+					"您是您连接的钱包的合法所有者。",
+					"您不会使用VPN或位置欺骗来绕过地区限制。",
+					"您不会将服务用于非法或商业目的。",
+					"您接受加密货币的价值可能会波动，并承担所有市场风险。"
+				],
+				"outro": "5.2 如果您违反这些保证，{siteName} 可能会暂停或终止访问，并在法律允许的情况下扣留资金。"
+			},
+			"restricted": {
+				"title": "6. 受限司法管辖区",
+				"content1": "6.1 {siteName} 不接受来自禁止或限制加密赌博的司法管辖区的玩家。这包括但不限于：",
+				"content2": "美国（及其领土）、英国、法国、荷兰、西班牙、德国、澳大利亚、奥地利、科摩罗、伊朗、朝鲜、苏丹、叙利亚以及FATF黑名单上的任何司法管辖区。",
+				"content3": "6.2 试图从受限司法管辖区访问服务，包括通过VPN或代理，是违反这些条款的行为，并可能导致账户关闭和资金没收。"
+			},
+			"crypto": {
+				"title": "7. 加密货币存款和取款",
+				"policy": {
+					"title": "7.1 仅限加密货币政策",
+					"items": [
+						"{siteName} 仅接受支持的加密货币（例如 BTC、ETH、USDT、TRX、BNB）的存款和取款。不接受法定货币、银行卡或银行转账存款。",
+						"所有存款必须来自您控制的钱包。禁止从第三方钱包存款。"
+					]
+				},
+				"deposits": {
+					"title": "7.2 存款",
+					"items": [
+						"存款在达到所需的区块链确认后记入。网络（gas）费由您支付。",
+						"{siteName} 可能会拒绝或撤销似乎来自被阻止地址或受限来源的存款。"
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 取款",
+					"items": [
+						"取款将处理到您提供的钱包地址。{siteName} 可能会要求您在处理前确认目标钱包。",
+						"您必须有足够的已清算余额来支付取款。为了调查可疑的滥用或异常活动，取款可能会被延迟。"
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 拒付和冲销",
+					"items": [
+						"加密货币交易在链上是最终的。如果 {siteName} 因第三方服务提供商的拒付或冲销（在链上很少见）而遭受损失，我们保留追回金额或收取管理费的权利。"
+					]
+				}
+			},
+			"kyc": {
+				"title": "8. 无常规身份验证（无KYC）",
+				"content1": "8.1 {siteName} 不将常规身份验证（KYC）作为正常游戏的条件。用户可以通过 Dynamic.xyz 连接钱包并开始游戏，无需提供身份证明文件。",
+				"content2": "8.2 尽管有上述规定，{siteName} 保留在以下情况下要求提供信息或暂停交易的权利：",
+				"items": [
+					"遵守主管当局的合法命令：",
+					"预防、调查或补救欺诈、洗钱或其他非法活动",
+					"或保护平台的安全和完整性。"
+				],
+				"content3": "8.3 如果您在法律要求时拒绝提供此类信息，{siteName} 可能会限制或关闭您的账户，并在法律允许的范围内延迟或扣留取款。"
+			},
+			"fairPlay": {
+				"title": "9. 公平游戏、禁止行为和安全",
+				"intro": "您不得：",
+				"items": [
+					"使用机器人、脚本、自动游戏工具或任何未经授权的软件。",
+					"与其他玩家串通或操纵游戏结果。",
+					"创建多个账户以滥用奖金或促销活动。",
+					"试图逆转或篡改链上交易。",
+					"利用游戏漏洞或平台漏洞。"
+				],
+				"outro1": "发现作弊、串通或利用平台的账户可能会被暂停、关闭或没收余额。",
+				"outro2": "{siteName} 实施技术和行为监控以保护平台完整性。"
+			},
+			"bonuses": {
+				"title": "10. 奖金和促销活动",
+				"items": [
+					"所有奖金优惠和促销活动均受每项优惠中规定的特定奖金条款的约束。",
+					"滥用奖金（包括多个账户或快速切换奖金）可能导致奖金被拒绝、撤销或没收，以及账户被关闭。",
+					"在提取由奖金产生的资金之前，必须满足奖金的投注要求，具体规定见各促销活动。"
+				]
+			},
+			"playingRules": {
+				"title": "11. 游戏规则和游戏结算",
+				"items": [
+					"只有在您收到屏幕确认后，投注才被接受。余额不足的投注无效。",
+					"在发生争议时，{siteName} 的内部日志和区块链记录具有权威性。",
+					"如果赛事被取消、暂停或以其他方式受到影响，{siteName} 将根据已发布的游戏和市场规则结算或作废投注。",
+					"对于可证明公平的游戏，每个游戏都提供验证工具和服务器种子（如适用）；服务器日志为最终依据。"
+				]
+			},
+			"errors": {
+				"title": "12. 错误、中断和限制",
+				"intro": "{siteName} 对以下原因造成的损失不承担责任：",
+				"items": [
+					"互联网或设备故障",
+					"区块链延迟、分叉或网络拥堵",
+					"软件错误或第三方服务中断"
+				],
+				"outro1": "当检测到错误或漏洞时，{siteName} 保留作废投注、调整余额或取消交易的权利。",
+				"outro2": "我们可能会设置投注限额、最高奖金和其他控制措施以保护用户和平台。"
+			},
+			"suspension": {
+				"title": "13. 暂停、关闭和资金处理",
+				"intro": "在以下情况下，{siteName} 可能会暂停或关闭账户：",
+				"items": [
+					"违反条款",
+					"检测到滥用、欺诈或可疑行为",
+					"法律或监管义务要求"
+				],
+				"outro1": "账户关闭后，未决投注可能会被取消，剩余资金将根据适用法律和平台政策处理。",
+				"outro2": "{siteName} 可能会在必要时保留资金以解决争议、遵守合法请求或弥补损失。"
+			},
+			"responsibleGaming": {
+				"title": "14. 负责任的游戏",
+				"items": [
+					"{siteName} 提倡负责任的赌博。您可以请求：自我排除、存款限额或临时暂停。",
+					"如果您怀疑有赌博危害，请访问 {siteDomain} 寻求即时帮助。",
+					"未成年人赌博（未满18岁或当地法定年龄）是严格禁止的。被发现属于未成年人的账户将被关闭，资金将根据政策处理。"
+				]
+			},
+			"ip": {
+				"title": "15. 知识产权",
+				"content1": "{siteName} 上的所有商标、徽标、网站内容、软件和游戏资产均归 {siteName} 所有或许可。未经授权的复制、抓取或再分发是禁止的。",
+				"content2": "您被授予有限的、可撤销的许可，仅可出于个人娱乐目的访问本服务。"
+			},
+			"liability": {
+				"title": "16. 责任限制",
+				"items": [
+					"在法律允许的最大范围内，{siteName} 对间接、特殊、后果性或附带性损失，包括利润损失或机会成本，概不负责。",
+					"我们对与这些条款相关的任何索赔的总责任不得超过您上次存款的价值或适用法律规定的金额。",
+					"这些条款中的任何内容均不限制因疏忽造成的死亡或人身伤害的责任，如果适用法律禁止此类限制。"
+				]
+			},
+			"disputes": {
+				"title": "17. 争议解决和管辖法律",
+				"content": "如有争议，请访问 {siteDomain}。我们的目标是迅速解决投诉；如有需要，可上报至管理层。"
+			},
+			"amendments": {
+				"title": "18. 修订",
+				"content": "{siteName} 可能随时修订这些条款。更新后的条款将在网站上公布。继续使用即表示接受。"
+			},
+			"miscellaneous": {
+				"title": "19. 其他",
+				"items": [
+					"这些条款构成您与 {siteName} 之间关于本服务的完整协议。",
+					"如果任何条款被认定为不可执行，它将被修改到必要的最小程度，其余条款将继续有效。",
+					"您不得转让您在本条款下的权利。{siteName} 可以转让或分包权利和义务。"
+				]
+			},
+			"contact": {
+				"title": "20. 联系方式",
+				"intro": "如需支持、投诉或法律通知：",
+				"supportEmail": "一般支持：访问 {siteDomain}",
+				"affiliateEmail": "联盟查询：访问 {siteDomain}",
+				"registeredOffice": "注册办公室：{siteName} N.V., Heelsumstraat 51, Willemstad, Curaçao"
+			}
+		}
+	},
+	"responsibleGambling": {
+		"title": "在 {siteName} 负责任地游戏",
+		"subtitle": "在 {siteName}，我们希望游戏是安全、有趣的，并且是您可以随时离开的。我们致力于保持平衡——让您为了娱乐而玩，而不是为了赚钱或解决财务问题。",
+		"lastUpdated": "最后更新：2025年1月",
+		"intro": {
+			"title": "在 {siteName} 负责任地游戏",
+			"paragraph1": "在 {siteName}，我们希望游戏是安全、有趣的，并且是您可以随时离开的。我们致力于保持平衡——让您为了娱乐而玩，而不是为了赚钱或解决财务问题。",
+			"paragraph2": "如果您未满18岁，或低于您所在地区的法定年龄，您不能使用我们的平台。我们对此非常重视。"
+		},
+		"mission": {
+			"title": "我们的使命",
+			"paragraph1": "我们相信清晰、诚实和安全的游戏。{siteName} 的存在是为了帮助您做出明智的选择，防止赌博成为问题。",
+			"paragraph2": "对我们来说，重要的是：",
+			"beliefs": {
+				"0": "赌博是娱乐。它不是致富的方式。",
+				"1": "了解自己，设定限制，不要过度。",
+				"2": "我们为您提供工具和资源，帮助您保持控制。"
+			}
+		},
+		"understanding": {
+			"title": "负责任博彩的真正含义",
+			"paragraph1": "如今，在线赌博无处不在。这使得人们更容易忘记时间、金钱，甚至忘记最初玩游戏的原因。|负责任的赌博意味着了解自己的界限，保持清醒，不让事情失控。",
+			"paragraph2": "需要记住的一些事情：",
+			"tips": {
+				"0": "为了乐趣而玩，而不是为了盈利。",
+				"1": "不要试图赢回损失。如果需要，请休息一下。",
+				"2": "为自己设定一个消费和时间限制，并遵守它。",
+				"3": "当您感到疲倦、压力大或心烦意乱时，切勿赌博。",
+				"4": "不要使用用于支付账单或其他必需品的钱。",
+				"5": "如果不再有趣，就离开。"
+			}
+		},
+		"selfCheck": {
+			"title": "快速自我检查：您还控制得住吗？",
+			"intro": "对自己诚实：",
+			"questions": {
+				"0": "您在赌博时会忘记时间吗？",
+				"1": "它是否损害了您的人际关系或工作？",
+				"2": "当您不能玩时会感到烦躁吗？",
+				"3": "您是否通过赌博来逃避无聊或压力？",
+				"4": "您是否曾借钱或加密货币只是为了继续玩？",
+				"5": "您会追逐损失，下更大的赌注试图赢回来吗？"
+			},
+			"warning": "如果您对多个问题回答了“是”，那么是时候重新考虑您的游戏方式并可能寻求帮助了。"
+		},
+		"tools": {
+			"title": "{siteName} 如何帮助您保持正轨",
+			"intro": "我们希望您玩得开心，但我们也希望您保持安全。|以下是我们提供的内容：",
+			"selfExclusion": {
+				"title": "自我排除",
+				"description": "需要休息一下吗？您可以请求暂时或永久封锁您的账户。在此期间，您将无法玩游戏或收到促销邮件。只需联系我们 {siteName}，我们将私下处理。"
+			},
+			"coolingOff": {
+				"title": "冷静期",
+				"paragraph1": "如果您感觉事情失控，请休息24小时、一周或一个月。在此期间，您无法连接钱包进行游戏。",
+				"periods": {
+					"0": "24小时",
+					"1": "1周",
+					"2": "1个月"
+				},
+				"paragraph2": "在此期间，您无法连接钱包进行游戏。"
+			},
+			"depositAwareness": {
+				"title": "存款和损失意识",
+				"description": "由于一切都通过加密钱包运行，您可以直接在区块链上查看所有存款和投注。请密切关注您的活动，以便您始终了解自己的情况。"
+			}
+		},
+		"underagePrevention": {
+			"title": "保护未成年人",
+			"paragraph1": "18岁以下禁止赌博。我们是认真的。",
+			"tipsTitle": "家长和监护人，这里有一些提示：",
+			"tips": {
+				"0": "使用密码或锁定您的设备。",
+				"1": "不要在共享计算机或手机上保存钱包信息。",
+				"2": "如果您要离开，请务必注销。",
+				"3": "使用 NetNanny 或 GamBlock 等工具来阻止赌博网站。",
+				"4": "检查您孩子的在线活动。"
+			},
+			"warning": "如果我们发现有未成年人在玩游戏，我们将关闭他们的账户并取消任何奖金。"
+		},
+		"helpSupport": {
+			"title": "需要支持吗？您并不孤单",
+			"intro": "如果赌博开始损害您的情绪、人际关系或财务状况，请联系我们。无论您身在何处，这里有一些可以提供帮助的组织：",
+			"organizations": {
+				"0": {
+					"name": "GamCare",
+					"url": "https://www.gamcare.org.uk"
+				},
+				"1": {
+					"name": "Gambling Therapy",
+					"url": "https://www.gamblingtherapy.org"
+				},
+				"2": {
+					"name": "Gamblers Anonymous",
+					"url": "https://www.gamblersanonymous.org"
+				},
+				"3": {
+					"name": "National Council on Problem Gambling",
+					"url": "https://www.ncpgambling.org"
+				},
+				"4": {
+					"name": "GamTalk",
+					"url": "https://www.gamtalk.org"
+				}
+			},
+			"paragraph2": "他们提供自我测试、在线聊天和本地支持小组。"
+		},
+		"principles": {
+			"title": "{siteName} 如何保持负责任",
+			"intro": "我们坚持这些原则：",
+			"items": {
+				"0": {
+					"title": "透明度",
+					"description": "每款游戏都可证明公平且经过区块链验证。"
+				},
+				"1": {
+					"title": "安全",
+					"description": "您的会话始终受 Dynamic.xyz 钱包登录保护。没有密码，没有KYC。"
+				},
+				"2": {
+					"title": "自主权",
+					"description": "您掌控一切。随时断开连接。"
+				},
+				"3": {
+					"title": "教育",
+					"description": "我们帮助您了解风险并随时向您提供信息。"
+				},
+				"4": {
+					"title": "社区支持",
+					"description": "我们的团队全天候为您服务。"
+				}
+			}
+		},
+		"playSmart": {
+			"title": "最后的想法",
+			"intro": "赌博应该是愉快、社交和平衡的。在开始游戏之前，请设定一个时间限制。不要追逐损失或在心烦意乱时玩。将任何奖金视为意外之喜，而不是薪水。玩得聪明，如果需要帮助，不要害怕寻求帮助。",
+			"reminders": {
+				"0": "赌博应该是愉快、社交和平衡的。",
+				"1": "在开始游戏之前，请设定一个时间限制。",
+				"2": "不要追逐损失或在心烦意乱时玩。",
+				"3": "将任何奖金视为意外之喜，而不是薪水。",
+				"4": "玩得聪明，如果需要帮助，不要害怕寻求帮助。"
+			}
+		},
+		"finalMessage": {
+			"paragraph1": "不要让赌博影响您的工作或人际关系。如果不再有趣，就离开吧。| 在 {siteName}，我们关心您的福祉。做出明智的选择，安全游戏，并照顾好自己。",
+			"paragraph2": "不要让赌博影响您的工作或人际关系。如果不再有趣，就离开吧。",
+			"contact": "需要帮助、建议或想休息一下吗？随时在 {siteName} 联系我们。"
+		}
+	},
+	"faqs": {
+		"title": "常见问题 – {siteName}",
+		"subtitle": "查找有关 {siteName} 的常见问题的答案。了解钱包登录、存款、取款、公平游戏和区块链透明度。",
+		"lastUpdated": "最后更新：2025年1月",
+		"introTitle": "{siteName} 常见问题",
+		"intro": "欢迎来到 {siteName} 常见问题中心，在这里您可以找到关于我们加密游戏平台最常见问题的快速解答。| 如果您在这里找不到答案，我们的24/7支持团队随时准备在 {siteName} 提供帮助。",
+		"categories": {
+			"accountRegistration": {
+				"title": "🔹 账户与注册",
+				"items": {
+					"0": {
+						"question": "1. 我可以在您的网站上注册吗？",
+						"answer": "可以——注册对年满18岁（或您所在司法管辖区的法定成年年龄）的任何人开放。| 您还必须确保在线赌博在您居住的地方是合法的。| 在 {siteName}，您不需要传统的注册或密码。| 只需通过 Dynamic.xyz 连接您的钱包即可立即开始游戏。| 👉 有关法律和合规详情，请查看我们的条款与条件。",
+						"reminder": "提醒：赌博可能会上瘾。请负责任地游戏并了解自己的限度。"
+					},
+					"1": {
+						"question": "2. 如果我忘记了登录信息怎么办？",
+						"answer": "由于 {siteName} 使用基于钱包的 Dynamic.xyz 登录，因此您不使用传统密码。| 要再次访问您的账户：| 使用您最初使用的相同地址重新连接您的钱包。| 如果您已无法访问您的钱包，请使用您的助记词或备份方法恢复它（我们从不存储或控制私钥）。| 出于安全原因，{siteName} 无法重置或恢复您的钱包凭据。"
+					},
+					"2": {
+						"question": "3. 我可以更改我的用户名或关联的钱包吗？",
+						"answer": "您的 {siteName} 账户与您的钱包地址绑定。| 要使用新钱包，只需连接一个新钱包即可——但请注意，您以前的游戏历史、VIP状态和奖金不会自动转移。"
+					},
+					"3": {
+						"question": "4. 如何成为VIP会员？",
+						"answer": "我们的VIP计划是独家的，仅限受邀者参加。| 当您玩游戏并与 {siteName} 社区互动时，您的游戏活动会自动被跟踪。| 一旦符合条件，您将通过平台内通知或 {siteName} 团队的直接消息收到正式邀请。| VIP会员可享受独家奖金、更快的提款和个性化奖励。"
+					}
+				}
+			},
+			"depositsWithdrawals": {
+				"title": "💰 存款与取款",
+				"items": {
+					"0": {
+						"question": "5. 如何存入加密货币？",
+						"answer": "在 {siteName} 存款既快捷又简单：| 前往主仪表盘上的“我的钱包”。| 选择“存款”并选择您偏好的加密货币（例如BTC、ETH、USDT、BNB）。| 复制您独特的钱包地址或扫描二维码。| 从您的外部钱包向显示的地址发送您的加密货币。| 一旦在区块链上确认，您的资金将自动出现在您的 {siteName} 余额中。| ⚠️ 请确保您只将支持的加密货币发送到正确的网络地址（例如ERC20、TRC20、BEP20）。"
+					},
+					"1": {
+						"question": "6. 存款需要多长时间？",
+						"answer": "存款通常在5-10分钟内确认，具体取决于区块链的拥堵情况和交易费用。| 您可以使用您的交易哈希（TXID）通过区块浏览器（例如Etherscan.io或BscScan.com）跟踪您的交易进度。| 通常需要至少3次确认，您的存款才会出现在您的余额中。"
+					},
+					"2": {
+						"question": "7. 最低提款金额是多少？",
+						"answer": "最低提款金额取决于您使用的加密货币。| 每种币都有自己的网络费用和最低阈值。| 这些值显示在“我的钱包”下的“提款”部分。"
+					},
+					"3": {
+						"question": "8. 如何提取我的奖金？",
+						"answer": "要提取您的加密货币：| 前往“我的钱包”→“提款”。| 输入您的目标钱包地址和您希望提取的金额。| 在确认前仔细检查您的地址和网络类型。| 提款会立即处理，但可能需要几分钟，具体取决于区块链网络活动。| 💡 始终确保您的接收钱包支持您正在提取的网络。"
+					},
+					"4": {
+						"question": "9. 如果我的交易延迟了怎么办？",
+						"answer": "由于网络拥堵或低Gas费，区块链交易有时会花费更长的时间。| 如果您的存款或取款尚未到账：| 在区块链浏览器上检查您的TXID。| 确认您使用了正确的网络和地址。| 如果已经超过一小时，请联系 {siteName} 并提供您的TXID和钱包详情。"
+					}
+				}
+			},
+			"gamesSecurity": {
+				"title": "🎮 游戏、公平性和安全性",
+				"items": {
+					"0": {
+						"question": "10. {siteName} 的游戏公平吗？",
+						"answer": "是的——所有 {siteName} 的游戏都采用可证明公平的技术和经过验证的智能合约构建。| 每笔投注、结果和支付都可以在区块链上独立验证。| 我们在透明、防篡改的系统上运行，保证了随机性、公平性和公开性。| 您可以通过Etherscan或相应的网络浏览器在链上查看游戏结果和交易证明。"
+					},
+					"1": {
+						"question": "11. 如果游戏卡住或崩溃了怎么办？",
+						"answer": "如果您的游戏停止响应：| 刷新页面。| 清除您的浏览器缓存并重新连接您的钱包。| 如果问题仍然存在，请通过在线客服或 {siteName} 联系我们的支持团队。| 如果您的游戏会话或余额受到影响，我们的团队将协助您恢复。"
+					},
+					"2": {
+						"question": "12. 我可以使用多个钱包或账户吗？",
+						"answer": "不可以。| 每位玩家只允许使用一个钱包地址作为其主账户。| 创建多个账户或使用钱包轮换来领取奖金或利用促销活动是严格禁止的，并可能导致账户限制或余额没收。"
+					},
+					"3": {
+						"question": "13. 我的个人数据安全吗？",
+						"answer": "是的。| 在 {siteName}，我们不收集个人数据——您的身份保持安全。| 访问通过 Dynamic.xyz 进行管理，确保您的数字身份的完全隐私和所有权。| 我们不存储任何密码、电子邮件或敏感文件。| 您的钱包 = 您的身份。"
+					}
+				}
+			},
+			"responsibleGambling": {
+				"title": "🧠 负责任的博彩",
+				"items": {
+					"0": {
+						"question": "14. {siteName} 是否支持负责任的博彩？",
+						"answer": "当然。| 我们鼓励每位玩家适度享受游戏。| 您可以随时通过联系 {siteName} 请求自我排除期或暂停期。| 如果您觉得赌博正在影响您的生活，请访问我们的“负责任的博彩”页面以获取资源和帮助组织。"
+					},
+					"1": {
+						"question": "15. 如果我怀疑有赌博问题该怎么办？",
+						"answer": "如果您觉得您的赌博失控了，请休息一下并联系这些值得信赖的组织之一寻求保密帮助：| GamCare: https://www.gamcare.org.uk | Gambling Therapy: https://www.gamblingtherapy.org | Gamblers Anonymous: https://www.gamblersanonymous.org | 我们的支持团队也可以指导您如何安全地限制对您账户的访问。"
+					}
+				}
+			}
+		},
+		"blockchainTransparency": {
+			"title": "🧩 区块链透明度",
+			"paragraph1": "{siteName} 由基于以太坊的智能合约提供支持，确保每笔投注、交易和奖励都透明地记录在链上。| 所有数据和游戏逻辑都是不可变且可验证的，确保了真正的公平性和可审计性。| 您可以通过公共浏览器跟踪所有平台交易，例如：| Etherscan.io | BscScan.com | TronScan.org",
+			"paragraph2": "",
+			"explorersTitle": "",
+			"guarantee": "这保证了永远不会发生任何操纵或偏见。"
+		},
+		"needMoreHelp": {
+			"title": "💬 需要更多帮助吗？",
+			"intro": "我们的支持团队全天候为您提供帮助：",
+			"contactTitle": "",
+			"liveChat": "💬 在线客服（在您连接钱包的仪表盘内可用）"
+		}
+	},
+	"termsAndConditions": {
+		"title": "⚖️ 条款与条件 — {siteName}",
+		"subtitle": "阅读 {siteName} 的条款与条件。了解钱包登录 (Dynamic.xyz)、加密货币存款、取款、公平游戏和负责任博彩政策。",
+		"lastUpdated": "最后更新：2025年1月",
+		"meta": {
+			"title": "条款与条件 | {siteName} – 加密赌场规则",
+			"description": "阅读 {siteName} 的条款与条件。了解钱包登录 (Dynamic.xyz)、加密货币存款、取款、公平游戏和负责任博彩政策。",
+			"keywords": "{siteName} 条款与条件, {siteName} 加密赌场规则, Dynamic.xyz 钱包登录, {siteName} 取款政策, {siteName} 公平游戏",
+			"h1": "条款与条件 – {siteName} 加密钱包赌场",
+			"ogTitle": "条款与条件 | {siteName} (加密钱包赌场)",
+			"ogDescription": "查看 {siteName} 的条款与条件。了解 Dynamic.xyz 钱包登录、加密货币存款、取款和平台规则。"
+		},
+		"sections": {
+			"ownership": {
+				"number": "1",
+				"title": "{siteName} 所有权",
+				"clauses": [
+					{
+						"number": "1.1",
+						"content": "{siteName} 由 {siteName} N.V.（“{siteName}”、“我们”、“我们的”）拥有和运营，"
+					},
+					{
+						"number": "1.2",
+						"content": "{siteName} 是一个仅限加密钱包的赌场。所有存款、投注和取款都通过用户的加密货币钱包处理。我们支持通过 Dynamic.xyz 和兼容的钱包连接器（例如 WalletConnect / MetaMask）进行钱包登录。"
+					}
+				]
+			},
+			"importantNotice": {
+				"number": "2",
+				"title": "重要通知",
+				"clauses": [
+					{
+						"number": "2.1",
+						"content": "通过在 www.{siteDomain}（“网站”）上注册或连接您的钱包，您即与 {siteName} N.V. 签订具有约束力的协议，并同意：(i) 本条款与条件；(ii) 我们的隐私政策；(iii) 我们的Cookie政策；(iv) 我们的联盟条款；以及 (v) 我们的负责任博彩政策。"
+					},
+					{
+						"number": "2.2",
+						"content": "如果您不同意这些条款中的任何一条，请不要访问、使用或在我们的网站上注册。"
+					},
+					{
+						"number": "2.3",
+						"content": "请仔细阅读这些条款。如果您不确定自己的权利或义务，请在使用本网站前咨询您所在司法管辖区的法律顾问。"
+					}
+				]
+			},
+			"generalTerms": {
+				"number": "3",
+				"title": "一般条款",
+				"clauses": [
+					{
+						"number": "3.1",
+						"content": "注册或连接钱包后，您（“用户”、“玩家”、“您”或“您的”）同意遵守 {siteName} 的所有规则和政策。"
+					},
+					{
+						"number": "3.2",
+						"content": "本协议是您与 {siteName} 之间具有法律约束力的合同。"
+					},
+					{
+						"number": "3.3",
+						"content": "这些条款在您连接钱包并开始使用本网站的那一刻生效。"
+					},
+					{
+						"number": "3.4",
+						"content": "{siteName} 保留随时修改或更新这些条款的权利。更改将在网站上公布；继续使用即表示接受。"
+					},
+					{
+						"number": "3.5",
+						"content": "如果发生冲突，这些条款优先于任何其他规则、促销或外部材料。"
+					},
+					{
+						"number": "3.6",
+						"content": "只有这些条款的英文版本具有法律约束力。翻译仅为方便起见。"
+					}
+				]
+			},
+			"accountSecurity": {
+				"number": "4",
+				"title": "账户、钱包登录和安全",
+				"walletLogin": {
+					"title": "4.1 钱包登录 (Dynamic.xyz)",
+					"clauses": [
+						{
+							"number": "4.1.1",
+							"content": "{siteName} 使用 Dynamic.xyz（或其他支持的连接器）进行基于钱包的登录和身份验证。通过连接钱包，您确认您是该钱包的合法所有者，并授权 {siteName} 将该钱包识别为您的账户。"
+						},
+						{
+							"number": "4.1.2",
+							"content": "我们绝不会索要您的私钥。您必须确保您的钱包凭据和设备安全。{siteName} 对因钱包被盗或私钥泄露造成的损失不承担责任。"
+						}
+					]
+				},
+				"registration": {
+					"title": "4.2 注册详情",
+					"clauses": [
+						{
+							"number": "4.2.1",
+							"content": "我们可能会要求您提供联系方式（电子邮件、用户名）以进行账户沟通。您必须提供准确的信息并保持其最新。"
+						},
+						{
+							"number": "4.2.2",
+							"content": "您对使用您连接的钱包进行的所有操作负责。"
+						}
+					]
+				},
+				"multipleAccounts": {
+					"title": "4.3 多个账户和安全",
+					"clauses": [
+						{
+							"number": "4.3.1",
+							"content": "每人只允许拥有一个账户。多个账户或试图规避限制的行为可能导致账户暂停和资金没收。"
+						},
+						{
+							"number": "4.3.2",
+							"content": "启用平台提供的任何安全功能（例如，相关服务的2FA）并保护您自己的钱包。"
+						},
+						{
+							"number": "4.3.3",
+							"content": "如果您怀疑有未经授权的访问，请立即通知支持团队。"
+						}
+					]
+				}
+			},
+			"eligibility": {
+				"number": "5",
+				"title": "资格和用户保证",
+				"clauses": [
+					{
+						"number": "5.1",
+						"content": "您声明并保证：|• 您至少年满18岁（或您所在司法管辖区的最低法定赌博年龄）。|• 您在您所在的位置合法允许使用在线加密赌博服务。|• 您是您连接的钱包的合法所有者。|• 您不会使用VPN或位置欺骗来绕过地区限制。|• 您不会将服务用于非法或商业目的。|• 您接受加密货币的价值可能会波动，并承担所有市场风险。"
+					},
+					{
+						"number": "5.2",
+						"content": "如果您违反这些保证，{siteName} 可能会暂停或终止访问，并在法律允许的情况下扣留资金。"
+					}
+				]
+			},
+			"restrictedJurisdictions": {
+				"number": "6",
+				"title": "受限司法管辖区",
+				"clauses": [
+					{
+						"number": "6.1",
+						"content": "{siteName} 不接受来自禁止或限制加密赌博的司法管辖区的玩家。这包括但不限于：|美国（及其领土）、英国、法国、荷兰、西班牙、德国、澳大利亚、奥地利、科摩罗、伊朗、朝鲜、苏丹、叙利亚以及FATF黑名单上的任何司法管辖区。"
+					},
+					{
+						"number": "6.2",
+						"content": "试图从受限司法管辖区访问服务，包括通过VPN或代理，是违反这些条款的行为，并可能导致账户关闭和资金没收。"
+					}
+				]
+			},
+			"cryptoTransactions": {
+				"number": "7",
+				"title": "加密货币存款和取款",
+				"cryptoOnly": {
+					"title": "7.1 仅限加密货币政策",
+					"clauses": [
+						{
+							"number": "7.1.1",
+							"content": "{siteName} 仅接受支持的加密货币（例如 BTC、ETH、USDT、TRX、BNB）的存款和取款。不接受法定货币、银行卡或银行转账存款。"
+						},
+						{
+							"number": "7.1.2",
+							"content": "所有存款必须来自您控制的钱包。禁止从第三方钱包存款。"
+						}
+					]
+				},
+				"deposits": {
+					"title": "7.2 存款",
+					"clauses": [
+						{
+							"number": "7.2.1",
+							"content": "存款在达到所需的区块链确认后记入。网络（gas）费由您支付。"
+						},
+						{
+							"number": "7.2.2",
+							"content": "{siteName} 可能会拒绝或撤销似乎来自被阻止地址或受限来源的存款。"
+						}
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 取款",
+					"clauses": [
+						{
+							"number": "7.3.1",
+							"content": "取款将处理到您提供的钱包地址。{siteName} 可能会要求您在处理前确认目标钱包。"
+						},
+						{
+							"number": "7.3.2",
+							"content": "您必须有足够的已清算余额来支付取款。为了调查可疑的滥用或异常活动，取款可能会被延迟。"
+						}
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 拒付和冲销",
+					"clauses": [
+						{
+							"number": "7.4.1",
+							"content": "加密货币交易在链上是最终的。如果 {siteName} 因第三方服务提供商的拒付或冲销（在链上很少见）而遭受损失，我们保留追回金额或收取管理费的权利。"
+						}
+					]
+				}
+			},
+			"noKyc": {
+				"number": "8",
+				"title": "无常规身份验证（无KYC）",
+				"clauses": [
+					{
+						"number": "8.1",
+						"content": "{siteName} 不将常规身份验证（KYC）作为正常游戏的条件。用户可以通过 Dynamic.xyz 连接钱包并开始游戏，无需提供身份证明文件。"
+					},
+					{
+						"number": "8.2",
+						"content": "尽管有第8.1条的规定，{siteName} 保留在以下情况下要求提供信息或暂停交易的权利：|• 遵守主管当局的合法命令；|• 预防、调查或补救欺诈、洗钱或其他非法活动；或|• 保护平台的安全和完整性。"
+					},
+					{
+						"number": "8.3",
+						"content": "如果您在法律要求时拒绝提供此类信息，{siteName} 可能会限制或关闭您的账户，并在法律允许的范围内延迟或扣留取款。"
+					}
+				]
+			},
+			"fairPlay": {
+				"number": "9",
+				"title": "公平游戏、禁止行为和安全",
+				"clauses": [
+					{
+						"number": "9.1",
+						"content": "您不得：|• 使用机器人、脚本、自动游戏工具或任何未经授权的软件。|• 与其他玩家串通或操纵游戏结果。|• 创建多个账户以滥用奖金或促销活动。|• 试图逆转或篡改链上交易。|• 利用游戏漏洞或平台漏洞。"
+					},
+					{
+						"number": "9.2",
+						"content": "发现作弊、串通或利用平台的账户可能会被暂停、关闭或没收余额。"
+					},
+					{
+						"number": "9.3",
+						"content": "{siteName} 实施技术和行为监控以保护平台完整性。"
+					}
+				]
+			},
+			"bonuses": {
+				"number": "10",
+				"title": "奖金和促销活动",
+				"clauses": [
+					{
+						"number": "10.1",
+						"content": "所有奖金优惠和促销活动均受每项优惠中规定的特定奖金条款的约束。"
+					},
+					{
+						"number": "10.2",
+						"content": "滥用奖金（包括多个账户或快速切换奖金）可能导致奖金被拒绝、撤销或没收，以及账户被关闭。"
+					},
+					{
+						"number": "10.3",
+						"content": "在提取由奖金产生的资金之前，必须满足奖金的投注要求，具体规定见各促销活动。"
+					}
+				]
+			},
+			"gameRules": {
+				"number": "11",
+				"title": "游戏规则和游戏结算",
+				"clauses": [
+					{
+						"number": "11.1",
+						"content": "只有在您收到屏幕确认后，投注才被接受。余额不足的投注无效。"
+					},
+					{
+						"number": "11.2",
+						"content": "在发生争议时，{siteName} 的内部日志和区块链记录具有权威性。"
+					},
+					{
+						"number": "11.3",
+						"content": "如果赛事被取消、暂停或以其他方式受到影响，{siteName} 将根据已发布的游戏和市场规则结算或作废投注。"
+					},
+					{
+						"number": "11.4",
+						"content": "对于可证明公平的游戏，每个游戏都提供验证工具和服务器种子（如适用）；服务器日志为最终依据。"
+					}
+				]
+			},
+			"errors": {
+				"number": "12",
+				"title": "错误、中断和限制",
+				"clauses": [
+					{
+						"number": "12.1",
+						"content": "{siteName} 对以下原因造成的损失不承担责任：|• 互联网或设备故障；|• 区块链延迟、分叉或网络拥堵；|• 软件错误或第三方服务中断。"
+					},
+					{
+						"number": "12.2",
+						"content": "当检测到错误或漏洞时，{siteName} 保留作废投注、调整余额或取消交易的权利。"
+					},
+					{
+						"number": "12.3",
+						"content": "我们可能会设置投注限额、最高奖金和其他控制措施以保护用户和平台。"
+					}
+				]
+			},
+			"suspension": {
+				"number": "13",
+				"title": "暂停、关闭和资金处理",
+				"clauses": [
+					{
+						"number": "13.1",
+						"content": "在以下情况下，{siteName} 可能会暂停或关闭账户：|• 违反条款；|• 检测到滥用、欺诈或可疑行为；|• 法律或监管义务要求。"
+					},
+					{
+						"number": "13.2",
+						"content": "账户关闭后，未决投注可能会被取消，剩余资金将根据适用法律和平台政策处理。"
+					},
+					{
+						"number": "13.3",
+						"content": "{siteName} 可能会在必要时保留资金以解决争议、遵守合法请求或弥补损失。"
+					}
+				]
+			},
+			"responsibleGaming": {
+				"number": "14",
+				"title": "负责任的游戏",
+				"clauses": [
+					{
+						"number": "14.1",
+						"content": "{siteName} 提倡负责任的赌博。您可以请求：|• 自我排除；|• 存款限额；|• 临时暂停。"
+					},
+					{
+						"number": "14.2",
+						"content": "如果您怀疑有赌博危害，请联系 {siteName} 寻求即时帮助。"
+					},
+					{
+						"number": "14.3",
+						"content": "未成年人赌博（未满18岁或当地法定年龄）是严格禁止的。被发现属于未成年人的账户将被关闭，资金将根据政策处理。"
+					}
+				]
+			},
+			"intellectualProperty": {
+				"number": "15",
+				"title": "知识产权",
+				"clauses": [
+					{
+						"number": "15.1",
+						"content": "{siteName} 上的所有商标、徽标、网站内容、软件和游戏资产均归 {siteName} 所有或许可。未经授权的复制、抓取或再分发是禁止的。"
+					},
+					{
+						"number": "15.2",
+						"content": "您被授予有限的、可撤销的许可，仅可出于个人娱乐目的访问本服务。"
+					}
+				]
+			},
+			"liability": {
+				"number": "16",
+				"title": "责任限制",
+				"clauses": [
+					{
+						"number": "16.1",
+						"content": "在法律允许的最大范围内，{siteName} 对间接、特殊、后果性或附带性损失，包括利润损失或机会成本，概不负责。"
+					},
+					{
+						"number": "16.2",
+						"content": "我们对与这些条款相关的任何索赔的总责任不得超过您上次存款的价值或适用法律规定的金额。"
+					},
+					{
+						"number": "16.3",
+						"content": "这些条款中的任何内容均不限制因疏忽造成的死亡或人身伤害的责任，如果适用法律禁止此类限制。"
+					}
+				]
+			},
+			"disputes": {
+				"number": "17",
+				"title": "争议解决和管辖法律",
+				"clauses": [
+					{
+						"number": "17.1",
+						"content": "如有争议，请联系 {siteName}。我们的目标是迅速解决投诉；如有需要，可上报至管理层。"
+					}
+				]
+			},
+			"amendments": {
+				"number": "18",
+				"title": "修订",
+				"clauses": [
+					{
+						"number": "18.1",
+						"content": "{siteName} 可能随时修订这些条款。更新后的条款将在网站上公布。继续使用即表示接受。"
+					}
+				]
+			},
+			"miscellaneous": {
+				"number": "19",
+				"title": "其他",
+				"clauses": [
+					{
+						"number": "19.1",
+						"content": "这些条款构成您与 {siteName} 之间关于本服务的完整协议。"
+					},
+					{
+						"number": "19.2",
+						"content": "如果任何条款被认定为不可执行，它将被修改到必要的最小程度，其余条款将继续有效。"
+					},
+					{
+						"number": "19.3",
+						"content": "您不得转让您在本条款下的权利。{siteName} 可以转让或分包权利和义务。"
+					}
+				]
+			},
+			"contact": {
+				"number": "20",
+				"title": "联系方式",
+				"content": "如需支持、投诉或法律通知：",
+				"link": "🌐 https://{siteDomain}"
 			}
 		}
 	}

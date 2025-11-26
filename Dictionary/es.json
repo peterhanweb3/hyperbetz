@@ -1291,6 +1291,89 @@
 			"uploadFailed": "Error al leer el archivo de fuente"
 		}
 	},
+	"contact": {
+		"title": "Contáctenos",
+		"subtitle": "¿Tiene preguntas o necesita ayuda? Nuestro dedicado equipo de soporte está aquí para ayudarle las 24 horas del día.",
+		"methods": {
+			"liveChat": {
+				"title": "Chat en vivo",
+				"description": "Obtenga ayuda instantánea de nuestro equipo de soporte a través del chat en vivo.",
+				"availability": "Disponible 24/7"
+			},
+			"email": {
+				"title": "Soporte por correo electrónico",
+				"description": "Envíenos un correo electrónico y le responderemos en 24 horas.",
+				"availability": "Respuesta en 24h"
+			},
+			"support": {
+				"title": "Centro de ayuda",
+				"description": "Explore nuestra completa base de conocimientos para obtener respuestas rápidas.",
+				"availability": "Autoservicio disponible"
+			}
+		},
+		"form": {
+			"title": "Envíenos un mensaje",
+			"name": "Nombre completo",
+			"namePlaceholder": "Ingrese su nombre completo",
+			"email": "Dirección de correo electrónico",
+			"emailPlaceholder": "Ingrese su dirección de correo electrónico",
+			"subject": "Asunto",
+			"subjectPlaceholder": "¿Sobre qué es su consulta?",
+			"message": "Mensaje",
+			"messagePlaceholder": "Por favor, describa su consulta en detalle...",
+			"submit": "Enviar mensaje",
+			"sending": "Enviando...",
+			"errors": {
+				"nameRequired": "Por favor ingrese su nombre",
+				"emailRequired": "Por favor ingrese su correo electrónico",
+				"emailInvalid": "Por favor, introduce una dirección de correo electrónico válida",
+				"subjectRequired": "Por favor ingrese un asunto",
+				"messageRequired": "Por favor ingrese su mensaje",
+				"messageTooShort": "El mensaje debe tener al menos 10 caracteres"
+			}
+		},
+		"responseTime": {
+			"title": "Tiempos de respuesta esperados",
+			"description": "Nos esforzamos por responder a todas las consultas lo más rápido posible.",
+			"liveChat": {
+				"title": "Chat en vivo",
+				"time": "Menos de 2 minutos"
+			},
+			"email": {
+				"title": "Correo electrónico",
+				"time": "Dentro de las 24 horas"
+			},
+			"priority": {
+				"title": "Soporte VIP",
+				"time": "Manejo prioritario"
+			}
+		},
+		"faq": {
+			"title": "Preguntas frecuentes",
+			"items": [
+				{
+					"question": "¿Cómo restablezco mi contraseña?",
+					"answer": "Puede restablecer su contraseña haciendo clic en el enlace '¿Olvidó su contraseña?' en la página de inicio de sesión. Ingrese su dirección de correo electrónico registrada y siga las instrucciones enviadas a su bandeja de entrada."
+				},
+				{
+					"question": "¿Cuánto tardan en procesarse los retiros?",
+					"answer": "La mayoría de los retiros de criptomonedas se procesan instantáneamente. En algunos casos, puede ser necesaria una verificación manual, que puede tardar hasta 24 horas."
+				},
+				{
+					"question": "¿Qué criptomonedas aceptan?",
+					"answer": "Aceptamos las principales criptomonedas, incluidas Bitcoin (BTC), Ethereum (ETH), USDT, USDC y varios otros tokens populares en múltiples redes de blockchain."
+				},
+				{
+					"question": "¿Cómo puedo verificar mi cuenta?",
+					"answer": "La verificación de la cuenta se puede completar a través de la configuración de su perfil. Es posible que deba proporcionar documentos de identificación según el nivel de su cuenta y los límites de retiro."
+				},
+				{
+					"question": "¿Está segura mi información personal?",
+					"answer": "Sí, utilizamos encriptación y medidas de seguridad estándar de la industria para proteger toda la información personal y financiera. Nuestra plataforma se somete a auditorías de seguridad periódicas."
+				}
+			]
+		}
+	},
 	"about": {
 		"title": "🎮 Acerca de {siteName}",
 		"subtitle": "En {siteName}, el juego no es solo algo para llenar el tiempo, se trata de una emoción real. Ese momento en el que consigue una gran ganancia, o cuando todo simplemente encaja, de eso se trata.",

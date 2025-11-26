@@ -15,7 +15,7 @@ import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 import { useState } from "react";
 import MobileLoginDropdown from "./header/mobile-login-dropdown";
-import { EmailVerificationModal } from "../auth/email-verification-modal";
+import { EmailVerificationModal } from "../features/auth/email-verification-modal";
 
 interface NavigationItem {
 	id: string;

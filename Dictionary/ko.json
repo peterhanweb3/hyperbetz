@@ -1,6 +1,6 @@
 {
 	"common": {
-		"loading": "로딩 중...",
+		"loading": "로드 중...",
 		"save": "저장",
 		"cancel": "취소",
 		"confirm": "확인",
@@ -12,15 +12,15 @@
 	"header": {
 		"toggleSidebar": "사이드바 전환",
 		"searchPlaceholder": "게임, 제공업체 검색...",
-		"liveChat": "라이브 채팅",
+		"liveChat": "실시간 채팅",
 		"player": "플레이어",
-		"vip": "요일",
+		"vip": "VIP",
 		"profile": "프로필",
 		"statistics": "통계",
 		"wallet": "입금/출금",
 		"cashier": "출납원",
 		"winLoss": "승/패",
-		"affiliate": "제휴",
+		"affiliate": "추천 보너스",
 		"logout": "로그아웃",
 		"balance": "잔액",
 		"turnoverBonus": "턴오버 보너스"
@@ -32,11 +32,11 @@
 		"wallet": "지갑",
 		"settings": "설정",
 		"promotions": "프로모션",
-		"affiliate": "제휴",
+		"affiliate": "추천 보너스",
+		"bonus": "턴오버 보너스",
 		"providers": "제공업체",
 		"lobby": "로비",
-		"bonus": "매출 보너스",
-		"about": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 35 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+		"about": "회사 소개"
 	},
 	"profile": {
 		"language": "언어",
@@ -53,7 +53,7 @@
 		"notConnected": "연결되지 않음",
 		"myProfile": "내 프로필",
 		"history": {
-			"title": "내역"
+			"title": "기록"
 		},
 		"logout": "로그아웃",
 		"pendingRegistration": "등록 대기 중",
@@ -61,11 +61,11 @@
 		"balanceOverview": "잔액 개요",
 		"gettingStarted": "시작하기",
 		"verifyEmail": "이메일 인증",
-		"completeEmailVerification": "이메일 인증을 완료하세요",
-		"verifyPhone": "휴대폰 번호 인증",
-		"addPhoneVerification": "휴대폰 인증 추가",
+		"completeEmailVerification": "이메일 인증 완료",
+		"verifyPhone": "전화번호 인증",
+		"addPhoneVerification": "전화번호 인증 추가",
 		"firstDeposit": "첫 입금",
-		"makeFirstDeposit": "첫 입금을 하세요",
+		"makeFirstDeposit": "첫 입금하기",
 		"placeBetOrTrade": "베팅하기 / 거래하기",
 		"startFirstGame": "첫 게임 시작하기",
 		"recentActivity": "최근 활동",
@@ -77,7 +77,7 @@
 		"twoDaysAgo": "2일 전",
 		"deposit": "입금",
 		"loggedOutTitle": "앗! 로그아웃되었습니다",
-		"loggedOutSubtitle": "프로필을 보려면 로그인하세요",
+		"loggedOutSubtitle": "프로필을 보려면 로그인해주세요",
 		"goHome": "홈으로 가기",
 		"withdrawal": "출금",
 		"transactions": {
@@ -88,22 +88,22 @@
 			"advancedFilters": "고급 필터",
 			"searchTransactionComingSoon": "거래 검색 (출시 예정)",
 			"searchPlaceholderDisabled": "검색 기능은 API 레벨에서 구현될 예정입니다...",
-			"dateRange": "기간 설정",
-			"selectDateRange": "기간 선택",
+			"dateRange": "날짜 범위",
+			"selectDateRange": "날짜 범위 선택",
 			"today": "오늘",
 			"last7Days": "최근 7일",
 			"last30Days": "최근 30일",
 			"last90Days": "최근 90일",
 			"thisMonth": "이번 달",
 			"lastMonth": "지난 달",
-			"customRange": "사용자 설정",
-			"fromDate": "시작일",
-			"toDate": "종료일",
+			"customRange": "사용자 지정 범위",
+			"fromDate": "시작 날짜",
+			"toDate": "종료 날짜",
 			"transactionStatus": "거래 상태",
 			"allStatuses": "모든 상태",
 			"success": "성공",
 			"pending": "대기 중",
-			"rejected": "거절됨",
+			"rejected": "거부됨",
 			"clearAll": "모두 지우기",
 			"cancel": "취소",
 			"applyFilters": "필터 적용",
@@ -111,23 +111,23 @@
 			"statusLabel": "상태",
 			"dateLabel": "날짜",
 			"statsTotalTransactions": "총 {total}건의 거래",
-			"pageOf": "{total}페이지 중 {current}페이지",
-			"live": "라이브",
+			"pageOf": "{total} 중 {current} 페이지",
+			"live": "실시간",
 			"tabs": {
 				"all": "전체",
 				"deposits": "입금",
 				"withdrawals": "출금"
 			},
-			"errorLoadingTransactions": "거래 내역을 불러오는 중 오류 발생",
+			"errorLoadingTransactions": "거래 내역 로드 오류",
 			"tryAgain": "다시 시도",
-			"noTransactionsFound": "거래 내역을 찾을 수 없습니다",
-			"noTransactionsAvailableSelectedPeriod": "선택한 기간에 거래 내역이 없습니다.",
-			"noDepositsFoundSelectedPeriod": "선택한 기간에 입금 내역이 없습니다.",
-			"noWithdrawalsFoundSelectedPeriod": "선택한 기간에 출금 내역이 없습니다.",
+			"noTransactionsFound": "거래 내역 없음",
+			"noTransactionsAvailableSelectedPeriod": "선택한 기간 동안 거래 내역이 없습니다.",
+			"noDepositsFoundSelectedPeriod": "선택한 기간 동안 입금 내역이 없습니다.",
+			"noWithdrawalsFoundSelectedPeriod": "선택한 기간 동안 출금 내역이 없습니다.",
 			"show": "보기",
-			"ofTransactions": "/ 총 {count}건",
-			"showingRangeOfTotal": "총 {total}건 중 {from}-{to}건 표시",
-			"pageShort": "{current}/{total} 페이지"
+			"ofTransactions": "{count}건의 거래 중",
+			"showingRangeOfTotal": "{total}건 중 {from}-{to}건 표시",
+			"pageShort": "{total} 중 {current} 페이지"
 		},
 		"betHistory": {
 			"title": "베팅 내역",
@@ -135,24 +135,24 @@
 			"filters": "필터",
 			"refresh": "새로고침",
 			"advancedFilters": "고급 필터",
-			"dateRange": "기간 설정",
-			"selectDateRange": "기간 선택",
+			"dateRange": "날짜 범위",
+			"selectDateRange": "날짜 범위 선택",
 			"today": "오늘",
 			"last7Days": "최근 7일",
 			"last30Days": "최근 30일",
 			"last90Days": "최근 90일",
 			"thisMonth": "이번 달",
 			"lastMonth": "지난 달",
-			"customRange": "사용자 설정",
-			"fromDate": "시작일",
-			"toDate": "종료일",
+			"customRange": "사용자 지정 범위",
+			"fromDate": "시작 날짜",
+			"toDate": "종료 날짜",
 			"provider": "제공업체",
 			"allProviders": "모든 제공업체",
 			"status": "상태",
 			"allStatuses": "모든 상태",
-			"outstanding": "미정산",
-			"win": "승리",
-			"lose": "패배",
+			"outstanding": "미결제",
+			"win": "승",
+			"lose": "패",
 			"draw": "무승부",
 			"void": "무효",
 			"bonusWin": "보너스 승리",
@@ -165,19 +165,19 @@
 			"dateLabel": "날짜",
 			"totalBets": "총 베팅 수",
 			"totalProfitLoss": "총 손익",
-			"pageOf": "{total}페이지 중 {current}페이지",
-			"live": "라이브",
-			"errorLoadingBets": "베팅 내역을 불러오는 중 오류 발생",
-			"failedToLoadBetHistory": "베팅 내역을 불러오지 못했습니다. 다시 시도해 주세요.",
+			"pageOf": "{total} 중 {current} 페이지",
+			"live": "실시간",
+			"errorLoadingBets": "베팅 내역 로드 오류",
+			"failedToLoadBetHistory": "베팅 내역을 로드하지 못했습니다. 다시 시도해주세요.",
 			"tryAgain": "다시 시도",
-			"noBetsFound": "베팅 내역을 찾을 수 없습니다",
+			"noBetsFound": "베팅 내역 없음",
 			"noBetsFoundSelectedPeriod": "선택한 기간 및 필터에 대한 베팅 내역이 없습니다.",
 			"show": "보기",
-			"ofBets": "/ 총 {count}건",
-			"showingRangeOfTotal": "총 {total}건 중 {from}-{to}건 표시",
+			"ofBets": "{count}건의 베팅 중",
+			"showingRangeOfTotal": "{total}건 중 {from}-{to}건 표시",
 			"totalBet": "총 베팅액",
-			"totalWin": "총 당첨금",
-			"net": "순이익",
+			"totalWin": "총 승리액",
+			"net": "순수익",
 			"tableHeaders": {
 				"date": "날짜",
 				"game": "게임",
@@ -185,17 +185,17 @@
 				"type": "유형",
 				"status": "상태",
 				"betAmount": "베팅액",
-				"winAmount": "당첨금",
+				"winAmount": "승리액",
 				"hideAmounts": "금액 숨기기",
 				"showAmounts": "금액 표시",
 				"gameType": "게임 유형",
-				"vendor": "개발사",
+				"vendor": "공급업체",
 				"lastUpdate": "최종 업데이트",
 				"netResult": "순 결과",
 				"betId": "베팅 ID"
 			},
-			"errorLoading": "로딩 중 오류 발생",
-			"noBetsFoundDescription": "게임을 시작하여 베팅 내역을 여기에 표시하세요.",
+			"errorLoading": "로드 오류",
+			"noBetsFoundDescription": "게임을 시작하여 여기에 베팅 내역을 확인하세요.",
 			"betHistory": "베팅 내역",
 			"hideAmounts": "금액 숨기기",
 			"showAmounts": "금액 표시",
@@ -203,17 +203,17 @@
 			"game": "게임",
 			"betId": "베팅 ID",
 			"amount": "금액",
-			"payout": "지급금",
+			"payout": "지불금",
 			"player": "플레이어",
 			"gameType": "게임 유형",
-			"vendor": "개발사",
+			"vendor": "공급업체",
 			"lastUpdate": "최종 업데이트",
 			"netResult": "순 결과",
 			"totalWagered": "총 베팅액",
-			"totalWon": "총 당첨금",
+			"totalWon": "총 승리액",
 			"netProfit": "순이익",
 			"winRate": "승률",
-			"showingResults": "총 {total}개 결과 중 {start}-{end}개 표시",
+			"showingResults": "{total}개 결과 중 {start}-{end}개 표시",
 			"firstPage": "첫 페이지",
 			"previousPage": "이전 페이지",
 			"nextPage": "다음 페이지",
@@ -221,7 +221,7 @@
 		}
 	},
 	"chat": {
-		"title": "라이브 채팅",
+		"title": "실시간 채팅",
 		"placeholder": "메시지를 입력하세요...",
 		"send": "전송",
 		"input": {
@@ -230,13 +230,13 @@
 		"reply": {
 			"replyingTo": "{username}님에게 답장 중",
 			"types": {
-				"win": "{amount} {currency} 당첨",
+				"win": "{amount} {currency} 획득",
 				"gif": "GIF 메시지",
 				"image": "이미지",
 				"default": "메시지"
 			},
 			"preview": {
-				"winIn": "{game}에서 {amount} {currency} 당첨",
+				"winIn": "{game}에서 {amount} {currency} 획득",
 				"gifAlt": "GIF 미리보기",
 				"imageAlt": "이미지 미리보기",
 				"emoji": "이모티콘 메시지",
@@ -251,7 +251,7 @@
 			"statusReady": "공유 준비 완료",
 			"roomLabel": "🎰 카지노 채팅",
 			"shareNotice": "이미지는 채팅방의 모든 플레이어와 공유됩니다",
-			"closeAria": "대화상자 닫기",
+			"closeAria": "대화 상자 닫기",
 			"cancelAria": "이미지 업로드 취소",
 			"sendAria": "채팅에 이미지 보내기",
 			"send": "채팅에 보내기"
@@ -263,16 +263,16 @@
 				"emojis": "이모티콘",
 				"gifs": "GIF"
 			},
-			"loadingEmojis": "이모티콘 로딩 중...",
-			"loadingGifs": "GIF 로딩 중...",
-			"retry": "재시도",
-			"recent": "최근 사용",
+			"loadingEmojis": "이모티콘 로드 중...",
+			"loadingGifs": "GIF 로드 중...",
+			"retry": "다시 시도",
+			"recent": "최근",
 			"noEmojis": "이모티콘을 찾을 수 없습니다",
 			"noGifs": "GIF를 찾을 수 없습니다",
-			"tryDifferent": "다른 검색어를 시도해 보세요",
+			"tryDifferent": "다른 검색어를 시도해보세요",
 			"gifCategories": {
 				"trending": "인기",
-				"reactions": "리액션",
+				"reactions": "반응",
 				"gaming": "게임",
 				"casino": "카지노",
 				"celebration": "축하",
@@ -283,21 +283,21 @@
 			"clickOrTab": "클릭 또는 탭하여 선택",
 			"noUsers": "사용자를 찾을 수 없습니다",
 			"noUsersMatching": "일치하는 사용자가 없습니다",
-			"startTyping": "검색을 위해 입력을 시작하세요",
+			"startTyping": "검색을 시작하려면 입력하세요",
 			"typeAt": "입력",
-			"toSeeSuggestions": "하여 추천 보기 🎰",
+			"toSeeSuggestions": "추천을 보려면 🎰",
 			"errors": {
-				"emojisLoad": "이모티콘 로딩 실패",
-				"emojisSearch": "이모티콘 검색 실패",
-				"gifsLoad": "GIF 로딩 실패"
+				"emojisLoad": "이모티콘을 로드하지 못했습니다",
+				"emojisSearch": "이모티콘을 검색하지 못했습니다",
+				"gifsLoad": "GIF를 로드하지 못했습니다"
 			}
 		},
 		"messages": {
 			"emptyTitle": "아직 메시지가 없습니다...",
 			"emptySubtitle": "대화를 시작하고 큰 승리를 거두세요! 🎰",
-			"loadingHistory": "채팅 기록 로딩 중...",
+			"loadingHistory": "채팅 기록 로드 중...",
 			"loadingHistorySubtitle": "최근 메시지 가져오는 중 📜",
-			"historyError": "채팅 기록 로딩 실패"
+			"historyError": "채팅 기록을 로드하지 못했습니다"
 		},
 		"message": {
 			"you": "나",
@@ -306,14 +306,14 @@
 			"imageAlt": "업로드된 이미지",
 			"rainTitle": "머니 레인! 🌧️💰",
 			"recipients": "→ {count}명의 수신자",
-			"eachTo": "각각에게 {amount} {currency}: {list}",
+			"eachTo": "각각 {amount} {currency}을(를) 다음에게: {list}",
 			"replyCount": "답글 {count}개",
-			"loadingHistory": "채팅 기록 로딩 중..."
+			"loadingHistory": "채팅 기록 로드 중..."
 		},
 		"system": {
 			"slashDisabled": "슬래시 명령어는 일시적으로 비활성화되었습니다. 일반 메시지를 사용해주세요.",
-			"rateLimit": "요청 한도를 초과했습니다. 다음 메시지를 보내기 전 {seconds}초 동안 기다려주세요.",
-			"cannotTagSelf": "메시지에서 자신을 태그할 수 없습니다.",
+			"rateLimit": "속도 제한을 초과했습니다. 다음 메시지를 보내기 전에 {seconds}초 기다려주세요.",
+			"cannotTagSelf": "메시지에 자신을 태그할 수 없습니다.",
 			"processingImage": "이미지 처리 중...",
 			"failedUploadPrefix": "이미지 업로드 실패: {message}",
 			"unknownError": "알 수 없는 오류"
@@ -331,17 +331,17 @@
 		"providers": "제공업체",
 		"trendingNow": "현재 인기",
 		"allProviders": "모든 제공업체",
-		"allTopProviders": "모든 상위 제공업체",
+		"allTopProviders": "모든 인기 제공업체",
 		"hotBadge": "인기"
 	},
 	"search": {
 		"title": "게임 검색",
-		"subtitle": "이름, 제공업체, 또는 카테고리로 찾기",
+		"subtitle": "이름, 제공업체 또는 카테고리로 찾기",
 		"placeholder": "게임, 제공업체, 카테고리 검색...",
 		"clear": "지우기",
 		"recent": "최근:",
 		"popular": "인기:",
-		"favoritesTry": "시도해 보세요 — 즐겨찾기",
+		"favoritesTry": "시도해볼 수 있습니다 — 즐겨찾기",
 		"hotPicks": "인기 추천",
 		"resultsCount": "{count}개의 게임을 찾았습니다",
 		"noResults": "결과 없음",
@@ -351,7 +351,7 @@
 			"provider": "제공업체"
 		},
 		"sections": {
-			"topProviders": "상위 제공업체",
+			"topProviders": "인기 제공업체",
 			"selectedProviders": "선택된 제공업체",
 			"categories": "카테고리",
 			"games": "게임",
@@ -363,14 +363,14 @@
 		"gameTypes": {
 			"blackjack": "블랙잭",
 			"roulette": "룰렛",
-			"crash": "크래시"
+			"crash": "크래쉬"
 		}
 	},
 	"query": {
 		"sort": {
 			"label": "정렬 기준",
-			"a-z": "AZ",
-			"z-a": "Z~A"
+			"a-z": "A-Z",
+			"z-a": "Z-A"
 		},
 		"filters": {
 			"filter": "필터",
@@ -403,7 +403,7 @@
 		"clear": "지우기"
 	},
 	"home": {
-		"topProviders": "상위 게임 제공업체"
+		"topProviders": "인기 게임 제공업체"
 	},
 	"lobby": {
 		"yourFavorites": "즐겨찾기",
@@ -414,9 +414,9 @@
 		"realTimeScoreboard": "실시간 스코어보드"
 	},
 	"affiliate": {
-		"title": "제휴 프로그램",
-		"loginPromptTitle": "추천 프로그램",
-		"loginPromptSubtitle": "로그인하여 추천 통계, 보너스를 확인하고 보상을 요청하세요.",
+		"title": "추천 보너스 프로그램",
+		"loginPromptTitle": "추천 보너스 프로그램",
+		"loginPromptSubtitle": "로그인하여 추천 통계, 보너스를 확인하고 보상을 청구하세요.",
 		"goHome": "홈으로 가기",
 		"tabs": {
 			"dashboard": "대시보드",
@@ -426,11 +426,11 @@
 		"refresh": "새로고침",
 		"refreshing": "새로고침 중...",
 		"refreshAllSuccess": "모든 데이터가 성공적으로 새로고침되었습니다!",
-		"refreshPartial": "부분적으로 새로고침됨: {success}/{total} 섹션 업데이트됨",
-		"refreshFailed": "데이터 새로고침에 실패했습니다. 다시 시도해 주세요.",
+		"refreshPartial": "부분적으로 새로고침됨: {total}개 섹션 중 {success}개 업데이트됨",
+		"refreshFailed": "데이터를 새로고침하지 못했습니다. 다시 시도해주세요.",
 		"dashboard": {
 			"title": "제휴 대시보드",
-			"subtitle": "추천, 수익, 커미션 성과 추적",
+			"subtitle": "추천, 수익 및 커미션 성과 추적",
 			"performanceOverview": "성과 개요",
 			"referralManagement": "추천 관리",
 			"termsAndCommission": "약관 및 커미션 구조",
@@ -438,120 +438,290 @@
 			"claim": "청구",
 			"claiming": "청구 중...",
 			"totalIncome": "총 수입",
+			"claimButtonTitle": "보너스 청구",
 			"totalReferrals": "총 추천 수",
-			"usersUnit": "명",
+			"usersUnit": "사용자",
 			"yourReferralLinks": "내 추천 링크",
-			"referralLinksSubtitle": "이 링크를 공유하여 새로운 사용자를 추천하고 커미션을 받으세요",
+			"referralLinksSubtitle": "이 링크를 공유하여 신규 사용자를 추천하고 커미션을 받으세요",
 			"completeReferralLink": "전체 추천 링크",
 			"fullReferralPlaceholder": "전체 추천 링크가 여기에 표시됩니다",
-			"fullReferralHelp": "사용자가 추천 코드로 등록하기 위해 클릭할 수 있는 직접 링크",
+			"fullReferralHelp": "사용자가 클릭하여 추천 코드로 등록할 수 있는 직접 링크",
 			"referralCodeOnly": "추천 코드만",
 			"yourReferralId": "내 추천 ID",
-			"referralIdHelp": "이 코드를 공유하여 사용자가 등록 시 수동으로 입력할 수 있도록 하세요",
+			"referralIdHelp": "사용자가 등록 시 수동으로 입력할 수 있도록 이 코드를 공유하세요",
 			"copyFullSuccess": "전체 추천 링크가 클립보드에 복사되었습니다!",
-			"copyIdSuccess": "추천 ID가 클립보드에 복사되었습니다!",
-			"claimButtonTitle": "보너스 받기"
+			"copyIdSuccess": "추천 ID가 클립보드에 복사되었습니다!"
 		},
 		"referrals": {
 			"title": "내 추천",
-			"subtitle": "제휴 링크를 통해 추천된 모든 사용자를 추적하고 관리하세요",
+			"subtitle": "제휴 링크를 통해 추천된 모든 사용자 추적 및 관리",
 			"totalReferrals": "총 추천 수",
-			"monitorHelp": "추천인의 활동, 입금, 게임 패턴을 모니터링하세요",
+			"monitorHelp": "추천인의 활동, 입금 및 게임 패턴 모니터링",
 			"sort": {
 				"placeholder": "정렬 기준...",
-				"nicknameAsc": "닉네임 (가-하)",
-				"nicknameDesc": "닉네임 (하-가)",
-				"lastLogin": "마지막 로그인",
+				"nicknameAsc": "닉네임 (A-Z)",
+				"nicknameDesc": "닉네임 (Z-A)",
+				"lastLogin": "최종 로그인",
 				"unclaimedAmount": "미청구 금액"
 			},
 			"table": {
 				"nickname": "닉네임",
 				"totalWager": "총 베팅액",
-				"lastLogin": "마지막 로그인",
-				"registered": "등록일",
-				"lastDeposit": "마지막 입금",
-				"depositDate": "입금일",
+				"lastLogin": "최종 로그인",
+				"registered": "등록됨",
+				"lastDeposit": "최종 입금",
+				"depositDate": "입금 날짜",
 				"tier": "등급"
 			},
 			"empty": {
-				"title": "추천 내역을 찾을 수 없습니다",
+				"title": "추천인 없음",
 				"subtitle": "사용자를 추천하여 여기에 표시되도록 하세요."
 			},
 			"pagination": {
-				"showing": "총 {total}개 결과 중 {from}부터 {to}까지 표시",
+				"showing": "{total}개 결과 중 {from}에서 {to}까지 표시",
 				"prev": "이전",
 				"next": "다음"
 			}
 		},
 		"rates": {
 			"title": "커미션 요율 구조",
-			"subtitle": "등급 레벨 및 게임 카테고리별 수익 비율",
-			"howItWorks": {
-				"title": "커미션 등급 작동 방식",
-				"body": "커미션 등급은 추천인의 일일 총 베팅액에 따라 결정됩니다. 등급이 높을수록 모든 게임 유형에서 더 나은 커미션 요율을 제공합니다."
+			"subtitle": "등급 수준 및 게임 카테고리별 수익 비율",
+			"overview": {
+				"title": "개요",
+				"body": "추천 보너스는 슬롯, 라이브 카지노, 스포츠북 및 복권에서 추천된 플레이어의 베팅 턴오버를 기반으로 제휴사에게 보상합니다. 커미션은 24시간마다 계산되며, 수익은 다른 턴오버 등급에 따라 결정됩니다."
 			},
 			"calculation": {
-				"title": "커미션 계산 방식",
-				"desc": "커미션은 추천된 플레이어의 총 베팅액을 기준으로 24시간마다 계산됩니다. 예:",
+				"title": "커미션 계산 방법",
+				"desc": "커미션은 추천된 플레이어의 총 베팅액을 기반으로 24시간마다 계산됩니다. \n예시:",
 				"exampleTitle": "등급 {tier}:",
 				"wagerIn": "{gameType}에 {amount} 베팅"
 			},
 			"table": {
-				"tierLevel": "등급 레벨",
+				"tierLevel": "등급 수준",
 				"wagerRange": "베팅 범위",
 				"slots": "슬롯",
 				"liveCasino": "라이브 카지노",
 				"sports": "스포츠",
 				"tierPrefix": "등급",
-				"commissionLevel": "커미션 레벨",
+				"commissionLevel": "커미션 수준",
 				"dailyWager": "일일 베팅량"
 			},
 			"claim": {
-				"title": "청구 및 출금",
+				"title": "청구 및 인출",
 				"points": {
-					"0": "커미션은 계산이 완료되면 출금할 수 있습니다.",
-					"1": "미청구 커미션에는 만료일이 없으며, 청구될 때까지 누적됩니다.",
-					"2": "출금은 최소 한도 및 처리 시간과 같은 플랫폼의 표준 규칙을 따릅니다."
+					"0": "커미션은 계산되면 인출할 수 있습니다.",
+					"1": "미청구 커미션에는 만료일이 없으며 청구될 때까지 누적됩니다.",
+					"2": "인출은 최소 한도 및 처리 시간과 같은 플랫폼의 표준 규칙을 따릅니다."
 				}
 			},
 			"system": {
 				"title": "시스템 시간 및 운영",
 				"dailyTimeframeLabel": "일일 시간대:",
-				"dailyTimeframeValue": "매일 00:00 UTC부터 23:59 UTC까지.",
-				"claimDailyLabel": "일일 청구:",
+				"dailyTimeframeValue": "매일 00:00 UTC ~ 23:59 UTC.",
+				"claimDailyLabel": "매일 청구:",
 				"claimDailyValue": "매일 14:00 UTC에 가능 (현지 시간: {local}).",
-				"note": "참고: 저희는 다양한 시간대의 제공업체와 협력하지만, 모든 계산은 일관성을 보장하고 혼동을 피하기 위해 UTC를 따릅니다."
+				"note": "참고: 다른 시간대의 제공업체와 협력하지만 모든 계산은 일관성을 보장하고 혼동을 피하기 위해 UTC를 따릅니다."
 			},
 			"amendments": {
-				"title": "개정",
-				"body": "당사는 언제든지 이 약관을 업데이트할 수 있습니다. 변경 사항은 게시 즉시 효력이 발생하며, 계속 참여하는 것은 새로운 약관에 동의하는 것을 의미합니다."
+				"title": "수정",
+				"body": "당사는 언제든지 이 약관을 업데이트할 수 있습니다. 변경 사항은 게시 즉시 효력이 발생하며, 계속 참여하면 새로운 약관에 동의하는 것으로 간주됩니다."
 			},
 			"footer": {
 				"schedule": "커미션 일정:",
 				"availableDaily": "매일",
 				"localTimeLabel": "에 가능 (현지 시간: {time})"
-			},
-			"overview": {
-				"title": "개요",
-				"body": "제휴 프로그램은 슬롯, 라이브 카지노, 스포츠북, 복권에서 추천된 플레이어의 베팅 매출에 따라 제휴사에 보상을 제공합니다. 수수료는 24시간마다 계산되며, 다양한 매출 층에 따른 수익을 기준으로 합니다."
 			}
 		},
 		"calculator": {
 			"title": "수익 계산기",
-			"subtitle": "추천인의 베팅액을 기준으로 커미션 수익을 추정하세요",
+			"subtitle": "추천인의 베팅 금액을 기반으로 예상 커미션 수익을 계산합니다",
 			"interactive": {
-				"title": "인터랙티브 도구:",
-				"body": "다양한 베팅액을 입력하여 모든 등급에서의 잠재적 수익을 확인하세요"
+				"title": "대화형 도구:",
+				"body": "다른 베팅 금액을 입력하여 모든 등급에서 잠재적인 수익을 확인하세요"
 			},
 			"potentialEarnings": "잠재적 수익",
 			"basedOnRate": "{percentage}% 커미션 요율 기준",
 			"tier": "등급 {level}",
-			"commissionLevel": "커미션 레벨 {level}",
-			"enterWager": "베팅액 입력 (USD)",
+			"commissionLevel": "커미션 수준 {level}",
+			"enterWager": "베팅 금액 입력 (USD)",
 			"wagerPlaceholder": "예: 1000",
 			"calcFor": "${amount} 베팅에 대한 수익 계산 중",
-			"totalPotential": "총 잠재 수익:",
+			"totalPotential": "총 잠재적 수익:",
 			"combinedAtTier": "등급 {level}에서 모든 게임 유형의 합산 수익"
+		}
+	},
+	"bonus": {
+		"title": "턴오버 보너스 프로그램",
+		"loginPromptTitle": "턴오버 보너스 프로그램",
+		"loginPromptSubtitle": "로그인하여 보너스 통계를 확인하고 보상을 청구하세요.",
+		"goHome": "홈으로 가기",
+		"tabs": {
+			"dashboard": "대시보드",
+			"claims": "청구",
+			"rates": "보너스 요율",
+			"calculator": "계산기"
+		},
+		"refresh": "새로고침",
+		"refreshing": "새로고침 중...",
+		"refreshAllSuccess": "모든 데이터가 성공적으로 새로고침되었습니다!",
+		"refreshPartial": "부분적으로 새로고침됨: {total}개 섹션 중 {success}개 업데이트됨",
+		"refreshFailed": "데이터를 새로고침하지 못했습니다. 다시 시도해주세요.",
+		"dashboard": {
+			"title": "보너스 대시보드",
+			"subtitle": "베팅, 보너스 및 보상 수익 추적",
+			"claimButtonTitle": "청구",
+			"performanceOverview": "보너스 개요",
+			"bonusRatesTitle": "보너스 요율 구조",
+			"totalIncome": "총 보너스",
+			"pendingBonus": "대기 중인 보너스",
+			"lastClaim": "최종 청구",
+			"unclaimedEarnings": "청구 가능",
+			"claim": {
+				"title": "청구 및 인출",
+				"points": {
+					"0": "커미션은 계산되면 인출할 수 있습니다.",
+					"1": "미청구 커미션에는 만료일이 없으며 청구될 때까지 누적됩니다.",
+					"2": "인출은 최소 한도 및 처리 시간과 같은 플랫폼의 표준 규칙을 따릅니다."
+				}
+			},
+			"claiming": "청구 중...",
+			"section2": {
+				"title": "자격",
+				"content": "참여하려면:"
+			},
+			"section3": {
+				"title": "턴오버 등급 및 요율",
+				"content": "보너스는 일일 베팅 금액을 기준으로 계산됩니다:",
+				"noteTitle": "참고",
+				"noteContent": "등급은 매일 14:00 UTC에 평가됩니다. 전날의 베팅량이 오늘의 보너스 요율을 결정합니다. 요율은 슬롯, 라이브 카지노 및 스포츠 등 모든 게임 유형에 적용됩니다."
+			}
+		},
+		"claims": {
+			"title": "청구 내역",
+			"subtitle": "보너스 청구 및 베팅 활동 추적",
+			"tableHeaders": {
+				"date": "베팅 날짜",
+				"slots": "슬롯",
+				"liveCasino": "라이브 카지노",
+				"sports": "스포츠",
+				"total": "합계",
+				"tier": "등급",
+				"unclaimed": "미청구",
+				"token": "토큰"
+			},
+			"tierPrefix": "등급",
+			"availableToClaim": "청구 가능",
+			"totalBonus": "총 보너스",
+			"claimed": "청구됨",
+			"progressPercentage": "진행률",
+			"progressTitle": "진행 상황",
+			"currentTier": "현재 등급",
+			"nextTier": "다음 등급",
+			"wagerProgress": "베팅 진행 상황",
+			"totalWagered": "오늘 총 베팅액",
+			"toNextTier": "다음 등급까지",
+			"empty": {
+				"title": "아직 보너스 청구 내역이 없습니다",
+				"subtitle": "게임을 시작하여 보너스를 받으세요!"
+			}
+		},
+		"rates": {
+			"title": "턴오버 등급 및 요율",
+			"subtitle": "베팅 수준 및 게임 카테고리별 보너스 비율",
+			"overview": {
+				"title": "개요",
+				"body": "턴오버 보너스는 슬롯, 라이브 카지노, 스포츠북 및 복권에서의 베팅을 기반으로 사용자에게 보상합니다. 보너스는 24시간마다 계산되며, 사용자는 베팅 후 다음 날 청구할 수 있습니다. 7개의 등급이 있으며, 각 등급은 베팅 금액에 따라 다른 요율을 가집니다."
+			},
+			"eligibility": {
+				"title": "자격",
+				"content": "참여하려면:",
+				"points": {
+					"0": "활성 계정이 있어야 합니다.",
+					"1": "슬롯, 라이브 카지노, 스포츠북 및 복권에 베팅해야 합니다.",
+					"2": "각 등급의 최소 베팅 요구 사항을 충족해야 합니다."
+				}
+			},
+			"calculation": {
+				"title": "보너스 계산 방법",
+				"desc": "보너스는 총 베팅액을 기반으로 24시간마다 계산됩니다. 예시:",
+				"exampleTitle": "등급 {tier}:",
+				"wagerIn": "{gameType}에 {amount} 베팅"
+			},
+			"table": {
+				"tierLevel": "등급 수준",
+				"wagerRange": "베팅 범위",
+				"slots": "슬롯",
+				"liveCasino": "라이브 카지노",
+				"sports": "스포츠",
+				"tierPrefix": "등급",
+				"commissionLevel": "보너스 수준",
+				"dailyWager": "일일 베팅량"
+			},
+			"claim": {
+				"title": "보너스 청구 및 인출",
+				"points": {
+					"0": "보너스는 베팅 후 24시간이 지나면 청구할 수 있습니다.",
+					"1": "미청구 보너스는 누적되며 만료되지 않습니다.",
+					"2": "청구 및 인출 절차는 플랫폼별 정책에 따라 다를 수 있습니다."
+				}
+			},
+			"system": {
+				"title": "시스템 시간 및 운영",
+				"dailyTimeframeLabel": "일일 시간대:",
+				"dailyTimeframeValue": "매일 00:00 UTC ~ 23:59 UTC.",
+				"claimDailyLabel": "매일 청구:",
+				"claimDailyValue": "매일 14:00 UTC에 가능 (현지 시간: {local}).",
+				"note": "참고: 다른 시간대의 제공업체와 협력하지만 모든 계산은 일관성을 보장하고 혼동을 피하기 위해 UTC를 따릅니다."
+			},
+			"amendments": {
+				"title": "수정 및 자격 박탈",
+				"body": "당사는 언제든지 이 약관을 업데이트할 수 있으며, 변경 사항은 게시 즉시 효력이 발생합니다. 시스템 오류, 계산 착오 또는 부정 행위가 의심되는 경우 공정성을 보장하기 위해 필요에 따라 보너스 및 계정을 조정하거나 자격을 박탈할 권리가 있습니다."
+			},
+			"footer": {
+				"schedule": "보너스 일정:",
+				"availableDaily": "매일",
+				"localTimeLabel": "에 가능 (현지 시간: {time})"
+			}
+		},
+		"calculator": {
+			"title": "보너스 계산기",
+			"subtitle": "베팅 금액을 기반으로 예상 보너스 수익을 계산합니다",
+			"interactive": {
+				"title": "대화형 도구:",
+				"body": "다른 베팅 금액을 입력하여 모든 등급에서 잠재적인 보너스를 확인하세요"
+			},
+			"potentialEarnings": "잠재적 보너스",
+			"basedOnRate": "{percentage}% 보너스 요율 기준",
+			"tier": "등급 {level}",
+			"commissionLevel": "보너스 수준 {level}",
+			"enterWager": "베팅 금액 입력 (USD)",
+			"wagerPlaceholder": "예: 1000",
+			"calcFor": "${amount} 베팅에 대한 보너스 계산 중",
+			"totalPotential": "총 잠재적 보너스:",
+			"combinedAtTier": "등급 {level}에서 모든 게임 유형의 합산 보너스"
+		},
+		"claimSuccessModal": {
+			"title": "청구 성공",
+			"statusCompleted": "완료됨",
+			"statusOnChain": "온체인",
+			"claimAmount": "청구 금액",
+			"logoAlt": "{siteName} 로고",
+			"backgroundAlt": "청구 성공 배경",
+			"creatingMagic": "마법을 만드는 중...",
+			"downloadShare": "다운로드 및 공유",
+			"spreadTheWin": "승리를 전파하세요",
+			"socialX": "X",
+			"socialFacebook": "Facebook",
+			"socialWhatsApp": "WhatsApp",
+			"socialTelegram": "Telegram",
+			"socialReddit": "Reddit",
+			"socialMore": "더 보기",
+			"shareText": "방금 {amount} 보너스를 청구했습니다! 저와 함께하세요: {url}",
+			"referralLinkCopied": "추천 링크가 복사되었습니다!",
+			"referralLinkCopyFailed": "추천 링크 복사에 실패했습니다",
+			"screenshotFailed": "스크린샷에 실패했습니다. 다시 시도하거나 다른 브라우저를 사용해주세요.",
+			"shareTextCopied": "공유 텍스트가 클립보드에 복사되었습니다!",
+			"shareFailed": "공유에 실패했습니다. 다시 시도해주세요."
 		}
 	},
 	"debug": {
@@ -559,32 +729,32 @@
 	},
 	"getLobby": {
 		"enteringLobby": "로비 입장 중...",
-		"connectingWait": "연결 중입니다. 잠시만 기다려 주세요.",
-		"invalidSession": "세션이 유효하지 않거나 제공업체가 없습니다. 다시 시도해 주세요.",
-		"failedPrefix": "로비 입장에 실패했습니다: {message}",
+		"connectingWait": "연결하는 동안 잠시만 기다려주세요.",
+		"invalidSession": "세션이 유효하지 않거나 제공업체가 없습니다. 다시 시도해주세요.",
+		"failedPrefix": "로비 입장 실패: {message}",
 		"launchFailedTitle": "실행 실패",
 		"returnHome": "홈으로 돌아가기"
 	},
 	"play": {
 		"connecting": "게임 서버에 연결 중...",
-		"invalidSession": "세션이 유효하지 않거나 만료되었습니다. 다시 로그인하여 시도해 주세요.",
+		"invalidSession": "세션이 유효하지 않거나 만료되었습니다. 로그인 후 다시 시도해주세요.",
 		"launchFailedTitle": "실행 실패",
 		"returnHome": "홈으로 돌아가기"
 	},
 	"modalsIdle": {
 		"badgeLimitedTime": "기간 한정 혜택",
 		"headline": "200% 환영 보너스를 받으세요!",
-		"subheadline": "지금 암호화폐 지갑을 연결하고 첫 입금 시 최대 {amount}의 보너스를 받으세요!",
+		"subheadline": "지금 암호화폐 지갑을 연결하고 첫 입금 시 최대 {amount} 보너스를 받으세요!",
 		"featureDepositMatch": "200% 입금 매치",
 		"featureZeroFees": "거래 수수료 없음",
 		"featureInstantWithdrawals": "즉시 출금",
 		"featureNoKyc": "KYC 필요 없음",
-		"ctaClaim": "지금 보너스 신청하기!",
-		"offerExpires": "혜택 종료까지:",
-		"disclaimer": "이용 약관이 적용됩니다. 도박에는 위험이 따릅니다. 책임감 있게 플레이하세요. 18세 이상.",
+		"ctaClaim": "지금 보너스 청구!",
+		"offerExpires": "혜택 만료까지:",
+		"disclaimer": "이용 약관 적용. 도박에는 위험이 따릅니다. 책임감 있게 플레이하세요. 18세 이상",
 		"closeAria": "모달 닫기",
 		"bannerAlt": "프로모션 배너",
-		"ctaOk": "지갑 연결하고 베팅 시작하기",
+		"ctaOk": "지갑 연결 및 베팅 시작",
 		"enterAmount": "금액 입력",
 		"balance": "잔액",
 		"max": "최대",
@@ -604,23 +774,23 @@
 			"title": "이메일 로그인",
 			"description": "6자리 코드를 보내드립니다",
 			"emailLabel": "이메일 주소",
-			"emailPlaceholder": "이름@email.com",
+			"emailPlaceholder": "name@email.com",
 			"cancel": "취소",
 			"sending": "전송 중",
-			"continue": "계속하기",
+			"continue": "계속",
 			"enterCodeTitle": "코드 입력",
-			"sentTo": "{email}로 전송됨",
+			"sentTo": "{email}(으)로 전송됨",
 			"changeEmail": "이메일 변경",
 			"resendCode": "코드 재전송",
 			"resendIn": "{seconds}초 후 재전송",
 			"verifying": "인증 중",
 			"successTitle": "로그인되었습니다",
-			"successSubtitle": "설정 중입니다...",
+			"successSubtitle": "설정 중…",
 			"modalAria": "이메일 인증 모달",
 			"errors": {
-				"invalidEmail": "유효한 이메일 주소를 입력하세요",
+				"invalidEmail": "유효한 이메일 주소를 입력해주세요",
 				"sendFailed": "인증 코드 전송에 실패했습니다.",
-				"invalidCode": "6자리 인증 코드를 입력하세요"
+				"invalidCode": "6자리 인증 코드를 입력해주세요"
 			}
 		},
 		"setNickname": {
@@ -630,40 +800,41 @@
 			"inputPlaceholder": "고유한 닉네임을 선택하세요",
 			"referrerCheckbox": "추천인 ID가 있습니다",
 			"referrerPlaceholder": "추천인 ID 입력",
-			"referrerHelp": "선택 사항. 보너스 프로그램을 위해 계정을 추천인과 연결합니다.",
+			"referrerHelp": "선택 사항. 이 계정을 추천인에게 연결하여 보너스 프로그램을 이용할 수 있습니다.",
 			"status": {
 				"checking": "사용 가능 여부 확인 중...",
-				"available": "닉네임을 사용할 수 있습니다!",
-				"taken": "이 닉네임은 이미 사용 중입니다."
+				"available": "사용 가능한 닉네임입니다!",
+				"taken": "이미 사용 중인 닉네임입니다."
 			},
-			"register": "등록하고 플레이하기",
+			"register": "등록 및 플레이",
 			"termsTitle": "이용 약관:",
-			"termsBody": "지갑으로 이 문서에 서명하거나 이 Web3 애플리케이션을 계속 사용함으로써 귀하는 애플리케이션의 이용 약관에 동의하게 됩니다. 이용 약관에 대한 동의 서명은 블록체인 거래가 아니며 비용이 발생하지 않습니다.",
+			"termsBody": "지갑으로 이 문서에 서명하거나 이 Web3 애플리케이션을 계속 사용함으로써 귀하는 애플리케이션의 이용 약관에 동의하는 것입니다. 이용 약관에 대한 동의 서명은 블록체인 거래가 아니며 비용이 발생하지 않습니다.",
 			"errors": {
-				"verifyNicknameFailed": "닉네임을 확인할 수 없습니다. 다시 시도해 주세요.",
+				"verifyNicknameFailed": "닉네임을 확인할 수 없습니다. 다시 시도해주세요.",
 				"registerFailed": "등록 실패: {message}"
 			}
 		},
 		"walletConnect": {
 			"loginWithEmail": "이메일로 로그인",
 			"connectWalletBtn": "지갑 연결",
+			"loginWithWallet": "지갑으로 로그인",
 			"player": "플레이어",
 			"walletConnected": "지갑 연결됨",
 			"emailConnected": "이메일 연결됨",
 			"disconnect": "연결 해제",
 			"walletAddress": "지갑 주소",
-			"balance": "잔액",
-			"loginWithWallet": "지갑으로 로그인"
+			"balance": "잔액"
 		}
 	},
 	"walletProvider": {
 		"transactionModal": {
+			"title": "지갑",
 			"tabs": {
 				"deposit": "입금",
+				"tip": "팁",
 				"withdraw": "출금",
 				"swap": "스왑",
 				"walletInfo": "지갑",
-				"tip": "팁",
 				"emailWallet": "이메일 지갑",
 				"wallet": "지갑"
 			},
@@ -671,25 +842,24 @@
 				"emailWallet": "이메일 지갑",
 				"wallet": "지갑",
 				"deposit": "입금",
+				"tip": "팁",
 				"withdraw": "출금",
-				"swap": "스왑",
-				"tip": "팁"
-			},
-			"title": "지갑"
+				"swap": "스왑"
+			}
 		},
 		"networkSelector": {
 			"placeholder": "네트워크 선택",
 			"switching": "전환 중...",
 			"walletNotConnected": "지갑이 연결되지 않았습니다.",
-			"failedToSwitch": "네트워크 전환에 실패했습니다. 지갑에서 시도해 주세요.",
+			"failedToSwitch": "네트워크 전환에 실패했습니다. 지갑에서 시도해주세요.",
 			"altLogo": "네트워크 로고"
 		},
 		"tokenList": {
 			"dialogTitle": "토큰 선택",
 			"instantDeposit": "즉시 입금",
-			"yourWalletBalance": "내 지갑 잔액",
+			"yourWalletBalance": "지갑 잔액",
 			"searchPlaceholder": "이름 검색 또는 주소 붙여넣기",
-			"emptySearch": "검색과 일치하는 토큰을 찾을 수 없습니다.",
+			"emptySearch": "검색과 일치하는 토큰이 없습니다.",
 			"emptyOwned": "잔액이 있는 토큰을 찾을 수 없습니다.",
 			"searchResults": "검색 결과",
 			"yourTokens": "내 토큰",
@@ -703,41 +873,86 @@
 			"swap": "스왑"
 		},
 		"depositPanel": {
-			"youPay": "지불",
-			"resetForm": "양식 초기화",
+			"youPay": "결제 금액",
+			"resetForm": "양식 재설정",
 			"enterAmount": "금액 입력",
 			"selectToken": "토큰 선택",
 			"max": "최대",
+			"maxButtonToolTipText": "가스비를 충당하고 거래 실패를 방지하기 위해 {gasReservationAmount} {selectedTokenSymbol}이(가) 예약됩니다",
 			"balance": "잔액:",
 			"calculating": "계산 중...",
-			"approxUsd": "약 ${amount} USD",
+			"approxUsd": "~ ${amount} USD",
 			"minPrefix": "최소:",
-			"ratesMayVary": "환율은 변동될 수 있습니다",
+			"ratesMayVary": "요율은 달라질 수 있습니다",
 			"emailWalletAddress": "이메일 지갑 주소",
 			"walletAddress": "지갑 주소",
 			"minimumIs": "최소 금액은 {min}입니다",
 			"errors": {
-				"selectTokenAndAmount": "토큰을 선택하고 금액을 입력하세요",
+				"selectTokenAndAmount": "토큰을 선택하고 금액을 입력해주세요",
 				"insufficientBalance": "이 거래에 대한 잔액이 부족합니다",
-				"amountTooHighGas": "가스비를 고려하면 금액이 너무 높습니다",
-				"checkForm": "양식을 확인하고 다시 시도하세요",
-				"pendingDeposit": "대기 중인 입금이 있습니다. 완료될 때까지 기다려 주세요"
+				"amountTooHighGas": "가스비를 고려할 때 금액이 너무 높습니다",
+				"checkForm": "양식을 확인하고 다시 시도해주세요",
+				"pendingDeposit": "대기 중인 입금이 있습니다. 완료될 때까지 기다려주세요"
 			},
 			"status": {
 				"processing": "처리 중...",
 				"awaitingApproval": "승인 대기 중",
-				"calculatingRate": "환율 계산 중...",
+				"calculatingRate": "요율 계산 중...",
 				"insufficientBalance": "잔액 부족"
 			},
 			"buttons": {
 				"depositUsd": "${amount} 입금"
+			}
+		},
+		"tipPanel": {
+			"youTip": "팁 금액",
+			"resetForm": "양식 재설정",
+			"enterAmount": "금액 입력",
+			"selectToken": "토큰 선택",
+			"minPrefix": "최소",
+			"balance": "잔액:",
+			"max": "최대",
+			"maxButtonToolTipText": "가스비를 충당하고 거래 실패를 방지하기 위해 {gasReservationAmount} {selectedTokenSymbol}이(가) 예약됩니다",
+			"approxUsd": "~ ${amount} USD",
+			"tipPanelWarningText": "팁은 자발적이며 환불되지 않습니다.",
+			"emailWalletAddress": "이메일 지갑 주소",
+			"errors": {
+				"selectTokenAndAmount": "토큰을 선택하고 금액을 입력해주세요.",
+				"insufficientBalance": "잔액이 부족합니다.",
+				"belowMinimum": "금액은 최소 {min}이어야 합니다.",
+				"missingWallet": "팁 지갑을 가져올 수 없습니다. 나중에 다시 시도해주세요.",
+				"checkForm": "팁 세부 정보를 확인해주세요."
 			},
-			"maxButtonToolTipText": "{gasReservationAmount} {selectedTokenSymbol}은 가스 요금을 충당하고 거래 실패를 방지하기 위해 예약되어 있습니다."
+			"status": {
+				"processing": "팁 보내는 중...",
+				"awaitingApproval": "승인 대기 중...",
+				"calculatingRate": "계산 중...",
+				"insufficientBalance": "잔액 부족",
+				"fetchingWallet": "팁 지갑 준비 중..."
+			},
+			"prompts": {
+				"selectToken": "토큰 선택",
+				"enterAmount": "금액 입력"
+			},
+			"buttons": {
+				"tipUsd": "${amount} 팁",
+				"tip": "팁"
+			},
+			"minimumIs": "최소 팁 금액은 {min}입니다"
+		},
+		"tipPending": {
+			"submittedTitle": "팁 대기 중",
+			"submittedDesc": "팁이 온체인에서 확인되고 있습니다.",
+			"confirmedTitle": "팁 확인됨!",
+			"confirmedDesc": "팁이 성공적으로 전달되었습니다.",
+			"viewOnExplorer": "탐색기에서 보기",
+			"newTipPending": "다른 팁 보내기",
+			"newTipConfirmed": "다른 팁 보내기"
 		},
 		"swapPanel": {
 			"selectTokens": "토큰 선택",
 			"enterAmount": "금액 입력",
-			"gettingQuote": "시세 확인 중...",
+			"gettingQuote": "견적 받는 중...",
 			"confirming": "확인 중...",
 			"approving": "승인 중...",
 			"insufficientBalance": "스왑을 위한 잔액이 부족합니다",
@@ -745,21 +960,22 @@
 			"approveAndSwap": "승인 및 스왑",
 			"swap": "스왑",
 			"slippageTolerance": "슬리피지 허용 오차",
-			"custom": "사용자 설정",
+			"custom": "사용자 지정",
 			"set": "설정",
 			"currentSlippage": "현재 슬리피지",
 			"swapSuccessful": "스왑 성공!",
-			"transactionConfirmed": "거래가 확인되었습니다",
+			"transactionConfirmed": "거래가 제출되었습니다",
 			"hash": "해시",
-			"newSwap": "새로운 스왑",
-			"youPay": "지불",
+			"newSwap": "새 스왑",
+			"youPay": "결제 금액",
 			"max": "최대",
+			"maxButtonToolTipText": "가스비를 충당하고 거래 실패를 방지하기 위해 {gasReservationAmount} {selectedTokenSymbol}이(가) 예약됩니다",
 			"low": "낮음",
 			"amountPlaceholder": "0",
 			"selectToken": "토큰 선택",
-			"youReceive": "수령",
-			"gettingBestQuote": "최적의 시세 확인 중...",
-			"gas": "가스비",
+			"youReceive": "수령 금액",
+			"gettingBestQuote": "최적의 견적 받는 중...",
+			"gas": "가스",
 			"minimumReceived": "최소 수령액",
 			"slippageToleranceLabel": "슬리피지 허용 오차",
 			"gasFee": "가스비",
@@ -768,40 +984,39 @@
 			"walletAddress": "지갑 주소",
 			"minimumIs": "최소 금액은 {min}입니다",
 			"errors": {
-				"selectTokenAndAmount": "토큰을 선택하고 금액을 입력하세요",
+				"selectTokenAndAmount": "토큰을 선택하고 금액을 입력해주세요",
 				"insufficientBalance": "이 거래에 대한 잔액이 부족합니다",
-				"amountTooHighGas": "가스비를 고려하면 금액이 너무 높습니다",
-				"checkForm": "양식을 확인하고 다시 시도하세요",
-				"pendingDeposit": "대기 중인 입금이 있습니다. 완료될 때까지 기다려 주세요"
+				"amountTooHighGas": "가스비를 고려할 때 금액이 너무 높습니다",
+				"checkForm": "양식을 확인하고 다시 시도해주세요",
+				"pendingDeposit": "대기 중인 입금이 있습니다. 완료될 때까지 기다려주세요"
 			},
 			"status": {
 				"processing": "처리 중...",
 				"awaitingApproval": "승인 대기 중",
-				"calculatingRate": "환율 계산 중...",
+				"calculatingRate": "요율 계산 중...",
 				"insufficientBalance": "잔액 부족"
 			},
 			"buttons": {
 				"depositUsd": "${amount} 입금"
-			},
-			"maxButtonToolTipText": "가스 요금을 충당하고 거래 실패를 피하기 위해 {gasReservationAmount} {selectedTokenSymbol}이 예약되었습니다"
+			}
 		},
 		"depositPending": {
-			"confirmedTitle": "입금이 확인되었습니다!",
-			"submittedTitle": "거래가 제출되었습니다",
+			"confirmedTitle": "입금 확인됨!",
+			"submittedTitle": "거래 제출됨",
+			"failedTitle": "거래 실패",
 			"confirmedDesc": "잔액이 업데이트되었습니다.",
-			"submittedDesc": "블록체인 확인을 기다리는 중입니다. 몇 분 정도 걸릴 수 있습니다.",
+			"submittedDesc": "블록체인 확인 대기 중입니다. 몇 분 정도 걸릴 수 있습니다.",
+			"failedDesc": "거래에 실패했습니다. 다시 시도해주세요.",
 			"viewOnExplorer": "탐색기에서 보기",
 			"newDepositConfirmed": "다른 입금하기",
-			"newDepositPending": "새로운 입금 시작하기",
-			"failedTitle": "거래 실패",
-			"failedDesc": "거래가 실패했습니다. ",
+			"newDepositPending": "새 입금 시작하기",
 			"newDepositFailed": "다시 시도"
 		},
 		"withdrawPanel": {
-			"resetForm": "양식 초기화",
-			"networkNotSupported": "출금은 Arbitrum, Polygon, Optimism, BNB에서만 지원됩니다",
-			"youWithdraw": "출금",
-			"loading": "로딩 중...",
+			"resetForm": "양식 재설정",
+			"networkNotSupported": "출금은 Arbitrum, Polygon, Optimism 및 BNB에서만 지원됩니다",
+			"youWithdraw": "출금 금액",
+			"loading": "로드 중...",
 			"amount": "금액",
 			"max": "최대",
 			"balance": "잔액:",
@@ -809,101 +1024,56 @@
 			"insufficientBalance": "잔액 부족",
 			"minimumIs": "최소 금액은 {min}입니다",
 			"minLabel": "최소:",
+			"calculating": "계산 중",
 			"emailWalletAddress": "이메일 지갑 주소",
 			"walletAddress": "지갑 주소",
 			"errors": {
 				"pendingWithdrawal": "이미 대기 중인 출금이 있습니다",
-				"invalidAddress": "유효하지 않은 주소",
+				"invalidAddress": "잘못된 주소",
 				"enterAmount": "금액 입력",
-				"networkNotSupported": "지원되지 않는 네트워크"
+				"networkNotSupported": "네트워크가 지원되지 않습니다"
 			},
 			"status": {
 				"processing": "처리 중...",
 				"insufficientBalance": "잔액 부족",
-				"pendingWithdrawal": "이미 대기 중인 출금 있음"
+				"pendingWithdrawal": "이미 대기 중인 출금이 있습니다"
 			},
 			"buttons": {
 				"withdraw": "{amount} {symbol} 출금",
 				"minimum": "최소 {amount} {symbol}"
-			},
-			"calculating": "계산 중"
+			}
 		},
 		"withdrawSuccess": {
 			"title": "출금 성공!",
-			"successMessage": "🎉 {siteName}에서 방금 {withdrawAmount} {tokenSymbol}을(를) 출금했습니다! 🚀 {shareUrl}에서 승리의 행진에 동참하세요",
-			"withdrawnAmount": "출금된 금액",
-			"shareText": "공유하기",
+			"successMessage": "🎉 방금 {siteName}에서 {withdrawAmount} {tokenSymbol}을(를) 출금했습니다! 🚀 {shareUrl}에서 승리의 행진에 동참하세요",
+			"withdrawnAmount": "출금 금액",
+			"shareText": "공유",
 			"subText": "🚀 승리의 행진에 동참하세요! 🚀",
 			"generating": "생성 중...",
 			"screenshot": "스크린샷 찍기",
 			"download": "이미지 다운로드",
 			"close": "닫기",
 			"copiedToClipboard": "공유 링크가 성공적으로 복사되었습니다",
+			"userName": "{siteName} 플레이어",
+			"status": "완료됨",
 			"entryPrice": "출금 금액",
 			"lastPrice": "토큰 심볼",
 			"referralCode": "추천 코드",
-			"screenshotFailed": "스크린샷에 실패했습니다. 다시 시도하거나 다른 브라우저를 사용하세요.",
-			"shareFailed": "공유 실패. 다시 시도해 주세요.",
-			"status": "완료됨",
-			"userName": "{siteName} 플레이어"
+			"screenshotFailed": "스크린샷에 실패했습니다. 다시 시도하거나 다른 브라우저를 사용해주세요.",
+			"shareFailed": "공유에 실패했습니다. 다시 시도해주세요."
 		},
 		"withdrawPending": {
-			"confirmedTitle": "출금이 확인되었습니다!",
-			"submittedTitle": "거래가 제출되었습니다",
+			"confirmedTitle": "출금 확인됨!",
+			"submittedTitle": "거래 제출됨",
 			"confirmedDesc": "자금이 이동 중입니다.",
-			"submittedDesc": "블록체인 확인을 기다리는 중입니다...",
+			"submittedDesc": "블록체인 확인 대기 중...",
 			"viewOnExplorer": "탐색기에서 보기",
 			"manualApproval": "이 출금은 수동 승인이 필요합니다.",
 			"newWithdrawalConfirmed": "다른 출금하기",
-			"newWithdrawalPending": "새로운 출금 시작하기"
+			"newWithdrawalPending": "새 출금 시작하기"
 		},
 		"withdrawSummary": {
-			"youWillReceive": "받을 금액"
-		},
-		"tipPanel": {
-			"approxUsd": "~  USD",
-			"balance": "잔액:",
-			"buttons": {
-				"tip": "팁",
-				"tipUsd": "팁"
-			},
-			"emailWalletAddress": "이메일 지갑 주소",
-			"enterAmount": "금액 입력",
-			"errors": {
-				"belowMinimum": "금액은 최소 {min} 이상이어야 합니다.",
-				"checkForm": "팁 세부정보를 확인해 주세요.",
-				"insufficientBalance": "잔액이 부족합니다.",
-				"missingWallet": "팁 지갑을 가져올 수 없습니다. 나중에 다시 시도해 주세요.",
-				"selectTokenAndAmount": "토큰을 선택하고 금액을 입력하세요."
-			},
-			"max": "최대",
-			"maxButtonToolTipText": "가스 비용을 충당하고 거래 실패를 방지하기 위해 {gasReservationAmount} {selectedTokenSymbol}가 예약되었습니다",
-			"minimumIs": "최소 팁은 {min}입니다",
-			"minPrefix": "최소",
-			"prompts": {
-				"enterAmount": "금액 입력",
-				"selectToken": "토큰 선택"
-			},
-			"resetForm": "양식 재설정",
-			"selectToken": "토큰 선택",
-			"status": {
-				"awaitingApproval": "승인 대기 중...",
-				"calculatingRate": "계산 중...",
-				"fetchingWallet": "팁 지갑 준비 중...",
-				"insufficientBalance": "잔액 부족",
-				"processing": "팁 보내는 중..."
-			},
-			"tipPanelWarningText": "팁은 자발적이며 환불되지 않습니다.",
-			"youTip": "당신의 팁"
-		},
-		"tipPending": {
-			"confirmedDesc": "팁이 성공적으로 전달되었습니다.",
-			"confirmedTitle": "팁 확인 완료!",
-			"newTipConfirmed": "다른 팁 보내기",
-			"newTipPending": "다른 팁 보내기",
-			"submittedDesc": "당신의 팁이 체인에서 확인되고 있습니다.",
-			"submittedTitle": "팁 처리중",
-			"viewOnExplorer": "탐색기에서 보기"
+			"youWillReceive": "수령할 금액"
 		}
 	},
 	"navUser": {
@@ -917,9 +1087,9 @@
 		"pageTitle": "모든 게임",
 		"playNow": "지금 플레이",
 		"byProvider": "{name} 제공",
-		"count": "{count} 개의 게임",
+		"count": "{count}개의 게임",
 		"noResults": "조건에 맞는 게임을 찾을 수 없습니다.",
-		"errorLoading": "게임을 불러올 수 없습니다. 나중에 다시 시도해 주세요.",
+		"errorLoading": "게임을 로드할 수 없습니다. 나중에 다시 시도해주세요.",
 		"slots": "슬롯",
 		"sports": "스포츠",
 		"liveCasino": "라이브 카지노",
@@ -933,8 +1103,8 @@
 		"slotsDescription": "릴을 돌려 엄청난 잭팟을 터뜨리세요",
 		"liveCasinoDescription": "라이브 딜러와 함께 실시간 카지노 액션을 경험하세요",
 		"sportsDescription": "좋아하는 팀과 스포츠 이벤트에 베팅하세요",
-		"pokerDescription": "클래식 포커 게임에서 실력을 시험해 보세요",
-		"lotteryDescription": "복권과 즉석 당첨 게임으로 운을 시험해 보세요",
+		"pokerDescription": "클래식 포커 게임에서 실력을 테스트하세요",
+		"lotteryDescription": "복권 및 즉석 당첨 게임으로 운을 시험해보세요",
 		"futuresDescription": "시장 움직임을 거래하고 예측하세요",
 		"vrDescription": "가상 현실 게임에 몰입하세요",
 		"swapDescription": "토큰과 암호화폐를 원활하게 교환하세요",
@@ -959,7 +1129,7 @@
 	"providers": {
 		"pageTitle": "모든 게임 제공업체",
 		"searchPlaceholder": "제공업체 검색...",
-		"empty": "검색과 일치하는 제공업체를 찾을 수 없습니다.",
+		"empty": "검색과 일치하는 제공업체가 없습니다.",
 		"logoAlt": "{name} 로고",
 		"filteredBy": "카테고리별 필터링:",
 		"clearFilter": "필터 지우기",
@@ -985,7 +1155,7 @@
 		"guest": {
 			"title": "액션에 참여하세요",
 			"subtitle": "지금 가입하고 독점 환영 보너스를 받으세요!",
-			"cta": "지금 가입하기"
+			"cta": "지금 등록"
 		},
 		"welcome": {
 			"title1": "환영 보너스",
@@ -996,59 +1166,59 @@
 		"jackpot": {
 			"title1": "메가 잭팟",
 			"title2": "$1,000,000",
-			"subtitle": "지금 플레이하고 크게 이기세요",
+			"subtitle": "지금 플레이하고 큰 승리를 거두세요",
 			"cta": "지금 플레이"
 		},
 		"cards": {
 			"casino": {
 				"title": "카지노",
 				"badge": "590+ 게임",
-				"desc": "{siteName} 오리지널 및 상위 제공업체의 다른 카지노 게임을 즐기세요.",
-				"link": "카지노로 가기"
+				"desc": "{siteName} 오리지널 및 최고 제공업체의 다른 카지노 게임을 즐기세요.",
+				"link": "카지노로 이동"
 			},
 			"slots": {
 				"title": "슬롯",
 				"badge": "5292 게임",
-				"desc": "프리미엄 슬롯 컬렉션으로 릴을 돌려 엄청난 잭팟을 터뜨리세요.",
-				"link": "슬롯으로 가기"
+				"desc": "프리미엄 슬롯 컬렉션으로 릴을 돌리고 엄청난 잭팟을 터뜨리세요.",
+				"link": "슬롯으로 이동"
 			},
 			"sports": {
 				"title": "스포츠",
 				"badge": "3 게임",
 				"desc": "경쟁력 있는 배당률로 좋아하는 팀과 스포츠 이벤트에 베팅하세요.",
-				"link": "스포츠로 가기"
+				"link": "스포츠로 이동"
 			},
 			"crypto": {
-				"title": "암호화폐 & 수익",
-				"badge": "연이율 60%",
-				"desc": "매력적인 이율로 암호화폐를 스테이킹, 거래, 수익 창출하세요.",
-				"link": "암호화폐로 가기"
+				"title": "암호화폐 및 수익 창출",
+				"badge": "60% APR",
+				"desc": "매력적인 금리로 암호화폐를 스테이킹, 거래 및 수익 창출하세요.",
+				"link": "암호화폐로 이동"
 			}
 		},
 		"layout3": {
 			"headerTitle": "게임 스포트라이트",
 			"headerSubtitle": "엄선된 컬렉션에서 놀라운 게임을 발견하고 새로운 모험을 탐험하세요",
 			"slider1Title": "추천 게임",
-			"slider1Badge": "스태프 추천",
+			"slider1Badge": "직원 추천",
 			"slider2Title": "더 탐험하기",
 			"slider2Badge": "인기",
 			"featuredGameLabel": "추천 게임"
 		},
 		"ctaExploreGames": "게임 탐색",
-		"ctaJoinAffiliate": "제휴 프로그램 가입"
+		"ctaJoinAffiliate": "제휴 가입"
 	},
 	"betting": {
 		"live": {
 			"winRate": "승률",
-			"biggestWin": "최고 당첨금",
-			"bigWins50": "고액 당첨 (50+)",
-			"recentWins": "최근 당첨",
+			"biggestWin": "최대 승리",
+			"bigWins50": "큰 승리 (50+)",
+			"recentWins": "최근 승리",
 			"header": {
-				"title": "라이브 베팅 활동",
+				"title": "실시간 베팅 활동",
 				"subtitle": "실시간 베팅 활동 • {count}개 게임 로드됨"
 			},
 			"status": {
-				"live": "라이브",
+				"live": "실시간",
 				"paused": "일시 중지됨"
 			},
 			"actions": {
@@ -1066,381 +1236,1251 @@
 				"provider": "제공업체",
 				"nickname": "닉네임",
 				"bet": "베팅",
-				"multiplier": "배율",
+				"multiplier": "승수",
 				"profit": "수익"
 			},
-			"empty": "베팅 기록을 찾을 수 없습니다"
+			"empty": "베팅 기록 없음"
 		}
 	},
 	"fontChanger": {
 		"changeFont": "글꼴 변경",
 		"fontSettings": "글꼴 설정",
 		"current": "현재",
-		"browseGoogleFonts": "Google Fonts 찾아보기",
-		"uploadCustomFont": "사용자 정의 글꼴 업로드",
-		"quickUploadFontFile": "글꼴 파일 빠른 업로드",
+		"browseGoogleFonts": "Google 글꼴 찾아보기",
+		"uploadCustomFont": "사용자 지정 글꼴 업로드",
+		"quickUploadFontFile": "빠른 글꼴 파일 업로드",
 		"resetToDefault": "기본값으로 재설정",
 		"googleFonts": {
-			"title": "구글 글꼴",
+			"title": "Google 글꼴",
 			"searchFonts": "글꼴 검색...",
 			"preview": "미리보기",
-			"previewText": "다람쥐 헌 쳇바퀴에 타고파",
+			"previewText": "빠른 갈색 여우가 게으른 개를 뛰어넘습니다",
 			"alphabetPreview": "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 1234567890",
 			"applyFont": "글꼴 적용",
 			"clearPreview": "미리보기 지우기",
 			"previewWith": "{font}로 텍스트 미리보기",
-			"noFontsFound": "\"{searchTerm}\"와(과) 일치하는 글꼴을 찾을 수 없습니다"
+			"noFontsFound": "\"{searchTerm}\"과(와) 일치하는 글꼴을 찾을 수 없습니다"
 		},
 		"customUpload": {
-			"title": "사용자 정의 글꼴 업로드",
-			"description": "자신만의 글꼴 파일을 업로드하여 웹사이트를 맞춤 설정하세요",
+			"title": "사용자 지정 글꼴 업로드",
+			"description": "자신만의 글꼴 파일을 업로드하여 웹사이트를 사용자 지정하세요",
 			"fontFile": "글꼴 파일",
 			"dragDropArea": "여기에 글꼴 파일을 드래그 앤 드롭하거나,",
 			"clickToUpload": "클릭하여 업로드",
-			"supportedFormats": "지원 형식: .woff, .woff2, .ttf, .otf",
+			"supportedFormats": "지원되는 형식: .woff, .woff2, .ttf, .otf",
 			"maxFileSize": "최대 파일 크기: 10MB",
 			"fontName": "글꼴 이름",
 			"fontNamePlaceholder": "글꼴 이름을 입력하세요",
 			"previewYourFont": "글꼴 미리보기",
-			"uploadAndApply": "업로드 및 적용",
+			"uploadAndApply": "업로드 및 글꼴 적용",
 			"cancel": "취소",
 			"uploading": "업로드 중...",
 			"errors": {
-				"invalidFileType": "유효한 글꼴 파일을 업로드하세요 (.woff, .woff2, .ttf, .otf)",
+				"invalidFileType": "유효한 글꼴 파일을 업로드해주세요 (.woff, .woff2, .ttf, .otf)",
 				"fileTooLarge": "파일 크기가 10MB 제한을 초과합니다",
-				"uploadFailed": "글꼴 파일 업로드 실패",
-				"enterFontName": "글꼴 파일을 선택하고 이름을 입력하세요",
-				"readFileFailed": "글꼴 파일 읽기 실패"
+				"uploadFailed": "글꼴 파일 업로드에 실패했습니다",
+				"enterFontName": "글꼴 파일을 선택하고 이름을 입력해주세요",
+				"readFileFailed": "글꼴 파일을 읽지 못했습니다"
 			}
 		},
 		"messages": {
 			"fontAppliedSuccess": "\"{fontName}\" 글꼴이 성공적으로 적용되었습니다!",
 			"fontUploadedSuccess": "\"{fontName}\" 글꼴이 성공적으로 업로드 및 적용되었습니다!",
 			"fontResetSuccess": "글꼴이 기본값으로 재설정되었습니다",
-			"invalidFileType": "유효한 글꼴 파일을 업로드하세요 (.woff, .woff2, .ttf, .otf)",
-			"uploadFailed": "글꼴 파일 읽기 실패"
+			"invalidFileType": "유효한 글꼴 파일을 업로드해주세요 (.woff, .woff2, .ttf, .otf)",
+			"uploadFailed": "글꼴 파일을 읽지 못했습니다"
 		}
 	},
-	"bonus": {
-		"title": "이직 보너스 프로그램",
-		"loginPromptTitle": "이직 보너스 프로그램",
-		"loginPromptSubtitle": "보너스 통계를 보고 보상을 받으려면 로그인하세요.",
-		"goHome": "홈으로 가기",
-		"tabs": {
-			"dashboard": "대시보드",
-			"claims": "청구",
-			"rates": "보너스율",
-			"calculator": "계산기"
-		},
-		"refresh": "새로 고침",
-		"refreshing": "새로 고치는 중...",
-		"refreshAllSuccess": "모든 데이터가 성공적으로 새로고침되었습니다!",
-		"refreshPartial": "부분적으로 새로 고침됨: {success}/{total} 섹션 업데이트됨",
-		"refreshFailed": "데이터 새로 고침 실패. 다시 시도해 주세요.",
-		"dashboard": {
-			"title": "보너스 대시보드",
-			"subtitle": "내기, 보너스 및 보상 수익 추적",
-			"performanceOverview": "보너스 개요",
-			"bonusRatesTitle": "보너스 요율 구조",
-			"totalIncome": "총 보너스",
-			"pendingBonus": "대기 중인 보너스",
-			"lastClaim": "마지막 청구",
-			"unclaimedEarnings": "청구 가능",
-			"claim": {
-				"title": "청구 및 출금",
-				"points": {
-					"0": "수수료는 계산 후 인출 가능합니다.",
-					"1": "청구되지 않은 커미션에는 만료 기한이 없습니다. - 청구될 때까지 누적됩니다.",
-					"2": "출금은 최소 제한 및 처리 시간과 같은 플랫폼의 표준 규칙을 따릅니다."
-				}
+	"contact": {
+		"title": "문의하기",
+		"subtitle": "질문이 있거나 도움이 필요하신가요? 저희 전담 지원팀이 24시간 내내 도와드립니다.",
+		"methods": {
+			"liveChat": {
+				"title": "실시간 채팅",
+				"description": "실시간 채팅을 통해 지원팀으로부터 즉각적인 도움을 받으세요.",
+				"availability": "24/7 이용 가능"
 			},
-			"claiming": "청구 중...",
-			"section2": {
-				"title": "자격",
-				"content": "참여하려면:"
+			"email": {
+				"title": "이메일 지원",
+				"description": "이메일을 보내주시면 24시간 이내에 답변해 드립니다.",
+				"availability": "24시간 이내 응답"
 			},
-			"section3": {
-				"title": "농업 등급 및 요금",
-				"content": "보너스는 일일 베팅 금액을 기준으로 계산됩니다:",
-				"noteTitle": "참고",
-				"noteContent": "등급은 매일 14:00 UTC에 평가됩니다. 전날의 베팅 금액이 오늘의 보너스 비율을 결정합니다. 비율은 모든 게임 유형에 적용됩니다: 슬롯, 라이브 카지노, 스포츠."
-			},
-			"claimButtonTitle": "받기"
-		},
-		"claims": {
-			"title": "청구 내역",
-			"subtitle": "보너스 청구 및 베팅 활동을 추적하세요",
-			"tableHeaders": {
-				"date": "베팅 날짜",
-				"slots": "슬롯",
-				"liveCasino": "라이브 카지노",
-				"sports": "스포츠",
-				"total": "총계",
-				"tier": "계층",
-				"unclaimed": "미청구",
-				"token": "토큰"
-			},
-			"tierPrefix": "단계",
-			"availableToClaim": "청구 가능",
-			"totalBonus": "총 보너스",
-			"claimed": "청구됨",
-			"progressPercentage": "진행",
-			"progressTitle": "진행 상황",
-			"currentTier": "현재 등급",
-			"nextTier": "다음 단계",
-			"wagerProgress": "베팅 진행",
-			"totalWagered": "오늘의 총 베팅 금액",
-			"toNextTier": "다음 등급에 도달하려면",
-			"empty": {
-				"title": "아직 보너스 클레임이 없습니다",
-				"subtitle": "보너스를 얻기 위해 게임을 시작하세요!"
+			"support": {
+				"title": "도움말 센터",
+				"description": "포괄적인 지식 기반에서 빠른 답변을 찾아보세요.",
+				"availability": "셀프 서비스 가능"
 			}
 		},
-		"rates": {
-			"title": "농업 단계 및 요금",
-			"subtitle": "배팅 레벨 및 게임 카테고리별 보너스 비율",
-			"overview": {
-				"title": "개요",
-				"body": "보너스 파밍은 슬롯, 라이브 카지노, 스포츠북, 복권에 대한 사용자의 베팅을 기준으로 보상을 제공합니다. 보너스는 매 24시간마다 계산되며, 사용자는 베팅한 다음 날 그것을 청구할 수 있습니다. 베팅 금액에 따라 다른 비율을 가진 7개의 등급이 있습니다."
-			},
-			"eligibility": {
-				"title": "적격성",
-				"content": "참여하려면:",
-				"points": {
-					"0": "활성 계정이 있어야 합니다.",
-					"1": "슬롯, 라이브 카지노, 스포츠북 및 복권에 베팅하세요.",
-					"2": "각 계층에 대한 최소 베팅 요구 사항을 충족하세요."
-				}
-			},
-			"calculation": {
-				"title": "보너스 계산 방법",
-				"desc": "보너스는 총 베팅 금액을 기준으로 24시간마다 계산됩니다. 예:",
-				"exampleTitle": "등급 {tier}:",
-				"wagerIn": "{gameType}에서 {amount} 배팅하기"
-			},
-			"table": {
-				"tierLevel": "티어 레벨",
-				"wagerRange": "베팅 범위",
-				"slots": "슬롯",
-				"liveCasino": "라이브 카지노",
-				"sports": "스포츠",
-				"tierPrefix": "등급",
-				"commissionLevel": "보너스 레벨",
-				"dailyWager": "일일 베팅 금액"
-			},
-			"claim": {
-				"title": "보너스 청구 및 인출",
-				"points": {
-					"0": "보너스는 베팅 24시간 후에 청구할 수 있게 됩니다.",
-					"1": "청구되지 않은 보너스는 누적되며 만료되지 않습니다.",
-					"2": "청구 및 인출 프로세스는 플랫폼별 정책에 따라 다를 수 있습니다."
-				}
-			},
-			"system": {
-				"title": "시스템 시간 및 운영",
-				"dailyTimeframeLabel": "일일 기간:",
-				"dailyTimeframeValue": "매일 00:00 UTC부터 23:59 UTC까지.",
-				"claimDailyLabel": "매일 청구:",
-				"claimDailyValue": "매일 14:00 UTC에 이용 가능 (현지 시간: {local}).",
-				"note": "참고: 다양한 시간대를 가진 공급업체와 협력하는 동안 모든 계산은 UTC를 따르며 일관성을 유지하고 혼란을 피합니다."
-			},
-			"amendments": {
-				"title": "수정 및 실격",
-				"body": "우리는 언제든지 이 약관을 업데이트할 수 있으며, 변경 사항은 게시 시 효력을 발휘합니다. 시스템 오류, 계산 오류 또는 부정 행위가 의심될 경우, 공정성을 보장하기 위해 필요한 경우 보너스 및 계정을 조정하거나 실격시킬 권리를 보유합니다"
-			},
-			"footer": {
-				"schedule": "보너스 일정:",
-				"availableDaily": "매일 이용 가능 시간",
-				"localTimeLabel": "(당신의 현지 시간: {time})"
+		"form": {
+			"title": "메시지 보내기",
+			"name": "성함",
+			"namePlaceholder": "성함을 입력하세요",
+			"email": "이메일 주소",
+			"emailPlaceholder": "이메일 주소를 입력하세요",
+			"subject": "제목",
+			"subjectPlaceholder": "문의 내용이 무엇인가요?",
+			"message": "메시지",
+			"messagePlaceholder": "문의 내용을 자세히 설명해주세요...",
+			"submit": "메시지 보내기",
+			"sending": "보내는 중...",
+			"errors": {
+				"nameRequired": "이름을 입력해주세요",
+				"emailRequired": "이메일을 입력해주세요",
+				"emailInvalid": "유효한 이메일 주소를 입력해주세요",
+				"subjectRequired": "제목을 입력해주세요",
+				"messageRequired": "메시지를 입력해주세요",
+				"messageTooShort": "메시지는 10자 이상이어야 합니다"
 			}
 		},
-		"calculator": {
-			"title": "보너스 계산기",
-			"subtitle": "당신의 베팅 금액에 기반한 보너스 수익을 추정하세요",
-			"interactive": {
-				"title": "인터랙티브 도구:",
-				"body": "다양한 베팅 금액을 입력하여 모든 티어의 잠재적 보너스를 확인하세요"
+		"responseTime": {
+			"title": "예상 응답 시간",
+			"description": "모든 문의에 최대한 빨리 답변하기 위해 노력합니다.",
+			"liveChat": {
+				"title": "실시간 채팅",
+				"time": "2분 이내"
 			},
-			"potentialEarnings": "잠재적 보너스",
-			"basedOnRate": "{percentage}% 보너스 비율 기준",
-			"tier": "레벨 {level}",
-			"commissionLevel": "보너스 레벨 {level}",
-			"enterWager": "베팅 금액 입력 (USD)",
-			"wagerPlaceholder": "예: 1000",
-			"calcFor": "${amount} 베팅의 보너스를 계산 중",
-			"totalPotential": "총 잠재 보너스:",
-			"combinedAtTier": "레벨 {level}에서 모든 게임 유형의 결합 보너스"
+			"email": {
+				"title": "이메일",
+				"time": "24시간 이내"
+			},
+			"priority": {
+				"title": "VIP 지원",
+				"time": "우선 처리"
+			}
 		},
-		"claimSuccessModal": {
-			"title": "청구 성공",
-			"statusCompleted": "완료",
-			"statusOnChain": "온체인",
-			"claimAmount": "소 가",
-			"logoAlt": "{siteName} 로고",
-			"backgroundAlt": "청구 성공 배경",
-			"creatingMagic": "매직 생성 중...",
-			"downloadShare": "다운로드 및 공유",
-			"spreadTheWin": "승리를 널리 알리세요",
-			"socialX": "X",
-			"socialFacebook": "Facebook",
-			"socialWhatsApp": "WhatsApp",
-			"socialTelegram": "Telegram",
-			"socialReddit": "Reddit",
-			"socialMore": "더 보기",
-			"shareText": "I just claimed {amount} bonus! Join me: {url}",
-			"referralLinkCopied": "추천 링크가 복사되었습니다!",
-			"referralLinkCopyFailed": "추천 링크를 복사하지 못했습니다.",
-			"screenshotFailed": "스크린샷을 찍지 못했습니다. 다시 시도하거나 다른 브라우저를 사용하세요.",
-			"shareTextCopied": "클립보드에 복사한 텍스트를 공유하세요!",
-			"shareFailed": "공유에 실패했습니다. 다시 시도하십시오."
+		"faq": {
+			"title": "자주 묻는 질문",
+			"items": [
+				{
+					"question": "비밀번호를 어떻게 재설정하나요?",
+					"answer": "로그인 페이지의 '비밀번호 찾기' 링크를 클릭하여 비밀번호를 재설정할 수 있습니다. 등록된 이메일 주소를 입력하고 받은 편지함으로 전송된 지침을 따르세요."
+				},
+				{
+					"question": "출금 처리 시간은 얼마나 걸리나요?",
+					"answer": "대부분의 암호화폐 출금은 즉시 처리됩니다. 경우에 따라 수동 확인이 필요할 수 있으며, 최대 24시간이 소요될 수 있습니다."
+				},
+				{
+					"question": "어떤 암호화폐를 받나요?",
+					"answer": "비트코인(BTC), 이더리움(ETH), USDT, USDC를 포함한 주요 암호화폐와 여러 블록체인 네트워크의 다른 인기 있는 토큰을 받습니다."
+				},
+				{
+					"question": "계정을 어떻게 인증하나요?",
+					"answer": "계정 인증은 프로필 설정에서 완료할 수 있습니다. 계정 등급 및 출금 한도에 따라 신분증을 제공해야 할 수 있습니다."
+				},
+				{
+					"question": "개인 정보는 안전한가요?",
+					"answer": "예, 모든 개인 및 금융 정보를 보호하기 위해 업계 표준 암호화 및 보안 조치를 사용합니다. 저희 플랫폼은 정기적인 보안 감사를 받습니다."
+				}
+			]
 		}
 	},
 	"about": {
-		"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 34 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"subtitle": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 34 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"stats": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 33 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-		"features": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 32 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+		"title": "🎮 {siteName} 소개",
+		"subtitle": "{siteName}에서는 게임이 단순히 시간을 때우는 것이 아니라 진정한 흥분에 관한 것입니다. 큰 승리를 거두는 순간, 또는 모든 것이 딱 맞아떨어지는 순간, 그것이 바로 저희가 추구하는 것입니다.",
+		"meta": {
+			"title": "{siteName} 소개 | 신뢰할 수 있는 글로벌 온라인 카지노 플랫폼",
+			"description": "슬롯, 라이브 카지노, 스포츠 베팅 및 포커를 제공하는 안전한 글로벌 카지노 플랫폼 {siteName}에 대해 알아보세요. 공정하고 빠르며 실제 플레이어를 위해 만들어졌습니다."
+		},
+		"intro": {
+			"paragraph1": "저희는 게임에서 더 많은 것을 원하는 플레이어를 위해 {siteName}을(를) 만들었습니다. 더 빠른 속도, 더 공정한 플레이, 더 많은 스릴을 원합니다. 라이브 카지노 게임, 스포츠 베팅, 포커를 좋아하든, 고액 슬롯에서 잭팟을 노리든, 여기에서 모든 것을 찾을 수 있으며, 모든 것이 합법적으로 유지되도록 저희를 믿으셔도 됩니다.",
+			"paragraph2": "처음부터 저희는 {siteName}이(가) 현실적으로 느껴지기를 원했습니다. 단순한 웹사이트가 아니라 로그인할 때마다 안전하고 흥미로운 게임 경험을 얻을 수 있는 곳입니다."
+		},
+		"whoWeAre": {
+			"title": "💎 저희는 누구인가",
+			"paragraph1": "{siteName}은(는) 전 세계 플레이어를 수천 개의 최고 카지노 및 베팅 게임에 연결합니다. 저희는 Pragmatic Play, Red Tiger, Microgaming, KA Gaming 등 업계 최고의 기업들과 협력하여 휴대폰으로 플레이하든 노트북으로 플레이하든 모든 게임이 원활하게 실행되고 멋지게 보이도록 합니다.",
+			"paragraph2": "모든 스핀, 모든 딜, 모든 보너스 등 모든 것이 실제 게임의 짜릿함을 선사하도록 설정되어 있습니다. 그리고 저희는 모든 것을 간단하게 유지합니다. 속임수도, 교묘한 규칙도 없습니다. 정직하고 명확한 플레이뿐입니다."
+		},
+		"mission": {
+			"title": "🎯 저희의 미션",
+			"paragraph1": "저희는 온라인 게임이 간단하고 안전하며 실제로 재미있기를 바랍니다.",
+			"paragraph2": "저희는 모든 것을 개인적으로 유지합니다. 빠른 입금, 빠른 출금. 눈이 편안한 깔끔한 디자인. 필요할 때 실제로 도움이 되는 지원. | {siteName}에서는 항상 귀하가 주목받습니다. 귀하의 신뢰는 저희가 계속 개선하도록 이끌어 줍니다."
+		},
+		"whatMakesUsDifferent": {
+			"title": "🏆 {siteName}이(가) 다른 점",
+			"features": [
+				"5,000개 이상의 게임 - 슬롯, 포커, 스포츠, 라이브 카지노",
+				"즉각적이고 신뢰할 수 있는 입출금",
+				"모든 게임은 공정성을 위해 RNG 인증을 받았습니다",
+				"어디서나 작동하는 깔끔한 디자인",
+				"항상 새로운 보너스와 프로모션"
+			],
+			"closing": "저희는 단지 게임을 제공하기 위해 여기에 있는 것이 아닙니다. 저희는 귀하가 안전하고 연결되어 있으며 다음 도전에 맞설 준비가 된 곳을 만들기 위해 여기에 있습니다."
+		},
+		"fairGaming": {
+			"title": "🌍 공정하고 책임감 있는 게임",
+			"paragraph1": "저희는 공정성을 중요하게 생각합니다. 이는 국제 표준을 준수하고, 18세 이상 플레이어만 예외 없이 모든 것을 명확하게 유지하는 것을 의미합니다.",
+			"paragraph2": "저희는 모든 게임의 공정성을 테스트하고, 암호화 기술은 귀하의 정보를 안전하게 보호합니다."
+		},
+		"promise": {
+			"title": "🤝 저희의 약속",
+			"paragraph1": "저희는 어울리기 위해 여기에 있는 것이 아닙니다. 저희는 온라인 게임의 기준을 높이기 위해 여기에 있습니다.",
+			"paragraph2": "귀하가 {siteName}에서 플레이할 때, 귀하는 신뢰와 새로운 아이디어를 기반으로 구축된 플랫폼을 사용하고 있습니다. 모든 업데이트, 새로운 기능 또는 파트너십은 귀하의 경험을 더 좋게 만들기 위한 것입니다."
+		},
+		"joinCommunity": {
+			"title": "🚀 {siteName} 커뮤니티에 가입하세요",
+			"paragraph1": "온라인 게임은 빠르게 움직이고 있으며, {siteName}은(는) 이미 더 빠르고, 더 똑똑하고, 더 보람 있는 곡선을 앞서고 있습니다.",
+			"paragraph2": "지금 가입하세요. 환영 보너스를 받으세요. 전 세계 많은 플레이어가 {siteName}을(를) 즐겨 찾는 곳으로 삼는 이유를 알아보세요.",
+			"tagline": "🎯 플레이. 승리. 경험. {siteName}."
+		}
+	},
+	"footer": {
 		"sections": {
-			"whoWeAre": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 32 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 31 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 30 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"company": {
+				"title": "회사",
+				"links": {
+					"about": "회사 소개",
+					"providers": "제공업체",
+					"affiliate": "추천 보너스",
+					"bonus": "턴오버 보너스"
+				}
 			},
-			"whatMakesUsDifferent": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 30 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"legal": {
+				"title": "법률",
+				"links": {
+					"privacy": "개인정보 처리방침",
+					"terms": "이용 약관",
+					"gambling": "책임감 있는 도박",
+					"faqs": "자주 묻는 질문"
+				}
 			},
-			"providers": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 29 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"seeAllButton": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 28 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"exploreGamesButton": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 28 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"games": {
+				"title": "게임",
+				"links": {
+					"lobby": "게임 로비",
+					"slots": "슬롯",
+					"live": "라이브 카지노",
+					"sports": "스포츠 베팅"
+				}
 			},
-			"missionVisionValues": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 27 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"items": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 26 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"support": {
+				"title": "지원",
+				"links": {
+					"help": "도움말 센터",
+					"contact": "문의하기"
+				}
+			}
+		},
+		"seoContent": {
+			"title": "설명",
+			"paragraph1": "암호화폐가 실제 카지노 게임의 짜릿함과 만나는 {siteName}에 오신 것을 환영합니다. 온라인 플레이의 세계에서 신선한 것을 찾고 있다면 방금 찾았습니다. {siteName}은(는) 속도, 보안, 그리고 무엇보다도 슬롯을 돌리든, 라이브 테이블을 즐기든, 스포츠 베팅을 하든, 아니면 다른 곳에서는 찾을 수 없는 암호화폐 전용 게임을 시도하고 싶든 실제로 즐겁게 하는 게임을 원하는 사람들을 위해 만들어졌습니다.",
+			"paragraph2": "모든 것은 블록체인에서 실행되므로 모든 결과를 신뢰할 수 있습니다. 결과는 무작위이며 즉시 확인됩니다. 속임수는 없습니다. 정직한 승리와 진정한 흥분뿐입니다. 하이 롤러? 전략 팬? 아니면 그냥 편안하게 잠시 플레이하고 싶을 수도 있습니다. 여기에는 당신의 스타일에 맞는 것이 있습니다.",
+			"paragraph3": "시작하는 것은 이보다 쉬울 수 없습니다. 즉시 입금하고, 빠르게 현금화하고, Dynamic.xyz 지갑으로 로그인하고, 그 과정에서 독특한 보너스를 받으세요. {siteName}은(는) 계속 움직입니다. 기다릴 필요가 없습니다. 골치 아픈 일이 없습니다. 캐나다, 유럽, 아시아 등 어디에 있든 저희의 다중 체인 설정은 현지 암호화폐 옵션과 잘 맞습니다.",
+			"paragraph4": "수천 명은 이미 알고 있습니다. 이것이 온라인 도박을 하는 더 똑똑한 방법이라는 것을요. 여기서는 단지 승리를 쫓는 것뿐만 아니라 개인 정보 보호, 공정성, 그리고 플레이어가 원하는 것을 실제로 이해하는 커뮤니티의 일원이 되는 것에 관한 것입니다. {siteName}은(는) 단순한 온라인 카지노가 아닙니다. 이것은 더 많은 것을 기대하는 사람들을 위해 재구축된 Web3 도박입니다.",
+			"tagline": "자, 더 똑똑하게 플레이하고, 더 안전하게 베팅하고, 아마도 대박을 터뜨릴 준비가 되셨습니까? {siteName}으로 가십시오.",
+			"showMore": "더 보기",
+			"showLess": "더 보기"
+		},
+		"copyright": "© {year} {siteName}. 모든 권리 보유.",
+		"followUs": "팔로우:",
+		"disclaimer": {
+			"line1": "18세 이상만 가능 | 책임감 있게 도박하세요",
+			"line2": "도박은 중독성이 있을 수 있습니다. 책임감 있게 플레이하고 잃을 수 있는 만큼만 베팅하십시오.",
+			"line3": "도박 문제가 있다고 생각되면 도움을 요청하십시오."
+		},
+		"description": "{siteName}은(는) 암호화폐 슬롯, 라이브 테이블 및 스포츠 베팅을 위한 최고의 장소입니다. 실제로 신뢰할 수 있는 블록체인 게임에 뛰어들어 몇 초 만에 지갑으로 직접 상금을 받고 매일 새로운 보너스를 받으세요. 빠르고 안전하며 완전히 탈중앙화되어 있습니다. {siteName}은(는) 전 세계 플레이어를 위해 온라인 게임을 한 단계 끌어올립니다. 똑똑하게 플레이하세요. 크게 이기세요. {siteName}을(를) 믿으세요."
+	},
+	"privacy": {
+		"title": "🔒 개인정보 처리방침 — {siteName}",
+		"subtitle": "{siteName}이(가) SSL, AML 및 GDPR 준수 개인정보 보호를 통해 안전한 블록체인 게임을 위해 지갑 주소와 암호화폐 데이터를 보호하는 방법입니다.",
+		"lastUpdated": "최종 업데이트: 2025년 1월",
+		"meta": {
+			"title": "개인정보 처리방침 | {siteName} – 암호화폐 지갑 카지노 보안",
+			"description": "{siteName}이(가) 고급 암호화 및 GDPR 준수 보호를 통해 암호화폐 지갑 및 거래 데이터를 보호하는 방법을 알아보세요.",
+			"keywords": "{siteName} 개인정보 처리방침, {siteName} 암호화폐 카지노, {siteName} 데이터 보호, {siteName} 지갑 보안, 암호화폐 도박 개인정보 보호, GDPR 암호화폐 카지노, 블록체인 카지노 정책, {siteName} 게임 보안, 암호화폐 베팅 개인정보 보호",
+			"ogTitle": "개인정보 및 데이터 보호 | {siteName} (암호화폐 카지노)",
+			"ogDescription": "{siteName}이(가) 고급 암호화 및 GDPR 준수 보호를 통해 암호화폐 지갑 및 거래 데이터를 어떻게 보호하는지 살펴보세요."
+		},
+		"intro": {
+			"paragraph1": "{siteName}(이하 \"{siteName}\", \"당사\", \"우리\" 또는 \"우리의\")에서는 {siteName} 암호화폐 카지노 플랫폼을 운영합니다. 당사 웹사이트, 모바일 앱 또는 관련 서비스(\"서비스\")를 사용할 때 개인 및 거래 데이터에 어떤 일이 발생하는지 다음과 같이 설명합니다.",
+			"paragraph2": "{siteName}은(는) 암호화폐 지갑 전용 카지노입니다. 즉, 모든 입출금은 암호화폐 지갑을 통해 이루어집니다. 당사는 귀하의 개인 정보를 중요하게 생각하며 이를 보호하기 위해 최선을 다하는 동시에 AML/KYC 요구 사항과 같은 규칙을 준수하고 모든 사람에게 안전하고 공정한 플랫폼을 유지합니다.",
+			"paragraph3": "{siteName}을(를) 사용하면 이 개인정보 처리방침에 동의하는 것입니다."
+		},
+		"sections": {
+			"scope": {
+				"title": "범위 및 수락",
+				"content": "이 정책은 {siteName}을(를) 사용하는 모든 사람에게 적용됩니다. 때때로 업데이트합니다. 그렇게 하면 새 정책이 사이트에서 시행되고, 그 후에도 {siteName}을(를) 계속 사용하면 변경 사항에 동의하는 것입니다."
 			},
-			"responsibleGaming": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 26 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 25 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"points": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 24 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-			},
-			"ourPromise": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 24 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 23 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 22 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-			},
-			"description": {
-				"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 21 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-				"intro": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 21 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"brand": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 20 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 19 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 19 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 18 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+			"dataCollection": {
+				"title": "수집하는 데이터",
+				"intro": "저희는 암호화폐 지갑 전용이므로 수집하는 데이터는 이를 반영합니다. 수집하는 데이터는 다음과 같습니다.",
+				"accountData": {
+					"title": "A. 계정 및 신원 데이터(필요 시)",
+					"email": "이메일(제공한 경우), 표시 이름, 계정 ID.",
+					"kyc": "주의: 암호화폐 지갑은 일반적으로 익명성을 유지하지만, 때로는 규정에 따라 신원(KYC)을 요청해야 할 수도 있습니다. 꼭 필요한 경우에만 요청하며, 명확하게 설명해 드립니다."
 				},
-				"games": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 17 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 17 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"count": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 16 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 15 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"slots": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 14 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 14 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				"walletData": {
+					"title": "B. 지갑 및 거래 데이터",
+					"addresses": "여기에서 연결하거나 사용하는 암호화폐 지갑 주소.",
+					"transactions": "온체인 거래 해시 및 타임스탬프(입출금용).",
+					"metadata": "결제를 조정하고 사기를 탐지하는 데 필요한 거래 세부 정보."
+				},
+				"technicalData": {
+					"title": "C. 기술 및 사용 데이터",
+					"ip": "IP 주소, IP 기반의 대략적인 위치, 장치 유형, 브라우저 및 운영 체제.",
+					"session": "세션 로그, 타임스탬프, 플레이한 게임, 베팅, 결과, 방문한 페이지.",
+					"cookies": "사이트를 더 좋고 원활하게 만들기 위한 쿠키 및 분석."
+				},
+				"securityData": {
+					"title": "D. 보안 및 위험 데이터",
+					"fraud": "사기 신호, 장치 지문, 사기 방지 파트너의 위험 점수.",
+					"disputes": "분쟁, 지불 거절 및 규정 준수 확인 기록(발생 시).",
+					"note": "법에서 요구하고 명시적인 허가를 받지 않는 한 인종, 종교 또는 건강과 같은 민감한 정보는 수집하지 않습니다."
+				}
+			},
+			"purposes": {
+				"title": "데이터를 수집하는 이유",
+				"intro": "저희는 명확하고 합법적인 이유로만 귀하의 데이터를 사용합니다.",
+				"items": [
+					{
+						"title": "서비스 운영",
+						"description": "계정 설정 및 관리, 지갑 입출금 처리, 상금 지급."
 					},
-					"liveCasino": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 13 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "보안",
+						"description": "남용, 사기 및 자금 세탁 탐지 및 중지."
 					},
-					"sports": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "원활한 운영 유지",
+						"description": "분석, 제품 업그레이드, 고객 지원."
 					},
-					"poker": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 09 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					{
+						"title": "마케팅(동의 시)",
+						"description": "뉴스레터, 프로모션 제안 - 항상 거절하거나 나중에 마음을 바꿀 수 있는 옵션이 있습니다."
+					},
+					{
+						"title": "플랫폼 보호",
+						"description": "및 모든 오용 조사."
 					}
+				],
+				"outro": "마케팅과 같은 것에 동의하면 언제든지 철회할 수 있습니다."
+			},
+			"cryptoWallet": {
+				"title": "암호화폐 지갑 및 온체인 데이터",
+				"points": [
+					"저희는 계정에 입금 또는 출금, 거래 감사 또는 법적 요구 사항을 충족하는 데 필요한 기간 동안만 지갑 주소 및 온체인 거래 정보를 저장합니다.",
+					"온체인 데이터는 본질적으로 공개됩니다. 블록체인 활동을 숨길 수는 없지만, 계정을 정확하게 유지하기 위해 자체 기록과 결합합니다.",
+					"수탁 지갑(예: 제3자 제공업체를 통해)을 연결하면 거래를 처리할 수 있도록 당사와 데이터를 공유하는 데 동의하는 것입니다."
+				]
+			},
+			"dataSharing": {
+				"title": "데이터를 공유하는 경우",
+				"intro": "저희는 몇 가지 경우에만 귀하의 정보를 공유합니다.",
+				"items": [
+					"법에서 요구하거나 불법 활동을 중지하기 위해 규제 기관 또는 법 집행 기관과 함께.",
+					"사업 이전(예: 합병 또는 인수)이 있는 경우 계열사 또는 제3자와 함께 - 그러나 항상 적절한 보호 조치를 취합니다.",
+					"플랫폼과 사용자를 안전하게 유지하기 위해 사기 방지 네트워크와 함께."
+				],
+				"noSelling": "저희는 광고주에게 개인 정보를 절대 판매하지 않습니다."
+			},
+			"security": {
+				"title": "보안 조치",
+				"intro": "저희는 귀하가 기대하는 보안 조치를 사용합니다.",
+				"items": [
+					"전송 중인 데이터에 대한 TLS/SSL 암호화, 민감한 정보에 대한 암호화된 저장소.",
+					"액세스 제어, 자세한 로깅 및 역할 기반 권한.",
+					"정기적인 보안 감사 및 취약점 검사.",
+					"직원을 위한 다단계 인증(MFA) - 그리고 귀하의 계정에도 설정할 수 있습니다."
+				],
+				"warning": "기억하세요: 지갑 개인 키와 계정 세부 정보를 안전하게 보관하세요. 저희는 절대 귀하의 개인 키를 묻지 않습니다."
+			},
+			"cookies": {
+				"title": "쿠키 및 추적",
+				"content": "저희는 사이트가 작동하고, 트래픽을 분석하고, (동의하는 경우) 마케팅을 위해 쿠키 및 유사한 도구를 사용합니다. 브라우저 설정에서 쿠키를 제어할 수 있지만 필수 쿠키를 끄면 일부 기능이 작동하지 않을 수 있습니다."
+			},
+			"minAge": {
+				"title": "아동 및 최소 연령",
+				"content": "{siteName}을(를) 사용하려면 18세 이상(또는 현지 법에서 정한 연령)이어야 합니다. 저희는 미성년자 사용자를 적극적으로 차단하며 미성년자가 가입한 사실을 알게 되면 모든 데이터를 삭제합니다."
+			},
+			"breach": {
+				"title": "침해 알림",
+				"content": "귀하의 권리를 위협하는 데이터 침해가 발생하는 경우, 저희는 법에서 요구하는 대로 귀하와 관련 당국에 알리고 신속하게 문제를 해결하기 위해 노력할 것입니다."
+			},
+			"changes": {
+				"title": "이 정책의 변경",
+				"content": "저희는 이 개인정보 처리방침을 변경할 수 있습니다. 큰 업데이트가 있는 경우, 사이트에 게시하고 타당한 경우 직접 알려드립니다."
+			},
+			"contact": {
+				"title": "문의",
+				"intro": "질문이나 요청이 있으십니까?",
+				"link": "🌐 https://{siteDomain}"
+			}
+		}
+	},
+	"terms": {
+		"title": "이용 약관",
+		"subtitle": "사용자 계약 및 플랫폼 규칙",
+		"lastUpdated": "2025년 1월",
+		"intro": {
+			"paragraph1": "www.{siteDomain}에 등록하거나 지갑을 연결하면 {siteName} N.V.와 구속력 있는 계약을 체결하게 됩니다.",
+			"paragraph2": "이 약관에 동의하지 않으면 당사 웹사이트에 접속, 사용 또는 등록하지 마십시오. 이 약관을 주의 깊게 읽으십시오. 귀하의 권리나 의무에 대해 불확실한 경우, 웹사이트를 사용하기 전에 귀하의 관할권에 있는 법률 고문과 상담하십시오."
+		},
+		"sections": {
+			"ownership": {
+				"title": "1. {siteName} 소유권",
+				"content1": "{siteName}은(는) {siteName} N.V.('{siteName}', '당사', '우리의', '우리')가 소유하고 운영합니다.",
+				"content2": "{siteName}은(는) 암호화폐 지갑 전용 카지노입니다. 모든 입금, 베팅 및 출금은 사용자의 암호화폐 지갑을 통해 처리됩니다. 당사는 Dynamic.xyz 및 호환되는 지갑 커넥터(예: WalletConnect / MetaMask)를 통한 지갑 로그인을 지원합니다."
+			},
+			"notice": {
+				"title": "2. 중요 공지",
+				"content1": "2.1 www.{siteDomain}('웹사이트')에 등록하거나 지갑을 연결하면 {siteName} N.V.와 구속력 있는 계약을 체결하고 다음에 동의하는 것입니다. (i) 본 이용 약관; (ii) 당사의 개인정보 처리방침; (iii) 당사의 쿠키 정책; (iv) 당사의 제휴 약관; 및 (v) 당사의 책임감 있는 게임 정책.",
+				"content2": "2.2 이 약관에 동의하지 않으면 당사 웹사이트에 접속, 사용 또는 등록하지 마십시오.",
+				"content3": "2.3 이 약관을 주의 깊게 읽으십시오. 귀하의 권리나 의무에 대해 불확실한 경우, 웹사이트를 사용하기 전에 귀하의 관할권에 있는 법률 고문과 상담하십시오."
+			},
+			"general": {
+				"title": "3. 일반 약관",
+				"items": [
+					"등록 또는 지갑 연결 시, 귀하('사용자', '플레이어', '귀하' 또는 '귀하의')는 모든 {siteName} 규칙 및 정책을 준수하는 데 동의합니다.",
+					"본 계약은 귀하와 {siteName} 간의 법적 구속력이 있는 계약입니다.",
+					"이 약관은 귀하가 지갑을 연결하고 사이트를 사용하기 시작하는 순간부터 효력이 발생합니다.",
+					"{siteName}은(는) 언제든지 이 약관을 수정하거나 업데이트할 권리가 있습니다. 변경 사항은 웹사이트에 게시되며, 계속 사용하면 수락하는 것으로 간주됩니다.",
+					"충돌이 발생하는 경우, 이 약관이 다른 모든 규칙, 프로모션 또는 외부 자료보다 우선합니다.",
+					"이 약관의 영어 버전만 법적 구속력이 있습니다. 번역은 편의를 위해서만 제공됩니다."
+				]
+			},
+			"account": {
+				"title": "4. 계정, 지갑 로그인 및 보안",
+				"intro": "{siteName}은(는) 지갑 기반 인증 및 보안 조치를 위해 Dynamic.xyz를 사용하여 계정을 보호합니다.",
+				"walletLogin": {
+					"title": "4.1 지갑 로그인(Dynamic.xyz)",
+					"items": [
+						"{siteName}은(는) 지갑 기반 로그인 및 인증을 위해 Dynamic.xyz(또는 기타 지원되는 커넥터)를 사용합니다. 지갑을 연결하면 해당 지갑의 합법적인 소유자임을 확인하고 {siteName}이(가) 해당 지갑을 귀하의 계정으로 인식하도록 승인하는 것입니다.",
+						"저희는 절대로 개인 키를 요청하지 않습니다. 지갑 자격 증명과 기기를 안전하게 보관해야 합니다. {siteName}은(는) 손상된 지갑이나 유출된 개인 키로 인한 손실에 대해 책임지지 않습니다."
+					]
 				},
-				"technology": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 08 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 08 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"blockchain": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 06 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 06 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 05 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"uptime": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 04 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph5": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 03 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+				"registration": {
+					"title": "4.2 등록 세부 정보",
+					"items": [
+						"계정 통신을 위해 연락처 세부 정보(이메일, 사용자 이름)를 제공하도록 요청받을 수 있습니다. 정확한 정보를 제공하고 최신 상태로 유지해야 합니다.",
+						"연결된 지갑을 사용하여 수행된 모든 작업에 대한 책임은 귀하에게 있습니다."
+					]
 				},
 				"security": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 03 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 02 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"rng": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 01 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 01 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 28 MINUTES 00 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 59 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"global": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 58 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 58 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"players": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 57 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 56 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"countries": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 56 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 55 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph4": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 54 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"payments": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 54 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 53 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 52 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"instant": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 52 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 51 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"mobile": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 50 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 50 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 49 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"support": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 48 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 48 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"availability": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 47 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 46 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph3": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 46 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"responsible": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 45 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 44 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"paragraph2": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 44 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-				},
-				"whyChoose": {
-					"heading": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 43 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"point1": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 42 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 42 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point2": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 41 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 40 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point3": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 40 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 39 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point4": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 38 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 38 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point5": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 37 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 36 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					},
-					"point6": {
-						"title": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 35 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-						"description": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 35 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
-					}
-				},
-				"closing": {
-					"paragraph1": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 34 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
-					"tagline": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  21 HOURS 27 MINUTES 33 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+					"title": "4.3 다중 계정 및 보안",
+					"items": [
+						"개인당 하나의 계정만 허용됩니다. 여러 계정을 만들거나 제한을 회피하려는 시도는 계정 정지 및 자금 몰수로 이어질 수 있습니다.",
+						"제공되는 모든 플랫폼 보안 기능(예: 관련 서비스에 대한 2FA)을 활성화하고 자신의 지갑을 보호하십시오.",
+						"무단 접근이 의심되는 경우 즉시 지원팀에 알리십시오."
+					]
 				}
+			},
+			"eligibility": {
+				"title": "5. 자격 및 사용자 보증",
+				"intro": "5.1 귀하는 다음을 진술하고 보증합니다.",
+				"items": [
+					"귀하는 최소 18세 이상입니다(또는 귀하의 관할권에서 합법적인 도박 최소 연령).",
+					"귀하가 있는 곳에서 온라인 암호화폐 도박 서비스를 합법적으로 사용할 수 있습니다.",
+					"귀하는 연결하는 지갑의 합법적인 소유자입니다.",
+					"지역 제한을 우회하기 위해 VPN이나 위치 스푸핑을 사용하지 않습니다.",
+					"불법적이거나 상업적인 목적으로 서비스를 사용하지 않습니다.",
+					"암호화폐 가치가 변동될 수 있음을 수락하고 모든 시장 위험을 감수합니다."
+				],
+				"outro": "5.2 귀하가 이러한 보증을 위반하는 경우, {siteName}은(는) 법이 허용하는 범위 내에서 접근을 중단하거나 종료하고 자금을 보류할 수 있습니다."
+			},
+			"restricted": {
+				"title": "6. 제한된 관할권",
+				"content1": "6.1 {siteName}은(는) 암호화폐 도박이 금지되거나 제한된 관할권의 플레이어를 허용하지 않습니다. 여기에는 다음이 포함되지만 이에 국한되지는 않습니다.",
+				"content2": "미국(및 미국 영토), 영국, 프랑스, 네덜란드, 스페인, 독일, 호주, 오스트리아, 코모로, 이란, 북한, 수단, 시리아 및 FATF 블랙리스트에 등재된 모든 관할권.",
+				"content3": "6.2 VPN 또는 프록시를 포함하여 제한된 관할권에서 서비스에 접근하려는 시도는 본 약관 위반이며 계정 폐쇄 및 자금 몰수로 이어질 수 있습니다."
+			},
+			"crypto": {
+				"title": "7. 암호화폐 입금 및 출금",
+				"policy": {
+					"title": "7.1 암호화폐 전용 정책",
+					"items": [
+						"{siteName}은(는) 지원되는 암호화폐(예: BTC, ETH, USDT, TRX, BNB)로만 입금 및 출금을 허용합니다. 법정화폐, 카드 또는 은행 송금 입금은 허용되지 않습니다.",
+						"모든 입금은 귀하가 통제하는 지갑에서 이루어져야 합니다. 제3자 지갑에서의 입금은 금지됩니다."
+					]
+				},
+				"deposits": {
+					"title": "7.2 입금",
+					"items": [
+						"입금은 필요한 블록체인 확인 후 적립됩니다. 네트워크(가스) 수수료는 귀하가 지불해야 합니다.",
+						"{siteName}은(는) 차단된 주소나 제한된 출처에서 온 것으로 보이는 입금을 거부하거나 취소할 수 있습니다."
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 출금",
+					"items": [
+						"출금은 귀하가 제공한 지갑 주소로 처리됩니다. {siteName}은(는) 처리 전에 목적지 지갑을 확인하도록 요구할 수 있습니다.",
+						"출금을 감당할 수 있는 충분한 정산 잔액이 있어야 합니다. 남용 또는 비정상적인 활동이 의심되는 경우 출금이 지연될 수 있습니다."
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 지불 거절 및 취소",
+					"items": [
+						"암호화폐 거래는 온체인에서 최종적입니다. {siteName}이(가) 제3자 서비스 제공업체의 지불 거절 또는 취소(온체인에서는 드문 경우)로 인해 손실을 입는 경우, 저희는 금액을 회수하거나 관리 수수료를 부과할 권리가 있습니다."
+					]
+				}
+			},
+			"kyc": {
+				"title": "8. 정기적인 신원 확인 없음(KYC 없음)",
+				"content1": "8.1 {siteName}은(는) 정상적인 플레이 조건으로 정기적인 신원 확인(KYC)을 수행하지 않습니다. 사용자는 Dynamic.xyz를 통해 지갑을 연결하고 신원 문서를 제공하지 않고도 플레이를 시작할 수 있습니다.",
+				"content2": "8.2 위 내용에도 불구하고, {siteName}은(는) 다음과 같은 경우 정보를 요청하거나 거래를 중단할 권리가 있습니다.",
+				"items": [
+					"관할 당국의 합법적인 명령을 준수하기 위해:",
+					"사기, 자금 세탁 또는 기타 불법 활동을 예방, 조사 또는 해결하기 위해",
+					"또는 플랫폼의 보안 및 무결성을 보호하기 위해."
+				],
+				"content3": "8.3 법적으로 요구될 때 그러한 정보를 제공하기를 거부하는 경우, {siteName}은(는) 법이 허용하는 범위 내에서 귀하의 계정을 제한 또는 폐쇄하고 출금을 지연 또는 보류할 수 있습니다."
+			},
+			"fairPlay": {
+				"title": "9. 공정한 플레이, 금지된 행위 및 보안",
+				"intro": "다음과 같은 행위를 해서는 안 됩니다.",
+				"items": [
+					"봇, 스크립트, 자동 플레이 도구 또는 무단 소프트웨어 사용.",
+					"다른 플레이어와 공모하거나 게임 결과를 조작.",
+					"보너스나 프로모션을 악용하기 위해 여러 계정 생성.",
+					"온체인 거래를 되돌리거나 조작하려는 시도.",
+					"게임 버그나 플랫폼 취약점 악용."
+				],
+				"outro1": "부정 행위, 공모 또는 플랫폼을 악용하는 것으로 밝혀진 계정은 정지, 폐쇄되거나 잔액이 몰수될 수 있습니다.",
+				"outro2": "{siteName}은(는) 플랫폼 무결성을 보호하기 위해 기술 및 행동 모니터링을 구현합니다."
+			},
+			"bonuses": {
+				"title": "10. 보너스 및 프로모션",
+				"items": [
+					"모든 보너스 제안 및 프로모션은 각 제안에 명시된 특정 보너스 약관의 적용을 받습니다.",
+					"보너스 남용(여러 계정 또는 빠른 보너스 전환 포함)은 보너스 거부, 취소 또는 몰수 및 계정 폐쇄로 이어질 수 있습니다.",
+					"보너스 베팅 요구 사항은 프로모션별로 지정된 대로 보너스에서 파생된 자금을 인출하기 전에 충족되어야 합니다."
+				]
+			},
+			"playingRules": {
+				"title": "11. 플레이 규칙 및 게임 정산",
+				"items": [
+					"베팅은 화면에 확인 메시지를 받은 후에만 수락됩니다. 잔액이 부족한 상태에서 한 베팅은 무효입니다.",
+					"{siteName}의 내부 로그 및 블록체인 기록은 분쟁 발생 시 권위가 있습니다.",
+					"이벤트가 취소, 중단 또는 기타 방식으로 손상된 경우, {siteName}은(는) 게시된 게임 및 시장 규칙에 따라 베팅을 정산하거나 무효화합니다.",
+					"증명 가능한 공정한 게임의 경우, 검증 도구 및 서버 시드(해당하는 경우)는 게임별로 제공되며 서버 로그가 최종적입니다."
+				]
+			},
+			"errors": {
+				"title": "12. 오류, 중단 및 제한",
+				"intro": "{siteName}은(는) 다음으로 인한 손실에 대해 책임지지 않습니다.",
+				"items": [
+					"인터넷 또는 장치 장애",
+					"블록체인 지연, 포크 또는 네트워크 혼잡",
+					"소프트웨어 버그 또는 제3자 서비스 중단"
+				],
+				"outro1": "{siteName}은(는) 오류나 악용이 감지되면 베팅을 무효화하거나, 잔액을 조정하거나, 거래를 취소할 권리가 있습니다.",
+				"outro2": "저희는 사용자와 플랫폼을 보호하기 위해 베팅 한도, 최대 당첨금 및 기타 통제 수단을 설정할 수 있습니다."
+			},
+			"suspension": {
+				"title": "13. 정지, 폐쇄 및 자금 처리",
+				"intro": "{siteName}은(는) 다음과 같은 경우 계정을 정지하거나 폐쇄할 수 있습니다.",
+				"items": [
+					"약관 위반",
+					"남용, 사기 또는 의심스러운 행동 감지",
+					"법적 또는 규제 의무에 따른 요구"
+				],
+				"outro1": "계정 폐쇄 시, 보류 중인 베팅은 취소될 수 있으며 나머지 자금은 관련 법률 및 플랫폼 정책에 따라 처리됩니다.",
+				"outro2": "{siteName}은(는) 분쟁 해결, 합법적인 요청 준수 또는 손실 해결에 필요한 경우 자금을 보유할 수 있습니다."
+			},
+			"responsibleGaming": {
+				"title": "14. 책임감 있는 게임",
+				"items": [
+					"{siteName}은(는) 책임감 있는 도박을 장려합니다. 다음을 요청할 수 있습니다: 자가 제외, 입금 한도 또는 일시 중지.",
+					"도박 피해가 의심되는 경우, 즉각적인 지원을 위해 {siteDomain}을(를) 방문하십시오.",
+					"미성년자 도박(18세 미만 또는 현지 법적 연령)은 엄격히 금지됩니다. 미성년자 소유로 밝혀진 계정은 폐쇄되고 자금은 정책에 따라 처리됩니다."
+				]
+			},
+			"ip": {
+				"title": "15. 지적 재산권",
+				"content1": "{siteName}의 모든 상표, 로고, 사이트 콘텐츠, 소프트웨어 및 게임 자산은 {siteName}이(가) 소유하거나 라이선스를 보유합니다. 무단 복사, 스크래핑 또는 재배포는 금지됩니다.",
+				"content2": "귀하에게는 개인적인 오락 목적으로만 서비스에 액세스할 수 있는 제한적이고 취소 가능한 라이선스가 부여됩니다."
+			},
+			"liability": {
+				"title": "16. 책임의 제한",
+				"items": [
+					"법이 허용하는 최대 범위 내에서, {siteName}은(는) 간접적, 특별, 결과적 또는 부수적 손실(이익 손실 또는 기회 비용 포함)에 대해 책임을 지지 않습니다.",
+					"본 약관과 관련된 모든 청구에 대한 당사의 총 책임은 귀하의 마지막 입금액 또는 관련 법률에서 지정한 금액을 초과하지 않습니다.",
+					"본 약관의 어떠한 내용도 관련 법률이 그러한 제한을 금지하는 경우 과실로 인한 사망 또는 개인 상해에 대한 책임을 제한하지 않습니다."
+				]
+			},
+			"disputes": {
+				"title": "17. 분쟁 해결 및 준거법",
+				"content": "분쟁 발생 시 {siteDomain}을(를) 방문하십시오. 저희는 불만을 신속하게 해결하는 것을 목표로 하며, 필요한 경우 경영진에게 에스컬레이션합니다."
+			},
+			"amendments": {
+				"title": "18. 수정",
+				"content": "{siteName}은(는) 언제든지 이 약관을 수정할 수 있습니다. 업데이트된 약관은 웹사이트에 게시됩니다. 계속 사용하면 수락하는 것으로 간주됩니다."
+			},
+			"miscellaneous": {
+				"title": "19. 기타",
+				"items": [
+					"이 약관은 귀하와 {siteName} 간의 서비스에 관한 전체 계약을 구성합니다.",
+					"조항이 시행 불가능한 것으로 판명되면 필요한 최소한의 범위 내에서 수정되고 나머지 조항은 계속 유효합니다.",
+					"귀하는 이 약관에 따른 권리를 양도할 수 없습니다. {siteName}은(는) 권리와 의무를 양도하거나 하도급할 수 있습니다."
+				]
+			},
+			"contact": {
+				"title": "20. 문의",
+				"intro": "지원, 불만 또는 법적 고지:",
+				"supportEmail": "일반 지원: {siteDomain} 방문",
+				"affiliateEmail": "제휴 문의: {siteDomain} 방문",
+				"registeredOffice": "등록 사무소: {siteDomain} N.V., Heelsumstraat 51, Willemstad, Curaçao"
+			}
+		}
+	},
+	"responsibleGambling": {
+		"title": "책임감 있는 도박 - {siteName}",
+		"subtitle": "{siteName}에서는 게임이 안전하고 재미있으며 언제든지 떠날 수 있는 것이기를 바랍니다. 저희는 균형을 유지하는 것을 중요하게 생각합니다. 그래서 귀하는 돈을 벌거나 재정을 해결하기 위해서가 아니라 즐거움을 위해 플레이합니다.",
+		"lastUpdated": "최종 업데이트: 2025년 1월",
+		"intro": {
+			"title": "책임감 있는 도박 - {siteName}",
+			"paragraph1": "{siteName}에서는 게임이 안전하고 재미있으며 언제든지 떠날 수 있는 것이기를 바랍니다. 저희는 균형을 유지하는 것을 중요하게 생각합니다. 그래서 귀하는 돈을 벌거나 재정을 해결하기 위해서가 아니라 즐거움을 위해 플레이합니다.",
+			"paragraph2": "18세 미만이거나 해당 지역의 법적 연령 미만인 경우 저희 플랫폼을 사용할 수 없습니다. 저희는 이를 심각하게 받아들입니다."
+		},
+		"mission": {
+			"title": "저희의 미션",
+			"paragraph1": "저희는 명확하고 정직하며 안전한 게임을 믿습니다. {siteName}은(는) 귀하가 현명한 선택을 하고 도박이 문제가 되는 것을 방지하는 데 도움을 주기 위해 존재합니다.",
+			"paragraph2": "저희에게 중요한 것은 다음과 같습니다.",
+			"beliefs": {
+				"0": "도박은 오락입니다. 부자가 되는 방법이 아닙니다.",
+				"1": "자신을 알고, 한계를 정하고, 과도하게 하지 마십시오.",
+				"2": "저희는 귀하가 통제력을 유지하는 데 도움이 되는 도구와 리소스를 제공합니다."
+			}
+		},
+		"understanding": {
+			"title": "책임감 있는 도박의 진정한 의미",
+			"paragraph1": "요즘 온라인 도박은 어디에나 있습니다. 그래서 시간, 돈, 심지어 왜 처음 시작했는지조차 잊어버리기 쉽습니다. | 책임감 있는 도박은 자신의 경계를 알고, 정신을 바짝 차리고, 상황을 통제 불능 상태로 만들지 않는 것을 의미합니다.",
+			"paragraph2": "기억해야 할 몇 가지 사항:",
+			"tips": {
+				"0": "이익을 위해서가 아니라 재미를 위해 플레이하세요.",
+				"1": "손실을 만회하려고 하지 마십시오. 필요하면 휴식을 취하십시오.",
+				"2": "지출 및 시간 제한을 설정하고 이를 지키십시오.",
+				"3": "피곤하거나 스트레스를 받거나 화가 났을 때는 절대 도박을 하지 마십시오.",
+				"4": "청구서나 기타 필요한 돈을 사용하지 마십시오.",
+				"5": "재미가 없어지면 그만두십시오."
+			}
+		},
+		"selfCheck": {
+			"title": "빠른 자가 점검: 아직 통제하고 있습니까?",
+			"intro": "자신에게 정직하십시오.",
+			"questions": {
+				"0": "도박을 하면서 시간을 잊어버리십니까?",
+				"1": "그것이 당신의 관계나 일에 해를 끼쳤습니까?",
+				"2": "플레이할 수 없을 때 짜증이 납니까?",
+				"3": "지루함이나 스트레스를 피하기 위해 도박을 합니까?",
+				"4": "계속 플레이하기 위해 돈이나 암호화폐를 빌렸습니까?",
+				"5": "손실을 만회하기 위해 더 많이 베팅하여 손실을 쫓습니까?"
+			},
+			"warning": "여러 개에 \"예\"라고 답했다면, 플레이 방식을 다시 생각하고 도움을 요청할 때입니다."
+		},
+		"tools": {
+			"title": "{siteName}이(가) 정상 궤도를 유지하는 데 도움이 되는 방법",
+			"intro": "저희는 귀하가 즐기기를 바라지만, 안전하게 지내기를 바랍니다. | 저희가 제공하는 것은 다음과 같습니다.",
+			"selfExclusion": {
+				"title": "자가 제외",
+				"description": "휴식이 필요하십니까? 계정을 일시적으로 또는 영구적으로 차단하도록 요청할 수 있습니다. 이 기간 동안에는 플레이하거나 프로모션 이메일을 받을 수 없습니다. {siteName}에 문의하시면 비공개로 처리해 드립니다."
+			},
+			"coolingOff": {
+				"title": "냉각 기간",
+				"paragraph1": "상황이 통제 불능 상태가 된다고 느끼면 24시간, 일주일 또는 한 달 동안 휴식을 취하십시오. 이 기간 동안에는 지갑을 연결하여 플레이할 수 없습니다.",
+				"periods": {
+					"0": "24시간",
+					"1": "1주",
+					"2": "1개월"
+				},
+				"paragraph2": "이 기간 동안에는 지갑을 연결하여 플레이할 수 없습니다."
+			},
+			"depositAwareness": {
+				"title": "입금 및 손실 인식",
+				"description": "모든 것이 암호화폐 지갑을 통해 실행되므로 모든 입금 및 베팅을 블록체인에서 바로 볼 수 있습니다. 활동을 주시하여 항상 자신의 위치를 파악하십시오."
+			}
+		},
+		"underagePrevention": {
+			"title": "미성년자 보호",
+			"paragraph1": "18세 미만은 도박을 할 수 없습니다. 저희는 진심입니다.",
+			"tipsTitle": "부모님과 보호자 여러분, 몇 가지 팁을 알려드립니다.",
+			"tips": {
+				"0": "비밀번호를 사용하거나 장치를 잠그십시오.",
+				"1": "공유 컴퓨터나 휴대폰에 지갑 정보를 저장하지 마십시오.",
+				"2": "자리를 비울 때는 항상 로그아웃하십시오.",
+				"3": "NetNanny나 GamBlock과 같은 도구를 사용하여 도박 사이트를 차단하십시오.",
+				"4": "자녀의 온라인 활동을 확인하십시오."
+			},
+			"warning": "미성년자가 플레이하고 있다는 사실을 알게 되면 계정을 폐쇄하고 모든 상금을 취소합니다."
+		},
+		"helpSupport": {
+			"title": "지원이 필요하십니까? 당신은 혼자가 아닙니다.",
+			"intro": "도박이 기분, 관계 또는 재정에 해를 끼치기 시작하면 연락하십시오. 어디에 있든 도움을 줄 수 있는 몇 가지 기관은 다음과 같습니다.",
+			"organizations": {
+				"0": {
+					"name": "GamCare",
+					"url": "https://www.gamcare.org.uk"
+				},
+				"1": {
+					"name": "Gambling Therapy",
+					"url": "https://www.gamblingtherapy.org"
+				},
+				"2": {
+					"name": "Gamblers Anonymous",
+					"url": "https://www.gamblersanonymous.org"
+				},
+				"3": {
+					"name": "National Council on Problem Gambling",
+					"url": "https://www.ncpgambling.org"
+				},
+				"4": {
+					"name": "GamTalk",
+					"url": "https://www.gamtalk.org"
+				}
+			},
+			"paragraph2": "자가 테스트, 실시간 채팅 및 지역 지원 그룹을 제공합니다."
+		},
+		"principles": {
+			"title": "{siteName}이(가) 책임감 있는 태도를 유지하는 방법",
+			"intro": "저희는 다음 원칙을 준수합니다.",
+			"items": {
+				"0": {
+					"title": "투명성",
+					"description": "모든 게임은 입증 가능하게 공정하고 블록체인 검증을 거쳤습니다."
+				},
+				"1": {
+					"title": "보안",
+					"description": "세션은 항상 Dynamic.xyz 지갑 로그인으로 보호됩니다. 비밀번호나 KYC가 없습니다."
+				},
+				"2": {
+					"title": "자율성",
+					"description": "당신이 책임자입니다. 언제든지 연결을 끊으십시오."
+				},
+				"3": {
+					"title": "교육",
+					"description": "위험을 이해하고 정보를 제공하는 데 도움을 드립니다."
+				},
+				"4": {
+					"title": "커뮤니티 지원",
+					"description": "저희 팀은 연중무휴 24시간 대기하고 있습니다."
+				}
+			}
+		},
+		"playSmart": {
+			"title": "마지막 생각",
+			"intro": "도박은 즐겁고 사교적이며 균형 잡힌 것이어야 합니다. 플레이하기 전에 시간 제한을 설정하십시오. 손실을 쫓거나 화가 났을 때 플레이하지 마십시오. 모든 상금은 월급이 아니라 좋은 보너스로 취급하십시오. 똑똑하게 플레이하고 필요하면 도움을 요청하는 것을 두려워하지 마십시오.",
+			"reminders": {
+				"0": "도박은 즐겁고 사교적이며 균형 잡힌 것이어야 합니다.",
+				"1": "플레이하기 전에 시간 제한을 설정하십시오.",
+				"2": "손실을 쫓거나 화가 났을 때 플레이하지 마십시오.",
+				"3": "모든 상금은 월급이 아니라 좋은 보너스로 취급하십시오.",
+				"4": "똑똑하게 플레이하고 필요하면 도움을 요청하는 것을 두려워하지 마십시오."
+			}
+		},
+		"finalMessage": {
+			"paragraph1": "도박이 일이나 관계에 영향을 미치지 않도록 하십시오. 재미가 없어지면 그냥 떠나십시오. | {siteName}에서는 귀하의 안녕을 염려합니다. 현명한 선택을 하고, 안전하게 플레이하고, 자신을 돌보십시오.",
+			"paragraph2": "도박이 일이나 관계에 영향을 미치지 않도록 하십시오. 재미가 없어지면 그냥 떠나십시오.",
+			"contact": "도움이나 조언이 필요하거나 휴식을 취하고 싶으십니까? 언제든지 {siteName}에 문의하십시오."
+		}
+	},
+	"faqs": {
+		"title": "자주 묻는 질문 – {siteName}",
+		"subtitle": "일반적인 {siteName} 질문에 대한 답변을 찾으십시오. 지갑 로그인, 입금, 출금, 공정한 플레이 및 블록체인 투명성에 대해 알아보십시오.",
+		"lastUpdated": "최종 업데이트: 2025년 1월",
+		"introTitle": "자주 묻는 질문 {siteName}",
+		"intro": "{siteName} FAQ 센터에 오신 것을 환영합니다. 여기에서 암호화폐 게임 플랫폼에 대한 가장 일반적인 질문에 대한 빠른 답변을 찾을 수 있습니다. | 여기에서 답변을 찾을 수 없는 경우 연중무휴 24시간 지원팀이 항상 {siteName}에서 도움을 드릴 준비가 되어 있습니다.",
+		"categories": {
+			"accountRegistration": {
+				"title": "🔹 계정 및 등록",
+				"items": {
+					"0": {
+						"question": "1. 웹사이트에 등록할 수 있습니까?",
+						"answer": "예 — 18세 이상(또는 해당 관할권의 법적 성인 연령)이면 누구나 등록할 수 있습니다. | 거주하는 곳에서 온라인 게임이 합법적인지 확인해야 합니다. | {siteName}에서는 기존 가입이나 비밀번호가 필요하지 않습니다. | Dynamic.xyz를 통해 지갑을 연결하기만 하면 즉시 플레이를 시작할 수 있습니다. | 👉 법률 및 규정 준수 세부 정보는 이용 약관을 검토하십시오.",
+						"reminder": "알림: 도박은 중독성이 있을 수 있습니다. 책임감 있게 플레이하고 자신의 한계를 아십시오."
+					},
+					"1": {
+						"question": "2. 로그인 정보를 잊어버리면 어떻게 합니까?",
+						"answer": "{siteName}은(는) Dynamic.xyz를 통해 지갑 기반 로그인을 사용하므로 기존 비밀번호를 사용하지 않습니다. | 계정에 다시 액세스하려면: | 원래 사용했던 것과 동일한 주소를 사용하여 지갑을 다시 연결하십시오. | 지갑에 대한 액세스 권한을 잃어버린 경우 시드 문구 또는 백업 방법으로 복원하십시오(저희는 개인 키를 저장하거나 제어하지 않습니다). | {siteName}은(는) 보안상의 이유로 지갑 자격 증명을 재설정하거나 복구할 수 없습니다."
+					},
+					"2": {
+						"question": "3. 사용자 이름이나 연결된 지갑을 변경할 수 있습니까?",
+						"answer": "귀하의 {siteName} 계정은 지갑 주소에 연결되어 있습니다. | 새 지갑을 사용하려면 새 지갑을 연결하기만 하면 됩니다. 단, 이전 게임 기록, VIP 상태 및 보너스는 자동으로 이전되지 않습니다."
+					},
+					"3": {
+						"question": "4. VIP 회원이 되려면 어떻게 해야 합니까?",
+						"answer": "저희 VIP 프로그램은 독점적이며 초청 전용입니다. | {siteName} 커뮤니티와 플레이하고 참여하면 게임 활동이 자동으로 추적됩니다. | 자격이 되면 플랫폼 내 알림 또는 {siteName} 팀의 직접 메시지를 통해 공식 초대를 받게 됩니다. | VIP는 독점 보너스, 더 빠른 출금 및 개인화된 보상을 이용할 수 있습니다."
+					}
+				}
+			},
+			"depositsWithdrawals": {
+				"title": "💰 입금 및 출금",
+				"items": {
+					"0": {
+						"question": "5. 암호화폐를 어떻게 입금합니까?",
+						"answer": "{siteName}에 입금하는 것은 빠르고 간단합니다. | 메인 대시보드에서 \"내 지갑\"으로 이동하십시오. | 입금을 선택하고 선호하는 암호화폐(예: BTC, ETH, USDT, BNB)를 선택하십시오. | 고유한 지갑 주소를 복사하거나 QR 코드를 스캔하십시오. | 외부 지갑에서 표시된 주소로 암호화폐를 보내십시오. | 블록체인에서 확인되면 자금이 자동으로 {siteName} 잔액에 표시됩니다. | ⚠️ 지원되는 암호화폐만 올바른 주소 네트워크(예: ERC20, TRC20, BEP20)로 보내야 합니다."
+					},
+					"1": {
+						"question": "6. 입금하는 데 얼마나 걸립니까?",
+						"answer": "입금은 일반적으로 블록체인 혼잡 및 거래 수수료에 따라 5~10분 이내에 확인됩니다. | 거래 해시(TXID)를 사용하여 블록 탐색기(예: Etherscan.io 또는 BscScan.com)를 통해 거래 진행 상황을 추적할 수 있습니다. | 일반적으로 입금이 잔액에 표시되려면 최소 3번의 확인이 필요합니다."
+					},
+					"2": {
+						"question": "7. 최소 출금 금액은 얼마입니까?",
+						"answer": "최소 출금 금액은 사용 중인 암호화폐에 따라 다릅니다. | 각 코인에는 고유한 네트워크 수수료와 최소 임계값이 있습니다. | 이러한 값은 \"내 지갑\" 아래의 출금 섹션에 표시됩니다."
+					},
+					"3": {
+						"question": "8. 상금을 어떻게 인출합니까?",
+						"answer": "암호화폐를 인출하려면: | \"내 지갑\" → \"출금\"으로 이동하십시오. | 목적지 지갑 주소와 인출하려는 금액을 입력하십시오. | 확인하기 전에 주소와 네트워크 유형을 다시 확인하십시오. | 출금은 즉시 처리되지만 블록체인 네트워크 활동에 따라 몇 분 정도 걸릴 수 있습니다. | 💡 항상 수신 지갑이 인출하는 네트워크를 지원하는지 확인하십시오."
+					},
+					"4": {
+						"question": "9. 거래가 지연되면 어떻게 합니까?",
+						"answer": "블록체인 거래는 네트워크 혼잡이나 낮은 가스 수수료로 인해 때때로 더 오래 걸릴 수 있습니다. | 입금 또는 출금이 도착하지 않은 경우: | 블록체인 탐색기에서 TXID를 확인하십시오. | 올바른 네트워크와 주소를 사용했는지 확인하십시오. | 한 시간이 넘게 지났다면 TXID와 지갑 세부 정보를 가지고 {siteName}에 문의하십시오."
+					}
+				}
+			},
+			"gamesSecurity": {
+				"title": "🎮 게임, 공정성 및 보안",
+				"items": {
+					"0": {
+						"question": "10. {siteName} 게임은 공정합니까?",
+						"answer": "예 — 모든 {siteName} 게임은 입증 가능한 공정한 기술과 검증된 스마트 계약을 사용하여 제작되었습니다. | 모든 베팅, 결과 및 지불은 블록체인에서 독립적으로 확인할 수 있습니다. | 저희는 무작위성, 공정성 및 개방성을 보장하는 투명하고 조작 불가능한 시스템에서 운영됩니다. | Etherscan 또는 해당 네트워크 탐색기를 통해 게임 결과 및 거래 증명을 온체인에서 볼 수 있습니다."
+					},
+					"1": {
+						"question": "11. 게임이 멈추거나 충돌하면 어떻게 해야 합니까?",
+						"answer": "게임이 응답하지 않는 경우: | 페이지를 새로고침하십시오. | 브라우저 캐시를 지우고 지갑을 다시 연결하십시오. | 문제가 지속되면 실시간 채팅 또는 {siteName}을 통해 지원팀에 문의하십시오. | 저희 팀은 영향을 받은 경우 게임 세션 또는 잔액을 복원하는 데 도움을 드릴 것입니다."
+					},
+					"2": {
+						"question": "12. 둘 이상의 지갑이나 계정을 사용할 수 있습니까?",
+						"answer": "아니요. | 각 플레이어는 하나의 지갑 주소를 기본 계정으로 사용할 수 있습니다. | 보너스를 청구하거나 프로모션을 악용하기 위해 여러 계정을 만들거나 지갑 회전을 사용하는 것은 엄격히 금지되며 계정 제한 또는 잔액 몰수로 이어질 수 있습니다."
+					},
+					"3": {
+						"question": "13. 제 개인 데이터는 안전합니까?",
+						"answer": "예. | {siteName}에서는 개인 데이터를 수집하지 않습니다. 귀하의 신원은 안전하게 유지됩니다. | 액세스는 Dynamic.xyz를 통해 관리되어 완전한 개인 정보 보호 및 디지털 신원 소유권을 보장합니다. | 비밀번호, 이메일 또는 민감한 문서는 저희가 저장하지 않습니다. | 귀하의 지갑 = 귀하의 신원입니다."
+					}
+				}
+			},
+			"responsibleGambling": {
+				"title": "🧠 책임감 있는 도박",
+				"items": {
+					"0": {
+						"question": "14. {siteName}은(는) 책임감 있는 도박을 지원합니까?",
+						"answer": "물론입니다. | 저희는 모든 플레이어가 절제하며 게임을 즐기도록 권장합니다. | {siteName}에 문의하여 언제든지 자가 제외 기간을 요청하거나 냉각 기간을 가질 수 있습니다. | 도박이 삶에 영향을 미친다고 느끼면 책임감 있는 도박 페이지를 방문하여 리소스 및 도움 기관을 찾으십시오."
+					},
+					"1": {
+						"question": "15. 도박 문제가 의심되면 어떻게 해야 합니까?",
+						"answer": "도박이 통제 불능 상태가 된다고 느끼면 휴식을 취하고 다음 신뢰할 수 있는 기관 중 하나에 연락하여 비밀리에 도움을 받으십시오. | GamCare: https://www.gamcare.org.uk | Gambling Therapy: https://www.gamblingtherapy.org | Gamblers Anonymous: https://www.gamblersanonymous.org | 저희 지원팀은 또한 계정에 대한 액세스를 안전하게 제한하는 방법에 대해 안내해 드릴 수 있습니다."
+					}
+				}
+			}
+		},
+		"blockchainTransparency": {
+			"title": "🧩 블록체인 투명성",
+			"paragraph1": "{siteName}은(는) 이더리움 기반 스마트 계약으로 구동되어 모든 베팅, 거래 및 보상이 온체인에 투명하게 기록되도록 합니다. | 모든 데이터 및 게임 로직은 불변이며 검증 가능하여 진정한 공정성과 감사 가능성을 보장합니다. | 다음과 같은 공개 탐색기를 통해 모든 플랫폼 거래를 추적할 수 있습니다. | Etherscan.io | BscScan.com | TronScan.org",
+			"paragraph2": "",
+			"explorersTitle": "",
+			"guarantee": "이는 조작이나 편견이 절대 발생할 수 없음을 보장합니다."
+		},
+		"needMoreHelp": {
+			"title": "💬 도움이 더 필요하십니까?",
+			"intro": "저희 지원팀은 다음을 통해 연중무휴 24시간 도움을 드릴 수 있습니다.",
+			"contactTitle": "",
+			"liveChat": "💬 실시간 채팅(지갑 연결된 대시보드 내에서 사용 가능)"
+		}
+	},
+	"termsAndConditions": {
+		"title": "⚖️ 이용 약관 — {siteName}",
+		"subtitle": "{siteName} 이용 약관을 읽어보십시오. 지갑 로그인(Dynamic.xyz), 암호화폐 입금, 출금, 공정한 플레이 및 책임감 있는 게임 정책에 대해 알아보십시오.",
+		"lastUpdated": "최종 업데이트: 2025년 1월",
+		"meta": {
+			"title": "이용 약관 | {siteName} – 암호화폐 카지노 규칙",
+			"description": "{siteName} 이용 약관을 읽어보십시오. 지갑 로그인(Dynamic.xyz), 암호화폐 입금, 출금, 공정한 플레이 및 책임감 있는 게임 정책에 대해 알아보십시오.",
+			"keywords": "{siteName} 이용 약관, {siteName} 암호화폐 카지노 규칙, Dynamic.xyz 지갑 로그인, {siteName} 출금 정책, {siteName} 공정한 플레이",
+			"h1": "이용 약관 – {siteName} 암호화폐 지갑 카지노",
+			"ogTitle": "이용 약관 | {siteName} (암호화폐 지갑 카지노)",
+			"ogDescription": "{siteName}의 이용 약관을 검토하십시오. Dynamic.xyz 지갑 로그인, 암호화폐 입금, 출금 및 플랫폼 규칙을 이해하십시오."
+		},
+		"sections": {
+			"ownership": {
+				"number": "1",
+				"title": "{siteName} 소유권",
+				"clauses": [
+					{
+						"number": "1.1",
+						"content": "{siteName}은(는) {siteName} N.V.(\"{siteName}\", \"당사\", \"우리의\", \"우리\")가 소유하고 운영합니다."
+					},
+					{
+						"number": "1.2",
+						"content": "{siteName}은(는) 암호화폐 지갑 전용 카지노입니다. 모든 입금, 베팅 및 출금은 사용자의 암호화폐 지갑을 통해 처리됩니다. 당사는 Dynamic.xyz 및 호환되는 지갑 커넥터(예: WalletConnect / MetaMask)를 통한 지갑 로그인을 지원합니다."
+					}
+				]
+			},
+			"importantNotice": {
+				"number": "2",
+				"title": "중요 공지",
+				"clauses": [
+					{
+						"number": "2.1",
+						"content": "www.{siteDomain}(\"웹사이트\")에 등록하거나 지갑을 연결하면 {siteName} N.V.와 구속력 있는 계약을 체결하고 다음에 동의하는 것입니다. (i) 본 이용 약관; (ii) 당사의 개인정보 처리방침; (iii) 당사의 쿠키 정책; (iv) 당사의 제휴 약관; 및 (v) 당사의 책임감 있는 게임 정책."
+					},
+					{
+						"number": "2.2",
+						"content": "이 약관에 동의하지 않으면 당사 웹사이트에 접속, 사용 또는 등록하지 마십시오."
+					},
+					{
+						"number": "2.3",
+						"content": "이 약관을 주의 깊게 읽으십시오. 귀하의 권리나 의무에 대해 불확실한 경우, 웹사이트를 사용하기 전에 귀하의 관할권에 있는 법률 고문과 상담하십시오."
+					}
+				]
+			},
+			"generalTerms": {
+				"number": "3",
+				"title": "일반 약관",
+				"clauses": [
+					{
+						"number": "3.1",
+						"content": "등록 또는 지갑 연결 시, 귀하(\"사용자\", \"플레이어\", \"귀하\" 또는 \"귀하의\")는 모든 {siteName} 규칙 및 정책을 준수하는 데 동의합니다."
+					},
+					{
+						"number": "3.2",
+						"content": "본 계약은 귀하와 {siteName} 간의 법적 구속력이 있는 계약입니다."
+					},
+					{
+						"number": "3.3",
+						"content": "이 약관은 귀하가 지갑을 연결하고 사이트를 사용하기 시작하는 순간부터 효력이 발생합니다."
+					},
+					{
+						"number": "3.4",
+						"content": "{siteName}은(는) 언제든지 이 약관을 수정하거나 업데이트할 권리가 있습니다. 변경 사항은 웹사이트에 게시되며, 계속 사용하면 수락하는 것으로 간주됩니다."
+					},
+					{
+						"number": "3.5",
+						"content": "충돌이 발생하는 경우, 이 약관이 다른 모든 규칙, 프로모션 또는 외부 자료보다 우선합니다."
+					},
+					{
+						"number": "3.6",
+						"content": "이 약관의 영어 버전만 법적 구속력이 있습니다. 번역은 편의를 위해서만 제공됩니다."
+					}
+				]
+			},
+			"accountSecurity": {
+				"number": "4",
+				"title": "계정, 지갑 로그인 및 보안",
+				"walletLogin": {
+					"title": "4.1 지갑 로그인(Dynamic.xyz)",
+					"clauses": [
+						{
+							"number": "4.1.1",
+							"content": "{siteName}은(는) 지갑 기반 로그인 및 인증을 위해 Dynamic.xyz(또는 기타 지원되는 커넥터)를 사용합니다. 지갑을 연결하면 해당 지갑의 합법적인 소유자임을 확인하고 {siteName}이(가) 해당 지갑을 귀하의 계정으로 인식하도록 승인하는 것입니다."
+						},
+						{
+							"number": "4.1.2",
+							"content": "저희는 절대로 개인 키를 요청하지 않습니다. 지갑 자격 증명과 기기를 안전하게 보관해야 합니다. {siteName}은(는) 손상된 지갑이나 유출된 개인 키로 인한 손실에 대해 책임지지 않습니다."
+						}
+					]
+				},
+				"registration": {
+					"title": "4.2 등록 세부 정보",
+					"clauses": [
+						{
+							"number": "4.2.1",
+							"content": "계정 통신을 위해 연락처 세부 정보(이메일, 사용자 이름)를 제공하도록 요청받을 수 있습니다. 정확한 정보를 제공하고 최신 상태로 유지해야 합니다."
+						},
+						{
+							"number": "4.2.2",
+							"content": "연결된 지갑을 사용하여 수행된 모든 작업에 대한 책임은 귀하에게 있습니다."
+						}
+					]
+				},
+				"multipleAccounts": {
+					"title": "4.3 다중 계정 및 보안",
+					"clauses": [
+						{
+							"number": "4.3.1",
+							"content": "개인당 하나의 계정만 허용됩니다. 여러 계정을 만들거나 제한을 회피하려는 시도는 계정 정지 및 자금 몰수로 이어질 수 있습니다."
+						},
+						{
+							"number": "4.3.2",
+							"content": "제공되는 모든 플랫폼 보안 기능(예: 관련 서비스에 대한 2FA)을 활성화하고 자신의 지갑을 보호하십시오."
+						},
+						{
+							"number": "4.3.3",
+							"content": "무단 접근이 의심되는 경우 즉시 지원팀에 알리십시오."
+						}
+					]
+				}
+			},
+			"eligibility": {
+				"number": "5",
+				"title": "자격 및 사용자 보증",
+				"clauses": [
+					{
+						"number": "5.1",
+						"content": "귀하는 다음을 진술하고 보증합니다. |• 귀하는 최소 18세 이상입니다(또는 귀하의 관할권에서 합법적인 도박 최소 연령). |• 귀하가 있는 곳에서 온라인 암호화폐 도박 서비스를 합법적으로 사용할 수 있습니다. |• 귀하는 연결하는 지갑의 합법적인 소유자입니다. |• 지역 제한을 우회하기 위해 VPN이나 위치 스푸핑을 사용하지 않습니다. |• 불법적이거나 상업적인 목적으로 서비스를 사용하지 않습니다. |• 암호화폐 가치가 변동될 수 있음을 수락하고 모든 시장 위험을 감수합니다."
+					},
+					{
+						"number": "5.2",
+						"content": "귀하가 이러한 보증을 위반하는 경우, {siteName}은(는) 법이 허용하는 범위 내에서 접근을 중단하거나 종료하고 자금을 보류할 수 있습니다."
+					}
+				]
+			},
+			"restrictedJurisdictions": {
+				"number": "6",
+				"title": "제한된 관할권",
+				"clauses": [
+					{
+						"number": "6.1",
+						"content": "{siteName}은(는) 암호화폐 도박이 금지되거나 제한된 관할권의 플레이어를 허용하지 않습니다. 여기에는 다음이 포함되지만 이에 국한되지는 않습니다. |미국(및 미국 영토), 영국, 프랑스, 네덜란드, 스페인, 독일, 호주, 오스트리아, 코모로, 이란, 북한, 수단, 시리아 및 FATF 블랙리스트에 등재된 모든 관할권."
+					},
+					{
+						"number": "6.2",
+						"content": "VPN 또는 프록시를 포함하여 제한된 관할권에서 서비스에 접근하려는 시도는 본 약관 위반이며 계정 폐쇄 및 자금 몰수로 이어질 수 있습니다."
+					}
+				]
+			},
+			"cryptoTransactions": {
+				"number": "7",
+				"title": "암호화폐 입금 및 출금",
+				"cryptoOnly": {
+					"title": "7.1 암호화폐 전용 정책",
+					"clauses": [
+						{
+							"number": "7.1.1",
+							"content": "{siteName}은(는) 지원되는 암호화폐(예: BTC, ETH, USDT, TRX, BNB)로만 입금 및 출금을 허용합니다. 법정화폐, 카드 또는 은행 송금 입금은 허용되지 않습니다."
+						},
+						{
+							"number": "7.1.2",
+							"content": "모든 입금은 귀하가 통제하는 지갑에서 이루어져야 합니다. 제3자 지갑에서의 입금은 금지됩니다."
+						}
+					]
+				},
+				"deposits": {
+					"title": "7.2 입금",
+					"clauses": [
+						{
+							"number": "7.2.1",
+							"content": "입금은 필요한 블록체인 확인 후 적립됩니다. 네트워크(가스) 수수료는 귀하가 지불해야 합니다."
+						},
+						{
+							"number": "7.2.2",
+							"content": "{siteName}은(는) 차단된 주소나 제한된 출처에서 온 것으로 보이는 입금을 거부하거나 취소할 수 있습니다."
+						}
+					]
+				},
+				"withdrawals": {
+					"title": "7.3 출금",
+					"clauses": [
+						{
+							"number": "7.3.1",
+							"content": "출금은 귀하가 제공한 지갑 주소로 처리됩니다. {siteName}은(는) 처리 전에 목적지 지갑을 확인하도록 요구할 수 있습니다."
+						},
+						{
+							"number": "7.3.2",
+							"content": "출금을 감당할 수 있는 충분한 정산 잔액이 있어야 합니다. 남용 또는 비정상적인 활동이 의심되는 경우 출금이 지연될 수 있습니다."
+						}
+					]
+				},
+				"chargebacks": {
+					"title": "7.4 지불 거절 및 취소",
+					"clauses": [
+						{
+							"number": "7.4.1",
+							"content": "암호화폐 거래는 온체인에서 최종적입니다. {siteName}이(가) 제3자 서비스 제공업체의 지불 거절 또는 취소(온체인에서는 드문 경우)로 인해 손실을 입는 경우, 저희는 금액을 회수하거나 관리 수수료를 부과할 권리가 있습니다."
+						}
+					]
+				}
+			},
+			"noKyc": {
+				"number": "8",
+				"title": "정기적인 신원 확인 없음(KYC 없음)",
+				"clauses": [
+					{
+						"number": "8.1",
+						"content": "{siteName}은(는) 정상적인 플레이 조건으로 정기적인 신원 확인(KYC)을 수행하지 않습니다. 사용자는 Dynamic.xyz를 통해 지갑을 연결하고 신원 문서를 제공하지 않고도 플레이를 시작할 수 있습니다."
+					},
+					{
+						"number": "8.2",
+						"content": "8.1항에도 불구하고, {siteName}은(는) 다음과 같은 경우 정보를 요청하거나 거래를 중단할 권리가 있습니다. |• 관할 당국의 합법적인 명령을 준수하기 위해; |• 사기, 자금 세탁 또는 기타 불법 활동을 예방, 조사 또는 해결하기 위해; 또는 |• 플랫폼의 보안 및 무결성을 보호하기 위해."
+					},
+					{
+						"number": "8.3",
+						"content": "법적으로 요구될 때 그러한 정보를 제공하기를 거부하는 경우, {siteName}은(는) 법이 허용하는 범위 내에서 귀하의 계정을 제한 또는 폐쇄하고 출금을 지연 또는 보류할 수 있습니다."
+					}
+				]
+			},
+			"fairPlay": {
+				"number": "9",
+				"title": "공정한 플레이, 금지된 행위 및 보안",
+				"clauses": [
+					{
+						"number": "9.1",
+						"content": "다음과 같은 행위를 해서는 안 됩니다. |• 봇, 스크립트, 자동 플레이 도구 또는 무단 소프트웨어 사용. |• 다른 플레이어와 공모하거나 게임 결과를 조작. |• 보너스나 프로모션을 악용하기 위해 여러 계정 생성. |• 온체인 거래를 되돌리거나 조작하려는 시도. |• 게임 버그나 플랫폼 취약점 악용."
+					},
+					{
+						"number": "9.2",
+						"content": "부정 행위, 공모 또는 플랫폼을 악용하는 것으로 밝혀진 계정은 정지, 폐쇄되거나 잔액이 몰수될 수 있습니다."
+					},
+					{
+						"number": "9.3",
+						"content": "{siteName}은(는) 플랫폼 무결성을 보호하기 위해 기술 및 행동 모니터링을 구현합니다."
+					}
+				]
+			},
+			"bonuses": {
+				"number": "10",
+				"title": "보너스 및 프로모션",
+				"clauses": [
+					{
+						"number": "10.1",
+						"content": "모든 보너스 제안 및 프로모션은 각 제안에 명시된 특정 보너스 약관의 적용을 받습니다."
+					},
+					{
+						"number": "10.2",
+						"content": "보너스 남용(여러 계정 또는 빠른 보너스 전환 포함)은 보너스 거부, 취소 또는 몰수 및 계정 폐쇄로 이어질 수 있습니다."
+					},
+					{
+						"number": "10.3",
+						"content": "보너스 베팅 요구 사항은 프로모션별로 지정된 대로 보너스에서 파생된 자금을 인출하기 전에 충족되어야 합니다."
+					}
+				]
+			},
+			"gameRules": {
+				"number": "11",
+				"title": "플레이 규칙 및 게임 정산",
+				"clauses": [
+					{
+						"number": "11.1",
+						"content": "베팅은 화면에 확인 메시지를 받은 후에만 수락됩니다. 잔액이 부족한 상태에서 한 베팅은 무효입니다."
+					},
+					{
+						"number": "11.2",
+						"content": "{siteName}의 내부 로그 및 블록체인 기록은 분쟁 발생 시 권위가 있습니다."
+					},
+					{
+						"number": "11.3",
+						"content": "이벤트가 취소, 중단 또는 기타 방식으로 손상된 경우, {siteName}은(는) 게시된 게임 및 시장 규칙에 따라 베팅을 정산하거나 무효화합니다."
+					},
+					{
+						"number": "11.4",
+						"content": "증명 가능한 공정한 게임의 경우, 검증 도구 및 서버 시드(해당하는 경우)는 게임별로 제공되며 서버 로그가 최종적입니다."
+					}
+				]
+			},
+			"errors": {
+				"number": "12",
+				"title": "오류, 중단 및 제한",
+				"clauses": [
+					{
+						"number": "12.1",
+						"content": "{siteName}은(는) 다음으로 인한 손실에 대해 책임지지 않습니다. |• 인터넷 또는 장치 장애; |• 블록체인 지연, 포크 또는 네트워크 혼잡; |• 소프트웨어 버그 또는 제3자 서비스 중단."
+					},
+					{
+						"number": "12.2",
+						"content": "{siteName}은(는) 오류나 악용이 감지되면 베팅을 무효화하거나, 잔액을 조정하거나, 거래를 취소할 권리가 있습니다."
+					},
+					{
+						"number": "12.3",
+						"content": "저희는 사용자와 플랫폼을 보호하기 위해 베팅 한도, 최대 당첨금 및 기타 통제 수단을 설정할 수 있습니다."
+					}
+				]
+			},
+			"suspension": {
+				"number": "13",
+				"title": "정지, 폐쇄 및 자금 처리",
+				"clauses": [
+					{
+						"number": "13.1",
+						"content": "{siteName}은(는) 다음과 같은 경우 계정을 정지하거나 폐쇄할 수 있습니다. |• 약관 위반; |• 남용, 사기 또는 의심스러운 행동 감지; |• 법적 또는 규제 의무에 따른 요구."
+					},
+					{
+						"number": "13.2",
+						"content": "계정 폐쇄 시, 보류 중인 베팅은 취소될 수 있으며 나머지 자금은 관련 법률 및 플랫폼 정책에 따라 처리됩니다."
+					},
+					{
+						"number": "13.3",
+						"content": "{siteName}은(는) 분쟁 해결, 합법적인 요청 준수 또는 손실 해결에 필요한 경우 자금을 보유할 수 있습니다."
+					}
+				]
+			},
+			"responsibleGaming": {
+				"number": "14",
+				"title": "책임감 있는 게임",
+				"clauses": [
+					{
+						"number": "14.1",
+						"content": "{siteName}은(는) 책임감 있는 도박을 장려합니다. 다음을 요청할 수 있습니다. |• 자가 제외; |• 입금 한도; |• 일시 중지."
+					},
+					{
+						"number": "14.2",
+						"content": "도박 피해가 의심되는 경우, 즉각적인 지원을 위해 {siteName}에 문의하십시오."
+					},
+					{
+						"number": "14.3",
+						"content": "미성년자 도박(18세 미만 또는 현지 법적 연령)은 엄격히 금지됩니다. 미성년자 소유로 밝혀진 계정은 폐쇄되고 자금은 정책에 따라 처리됩니다."
+					}
+				]
+			},
+			"intellectualProperty": {
+				"number": "15",
+				"title": "지적 재산권",
+				"clauses": [
+					{
+						"number": "15.1",
+						"content": "{siteName}의 모든 상표, 로고, 사이트 콘텐츠, 소프트웨어 및 게임 자산은 {siteName}이(가) 소유하거나 라이선스를 보유합니다. 무단 복사, 스크래핑 또는 재배포는 금지됩니다."
+					},
+					{
+						"number": "15.2",
+						"content": "귀하에게는 개인적인 오락 목적으로만 서비스에 액세스할 수 있는 제한적이고 취소 가능한 라이선스가 부여됩니다."
+					}
+				]
+			},
+			"liability": {
+				"number": "16",
+				"title": "책임의 제한",
+				"clauses": [
+					{
+						"number": "16.1",
+						"content": "법이 허용하는 최대 범위 내에서, {siteName}은(는) 간접적, 특별, 결과적 또는 부수적 손실(이익 손실 또는 기회 비용 포함)에 대해 책임을 지지 않습니다."
+					},
+					{
+						"number": "16.2",
+						"content": "본 약관과 관련된 모든 청구에 대한 당사의 총 책임은 귀하의 마지막 입금액 또는 관련 법률에서 지정한 금액을 초과하지 않습니다."
+					},
+					{
+						"number": "16.3",
+						"content": "본 약관의 어떠한 내용도 관련 법률이 그러한 제한을 금지하는 경우 과실로 인한 사망 또는 개인 상해에 대한 책임을 제한하지 않습니다."
+					}
+				]
+			},
+			"disputes": {
+				"number": "17",
+				"title": "분쟁 해결 및 준거법",
+				"clauses": [
+					{
+						"number": "17.1",
+						"content": "분쟁 발생 시 {siteName}에 문의하십시오. 저희는 불만을 신속하게 해결하는 것을 목표로 하며, 필요한 경우 경영진에게 에스컬레이션합니다."
+					}
+				]
+			},
+			"amendments": {
+				"number": "18",
+				"title": "수정",
+				"clauses": [
+					{
+						"number": "18.1",
+						"content": "{siteName}은(는) 언제든지 이 약관을 수정할 수 있습니다. 업데이트된 약관은 웹사이트에 게시됩니다. 계속 사용하면 수락하는 것으로 간주됩니다."
+					}
+				]
+			},
+			"miscellaneous": {
+				"number": "19",
+				"title": "기타",
+				"clauses": [
+					{
+						"number": "19.1",
+						"content": "이 약관은 귀하와 {siteName} 간의 서비스에 관한 전체 계약을 구성합니다."
+					},
+					{
+						"number": "19.2",
+						"content": "조항이 시행 불가능한 것으로 판명되면 필요한 최소한의 범위 내에서 수정되고 나머지 조항은 계속 유효합니다."
+					},
+					{
+						"number": "19.3",
+						"content": "귀하는 이 약관에 따른 권리를 양도할 수 없습니다. {siteName}은(는) 권리와 의무를 양도하거나 하도급할 수 있습니다."
+					}
+				]
+			},
+			"contact": {
+				"number": "20",
+				"title": "문의",
+				"content": "지원, 불만 또는 법적 고지:",
+				"link": "🌐 https://{siteDomain}"
 			}
 		}
 	}

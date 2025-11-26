@@ -5,7 +5,7 @@ import {
 	SectionCard,
 	ListSection,
 	ContentSection,
-} from "@/components/legal";
+} from "@/components/features/legal";
 import { Shield, Lock, Database, Mail } from "lucide-react";
 import { useT } from "@/hooks/useI18n";
 import Link from "next/link";

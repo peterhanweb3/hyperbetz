@@ -5,7 +5,7 @@ import { useState, useMemo } from "react";
 import { ViewMode } from "./grid-list-toggle";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { JsonLd } from "@/components/seo/json-ld";
+import { JsonLd } from "@/components/features/seo/json-ld";
 import {
 	slugToProviderDisplayName,
 	slugToCategory,

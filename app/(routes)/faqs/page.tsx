@@ -1,10 +1,10 @@
 "use client";
 
-import { PageHeader, SectionCard } from "@/components/legal";
+import { PageHeader, SectionCard } from "@/components/features/legal";
 import { HelpCircle, ChevronDown } from "lucide-react";
 import { useT } from "@/hooks/useI18n";
 import { useState, useMemo } from "react";
-import { JsonLd } from "@/components/seo/json-ld";
+import { JsonLd } from "@/components/features/seo/json-ld";
 
 interface FAQItemProps {
 	question: string;

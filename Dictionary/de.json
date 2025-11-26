@@ -1340,6 +1340,89 @@
 			"tagline": "🎯 Spielen. Gewinnen. Erleben. {siteName}."
 		}
 	},
+	"contact": {
+		"title": "Kontaktieren Sie uns",
+		"subtitle": "Haben Sie Fragen oder benötigen Sie Hilfe? Unser engagiertes Support-Team ist rund um die Uhr für Sie da.",
+		"methods": {
+			"liveChat": {
+				"title": "Live-Chat",
+				"description": "Erhalten Sie sofortige Hilfe von unserem Support-Team per Live-Chat.",
+				"availability": "24/7 verfügbar"
+			},
+			"email": {
+				"title": "E-Mail-Support",
+				"description": "Senden Sie uns eine E-Mail und wir antworten innerhalb von 24 Stunden.",
+				"availability": "Antwort innerhalb von 24 Stunden"
+			},
+			"support": {
+				"title": "Hilfezentrum",
+				"description": "Durchsuchen Sie unsere umfassende Wissensdatenbank für schnelle Antworten.",
+				"availability": "Selbstbedienung verfügbar"
+			}
+		},
+		"form": {
+			"title": "Senden Sie uns eine Nachricht",
+			"name": "Vollständiger Name",
+			"namePlaceholder": "Geben Sie Ihren vollständigen Namen ein",
+			"email": "E-Mail-Adresse",
+			"emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
+			"subject": "Betreff",
+			"subjectPlaceholder": "Worum geht es in Ihrer Anfrage?",
+			"message": "Nachricht",
+			"messagePlaceholder": "Bitte beschreiben Sie Ihre Anfrage im Detail...",
+			"submit": "Nachricht senden",
+			"sending": "Wird gesendet...",
+			"errors": {
+				"nameRequired": "Bitte geben Sie Ihren Namen ein",
+				"emailRequired": "Bitte geben Sie Ihre E-Mail-Adresse ein",
+				"emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+				"subjectRequired": "Bitte geben Sie einen Betreff ein",
+				"messageRequired": "Bitte geben Sie Ihre Nachricht ein",
+				"messageTooShort": "Die Nachricht muss mindestens 10 Zeichen lang sein"
+			}
+		},
+		"responseTime": {
+			"title": "Erwartete Antwortzeiten",
+			"description": "Wir bemühen uns, alle Anfragen so schnell wie möglich zu beantworten.",
+			"liveChat": {
+				"title": "Live-Chat",
+				"time": "Unter 2 Minuten"
+			},
+			"email": {
+				"title": "E-Mail",
+				"time": "Innerhalb von 24 Stunden"
+			},
+			"priority": {
+				"title": "VIP-Support",
+				"time": "Bevorzugte Behandlung"
+			}
+		},
+		"faq": {
+			"title": "Häufig gestellte Fragen",
+			"items": [
+				{
+					"question": "Wie setze ich mein Passwort zurück?",
+					"answer": "Sie können Ihr Passwort zurücksetzen, indem Sie auf der Anmeldeseite auf den Link 'Passwort vergessen' klicken. Geben Sie Ihre registrierte E-Mail-Adresse ein und folgen Sie den Anweisungen, die an Ihren Posteingang gesendet werden."
+				},
+				{
+					"question": "Wie lange dauert die Bearbeitung von Auszahlungen?",
+					"answer": "Die meisten Kryptowährungsabhebungen werden sofort bearbeitet. In einigen Fällen kann eine manuelle Überprüfung erforderlich sein, die bis zu 24 Stunden dauern kann."
+				},
+				{
+					"question": "Welche Kryptowährungen akzeptieren Sie?",
+					"answer": "Wir akzeptieren wichtige Kryptowährungen wie Bitcoin (BTC), Ethereum (ETH), USDT, USDC und mehrere andere beliebte Token über mehrere Blockchain-Netzwerke hinweg."
+				},
+				{
+					"question": "Wie kann ich mein Konto verifizieren?",
+					"answer": "Die Kontobestätigung kann über Ihre Profileinstellungen abgeschlossen werden. Je nach Kontostufe und Auszahlungslimits müssen Sie möglicherweise Ausweisdokumente vorlegen."
+				},
+				{
+					"question": "Sind meine persönlichen Daten sicher?",
+					"answer": "Ja, wir verwenden branchenübliche Verschlüsselungs- und Sicherheitsmaßnahmen, um alle persönlichen und finanziellen Informationen zu schützen. Unsere Plattform wird regelmäßig Sicherheitsüberprüfungen unterzogen."
+				}
+			]
+		}
+	},
 	"footer": {
 		"sections": {
 			"company": {
