@@ -1291,6 +1291,92 @@
 			"uploadFailed": "Failed to read font file"
 		}
 	},
+	"contact": {
+		"title": "Contact Us",
+		"subtitle": "Have questions or need assistance? Our dedicated support team is here to help you around the clock.",
+		"methods": {
+			"liveChat": {
+				"title": "Live Chat",
+				"description": "Get instant help from our support team through live chat.",
+
+				"availability": "Available 24/7"
+			},
+			"email": {
+				"title": "Email Support",
+				"description": "Send us an email and we'll respond within 24 hours.",
+
+				"availability": "Response within 24h"
+			},
+			"support": {
+				"title": "Help Center",
+				"description": "Browse our comprehensive knowledge base for quick answers.",
+
+				"availability": "Self-service available"
+			}
+		},
+		"form": {
+			"title": "Send Us a Message",
+			"name": "Full Name",
+			"namePlaceholder": "Enter your full name",
+			"email": "Email Address",
+			"emailPlaceholder": "Enter your email address",
+			"subject": "Subject",
+			"subjectPlaceholder": "What is your inquiry about?",
+			"message": "Message",
+			"messagePlaceholder": "Please describe your inquiry in detail...",
+			"submit": "Send Message",
+			"sending": "Sending...",
+			"errors": {
+				"nameRequired": "Please enter your name",
+				"emailRequired": "Please enter your email",
+				"emailInvalid": "Please enter a valid email address",
+				"subjectRequired": "Please enter a subject",
+				"messageRequired": "Please enter your message",
+				"messageTooShort": "Message must be at least 10 characters"
+			}
+		},
+		"responseTime": {
+			"title": "Expected Response Times",
+			"description": "We strive to respond to all inquiries as quickly as possible.",
+			"liveChat": {
+				"title": "Live Chat",
+				"time": "Under 2 minutes"
+			},
+			"email": {
+				"title": "Email",
+				"time": "Within 24 hours"
+			},
+			"priority": {
+				"title": "VIP Support",
+				"time": "Priority handling"
+			}
+		},
+		"faq": {
+			"title": "Frequently Asked Questions",
+			"items": [
+				{
+					"question": "How do I reset my password?",
+					"answer": "You can reset your password by clicking the 'Forgot Password' link on the login page. Enter your registered email address and follow the instructions sent to your inbox."
+				},
+				{
+					"question": "How long do withdrawals take to process?",
+					"answer": "Most cryptocurrency withdrawals are processed instantly. In some cases, manual verification may be required, which can take up to 24 hours."
+				},
+				{
+					"question": "What cryptocurrencies do you accept?",
+					"answer": "We accept major cryptocurrencies including Bitcoin (BTC), Ethereum (ETH), USDT, USDC, and several other popular tokens across multiple blockchain networks."
+				},
+				{
+					"question": "How can I verify my account?",
+					"answer": "Account verification can be completed through your profile settings. You may need to provide identification documents depending on your account tier and withdrawal limits."
+				},
+				{
+					"question": "Is my personal information secure?",
+					"answer": "Yes, we use industry-standard encryption and security measures to protect all personal and financial information. Our platform undergoes regular security audits."
+				}
+			]
+		}
+	},
 	"about": {
 		"title": "🎮 About {siteName}",
 		"subtitle": "At {siteName}, gaming isn't just something to fill the time—it's about real excitement. That moment when you hit a big win, or when everything just clicks, that's what we're all about.",

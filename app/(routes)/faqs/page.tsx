@@ -102,70 +102,82 @@ function FAQItem({ question, answer, reminder }: FAQItemProps) {
 export default function FAQsPage() {
 	const t = useT();
 
-	const faqCategories = useMemo(() => [
-		{
-			title: t("faqs.categories.accountRegistration.title"),
-			items: Array.from({ length: 4 }).map((_, i) => {
-				const answer = t(
-					`faqs.categories.accountRegistration.items.${i}.answer`
-				);
-				const reminderKey = `faqs.categories.accountRegistration.items.${0}.reminder`;
-				const reminder = t(reminderKey);
-				return {
-					question: t(
-						`faqs.categories.accountRegistration.items.${i}.question`
-					),
-					answer: answer.includes("|") ? answer.split("|") : answer,
-					reminder: reminder !== reminderKey ? reminder : undefined,
-				};
-			}),
-		},
-		{
-			title: t("faqs.categories.depositsWithdrawals.title"),
-			items: Array.from({ length: 5 }).map((_, i) => {
-				const answer = t(
-					`faqs.categories.depositsWithdrawals.items.${i}.answer`
-				);
-				return {
-					question: t(
-						`faqs.categories.depositsWithdrawals.items.${i}.question`
-					),
-					answer: answer.includes("|") ? answer.split("|") : answer,
-					reminder: undefined,
-				};
-			}),
-		},
-		{
-			title: t("faqs.categories.gamesSecurity.title"),
-			items: Array.from({ length: 4 }).map((_, i) => {
-				const answer = t(
-					`faqs.categories.gamesSecurity.items.${i}.answer`
-				);
-				return {
-					question: t(
-						`faqs.categories.gamesSecurity.items.${i}.question`
-					),
-					answer: answer.includes("|") ? answer.split("|") : answer,
-					reminder: undefined,
-				};
-			}),
-		},
-		{
-			title: t("faqs.categories.responsibleGambling.title"),
-			items: Array.from({ length: 2 }).map((_, i) => {
-				const answer = t(
-					`faqs.categories.responsibleGambling.items.${i}.answer`
-				);
-				return {
-					question: t(
-						`faqs.categories.responsibleGambling.items.${i}.question`
-					),
-					answer: answer.includes("|") ? answer.split("|") : answer,
-					reminder: undefined,
-				};
-			}),
-		},
-	], [t]);
+	const faqCategories = useMemo(
+		() => [
+			{
+				title: t("faqs.categories.accountRegistration.title"),
+				items: Array.from({ length: 4 }).map((_, i) => {
+					const answer = t(
+						`faqs.categories.accountRegistration.items.${i}.answer`
+					);
+					const reminderKey = `faqs.categories.accountRegistration.items.${0}.reminder`;
+					const reminder = t(reminderKey);
+					return {
+						question: t(
+							`faqs.categories.accountRegistration.items.${i}.question`
+						),
+						answer: answer.includes("|")
+							? answer.split("|")
+							: answer,
+						reminder:
+							reminder !== reminderKey ? reminder : undefined,
+					};
+				}),
+			},
+			{
+				title: t("faqs.categories.depositsWithdrawals.title"),
+				items: Array.from({ length: 5 }).map((_, i) => {
+					const answer = t(
+						`faqs.categories.depositsWithdrawals.items.${i}.answer`
+					);
+					return {
+						question: t(
+							`faqs.categories.depositsWithdrawals.items.${i}.question`
+						),
+						answer: answer.includes("|")
+							? answer.split("|")
+							: answer,
+						reminder: undefined,
+					};
+				}),
+			},
+			{
+				title: t("faqs.categories.gamesSecurity.title"),
+				items: Array.from({ length: 4 }).map((_, i) => {
+					const answer = t(
+						`faqs.categories.gamesSecurity.items.${i}.answer`
+					);
+					return {
+						question: t(
+							`faqs.categories.gamesSecurity.items.${i}.question`
+						),
+						answer: answer.includes("|")
+							? answer.split("|")
+							: answer,
+						reminder: undefined,
+					};
+				}),
+			},
+			{
+				title: t("faqs.categories.responsibleGambling.title"),
+				items: Array.from({ length: 2 }).map((_, i) => {
+					const answer = t(
+						`faqs.categories.responsibleGambling.items.${i}.answer`
+					);
+					return {
+						question: t(
+							`faqs.categories.responsibleGambling.items.${i}.question`
+						),
+						answer: answer.includes("|")
+							? answer.split("|")
+							: answer,
+						reminder: undefined,
+					};
+				}),
+			},
+		],
+		[t]
+	);
 
 	// Generate FAQ schema for SEO (rich snippets in Google)
 	const faqSchema = useMemo(() => {
