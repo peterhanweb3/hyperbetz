@@ -1,10 +1,10 @@
 import { getDashboardStats } from '@/modules/blog/lib/api'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { FileText, CheckCircle, Tags, Search } from 'lucide-react'
-import { Overview } from '@/modules/blog/components/Overview'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { Overview } from '@/modules/admin/components/overview'
 
 export default async function DashboardPage() {
     const stats = await getDashboardStats()

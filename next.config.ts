@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import path from "path";
+// import path from "path";
 
 const nextConfig: NextConfig = {
 	// Re-enable strict mode for better development experience and catching bugs

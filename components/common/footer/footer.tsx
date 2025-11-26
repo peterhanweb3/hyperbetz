@@ -157,7 +157,7 @@ export function Footer() {
 				{ label: "Crypto Blackjack", href: "/crypto-blackjack" },
 				{ label: "Crypto Roulette", href: "/crypto-roulette" },
 				{ label: "Live Casino", href: "/crypto-live-casino" },
-				{ label: "All Games", href: "/lobby" },
+				{ label: "All Games", href: "/games" },
 			],
 		},
 		{

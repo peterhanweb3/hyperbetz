@@ -1,69 +1,70 @@
-import prisma from '@/modules/blog/lib/db'
-import { hashPassword } from '@/modules/blog/lib/password'
+import prisma from "@/modules/admin/lib/db";
+import { hashPassword } from "@/modules/auth/lib/password";
 
 async function main() {
-    // Create admin user
-    const hashedPassword = await hashPassword('admin123')
-    const admin = await prisma.user.upsert({
-        where: { username: 'admin' },
-        update: {},
-        create: {
-            username: 'admin',
-            password: hashedPassword,
-            role: 'SUPER_ADMIN',
-        },
-    })
+	// Create admin user
+	const hashedPassword = await hashPassword("admin123");
+	const admin = await prisma.user.upsert({
+		where: { username: "admin" },
+		update: {},
+		create: {
+			username: "admin",
+			password: hashedPassword,
+			role: "SUPER_ADMIN",
+		},
+	});
 
-    // Create tags
-    const strategyTag = await prisma.tag.upsert({
-        where: { slug: 'strategy' },
-        update: {},
-        create: { name: 'Strategy', slug: 'strategy' },
-    })
+	// Create tags
+	const strategyTag = await prisma.tag.upsert({
+		where: { slug: "strategy" },
+		update: {},
+		create: { name: "Strategy", slug: "strategy" },
+	});
 
-    const newsTag = await prisma.tag.upsert({
-        where: { slug: 'news' },
-        update: {},
-        create: { name: 'News', slug: 'news' },
-    })
+	const newsTag = await prisma.tag.upsert({
+		where: { slug: "news" },
+		update: {},
+		create: { name: "News", slug: "news" },
+	});
 
-    const tipsTag = await prisma.tag.upsert({
-        where: { slug: 'tips' },
-        update: {},
-        create: { name: 'Tips & Tricks', slug: 'tips' },
-    })
+	const tipsTag = await prisma.tag.upsert({
+		where: { slug: "tips" },
+		update: {},
+		create: { name: "Tips & Tricks", slug: "tips" },
+	});
 
-    const updateTag = await prisma.tag.upsert({
-        where: { slug: 'updates' },
-        update: {},
-        create: { name: 'Platform Updates', slug: 'updates' },
-    })
+	const updateTag = await prisma.tag.upsert({
+		where: { slug: "updates" },
+		update: {},
+		create: { name: "Platform Updates", slug: "updates" },
+	});
 
-    const web3Tag = await prisma.tag.upsert({
-        where: { slug: 'web3' },
-        update: {},
-        create: { name: 'Web3', slug: 'web3' },
-    })
+	const web3Tag = await prisma.tag.upsert({
+		where: { slug: "web3" },
+		update: {},
+		create: { name: "Web3", slug: "web3" },
+	});
 
-    const cryptoTag = await prisma.tag.upsert({
-        where: { slug: 'crypto' },
-        update: {},
-        create: { name: 'Crypto', slug: 'crypto' },
-    })
+	const cryptoTag = await prisma.tag.upsert({
+		where: { slug: "crypto" },
+		update: {},
+		create: { name: "Crypto", slug: "crypto" },
+	});
 
-    const blockchainTag = await prisma.tag.upsert({
-        where: { slug: 'blockchain' },
-        update: {},
-        create: { name: 'Blockchain', slug: 'blockchain' },
-    })
+	const blockchainTag = await prisma.tag.upsert({
+		where: { slug: "blockchain" },
+		update: {},
+		create: { name: "Blockchain", slug: "blockchain" },
+	});
 
-    // Create sample blog posts
-    const posts = [
-        {
-            title: 'Master Your Betting Strategy: Advanced Tips for Success',
-            slug: 'master-betting-strategy-advanced-tips',
-            excerpt: 'Learn the most effective betting strategies used by professional players. Discover how to manage your bankroll, analyze odds, and make data-driven decisions that maximize your winning potential.',
-            content: `<h2>Understanding Professional Betting Strategies</h2>
+	// Create sample blog posts
+	const posts = [
+		{
+			title: "Master Your Betting Strategy: Advanced Tips for Success",
+			slug: "master-betting-strategy-advanced-tips",
+			excerpt:
+				"Learn the most effective betting strategies used by professional players. Discover how to manage your bankroll, analyze odds, and make data-driven decisions that maximize your winning potential.",
+			content: `<h2>Understanding Professional Betting Strategies</h2>
 <p>Professional betting is not about luck—it is about strategy, discipline, and smart decision-making. In this comprehensive guide, we will walk you through proven techniques that can elevate your betting game to the next level.</p>
 
 <h3>1. Bankroll Management: The Foundation of Success</h3>
@@ -85,18 +86,22 @@ async function main() {
 
 <h2>Final Thoughts</h2>
 <p>Remember, consistent profitability in betting requires patience, discipline, and continuous learning. Start implementing these strategies today and track your results over time. The difference between amateur and professional bettors is not talent—it is approach.</p>`,
-            coverImage: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=600&fit=crop',
-            published: true,
-            seoTitle: 'Master Your Betting Strategy: Advanced Tips for Success | HyperBetz',
-            seoDescription: 'Learn professional betting strategies, bankroll management, and advanced techniques to maximize your winning potential. Expert tips from HyperBetz.',
-            tags: { connect: [{ id: strategyTag.id }, { id: tipsTag.id }] },
-            authorId: admin.id,
-        },
-        {
-            title: 'The Web3 Casino Revolution: How Blockchain is Transforming Online Gaming',
-            slug: 'web3-casino-revolution-blockchain-gaming',
-            excerpt: 'Explore how Web3 technology and blockchain are revolutionizing the online casino industry. From provably fair games to decentralized ownership, discover the future of digital gambling.',
-            content: `<h2>The Dawn of Web3 Casinos</h2>
+			coverImage:
+				"https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=600&fit=crop",
+			published: true,
+			seoTitle:
+				"Master Your Betting Strategy: Advanced Tips for Success | HyperBetz",
+			seoDescription:
+				"Learn professional betting strategies, bankroll management, and advanced techniques to maximize your winning potential. Expert tips from HyperBetz.",
+			tags: { connect: [{ id: strategyTag.id }, { id: tipsTag.id }] },
+			authorId: admin.id,
+		},
+		{
+			title: "The Web3 Casino Revolution: How Blockchain is Transforming Online Gaming",
+			slug: "web3-casino-revolution-blockchain-gaming",
+			excerpt:
+				"Explore how Web3 technology and blockchain are revolutionizing the online casino industry. From provably fair games to decentralized ownership, discover the future of digital gambling.",
+			content: `<h2>The Dawn of Web3 Casinos</h2>
 <p>The gambling industry is experiencing a monumental shift with the emergence of Web3 casinos. These next-generation platforms leverage blockchain technology to offer unprecedented transparency, security, and player empowerment.</p>
 
 <h3>What Makes Web3 Casinos Different?</h3>
@@ -135,18 +140,28 @@ async function main() {
 
 <h2>The Future is Decentralized</h2>
 <p>As blockchain technology matures and user experience improves, Web3 casinos are positioned to become the new standard in online gaming. The combination of transparency, security, and player empowerment represents a paradigm shift that benefits everyone except dishonest operators.</p>`,
-            coverImage: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200&h=600&fit=crop',
-            published: true,
-            seoTitle: 'Web3 Casino Revolution: How Blockchain Transforms Gaming | HyperBetz',
-            seoDescription: 'Discover how Web3 and blockchain technology are revolutionizing online casinos with provably fair games, instant withdrawals, and true player ownership.',
-            tags: { connect: [{ id: web3Tag.id }, { id: blockchainTag.id }, { id: newsTag.id }] },
-            authorId: admin.id,
-        },
-        {
-            title: 'Crypto Casinos vs Traditional Casinos: Why Smart Players Choose Cryptocurrency',
-            slug: 'crypto-casinos-vs-traditional-casinos-comparison',
-            excerpt: 'Compare crypto casinos with traditional online gambling platforms. Learn why cryptocurrency betting offers superior privacy, faster transactions, and better odds for players.',
-            content: `<h2>The Great Casino Comparison</h2>
+			coverImage:
+				"https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200&h=600&fit=crop",
+			published: true,
+			seoTitle:
+				"Web3 Casino Revolution: How Blockchain Transforms Gaming | HyperBetz",
+			seoDescription:
+				"Discover how Web3 and blockchain technology are revolutionizing online casinos with provably fair games, instant withdrawals, and true player ownership.",
+			tags: {
+				connect: [
+					{ id: web3Tag.id },
+					{ id: blockchainTag.id },
+					{ id: newsTag.id },
+				],
+			},
+			authorId: admin.id,
+		},
+		{
+			title: "Crypto Casinos vs Traditional Casinos: Why Smart Players Choose Cryptocurrency",
+			slug: "crypto-casinos-vs-traditional-casinos-comparison",
+			excerpt:
+				"Compare crypto casinos with traditional online gambling platforms. Learn why cryptocurrency betting offers superior privacy, faster transactions, and better odds for players.",
+			content: `<h2>The Great Casino Comparison</h2>
 <p>The rise of cryptocurrency has created a new class of online casinos that offer distinct advantages over their traditional counterparts. Let us examine why millions of players are making the switch.</p>
 
 <h3>Transaction Speed and Costs</h3>
@@ -187,18 +202,22 @@ async function main() {
 
 <h2>The Verdict</h2>
 <p>For players who value privacy, speed, fairness, and control, crypto casinos offer clear advantages. The traditional model is being disrupted by blockchain technology, and early adopters are reaping the rewards.</p>`,
-            coverImage: 'https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=1200&h=600&fit=crop',
-            published: true,
-            seoTitle: 'Crypto Casinos vs Traditional Casinos: Complete Comparison | HyperBetz',
-            seoDescription: 'Detailed comparison of crypto casinos vs traditional online casinos. Discover superior privacy, faster transactions, and better odds with cryptocurrency betting.',
-            tags: { connect: [{ id: cryptoTag.id }, { id: strategyTag.id }] },
-            authorId: admin.id,
-        },
-        {
-            title: 'Understanding Smart Contracts in Online Gaming: The Technology Behind Fair Play',
-            slug: 'smart-contracts-online-gaming-technology',
-            excerpt: 'Dive deep into smart contract technology and how it ensures fairness in online casinos. Learn how automated, transparent code is revolutionizing the gaming industry.',
-            content: `<h2>What Are Smart Contracts?</h2>
+			coverImage:
+				"https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=1200&h=600&fit=crop",
+			published: true,
+			seoTitle:
+				"Crypto Casinos vs Traditional Casinos: Complete Comparison | HyperBetz",
+			seoDescription:
+				"Detailed comparison of crypto casinos vs traditional online casinos. Discover superior privacy, faster transactions, and better odds with cryptocurrency betting.",
+			tags: { connect: [{ id: cryptoTag.id }, { id: strategyTag.id }] },
+			authorId: admin.id,
+		},
+		{
+			title: "Understanding Smart Contracts in Online Gaming: The Technology Behind Fair Play",
+			slug: "smart-contracts-online-gaming-technology",
+			excerpt:
+				"Dive deep into smart contract technology and how it ensures fairness in online casinos. Learn how automated, transparent code is revolutionizing the gaming industry.",
+			content: `<h2>What Are Smart Contracts?</h2>
 <p>Smart contracts are self-executing programs stored on a blockchain that automatically enforce the terms of an agreement. In the context of online gaming, they eliminate the need for trust by making game logic transparent and tamper-proof.</p>
 
 <h3>How Smart Contracts Work in Casinos</h3>
@@ -263,18 +282,28 @@ async function main() {
 </ul>
 
 <p>The code is law, and that law protects players like never before.</p>`,
-            coverImage: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1200&h=600&fit=crop',
-            published: true,
-            seoTitle: 'Smart Contracts in Online Gaming: Technology Behind Fair Play | HyperBetz',
-            seoDescription: 'Learn how smart contracts ensure fairness in online casinos. Understand provably fair gaming, automated payouts, and blockchain transparency.',
-            tags: { connect: [{ id: blockchainTag.id }, { id: web3Tag.id }, { id: tipsTag.id }] },
-            authorId: admin.id,
-        },
-        {
-            title: 'DeFi Gaming: How to Earn Passive Income While Playing Casino Games',
-            slug: 'defi-gaming-passive-income-casino',
-            excerpt: 'Discover the intersection of DeFi and gaming. Learn how to earn yield, stake casino tokens, and participate in liquidity pools while enjoying your favorite games.',
-            content: `<h2>The Convergence of DeFi and Gaming</h2>
+			coverImage:
+				"https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1200&h=600&fit=crop",
+			published: true,
+			seoTitle:
+				"Smart Contracts in Online Gaming: Technology Behind Fair Play | HyperBetz",
+			seoDescription:
+				"Learn how smart contracts ensure fairness in online casinos. Understand provably fair gaming, automated payouts, and blockchain transparency.",
+			tags: {
+				connect: [
+					{ id: blockchainTag.id },
+					{ id: web3Tag.id },
+					{ id: tipsTag.id },
+				],
+			},
+			authorId: admin.id,
+		},
+		{
+			title: "DeFi Gaming: How to Earn Passive Income While Playing Casino Games",
+			slug: "defi-gaming-passive-income-casino",
+			excerpt:
+				"Discover the intersection of DeFi and gaming. Learn how to earn yield, stake casino tokens, and participate in liquidity pools while enjoying your favorite games.",
+			content: `<h2>The Convergence of DeFi and Gaming</h2>
 <p>Decentralized Finance (DeFi) and blockchain gaming are merging to create new opportunities for players to earn passive income alongside their gaming activities. This guide explores the various ways you can make your casino experience more profitable.</p>
 
 <h3>What is DeFi Gaming?</h3>
@@ -368,18 +397,28 @@ async function main() {
 </ul>
 
 <p>The opportunity to earn while you play is no longer science fiction—it is the present reality of blockchain gaming.</p>`,
-            coverImage: 'https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=1200&h=600&fit=crop',
-            published: true,
-            seoTitle: 'DeFi Gaming: Earn Passive Income Playing Casino Games | HyperBetz',
-            seoDescription: 'Discover how to earn passive income through DeFi gaming. Learn about staking, liquidity pools, house banking, and yield farming in crypto casinos.',
-            tags: { connect: [{ id: cryptoTag.id }, { id: web3Tag.id }, { id: strategyTag.id }] },
-            authorId: admin.id,
-        },
-        {
-            title: 'NFTs in Online Casinos: The Future of Digital Gaming Assets',
-            slug: 'nfts-online-casinos-digital-gaming-assets',
-            excerpt: 'Explore how NFTs are revolutionizing online casinos. From collectible items to revenue-sharing assets, discover the future of true digital ownership in gaming.',
-            content: `<h2>The NFT Revolution in Gaming</h2>
+			coverImage:
+				"https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=1200&h=600&fit=crop",
+			published: true,
+			seoTitle:
+				"DeFi Gaming: Earn Passive Income Playing Casino Games | HyperBetz",
+			seoDescription:
+				"Discover how to earn passive income through DeFi gaming. Learn about staking, liquidity pools, house banking, and yield farming in crypto casinos.",
+			tags: {
+				connect: [
+					{ id: cryptoTag.id },
+					{ id: web3Tag.id },
+					{ id: strategyTag.id },
+				],
+			},
+			authorId: admin.id,
+		},
+		{
+			title: "NFTs in Online Casinos: The Future of Digital Gaming Assets",
+			slug: "nfts-online-casinos-digital-gaming-assets",
+			excerpt:
+				"Explore how NFTs are revolutionizing online casinos. From collectible items to revenue-sharing assets, discover the future of true digital ownership in gaming.",
+			content: `<h2>The NFT Revolution in Gaming</h2>
 <p>Non-Fungible Tokens (NFTs) are transforming online casinos from ephemeral entertainment into ecosystems of true digital ownership. Let us explore how NFTs are creating new paradigms in the gambling industry.</p>
 
 <h3>What Are Gaming NFTs?</h3>
@@ -492,18 +531,28 @@ async function main() {
 
 <h2>Conclusion</h2>
 <p>NFTs represent a fundamental shift in how players interact with online casinos. From collectibles to revenue-sharing mechanisms, these digital assets are creating new economic models that benefit both players and platforms. As the technology matures, expect NFTs to become standard in the gaming industry.</p>`,
-            coverImage: 'https://images.unsplash.com/photo-1642104704074-907c0698cbd9?w=1200&h=600&fit=crop',
-            published: true,
-            seoTitle: 'NFTs in Online Casinos: Future of Digital Gaming Assets | HyperBetz',
-            seoDescription: 'Discover how NFTs are revolutionizing online casinos. Learn about VIP memberships, revenue-sharing assets, and true digital ownership in gaming.',
-            tags: { connect: [{ id: web3Tag.id }, { id: cryptoTag.id }, { id: newsTag.id }] },
-            authorId: admin.id,
-        },
-        {
-            title: 'HyperBetz Platform Update: New Features & Improvements',
-            slug: 'hyperbetz-platform-update-new-features',
-            excerpt: 'Exciting news! We have launched major updates to the HyperBetz platform including faster transactions, new game modes, and an enhanced user interface. Check out everything that is new.',
-            content: `<h2>Major Platform Enhancements</h2>
+			coverImage:
+				"https://images.unsplash.com/photo-1642104704074-907c0698cbd9?w=1200&h=600&fit=crop",
+			published: true,
+			seoTitle:
+				"NFTs in Online Casinos: Future of Digital Gaming Assets | HyperBetz",
+			seoDescription:
+				"Discover how NFTs are revolutionizing online casinos. Learn about VIP memberships, revenue-sharing assets, and true digital ownership in gaming.",
+			tags: {
+				connect: [
+					{ id: web3Tag.id },
+					{ id: cryptoTag.id },
+					{ id: newsTag.id },
+				],
+			},
+			authorId: admin.id,
+		},
+		{
+			title: "HyperBetz Platform Update: New Features & Improvements",
+			slug: "hyperbetz-platform-update-new-features",
+			excerpt:
+				"Exciting news! We have launched major updates to the HyperBetz platform including faster transactions, new game modes, and an enhanced user interface. Check out everything that is new.",
+			content: `<h2>Major Platform Enhancements</h2>
 <p>We are thrilled to announce a comprehensive update to the HyperBetz platform! Our team has been working tirelessly to bring you the best possible betting experience.</p>
 
 <h3>⚡ Lightning-Fast Transactions</h3>
@@ -536,18 +585,21 @@ async function main() {
 
 <h2>What is Next?</h2>
 <p>We are not stopping here! Our roadmap for Q1 2025 includes social features, advanced analytics tools, and integration with additional blockchain networks. Stay tuned!</p>`,
-            coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop',
-            published: true,
-            seoTitle: 'HyperBetz Platform Update: New Features & Improvements',
-            seoDescription: 'Discover the latest HyperBetz platform updates including faster transactions, new game modes, and enhanced security features.',
-            tags: { connect: [{ id: newsTag.id }, { id: updateTag.id }] },
-            authorId: admin.id,
-        },
-        {
-            title: '10 Common Betting Mistakes and How to Avoid Them',
-            slug: '10-common-betting-mistakes',
-            excerpt: 'Even experienced bettors fall into these traps. Learn the most common betting mistakes and proven strategies to avoid them, protecting your bankroll and improving your win rate.',
-            content: `<h2>Avoid These Critical Betting Mistakes</h2>
+			coverImage:
+				"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop",
+			published: true,
+			seoTitle: "HyperBetz Platform Update: New Features & Improvements",
+			seoDescription:
+				"Discover the latest HyperBetz platform updates including faster transactions, new game modes, and enhanced security features.",
+			tags: { connect: [{ id: newsTag.id }, { id: updateTag.id }] },
+			authorId: admin.id,
+		},
+		{
+			title: "10 Common Betting Mistakes and How to Avoid Them",
+			slug: "10-common-betting-mistakes",
+			excerpt:
+				"Even experienced bettors fall into these traps. Learn the most common betting mistakes and proven strategies to avoid them, protecting your bankroll and improving your win rate.",
+			content: `<h2>Avoid These Critical Betting Mistakes</h2>
 <p>Whether you are new to betting or a seasoned pro, everyone makes mistakes. The key is learning from them. Here are the 10 most common pitfalls and how to sidestep them.</p>
 
 <h3>1. Chasing Losses</h3>
@@ -582,35 +634,38 @@ async function main() {
 
 <h2>Conclusion</h2>
 <p>Avoiding these mistakes will not guarantee profits, but it will significantly improve your long-term performance. Bet smart, bet responsibly, and always stay disciplined.</p>`,
-            coverImage: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&h=600&fit=crop',
-            published: true,
-            seoTitle: '10 Common Betting Mistakes and How to Avoid Them | HyperBetz',
-            seoDescription: 'Learn the most common betting mistakes and how to avoid them. Protect your bankroll and improve your win rate with these expert tips.',
-            tags: { connect: [{ id: tipsTag.id }, { id: strategyTag.id }] },
-            authorId: admin.id,
-        },
-    ]
+			coverImage:
+				"https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&h=600&fit=crop",
+			published: true,
+			seoTitle:
+				"10 Common Betting Mistakes and How to Avoid Them | HyperBetz",
+			seoDescription:
+				"Learn the most common betting mistakes and how to avoid them. Protect your bankroll and improve your win rate with these expert tips.",
+			tags: { connect: [{ id: tipsTag.id }, { id: strategyTag.id }] },
+			authorId: admin.id,
+		},
+	];
 
-    for (const post of posts) {
-        await prisma.post.upsert({
-            where: { slug: post.slug },
-            update: {},
-            create: post,
-        })
-    }
+	for (const post of posts) {
+		await prisma.post.upsert({
+			where: { slug: post.slug },
+			update: {},
+			create: post,
+		});
+	}
 
-    console.log('✅ Database seeded successfully!')
-    console.log('📝 Created 8 sample blog posts')
-    console.log('🏷️  Created 7 tags')
-    console.log('👤 Admin user: admin / admin123')
+	console.log("✅ Database seeded successfully!");
+	console.log("📝 Created 8 sample blog posts");
+	console.log("🏷️  Created 7 tags");
+	console.log("👤 Admin user: admin / admin123");
 }
 
 main()
-    .then(async () => {
-        await prisma.$disconnect()
-    })
-    .catch(async (e) => {
-        console.error(e)
-        await prisma.$disconnect()
-        process.exit(1)
-    })
+	.then(async () => {
+		await prisma.$disconnect();
+	})
+	.catch(async (e) => {
+		console.error(e);
+		await prisma.$disconnect();
+		process.exit(1);
+	});
