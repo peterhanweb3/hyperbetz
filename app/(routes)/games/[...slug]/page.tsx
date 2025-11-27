@@ -4,7 +4,11 @@ import { generateSEOMetadata } from "@/lib/utils/seo/seo-provider";
 import { GamesPageLayoutWrapper } from "./games-page-layout-wrapper";
 import { QueryPageSkeleton } from "@/components/features/query-display/query-page-skeleton";
 import { interpolateSiteName } from "@/lib/utils/site-config";
-import { PROVIDER_SLUG_MAP } from "@/lib/utils/provider-slug-mapping";
+import {
+	CATEGORY_TO_SLUG,
+	PROVIDER_SLUG_MAP,
+} from "@/lib/utils/provider-slug-mapping";
+import { knownCategorySlugs } from "@/data/top-providers";
 
 interface PageProps {
 	params: Promise<{ slug: string[] }>;
@@ -19,7 +23,39 @@ export async function generateMetadata({
 	);
 	const siteName = interpolateSiteName(`{siteName}`);
 
+	// Known category slugs for checking if single slug is a category
+
 	if (slug.length === 1) {
+		const decodedSlug = decodeURIComponent(slug[0]).toLowerCase();
+
+		// Check if it's a category-only URL: /games/slot or /games/live-casino
+		if (knownCategorySlugs.includes(decodedSlug)) {
+			const category = slugToCategory(decodedSlug);
+			console.log({
+				category_to_slug: CATEGORY_TO_SLUG[category],
+				category,
+			});
+			const categoryName = category || CATEGORY_TO_SLUG[category];
+
+			return generateSEOMetadata({
+				title: `${categoryName} - Best Crypto ${categoryName} Games 2025 | ${siteName}`,
+				description: `Play the best ${categoryName} games on ${siteName} - the leading provably fair crypto casino. Instant withdrawals, no KYC, Bitcoin & Ethereum accepted. 1000+ ${categoryName} games from top providers.`,
+				keywords: [
+					`crypto ${categoryName}`,
+					`Bitcoin ${categoryName}`,
+					`${categoryName} provably fair`,
+					"crypto casino games",
+					"blockchain gaming",
+					"instant withdrawal casino",
+					"no KYC casino",
+					"Bitcoin gambling",
+				],
+				path: `/games/${slug[0]}`,
+				pageType: "game",
+				ogType: "website",
+			});
+		}
+
 		// Provider only: /games/pg-soft or /games/pragmatic-play
 		const providerName = slugToProviderDisplayName(
 			decodeURIComponent(slug[0])
@@ -100,7 +136,7 @@ export default async function DynamicGamesPage({ params }: PageProps) {
 	);
 }
 
-// Generate static params for ALL providers (SEO optimization)
+// Generate static params for ALL providers and categories (SEO optimization)
 export function generateStaticParams() {
 	// Get all unique provider slugs (69 providers)
 	const allProviderSlugs = Object.keys(PROVIDER_SLUG_MAP).filter(
@@ -112,6 +148,11 @@ export function generateStaticParams() {
 	const categories = ["slot", "live-casino", "sports", "rng"];
 
 	const params = [];
+
+	// Generate category-only pages (SEO important!)
+	for (const category of categories) {
+		params.push({ slug: [category] });
+	}
 
 	// Generate provider-only pages for top 50 providers (SEO focus)
 	const topProviders = [

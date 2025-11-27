@@ -214,8 +214,9 @@ export const createQuerySlice: AppStateCreator<QuerySlice> = (set, get) => ({
 	/**
 	 * Syncs state from SEO-friendly path params (e.g., /games/pg-soft/slot)
 	 * Supports patterns:
-	 * - [provider] = provider only
-	 * - [provider, category] = provider + category
+	 * - [category] = category only (e.g., /games/slot, /games/live-casino)
+	 * - [provider] = provider only (e.g., /games/pg-soft)
+	 * - [provider, category] = provider + category (e.g., /games/pg-soft/slot)
 	 * Handles providers that have multiple variants (e.g., Pragmatic Play)
 	 */
 	syncStateFromPath: (slug: string[]) => {
@@ -228,17 +229,38 @@ export const createQuerySlice: AppStateCreator<QuerySlice> = (set, get) => ({
 			};
 
 			if (slug.length === 1) {
-				// Only provider name: /games/pg-soft or /games/pragmatic-play
-				const providerResult = slugToProviderName(
-					decodeURIComponent(slug[0])
-				);
-				if (providerResult) {
-					// Handle both single provider and array of providers
-					newState.activeFilters["provider_name"] = Array.isArray(
-						providerResult
-					)
-						? providerResult
-						: [providerResult];
+				const decodedSlug = decodeURIComponent(slug[0]);
+
+				// First, check if it's a known category slug
+				// Known category slugs: slot, slots, live-casino, livecasino, sports, sportsbook, sport-book, rng
+				const knownCategorySlugs = [
+					"slot",
+					"slots",
+					"live-casino",
+					"livecasino",
+					"sports",
+					"sportsbook",
+					"sport-book",
+					"rng",
+				];
+
+				if (knownCategorySlugs.includes(decodedSlug.toLowerCase())) {
+					// It's a category-only URL: /games/slot or /games/live-casino
+					const category = slugToCategory(decodedSlug);
+					if (category) {
+						newState.activeFilters["category"] = [category];
+					}
+				} else {
+					// It's a provider-only URL: /games/pg-soft or /games/pragmatic-play
+					const providerResult = slugToProviderName(decodedSlug);
+					if (providerResult) {
+						// Handle both single provider and array of providers
+						newState.activeFilters["provider_name"] = Array.isArray(
+							providerResult
+						)
+							? providerResult
+							: [providerResult];
+					}
 				}
 			} else if (slug.length === 2) {
 				// Provider + category: /games/pg-soft/slot or /games/pragmatic-play/slot

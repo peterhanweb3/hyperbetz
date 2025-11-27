@@ -1434,7 +1434,9 @@
 					"about": "About Us",
 					"providers": "Providers",
 					"affiliate": "Referral Bonus",
-					"bonus": "Turnover Bonus"
+					"bonus": "Turnover Bonus",
+					"blog": "Blog",
+					"contact": "Contact Us"
 				}
 			},
 			"legal": {
@@ -1464,12 +1466,442 @@
 			}
 		},
 		"seoContent": {
-			"title": "Description",
-			"paragraph1": "Welcome to {siteName}, where crypto meets the real rush of casino gaming. If you're looking for something fresh in the world of online play, you've just found it. {siteName} is built for people who want speed, security, and, above all, games that actually entertain whether you're into spinning slots, live tables, sports bets, or want to try out those crypto-only games you can't find anywhere else.",
-			"paragraph2": "Everything runs on blockchain, so you can trust every outcome. Results are random, verified on the spot. No tricks. Just straight-up wins and real excitement. High roller? Strategy fan? Maybe you just want to kick back and play for a bit. There's something here for your style.",
-			"paragraph3": "Getting started couldn't be easier—deposit instantly, cash out fast, log in with your Dynamic.xyz wallet, and grab some unique bonuses along the way. {siteName} keeps things moving. No waiting around. No headaches. No matter where you are—Canada, Europe, Asia—our multi-chain setup fits right in with your local crypto options.",
-			"paragraph4": "Thousands already know: this is a smarter way to gamble online. Here, it's not only about chasing wins—it's about privacy, fairness, and being part of a community that actually gets what players want. {siteName} isn't just another online casino. This is Web3 gambling, rebuilt for people who expect more.",
-			"tagline": "So, are you ready to play smarter, bet safer, and maybe hit it big? Head over to {siteName}.",
+			"title": "{siteName} – Best Online Crypto Casino | 6,000+ Games, Instant Withdrawals",
+			"links": {
+				"home": "https://{siteDomain}/",
+				"slots": "https://{siteDomain}/providers/slot",
+				"liveCasino": "https://{siteDomain}/providers/live-casino",
+				"sports": "https://{siteDomain}/games/sbo",
+				"poker": "https://{siteDomain}/games?q=poker",
+				"lottery": "https://{siteDomain}/games?q=lottery",
+				"sweetBonanza": "https://{siteDomain}/games?q=sweet+bonanza+super+scatter",
+				"gatesOfOlympus": "https://{siteDomain}/games?q=gates+of+olympus+1000%E2%84%A2",
+				"sugarRush": "https://{siteDomain}/games?q=sugar+rush+1000",
+				"dogHouse": "https://{siteDomain}/games?q=the+dog+house+megaways",
+				"bigBassBonanza": "https://{siteDomain}/games?q=big+bass+bonanza+3+reeler",
+				"aviator": "https://{siteDomain}/games?q=aviator+extra+bet",
+				"affiliate": "https://{siteDomain}/affiliate",
+				"bonus": "https://{siteDomain}/bonus"
+			},
+			"intro": {
+				"paragraph1": "Finding the [**best crypto casino**](link:home) platform where you can play slots, card games with easy deposit and bonus points, {siteName} is your one-stop destination with 6k plus games. You can easily get your winnings amount instantly, and everything is safe and secure.",
+				"paragraph2": "The main thing that makes {siteName} the most trusted platform for **online crypto casino** because that we have reputable game providers with transparent bonus terms and hassle-free withdrawals."
+			},
+			"whyHyperbetz": {
+				"title": "Why {siteName} to play games",
+				"subtitle": "Here are some points to determine why choose {siteName} to play online casino games.",
+				"tonsOfGames": "**Tons of Games-** We provide a huge categories of the latest games, over 6,000 games. There are many more games than you could play in a lifetime, like Slots, card games, and much more.",
+				"useCryptocurrency": "**Use Cryptocurrency:** The main factor to use it is that {siteName} allows you to deposit and withdraw by cryptocurrency- You can use Bitcoin, Ethereum, and other digital currencies. Your deposits and withdrawals happen super fast - usually in just seconds!",
+				"noTrickyRules": "**No Tricky Rules:** There are no tricky rules to win a bonus. When you get a bonus, you keep what you win. No complicated rules or waiting periods. If you get a bonus, then it adds to your account instantly..",
+				"fairAndHonest": "**Fair and Honest:** All our games are \"provably fair\" which means you can check that everything is honest and nobody is cheating."
+			},
+			"whatIsBestCryptoCasino": {
+				"title": "What Is the Best Crypto Casino?",
+				"paragraph1": "The best crypto casino online is the one that gives you a smooth, safe, and enjoyable experience. When choosing a platform, here are the most important things to look for:",
+				"lookFor": [
+					"**Fast deposits and withdrawals** so you don't have to wait",
+					"**Lots of games** like slots, live casino, sports betting, and crash games",
+					"**Bonuses that are fair** and don't come with complicated rules",
+					"**Good reputation** with positive feedback from players"
+				],
+				"paragraph2": "Based on these points, **{siteName}** is one of the top choices for crypto players because it offers:",
+				"offers": [
+					"**Many supported networks**, making deposits quick and easy",
+					"**Over 6,000 games** from trusted providers",
+					"**Instant withdrawals** without delays",
+					"**Provably fair games**, so every result can be verified"
+				]
+			},
+			"gamesLibrary": {
+				"title": "{siteName} games library to play",
+				"subtitle": "There are many different- different game categories to play like Slots, Live Casinos, Plinko, and Bet on sports.",
+				"slots": {
+					"title": "Best Crypto Slot Games",
+					"paragraph1": "There are many [online game slots](link:slots) available in {siteName}. We have 6,000+ different slot machines. These are games where you spin reels and try to match symbols. Some are simple fruit slots, others have cool themes like adventure, space, or treasure hunting.",
+					"bigJackpots": "**Big Jackpots:-** Some slots have HUGE prizes called progressive big jackpots. Every time someone plays and the prize gets bigger until someone wins it all!"
+				},
+				"liveCasino": {
+					"title": "Live Casino Games",
+					"paragraph1": "If you enjoy the thrill of playing with **real dealers on live camera**, {siteName}'s [**Live Casino**](link:liveCasino) is the perfect destination. Step into an immersive environment where you can interact with professional dealers, chat in real time, and experience the authentic atmosphere of a land-based casino - all from your screen.",
+					"paragraph2": "Our live casino selection includes the most popular and trusted games streamed in HD quality, ensuring smooth, engaging, and fair gameplay every time.",
+					"paragraph3": "Some of the top live casino games you can enjoy include:",
+					"games": [
+						"**Blackjack** – Try to get cards totaling 21 without going over to beat the dealer.",
+						"**Roulette** – Watch the wheel spin and predict where the ball will land.",
+						"**Baccarat** – A simple, elegant card game where you bet on the Player, Banker, or Tie.",
+						"**Game Shows** – Exciting interactive games with big prizes and entertainment-style hosts."
+					],
+					"closing": "Whether you're a strategic player or simply love the excitement of live action, the {siteName} Live Casino delivers a premium, real-time gaming adventure."
+				},
+				"crashGames": {
+					"title": "Crash Games",
+					"paragraph": "Play Crash games, the most exciting one! You watch a number go up and up. You have to click \"cash out\" before it crashes. Wait too long, and you lose. Cash out at the right time and multiply your money!"
+				},
+				"plinko": {
+					"title": "Plinko",
+					"paragraph": "Play Plinko, in this game, basically drop a ball and watch it bounce down through pegs. It's like a game show! The ball lands in different prize spots at the bottom. Simple and fun!"
+				},
+				"sports": {
+					"title": "Bet on Sports Too!",
+					"paragraph1": "{siteName} isn't just a exciting casino platform evenoffer a **full-featured sports betting platform** for players who love competitive action. Whether you're into real-world sports or high-energy esports, {siteName} gives you the power to place smart bets on your favorite teams and events.",
+					"paragraph2": "[Bet on popular sports](link:sports) such as **Football, Basketball, Tennis**, and explore the thrilling world of **esports**, including major video game tournaments and global competitions. With competitive odds, live in-play betting, and hundreds of events available daily, you can choose the team you believe will win — and earn real rewards when your prediction is right!",
+					"subtitle": "Some example games to bet",
+					"games": [
+						"Football",
+						"Basketball",
+						"Tennis",
+						"Video game competitions (Esports)",
+						"Many more!"
+					],
+					"closing": "Pick which team you think will win, and you could win money if you're right!"
+				},
+				"poker": {
+					"title": "Poker Games",
+					"paragraph": "Test your strategy at {siteName} [Poker tables](link:poker). Play Texas Hold'em, Omaha, or other popular variants. Compete with players worldwide and aim for big wins."
+				},
+				"lottery": {
+					"title": "Lottery Games",
+					"paragraph": "Pick your lucky numbers and try your luck in our [lottery games](link:lottery). Fast, easy, and with the chance to win exciting prizes every day!"
+				}
+			},
+			"howToChoose": {
+				"title": "How to Choose the Best Crypto Casino",
+				"subtitle": "Here are the some points for choose best online crypto casino:-",
+				"points": [
+					"**Fast, no-limit crypto deposits**",
+					"**Instant withdrawals**",
+					"**Game variety (slots, live, sports)**",
+					"**Provably fair games**",
+					"**Zero-wager bonuses**",
+					"**Customer support availability**",
+					"**VIP rewards & cashback**"
+				],
+				"closing": "Our crypto casino, {siteName} meets all above of points as the best online **Krypto Casino**."
+			},
+			"bestSlots": {
+				"title": "Which Slots Are Best for Crypto Casino Players?",
+				"subtitle": "Crypto players usually enjoy slots that offer:",
+				"features": [
+					"High RTP (Return to Player)",
+					"Fast spin speed",
+					"Bonuses or multipliers",
+					"Low volatility for long sessions",
+					"High volatility for big wins"
+				],
+				"popularTitle": "Popular crypto-friendly slots include:",
+				"popularSlots": [
+					"[**Sweet Bonanza**](link:sweetBonanza)",
+					"[**Gates of Olympus**](link:gatesOfOlympus)",
+					"[**Sugar Rush**](link:sugarRush)",
+					"[**The Dog House**](link:dogHouse)",
+					"[**Big Bass Bonanza**](link:bigBassBonanza)",
+					"[**Aviator (crash-style)**](link:aviator)"
+				]
+			},
+			"bonuses": {
+				"title": "Bonuses and Gifts",
+				"subtitle": "At {siteName}, every player is treated like a VIP from day first. So we have two bonus program to earn more money:-",
+				"affiliate": {
+					"title": "1. Affiliate bonus program",
+					"paragraph": "In the [Affiliate bonus program](link:affiliate), if any player share our casino platform through own affiliate link. The player get rewards based on the wager turnover from referred players in Slots, Live Casino, Sportsbooks and Lottery. Commissions are calculated every 24 hours, with earnings based on different turnover tiers."
+				},
+				"turnover": {
+					"title": "2. Turnover Bonus program",
+					"paragraph": "The [Turnover Bonus rewards](link:bonus) users based on their wagers in Slot, Live Casino, Sportsbook and Lottery. Bonuses are calculated every 24 hours, and users can claim them next day after wagering. There are seven tiers, each with different rates depending on the wager amount."
+				},
+				"commissionTitle": "Commission Rate Structure",
+				"commissionSubtitle": "We offers you to get different different commissions based on game category, below are the mention commission rate table by tier",
+				"tierTable": {
+					"headers": [
+						"Tier Level",
+						"Rank",
+						"Wager Range (Daily)",
+						"Slots",
+						"Live Casino",
+						"Sports"
+					],
+					"rows": [
+						["1", "Bronze", "$0k – $1k", "0.1%", "0.1%", "0.1%"],
+						["2", "Silver", "$1k – $3k", "0.13%", "0.15%", "0.12%"],
+						["3", "Gold", "$3k – $5k", "0.16%", "0.18%", "0.14%"],
+						[
+							"4",
+							"Platinum",
+							"$5k – $10k",
+							"0.18%",
+							"0.21%",
+							"0.16%"
+						],
+						[
+							"5",
+							"Emerald",
+							"$10k – $20k",
+							"0.2%",
+							"0.24%",
+							"0.17%"
+						],
+						["6", "Ruby", "$20k – $50k", "0.22%", "0.27%", "0.18%"],
+						["7", "Diamond", "$50k+", "0.25%", "0.3%", "0.2%"]
+					]
+				}
+			},
+			"deposit": {
+				"title": "How to Add Money to Your {siteName} Account",
+				"subtitle": "Add fund in your {siteName} account is fast, secure, and completely crypto-friendly. We support **all major cryptocurrencies** across **multiple blockchain networks**, allowing you to deposit and withdraw using your preferred digital assets with full flexibility.",
+				"stepsTitle": "Step by Step: Deposit in Seconds",
+				"stepsSubtitle": "Here are the step by step guide to make deposit in {siteName} easily",
+				"step1": {
+					"title": "1. Log in to your {siteName} account",
+					"description": "Access your dashboard and click on the **\"Deposit\"** button."
+				},
+				"step2": {
+					"title": "2. Choose your cryptocurrency",
+					"description": "Select from a wide range of supported digital currencies, here are the some popular cryptocurrency mention that you can use:",
+					"currencies": [
+						"Bitcoin (BTC)",
+						"Ethereum (ETH)",
+						"Tether (USDT) – TRC20, ERC20, BEP20",
+						"Binance Coin (BNB)",
+						"Litecoin (LTC)",
+						"Ripple (XRP)",
+						"Solana (SOL)",
+						"TRON (TRX)",
+						"Cardano (ADA)",
+						"And many more…"
+					]
+				},
+				"step3": {
+					"title": "3. Pick your preferred network",
+					"description": "Choosing the correct network is one of the most important steps when depositing crypto and it's where many players on other platforms face issues due to limited network support.",
+					"paragraph2": "At {siteName}, we eliminate those problems entirely. We support all major blockchain networks, ensuring fast, seamless, and flexible deposits no matter which wallet or cryptocurrency you use. This means you can always select the network that offers the best speed, lowest fees, and highest convenience for your transaction.",
+					"networksTitle": "Here are some major network mention with where they are used:-",
+					"networks": {
+						"btc": {
+							"title": "1. BTC Network (Bitcoin Mainnet)",
+							"features": [
+								"Used for sending Bitcoin",
+								"Highest security",
+								"Slightly higher fees",
+								"Slower confirmation speed"
+							],
+							"bestFor": "**Best for:** Large secure transfers"
+						},
+						"erc20": {
+							"title": "2. ERC20 (Ethereum Network)",
+							"features": [
+								"Used for ETH, USDT-ERC20, USDC-ERC20, and many tokens",
+								"Very secure and widely supported",
+								"Gas fees can sometimes be higher"
+							],
+							"bestFor": "**Best for:** Users who want compatibility and strong reliability"
+						},
+						"trc20": {
+							"title": "3. TRC20 (Tron Network)",
+							"features": [
+								"Used for USDT-TRC20, TRX, and Tron-based tokens",
+								"Very low transaction fees",
+								"Fast processing times"
+							],
+							"bestFor": "**Best for:** Low-cost USDT deposits and withdrawals"
+						},
+						"bep20": {
+							"title": "4. BEP20 (Binance Smart Chain / BSC)",
+							"features": [
+								"Used for BNB, USDT-BEP20, BUSD-BEP20, and others",
+								"Very low fees",
+								"Fast confirmations"
+							],
+							"bestFor": "**Best for:** Quick, inexpensive transfers"
+						},
+						"sol": {
+							"title": "5. SOL Network (Solana)",
+							"features": [
+								"Used for SOL and Solana ecosystem tokens",
+								"Extremely fast",
+								"Very low gas fees"
+							],
+							"bestFor": "**Best for:** Fastest crypto transfers"
+						},
+						"polygon": {
+							"title": "6. Polygon (MATIC)",
+							"features": [
+								"Used for MATIC and supported tokens",
+								"Low fees",
+								"Good for decentralized apps"
+							],
+							"bestFor": "**Best for:** Cheap and efficient transfers"
+						},
+						"others": {
+							"title": "7. Avalanche, Arbitrum, Optimism & Others",
+							"features": [
+								"Modern high-speed Layer-2 and alternative networks",
+								"Very low fees",
+								"High throughput"
+							],
+							"bestFor": "**Best for:** Fast, low-cost gaming deposits"
+						}
+					},
+					"networkClosing": "Just choose the network that matches your wallet for faster and cheaper transfers."
+				},
+				"step4": {
+					"title": "4. Scan or copy your deposit address",
+					"description": "A unique address will be generated. **Scan the QR code** or **copy the wallet address** into your crypto wallet."
+				},
+				"step5": {
+					"title": "5. Send your crypto",
+					"description": "Confirm your transaction and the funds will appear in your {siteName} account once the network confirms it."
+				}
+			},
+			"whyDepositing": {
+				"title": "Why Depositing on {siteName} Is Better",
+				"reasons": {
+					"instant": {
+						"title": "1. Instant Processing",
+						"description": "When you deposit crypto, it usually shows up in your account within minutes. You don't have to wait hours or days — you can start playing immediately."
+					},
+					"allNetworks": {
+						"title": "2. All Networks Supported",
+						"description": "Many platforms only support a few blockchain networks, which can slow you down or increase fees. {siteName} supports all major networks, so you can choose the fastest, cheapest, or most convenient one for your crypto transactions."
+					},
+					"secure": {
+						"title": "3. Secure & Anonymous",
+						"description": "Your deposits and withdrawals are encrypted and private. This means your financial information is protected, and your transactions remain anonymous. You can play safely without worrying about security."
+					},
+					"multiCurrency": {
+						"title": "4. Multi-Currency Convenience",
+						"description": "{siteName} lets you deposit or withdraw using any popular cryptocurrency, like Bitcoin, Ethereum, Tether, and more. There are no limits or restrictions, giving you complete flexibility."
+					},
+					"mobile": {
+						"title": "5. Mobile-Friendly Deposits",
+						"description": "You can fund your account easily from your mobile wallet. This means you can deposit anytime, anywhere, without needing a computer — perfect for players on the go."
+					}
+				}
+			},
+			"buyCrypto": {
+				"title": "Where Can I Buy Casino Coin Crypto?",
+				"paragraph": "Casino coin or gambling-related crypto tokens can be bought on major exchanges such as:",
+				"exchanges": [
+					"**Binance**",
+					"**Coinbase**",
+					"**KuCoin**",
+					"**Bybit**",
+					"**OKX**"
+				],
+				"closing": "Just search for the specific token (for example: FUNToken, RLB, MATIC, BNB, etc.) and buy it using your preferred payment method. Always store your crypto in a **trusted wallet** before depositing to any casino."
+			},
+			"withdrawal": {
+				"title": "How to make withdrawal at {siteName}",
+				"paragraph": "Just like deposits, withdrawal your amount also easy to get in your wallet account. Simply follow these effortless steps to done withdrawals:",
+				"steps": [
+					"Choose your coin",
+					"After pick the network for transaction",
+					"Now enter your wallet address",
+					"Confirm the wallet address again."
+				],
+				"closing": "Payouts are processed fast with zero complications."
+			},
+			"mobile": {
+				"title": "Crypto casino mobile",
+				"paragraph": "We ensure to give player a unique gaming experience, Our site fully responsive for each device whether you use mobile, laptop and Desktop. You can easily access the {siteName} with any device."
+			},
+			"responsiblePlay": {
+				"title": "Play Responsibly",
+				"paragraph": "At {siteName}, we want you to enjoy every moment of your gaming experience but your safety always our first priority. Responsible play is an essential part of online gaming, and we provide easy-to-use tools to help you stay in control at all times.",
+				"safetyTitle": "Safety Tools Designed for You",
+				"safetySubtitle": "Here are some points that you can follow as a safety guide:-",
+				"depositLimits": {
+					"title": "Set Deposit Limits",
+					"description": "Set a deposit amount limit for how much you want to deposit per day, week, or month. This helps you manage spending and stay within a comfortable budget."
+				},
+				"lossLimits": {
+					"title": "Loss Limits",
+					"description": "Set the maximum amount you're willing to lose within a chosen timeframe. Once you reach that limit, you won't be able to continue until the period resets. This parameter helps you to over spend."
+				},
+				"selfExclusion": {
+					"title": "Self-Exclusion",
+					"description": "For a longer break, activate self-exclusion for **6 months to 1 year**. During this period, your account will remain closed and cannot be used for deposits or gameplay."
+				},
+				"keepGaming": {
+					"title": "Keep Gaming Fun and Healthy",
+					"description": "These tools are here to support you and ensure that gaming stays enjoyable, stress-free, and balanced. If you ever feel the need to slow down or step away, {siteName} makes it simple, safe, and judgment-free."
+				}
+			},
+			"support": {
+				"title": "Always Available 24x7",
+				"paragraph": "Have a question? Our friendly support team is ready to help you anytime - whether it's day or night!",
+				"howToReach": "How to Reach Us:",
+				"methods": [
+					"Live Chat (instant messaging)",
+					"Email: smmstore.here@gmail.com"
+				],
+				"closing": "Even at 3 in the morning, we're here for you!"
+			},
+			"testimonials": {
+				"title": "Hear What Our Players Say",
+				"subtitle": "Here are some of reviews of our users that they share",
+				"reviews": [
+					{
+						"quote": "\"{siteName} is amazing! So many games, and I got my winnings super fast. The support team is always friendly and helpful.\"",
+						"author": "Noah"
+					},
+					{
+						"quote": "\"I love using crypto here. Everything is fast and easy, and the bonuses don't come with annoying rules.\"",
+						"author": "Emilia"
+					},
+					{
+						"quote": "\"The sports betting section is great. Good odds and very easy to use. This is my favorite site now.\"",
+						"author": "Leon"
+					},
+					{
+						"quote": "\"I was nervous about online casinos, but {siteName} made everything simple. Signing up was easy, and the guides really helped.\"",
+						"author": "Hannah"
+					},
+					{
+						"quote": "\"I've been playing here for months. New games keep coming, and the loyalty program gives really good rewards.\"",
+						"author": "Paul"
+					}
+				]
+			},
+			"faq": {
+				"title": "Frequently Asked Questions",
+				"questions": [
+					{
+						"q": "Q1: Do I have to bet my bonus many times before withdrawing?",
+						"a": "**A:** Nope! When you win, you can withdraw your bonus immediately."
+					},
+					{
+						"q": "Q2: Can I get a bonus without depositing?",
+						"a": "**A:** Not at the moment. However, our referral bonus program is simple, fair, and comes with no tricky requirements."
+					},
+					{
+						"q": "Q3: How do I contact {siteName} support?",
+						"a": "**A:** You can reach us 24/7 via live chat or email at **smmstore.here@gmail.com**. Our team is always ready to help!"
+					},
+					{
+						"q": "Q4: Which cryptocurrencies can I use to deposit or withdraw?",
+						"a": "**A:** {siteName} supports Bitcoin (BTC), Ethereum (ETH), Tether (USDT), Binance Coin (BNB), Litecoin (LTC), Ripple (XRP), Solana (SOL), TRON (TRX), Cardano (ADA), and many more."
+					},
+					{
+						"q": "Q5: How fast are deposits and withdrawals?",
+						"a": "**A:** Most crypto transactions are processed instantly or within a few minutes, so you can start playing or cash out without delays."
+					},
+					{
+						"q": "Q6: Is {siteName} safe and secure?",
+						"a": "**A:** Yes! All transactions are encrypted and private. Plus, our games are provably fair, ensuring a safe and honest gaming experience."
+					},
+					{
+						"q": "Q7: Can I play on mobile?",
+						"a": "**A:** Absolutely! {siteName} is fully mobile-friendly, so you can play on your smartphone or tablet anywhere, anytime."
+					},
+					{
+						"q": "Q8: What types of games are available at {siteName}?",
+						"a": "**A:** We offer over 6,000 games including Slots, Live Casino, Poker, Lottery, Crash, Plinko, and Sports & eSports betting."
+					}
+				]
+			},
+			"cta": {
+				"title": "Join {siteName} Today!"
+			},
 			"showMore": "Show More",
 			"showLess": "Show Less"
 		},

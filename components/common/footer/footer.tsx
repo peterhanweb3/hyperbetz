@@ -135,8 +135,12 @@ export function Footer() {
 					href: "/bonus",
 				},
 				{
-					label: "Blog",
+					label: t("footer.sections.company.links.blog"),
 					href: "/blog",
+				},
+				{
+					label: t("footer.sections.company.links.contact"),
+					href: "/contact-us",
 				},
 			],
 		},
@@ -234,9 +238,9 @@ export function Footer() {
 							<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
 								{footerSections.map((section, index) => (
 									<div key={index} className="space-y-4">
-										<h3 className="font-semibold text-foreground text-sm">
+										<div className="font-semibold text-foreground text-sm">
 											{section.title}
-										</h3>
+										</div>
 										<ul className="space-y-2.5">
 											{section.links.map(
 												(link, linkIndex) => {
@@ -259,9 +263,9 @@ export function Footer() {
 
 							{/* Network Section */}
 							<div className="mb-10">
-								<h3 className="text-sm font-semibold text-foreground mb-5">
+								<div className="text-sm font-semibold text-foreground mb-5">
 									Network
-								</h3>
+								</div>
 								<div className="flex flex-wrap items-center gap-8 py-2">
 									{networks.map((network, index) => (
 										<div
@@ -282,9 +286,9 @@ export function Footer() {
 
 							{/* Cryptocurrencies Section */}
 							<div className="mb-10">
-								<h3 className="text-sm font-semibold text-foreground mb-5">
+								<div className="text-sm font-semibold text-foreground mb-5">
 									Cryptocurrencies
-								</h3>
+								</div>
 								<div className="flex flex-wrap items-center gap-8 py-2">
 									{cryptocurrencies.map((crypto, index) => (
 										<div
@@ -305,9 +309,9 @@ export function Footer() {
 
 							{/* Security & Fair Play Section */}
 							<div className="mb-12">
-								<h3 className="text-sm font-semibold text-foreground mb-5">
+								<div className="text-sm font-semibold text-foreground mb-5">
 									Security &amp; Fair Play
-								</h3>
+								</div>
 								<div className="flex flex-wrap items-center gap-8 py-2">
 									{securityLogos.map((logo, index) => (
 										<div

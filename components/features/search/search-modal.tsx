@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogTitle, DialogContent } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useAppStore } from "@/store/store";
@@ -23,7 +23,6 @@ import {
 } from "@fortawesome/pro-light-svg-icons";
 import { useTranslations } from "@/lib/locale-provider";
 import { selectAllProviders } from "@/store/selectors/query/query.selectors";
-import { DialogTitle } from "@radix-ui/react-dialog";
 
 // Types for search suggestions
 type SearchSuggestion = {
@@ -389,7 +388,9 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
 
 	return (
 		<Dialog open={open} onOpenChange={onOpenChange}>
-			<DialogTitle className="hidden">SearchBox</DialogTitle>
+			<DialogTitle asChild>
+				<div className="hidden">SearchBox</div>
+			</DialogTitle>
 			<DialogContent className="min-w-[90dvw] h-[90dvh] p-0 scrollbar-thin border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 rounded-2xl overflow-hidden flex flex-col">
 				{/* Header with gradient */}
 				<div className="relative p-5 border-b bg-gradient-to-r from-primary/10 via-accent/10 to-transparent flex-shrink-0">

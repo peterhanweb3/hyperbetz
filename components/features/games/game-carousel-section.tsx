@@ -66,9 +66,10 @@ export const GameCarouselSection = ({
 		if (viewAllUrl) return viewAllUrl;
 
 		if (!category) return "/games";
-		const params = new URLSearchParams();
-		params.set("category", category);
-		return `/games?${params.toString()}`;
+		// const params = new URLSearchParams();
+		// params.set("category", category);
+		// return `/games?${params.toString()}`;
+		return `/games/${category.toLowerCase().trim().replace(/\s+/g, "-")}`;
 	};
 
 	// Helper function to check if a game is SimpleGame

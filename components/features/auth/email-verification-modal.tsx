@@ -184,7 +184,9 @@ export const EmailVerificationModal: React.FC<EmailVerificationModalProps> = ({
 					/>
 				</div>
 				<DialogHeader>
-					<DialogTitle className="text-xl">{t("title")}</DialogTitle>
+					<DialogTitle asChild>
+						<div className="text-xl">{t("title")}</div>
+					</DialogTitle>
 					<DialogDescription className="text-muted-foreground">
 						{t("description")}
 					</DialogDescription>
@@ -309,8 +311,8 @@ export const EmailVerificationModal: React.FC<EmailVerificationModalProps> = ({
 					/>
 				</div>
 				<DialogHeader>
-					<DialogTitle className="text-xl">
-						{t("enterCodeTitle")}
+					<DialogTitle>
+						<div className="text-xl">{t("enterCodeTitle")}</div>
 					</DialogTitle>
 					<DialogDescription className="text-muted-foreground">
 						{t("sentTo", { email })}
@@ -428,7 +430,9 @@ export const EmailVerificationModal: React.FC<EmailVerificationModalProps> = ({
 
 	return (
 		<Dialog open={isOpen} onOpenChange={handleClose}>
-			<DialogTitle className="sr-only">{t("modalAria")}</DialogTitle>
+			<DialogTitle asChild>
+				<div className="sr-only">{t("modalAria")}</div>
+			</DialogTitle>
 			<DialogContent className="sm:max-w-md bg-background/80 backdrop-blur-xl border-border/60 shadow-2xl data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95">
 				{step === "email" && renderEmailStep()}
 				{step === "code" && renderCodeStep()}

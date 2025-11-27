@@ -12,3 +12,14 @@ export const TopProviders: TopProvidersList = [
 	"Habanero",
 	"SA Gaming",
 ];
+
+export const knownCategorySlugs = [
+	"slot",
+	"slots",
+	"live-casino",
+	"livecasino",
+	"sports",
+	"sportsbook",
+	"sport-book",
+	"rng",
+];

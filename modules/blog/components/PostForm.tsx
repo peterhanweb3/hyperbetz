@@ -135,25 +135,44 @@ export function PostForm({ post }: { post?: Post }) {
 						<div className="space-y-2">
 							<Label>Cover Image</Label>
 							<div className="flex flex-col gap-4">
-								{coverImage && (
-									<div className="relative aspect-video w-full overflow-hidden rounded-md border">
-										<Image
-											src={coverImage}
-											alt="Cover"
-											fill
-											className="object-cover"
-										/>
-										<Button
-											type="button"
-											variant="destructive"
-											size="icon"
-											className="absolute right-2 top-2 h-6 w-6"
-											onClick={() => setCoverImage("")}
-										>
-											<X className="h-4 w-4" />
-										</Button>
-									</div>
-								)}
+								<div className="relative aspect-video w-full overflow-hidden rounded-md border bg-muted">
+									{coverImage ? (
+										<>
+											<Image
+												src={coverImage}
+												alt="Cover"
+												fill
+												className="object-cover"
+												unoptimized={coverImage.startsWith(
+													"/uploads/"
+												)}
+											/>
+											<Button
+												type="button"
+												variant="destructive"
+												size="icon"
+												className="absolute right-2 top-2 h-6 w-6 z-10"
+												onClick={() =>
+													setCoverImage("")
+												}
+											>
+												<X className="h-4 w-4" />
+											</Button>
+										</>
+									) : (
+										<div className="flex h-full w-full items-center justify-center">
+											<div className="text-center text-muted-foreground">
+												<Upload className="h-12 w-12 mx-auto mb-2 opacity-50" />
+												<p className="text-sm">
+													No image selected
+												</p>
+												<p className="text-xs">
+													Upload or enter URL below
+												</p>
+											</div>
+										</div>
+									)}
+								</div>
 								<div className="flex items-center gap-2">
 									<Input
 										type="file"
@@ -176,6 +195,8 @@ export function PostForm({ post }: { post?: Post }) {
 											<Upload className="h-4 w-4" />
 											{isUploading
 												? "Uploading..."
+												: coverImage
+												? "Change Image"
 												: "Upload Image"}
 										</label>
 									</Button>

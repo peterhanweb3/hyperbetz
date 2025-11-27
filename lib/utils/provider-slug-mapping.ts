@@ -143,7 +143,7 @@ const CATEGORY_SLUG_MAP: Record<string, string> = {
 	rng: "RNG",
 };
 
-const CATEGORY_TO_SLUG: Record<string, string> = {
+export const CATEGORY_TO_SLUG: Record<string, string> = {
 	SLOT: "slot",
 	"LIVE CASINO": "live-casino",
 	"SPORT BOOK": "sports",
