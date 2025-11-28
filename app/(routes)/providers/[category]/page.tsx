@@ -32,10 +32,17 @@ export async function generateMetadata({
 		)
 		.join(" ");
 	const siteName = interpolateSiteName(`{siteName}`);
+	const title = categoryName.toLowerCase().includes("casino")
+		? `Online Live Crypto Casino Games with real Dealers | Play with Bitcoin at ${siteName}`
+		: `Top ${categoryName} Game Providers | Play Casino Games at ${siteName}`;
+
+	const description = categoryName.toLowerCase().includes("casino")
+		? ` Experience real dealers, instant crypto payments, and fair play at ${siteName} Live Casino. Join today to play blackjack, roulette, and more  anytime, anywhere.`
+		: `Discover the best ${categoryName} game providers on ${siteName}. Play games from top providers with exciting features and big wins.`;
 
 	return generateSEOMetadata({
-		title: `${categoryName} Game Providers - ${siteName}`,
-		description: `Discover the best ${categoryName} game providers on ${siteName}. Play games from top providers with exciting features and big wins.`,
+		title,
+		description,
 		keywords: [
 			categoryName,
 			"providers",

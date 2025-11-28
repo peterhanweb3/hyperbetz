@@ -7,6 +7,9 @@ import {
 	selectProvidersByCategory,
 } from "@/store/selectors/query/query.selectors";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { GameCarouselSection } from "@/components/features/games/game-carousel-section";
+import { getGamesByCategory } from "@/lib/utils/games/games.utils";
+import { faCards } from "@fortawesome/pro-light-svg-icons";
 
 // Import the UI components
 // import { QuerySearchInput } from "./query-search-input";
@@ -99,6 +102,7 @@ export const ProviderPageLayout = ({
 
 	// --- 4. UI ASSEMBLY ---
 	const tProviders = useTranslations("providers");
+	const tGames = useTranslations("games");
 	const tQuerySort = useTranslations("query.sort");
 
 	// Dynamic header configuration based on category
@@ -158,6 +162,16 @@ export const ProviderPageLayout = ({
 	// 	clearCategoryFilter();
 	// };
 
+	// Get all games from store for live casino section
+	const allGames = useAppStore((state) => state.game.list.games);
+	console.log(categoryFilter);
+	// Filter live casino games
+	const liveCasinoGames = useMemo(() => {
+		if (categoryFilter?.toUpperCase() === "LIVE CASINO") {
+			return getGamesByCategory(allGames, "LIVE CASINO", 24);
+		}
+		return [];
+	}, [categoryFilter, allGames]);
 	return (
 		<div className="space-y-6">
 			<div className="flex sticky top-16 flex-col  items-start gap-4 p-4 mb-8 border w-full rounded-lg bg-card">
@@ -230,6 +244,21 @@ export const ProviderPageLayout = ({
 					{tProviders("empty")}
 				</p>
 			)}
+
+			{/* Live Casino Games Section */}
+			{categoryFilter?.toUpperCase() === "LIVE CASINO" &&
+				liveCasinoGames.length > 0 && (
+					<div className="mb-8">
+						<GameCarouselSection
+							category="LIVE CASINO"
+							games={liveCasinoGames}
+							title={tGames("liveCasino")}
+							icon={faCards}
+							showViewAll={true}
+							viewAllUrl="/games/live-casino"
+						/>
+					</div>
+				)}
 		</div>
 	);
 };
