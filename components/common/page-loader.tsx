@@ -58,6 +58,7 @@ export function PageLoader() {
 						width={800}
 						height={800}
 						priority
+						fetchPriority="high"
 						className="w-[80%] mx-auto"
 					/>
 				</div>
