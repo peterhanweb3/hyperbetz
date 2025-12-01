@@ -76,9 +76,9 @@ export const CommissionTiers = ({
 									className="h-6 w-6 text-blue-600 dark:text-blue-400"
 								/>
 							</div>
-							<h3 className="text-lg lg:text-2xl font-semibold text-foreground">
+							<h4 className="text-lg lg:text-2xl font-semibold text-foreground">
 								{tRates("overview.title")}
-							</h3>
+							</h4>
 						</div>
 						<div className="bg-muted/30 border border-border/50 rounded-xl p-6">
 							<p className="text-muted-foreground leading-relaxed text-xs md:text-base ">
@@ -98,9 +98,9 @@ export const CommissionTiers = ({
 										className="h-6 w-6 text-blue-600 dark:text-blue-400"
 									/>
 								</div>
-								<h3 className="text-lg lg:text-2xl font-semibold text-foreground">
+								<h4 className="text-lg lg:text-2xl font-semibold text-foreground">
 									{tRates("eligibility.title")}
-								</h3>
+								</h4>
 							</div>
 							<div className="bg-muted/30 border border-border/50 rounded-xl p-6 space-y-2">
 								<p>{tRates("eligibility.content")}</p>
@@ -122,9 +122,9 @@ export const CommissionTiers = ({
 									className="h-6 w-6 text-emerald-600 dark:text-emerald-400"
 								/>
 							</div>
-							<h3 className="text-lg lg:text-2xl font-semibold text-foreground">
+							<h4 className="text-lg lg:text-2xl font-semibold text-foreground">
 								{tRates("title")}
-							</h3>
+							</h4>
 						</div>
 						<div className="bg-muted/30 border border-border/50 rounded-xl p-6">
 							<p className="text-muted-foreground leading-relaxed text-xs md:text-base  mb-6">
@@ -219,9 +219,9 @@ export const CommissionTiers = ({
 									className="h-6 w-6 text-purple-600 dark:text-purple-400"
 								/>
 							</div>
-							<h3 className="text-lg lg:text-2xl font-semibold text-foreground">
+							<h4 className="text-lg lg:text-2xl font-semibold text-foreground">
 								{tRates("calculation.title")}
-							</h3>
+							</h4>
 						</div>
 						<div className="bg-muted/30 border border-border/50 rounded-xl p-6">
 							<p className="text-muted-foreground leading-relaxed text-xs md:text-base  mb-6">
@@ -276,9 +276,9 @@ export const CommissionTiers = ({
 									className="h-6 w-6 text-green-600 dark:text-green-400"
 								/>
 							</div>
-							<h3 className="text-lg  font-semibold text-foreground">
+							<h4 className="text-lg  font-semibold text-foreground">
 								{tRates("claim.title")}
-							</h3>
+							</h4>
 						</div>
 						<div className="bg-muted/30 border border-border/50 rounded-xl p-6">
 							<div className="space-y-4">
@@ -306,9 +306,9 @@ export const CommissionTiers = ({
 									className="h-6 w-6 text-orange-600 dark:text-orange-400"
 								/>
 							</div>
-							<h3 className="text-lg lg:text-2xl font-semibold text-foreground">
+							<h4 className="text-lg lg:text-2xl font-semibold text-foreground">
 								{tRates("system.title")}
-							</h3>
+							</h4>
 						</div>
 						<div className="bg-muted/30 border border-border/50 rounded-xl p-6">
 							<div className="grid gap-4 mb-6">
@@ -358,9 +358,9 @@ export const CommissionTiers = ({
 									className="h-6 w-6 text-red-600 dark:text-red-400"
 								/>
 							</div>
-							<h3 className="text-lg lg:text-2xl font-semibold text-foreground">
+							<h4 className="text-lg lg:text-2xl font-semibold text-foreground">
 								{tRates("amendments.title")}
-							</h3>
+							</h4>
 						</div>
 						<div className="bg-muted/30 border border-border/50 rounded-xl p-6">
 							<div className="p-4 bg-card border border-border/30 rounded-lg border-l-4 border-l-amber-500">

@@ -62,9 +62,9 @@ export const BonusDashboardTab = () => {
 						/>
 					</div>
 					<div>
-						<h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground tracking-tight">
+						<h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground tracking-tight">
 							{t("title")}
-						</h1>
+						</h2>
 					</div>
 				</div>
 			</div>

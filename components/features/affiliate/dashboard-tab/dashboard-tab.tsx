@@ -88,9 +88,9 @@ export const DashboardTab = () => {
 						/>
 					</div>
 					<div>
-						<h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground tracking-tight">
+						<h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground tracking-tight">
 							{t("title")}
-						</h1>
+						</h2>
 						{/* <p className="text-muted-foreground text-base mt-1">
 							{t("subtitle")}
 						</p> */}
@@ -105,9 +105,9 @@ export const DashboardTab = () => {
 						icon={faArrowTrendUp}
 						className="h-4 w-4 sm:h-5 sm:w-5 text-primary"
 					/>
-					<h2 className="text-lg sm:text-xl font-semibold text-foreground">
+					<h3 className="text-lg sm:text-xl font-semibold text-foreground">
 						{t("performanceOverview")}
-					</h2>
+					</h3>
 				</div>
 				<div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 					<TotalReferralIncome
@@ -142,9 +142,9 @@ export const DashboardTab = () => {
 						icon={faUsers}
 						className="h-4 w-4 sm:h-5 sm:w-5 text-primary"
 					/>
-					<h2 className="text-lg sm:text-xl font-semibold text-foreground">
+					<h3 className="text-lg sm:text-xl font-semibold text-foreground">
 						{t("referralManagement")}
-					</h2>
+					</h3>
 				</div>
 				<ReferralLink />
 			</div>
@@ -169,9 +169,9 @@ export const DashboardTab = () => {
 						icon={faShield}
 						className="h-4 w-4 sm:h-5 sm:w-5 text-primary"
 					/>
-					<h2 className="text-lg sm:text-xl font-semibold text-foreground">
+					<h3 className="text-lg sm:text-xl font-semibold text-foreground">
 						{t("termsAndCommission")}
-					</h2>
+					</h3>
 				</div>
 				<CommissionTiers
 					rates={affiliateRates}

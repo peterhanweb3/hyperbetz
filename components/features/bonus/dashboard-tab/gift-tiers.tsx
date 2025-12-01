@@ -101,9 +101,9 @@ export const GiftTiers = ({ rates, isLoading }: GiftTiersProps) => {
 			<CardContent className="p-4 sm:p-6 lg:p-8">
 				{/* Header */}
 				<div className="mb-4 sm:mb-6">
-					<h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-2">
+					<h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-2">
 						Wager Farming to Get USDT
-					</h2>
+					</h3>
 					<div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-1 sm:gap-2 text-sm sm:text-base text-muted-foreground">
 						<div className="flex items-center gap-2">
 							<span className="font-semibold text-orange-500">
