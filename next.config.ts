@@ -23,7 +23,7 @@ const nextConfig: NextConfig = {
 		formats: ["image/webp"], // Only WebP for better compression
 		minimumCacheTTL: 31536000,  // Cache for 1 year
 		dangerouslyAllowSVG: true,
-		contentDispositionType: "attachment",
+		contentDispositionType: "inline",
 		contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
 		remotePatterns: [
 			{
