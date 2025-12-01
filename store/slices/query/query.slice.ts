@@ -37,7 +37,7 @@ export interface QuerySliceActions {
 	setSortBy: (sortValue: string) => void;
 	showMoreItems: () => void;
 	syncStateFromUrl: (searchParams: URLSearchParams) => void;
-	syncStateFromPath: (slug: string[]) => void;
+	syncStateFromPath: (slug: string[], searchParams?: URLSearchParams) => void;
 	initializeQueryState: (searchParams: URLSearchParams) => void;
 }
 
@@ -219,7 +219,7 @@ export const createQuerySlice: AppStateCreator<QuerySlice> = (set, get) => ({
 	 * - [provider, category] = provider + category (e.g., /games/pg-soft/slot)
 	 * Handles providers that have multiple variants (e.g., Pragmatic Play)
 	 */
-	syncStateFromPath: (slug: string[]) => {
+	syncStateFromPath: (slug: string[], searchParams?: URLSearchParams) => {
 		set((state) => {
 			// Create a fresh state
 			const newState: QuerySliceState = {
@@ -227,6 +227,18 @@ export const createQuerySlice: AppStateCreator<QuerySlice> = (set, get) => ({
 				isInitialized: true,
 				activeFilters: {},
 			};
+
+			// Read sort and search query from URL search params if provided
+			if (searchParams) {
+				const sortParam = searchParams.get("sort");
+				const queryParam = searchParams.get("q");
+				if (sortParam) {
+					newState.sortBy = sortParam;
+				}
+				if (queryParam) {
+					newState.searchQuery = queryParam;
+				}
+			}
 
 			if (slug.length === 1) {
 				const decodedSlug = decodeURIComponent(slug[0]);
