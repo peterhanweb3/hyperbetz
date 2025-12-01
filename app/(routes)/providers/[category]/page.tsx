@@ -4,6 +4,9 @@ import { generateSEOMetadata } from "@/lib/utils/seo/seo-provider";
 import { ProviderPageLayoutWrapper } from "./provider-page-layout-wrapper";
 import { Skeleton } from "@/components/ui/skeleton";
 import { interpolateSiteName } from "@/lib/utils/site-config";
+import { JsonLd } from "@/components/features/seo/json-ld";
+import { generateBreadcrumbSchema } from "@/lib/utils/seo/schema-generator";
+import { getDynamicSEOConfig } from "@/lib/utils/seo/seo-config-loader";
 
 const VendorPageSkeleton = () => (
 	<div className="space-y-6">
@@ -58,9 +61,31 @@ export async function generateMetadata({
 
 export default async function CategoryProvidersPage({ params }: PageProps) {
 	const { category } = await params;
+	const config = await getDynamicSEOConfig();
+	const categoryName = decodeURIComponent(category)
+		.replace(/-/g, " ")
+		.split(" ")
+		.map(
+			(word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+		)
+		.join(" ");
+
+	// Generate breadcrumb schema for live-casino
+	const breadcrumbSchema =
+		category === "live-casino"
+			? generateBreadcrumbSchema(
+					[
+						{ name: "Home", url: "/" },
+						{ name: "Providers", url: "/providers" },
+						{ name: categoryName, url: `/providers/${category}` },
+					],
+					config
+			  )
+			: null;
 
 	return (
 		<div className="container mx-auto py-8">
+			{breadcrumbSchema && <JsonLd data={breadcrumbSchema} />}
 			<Suspense fallback={<VendorPageSkeleton />}>
 				<ProviderPageLayoutWrapper category={category} />
 			</Suspense>

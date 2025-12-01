@@ -43,11 +43,7 @@
 			"@type": "WebSite",
 			"name": "Hyperbetz",
 			"url": "https://hyperbetz.com",
-			"potentialAction": {
-				"@type": "SearchAction",
-				"target": "https://hyperbetz.com/search?q={search_term_string}",
-				"query-input": "required name=search_term_string"
-			}
+			"description": "Your Gateway to Fun and Rewards - Experience the best online gaming with crypto, slots, live casino, and sports betting."
 		}
 	},
 	"pageDefaults": {

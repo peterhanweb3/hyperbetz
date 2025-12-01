@@ -40,6 +40,7 @@ interface GameCarouselSectionProps {
 	viewAllUrl?: string; // Optional manual override for view all URL
 	icon?: IconDefinition;
 	onViewAllClick?: () => void; // Optional callback when View All is clicked
+	maxVisibleGames?: number; // Optional prop to limit visible games
 }
 
 export const GameCarouselSection = ({
@@ -50,6 +51,7 @@ export const GameCarouselSection = ({
 	showViewAll = true,
 	viewAllUrl, // New optional prop
 	icon: Icon = faFireFlameCurved,
+	maxVisibleGames = 12, // Default value for maxVisibleGames
 	onViewAllClick, // New callback prop
 }: GameCarouselSectionProps) => {
 	const tCommon = useTranslations("common");
@@ -96,8 +98,7 @@ export const GameCarouselSection = ({
 	};
 
 	// Normalize all games to Game format
-	const MAX_VISIBLE_GAMES = 12;
-	const limitedGames = games.slice(0, MAX_VISIBLE_GAMES);
+	const limitedGames = games.slice(0, maxVisibleGames);
 	const normalizedGames = limitedGames.map(normalizeGame);
 
 	// Check if this is a SPORTS category

@@ -164,11 +164,12 @@ export const ProviderPageLayout = ({
 
 	// Get all games from store for live casino section
 	const allGames = useAppStore((state) => state.game.list.games);
-	console.log(categoryFilter);
 	// Filter live casino games
 	const liveCasinoGames = useMemo(() => {
 		if (categoryFilter?.toUpperCase() === "LIVE CASINO") {
-			return getGamesByCategory(allGames, "LIVE CASINO", 24);
+			const casino1 = getGamesByCategory(allGames, "LIVE CASINO", 20);
+			const casino2 = getGamesByCategory(allGames, "Live Casino", 20);
+			return [...casino1, ...casino2];
 		}
 		return [];
 	}, [categoryFilter, allGames]);
@@ -254,6 +255,7 @@ export const ProviderPageLayout = ({
 							games={liveCasinoGames}
 							title={tGames("liveCasino")}
 							icon={faCards}
+							maxVisibleGames={40}
 							showViewAll={true}
 							viewAllUrl="/games/live-casino"
 						/>
