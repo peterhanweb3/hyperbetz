@@ -64,7 +64,7 @@ export function WebsiteSchema() {
 				name: "HyperBetz",
 				url: "https://hyperbetz.com",
 				description:
-					"Your Gateway to Fun and Rewards - Experience the best online gaming with crypto, slots, live casino, and sports betting.",
+					"Play at HyperBetz, the top crypto casino online with 6,000+ slots, live casino, crash games, and sports betting. Join now and start winning today!",
 			}}
 		/>
 	);

@@ -7,7 +7,7 @@
 		"siteName": "Hyperbetz",
 		"siteDomain": "hyperbetz.com",
 		"organization": "Hyperbetz Gaming",
-		"description": "Your Gateway to Fun and Rewards - Experience the best online gaming with crypto, slots, live casino, and sports betting.",
+		"description": "Play at HyperBetz, the top crypto casino online with 6,000+ slots, live casino, crash games, and sports betting. Join now and start winning today!",
 		"author": "Hyperbetz Team",
 		"favicon": "/assets/site/Hyperbetz-logo.png",
 		"logo": "/assets/site/Hyperbetz-logo.png",
@@ -43,7 +43,7 @@
 			"@type": "WebSite",
 			"name": "Hyperbetz",
 			"url": "https://hyperbetz.com",
-			"description": "Your Gateway to Fun and Rewards - Experience the best online gaming with crypto, slots, live casino, and sports betting."
+			"description": "Play at HyperBetz, the top crypto casino online with 6,000+ slots, live casino, crash games, and sports betting. Join now and start winning today!"
 		}
 	},
 	"pageDefaults": {
