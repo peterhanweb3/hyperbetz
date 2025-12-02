@@ -15,7 +15,7 @@ export function PageLoader() {
 
 	useEffect(() => {
 		// Minimum loading time for smooth UX (500ms)
-		const minLoadTime = 500;
+		const minLoadTime = 50;
 		const startTime = Date.now();
 
 		// Wait for page to be fully loaded
