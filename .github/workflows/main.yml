@@ -20,8 +20,6 @@ jobs:
           script: |
             cd /var/www/html/production/Live/hyperbetzv2/hyperbetz
             GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_leon -o IdentitiesOnly=yes' \
-            git restore .
-            git config pull.rebase true
             git pull origin main
             npm i
             npm run build
