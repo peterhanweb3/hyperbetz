@@ -15,7 +15,7 @@ interface GiftTiersProps {
 const tierGiftMapping = [
 	{
 		level: 1,
-		image: "/assets/gifts/orange.png",
+		image: "/assets/gifts/orange.webp",
 		name: "Bronze",
 		bgGradient: "from-orange-500/10 to-orange-600/5",
 		borderColor: "border-orange-500/30",
@@ -23,7 +23,7 @@ const tierGiftMapping = [
 	},
 	{
 		level: 2,
-		image: "/assets/gifts/sky blue.png",
+		image: "/assets/gifts/sky blue.webp",
 		name: "Silver",
 		bgGradient: "from-slate-400/10 to-slate-500/5",
 		borderColor: "border-slate-400/30",
@@ -31,7 +31,7 @@ const tierGiftMapping = [
 	},
 	{
 		level: 3,
-		image: "/assets/gifts/yellow.png",
+		image: "/assets/gifts/yellow.webp",
 		name: "Gold",
 		bgGradient: "from-yellow-500/10 to-yellow-600/5",
 		borderColor: "border-yellow-500/30",
@@ -39,7 +39,7 @@ const tierGiftMapping = [
 	},
 	{
 		level: 4,
-		image: "/assets/gifts/pink.png",
+		image: "/assets/gifts/pink.webp",
 		name: "Platinum",
 		bgGradient: "from-pink-400/10 to-pink-500/5",
 		borderColor: "border-pink-400/30",
@@ -47,7 +47,7 @@ const tierGiftMapping = [
 	},
 	{
 		level: 5,
-		image: "/assets/gifts/green.png",
+		image: "/assets/gifts/green.webp",
 		name: "Emerald",
 		bgGradient: "from-emerald-500/10 to-emerald-600/5",
 		borderColor: "border-emerald-500/30",
@@ -55,7 +55,7 @@ const tierGiftMapping = [
 	},
 	{
 		level: 6,
-		image: "/assets/gifts/red.png",
+		image: "/assets/gifts/red.webp",
 		name: "Ruby",
 		bgGradient: "from-red-500/10 to-red-600/5",
 		borderColor: "border-red-500/30",
@@ -63,7 +63,7 @@ const tierGiftMapping = [
 	},
 	{
 		level: 7,
-		image: "/assets/gifts/blue.png",
+		image: "/assets/gifts/blue.webp",
 		name: "Diamond",
 		bgGradient: "from-blue-400/10 to-blue-500/5",
 		borderColor: "border-blue-400/30",

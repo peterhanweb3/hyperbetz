@@ -39,7 +39,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		ogDescription: `Explore leading casino providers at ${siteName}. Play certified crypto slots and live dealer games from Pragmatic Play, Yggdrasil, NetEnt, and more. 100% fair and secure.`,
 		ogUrl: `${siteDomain}/providers`,
 		ogType: "website",
-		ogImage: "/assets/seo/PROVIDERS.png",
+		ogImage: "/assets/seo/PROVIDERS.webp",
 		schemas: [
 			generateOrganizationSchema(config),
 			generateWebPageSchema(

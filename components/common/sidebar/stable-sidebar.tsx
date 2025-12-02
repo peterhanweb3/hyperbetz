@@ -159,7 +159,7 @@ const StableSidebarComponent = ({
 			{/* Sidebar Header with logo and title */}
 			<div className="flex items-center p-4">
 				<Image
-					src="/assets/site/Hyperbetz-logo.png"
+					src="/assets/site/Hyperbetz-logo.webp"
 					alt="Hyperbetz Logo"
 					width={192}
 					height={48}

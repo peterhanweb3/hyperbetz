@@ -210,7 +210,7 @@ export const ClaimSuccessModal = (props: ClaimSuccessModalProps) => {
 								{/* Logo */}
 								<div className="flex items-center gap-2">
 									<img
-										src="/assets/site/Hyperbetz-logo.png"
+										src="/assets/site/Hyperbetz-logo.webp"
 										alt={t("logoAlt")}
 										width={200}
 										height={32}

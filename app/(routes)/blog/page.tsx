@@ -32,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		ogDescription: `Discover expert betting strategies, platform updates, and winning tips. Stay ahead of the game with our latest insights and community stories.`,
 		ogType: "website",
 		ogUrl: `${config.defaultDomain}/blog`,
-		ogImage: "/assets/seo/og.png",
+		ogImage: "/assets/seo/og.webp",
 	});
 }
 

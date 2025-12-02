@@ -33,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		ogTitle: `Privacy & Data Protection | ${siteName} (Crypto Casino)`,
 		ogDescription: `Explore how ${siteName} safeguards your crypto wallet and transaction data with advanced encryption and GDPR-compliant protection.`,
 		ogType: "website",
-		ogImage: "/assets/seo/og.png",
+		ogImage: "/assets/seo/og.webp",
 		schemas: [
 			generateOrganizationSchema(config),
 			generateWebPageSchema(

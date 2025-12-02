@@ -35,7 +35,7 @@ const exploreCategories: ExploreCategory[] = [
 		descriptionKey: "pokerDescription",
 		icon: faSpade,
 		href: "/games?q=POKER",
-		bgImage: "/assets/explore/POKER.png",
+		bgImage: "/assets/explore/POKER.webp",
 		colorScheme: "yellow",
 	},
 	{
@@ -44,7 +44,7 @@ const exploreCategories: ExploreCategory[] = [
 		descriptionKey: "lotteryDescription",
 		icon: faTicket,
 		href: "/games?q=LOTTERY",
-		bgImage: "/assets/explore/LOTTERY.png",
+		bgImage: "/assets/explore/LOTTERY.webp",
 		colorScheme: "pink",
 	},
 	{
@@ -53,7 +53,7 @@ const exploreCategories: ExploreCategory[] = [
 		descriptionKey: "futuresDescription",
 		icon: faChartLine,
 		href: "FUTURES",
-		bgImage: "/assets/explore/FUTURES.png",
+		bgImage: "/assets/explore/FUTURES.webp",
 		colorScheme: "green",
 	},
 	{
@@ -62,7 +62,7 @@ const exploreCategories: ExploreCategory[] = [
 		descriptionKey: "vrDescription",
 		icon: faVrCardboard,
 		href: "VR",
-		bgImage: "/assets/explore/VR.png",
+		bgImage: "/assets/explore/VR.webp",
 		colorScheme: "red",
 	},
 	{
@@ -71,7 +71,7 @@ const exploreCategories: ExploreCategory[] = [
 		descriptionKey: "swapDescription",
 		icon: faRepeat,
 		href: "SWAP",
-		bgImage: "/assets/explore/SWAP.png",
+		bgImage: "/assets/explore/SWAP.webp",
 		colorScheme: "violet",
 	},
 	{
@@ -80,7 +80,7 @@ const exploreCategories: ExploreCategory[] = [
 		descriptionKey: "slotsDescription",
 		icon: faSlotMachine,
 		href: "/games?q=SLOT",
-		bgImage: "/assets/explore/slot.png",
+		bgImage: "/assets/explore/slot.webp",
 		colorScheme: "gold",
 	},
 	{
@@ -89,7 +89,7 @@ const exploreCategories: ExploreCategory[] = [
 		descriptionKey: "liveCasinoDescription",
 		icon: faCards,
 		href: "/games?q=LIVE%20CASINO",
-		bgImage: "/assets/explore/Casino.png",
+		bgImage: "/assets/explore/Casino.webp",
 		colorScheme: "red",
 	},
 	{
@@ -98,7 +98,7 @@ const exploreCategories: ExploreCategory[] = [
 		descriptionKey: "sportsDescription",
 		icon: faFootball,
 		href: "/games?q=SPORTSBOOK",
-		bgImage: "/assets/explore/Sports.png",
+		bgImage: "/assets/explore/Sports.webp",
 		colorScheme: "green",
 	},
 ];

@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Gift, Sparkles, Trophy, Zap } from "lucide-react";
 import Image from "next/image";
-// import BannerImg1 from "../../../public/assets/banners/hero/banner.png";
 
 export function HeroBanner() {
 	return (
@@ -113,7 +112,7 @@ export function HeroBanner() {
 				<div className="hidden lg:flex flex-1 justify-center items-center pr-8">
 					<div className="relative group">
 						<Image
-							src={"/assets/banners/hero/banner.png"}
+							src={"/assets/banners/hero/banner.webp"}
 							alt="Hyperbetz Casino Banner"
 							width={400}
 							height={320}

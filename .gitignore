@@ -54,3 +54,5 @@ WEBSOCKET_INTEGRATION_SUMMARY.md
 WEBSOCKET_LIVE_CHAT_INTEGRATION.md
 prisma/dev.db
 uploads/*
+
+optimize-backgrounds.js

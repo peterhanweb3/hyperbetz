@@ -28,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		ogDescription: `Explore FAQs at ${siteName}. Learn how to connect your wallet, deposit crypto, withdraw winnings, and play provably fair blockchain games.`,
 		ogType: "website",
 		ogUrl: `${siteDomain}/faqs`,
-		ogImage: "/assets/seo/og.png",
+		ogImage: "/assets/seo/og.webp",
 		schemas: [
 			generateOrganizationSchema(config),
 			generateWebPageSchema(

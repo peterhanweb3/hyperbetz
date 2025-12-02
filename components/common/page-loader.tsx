@@ -53,7 +53,7 @@ export function PageLoader() {
 				{/* Logo with pulse animation */}
 				<div className="animate-pulse">
 					<Image
-						src="/assets/site/Hyperbetz-logo.png"
+						src="/assets/site/Hyperbetz-logo.webp"
 						alt="Hyperbetz Logo"
 						width={800}
 						height={800}

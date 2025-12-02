@@ -114,7 +114,7 @@ export default async function RootLayout({
 				{/* Preload critical logo for LCP */}
 				<link
 					rel="preload"
-					href="/assets/site/Hyperbetz-logo.png"
+					href="/assets/site/Hyperbetz-logo.webp"
 					as="image"
 					type="image/png"
 					fetchPriority="high"

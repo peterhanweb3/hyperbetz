@@ -13,7 +13,7 @@ import {
 
 export const guestSlides: HeroSlideData[] = [
 	{
-		backgroundImageUrl: "/assets/banners/hero/slide-2.png",
+		backgroundImageUrl: "/assets/banners/hero/slide-2.webp",
 		i18nKey: "guest",
 		title: <span className="text-destructive">Join the Action</span>,
 		subtitle: "Sign up now and get an exclusive welcome bonus!",
@@ -123,7 +123,7 @@ export const mockInfoCards: InfoCardData[] = [
 		linkText: "Go to Casino",
 		href: "/providers/live-casino",
 		// backgroundImage: "/assets/banners/hero/casino.png", // Example PNG image
-		backgroundImage: "/assets/banners/hero/casino_gif.gif", // Example PNG image
+		backgroundImage: "/assets/banners/hero/casino_gif.webm", // Example PNG image
 	},
 	{
 		icon: <FontAwesomeIcon icon={faSlotMachine} fontSize={22} />,
@@ -135,8 +135,7 @@ export const mockInfoCards: InfoCardData[] = [
 			"Spin the reels and hit massive jackpots with our premium slot collection.",
 		linkText: "Go to Slots",
 		href: "/providers/slot",
-		// backgroundImage: "/assets/banners/hero/slot.png", // Example PNG image
-		backgroundImage: "/assets/banners/hero/slot_gif.gif", // Example PNG image
+		backgroundImage: "/assets/banners/hero/slot_gif.webm", // Example PNG image
 	},
 	{
 		icon: <FontAwesomeIcon icon={faFutbolBall} fontSize={22} />,
@@ -147,7 +146,6 @@ export const mockInfoCards: InfoCardData[] = [
 			"Bet on your favorite teams and sports events with competitive odds.",
 		linkText: "Go to Sports",
 		href: "/games/sbo",
-		// backgroundImage: "/assets/banners/hero/sport.png", // Example PNG image
-		backgroundImage: "/assets/banners/hero/sports_gif.gif", // Example PNG image
+		backgroundImage: "/assets/banners/hero/sports_gif.webm", // Example PNG image
 	},
 ];

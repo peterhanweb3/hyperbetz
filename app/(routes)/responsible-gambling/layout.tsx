@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		ogDescription: `Discover ${siteName} responsible gambling tools. Set limits, self-exclude, and access support for safe crypto casino gaming.`,
 		ogType: "website",
 		ogUrl: `${siteDomain}/responsible-gambling`,
-		ogImage: "/assets/seo/og.png",
+		ogImage: "/assets/seo/og.webp",
 		schemas: [
 			generateOrganizationSchema(config),
 			generateWebPageSchema(

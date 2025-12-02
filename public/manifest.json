@@ -9,13 +9,13 @@
 	"orientation": "portrait-primary",
 	"icons": [
 		{
-			"src": "/assets/site/Hyperbetz-logo.png",
+			"src": "/assets/site/Hyperbetz-logo.webp",
 			"sizes": "192x192",
 			"type": "image/png",
 			"purpose": "any"
 		},
 		{
-			"src": "/assets/site/Hyperbetz-logo.png",
+			"src": "/assets/site/Hyperbetz-logo.webp",
 			"sizes": "512x512",
 			"type": "image/png",
 			"purpose": "any maskable"

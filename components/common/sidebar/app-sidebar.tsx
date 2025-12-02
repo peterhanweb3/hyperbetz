@@ -142,7 +142,7 @@ const AppSidebarComponent = ({ ...props }: ComponentProps<typeof Sidebar>) => {
 					onClick={handleMobileNavigation}
 				>
 					<Image
-						src="/assets/site/Hyperbetz-logo.png"
+						src="/assets/site/Hyperbetz-logo.webp"
 						alt="Hyperbetz Logo"
 						width={192}
 						height={48}

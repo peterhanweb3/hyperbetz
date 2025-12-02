@@ -33,8 +33,8 @@ import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 
 // Mock data for hero banner
 const heroImages = [
-	"/assets/banners/lobby/deposit-2.png",
-	"/assets/banners/lobby/refer-2.png",
+	"/assets/banners/lobby/deposit-2.webp",
+	"/assets/banners/lobby/refer-2.webp",
 ];
 
 const heroReferralLinks = ["deposit", "affiliate"];

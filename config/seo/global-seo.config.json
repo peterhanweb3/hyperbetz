@@ -9,8 +9,8 @@
 		"organization": "Hyperbetz Gaming",
 		"description": "Play at HyperBetz, the top crypto casino online with 6,000+ slots, live casino, crash games, and sports betting. Join now and start winning today!",
 		"author": "Hyperbetz Team",
-		"favicon": "/assets/site/Hyperbetz-logo.png",
-		"logo": "/assets/site/Hyperbetz-logo.png",
+		"favicon": "/assets/site/Hyperbetz-logo.webp",
+		"logo": "/assets/site/Hyperbetz-logo.webp",
 		"logoWidth": 1200,
 		"logoHeight": 630,
 		"twitterHandle": "@hyperbetz",
@@ -26,7 +26,7 @@
 			"@type": "Organization",
 			"name": "Hyperbetz Gaming",
 			"url": "https://hyperbetz.com",
-			"logo": "https://hyperbetz.com/assets/site/Hyperbetz-logo.png",
+			"logo": "https://hyperbetz.com/assets/site/Hyperbetz-logo.webp",
 			"description": "Leading online gaming platform offering crypto gaming, slots, live casino, and sports betting worldwide.",
 			"sameAs": [
 				"https://x.com/HyperBetzCasino",
@@ -279,7 +279,7 @@
 		"enablePreconnect": true,
 		"enableDNSPrefetch": true,
 		"enablePreload": true,
-		"criticalResources": ["/assets/site/Hyperbetz-logo.png"],
+		"criticalResources": ["/assets/site/Hyperbetz-logo.webp"],
 		"externalDomains": [
 			"https://fonts.googleapis.com",
 			"https://fonts.gstatic.com"

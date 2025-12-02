@@ -145,7 +145,6 @@ import { InfoCardData } from "@/types/features/hero-banner-section.types";
 import { useTranslations } from "@/lib/locale-provider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/pro-light-svg-icons";
-import Image from "next/image";
 
 interface InfoCardProps {
 	data: InfoCardData;
@@ -174,19 +173,20 @@ export const InfoCard = ({
 			<div className="absolute inset-0 bg-gradient-to-r from-primary/15 via-primary/8 to-transparent" />
 
 			{/* Side Image Section - Now appears first on smaller screens */}
-			<div className="w-full lg:w-20 xl:w-26 2xl:w-32 3xl:w-40 h-32 mx-auto xl:mr-[23px] xl:h-full relative flex items-center justify-center flex-shrink-0 xl:order-2">
+			<div className="w-full lg:w-20 xl:w-26 2xl:w-32 3xl:w-40 h-32 mx-auto xl:mr-[23px] xl:h-full relative flex items-center justify-center shrink-0 xl:order-2">
 				{imageSource ? (
-					<Image
-						src={imageSource}
-						alt={data.title || "Card image"}
-						fill
-						className="object-contain group-hover:scale-105 transition-transform duration-200 max-w-full max-h-full"
-						sizes="(max-width: 1024px) 100vw, 160px"
-						priority={false}
-					/>
+					<video
+						loop
+						muted
+						autoPlay
+						width="250"
+						className="object-contain group-hover:scale-105 transition-transform duration-200 max-w-full max-h-full w-full h-full"
+					>
+						<source src={imageSource} />
+					</video>
 				) : (
 					<div className="w-full h-full bg-primary/10 flex items-center justify-center text-muted-foreground text-sm">
-						No Image
+						No Video
 					</div>
 				)}
 			</div>
