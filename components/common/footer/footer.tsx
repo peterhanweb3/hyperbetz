@@ -203,12 +203,12 @@ export function Footer() {
 	const socialLinks = [
 		{
 			icon: Twitter,
-			href: "https://x.com/HyperBetzz",
+			href: "https://x.com/HyperBetzCasino",
 			label: "Twitter",
 		},
 		{
 			icon: Facebook,
-			href: "https://www.facebook.com/profile.php?id=61583594652093",
+			href: "https://www.facebook.com/hyperbetz/",
 			label: "Facebook",
 		},
 		{

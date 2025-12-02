@@ -163,6 +163,8 @@ export async function generateMetadata(): Promise<Metadata> {
 		path: "/",
 		pageType: "home",
 		ogType: "website",
+		ogImage: "/assets/seo/og.png",
+		ogUrl: config.defaultDomain,
 		schemas: [websiteSchema, orgSchema, faqSchema, videoGameSchema],
 	});
 }

@@ -139,6 +139,7 @@ export interface SEOProps {
 	// Optional properties for overriding OG title and description
 	ogTitle?: string;
 	ogDescription?: string;
+	ogUrl?: string;
 }
 
 type JSONValue =

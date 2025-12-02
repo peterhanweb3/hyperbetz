@@ -10,6 +10,7 @@ import { Calendar, Clock, Tag, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { BlogCard } from "@/modules/blog/components/BlogCard";
+import { getDynamicSEOConfig } from "@/lib/utils/seo/seo-config-loader";
 
 export async function generateMetadata({
 	params,
@@ -18,6 +19,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	try {
 		const { slug } = await params;
+		const config = await getDynamicSEOConfig();
 		const post = await getPostBySlug(slug);
 		if (!post) return {};
 
@@ -28,6 +30,7 @@ export async function generateMetadata({
 				title: post.seoTitle || post.title,
 				description: post.seoDescription || post.excerpt || undefined,
 				images: post.coverImage ? [post.coverImage] : [],
+				url: `${config.defaultDomain}/blog/${slug}`,
 			},
 		};
 	} catch (error) {

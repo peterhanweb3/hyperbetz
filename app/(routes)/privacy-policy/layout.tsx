@@ -28,6 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
 			"crypto betting privacy",
 		],
 		path: "/privacy-policy",
+		ogUrl: `${siteDomain}/privacy-policy`,
 		pageType: "privacy",
 		ogTitle: `Privacy & Data Protection | ${siteName} (Crypto Casino)`,
 		ogDescription: `Explore how ${siteName} safeguards your crypto wallet and transaction data with advanced encryption and GDPR-compliant protection.`,

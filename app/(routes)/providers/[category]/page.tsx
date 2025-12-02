@@ -27,6 +27,7 @@ export async function generateMetadata({
 	params,
 }: PageProps): Promise<Metadata> {
 	const { category } = await params;
+	const config = await getDynamicSEOConfig();
 	const categoryName = decodeURIComponent(category)
 		.replace(/-/g, " ")
 		.split(" ")
@@ -56,6 +57,7 @@ export async function generateMetadata({
 		path: `/providers/${category}`,
 		pageType: "providers",
 		ogType: "website",
+		ogUrl: `${config.defaultDomain}/providers/${category}`,
 	});
 }
 

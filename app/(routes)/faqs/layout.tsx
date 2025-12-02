@@ -27,6 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		ogTitle: `FAQs | ${siteName} – Crypto Casino Help Center`,
 		ogDescription: `Explore FAQs at ${siteName}. Learn how to connect your wallet, deposit crypto, withdraw winnings, and play provably fair blockchain games.`,
 		ogType: "website",
+		ogUrl: `${siteDomain}/faqs`,
 		ogImage: "/assets/seo/og.png",
 		schemas: [
 			generateOrganizationSchema(config),

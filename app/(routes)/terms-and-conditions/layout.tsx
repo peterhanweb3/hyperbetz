@@ -27,6 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		ogTitle: `Terms & Conditions | ${siteName} (Crypto Wallet Casino)`,
 		ogDescription: `Review ${siteName}' Terms & Conditions. Understand Dynamic.xyz wallet login, crypto deposits, withdrawals, and platform rules.`,
 		ogType: "website",
+		ogUrl: `${siteDomain}/terms-and-conditions`,
 		ogImage: "/assets/seo/og.png",
 		schemas: [
 			generateOrganizationSchema(config),

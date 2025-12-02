@@ -37,6 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		ogTitle: `Join the ${siteName} Affiliate Program | Earn Lifetime Crypto Commissions`,
 		ogDescription: `Partner with ${siteName} and earn lifetime crypto rewards. Promote a top-tier crypto casino offering slots, live games, and sports betting to a global audience.`,
 		ogType: "website",
+		ogUrl: `${siteDomain}/affiliate`,
 		ogImage: "/assets/seo/AFFILIATE.png",
 		schemas: [
 			generateOrganizationSchema(config),

@@ -41,8 +41,8 @@ export function OrganizationSchema() {
 				url: "https://hyperbetz.com",
 				logo: "https://hyperbetz.com/logo.png",
 				sameAs: [
-					"https://twitter.com/hyperbetz",
-					"https://facebook.com/hyperbetz",
+					"https://x.com/HyperBetzCasino",
+					"https://www.facebook.com/hyperbetz/",
 					"https://instagram.com/hyperbetz",
 				],
 				contactPoint: {

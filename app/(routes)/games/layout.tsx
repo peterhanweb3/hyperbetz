@@ -33,6 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		ogTitle: `All Games at ${siteName} | Slots, Poker, Live Casino & Sports`,
 		ogDescription: `Play 5,000+ casino games at ${siteName} — including crypto slots, live dealers, poker, and sports betting. Fast wallet payouts and provably fair gaming on every spin.`,
 		ogType: "website",
+		ogUrl: `${siteDomain}/games`,
 		ogImage: "/assets/seo/GAMES.png",
 		schemas: [
 			generateOrganizationSchema(config),

@@ -2,6 +2,7 @@ import { getSeoPageBySlug } from "@/modules/seo/actions";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { StructuredData } from "@/components/features/seo/StructuredData";
+import { getDynamicSEOConfig } from "@/lib/utils/seo/seo-config-loader";
 
 export async function generateMetadata({
 	params,
@@ -10,6 +11,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	try {
 		const { slug } = await params;
+		const config = await getDynamicSEOConfig();
 		const page = await getSeoPageBySlug(slug);
 		if (!page) return {};
 
@@ -21,6 +23,7 @@ export async function generateMetadata({
 				title: page.title,
 				description: page.description,
 				type: "website",
+				url: `${config.defaultDomain}/${slug}`,
 			},
 		};
 	} catch (error) {

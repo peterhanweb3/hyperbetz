@@ -102,7 +102,7 @@ export async function generateSEOMetadata(props: SEOProps): Promise<Metadata> {
 				| "profile",
 			title: props.ogTitle || fullTitle, // Allow manual override of OG title
 			description: props.ogDescription || description, // Allow manual override of OG description
-			url: canonical,
+			url: props.ogUrl,
 			siteName: config.defaults.siteName,
 			locale: ogLocale,
 			images: [

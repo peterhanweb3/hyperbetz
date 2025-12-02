@@ -29,6 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		ogTitle: `About ${siteName} | Trusted Global Crypto Casino Platform`,
 		ogDescription: `Discover ${siteName} — a secure, provably fair crypto casino offering 5,000+ games, live tables, and sports betting. Built on blockchain for fairness, speed, and transparency`,
 		ogType: "website",
+		ogUrl: `${siteDomain}/about-us`,
 		ogImage: "/assets/seo/ABOUT_US.png",
 		schemas: [
 			generateOrganizationSchema(config),

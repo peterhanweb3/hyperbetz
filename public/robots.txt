@@ -10,7 +10,7 @@
 # ==========================================================
 
 User-agent: *
-Content-signal: search=yes,ai-input=yes,ai-train=no
+# Content-signal: search=yes,ai-input=yes,ai-train=no
 
 # ==========================================================
 # ✅ ALLOWED PUBLIC CONTENT (FULLY INDEXABLE)

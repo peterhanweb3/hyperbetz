@@ -46,7 +46,7 @@ export async function getDynamicSEOConfig(): Promise<SEOConfig> {
 	"use server";
 	try {
 		const headersList = await headers();
-		const host = headersList.get("host") || "hyperholaholah.xyz";
+		const host = headersList.get("host") || "hyperbetz.com";
 		const proto = headersList.get("x-forwarded-proto") || "https";
 
 		// If no host found (e.g. build time), return default
