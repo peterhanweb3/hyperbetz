@@ -84,9 +84,9 @@ export const GameCard = ({ game, className }: Layout2GameCardProps) => {
 								{game.provider_name}
 							</span>
 						</div>
-						<h3 className="text-white text-lg font-semibold line-clamp-1 drop-shadow-md">
+						<h2 className="text-white text-lg font-semibold line-clamp-1 drop-shadow-md">
 							{game.game_name}
-						</h3>
+						</h2>
 					</div>
 
 					{/* Buttons - hidden by default, show on hover */}

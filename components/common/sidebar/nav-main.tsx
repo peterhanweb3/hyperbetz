@@ -943,128 +943,132 @@ export function NavMain({
 			<Separator className="!w-[90%] mx-auto my-1 group-data-[collapsible=icon]:mb-4" />
 			{providers.length > 0 && (
 				<SidebarGroup className="group-data-[collapsible=icon]:p-0!">
-					<Collapsible
-						asChild
-						open={isTrendingNowOpen}
-						onOpenChange={setIsTrendingNowOpen}
-						className="group/collapsible"
-					>
-						<SidebarMenuItem className="list-none">
-							<CollapsibleTrigger asChild>
-								<SidebarMenuButton
-									tooltip="Trending Now"
-									onClick={() => {
-										if (!open) {
-											toggleSidebar();
-											setIsTrendingNowOpen(true);
-										} else {
-											setIsTrendingNowOpen(
-												!isTrendingNowOpen
-											);
-										}
-									}}
-									className="group-data-[collapsible=icon]:bg-accent/80"
-								>
-									<span className="group-data-[collapsible=icon]:hidden text-primary text-xs font-semibold">
-										{tSidebar("trendingNow")}
-									</span>
-									<FontAwesomeIcon
-										icon={faChevronRight}
-										className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90"
-									/>
-								</SidebarMenuButton>
-							</CollapsibleTrigger>
-							<CollapsibleContent>
-								<SidebarMenuSub className="border-none mx-0 px-0">
+					<SidebarMenu className="group-data-[collapsible=icon]:gap-2">
+						<Collapsible
+							asChild
+							open={isTrendingNowOpen}
+							onOpenChange={setIsTrendingNowOpen}
+							className="group/collapsible"
+						>
+							<SidebarMenuItem className="list-none">
+								<CollapsibleTrigger asChild>
+									<SidebarMenuButton
+										tooltip="Trending Now"
+										onClick={() => {
+											if (!open) {
+												toggleSidebar();
+												setIsTrendingNowOpen(true);
+											} else {
+												setIsTrendingNowOpen(
+													!isTrendingNowOpen
+												);
+											}
+										}}
+										className="group-data-[collapsible=icon]:bg-accent/80"
+									>
+										<span className="group-data-[collapsible=icon]:hidden text-primary text-xs font-semibold">
+											{tSidebar("trendingNow")}
+										</span>
+										<FontAwesomeIcon
+											icon={faChevronRight}
+											className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90"
+										/>
+									</SidebarMenuButton>
+								</CollapsibleTrigger>
+								<CollapsibleContent>
 									<div className="space-y-1.5 w-full overflow-y-auto">
-										{limitedProviders.map(
-											(p) =>
-												p.url && ( // This check ensures the Link is only rendered if p.url is not undefined or an empty string
-													<SidebarMenuSubItem
-														key={p.title}
-														className="list-none"
-													>
-														<div className="w-full">
-															<SidebarMenuSubButton
-																asChild
-																className="h-auto py-1.5"
-															>
-																<Link
-																	href={p.url}
-																	className="flex font-medium tracking-wider items-center justify-between w-full hover:bg-muted/30 transition-all duration-300"
-																	prefetch={
-																		false
-																	}
-																	onClick={
-																		handleMobileNavigation
-																	}
+										<SidebarMenuSub className="border-none mx-0 px-0">
+											{limitedProviders.map(
+												(p) =>
+													p.url && ( // This check ensures the Link is only rendered if p.url is not undefined or an empty string
+														<SidebarMenuSubItem
+															key={p.title}
+															className="list-none"
+														>
+															<div className="w-full">
+																<SidebarMenuSubButton
+																	asChild
+																	className="h-auto py-1.5"
 																>
-																	<span className="text-sm text-foreground">
-																		{
-																			p.title
+																	<Link
+																		href={
+																			p.url
 																		}
-																	</span>
-																	{p.count && (
-																		<span className="text-xs text-foreground/80 bg-primary/20 px-2 py-0.5 rounded-full">
+																		className="flex font-medium tracking-wider items-center justify-between w-full hover:bg-muted/30 transition-all duration-300"
+																		prefetch={
+																			false
+																		}
+																		onClick={
+																			handleMobileNavigation
+																		}
+																	>
+																		<span className="text-sm text-foreground">
 																			{
-																				p.count
+																				p.title
 																			}
 																		</span>
-																	)}
-																</Link>
-															</SidebarMenuSubButton>
-														</div>
-													</SidebarMenuSubItem>
-												)
-										)}
-										{remainingProvidersCount > 0 && (
-											<SidebarMenuSubItem className="list-none">
-												<div className="w-full">
-													<SidebarMenuSubButton
-														asChild
-														size="sm"
-														className="!h-auto !min-h-[1.75rem] !items-start !py-1"
-													>
-														<Link
-															href="/providers"
-															className="flex items-center justify-between w-full hover:bg-primary/20 transition-all duration-300 border-t border-border/50 py-2 mt-4 gap-2"
-															prefetch={false}
-															onClick={
-																handleMobileNavigation
-															}
-														>
-															<span className="text-sm text-foreground font-medium leading-tight flex-1 break-words">
-																{tSidebar(
-																	"allTopProviders"
-																)}
-															</span>
-															<div className="flex items-center gap-2 flex-shrink-0">
-																<span className="text-xs text-foreground/80 bg-primary/20 px-2 py-0.5 rounded-full whitespace-nowrap">
-																	+
-																	{
-																		remainingProvidersCount
-																	}
-																</span>
-																<FontAwesomeIcon
-																	icon={
-																		faChevronRight
-																	}
-																	fontSize={
-																		12
-																	}
-																	className="text-foreground"
-																/>
+																		{p.count && (
+																			<span className="text-xs text-foreground/80 bg-primary/20 px-2 py-0.5 rounded-full">
+																				{
+																					p.count
+																				}
+																			</span>
+																		)}
+																	</Link>
+																</SidebarMenuSubButton>
 															</div>
-														</Link>
-													</SidebarMenuSubButton>
-												</div>
-											</SidebarMenuSubItem>
-										)}
+														</SidebarMenuSubItem>
+													)
+											)}
+											{remainingProvidersCount > 0 && (
+												<SidebarMenuSubItem className="list-none">
+													<div className="w-full">
+														<SidebarMenuSubButton
+															asChild
+															size="sm"
+															className="!h-auto !min-h-[1.75rem] !items-start !py-1"
+														>
+															<Link
+																href="/providers"
+																className="flex items-center justify-between w-full hover:bg-primary/20 transition-all duration-300 border-t border-border/50 py-2 mt-4 gap-2"
+																prefetch={false}
+																onClick={
+																	handleMobileNavigation
+																}
+															>
+																<span className="text-sm text-foreground font-medium leading-tight flex-1 break-words">
+																	{tSidebar(
+																		"allTopProviders"
+																	)}
+																</span>
+																<div className="flex items-center gap-2 flex-shrink-0">
+																	<span className="text-xs text-foreground/80 bg-primary/20 px-2 py-0.5 rounded-full whitespace-nowrap">
+																		+
+																		{
+																			remainingProvidersCount
+																		}
+																	</span>
+																	<FontAwesomeIcon
+																		icon={
+																			faChevronRight
+																		}
+																		fontSize={
+																			12
+																		}
+																		className="text-foreground"
+																	/>
+																</div>
+															</Link>
+														</SidebarMenuSubButton>
+													</div>
+												</SidebarMenuSubItem>
+											)}
+										</SidebarMenuSub>
 									</div>
-								</SidebarMenuSub>
-							</CollapsibleContent>
-						</SidebarMenuItem>
-					</Collapsible>
+								</CollapsibleContent>
+							</SidebarMenuItem>
+						</Collapsible>
+					</SidebarMenu>
 				</SidebarGroup>
 			)}
 			{aboutSection && (

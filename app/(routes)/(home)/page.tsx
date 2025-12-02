@@ -86,31 +86,34 @@ export default function HomePage() {
 		isLoading: isAuthLoading,
 		isAuthCheckComplete,
 	} = useDynamicAuth();
-	const { heroBanner, initializeHeroBanner } = useAppStore(
-		(state) => state.uiDefinition.heroBanner
-	);
+	const { heroBanner, initializeHeroBanner, updateHeroBannerGames } =
+		useAppStore((state) => state.uiDefinition.heroBanner);
 
 	// Get game data and status. It's already being loaded by the RootLayout.
 	const allGames = useAppStore((state) => state.game.list.games);
 	const gameStatus = useAppStore((state) => state.game.list.status);
 
 	// --- 2. Logic to Set the Default Hero Banner ---
-	// This effect runs when data is ready and sets the hero banner state if it's not already set.
 	useEffect(() => {
-		const isDataReady = gameStatus === "success" && allGames.length > 0;
-
-		// Only initialize if data is ready AND if the banner state hasn't been set by user interaction yet.
-		if (isDataReady && !heroBanner) {
+		if (!heroBanner) {
 			initializeHeroBanner({ isLoggedIn, login, allGames, router });
 		}
+	}, [heroBanner, initializeHeroBanner, isLoggedIn, login, allGames, router]);
+
+	useEffect(() => {
+		const isDataReady = gameStatus === "success" && allGames.length > 0;
+		if (heroBanner && isDataReady) {
+			updateHeroBannerGames({ isLoggedIn, login, allGames, router });
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [
 		gameStatus,
 		allGames,
 		isLoggedIn,
 		login,
 		router,
-		initializeHeroBanner,
-		heroBanner,
+		updateHeroBannerGames,
+		// heroBanner is intentionally omitted to avoid infinite loops
 	]);
 
 	const { primaryWallet } = useDynamicContext();
@@ -232,7 +235,6 @@ export default function HomePage() {
 				<section className="w-full">
 					<BlogCardsSlider posts={blogPosts} />
 				</section>
-
 			</div>
 		</>
 	);

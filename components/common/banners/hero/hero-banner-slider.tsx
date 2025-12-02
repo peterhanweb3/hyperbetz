@@ -77,7 +77,7 @@ export default function HeroSlider({ slides }: { slides: HeroSlideData[] }) {
 								{/* <div className="absolute inset-0 backdrop-blur-[1px]" /> */}
 
 								<div className="relative z-10 max-w-2xl text-white">
-									<h1
+									<h2
 										className="text-4xl md:text-5xl font-extrabold uppercase tracking-tighter 
                       drop-shadow-2xl text-shadow-lg
                       bg-gradient-to-r from-white via-white to-white/90 bg-clip-text 
@@ -113,7 +113,7 @@ export default function HeroSlider({ slides }: { slides: HeroSlideData[] }) {
 											(typeof slide.title === "string"
 												? slide.title
 												: slide.title)}
-									</h1>
+									</h2>
 									<p
 										className="mt-3 text-lg text-white/90 drop-shadow-lg 
                       animate-in slide-in-from-bottom-4 delay-150"

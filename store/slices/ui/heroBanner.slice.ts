@@ -43,6 +43,13 @@ export interface HeroBannerSliceActions {
 		allGames: Game[]; // Adjust type as needed
 		router: AppRouterInstance;
 	}) => void;
+
+	updateHeroBannerGames: (deps: {
+		isLoggedIn: boolean;
+		login: () => void;
+		allGames: Game[];
+		router: AppRouterInstance;
+	}) => void;
 }
 
 /**
@@ -72,7 +79,7 @@ export const createHeroBannerSlice: AppStateCreator<
 			const savedLayout = safeLocalStorage.getItem(
 				LAYOUT_STORAGE_KEY
 			) as SupportedLayouts | null;
-			const layoutToLoad: SupportedLayouts = "layout2";
+			const layoutToLoad: SupportedLayouts = savedLayout || "layout2";
 
 			const propsBuilder = heroBannerPropsFactory[layoutToLoad];
 			if (propsBuilder) {
@@ -82,6 +89,27 @@ export const createHeroBannerSlice: AppStateCreator<
 			}
 		} catch (error) {
 			console.error("Failed to initialize hero banner:", error);
+		}
+	},
+	updateHeroBannerGames: async (deps) => {
+		try {
+			const currentBanner = get().uiDefinition.heroBanner.heroBanner;
+			// Use current layout or fallback to saved/default
+			const savedLayout = safeLocalStorage.getItem(
+				LAYOUT_STORAGE_KEY
+			) as SupportedLayouts | null;
+			const layoutToLoad: SupportedLayouts =
+				(currentBanner?.layout as SupportedLayouts) ||
+				savedLayout ||
+				"layout2";
+
+			const propsBuilder = heroBannerPropsFactory[layoutToLoad];
+			if (propsBuilder) {
+				const updatedProps = await propsBuilder(deps);
+				get().uiDefinition.heroBanner.setHeroBanner(updatedProps);
+			}
+		} catch (error) {
+			console.error("Failed to update hero banner games:", error);
 		}
 	},
 });

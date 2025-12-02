@@ -213,7 +213,7 @@ export function Footer() {
 		},
 		{
 			icon: Instagram,
-			href: "https://www.instagram.com/hyperbetz.games/",
+			href: "https://www.instagram.com/hyperbetz_crypto_caisno/",
 			label: "Instagram",
 		},
 		{

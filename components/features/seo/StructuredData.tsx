@@ -43,7 +43,7 @@ export function OrganizationSchema() {
 				sameAs: [
 					"https://x.com/HyperBetzCasino",
 					"https://www.facebook.com/hyperbetz/",
-					"https://instagram.com/hyperbetz",
+					"https://www.instagram.com/hyperbetz_crypto_caisno/",
 				],
 				contactPoint: {
 					"@type": "ContactPoint",
