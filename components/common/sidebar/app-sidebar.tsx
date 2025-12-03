@@ -147,7 +147,7 @@ const AppSidebarComponent = ({ ...props }: ComponentProps<typeof Sidebar>) => {
 						width={192}
 						height={48}
 						priority
-						className="h-12 w-auto"
+						className="h-12 w-48"
 					/>
 				</Link>
 			</div>

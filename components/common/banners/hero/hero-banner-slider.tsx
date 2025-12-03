@@ -74,6 +74,7 @@ export default function HeroSlider({ slides }: { slides: HeroSlideData[] }) {
 									className="absolute inset-0 w-full h-full object-cover object-center "
 									style={{ mixBlendMode: "hard-light" }}
 									priority
+									fetchPriority="high"
 								/>
 								{/* Glass morphism effect */}
 								{/* <div className="absolute inset-0 backdrop-blur-[1px]" /> */}
