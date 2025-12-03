@@ -14,6 +14,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { useTranslations } from "@/lib/locale-provider";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 // --- Enhanced Hero Slider Component ---
 export default function HeroSlider({ slides }: { slides: HeroSlideData[] }) {
@@ -63,16 +64,17 @@ export default function HeroSlider({ slides }: { slides: HeroSlideData[] }) {
 					{slides.map((slide, index) => (
 						<CarouselItem key={index}>
 							<div
-								className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden 
-                    bg-cover bg-center bg-no-repeat p-8 md:p-12 
-                    flex flex-col justify-center items-start
-                    before:absolute before:inset-0"
-								style={{
-									backgroundColor: "var(--primary)", // Solid red background as fallback
-									backgroundImage: `url("${slide.backgroundImageUrl}")`,
-									backgroundBlendMode: "hard-light",
-								}}
+								className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden p-8 md:p-12 flex flex-col justify-center items-start"
+								style={{ backgroundColor: "var(--primary)" }}
 							>
+								<Image
+									src={slide.backgroundImageUrl}
+									alt="Background"
+									fill
+									className="absolute inset-0 w-full h-full object-cover object-center "
+									style={{ mixBlendMode: "hard-light" }}
+									priority
+								/>
 								{/* Glass morphism effect */}
 								{/* <div className="absolute inset-0 backdrop-blur-[1px]" /> */}
 
@@ -164,11 +166,11 @@ export default function HeroSlider({ slides }: { slides: HeroSlideData[] }) {
 								</div>
 
 								{/* Subtle animated particles effect */}
-								<div className="absolute inset-0 opacity-20">
+								{/* <div className="absolute inset-0 opacity-20">
 									<div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/30 rounded-full animate-pulse" />
 									<div className="absolute top-3/4 right-1/4 w-1 h-1 bg-white/40 rounded-full animate-ping" />
 									<div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-white/25 rounded-full animate-bounce" />
-								</div>
+								</div> */}
 							</div>
 						</CarouselItem>
 					))}
