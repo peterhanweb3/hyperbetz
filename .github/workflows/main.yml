@@ -21,7 +21,7 @@ jobs:
             cd /var/www/html/production/Live/hyperbetzv2/hyperbetz
             GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_leon -o IdentitiesOnly=yes' \
             git pull origin main
-            npx prisma generate
+            cat .env
             npm i
             npm run build
             pm2 restart web_hyperbetzv2
