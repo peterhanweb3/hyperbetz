@@ -13,7 +13,7 @@ async function main() {
 			role: "SUPER_ADMIN",
 		},
 	});
-
+ 
 	// Create tags
 	const strategyTag = await prisma.tag.upsert({
 		where: { slug: "strategy" },
