@@ -60,6 +60,7 @@
 		"culori": "^4.0.2",
 		"date-fns": "^4.1.0",
 		"dom-to-image": "^2.6.0",
+		"dotenv": "^17.2.3",
 		"embla-carousel-autoplay": "^8.6.0",
 		"embla-carousel-react": "^8.6.0",
 		"ethers": "^6.15.0",

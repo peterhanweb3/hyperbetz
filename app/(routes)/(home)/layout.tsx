@@ -165,6 +165,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		ogType: "website",
 		ogImage: "/assets/seo/og.webp",
 		ogUrl: config.defaultDomain,
+		nocanonical: false,
 		schemas: [websiteSchema, orgSchema, faqSchema, videoGameSchema],
 	});
 }

@@ -21,11 +21,18 @@ import {
 } from "lucide-react";
 import { useT } from "@/hooks/useI18n";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function TermsPage() {
 	const t = useT();
 
-	const siteDomain = window?.location?.hostname || "hyperbetz.com";
+	const [siteDomain, setSiteDomain] = useState("hyperbetz.com");
+
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			setSiteDomain(window.location.hostname);
+		}
+	}, []);
 	return (
 		<div className="container mx-auto space-y-8 consistent-padding-x consistent-padding-y">
 			<PageHeader

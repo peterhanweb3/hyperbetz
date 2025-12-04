@@ -29,16 +29,20 @@ export const useTransactionModal = () => {
 
 	// Effect 2: Sync State to URL on tab change
 	useEffect(() => {
-		const currentParams = new URLSearchParams(searchParams.toString());
+		const prevSearch = searchParams.toString();
+		const currentParams = new URLSearchParams(prevSearch);
 		if (isTransactionModalOpen) {
 			currentParams.set("tab", activeTransactionModalTab);
 		} else {
 			currentParams.delete("tab");
 		}
-		// Use replace to avoid polluting browser history
-		router.replace(`${pathname}?${currentParams.toString()}`, {
-			scroll: false,
-		});
+		const nextSearch = currentParams.toString();
+		if (nextSearch === prevSearch) {
+			return;
+		}
+		const nextUrl = nextSearch ? `${pathname}?${nextSearch}` : pathname;
+		// Use replace to avoid polluting browser history, but only when query actually changes
+		router.replace(nextUrl, { scroll: false });
 	}, [
 		isTransactionModalOpen,
 		activeTransactionModalTab,
