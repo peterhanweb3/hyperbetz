@@ -1,19 +1,12 @@
 # ==========================================================
 # HyperBetz Gaming Network — robots.txt
-# SEO + AI + Compliance Optimized (Final Version)
-# ==========================================================
-# Purpose:
-# - Maximize Google/Bing discoverability
-# - Allow AI summarization + input (NOT training)
-# - Protect sensitive, private, & dynamic routes
-# - Remove conflicts with Cloudflare Managed rules
 # ==========================================================
 
 User-agent: *
 # Content-signal: search=yes,ai-input=yes,ai-train=no
 
 # ==========================================================
-# ✅ ALLOWED PUBLIC CONTENT (FULLY INDEXABLE)
+# PUBLIC CONTENT (INDEXABLE)
 # ==========================================================
 Allow: /
 Allow: /lobby
@@ -31,7 +24,7 @@ Allow: /terms-and-conditions
 Allow: /responsible-gambling
 
 # ==========================================================
-# 🚫 DISALLOWED SENSITIVE / PRIVATE / DYNAMIC PATHS
+# SENSITIVE / PRIVATE PATHS (DISALLOWED)
 # ==========================================================
 Disallow: /admin/
 Disallow: /api/
@@ -46,54 +39,52 @@ Disallow: /settings/
 Disallow: /my-bets/
 Disallow: /favourites/
 
-# Block gameplay endpoints
-Disallow: */casino/games/*/play*
-Disallow: */casino/games/*/demo*
+# Gameplay endpoints (Google-compatible rules)
+Disallow: /casino/games/*/play
+Disallow: /casino/games/*/demo
 
-# Block heavy sports data pages
-Disallow: */sports/home/live*
-Disallow: */sports/home/upcoming*
-Disallow: */sports/home/promotion*
+# Heavy sports pages
+Disallow: /sports/home/live
+Disallow: /sports/home/upcoming
+Disallow: /sports/home/promotion
 
-# Block parameters / tracking / session identifiers
-Disallow: *?ref=*
-Disallow: *?utm_*
-Disallow: *?page=*
-Disallow: *modal=*
-Disallow: *transaction=*
-Disallow: *betId=*
-Disallow: *vmcid=*
-Disallow: *nonce=*
-Disallow: *tab=*
-Disallow: *serverSeed=*
-Disallow: *clientSeed=*
-Disallow: *currency=*
-Disallow: *drop=*
-Disallow: *auth*
+# URL Parameters
+Disallow: /*?ref=
+Disallow: /*?utm_
+Disallow: /*?page=
+Disallow: /*modal=
+Disallow: /*transaction=
+Disallow: /*betId=
+Disallow: /*vmcid=
+Disallow: /*nonce=
+Disallow: /*tab=
+Disallow: /*serverSeed=
+Disallow: /*clientSeed=
+Disallow: /*currency=
+Disallow: /*drop=
+Disallow: /*auth
 
-# Block low-quality blog category
-Disallow: */blog/category/uncategorized*
-
-# ==========================================================
-# 📰 ALLOW BLOG SEO CONTENT (High-value keywords)
-# ==========================================================
-Allow: */blog/*transactions*
-Allow: */blog/*updates*
-Allow: */blog/*news*
+# Low-quality blog category
+Disallow: /blog/category/uncategorized
 
 # ==========================================================
-# 🤖 SEARCH ENGINE BOTS (PRIORITIZED)
+# ALLOW: High-value blog SEO URLs
+# ==========================================================
+Allow: /blog/*transactions
+Allow: /blog/*updates
+Allow: /blog/*news
+
+# ==========================================================
+# SEARCH BOT PRIORITY
 # ==========================================================
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
 # ==========================================================
-# 🤖 AI BOTS — Allowed for INPUT, Not TRAINING
+# AI BOTS (Allowed except private areas)
 # ==========================================================
 User-agent: GPTBot
 Allow: /
@@ -129,21 +120,9 @@ User-agent: Google-Extended
 Allow: /
 Disallow: /private/
 
-# ==========================================================
-# 🚫 BLOCK LOW-VALUE / COMPETITOR SCRAPERS
-# ==========================================================
-User-agent: AhrefsBot
-User-agent: SemrushBot
-User-agent: botify
-User-agent: ContentKing
-User-agent: Amazonbot
-User-agent: Omgilibot
-User-agent: Diffbot
-User-agent: ImagesiftBot
-User-agent: Omgili
-User-agent: YouBot
-Disallow: /
+
 
 # ==========================================================
-# © HyperBetz Gaming Network 2025 — All Rights Reserved.
+# Sitemap
 # ==========================================================
+Sitemap: https://hyperbetz.com/sitemap.xml
