@@ -976,7 +976,7 @@ export function NavMain({
 									</SidebarMenuButton>
 								</CollapsibleTrigger>
 								<CollapsibleContent>
-									<div className="space-y-1.5 w-full overflow-y-auto">
+									<div className="space-y-1.5 w-full">
 										<SidebarMenuSub className="border-none mx-0 px-0">
 											{limitedProviders.map(
 												(p) =>

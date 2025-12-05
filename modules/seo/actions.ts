@@ -2,6 +2,11 @@
 
 import prisma from "@/modules/admin/lib/db";
 import { revalidatePath } from "next/cache";
+import { CarouselsState } from "./components/SeoPageForm";
+import { Prisma } from "@prisma/client";
+
+const normalizeCarousels = (value?: CarouselsState): Prisma.InputJsonValue =>
+	(value ?? {}) as unknown as Prisma.InputJsonValue;
 
 export async function getSeoPages() {
 	return await prisma.seoPage.findMany({
@@ -28,12 +33,16 @@ export async function createSeoPage(data: {
 	content: string;
 	keywords?: string;
 	structuredData?: string;
+	carousels?: CarouselsState;
 	published?: boolean;
 }) {
+	const { carousels, published, ...restData } = data;
+
 	await prisma.seoPage.create({
 		data: {
-			...data,
-			published: data.published ?? false,
+			...restData,
+			carousels: normalizeCarousels(carousels),
+			published: published ?? false,
 		},
 	});
 	revalidatePath("/admin/seo");
@@ -49,15 +58,23 @@ export async function updateSeoPage(
 		content: string;
 		keywords?: string;
 		structuredData?: string;
+		carousels?: CarouselsState;
 		published?: boolean;
 	}
 ) {
+	const { carousels, ...restData } = data;
+
 	await prisma.seoPage.update({
 		where: { id },
-		data,
+		data: {
+			...restData,
+			...(carousels !== undefined && {
+				carousels: normalizeCarousels(carousels),
+			}),
+		},
 	});
 	revalidatePath("/admin/seo");
-	revalidatePath(`/${data.slug}`); // Revalidate the public page
+	revalidatePath(`/${data.slug}`);
 	return { success: true };
 }
 

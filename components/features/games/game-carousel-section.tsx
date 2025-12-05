@@ -41,6 +41,15 @@ interface GameCarouselSectionProps {
 	icon?: IconDefinition;
 	onViewAllClick?: () => void; // Optional callback when View All is clicked
 	maxVisibleGames?: number; // Optional prop to limit visible games
+	itemsPerCarousel?: {
+		base?: number;
+		md?: number;
+		lg?: number;
+		xl?: number;
+		"2xl"?: number;
+		"3xl"?: number;
+		"4xl"?: number;
+	};
 }
 
 export const GameCarouselSection = ({
@@ -53,6 +62,14 @@ export const GameCarouselSection = ({
 	icon: Icon = faFireFlameCurved,
 	maxVisibleGames = 12, // Default value for maxVisibleGames
 	onViewAllClick, // New callback prop
+	itemsPerCarousel = {
+		md: 2,
+		lg: 5,
+		xl: 6,
+		"2xl": 7,
+		"3xl": 8,
+		"4xl": 9,
+	},
 }: GameCarouselSectionProps) => {
 	const tCommon = useTranslations("common");
 	// Use title if provided, otherwise use category, fallback to default
@@ -240,9 +257,9 @@ export const GameCarouselSection = ({
 							<CarouselItem
 								key={`${game.game_id}-${game.game_name}-${idx}`}
 								className={cn(
-									"pl-4 basis-1/2",
+									`pl-4 basis-1/${itemsPerCarousel.md}`,
 									game.category !== "SPORTS"
-										? "lg:basis-1/5 xl:basis-1/6 2xl:basis-1/7 3xl:basis-1/8"
+										? `lg:basis-1/${itemsPerCarousel.lg} xl:basis-1/${itemsPerCarousel.xl} 2xl:basis-1/${itemsPerCarousel["2xl"]} 3xl:basis-1/${itemsPerCarousel["3xl"]}`
 										: "lg:basis-1/3"
 								)}
 							>

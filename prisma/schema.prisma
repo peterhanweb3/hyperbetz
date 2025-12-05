@@ -59,6 +59,7 @@ model SeoPage {
   content        String   @db.LongText
   keywords       String?  @db.Text
   structuredData String?  @db.LongText
+  carousels      Json?
   published      Boolean  @default(false)
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
