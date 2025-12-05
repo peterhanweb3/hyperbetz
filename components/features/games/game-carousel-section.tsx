@@ -259,7 +259,9 @@ export const GameCarouselSection = ({
 								className={cn(
 									`pl-4 basis-1/${itemsPerCarousel.md}`,
 									game.category !== "SPORTS"
-										? `lg:basis-1/${itemsPerCarousel.lg} xl:basis-1/${itemsPerCarousel.xl} 2xl:basis-1/${itemsPerCarousel["2xl"]} 3xl:basis-1/${itemsPerCarousel["3xl"]}`
+										? itemsPerCarousel
+											? `lg:basis-1/${itemsPerCarousel.lg} xl:basis-1/${itemsPerCarousel.xl} 2xl:basis-1/${itemsPerCarousel["2xl"]} 3xl:basis-1/${itemsPerCarousel["3xl"]}`
+											: "lg:basis-1/5 xl:basis-1/6 2xl:basis-1/7 3xl:basis-1/8"
 										: "lg:basis-1/3"
 								)}
 							>
