@@ -21,9 +21,11 @@ import { Game, GameType } from "@/types/games/gameList.types";
 export const SpecificCategoryCarousel = ({
 	type,
 	searchKeyword,
+	customTitle,
 }: {
 	type: "SLOT" | "LIVE CASINO" | "SPORTS";
 	searchKeyword?: string;
+	customTitle?: string;
 }) => {
 	const allGames = useAppStore((state) => state.game.list.games);
 	const status = useAppStore((state) => state.game.list.status);
@@ -119,9 +121,22 @@ export const SpecificCategoryCarousel = ({
 		<GameCarouselSection
 			category={categoryConfig.categoryKey as GameType}
 			games={filteredGames}
-			title={categoryConfig.title}
+			title={
+				customTitle
+					? customTitle
+					: searchKeyword
+					? `${searchKeyword.toUpperCase()} Games`
+					: categoryConfig.title
+			}
 			icon={categoryConfig.icon}
-			itemsPerCarousel={{ md: 3, lg: 5, "2xl": 6, "3xl": 6, "4xl": 7 }}
+			itemsPerCarousel={{
+				md: 3,
+				lg: 5,
+				xl: 5,
+				"2xl": 6,
+				"3xl": 7,
+				"4xl": 7,
+			}}
 			maxVisibleGames={totalCount}
 		/>
 	);
@@ -131,6 +146,7 @@ interface CarouselConfig {
 	enabled: boolean;
 	position: "top" | "bottom";
 	searchKeyword?: string;
+	customTitle?: string;
 }
 
 interface CarouselsState {
@@ -158,18 +174,21 @@ export const CarouselRenderer = ({
 					<SpecificCategoryCarousel
 						type="LIVE CASINO"
 						searchKeyword={config.liveCasino.searchKeyword}
+						customTitle={config.liveCasino.customTitle}
 					/>
 				)}
 			{config.slots?.enabled && config.slots.position === position && (
 				<SpecificCategoryCarousel
 					type="SLOT"
 					searchKeyword={config.slots.searchKeyword}
+					customTitle={config.slots.customTitle}
 				/>
 			)}
 			{config.sports?.enabled && config.sports.position === position && (
 				<SpecificCategoryCarousel
 					type="SPORTS"
 					searchKeyword={config.sports.searchKeyword}
+					customTitle={config.sports.customTitle}
 				/>
 			)}
 			{config.providers?.enabled &&
@@ -178,6 +197,8 @@ export const CarouselRenderer = ({
 						title="Top Providers"
 						Icon={faTrophy}
 						maxProviders={16}
+						customTitle={config.providers.customTitle}
+						searchKeyword={config.providers.searchKeyword}
 					/>
 				)}
 		</div>

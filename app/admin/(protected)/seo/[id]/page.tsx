@@ -32,21 +32,25 @@ export default async function SeoPageEdit({
 				enabled: false,
 				position: "bottom" as const,
 				searchKeyword: "",
+				customTitle: "",
 			},
 			slots: {
 				enabled: false,
 				position: "bottom" as const,
 				searchKeyword: "",
+				customTitle: "",
 			},
 			sports: {
 				enabled: false,
 				position: "bottom" as const,
 				searchKeyword: "",
+				customTitle: "",
 			},
 			providers: {
 				enabled: false,
 				position: "bottom" as const,
 				searchKeyword: "",
+				customTitle: "",
 			},
 		},
 	};

@@ -36,6 +36,7 @@ interface CarouselConfig {
 	enabled: boolean;
 	position: "top" | "bottom";
 	searchKeyword?: string;
+	customTitle?: string;
 }
 
 export interface CarouselsState {
@@ -53,6 +54,7 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 		enabled: false,
 		position: "bottom",
 		searchKeyword: "",
+		customTitle: "",
 	};
 	const [carousels, setCarousels] = useState<CarouselsState>(
 		(initialData?.carousels as CarouselsState) || {
@@ -96,12 +98,12 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 		) {
 			initializeGameList();
 		}
-	}, [isClient, gamesStatus, totalGames]);
+	}, [isClient, gamesStatus, totalGames, initializeGameList]);
 
 	// Calculate game counts for each category search
 	const gameCounts = useMemo(() => {
 		if (!isClient || !allGames?.length)
-			return { liveCasino: 0, slots: 0, sports: 0 };
+			return { liveCasino: 0, slots: 0, sports: 0, providers: 0 };
 
 		const getCategoryKey = (type: string) => {
 			if (type === "SPORTS") {
@@ -123,10 +125,6 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 				5000
 			);
 			if (!keyword?.trim()) {
-				console.log(
-					`  - No keyword, returning total:`,
-					categoryGames.length
-				);
 				return categoryGames.length;
 			}
 
@@ -136,6 +134,26 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 			).length;
 		};
 
+		const countProviders = (keyword?: string) => {
+			const providerNames = new Set(
+				allGames
+					.map((game) => game.provider_name)
+					.filter((name) => Boolean(name))
+					.map((name) => String(name))
+			);
+			if (!keyword?.trim()) {
+				return providerNames.size;
+			}
+			const kw = keyword.toLowerCase();
+			let matchCount = 0;
+			providerNames.forEach((name) => {
+				if (name.toLowerCase().includes(kw)) {
+					matchCount++;
+				}
+			});
+			return matchCount;
+		};
+
 		return {
 			liveCasino: countGames(
 				"LIVE CASINO",
@@ -143,12 +161,14 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 			),
 			slots: countGames("SLOT", carousels.slots.searchKeyword),
 			sports: countGames("SPORTS", carousels.sports.searchKeyword),
+			providers: countProviders(carousels.providers.searchKeyword),
 		};
 	}, [
 		allGames,
 		carousels.liveCasino.searchKeyword,
 		carousels.slots.searchKeyword,
 		carousels.sports.searchKeyword,
+		carousels.providers.searchKeyword,
 		isClient,
 	]);
 
@@ -323,7 +343,7 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 								</h3>
 								<p className="text-sm text-muted-foreground mt-1">
 									Enable game carousels and filter by
-									keywords. Game counts update in real-time.
+									keywords.
 								</p>
 							</div>
 
@@ -370,6 +390,21 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 								</div>
 								{carousels.liveCasino.enabled && (
 									<div className="space-y-2">
+										<Input
+											placeholder="Carousel title (optional)"
+											value={
+												carousels.liveCasino
+													.customTitle || ""
+											}
+											onChange={(e) =>
+												updateCarousel(
+													"liveCasino",
+													"customTitle",
+													e.target.value
+												)
+											}
+											className="text-sm"
+										/>
 										<Input
 											placeholder="Filter games (e.g., blackjack, roulette)"
 											value={
@@ -462,6 +497,21 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 								{carousels.slots.enabled && (
 									<div className="space-y-2">
 										<Input
+											placeholder="Carousel title (optional)"
+											value={
+												carousels.slots.customTitle ||
+												""
+											}
+											onChange={(e) =>
+												updateCarousel(
+													"slots",
+													"customTitle",
+													e.target.value
+												)
+											}
+											className="text-sm"
+										/>
+										<Input
 											placeholder="Filter games (e.g., sugar, egypt)"
 											value={
 												carousels.slots.searchKeyword ||
@@ -551,6 +601,21 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 								{carousels.sports.enabled && (
 									<div className="space-y-2">
 										<Input
+											placeholder="Carousel title (optional)"
+											value={
+												carousels.sports.customTitle ||
+												""
+											}
+											onChange={(e) =>
+												updateCarousel(
+													"sports",
+													"customTitle",
+													e.target.value
+												)
+											}
+											className="text-sm"
+										/>
+										<Input
 											placeholder="Filter games (e.g., football, basketball)"
 											value={
 												carousels.sports
@@ -639,6 +704,73 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 										</select>
 									)}
 								</div>
+								{carousels.providers.enabled && (
+									<div className="space-y-2">
+										<Input
+											placeholder="Carousel title (optional)"
+											value={
+												carousels.providers
+													.customTitle || ""
+											}
+											onChange={(e) =>
+												updateCarousel(
+													"providers",
+													"customTitle",
+													e.target.value
+												)
+											}
+											className="text-sm"
+										/>
+										<Input
+											placeholder="Filter providers (e.g., evolution, pragmatic)"
+											value={
+												carousels.providers
+													.searchKeyword || ""
+											}
+											onChange={(e) =>
+												updateCarousel(
+													"providers",
+													"searchKeyword",
+													e.target.value
+												)
+											}
+											className="text-sm"
+										/>
+										{isClient &&
+											carousels.providers
+												.searchKeyword && (
+												<p className="text-xs flex items-center gap-1">
+													{gameCounts.providers >
+													0 ? (
+														<>
+															<span className="font-semibold text-green-600 dark:text-green-400">
+																✓{" "}
+																{
+																	gameCounts.providers
+																}{" "}
+																provider
+																{gameCounts.providers !==
+																1
+																	? "s"
+																	: ""}
+															</span>
+															{gameCounts.providers >
+																16 && (
+																<span className="text-muted-foreground">
+																	(max 16
+																	shown)
+																</span>
+															)}
+														</>
+													) : (
+														<span className="font-semibold text-amber-600 dark:text-amber-400">
+															⚠ No providers found
+														</span>
+													)}
+												</p>
+											)}
+									</div>
+								)}
 							</div>
 						</CardContent>
 					</Card>
