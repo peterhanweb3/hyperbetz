@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { StructuredData } from "@/components/features/seo/StructuredData";
 import { getDynamicSEOConfig } from "@/lib/utils/seo/seo-config-loader";
-import { CarouselRenderer } from "@/components/features/seo/carousel-renderer";
+import { CarouselRenderer } from "@/modules/seo/components/carousel-renderer";
 import type { CarouselsState } from "@/modules/seo/components/SeoPageForm";
 
 export async function generateMetadata({

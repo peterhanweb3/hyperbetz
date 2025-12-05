@@ -7,7 +7,7 @@ import {
 	faSlotMachine,
 	faTrophy,
 } from "@fortawesome/pro-light-svg-icons";
-import { GameCarouselSection } from "../games/game-carousel-section";
+import { GameCarouselSection } from "../../../components/features/games/game-carousel-section";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
 	getUniqueValuesByKey,
