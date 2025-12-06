@@ -21,9 +21,11 @@ import {
 } from "@/components/ui/table";
 import { cn } from "@/lib/utils";
 
-const siteDomain = typeof window !== "undefined" ? window.location.origin : "https://hyperbetz.com";
+const siteDomain =
+	typeof window !== "undefined"
+		? window.location.origin
+		: "https://hyperbetz.com";
 
-console.log(window.location.hostname)
 // Links map for SEO content
 const seoLinks: Record<string, string> = {
 	home: `${siteDomain}/`,
@@ -33,8 +35,7 @@ const seoLinks: Record<string, string> = {
 	poker: `${siteDomain}/games?q=poker`,
 	lottery: `${siteDomain}/games?q=lottery`,
 	sweetBonanza: `${siteDomain}/games?q=sweet+bonanza+super+scatter`,
-	gatesOfOlympus:
-		`${siteDomain}/games?q=gates+of+olympus+1000%E2%84%A2`,
+	gatesOfOlympus: `${siteDomain}/games?q=gates+of+olympus+1000%E2%84%A2`,
 	sugarRush: `${siteDomain}/games?q=sugar+rush+1000`,
 	dogHouse: `${siteDomain}/games?q=the+dog+house+megaways`,
 	bigBassBonanza: `${siteDomain}/games?q=big+bass+bonanza+3+reeler`,
