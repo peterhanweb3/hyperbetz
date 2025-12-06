@@ -19,24 +19,28 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
+import { cn } from "@/lib/utils";
 
+const siteDomain = typeof window !== "undefined" ? window.location.origin : "https://hyperbetz.com";
+
+console.log(window.location.hostname)
 // Links map for SEO content
 const seoLinks: Record<string, string> = {
-	home: "https://hyperbetz.com/",
-	slots: "https://hyperbetz.com/providers/slot",
-	liveCasino: "https://hyperbetz.com/providers/live-casino",
-	sports: "https://hyperbetz.com/games/sbo",
-	poker: "https://hyperbetz.com/games?q=poker",
-	lottery: "https://hyperbetz.com/games?q=lottery",
-	sweetBonanza: "https://hyperbetz.com/games?q=sweet+bonanza+super+scatter",
+	home: `${siteDomain}/`,
+	slots: `${siteDomain}/providers/slot`,
+	liveCasino: `${siteDomain}/providers/live-casino`,
+	sports: `${siteDomain}/games/sbo`,
+	poker: `${siteDomain}/games?q=poker`,
+	lottery: `${siteDomain}/games?q=lottery`,
+	sweetBonanza: `${siteDomain}/games?q=sweet+bonanza+super+scatter`,
 	gatesOfOlympus:
-		"https://hyperbetz.com/games?q=gates+of+olympus+1000%E2%84%A2",
-	sugarRush: "https://hyperbetz.com/games?q=sugar+rush+1000",
-	dogHouse: "https://hyperbetz.com/games?q=the+dog+house+megaways",
-	bigBassBonanza: "https://hyperbetz.com/games?q=big+bass+bonanza+3+reeler",
-	aviator: "https://hyperbetz.com/games?q=aviator+extra+bet",
-	affiliate: "https://hyperbetz.com/affiliate",
-	bonus: "https://hyperbetz.com/bonus",
+		`${siteDomain}/games?q=gates+of+olympus+1000%E2%84%A2`,
+	sugarRush: `${siteDomain}/games?q=sugar+rush+1000`,
+	dogHouse: `${siteDomain}/games?q=the+dog+house+megaways`,
+	bigBassBonanza: `${siteDomain}/games?q=big+bass+bonanza+3+reeler`,
+	aviator: `${siteDomain}/games?q=aviator+extra+bet`,
+	affiliate: `${siteDomain}/affiliate`,
+	bonus: `${siteDomain}/bonus`,
 };
 
 // Helper function to render text with **bold** and [link](url) markdown syntax
@@ -168,1634 +172,1627 @@ export function SeoContentSection() {
 									</p>
 								</div>
 
-								{isExpanded && (
-									<>
-										{/* Why Hyperbetz Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out]">
-											<h2 className="text-xl font-bold text-foreground">
+								{/* {isExpanded && ( */}
+								<div
+									className={cn(
+										!isExpanded ? "hidden" : "block"
+									)}
+								>
+									{/* Why Hyperbetz Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.whyHyperbetz.title"
+											)}
+										</h2>
+										<p>
+											{t(
+												"footer.seoContent.whyHyperbetz.subtitle"
+											)}
+										</p>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.whyHyperbetz.tonsOfGames"
+												)
+											)}
+										</p>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.whyHyperbetz.useCryptocurrency"
+												)
+											)}
+										</p>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.whyHyperbetz.noTrickyRules"
+												)
+											)}
+										</p>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.whyHyperbetz.fairAndHonest"
+												)
+											)}
+										</p>
+									</div>
+									{/* What Is Best Crypto Casino Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.1s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.whatIsBestCryptoCasino.title"
+											)}
+										</h2>
+										<p>
+											{t(
+												"footer.seoContent.whatIsBestCryptoCasino.paragraph1"
+											)}
+										</p>
+										<ul className="list-disc list-inside space-y-2 ml-4">
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.whatIsBestCryptoCasino.lookFor.0"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.whatIsBestCryptoCasino.lookFor.1"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.whatIsBestCryptoCasino.lookFor.2"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.whatIsBestCryptoCasino.lookFor.3"
+													)
+												)}
+											</li>
+										</ul>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.whatIsBestCryptoCasino.paragraph2"
+												)
+											)}
+										</p>
+										<ul className="list-disc list-inside space-y-2 ml-4">
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.whatIsBestCryptoCasino.offers.0"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.whatIsBestCryptoCasino.offers.1"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.whatIsBestCryptoCasino.offers.2"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.whatIsBestCryptoCasino.offers.3"
+													)
+												)}
+											</li>
+										</ul>
+									</div>
+									{/* Games Library Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.2s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.gamesLibrary.title"
+											)}
+										</h2>
+										<p>
+											{t(
+												"footer.seoContent.gamesLibrary.subtitle"
+											)}
+										</p>
+
+										{/* Slots */}
+										<h3 className="text-lg font-semibold text-foreground">
+											{t(
+												"footer.seoContent.gamesLibrary.slots.title"
+											)}
+										</h3>
+										<p>
+											{t(
+												"footer.seoContent.gamesLibrary.slots.paragraph1"
+											)}
+										</p>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.gamesLibrary.slots.bigJackpots"
+												)
+											)}
+										</p>
+
+										{/* Live Casino */}
+										<h3 className="text-lg font-semibold text-foreground">
+											{t(
+												"footer.seoContent.gamesLibrary.liveCasino.title"
+											)}
+										</h3>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.gamesLibrary.liveCasino.paragraph1"
+												)
+											)}
+										</p>
+										<p>
+											{t(
+												"footer.seoContent.gamesLibrary.liveCasino.paragraph2"
+											)}
+										</p>
+										<p>
+											{t(
+												"footer.seoContent.gamesLibrary.liveCasino.paragraph3"
+											)}
+										</p>
+										<ul className="list-disc list-inside space-y-2 ml-4">
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.gamesLibrary.liveCasino.games.0"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.gamesLibrary.liveCasino.games.1"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.gamesLibrary.liveCasino.games.2"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.gamesLibrary.liveCasino.games.3"
+													)
+												)}
+											</li>
+										</ul>
+										<p>
+											{t(
+												"footer.seoContent.gamesLibrary.liveCasino.closing"
+											)}
+										</p>
+
+										{/* Crash Games */}
+										<h3 className="text-lg font-semibold text-foreground">
+											{t(
+												"footer.seoContent.gamesLibrary.crashGames.title"
+											)}
+										</h3>
+										<p>
+											{t(
+												"footer.seoContent.gamesLibrary.crashGames.paragraph"
+											)}
+										</p>
+
+										{/* Plinko */}
+										<h3 className="text-lg font-semibold text-foreground">
+											{t(
+												"footer.seoContent.gamesLibrary.plinko.title"
+											)}
+										</h3>
+										<p>
+											{t(
+												"footer.seoContent.gamesLibrary.plinko.paragraph"
+											)}
+										</p>
+
+										{/* Sports */}
+										<h3 className="text-lg font-semibold text-foreground">
+											{t(
+												"footer.seoContent.gamesLibrary.sports.title"
+											)}
+										</h3>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.gamesLibrary.sports.paragraph1"
+												)
+											)}
+										</p>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.gamesLibrary.sports.paragraph2"
+												)
+											)}
+										</p>
+										<p>
+											{t(
+												"footer.seoContent.gamesLibrary.sports.subtitle"
+											)}
+										</p>
+										<ul className="list-disc list-inside space-y-2 ml-4">
+											<li>
 												{t(
-													"footer.seoContent.whyHyperbetz.title"
+													"footer.seoContent.gamesLibrary.sports.games.0"
 												)}
-											</h2>
-											<p>
+											</li>
+											<li>
 												{t(
-													"footer.seoContent.whyHyperbetz.subtitle"
+													"footer.seoContent.gamesLibrary.sports.games.1"
 												)}
-											</p>
-											<p>
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.gamesLibrary.sports.games.2"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.gamesLibrary.sports.games.3"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.gamesLibrary.sports.games.4"
+												)}
+											</li>
+										</ul>
+										<p>
+											{t(
+												"footer.seoContent.gamesLibrary.sports.closing"
+											)}
+										</p>
+
+										{/* Poker */}
+										<h3 className="text-lg font-semibold text-foreground">
+											{t(
+												"footer.seoContent.gamesLibrary.poker.title"
+											)}
+										</h3>
+										<p>
+											{t(
+												"footer.seoContent.gamesLibrary.poker.paragraph"
+											)}
+										</p>
+
+										{/* Lottery */}
+										<h3 className="text-lg font-semibold text-foreground">
+											{t(
+												"footer.seoContent.gamesLibrary.lottery.title"
+											)}
+										</h3>
+										<p>
+											{t(
+												"footer.seoContent.gamesLibrary.lottery.paragraph"
+											)}
+										</p>
+									</div>
+									{/* How to Choose Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.3s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.howToChoose.title"
+											)}
+										</h2>
+										<p>
+											{t(
+												"footer.seoContent.howToChoose.subtitle"
+											)}
+										</p>
+										<ul className="list-disc list-inside space-y-2 ml-4">
+											<li>
 												{renderWithBoldAndLinks(
 													t(
-														"footer.seoContent.whyHyperbetz.tonsOfGames"
+														"footer.seoContent.howToChoose.points.0"
 													)
 												)}
-											</p>
-											<p>
+											</li>
+											<li>
 												{renderWithBoldAndLinks(
 													t(
-														"footer.seoContent.whyHyperbetz.useCryptocurrency"
+														"footer.seoContent.howToChoose.points.1"
 													)
 												)}
-											</p>
-											<p>
+											</li>
+											<li>
 												{renderWithBoldAndLinks(
 													t(
-														"footer.seoContent.whyHyperbetz.noTrickyRules"
+														"footer.seoContent.howToChoose.points.2"
 													)
 												)}
-											</p>
-											<p>
+											</li>
+											<li>
 												{renderWithBoldAndLinks(
 													t(
-														"footer.seoContent.whyHyperbetz.fairAndHonest"
+														"footer.seoContent.howToChoose.points.3"
 													)
 												)}
-											</p>
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.howToChoose.points.4"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.howToChoose.points.5"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.howToChoose.points.6"
+													)
+												)}
+											</li>
+										</ul>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.howToChoose.closing"
+												)
+											)}
+										</p>
+									</div>
+									{/* Best Slots Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.4s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.bestSlots.title"
+											)}
+										</h2>
+										<p>
+											{t(
+												"footer.seoContent.bestSlots.subtitle"
+											)}
+										</p>
+										<ul className="list-disc list-inside space-y-2 ml-4">
+											<li>
+												{t(
+													"footer.seoContent.bestSlots.features.0"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.bestSlots.features.1"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.bestSlots.features.2"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.bestSlots.features.3"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.bestSlots.features.4"
+												)}
+											</li>
+										</ul>
+										<p>
+											{t(
+												"footer.seoContent.bestSlots.popularTitle"
+											)}
+										</p>
+										<ul className="list-disc list-inside space-y-2 ml-4">
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.bestSlots.popularSlots.0"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.bestSlots.popularSlots.1"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.bestSlots.popularSlots.2"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.bestSlots.popularSlots.3"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.bestSlots.popularSlots.4"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.bestSlots.popularSlots.5"
+													)
+												)}
+											</li>
+										</ul>
+									</div>
+									{/* Bonuses Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.5s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.bonuses.title"
+											)}
+										</h2>
+										<p>
+											{t(
+												"footer.seoContent.bonuses.subtitle"
+											)}
+										</p>
+
+										{/* Affiliate */}
+										<h3 className="text-lg font-semibold text-foreground">
+											{t(
+												"footer.seoContent.bonuses.affiliate.title"
+											)}
+										</h3>
+										<p>
+											{t(
+												"footer.seoContent.bonuses.affiliate.paragraph"
+											)}
+										</p>
+
+										{/* Turnover */}
+										<h3 className="text-lg font-semibold text-foreground">
+											{t(
+												"footer.seoContent.bonuses.turnover.title"
+											)}
+										</h3>
+										<p>
+											{t(
+												"footer.seoContent.bonuses.turnover.paragraph"
+											)}
+										</p>
+
+										{/* Commission Rate Table */}
+										<h3 className="text-lg font-semibold text-foreground mt-6">
+											{t(
+												"footer.seoContent.bonuses.commissionTitle"
+											)}
+										</h3>
+										<p>
+											{t(
+												"footer.seoContent.bonuses.commissionSubtitle"
+											)}
+										</p>
+										<div className="mt-4 rounded-lg border border-border">
+											<Table>
+												<TableHeader>
+													<TableRow className="bg-primary/10">
+														<TableHead>
+															{t(
+																"footer.seoContent.bonuses.tierTable.headers.0"
+															)}
+														</TableHead>
+														<TableHead>
+															{t(
+																"footer.seoContent.bonuses.tierTable.headers.1"
+															)}
+														</TableHead>
+														<TableHead>
+															{t(
+																"footer.seoContent.bonuses.tierTable.headers.2"
+															)}
+														</TableHead>
+														<TableHead>
+															{t(
+																"footer.seoContent.bonuses.tierTable.headers.3"
+															)}
+														</TableHead>
+														<TableHead>
+															{t(
+																"footer.seoContent.bonuses.tierTable.headers.4"
+															)}
+														</TableHead>
+														<TableHead>
+															{t(
+																"footer.seoContent.bonuses.tierTable.headers.5"
+															)}
+														</TableHead>
+													</TableRow>
+												</TableHeader>
+												<TableBody>
+													<TableRow className="even:bg-muted/20">
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.0.0"
+															)}
+														</TableCell>
+														<TableCell className="font-medium text-primary">
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.0.1"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.0.2"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.0.3"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.0.4"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.0.5"
+															)}
+														</TableCell>
+													</TableRow>
+													<TableRow className="even:bg-muted/20">
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.1.0"
+															)}
+														</TableCell>
+														<TableCell className="font-medium text-primary">
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.1.1"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.1.2"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.1.3"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.1.4"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.1.5"
+															)}
+														</TableCell>
+													</TableRow>
+													<TableRow className="even:bg-muted/20">
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.2.0"
+															)}
+														</TableCell>
+														<TableCell className="font-medium text-primary">
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.2.1"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.2.2"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.2.3"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.2.4"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.2.5"
+															)}
+														</TableCell>
+													</TableRow>
+													<TableRow className="even:bg-muted/20">
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.3.0"
+															)}
+														</TableCell>
+														<TableCell className="font-medium text-primary">
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.3.1"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.3.2"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.3.3"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.3.4"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.3.5"
+															)}
+														</TableCell>
+													</TableRow>
+													<TableRow className="even:bg-muted/20">
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.4.0"
+															)}
+														</TableCell>
+														<TableCell className="font-medium text-primary">
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.4.1"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.4.2"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.4.3"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.4.4"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.4.5"
+															)}
+														</TableCell>
+													</TableRow>
+													<TableRow className="even:bg-muted/20">
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.5.0"
+															)}
+														</TableCell>
+														<TableCell className="font-medium text-primary">
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.5.1"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.5.2"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.5.3"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.5.4"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.5.5"
+															)}
+														</TableCell>
+													</TableRow>
+													<TableRow className="even:bg-muted/20">
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.6.0"
+															)}
+														</TableCell>
+														<TableCell className="font-medium text-primary">
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.6.1"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.6.2"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.6.3"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.6.4"
+															)}
+														</TableCell>
+														<TableCell>
+															{t(
+																"footer.seoContent.bonuses.tierTable.rows.6.5"
+															)}
+														</TableCell>
+													</TableRow>
+												</TableBody>
+											</Table>
 										</div>
-										{/* What Is Best Crypto Casino Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.1s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
-												{t(
-													"footer.seoContent.whatIsBestCryptoCasino.title"
-												)}
-											</h2>
-											<p>
-												{t(
-													"footer.seoContent.whatIsBestCryptoCasino.paragraph1"
-												)}
-											</p>
-											<ul className="list-disc list-inside space-y-2 ml-4">
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.whatIsBestCryptoCasino.lookFor.0"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.whatIsBestCryptoCasino.lookFor.1"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.whatIsBestCryptoCasino.lookFor.2"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.whatIsBestCryptoCasino.lookFor.3"
-														)
-													)}
-												</li>
-											</ul>
-											<p>
-												{renderWithBoldAndLinks(
-													t(
-														"footer.seoContent.whatIsBestCryptoCasino.paragraph2"
-													)
-												)}
-											</p>
-											<ul className="list-disc list-inside space-y-2 ml-4">
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.whatIsBestCryptoCasino.offers.0"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.whatIsBestCryptoCasino.offers.1"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.whatIsBestCryptoCasino.offers.2"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.whatIsBestCryptoCasino.offers.3"
-														)
-													)}
-												</li>
-											</ul>
-										</div>
-										{/* Games Library Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.2s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
-												{t(
-													"footer.seoContent.gamesLibrary.title"
-												)}
-											</h2>
-											<p>
-												{t(
-													"footer.seoContent.gamesLibrary.subtitle"
-												)}
-											</p>
+									</div>
+									{/* Deposit Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.6s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.deposit.title"
+											)}
+										</h2>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.deposit.subtitle"
+												)
+											)}
+										</p>
 
-											{/* Slots */}
-											<h3 className="text-lg font-semibold text-foreground">
-												{t(
-													"footer.seoContent.gamesLibrary.slots.title"
-												)}
-											</h3>
-											<p>
-												{t(
-													"footer.seoContent.gamesLibrary.slots.paragraph1"
-												)}
-											</p>
-											<p>
-												{renderWithBoldAndLinks(
-													t(
-														"footer.seoContent.gamesLibrary.slots.bigJackpots"
-													)
-												)}
-											</p>
+										<h3 className="text-lg font-semibold text-foreground">
+											{t(
+												"footer.seoContent.deposit.stepsTitle"
+											)}
+										</h3>
+										<p>
+											{t(
+												"footer.seoContent.deposit.stepsSubtitle"
+											)}
+										</p>
 
-											{/* Live Casino */}
-											<h3 className="text-lg font-semibold text-foreground">
-												{t(
-													"footer.seoContent.gamesLibrary.liveCasino.title"
-												)}
-											</h3>
-											<p>
-												{renderWithBoldAndLinks(
-													t(
-														"footer.seoContent.gamesLibrary.liveCasino.paragraph1"
-													)
-												)}
-											</p>
-											<p>
-												{t(
-													"footer.seoContent.gamesLibrary.liveCasino.paragraph2"
-												)}
-											</p>
-											<p>
-												{t(
-													"footer.seoContent.gamesLibrary.liveCasino.paragraph3"
-												)}
-											</p>
-											<ul className="list-disc list-inside space-y-2 ml-4">
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.gamesLibrary.liveCasino.games.0"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.gamesLibrary.liveCasino.games.1"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.gamesLibrary.liveCasino.games.2"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.gamesLibrary.liveCasino.games.3"
-														)
-													)}
-												</li>
-											</ul>
-											<p>
-												{t(
-													"footer.seoContent.gamesLibrary.liveCasino.closing"
-												)}
-											</p>
+										{/* Step 1 */}
+										<p className="font-semibold">
+											{t(
+												"footer.seoContent.deposit.step1.title"
+											)}
+										</p>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.deposit.step1.description"
+												)
+											)}
+										</p>
 
-											{/* Crash Games */}
-											<h3 className="text-lg font-semibold text-foreground">
+										{/* Step 2 */}
+										<p className="font-semibold">
+											{t(
+												"footer.seoContent.deposit.step2.title"
+											)}
+										</p>
+										<p>
+											{t(
+												"footer.seoContent.deposit.step2.description"
+											)}
+										</p>
+										<ul className="list-disc list-inside space-y-2 ml-4">
+											<li>
 												{t(
-													"footer.seoContent.gamesLibrary.crashGames.title"
+													"footer.seoContent.deposit.step2.currencies.0"
 												)}
-											</h3>
-											<p>
+											</li>
+											<li>
 												{t(
-													"footer.seoContent.gamesLibrary.crashGames.paragraph"
+													"footer.seoContent.deposit.step2.currencies.1"
 												)}
-											</p>
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.deposit.step2.currencies.2"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.deposit.step2.currencies.3"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.deposit.step2.currencies.4"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.deposit.step2.currencies.5"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.deposit.step2.currencies.6"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.deposit.step2.currencies.7"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.deposit.step2.currencies.8"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.deposit.step2.currencies.9"
+												)}
+											</li>
+										</ul>
 
-											{/* Plinko */}
-											<h3 className="text-lg font-semibold text-foreground">
-												{t(
-													"footer.seoContent.gamesLibrary.plinko.title"
-												)}
-											</h3>
-											<p>
-												{t(
-													"footer.seoContent.gamesLibrary.plinko.paragraph"
-												)}
-											</p>
+										{/* Step 3 */}
+										<p className="font-semibold">
+											{t(
+												"footer.seoContent.deposit.step3.title"
+											)}
+										</p>
+										<p>
+											{t(
+												"footer.seoContent.deposit.step3.description"
+											)}
+										</p>
+										<p>
+											{t(
+												"footer.seoContent.deposit.step3.paragraph2"
+											)}
+										</p>
+										<p className="font-semibold">
+											{t(
+												"footer.seoContent.deposit.step3.networksTitle"
+											)}
+										</p>
 
-											{/* Sports */}
-											<h3 className="text-lg font-semibold text-foreground">
-												{t(
-													"footer.seoContent.gamesLibrary.sports.title"
-												)}
-											</h3>
-											<p>
-												{renderWithBoldAndLinks(
-													t(
-														"footer.seoContent.gamesLibrary.sports.paragraph1"
-													)
-												)}
-											</p>
-											<p>
-												{renderWithBoldAndLinks(
-													t(
-														"footer.seoContent.gamesLibrary.sports.paragraph2"
-													)
-												)}
-											</p>
-											<p>
-												{t(
-													"footer.seoContent.gamesLibrary.sports.subtitle"
-												)}
-											</p>
-											<ul className="list-disc list-inside space-y-2 ml-4">
-												<li>
-													{t(
-														"footer.seoContent.gamesLibrary.sports.games.0"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.gamesLibrary.sports.games.1"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.gamesLibrary.sports.games.2"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.gamesLibrary.sports.games.3"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.gamesLibrary.sports.games.4"
-													)}
-												</li>
-											</ul>
-											<p>
-												{t(
-													"footer.seoContent.gamesLibrary.sports.closing"
-												)}
-											</p>
-
-											{/* Poker */}
-											<h3 className="text-lg font-semibold text-foreground">
-												{t(
-													"footer.seoContent.gamesLibrary.poker.title"
-												)}
-											</h3>
-											<p>
-												{t(
-													"footer.seoContent.gamesLibrary.poker.paragraph"
-												)}
-											</p>
-
-											{/* Lottery */}
-											<h3 className="text-lg font-semibold text-foreground">
-												{t(
-													"footer.seoContent.gamesLibrary.lottery.title"
-												)}
-											</h3>
-											<p>
-												{t(
-													"footer.seoContent.gamesLibrary.lottery.paragraph"
-												)}
-											</p>
-										</div>
-										{/* How to Choose Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.3s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
-												{t(
-													"footer.seoContent.howToChoose.title"
-												)}
-											</h2>
-											<p>
-												{t(
-													"footer.seoContent.howToChoose.subtitle"
-												)}
-											</p>
-											<ul className="list-disc list-inside space-y-2 ml-4">
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.howToChoose.points.0"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.howToChoose.points.1"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.howToChoose.points.2"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.howToChoose.points.3"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.howToChoose.points.4"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.howToChoose.points.5"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.howToChoose.points.6"
-														)
-													)}
-												</li>
-											</ul>
-											<p>
-												{renderWithBoldAndLinks(
-													t(
-														"footer.seoContent.howToChoose.closing"
-													)
-												)}
-											</p>
-										</div>
-										{/* Best Slots Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.4s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
-												{t(
-													"footer.seoContent.bestSlots.title"
-												)}
-											</h2>
-											<p>
-												{t(
-													"footer.seoContent.bestSlots.subtitle"
-												)}
-											</p>
-											<ul className="list-disc list-inside space-y-2 ml-4">
-												<li>
-													{t(
-														"footer.seoContent.bestSlots.features.0"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.bestSlots.features.1"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.bestSlots.features.2"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.bestSlots.features.3"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.bestSlots.features.4"
-													)}
-												</li>
-											</ul>
-											<p>
-												{t(
-													"footer.seoContent.bestSlots.popularTitle"
-												)}
-											</p>
-											<ul className="list-disc list-inside space-y-2 ml-4">
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.bestSlots.popularSlots.0"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.bestSlots.popularSlots.1"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.bestSlots.popularSlots.2"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.bestSlots.popularSlots.3"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.bestSlots.popularSlots.4"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.bestSlots.popularSlots.5"
-														)
-													)}
-												</li>
-											</ul>
-										</div>
-										{/* Bonuses Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.5s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
-												{t(
-													"footer.seoContent.bonuses.title"
-												)}
-											</h2>
-											<p>
-												{t(
-													"footer.seoContent.bonuses.subtitle"
-												)}
-											</p>
-
-											{/* Affiliate */}
-											<h3 className="text-lg font-semibold text-foreground">
-												{t(
-													"footer.seoContent.bonuses.affiliate.title"
-												)}
-											</h3>
-											<p>
-												{t(
-													"footer.seoContent.bonuses.affiliate.paragraph"
-												)}
-											</p>
-
-											{/* Turnover */}
-											<h3 className="text-lg font-semibold text-foreground">
-												{t(
-													"footer.seoContent.bonuses.turnover.title"
-												)}
-											</h3>
-											<p>
-												{t(
-													"footer.seoContent.bonuses.turnover.paragraph"
-												)}
-											</p>
-
-											{/* Commission Rate Table */}
-											<h3 className="text-lg font-semibold text-foreground mt-6">
-												{t(
-													"footer.seoContent.bonuses.commissionTitle"
-												)}
-											</h3>
-											<p>
-												{t(
-													"footer.seoContent.bonuses.commissionSubtitle"
-												)}
-											</p>
-											<div className="mt-4 rounded-lg border border-border">
-												<Table>
-													<TableHeader>
-														<TableRow className="bg-primary/10">
-															<TableHead>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.headers.0"
-																)}
-															</TableHead>
-															<TableHead>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.headers.1"
-																)}
-															</TableHead>
-															<TableHead>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.headers.2"
-																)}
-															</TableHead>
-															<TableHead>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.headers.3"
-																)}
-															</TableHead>
-															<TableHead>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.headers.4"
-																)}
-															</TableHead>
-															<TableHead>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.headers.5"
-																)}
-															</TableHead>
-														</TableRow>
-													</TableHeader>
-													<TableBody>
-														<TableRow className="even:bg-muted/20">
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.0.0"
-																)}
-															</TableCell>
-															<TableCell className="font-medium text-primary">
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.0.1"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.0.2"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.0.3"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.0.4"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.0.5"
-																)}
-															</TableCell>
-														</TableRow>
-														<TableRow className="even:bg-muted/20">
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.1.0"
-																)}
-															</TableCell>
-															<TableCell className="font-medium text-primary">
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.1.1"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.1.2"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.1.3"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.1.4"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.1.5"
-																)}
-															</TableCell>
-														</TableRow>
-														<TableRow className="even:bg-muted/20">
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.2.0"
-																)}
-															</TableCell>
-															<TableCell className="font-medium text-primary">
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.2.1"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.2.2"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.2.3"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.2.4"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.2.5"
-																)}
-															</TableCell>
-														</TableRow>
-														<TableRow className="even:bg-muted/20">
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.3.0"
-																)}
-															</TableCell>
-															<TableCell className="font-medium text-primary">
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.3.1"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.3.2"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.3.3"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.3.4"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.3.5"
-																)}
-															</TableCell>
-														</TableRow>
-														<TableRow className="even:bg-muted/20">
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.4.0"
-																)}
-															</TableCell>
-															<TableCell className="font-medium text-primary">
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.4.1"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.4.2"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.4.3"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.4.4"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.4.5"
-																)}
-															</TableCell>
-														</TableRow>
-														<TableRow className="even:bg-muted/20">
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.5.0"
-																)}
-															</TableCell>
-															<TableCell className="font-medium text-primary">
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.5.1"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.5.2"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.5.3"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.5.4"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.5.5"
-																)}
-															</TableCell>
-														</TableRow>
-														<TableRow className="even:bg-muted/20">
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.6.0"
-																)}
-															</TableCell>
-															<TableCell className="font-medium text-primary">
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.6.1"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.6.2"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.6.3"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.6.4"
-																)}
-															</TableCell>
-															<TableCell>
-																{t(
-																	"footer.seoContent.bonuses.tierTable.rows.6.5"
-																)}
-															</TableCell>
-														</TableRow>
-													</TableBody>
-												</Table>
-											</div>
-										</div>
-										{/* Deposit Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.6s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
-												{t(
-													"footer.seoContent.deposit.title"
-												)}
-											</h2>
-											<p>
-												{renderWithBoldAndLinks(
-													t(
-														"footer.seoContent.deposit.subtitle"
-													)
-												)}
-											</p>
-
-											<h3 className="text-lg font-semibold text-foreground">
-												{t(
-													"footer.seoContent.deposit.stepsTitle"
-												)}
-											</h3>
-											<p>
-												{t(
-													"footer.seoContent.deposit.stepsSubtitle"
-												)}
-											</p>
-
-											{/* Step 1 */}
+										{/* Networks */}
+										<div className="space-y-2">
 											<p className="font-semibold">
 												{t(
-													"footer.seoContent.deposit.step1.title"
+													"footer.seoContent.deposit.step3.networks.btc.title"
 												)}
 											</p>
-											<p>
-												{renderWithBoldAndLinks(
-													t(
-														"footer.seoContent.deposit.step1.description"
-													)
-												)}
-											</p>
-
-											{/* Step 2 */}
-											<p className="font-semibold">
-												{t(
-													"footer.seoContent.deposit.step2.title"
-												)}
-											</p>
-											<p>
-												{t(
-													"footer.seoContent.deposit.step2.description"
-												)}
-											</p>
-											<ul className="list-disc list-inside space-y-2 ml-4">
+											<ul className="list-disc list-inside space-y-1 ml-4">
 												<li>
 													{t(
-														"footer.seoContent.deposit.step2.currencies.0"
+														"footer.seoContent.deposit.step3.networks.btc.features.0"
 													)}
 												</li>
 												<li>
 													{t(
-														"footer.seoContent.deposit.step2.currencies.1"
+														"footer.seoContent.deposit.step3.networks.btc.features.1"
 													)}
 												</li>
 												<li>
 													{t(
-														"footer.seoContent.deposit.step2.currencies.2"
+														"footer.seoContent.deposit.step3.networks.btc.features.2"
 													)}
 												</li>
 												<li>
 													{t(
-														"footer.seoContent.deposit.step2.currencies.3"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.deposit.step2.currencies.4"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.deposit.step2.currencies.5"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.deposit.step2.currencies.6"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.deposit.step2.currencies.7"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.deposit.step2.currencies.8"
-													)}
-												</li>
-												<li>
-													{t(
-														"footer.seoContent.deposit.step2.currencies.9"
-													)}
-												</li>
-											</ul>
-
-											{/* Step 3 */}
-											<p className="font-semibold">
-												{t(
-													"footer.seoContent.deposit.step3.title"
-												)}
-											</p>
-											<p>
-												{t(
-													"footer.seoContent.deposit.step3.description"
-												)}
-											</p>
-											<p>
-												{t(
-													"footer.seoContent.deposit.step3.paragraph2"
-												)}
-											</p>
-											<p className="font-semibold">
-												{t(
-													"footer.seoContent.deposit.step3.networksTitle"
-												)}
-											</p>
-
-											{/* Networks */}
-											<div className="space-y-2">
-												<p className="font-semibold">
-													{t(
-														"footer.seoContent.deposit.step3.networks.btc.title"
-													)}
-												</p>
-												<ul className="list-disc list-inside space-y-1 ml-4">
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.btc.features.0"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.btc.features.1"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.btc.features.2"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.btc.features.3"
-														)}
-													</li>
-												</ul>
-												<p>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.deposit.step3.networks.btc.bestFor"
-														)
-													)}
-												</p>
-											</div>
-											<div className="space-y-2">
-												<p className="font-semibold">
-													{t(
-														"footer.seoContent.deposit.step3.networks.erc20.title"
-													)}
-												</p>
-												<ul className="list-disc list-inside space-y-1 ml-4">
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.erc20.features.0"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.erc20.features.1"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.erc20.features.2"
-														)}
-													</li>
-												</ul>
-												<p>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.deposit.step3.networks.erc20.bestFor"
-														)
-													)}
-												</p>
-											</div>
-											<div className="space-y-2">
-												<p className="font-semibold">
-													{t(
-														"footer.seoContent.deposit.step3.networks.trc20.title"
-													)}
-												</p>
-												<ul className="list-disc list-inside space-y-1 ml-4">
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.trc20.features.0"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.trc20.features.1"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.trc20.features.2"
-														)}
-													</li>
-												</ul>
-												<p>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.deposit.step3.networks.trc20.bestFor"
-														)
-													)}
-												</p>
-											</div>
-											<div className="space-y-2">
-												<p className="font-semibold">
-													{t(
-														"footer.seoContent.deposit.step3.networks.bep20.title"
-													)}
-												</p>
-												<ul className="list-disc list-inside space-y-1 ml-4">
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.bep20.features.0"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.bep20.features.1"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.bep20.features.2"
-														)}
-													</li>
-												</ul>
-												<p>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.deposit.step3.networks.bep20.bestFor"
-														)
-													)}
-												</p>
-											</div>
-											<div className="space-y-2">
-												<p className="font-semibold">
-													{t(
-														"footer.seoContent.deposit.step3.networks.sol.title"
-													)}
-												</p>
-												<ul className="list-disc list-inside space-y-1 ml-4">
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.sol.features.0"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.sol.features.1"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.sol.features.2"
-														)}
-													</li>
-												</ul>
-												<p>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.deposit.step3.networks.sol.bestFor"
-														)
-													)}
-												</p>
-											</div>
-											<div className="space-y-2">
-												<p className="font-semibold">
-													{t(
-														"footer.seoContent.deposit.step3.networks.polygon.title"
-													)}
-												</p>
-												<ul className="list-disc list-inside space-y-1 ml-4">
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.polygon.features.0"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.polygon.features.1"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.polygon.features.2"
-														)}
-													</li>
-												</ul>
-												<p>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.deposit.step3.networks.polygon.bestFor"
-														)
-													)}
-												</p>
-											</div>
-											<div className="space-y-2">
-												<p className="font-semibold">
-													{t(
-														"footer.seoContent.deposit.step3.networks.others.title"
-													)}
-												</p>
-												<ul className="list-disc list-inside space-y-1 ml-4">
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.others.features.0"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.others.features.1"
-														)}
-													</li>
-													<li>
-														{t(
-															"footer.seoContent.deposit.step3.networks.others.features.2"
-														)}
-													</li>
-												</ul>
-												<p>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.deposit.step3.networks.others.bestFor"
-														)
-													)}
-												</p>
-											</div>
-
-											<p>
-												{t(
-													"footer.seoContent.deposit.step3.networkClosing"
-												)}
-											</p>
-
-											{/* Step 4 */}
-											<p className="font-semibold">
-												{t(
-													"footer.seoContent.deposit.step4.title"
-												)}
-											</p>
-											<p>
-												{renderWithBoldAndLinks(
-													t(
-														"footer.seoContent.deposit.step4.description"
-													)
-												)}
-											</p>
-
-											{/* Step 5 */}
-											<p className="font-semibold">
-												{t(
-													"footer.seoContent.deposit.step5.title"
-												)}
-											</p>
-											<p>
-												{t(
-													"footer.seoContent.deposit.step5.description"
-												)}
-											</p>
-										</div>
-										{/* Why Depositing Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.7s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
-												{t(
-													"footer.seoContent.whyDepositing.title"
-												)}
-											</h2>
-											<div className="space-y-2">
-												<h3 className="text-lg font-semibold text-foreground">
-													{t(
-														"footer.seoContent.whyDepositing.reasons.instant.title"
-													)}
-												</h3>
-												<p>
-													{t(
-														"footer.seoContent.whyDepositing.reasons.instant.description"
-													)}
-												</p>
-											</div>
-											<div className="space-y-2">
-												<h3 className="text-lg font-semibold text-foreground">
-													{t(
-														"footer.seoContent.whyDepositing.reasons.allNetworks.title"
-													)}
-												</h3>
-												<p>
-													{t(
-														"footer.seoContent.whyDepositing.reasons.allNetworks.description"
-													)}
-												</p>
-											</div>
-											<div className="space-y-2">
-												<h3 className="text-lg font-semibold text-foreground">
-													{t(
-														"footer.seoContent.whyDepositing.reasons.secure.title"
-													)}
-												</h3>
-												<p>
-													{t(
-														"footer.seoContent.whyDepositing.reasons.secure.description"
-													)}
-												</p>
-											</div>
-											<div className="space-y-2">
-												<h3 className="text-lg font-semibold text-foreground">
-													{t(
-														"footer.seoContent.whyDepositing.reasons.multiCurrency.title"
-													)}
-												</h3>
-												<p>
-													{t(
-														"footer.seoContent.whyDepositing.reasons.multiCurrency.description"
-													)}
-												</p>
-											</div>
-											<div className="space-y-2">
-												<h3 className="text-lg font-semibold text-foreground">
-													{t(
-														"footer.seoContent.whyDepositing.reasons.mobile.title"
-													)}
-												</h3>
-												<p>
-													{t(
-														"footer.seoContent.whyDepositing.reasons.mobile.description"
-													)}
-												</p>
-											</div>
-										</div>
-										{/* Buy Crypto Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.8s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
-												{t(
-													"footer.seoContent.buyCrypto.title"
-												)}
-											</h2>
-											<p>
-												{t(
-													"footer.seoContent.buyCrypto.paragraph"
-												)}
-											</p>
-											<ul className="list-disc list-inside space-y-2 ml-4">
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.buyCrypto.exchanges.0"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.buyCrypto.exchanges.1"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.buyCrypto.exchanges.2"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.buyCrypto.exchanges.3"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.buyCrypto.exchanges.4"
-														)
+														"footer.seoContent.deposit.step3.networks.btc.features.3"
 													)}
 												</li>
 											</ul>
 											<p>
 												{renderWithBoldAndLinks(
 													t(
-														"footer.seoContent.buyCrypto.closing"
+														"footer.seoContent.deposit.step3.networks.btc.bestFor"
 													)
 												)}
 											</p>
 										</div>
-										{/* Withdrawal Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.9s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
+										<div className="space-y-2">
+											<p className="font-semibold">
 												{t(
-													"footer.seoContent.withdrawal.title"
-												)}
-											</h2>
-											<p>
-												{t(
-													"footer.seoContent.withdrawal.paragraph"
+													"footer.seoContent.deposit.step3.networks.erc20.title"
 												)}
 											</p>
-											<ol className="list-decimal list-inside space-y-2 ml-4">
+											<ul className="list-disc list-inside space-y-1 ml-4">
 												<li>
 													{t(
-														"footer.seoContent.withdrawal.steps.0"
+														"footer.seoContent.deposit.step3.networks.erc20.features.0"
 													)}
 												</li>
 												<li>
 													{t(
-														"footer.seoContent.withdrawal.steps.1"
+														"footer.seoContent.deposit.step3.networks.erc20.features.1"
 													)}
 												</li>
 												<li>
 													{t(
-														"footer.seoContent.withdrawal.steps.2"
+														"footer.seoContent.deposit.step3.networks.erc20.features.2"
 													)}
 												</li>
-												<li>
-													{t(
-														"footer.seoContent.withdrawal.steps.3"
-													)}
-												</li>
-											</ol>
+											</ul>
 											<p>
-												{t(
-													"footer.seoContent.withdrawal.closing"
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.deposit.step3.networks.erc20.bestFor"
+													)
 												)}
 											</p>
 										</div>
-										{/* Mobile Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_1s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
+										<div className="space-y-2">
+											<p className="font-semibold">
 												{t(
-													"footer.seoContent.mobile.title"
+													"footer.seoContent.deposit.step3.networks.trc20.title"
 												)}
-											</h2>
+											</p>
+											<ul className="list-disc list-inside space-y-1 ml-4">
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.trc20.features.0"
+													)}
+												</li>
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.trc20.features.1"
+													)}
+												</li>
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.trc20.features.2"
+													)}
+												</li>
+											</ul>
 											<p>
-												{t(
-													"footer.seoContent.mobile.paragraph"
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.deposit.step3.networks.trc20.bestFor"
+													)
 												)}
 											</p>
 										</div>
-										{/* Responsible Play Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_1.1s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
+										<div className="space-y-2">
+											<p className="font-semibold">
 												{t(
-													"footer.seoContent.responsiblePlay.title"
-												)}
-											</h2>
-											<p>
-												{t(
-													"footer.seoContent.responsiblePlay.paragraph"
+													"footer.seoContent.deposit.step3.networks.bep20.title"
 												)}
 											</p>
+											<ul className="list-disc list-inside space-y-1 ml-4">
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.bep20.features.0"
+													)}
+												</li>
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.bep20.features.1"
+													)}
+												</li>
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.bep20.features.2"
+													)}
+												</li>
+											</ul>
+											<p>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.deposit.step3.networks.bep20.bestFor"
+													)
+												)}
+											</p>
+										</div>
+										<div className="space-y-2">
+											<p className="font-semibold">
+												{t(
+													"footer.seoContent.deposit.step3.networks.sol.title"
+												)}
+											</p>
+											<ul className="list-disc list-inside space-y-1 ml-4">
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.sol.features.0"
+													)}
+												</li>
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.sol.features.1"
+													)}
+												</li>
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.sol.features.2"
+													)}
+												</li>
+											</ul>
+											<p>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.deposit.step3.networks.sol.bestFor"
+													)
+												)}
+											</p>
+										</div>
+										<div className="space-y-2">
+											<p className="font-semibold">
+												{t(
+													"footer.seoContent.deposit.step3.networks.polygon.title"
+												)}
+											</p>
+											<ul className="list-disc list-inside space-y-1 ml-4">
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.polygon.features.0"
+													)}
+												</li>
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.polygon.features.1"
+													)}
+												</li>
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.polygon.features.2"
+													)}
+												</li>
+											</ul>
+											<p>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.deposit.step3.networks.polygon.bestFor"
+													)
+												)}
+											</p>
+										</div>
+										<div className="space-y-2">
+											<p className="font-semibold">
+												{t(
+													"footer.seoContent.deposit.step3.networks.others.title"
+												)}
+											</p>
+											<ul className="list-disc list-inside space-y-1 ml-4">
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.others.features.0"
+													)}
+												</li>
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.others.features.1"
+													)}
+												</li>
+												<li>
+													{t(
+														"footer.seoContent.deposit.step3.networks.others.features.2"
+													)}
+												</li>
+											</ul>
+											<p>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.deposit.step3.networks.others.bestFor"
+													)
+												)}
+											</p>
+										</div>
+
+										<p>
+											{t(
+												"footer.seoContent.deposit.step3.networkClosing"
+											)}
+										</p>
+
+										{/* Step 4 */}
+										<p className="font-semibold">
+											{t(
+												"footer.seoContent.deposit.step4.title"
+											)}
+										</p>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.deposit.step4.description"
+												)
+											)}
+										</p>
+
+										{/* Step 5 */}
+										<p className="font-semibold">
+											{t(
+												"footer.seoContent.deposit.step5.title"
+											)}
+										</p>
+										<p>
+											{t(
+												"footer.seoContent.deposit.step5.description"
+											)}
+										</p>
+									</div>
+									{/* Why Depositing Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.7s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.whyDepositing.title"
+											)}
+										</h2>
+										<div className="space-y-2">
 											<h3 className="text-lg font-semibold text-foreground">
 												{t(
-													"footer.seoContent.responsiblePlay.safetyTitle"
+													"footer.seoContent.whyDepositing.reasons.instant.title"
 												)}
 											</h3>
 											<p>
 												{t(
-													"footer.seoContent.responsiblePlay.safetySubtitle"
+													"footer.seoContent.whyDepositing.reasons.instant.description"
 												)}
 											</p>
-
-											<div className="space-y-1">
-												<p className="font-semibold">
-													{t(
-														"footer.seoContent.responsiblePlay.depositLimits.title"
-													)}
-												</p>
-												<p>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.responsiblePlay.depositLimits.description"
-														)
-													)}
-												</p>
-											</div>
-											<div className="space-y-1">
-												<p className="font-semibold">
-													{t(
-														"footer.seoContent.responsiblePlay.lossLimits.title"
-													)}
-												</p>
-												<p>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.responsiblePlay.lossLimits.description"
-														)
-													)}
-												</p>
-											</div>
-											<div className="space-y-1">
-												<p className="font-semibold">
-													{t(
-														"footer.seoContent.responsiblePlay.selfExclusion.title"
-													)}
-												</p>
-												<p>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.responsiblePlay.selfExclusion.description"
-														)
-													)}
-												</p>
-											</div>
-											<div className="space-y-1">
-												<p className="font-semibold">
-													{t(
-														"footer.seoContent.responsiblePlay.keepGaming.title"
-													)}
-												</p>
-												<p>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.responsiblePlay.keepGaming.description"
-														)
-													)}
-												</p>
-											</div>
 										</div>
-										{/* Support Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_1.2s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
+										<div className="space-y-2">
+											<h3 className="text-lg font-semibold text-foreground">
 												{t(
-													"footer.seoContent.support.title"
+													"footer.seoContent.whyDepositing.reasons.allNetworks.title"
 												)}
-											</h2>
+											</h3>
 											<p>
 												{t(
-													"footer.seoContent.support.paragraph"
+													"footer.seoContent.whyDepositing.reasons.allNetworks.description"
 												)}
 											</p>
+										</div>
+										<div className="space-y-2">
+											<h3 className="text-lg font-semibold text-foreground">
+												{t(
+													"footer.seoContent.whyDepositing.reasons.secure.title"
+												)}
+											</h3>
+											<p>
+												{t(
+													"footer.seoContent.whyDepositing.reasons.secure.description"
+												)}
+											</p>
+										</div>
+										<div className="space-y-2">
+											<h3 className="text-lg font-semibold text-foreground">
+												{t(
+													"footer.seoContent.whyDepositing.reasons.multiCurrency.title"
+												)}
+											</h3>
+											<p>
+												{t(
+													"footer.seoContent.whyDepositing.reasons.multiCurrency.description"
+												)}
+											</p>
+										</div>
+										<div className="space-y-2">
+											<h3 className="text-lg font-semibold text-foreground">
+												{t(
+													"footer.seoContent.whyDepositing.reasons.mobile.title"
+												)}
+											</h3>
+											<p>
+												{t(
+													"footer.seoContent.whyDepositing.reasons.mobile.description"
+												)}
+											</p>
+										</div>
+									</div>
+									{/* Buy Crypto Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.8s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.buyCrypto.title"
+											)}
+										</h2>
+										<p>
+											{t(
+												"footer.seoContent.buyCrypto.paragraph"
+											)}
+										</p>
+										<ul className="list-disc list-inside space-y-2 ml-4">
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.buyCrypto.exchanges.0"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.buyCrypto.exchanges.1"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.buyCrypto.exchanges.2"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.buyCrypto.exchanges.3"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.buyCrypto.exchanges.4"
+													)
+												)}
+											</li>
+										</ul>
+										<p>
+											{renderWithBoldAndLinks(
+												t(
+													"footer.seoContent.buyCrypto.closing"
+												)
+											)}
+										</p>
+									</div>
+									{/* Withdrawal Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_0.9s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.withdrawal.title"
+											)}
+										</h2>
+										<p>
+											{t(
+												"footer.seoContent.withdrawal.paragraph"
+											)}
+										</p>
+										<ol className="list-decimal list-inside space-y-2 ml-4">
+											<li>
+												{t(
+													"footer.seoContent.withdrawal.steps.0"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.withdrawal.steps.1"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.withdrawal.steps.2"
+												)}
+											</li>
+											<li>
+												{t(
+													"footer.seoContent.withdrawal.steps.3"
+												)}
+											</li>
+										</ol>
+										<p>
+											{t(
+												"footer.seoContent.withdrawal.closing"
+											)}
+										</p>
+									</div>
+									{/* Mobile Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_1s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.mobile.title"
+											)}
+										</h2>
+										<p>
+											{t(
+												"footer.seoContent.mobile.paragraph"
+											)}
+										</p>
+									</div>
+									{/* Responsible Play Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_1.1s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.responsiblePlay.title"
+											)}
+										</h2>
+										<p>
+											{t(
+												"footer.seoContent.responsiblePlay.paragraph"
+											)}
+										</p>
+										<h3 className="text-lg font-semibold text-foreground">
+											{t(
+												"footer.seoContent.responsiblePlay.safetyTitle"
+											)}
+										</h3>
+										<p>
+											{t(
+												"footer.seoContent.responsiblePlay.safetySubtitle"
+											)}
+										</p>
+
+										<div className="space-y-1">
 											<p className="font-semibold">
 												{t(
-													"footer.seoContent.support.howToReach"
+													"footer.seoContent.responsiblePlay.depositLimits.title"
 												)}
 											</p>
-											<ul className="list-disc list-inside space-y-2 ml-4">
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.support.methods.0"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.support.methods.1"
-														)
-													)}
-												</li>
-												<li>
-													{renderWithBoldAndLinks(
-														t(
-															"footer.seoContent.support.methods.2"
-														)
-													)}
-												</li>
-											</ul>
 											<p>
-												{t(
-													"footer.seoContent.support.closing"
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.responsiblePlay.depositLimits.description"
+													)
 												)}
 											</p>
 										</div>
-										{/* Testimonials Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_1.3s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
+										<div className="space-y-1">
+											<p className="font-semibold">
 												{t(
-													"footer.seoContent.testimonials.title"
-												)}
-											</h2>
-											<p>
-												{t(
-													"footer.seoContent.testimonials.subtitle"
+													"footer.seoContent.responsiblePlay.lossLimits.title"
 												)}
 											</p>
-											<div className="space-y-4">
-												<blockquote className="border-l-4 border-primary pl-4 italic">
-													<p className="text-foreground/90">
-														{t(
-															"footer.seoContent.testimonials.reviews.0.quote"
-														)}
-													</p>
-													<footer className="text-foreground/60 mt-1">
-														—{" "}
-														{t(
-															"footer.seoContent.testimonials.reviews.0.author"
-														)}
-													</footer>
-												</blockquote>
-												<blockquote className="border-l-4 border-primary pl-4 italic">
-													<p className="text-foreground/90">
-														{t(
-															"footer.seoContent.testimonials.reviews.1.quote"
-														)}
-													</p>
-													<footer className="text-foreground/60 mt-1">
-														—{" "}
-														{t(
-															"footer.seoContent.testimonials.reviews.1.author"
-														)}
-													</footer>
-												</blockquote>
-												<blockquote className="border-l-4 border-primary pl-4 italic">
-													<p className="text-foreground/90">
-														{t(
-															"footer.seoContent.testimonials.reviews.2.quote"
-														)}
-													</p>
-													<footer className="text-foreground/60 mt-1">
-														—{" "}
-														{t(
-															"footer.seoContent.testimonials.reviews.2.author"
-														)}
-													</footer>
-												</blockquote>
-											</div>
-										</div>
-										{/* FAQ Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_1.4s_backwards]">
-											<h2 className="text-xl font-bold text-foreground">
-												{t(
-													"footer.seoContent.faq.title"
+											<p>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.responsiblePlay.lossLimits.description"
+													)
 												)}
-											</h2>
+											</p>
+										</div>
+										<div className="space-y-1">
+											<p className="font-semibold">
+												{t(
+													"footer.seoContent.responsiblePlay.selfExclusion.title"
+												)}
+											</p>
+											<p>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.responsiblePlay.selfExclusion.description"
+													)
+												)}
+											</p>
+										</div>
+										<div className="space-y-1">
+											<p className="font-semibold">
+												{t(
+													"footer.seoContent.responsiblePlay.keepGaming.title"
+												)}
+											</p>
+											<p>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.responsiblePlay.keepGaming.description"
+													)
+												)}
+											</p>
+										</div>
+									</div>
+									{/* Support Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_1.2s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.support.title"
+											)}
+										</h2>
+										<p>
+											{t(
+												"footer.seoContent.support.paragraph"
+											)}
+										</p>
+										<p className="font-semibold">
+											{t(
+												"footer.seoContent.support.howToReach"
+											)}
+										</p>
+										<ul className="list-disc list-inside space-y-2 ml-4">
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.support.methods.0"
+													)
+												)}
+											</li>
+											<li>
+												{renderWithBoldAndLinks(
+													t(
+														"footer.seoContent.support.methods.1"
+													)
+												)}
+											</li>
+										</ul>
+										<p>
+											{t(
+												"footer.seoContent.support.closing"
+											)}
+										</p>
+									</div>
+									{/* Testimonials Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_1.3s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t(
+												"footer.seoContent.testimonials.title"
+											)}
+										</h2>
+										<p>
+											{t(
+												"footer.seoContent.testimonials.subtitle"
+											)}
+										</p>
+										<div className="space-y-4">
+											<blockquote className="border-l-4 border-primary pl-4 italic">
+												<p className="text-foreground/90">
+													{t(
+														"footer.seoContent.testimonials.reviews.0.quote"
+													)}
+												</p>
+												<footer className="text-foreground/60 mt-1">
+													—{" "}
+													{t(
+														"footer.seoContent.testimonials.reviews.0.author"
+													)}
+												</footer>
+											</blockquote>
+											<blockquote className="border-l-4 border-primary pl-4 italic">
+												<p className="text-foreground/90">
+													{t(
+														"footer.seoContent.testimonials.reviews.1.quote"
+													)}
+												</p>
+												<footer className="text-foreground/60 mt-1">
+													—{" "}
+													{t(
+														"footer.seoContent.testimonials.reviews.1.author"
+													)}
+												</footer>
+											</blockquote>
+											<blockquote className="border-l-4 border-primary pl-4 italic">
+												<p className="text-foreground/90">
+													{t(
+														"footer.seoContent.testimonials.reviews.2.quote"
+													)}
+												</p>
+												<footer className="text-foreground/60 mt-1">
+													—{" "}
+													{t(
+														"footer.seoContent.testimonials.reviews.2.author"
+													)}
+												</footer>
+											</blockquote>
+										</div>
+									</div>
+									{/* FAQ Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_1.4s_backwards]">
+										<h2 className="text-xl font-bold text-foreground">
+											{t("footer.seoContent.faq.title")}
+										</h2>
 
-											<Accordion
-												type="single"
-												collapsible
-												className="w-full"
-											>
-												<AccordionItem value="faq-0">
-													<AccordionTrigger className="text-left">
-														{t(
-															"footer.seoContent.faq.questions.0.q"
-														)}
-													</AccordionTrigger>
-													<AccordionContent>
-														{renderWithBoldAndLinks(
-															t(
-																"footer.seoContent.faq.questions.0.a"
-															)
-														)}
-													</AccordionContent>
-												</AccordionItem>
-												<AccordionItem value="faq-1">
-													<AccordionTrigger className="text-left">
-														{t(
-															"footer.seoContent.faq.questions.1.q"
-														)}
-													</AccordionTrigger>
-													<AccordionContent>
-														{renderWithBoldAndLinks(
-															t(
-																"footer.seoContent.faq.questions.1.a"
-															)
-														)}
-													</AccordionContent>
-												</AccordionItem>
-												<AccordionItem value="faq-2">
-													<AccordionTrigger className="text-left">
-														{t(
-															"footer.seoContent.faq.questions.2.q"
-														)}
-													</AccordionTrigger>
-													<AccordionContent>
-														{renderWithBoldAndLinks(
-															t(
-																"footer.seoContent.faq.questions.2.a"
-															)
-														)}
-													</AccordionContent>
-												</AccordionItem>
-												<AccordionItem value="faq-3">
-													<AccordionTrigger className="text-left">
-														{t(
-															"footer.seoContent.faq.questions.3.q"
-														)}
-													</AccordionTrigger>
-													<AccordionContent>
-														{renderWithBoldAndLinks(
-															t(
-																"footer.seoContent.faq.questions.3.a"
-															)
-														)}
-													</AccordionContent>
-												</AccordionItem>
-												<AccordionItem value="faq-4">
-													<AccordionTrigger className="text-left">
-														{t(
-															"footer.seoContent.faq.questions.4.q"
-														)}
-													</AccordionTrigger>
-													<AccordionContent>
-														{renderWithBoldAndLinks(
-															t(
-																"footer.seoContent.faq.questions.4.a"
-															)
-														)}
-													</AccordionContent>
-												</AccordionItem>
-											</Accordion>
-										</div>{" "}
-										{/* CTA Section */}
-										<div className="space-y-4 animate-[fade-in_0.3s_ease-out_1.5s_backwards]">
-											<h2 className="text-xl font-bold text-primary">
-												{t(
-													"footer.seoContent.cta.title"
-												)}
-											</h2>
-										</div>
-									</>
-								)}
+										<Accordion
+											type="single"
+											collapsible
+											className="w-full"
+										>
+											<AccordionItem value="faq-0">
+												<AccordionTrigger className="text-left">
+													{t(
+														"footer.seoContent.faq.questions.0.q"
+													)}
+												</AccordionTrigger>
+												<AccordionContent>
+													{renderWithBoldAndLinks(
+														t(
+															"footer.seoContent.faq.questions.0.a"
+														)
+													)}
+												</AccordionContent>
+											</AccordionItem>
+											<AccordionItem value="faq-1">
+												<AccordionTrigger className="text-left">
+													{t(
+														"footer.seoContent.faq.questions.1.q"
+													)}
+												</AccordionTrigger>
+												<AccordionContent>
+													{renderWithBoldAndLinks(
+														t(
+															"footer.seoContent.faq.questions.1.a"
+														)
+													)}
+												</AccordionContent>
+											</AccordionItem>
+											<AccordionItem value="faq-2">
+												<AccordionTrigger className="text-left">
+													{t(
+														"footer.seoContent.faq.questions.2.q"
+													)}
+												</AccordionTrigger>
+												<AccordionContent>
+													{renderWithBoldAndLinks(
+														t(
+															"footer.seoContent.faq.questions.2.a"
+														)
+													)}
+												</AccordionContent>
+											</AccordionItem>
+											<AccordionItem value="faq-3">
+												<AccordionTrigger className="text-left">
+													{t(
+														"footer.seoContent.faq.questions.3.q"
+													)}
+												</AccordionTrigger>
+												<AccordionContent>
+													{renderWithBoldAndLinks(
+														t(
+															"footer.seoContent.faq.questions.3.a"
+														)
+													)}
+												</AccordionContent>
+											</AccordionItem>
+											<AccordionItem value="faq-4">
+												<AccordionTrigger className="text-left">
+													{t(
+														"footer.seoContent.faq.questions.4.q"
+													)}
+												</AccordionTrigger>
+												<AccordionContent>
+													{renderWithBoldAndLinks(
+														t(
+															"footer.seoContent.faq.questions.4.a"
+														)
+													)}
+												</AccordionContent>
+											</AccordionItem>
+										</Accordion>
+									</div>{" "}
+									{/* CTA Section */}
+									<div className="space-y-4 animate-[fade-in_0.3s_ease-out_1.5s_backwards]">
+										<h2 className="text-xl font-bold text-primary">
+											{t("footer.seoContent.cta.title")}
+										</h2>
+									</div>
+								</div>
+								{/* )} */}
 							</div>
 							<button
 								onClick={() => setIsExpanded(!isExpanded)}
