@@ -133,28 +133,19 @@ const GameCardComponent = ({
 					className={cn(
 						"relative overflow-hidden flex-shrink-0",
 						game.category === "SPORTS"
-							? "aspect-auto "
+							? "aspect-[2.5/1]"
 							: "aspect-[5/4.5]"
 					)}
 				>
-					{game.category === "SPORTS" ? (
-						<img
-							src={`${game.full_url_game_image}`}
-							alt={`${game.game_name} - ${game.provider_name} ${game.category} game`}
-							className="object-cover size-full transition-transform duration-700 ease-out group-hover:scale-110"
-							// sizes="(max-width: 640px) 45vw, (max-width: 1024px) 25vw, (max-width: 1280px) 18vw, 240px"
-						/>
-					) : (
-						<Image
-							src={`${game.full_url_game_image}`}
-							alt={`${game.game_name} - ${game.provider_name} ${game.category} game`}
-							fill
-							className="transition-transform duration-700 ease-out group-hover:scale-110"
-							sizes="(max-width: 640px) 45vw, (max-width: 1024px) 25vw, (max-width: 1280px) 18vw, 240px"
-							loading="lazy"
-							quality={70}
-						/>
-					)}
+					<Image
+						src={`${game.full_url_game_image}`}
+						alt={`${game.game_name} - ${game.provider_name} ${game.category} game`}
+						fill
+						className="transition-transform duration-700 ease-out group-hover:scale-110"
+						sizes="(max-width: 640px) 45vw, (max-width: 1024px) 25vw, (max-width: 1280px) 18vw, 240px"
+						loading="lazy"
+						quality={70}
+					/>
 					{/* Gradient overlay for better text readability */}
 					<div
 						className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"

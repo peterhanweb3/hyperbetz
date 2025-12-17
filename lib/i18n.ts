@@ -1,101 +1,26 @@
+import { Locale } from "@/types/i18n/i18n.types";
 import type { AbstractIntlMessages } from "next-intl";
+import { interpolateTranslations } from "./utils/site-config";
+import { defaultLocale } from "@/constants/features/i18n/i18n.constants";
+import { loadDictionary } from "./i18n-loader";
 
-export const locales = [
-	"en", // English
-	"es", // Spanish
-	"ar", // Arabic
-	"zh", // Chinese
-	"nl", // Dutch
-	"fr", // French
-	"de", // German
-	"hi", // Hindi
-	"it", // Italian
-	"ja", // Japanese
-	"ko", // Korean
-	"ms", // Malay
-	"fa", // Persian (Farsi)
-	"pl", // Polish
-	"pt", // Portuguese
-	"ru", // Russian
-	"sv", // Swedish
-	"th", // Thai
-	"tr", // Turkish
-	"vi", // Vietnamese
-] as const;
-
-export const defaultLocale = "en" as const;
-
-export type Locale = (typeof locales)[number];
-
-export const localeNames: Record<Locale, string> = {
-	en: "English",
-	es: "Español",
-	ar: "العربية",
-	zh: "中文",
-	nl: "Nederlands",
-	fr: "Français",
-	de: "Deutsch",
-	hi: "हिन्दी",
-	it: "Italiano",
-	ja: "日本語",
-	ko: "한국어",
-	ms: "Bahasa Melayu",
-	fa: "فارسی",
-	pl: "Polski",
-	pt: "Português",
-	ru: "Русский",
-	sv: "Svenska",
-	th: "ไทย",
-	tr: "Türkçe",
-	vi: "Tiếng Việt",
-};
-
-export const localeFlags: Record<Locale, string> = {
-	en: "🇺🇸",
-	es: "🇪🇸",
-	ar: "🇸🇦",
-	zh: "🇨🇳",
-	nl: "🇳🇱",
-	fr: "🇫🇷",
-	de: "🇩🇪",
-	hi: "🇮🇳",
-	it: "🇮🇹",
-	ja: "🇯🇵",
-	ko: "🇰🇷",
-	ms: "🇲🇾",
-	fa: "🇮🇷",
-	pl: "🇵🇱",
-	pt: "🇵🇹",
-	ru: "🇷🇺",
-	sv: "🇸🇪",
-	th: "🇹🇭",
-	tr: "🇹🇷",
-	vi: "🇻🇳",
-};
-
-export const rtlLocales: Locale[] = []; // Disabled RTL for all languages
-
-// eslint-disable-next-line
-export function isRtlLocale(locale: Locale): boolean {
-	return false; // Force all languages to use LTR layout
-}
+// Re-export for backward compatibility if needed, but prefer using actions or loader directly
+export { loadDictionary };
 
 export async function getMessages(locale: Locale) {
 	try {
 		// Load from Dictionary folder
-		const messages = (await import(`../Dictionary/${locale}.json`)).default;
+		const messages = await loadDictionary(locale);
 
 		// Interpolate site name in all translations
-		const { interpolateTranslations } = await import('./utils/site-config');
 		return interpolateTranslations(messages);
 	} catch {
 		console.warn(
 			`Failed to load messages for locale: ${locale}. Falling back to ${defaultLocale}`
 		);
-		const messages = (await import(`../Dictionary/${defaultLocale}.json`)).default;
+		const messages = await loadDictionary(defaultLocale);
 
 		// Interpolate site name in fallback translations too
-		const { interpolateTranslations } = await import('./utils/site-config');
 		return interpolateTranslations(messages);
 	}
 }
@@ -104,16 +29,20 @@ export async function getMessages(locale: Locale) {
  * Server-side message loader for SEO
  * Pre-loads default English messages server-side so crawlers can see content
  */
-export async function getServerMessages(locale: Locale = defaultLocale): Promise<AbstractIntlMessages> {
+export async function getServerMessages(
+	locale: Locale = defaultLocale
+): Promise<AbstractIntlMessages> {
 	try {
-		const messages = (await import(`../Dictionary/${locale}.json`)).default;
-		const { interpolateTranslations } = await import('./utils/site-config');
+		const messages = await loadDictionary(locale);
+		const { interpolateTranslations } = await import("./utils/site-config");
 		return interpolateTranslations(messages) as AbstractIntlMessages;
 	} catch (error) {
 		console.error(`Failed to load server messages for ${locale}:`, error);
 		// Fallback to English
-		const fallbackMessages = (await import(`../Dictionary/${defaultLocale}.json`)).default;
-		const { interpolateTranslations } = await import('./utils/site-config');
-		return interpolateTranslations(fallbackMessages) as AbstractIntlMessages;
+		const fallbackMessages = await loadDictionary(defaultLocale);
+		const { interpolateTranslations } = await import("./utils/site-config");
+		return interpolateTranslations(
+			fallbackMessages
+		) as AbstractIntlMessages;
 	}
 }

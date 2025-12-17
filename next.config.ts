@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 // import path from "path";
 
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+	enabled: process.env.ANALYZE === "true",
+});
 const nextConfig: NextConfig = {
 	// Re-enable strict mode for better development experience and catching bugs
 	reactStrictMode: true,
@@ -11,20 +14,24 @@ const nextConfig: NextConfig = {
 		removeConsole:
 			process.env.NODE_ENV === "production"
 				? {
-					exclude: ["error", "warn"],
-				}
+						exclude: ["error", "warn", "dir"],
+				  }
 				: false,
 	},
 
 	// Image optimization - AGGRESSIVE
 	images: {
-		deviceSizes: [640, 768, 1024, 1280],  // Reduced device sizes
-		imageSizes: [48, 64, 96, 128],  // Reduced image sizes
+		deviceSizes: [640, 768, 1024, 1280], // Reduced device sizes
+		imageSizes: [48, 64, 96, 128], // Reduced image sizes
 		formats: ["image/webp"], // Only WebP for better compression
-		minimumCacheTTL: 31536000,  // Cache for 1 year
+		minimumCacheTTL:
+			process.env.NODE_ENV === "production"
+				? 31536000 // 1 year in seconds
+				: 172800, // 2 days in seconds
 		dangerouslyAllowSVG: true,
 		contentDispositionType: "inline",
-		contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+		contentSecurityPolicy:
+			"default-src 'self'; script-src 'none'; sandbox;",
 		remotePatterns: [
 			{
 				protocol: "https",
@@ -72,19 +79,26 @@ const nextConfig: NextConfig = {
 	experimental: {
 		// Optimize package imports for tree-shaking
 		optimizePackageImports: [
+			"@fortawesome/fontawesome-pro",
 			"@fortawesome/react-fontawesome",
+			"@fortawesome/fontawesome-svg-core",
 			"@fortawesome/pro-light-svg-icons",
 			"@fortawesome/pro-regular-svg-icons",
 			"@fortawesome/pro-solid-svg-icons",
-			"lucide-react",
 			"@radix-ui/react-icons",
+			"@dicebear/collection",
+			"recharts",
+			"framer-motion",
 			"date-fns",
+			// "jose",
 			"lodash",
 		],
 		// Enable optimistic client cache
 		optimisticClientCache: true,
 		// Enable CSS chunking
-		optimizeCss: true,
+		// cssChunking: true,
+		// inlineCss: true,
+		// webVitalsAttribution: ["CLS", "FCP", "LCP", "TTFB", "INP", "FID"],
 	},
 
 	// Production build optimizations - AGGRESSIVE
@@ -101,6 +115,8 @@ const nextConfig: NextConfig = {
 
 	// Headers for better caching and performance
 	async headers() {
+		const isProd = process.env.NODE_ENV === "production";
+
 		return [
 			{
 				source: "/(.*)",
@@ -131,7 +147,9 @@ const nextConfig: NextConfig = {
 				headers: [
 					{
 						key: "Cache-Control",
-						value: "public, max-age=31536000, immutable",
+						value: isProd
+							? "public, max-age=31536000, immutable" // 1 year
+							: "public, max-age=172800, must-revalidate", // 2 days
 					},
 				],
 			},
@@ -139,63 +157,64 @@ const nextConfig: NextConfig = {
 	},
 
 	// Webpack sala
-	webpack: (config, { isServer }) => {
-		config.resolve = config.resolve || {};
-		config.resolve.fallback = {
-			...config.resolve.fallback,
-			"@react-native-async-storage/async-storage": false,
-		};
+	// webpack: (config, { isServer }) => {
+	// 	config.resolve = config.resolve || {};
+	// 	config.resolve.fallback = {
+	// 		...config.resolve.fallback,
+	// 		"@react-native-async-storage/async-storage": false,
+	// 	};
 
-		// Force single React version to avoid "Invalid Hook Call" with legacy-peer-deps
-		// config.resolve.alias = {
-		// 	...config.resolve.alias,
-		// 	react: path.resolve('./node_modules/react'),
-		// 	'react-dom': path.resolve('./node_modules/react-dom'),
-		// };
+	// 	// Force single React version to avoid "Invalid Hook Call" with legacy-peer-deps
+	// 	// config.resolve.alias = {
+	// 	// 	...config.resolve.alias,
+	// 	// 	react: path.resolve('./node_modules/react'),
+	// 	// 	'react-dom': path.resolve('./node_modules/react-dom'),
+	// 	// };
 
-		// Optimize chunks in production
-		if (!isServer && process.env.NODE_ENV === "production") {
-			config.optimization = {
-				...config.optimization,
-				moduleIds: "deterministic",
-				runtimeChunk: "single",
-				splitChunks: {
-					chunks: "all",
-					cacheGroups: {
-						// Vendor chunk for node_modules
-						vendor: {
-							test: /[\\/]node_modules[\\/]/,
-							name: "vendors",
-							priority: 10,
-							reuseExistingChunk: true,
-						},
-						// Wallet-related chunk (heavy dependencies)
-						wallet: {
-							test: /[\\/]node_modules[\\/](wagmi|viem|@dynamic-labs|@rainbow-me)[\\/]/,
-							name: "wallet",
-							priority: 20,
-							reuseExistingChunk: true,
-						},
-						// UI components chunk
-						ui: {
-							test: /[\\/]node_modules[\\/](@radix-ui|@headlessui|framer-motion)[\\/]/,
-							name: "ui",
-							priority: 15,
-							reuseExistingChunk: true,
-						},
-						// Common chunk for shared code
-						common: {
-							minChunks: 2,
-							priority: 5,
-							reuseExistingChunk: true,
-						},
-					},
-				},
-			};
-		}
+	// 	// Optimize chunks in production
+	// 	if (!isServer && process.env.NODE_ENV === "production") {
+	// 		config.optimization = {
+	// 			...config.optimization,
+	// 			moduleIds: "deterministic",
+	// 			runtimeChunk: "single",
+	// 			splitChunks: {
+	// 				chunks: "all",
+	// 				cacheGroups: {
+	// 					// Vendor chunk for node_modules
+	// 					vendor: {
+	// 						test: /[\\/]node_modules[\\/]/,
+	// 						name: "vendors",
+	// 						priority: 10,
+	// 						reuseExistingChunk: true,
+	// 					},
+	// 					// Wallet-related chunk (heavy dependencies)
+	// 					wallet: {
+	// 						test: /[\\/]node_modules[\\/](wagmi|viem|@dynamic-labs|@rainbow-me)[\\/]/,
+	// 						name: "wallet",
+	// 						priority: 20,
+	// 						reuseExistingChunk: true,
 
-		return config;
-	},
+	// 					},
+	// 					// UI components chunk
+	// 					ui: {
+	// 						test: /[\\/]node_modules[\\/](@radix-ui|@headlessui|framer-motion)[\\/]/,
+	// 						name: "ui",
+	// 						priority: 15,
+	// 						reuseExistingChunk: true,
+	// 					},
+	// 					// Common chunk for shared code
+	// 					common: {
+	// 						minChunks: 2,
+	// 						priority: 5,
+	// 						reuseExistingChunk: true,
+	// 					},
+	// 				},
+	// 			},
+	// 		};
+	// 	}
+
+	// 	return config;
+	// },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

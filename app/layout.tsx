@@ -11,9 +11,10 @@ import {
 	OrganizationSchema,
 	WebsiteSchema,
 } from "@/components/features/seo/StructuredData";
-import { getServerMessages, type Locale } from "@/lib/i18n";
+import { Locale } from "@/types/i18n/i18n.types";
+import { getServerMessages } from "@/lib/i18n";
 // Avoid bundling public images via import to skip sharp at build time
-import "./globals.css";
+import "@/app/globals.css";
 
 const poppins = Poppins({
 	style: "normal",
@@ -95,12 +96,20 @@ export default async function RootLayout({
 				/>
 
 				{/* Performance: Critical resource hints */}
-				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link
+
+				{/* baad me in commented out preconnects ko un comment krna hai */}
+				{/* <link rel="preconnect" href="https://fonts.googleapis.com" /> */}
+				{/* <link
 					rel="preconnect"
 					href="https://fonts.gstatic.com"
 					crossOrigin="anonymous"
+				/> */}
+				<link
+					rel="preconnect"
+					href="https://cdn.jsdelivr.net"
+					crossOrigin="anonymous"
 				/>
+				<link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 				<link rel="dns-prefetch" href="https://assets.coingecko.com" />
 				<link rel="dns-prefetch" href="https://tokens.1inch.io" />
 				<link rel="dns-prefetch" href="https://tokens-data.1inch.io" />
@@ -120,6 +129,15 @@ export default async function RootLayout({
 					type="image/png"
 					fetchPriority="high"
 				/>
+
+				{/* Preload hero banner image for LCP
+				<link
+					rel="preload"
+					href="/assets/banners/hero/slide-2.webp"
+					as="image"
+					type="image/webp"
+					fetchPriority="high"
+				/> */}
 			</head>
 			<body className={`${poppins.className}`}>
 				{/*

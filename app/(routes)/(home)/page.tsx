@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useCallback, useMemo, useState } from "react";
+import { useEffect, useCallback, useState } from "react";
 import { useAppStore } from "@/store/store";
 import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import { useRouter } from "next/navigation";
@@ -11,17 +11,36 @@ import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 import { useT } from "@/hooks/useI18n";
 import { faTrophy } from "@fortawesome/pro-light-svg-icons";
 import dynamic from "next/dynamic";
-import { Skeleton } from "@/components/ui/skeleton";
-import { useDeferredRender } from "@/hooks/use-deferred-render";
-import { BlogCardsSlider } from "@/modules/blog/components/BlogCardsSlider";
 import { getLatestPostsAction } from "@/modules/blog/actions/home";
+// import ExploreSection from "@/components/features/games/explore-section";
+import { LiveBettingTableSkeleton } from "@/components/features/skeletons/betting/live-betting-table-skeleton";
+import BlogCardsSliderSkeleton from "@/modules/blog/components/BlogCardsSliderSkeleton";
+import ProviderCarouselSectionSkeleton from "@/components/features/skeletons/providers/provider-carousel-section-skeleton";
+import DynamicGameCarouselListSkeleton from "@/components/features/skeletons/games/games-by-category-section-skeleton";
 
+const LazyExploreSection = dynamic(
+	() =>
+		import("@/components/features/games/explore-section").then((mod) => ({
+			default: mod.default,
+		})),
+	{
+		ssr: false,
+		loading: () => (
+			<DynamicGameCarouselListSkeleton totalRows={3} totalColumns={5} />
+		),
+	}
+);
 const LazyGameCarouselList = dynamic(
 	() =>
 		import("@/components/features/games/games-by-category-section").then(
 			(mod) => ({ default: mod.DynamicGameCarouselList })
 		),
-	{ ssr: false }
+	{
+		ssr: false,
+		loading: () => (
+			<DynamicGameCarouselListSkeleton totalRows={3} totalColumns={5} />
+		),
+	}
 );
 
 const LazyProviderCarousel = dynamic(
@@ -29,7 +48,15 @@ const LazyProviderCarousel = dynamic(
 		import(
 			"@/components/features/providers/dynamic-provider-carousel"
 		).then((mod) => ({ default: mod.DynamicProviderCarousel })),
-	{ ssr: false }
+	{
+		ssr: false,
+		loading: () => (
+			<ProviderCarouselSectionSkeleton
+				isSingleRow={false}
+				totalItems={9}
+			/>
+		),
+	}
 );
 
 const LazyLiveBettingTable = dynamic(
@@ -37,41 +64,15 @@ const LazyLiveBettingTable = dynamic(
 		import("@/components/features/betting/live-betting-table").then(
 			(mod) => ({ default: mod.LiveBettingTable })
 		),
-	{ ssr: false }
+	{ ssr: false, loading: () => <LiveBettingTableSkeleton /> }
 );
 
-const SectionSkeleton = ({ rows = 1 }: { rows?: number }) => (
-	<div className="space-y-6">
-		{Array.from({ length: rows }).map((_, index) => (
-			<div key={index} className="space-y-4">
-				<Skeleton className="h-8 w-48" />
-				<div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6">
-					{Array.from({ length: 6 }).map((__, cardIndex) => (
-						<Skeleton
-							key={cardIndex}
-							className="h-32 w-full rounded-xl"
-						/>
-					))}
-				</div>
-			</div>
-		))}
-	</div>
-);
-
-const BettingSkeleton = () => (
-	<div className="space-y-4">
-		<Skeleton className="h-8 w-56" />
-		<div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-			{Array.from({ length: 4 }).map((_, index) => (
-				<Skeleton key={index} className="h-20 w-full rounded-xl" />
-			))}
-		</div>
-		<div className="space-y-2">
-			{Array.from({ length: 6 }).map((_, index) => (
-				<Skeleton key={index} className="h-12 w-full rounded-lg" />
-			))}
-		</div>
-	</div>
+const LazyBlogCardsSlider = dynamic(
+	() =>
+		import("@/modules/blog/components/BlogCardsSlider").then((mod) => ({
+			default: mod.BlogCardsSlider,
+		})),
+	{ ssr: false, loading: () => <BlogCardsSliderSkeleton /> }
 );
 
 export default function HomePage() {
@@ -174,13 +175,9 @@ export default function HomePage() {
 		isLoggedIn,
 		hasHandledLoginRedirect,
 		handleReferralRedirect,
-	]); // --- 3. Assemble the Page ---
+	]);
+	// --- 3. Assemble the Page ---
 	const isLoading = gameStatus !== "success";
-	const [isClient, setIsClient] = useState(false);
-	const deferredSecondary = useDeferredRender({ delay: 250, timeout: 1400 });
-
-	useEffect(() => setIsClient(true), []);
-
 	useEffect(() => {
 		const fetchPosts = async () => {
 			try {
@@ -193,48 +190,26 @@ export default function HomePage() {
 		fetchPosts();
 	}, []);
 
-	const shouldRenderSecondary = useMemo(
-		() => isClient && deferredSecondary,
-		[deferredSecondary, isClient]
-	);
-
 	return (
 		<>
-			{/* 
-        The HeroBannerSection renders based on the global state from the uiDefinition slice.
-        The spread operator `{...heroBanner}` cleanly passes all the correct, pre-built props.
-      */}
-			{heroBanner && (
-				<HeroBannerSection {...heroBanner} isLoading={isLoading} />
-			)}
-
 			<div className="container mx-auto flex flex-1 flex-col gap-8 py-8">
+				{heroBanner && (
+					<HeroBannerSection {...heroBanner} isLoading={isLoading} />
+				)}
+				<LazyExploreSection isLoading={isLoading} />
 				{/* These components now hydrate off the main thread to keep TBT low. */}
-				{shouldRenderSecondary ? (
-					<LazyGameCarouselList />
-				) : (
-					<SectionSkeleton rows={2} />
-				)}
-				{shouldRenderSecondary ? (
-					<LazyProviderCarousel
-						title={t("home.topProviders")}
-						Icon={faTrophy}
-						maxProviders={16}
-					/>
-				) : (
-					<SectionSkeleton rows={1} />
-				)}
-				<section className="w-full">
-					{shouldRenderSecondary ? (
-						<LazyLiveBettingTable />
-					) : (
-						<BettingSkeleton />
-					)}
-				</section>
-
-				<section className="w-full">
-					<BlogCardsSlider posts={blogPosts} />
-				</section>
+				<LazyGameCarouselList isLoading={isLoading} />
+				<LazyProviderCarousel
+					title={t("home.topProviders")}
+					Icon={faTrophy}
+					maxProviders={16}
+					isLoading={isLoading}
+				/>
+				<LazyLiveBettingTable />
+				<LazyBlogCardsSlider
+					posts={blogPosts}
+					isLoading={blogPosts.length > 0 ? false : true}
+				/>
 			</div>
 		</>
 	);

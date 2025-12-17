@@ -11,6 +11,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface LobbySliderProps {
 	imageUrls: string[];
@@ -63,14 +64,17 @@ export function LobbySlider({ imageUrls, referralLinks }: LobbySliderProps) {
 							<Card className="overflow-hidden py-0 cursor-pointer rounded-2xl">
 								<CardContent className="p-0 relative">
 									<div
-										className="relative h-48 md:h-64 lg:h-72 bg-cover bg-center bg-no-repeat rounded-2xl"
-										style={{
-											backgroundImage: `url(${slide.imageUrl})`,
-										}}
+										className="relative h-48 md:h-64 lg:h-72 rounded-2xl"
 										onClick={() =>
 											handleSlideClick(slide.referralLink)
 										}
 									>
+										<Image
+											src={slide.imageUrl}
+											alt={`Slide ${index + 1}`}
+											fill
+										/>
+
 										{/* Overlay gradient */}
 										<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent rounded-2xl" />
 									</div>

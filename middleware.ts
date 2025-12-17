@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { locales } from "@/lib/i18n";
 import { decrypt } from "@/modules/auth/lib/auth";
+import { locales } from "@/constants/features/i18n/i18n.constants";
 
 export async function middleware(request: NextRequest) {
 	const pathname = request.nextUrl.pathname;

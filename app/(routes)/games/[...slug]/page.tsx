@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Metadata } from "next";
 import { generateSEOMetadata } from "@/lib/utils/seo/seo-provider";
 import { GamesPageLayoutWrapper } from "./games-page-layout-wrapper";
-import { QueryPageSkeleton } from "@/components/features/query-display/query-page-skeleton";
+import { QueryPageSkeleton } from "@/components/features/skeletons/query-display/query-page-skeleton";
 import { interpolateSiteName } from "@/lib/utils/site-config";
 import {
 	CATEGORY_TO_SLUG,

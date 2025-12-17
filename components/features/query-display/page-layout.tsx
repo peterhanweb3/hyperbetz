@@ -25,7 +25,7 @@ import {
 	selectFilteredAndSortedGames,
 } from "@/store/selectors/query/query.selectors";
 import { useQueryManager } from "@/hooks/use-query-manager";
-import { QueryPageSkeleton } from "./query-page-skeleton";
+import { QueryPageSkeleton } from "../skeletons/query-display/query-page-skeleton";
 // import { QueryFilterDropdownWithSearch } from "./query-filter-dropdown-with-search";
 // import FilterSelectionPills from "./filter-selection-pills";
 import { useTranslations } from "@/lib/locale-provider";

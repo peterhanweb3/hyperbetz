@@ -1,28 +1,24 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
-import { useRef } from "react";
+import { ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { format } from "date-fns";
+import { BlogSliderScrollControls } from "./BlogSliderScrollControls";
+import BlogCardsSliderSkeleton from "./BlogCardsSliderSkeleton";
 
-export function BlogCardsSlider({ posts }: { posts: any[] }) {
-	const scrollRef = useRef<HTMLDivElement>(null);
-
-	const scroll = (direction: "left" | "right") => {
-		if (scrollRef.current) {
-			const scrollAmount = 400;
-			scrollRef.current.scrollBy({
-				left: direction === "left" ? -scrollAmount : scrollAmount,
-				behavior: "smooth",
-			});
-		}
-	};
-
+export function BlogCardsSlider({
+	posts,
+	isLoading,
+}: {
+	posts: any[];
+	isLoading?: boolean;
+}) {
+	console.log(isLoading);
 	if (!posts || posts.length === 0) return null;
+
+	if (typeof isLoading !== "undefined" && isLoading)
+		return <BlogCardsSliderSkeleton />;
 
 	return (
 		<div className="relative group">
@@ -37,37 +33,12 @@ export function BlogCardsSlider({ posts }: { posts: any[] }) {
 						team
 					</p>
 				</div>
-				<div className="flex items-center gap-2">
-					<Button
-						variant="outline"
-						size="icon"
-						onClick={() => scroll("left")}
-						className="hidden sm:flex"
-					>
-						<span className="sr-only">Scroll left</span>
-						<ChevronLeft className="h-4 w-4" />
-					</Button>
-					<Button
-						variant="outline"
-						size="icon"
-						onClick={() => scroll("right")}
-						className="hidden sm:flex"
-					>
-						<span className="sr-only">Scroll right</span>
-						<ChevronRight className="h-4 w-4" />
-					</Button>
-					<Button asChild variant="default">
-						<Link href="/blog" className="gap-2">
-							View All
-							<ArrowRight className="h-4 w-4" />
-						</Link>
-					</Button>
-				</div>
+				<BlogSliderScrollControls />
 			</div>
 
 			{/* Slider */}
 			<div
-				ref={scrollRef}
+				id="blog-slider-container"
 				className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
 				style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
 			>

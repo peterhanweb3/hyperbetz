@@ -5,8 +5,8 @@ import { TransactionModal } from "@/components/features/walletProvider/transacti
 import { ProfileInfoCard } from "@/components/features/profile/profile-info-card";
 import { ProfileInfoCardSkeleton } from "@/components/features/profile/profile-info-card-skeleton";
 import { GameCarouselSection } from "@/components/features/games/game-carousel-section";
-import { GameCarouselSkeleton } from "@/components/features/games/game-carousel-skeleton";
-import { ExploreSection } from "@/components/features/games/explore-section";
+import { GameCarouselSkeleton } from "@/components/features/skeletons/games/game-carousel-skeleton";
+import  ExploreSection  from "@/components/features/games/explore-section";
 import { LiveBettingTable } from "@/components/features/betting/live-betting-table";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 // import {

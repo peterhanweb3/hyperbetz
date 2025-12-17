@@ -12,13 +12,12 @@ import {
 	NextIntlClientProvider,
 	useTranslations as useNextIntlTranslations,
 } from "next-intl";
+import { isRtlLocale } from "./i18n-utils";
+import { Locale } from "@/types/i18n/i18n.types";
 import {
-	Locale,
-	defaultLocale,
-	getMessages,
-	isRtlLocale,
 	locales,
-} from "./i18n";
+	defaultLocale,
+} from "@/constants/features/i18n/i18n.constants";
 
 type LocaleContextType = {
 	locale: Locale;
@@ -43,10 +42,11 @@ type LocaleProviderProps = {
 export function LocaleProvider({
 	children,
 	initialMessages,
-	initialLocale = defaultLocale
+	initialLocale = defaultLocale,
 }: LocaleProviderProps) {
 	const [locale, setLocaleState] = useState<Locale>(initialLocale);
-	const [messages, setMessages] = useState<AbstractIntlMessages>(initialMessages);
+	const [messages, setMessages] =
+		useState<AbstractIntlMessages>(initialMessages);
 
 	// Bootstrap locale priority: cookie > localStorage > navigator
 	useEffect(() => {
@@ -89,7 +89,9 @@ export function LocaleProvider({
 
 		let mounted = true;
 		(async () => {
-			const m = await getMessages(locale);
+			// Use Server Action to fetch messages - avoids bundling dictionary in client/SSR
+			const { getMessagesAction } = await import("./i18n-actions");
+			const m = await getMessagesAction(locale);
 			if (!mounted) return;
 			setMessages(m as AbstractIntlMessages);
 			if (typeof document !== "undefined") {
@@ -102,7 +104,7 @@ export function LocaleProvider({
 		return () => {
 			mounted = false;
 		};
-	}, [locale, initialLocale, initialMessages, messages]);
+	}, [locale]);
 
 	const setLocale = (l: Locale) => {
 		setLocaleState(l);

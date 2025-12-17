@@ -28,7 +28,7 @@ import {
 	faBuilding,
 } from "@fortawesome/pro-light-svg-icons";
 import Image from "next/image";
-import { ExploreSection } from "@/components/features/games/explore-section";
+import ExploreSection from "@/components/features/games/explore-section";
 // import { DynamicProviderCarousel } from "@/components/features/providers/dynamic-provider-carousel";
 import { ProviderGridCard } from "@/components/features/query-display/provider-grid-card";
 import { useAppStore } from "@/store/store";

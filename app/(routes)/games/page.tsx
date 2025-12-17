@@ -4,7 +4,7 @@ import { Suspense, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { useAppStore } from "@/store/store";
 import { QueryPageLayout } from "@/components/features/query-display/page-layout";
-import { QueryPageSkeleton } from "@/components/features/query-display/query-page-skeleton";
+import { QueryPageSkeleton } from "@/components/features/skeletons/query-display/query-page-skeleton";
 
 function GamesPageClient() {
   // We only need the one action now.

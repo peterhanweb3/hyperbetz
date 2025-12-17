@@ -2,10 +2,10 @@
 
 import { useAppStore } from "@/store/store";
 import { ProviderCarouselSection } from "./provider-carousel-section";
-import { Skeleton } from "@/components/ui/skeleton";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { useMemo } from "react";
 import { selectAllProviders } from "@/store/selectors/query/query.selectors";
+import ProviderCarouselSectionSkeleton from "../skeletons/providers/provider-carousel-section-skeleton";
 
 interface DynamicProviderCarouselProps {
 	title: string;
@@ -13,6 +13,7 @@ interface DynamicProviderCarouselProps {
 	maxProviders: number;
 	searchKeyword?: string;
 	customTitle?: string;
+	isLoading?: boolean;
 }
 
 export const DynamicProviderCarousel = ({
@@ -21,6 +22,7 @@ export const DynamicProviderCarousel = ({
 	maxProviders = 16,
 	searchKeyword,
 	customTitle,
+	isLoading,
 }: DynamicProviderCarouselProps) => {
 	// Check loading status for the store data
 	const status = useAppStore((state) => state.game.list.status);
@@ -35,16 +37,36 @@ export const DynamicProviderCarousel = ({
 	}, [allProviders, searchKeyword, maxProviders]);
 
 	// Handle loading state (optional, but good practice)
-	if (status === "loading" || status === "idle") {
+
+	if (typeof isLoading !== "undefined") {
+		if (isLoading) {
+			return (
+				<ProviderCarouselSectionSkeleton
+					isSingleRow={Boolean(searchKeyword?.trim())}
+					totalItems={9}
+				/>
+			);
+		}
+	}
+
+	if (
+		typeof isLoading === "undefined" &&
+		(status === "loading" || status === "idle")
+	) {
+		// Fallback to Zustand status only if isLoading is absent
 		return (
-			<div className="w-full space-y-4">
-				<Skeleton className="h-8 w-48" />
-				<div className="flex space-x-4">
-					{[...Array(6)].map((_, i) => (
-						<Skeleton key={i} className="h-24 w-1/6" />
-					))}
-				</div>
-			</div>
+			<ProviderCarouselSectionSkeleton
+				isSingleRow={Boolean(searchKeyword?.trim())}
+				totalItems={9}
+			/>
+		);
+	}
+
+	if (typeof isLoading === "undefined" && status === "error") {
+		return (
+			<p className="text-center p-10 text-destructive">
+				Cannot load the providers, please try again later.
+			</p>
 		);
 	}
 

@@ -1,12 +1,10 @@
 import { useEffect, useCallback, useRef } from "react";
-import { useRouter } from "next/navigation";
 
 /**
  * Custom hook to handle cross-tab logout synchronization
  * When a user logs out in one tab, all other tabs will be redirected to home
  */
 export function useCrossTabLogout(isLoggedIn: boolean) {
-	const router = useRouter();
 	const previousLoginState = useRef<boolean>(isLoggedIn);
 
 	const handleStorageChange = useCallback((event: StorageEvent) => {

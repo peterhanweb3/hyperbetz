@@ -23,7 +23,7 @@ export const GameCarouselSkeleton = ({
 			<div className="relative">
 				<div className="flex gap-4 overflow-hidden">
 					{Array.from({ length: 6 }).map((_, index) => (
-						<div key={index} className="flex-shrink-0 w-64">
+						<div key={index} className="shrink-0 w-64">
 							<div className="space-y-3">
 								{/* Game Image Skeleton */}
 								<Skeleton className="h-40 w-full rounded-lg" />

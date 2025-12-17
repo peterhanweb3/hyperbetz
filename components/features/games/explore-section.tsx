@@ -17,6 +17,7 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { useTranslations } from "@/lib/locale-provider";
 import { useRouter } from "next/navigation";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
+import { ExploreSectionSkeleton } from "../skeletons/games/explore-section-skeleton";
 
 interface ExploreCategory {
 	id: string;
@@ -103,7 +104,7 @@ const exploreCategories: ExploreCategory[] = [
 	},
 ];
 
-export const ExploreSection = () => {
+export default function ExploreSection  ({ isLoading }: { isLoading?: boolean }) {
 	const t = useTranslations("games");
 	const router = useRouter();
 	const { setShowAuthFlow } = useDynamicContext();
@@ -206,6 +207,8 @@ export const ExploreSection = () => {
 		...exploreCategories,
 	];
 
+	if (isLoading) return <ExploreSectionSkeleton totalItems={8} />;
+
 	return (
 		<>
 			<style jsx>{`
@@ -228,7 +231,7 @@ export const ExploreSection = () => {
 				}
 
 				.explore-infinite-scroll-container {
-					overflow: hidden;
+					overflow-x: clip;
 					position: relative;
 					width: 100%;
 				}

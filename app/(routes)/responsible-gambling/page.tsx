@@ -293,9 +293,9 @@ export default function ResponsibleGamblingPage() {
 							{para}
 						</p>
 					))}
-					<h4 className="font-semibold mb-2">
+					<h3 className="font-semibold mb-2">
 						{t("responsibleGambling.underagePrevention.tipsTitle")}
-					</h4>
+					</h3>
 					<ListSection
 						items={[
 							{
@@ -349,11 +349,11 @@ export default function ResponsibleGamblingPage() {
 							key={index}
 							className="rounded-lg border border-border bg-background p-4"
 						>
-							<h4 className="font-semibold text-foreground mb-2">
+							<h3 className="font-semibold text-foreground mb-2">
 								{t(
 									`responsibleGambling.helpSupport.organizations.${index}.name`
 								)}
-							</h4>
+							</h3>
 							<a
 								href={t(
 									`responsibleGambling.helpSupport.organizations.${index}.url`

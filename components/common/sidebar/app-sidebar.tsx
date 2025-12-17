@@ -144,10 +144,11 @@ const AppSidebarComponent = ({ ...props }: ComponentProps<typeof Sidebar>) => {
 					<Image
 						src="/assets/site/Hyperbetz-logo.webp"
 						alt="Hyperbetz Logo"
-						width={192}
-						height={48}
 						priority
-						className="h-12 w-48"
+						height={48}
+						width={192}
+						fetchPriority="high"
+						className="aspect-[3.50]"
 					/>
 				</Link>
 			</div>

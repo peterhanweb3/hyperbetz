@@ -5,9 +5,9 @@
  */
 
 import seoConfig from "@/config/seo/global-seo.config.json";
+import { locales } from "@/constants/features/i18n/i18n.constants";
 import { SEOConfig, JSONObject, JSONValue } from "@/types/seo/seo.types";
 import { headers } from "next/headers";
-import { locales } from "@/lib/i18n";
 
 /**
  * Helper: Recursively replace domain in config

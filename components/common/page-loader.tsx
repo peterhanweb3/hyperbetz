@@ -51,15 +51,15 @@ export function PageLoader() {
 		>
 			<div className="flex flex-col items-center gap-6">
 				{/* Logo with pulse animation */}
-				<div className="animate-pulse">
+				<div className="animate-pulse w-[80%]">
 					<Image
 						src="/assets/site/Hyperbetz-logo.webp"
 						alt="Hyperbetz Logo"
-						width={800}
-						height={800}
+						width={192}
+						height={48}
 						priority
 						fetchPriority="high"
-						className="w-[80%] mx-auto"
+						className="mx-auto size-auto"
 					/>
 				</div>
 

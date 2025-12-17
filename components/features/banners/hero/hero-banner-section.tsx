@@ -7,7 +7,7 @@ import { Layout1 } from "./Layout1/Layout1";
 import { Layout2 } from "./Layout2/Layout2";
 import { Layout3 } from "./Layout3/Layout3";
 import { Layout4 } from "./Layout4/Layout4";
-import { Layout6 } from "./Layout6/Layout6"; // ✅ new import
+import { Layout6 } from "./Layout6/Layout6";
 import { Layout7 } from "./Layout7/Layout7";
 import { Layout8 } from "./Layout8/Layout8";
 /**

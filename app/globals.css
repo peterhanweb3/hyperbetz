@@ -343,25 +343,19 @@
 	--breakpoint-5xl: 240rem;
 
 	/* animations related variables */
-	--animate-glow: 2s glow ease-in-out infinite;
 	--animate-pulse-glow: 2s pulse-glow ease-in-out infinite;
 	--animat-fade-in: 0.8s fade-in ease-out forwards;
 	--animate-fade-in-up: 0.8s fade-in-up ease-out forwards;
-	--animate-sparkle: 2s sparkle ease-in-out infinite;
 	/* --------------------------- */
 	--animate-daily-bonus-pulse: 2s bonus-pulse infinite;
 	--animate-shimmer: 2s shimmer infinite;
-	--animate-count-badge: 0.5s count-bounce ease-in-out;
 	--animate-hover-card-enter: 0.3s hover-card-enter ease-out forwards;
 	--animate-bg-shimmer: 3s bg-shimmer ease-in-out infinite;
 	--animate-game-card-slide-in: 0.4s game-card-slide-in ease-out forwards;
 	--animate-play-pulse: 2s play-pulse ease-in-out infinite;
 	--animate-float: 3s float ease-in-out infinite;
 	--animate-gradient-shift: 3s gradientShift ease infinite;
-	--animate-game-card-slide-in-alt: 0.3s gameCardSlideIn ease-out forwards;
-	--animate-hover-card-appear: 0.2s hoverCardAppear ease-out;
 	--animate-play-pulse-alt: 1.5s playPulse infinite;
-	--animate-xyz: 2s xyz linear infinite;
 	--animate-message-slide-in: 0.3s message-slide-in ease-out;
 }
 
@@ -434,26 +428,7 @@
 		transform: translateY(0);
 	}
 }
-@keyframes sparkle {
-	0%,
-	100% {
-		opacity: 0;
-		transform: scale(0.8);
-	}
-	50% {
-		opacity: 1;
-		transform: scale(1.2);
-	}
-}
-@keyframes glow {
-	0%,
-	100% {
-		box-shadow: 0 0 20px oklch(from var(--primary) l c h / 0.3);
-	}
-	50% {
-		box-shadow: 0 0 30px oklch(from var(--primary) l c h / 0.6);
-	}
-}
+
 @keyframes bonus-pulse {
 	0% {
 		box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7);
@@ -473,21 +448,7 @@
 		background-position: 200% 0;
 	}
 }
-@keyframes count-bounce {
-	0%,
-	20%,
-	50%,
-	80%,
-	100% {
-		transform: translateY(0);
-	}
-	40% {
-		transform: translateY(-3px);
-	}
-	60% {
-		transform: translateY(-1px);
-	}
-}
+
 @keyframes hover-card-enter {
 	0% {
 		opacity: 0;
@@ -551,26 +512,6 @@
 .animate-slide-down {
 	animation: slide-down 0.3s ease-out;
 }
-@keyframes gameCardSlideIn {
-	0% {
-		opacity: 0;
-		transform: translateX(-10px) scale(0.95);
-	}
-	100% {
-		opacity: 1;
-		transform: translateX(0) scale(1);
-	}
-}
-@keyframes hoverCardAppear {
-	0% {
-		opacity: 0;
-		transform: translateX(-10px) scale(0.95);
-	}
-	100% {
-		opacity: 1;
-		transform: translateX(0) scale(1);
-	}
-}
 @keyframes playPulse {
 	0%,
 	100% {
@@ -593,14 +534,7 @@
 		background-position: 0% 50%;
 	}
 }
-@keyframes xyz {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: -200% 0;
-	}
-}
+
 @keyframes message-slide-in {
 	from {
 		opacity: 0;
@@ -611,43 +545,6 @@
 		transform: translateY(0);
 	}
 }
-@keyframes data-stream {
-	0% {
-		opacity: 0;
-		transform: translateY(-10px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-@keyframes neon-glow {
-	0%,
-	100% {
-		box-shadow: 0 0 5px oklch(from var(--primary) l c h / 0.3);
-	}
-	50% {
-		box-shadow: 0 0 20px oklch(from var(--primary) l c h / 0.8);
-	}
-}
-@keyframes profit-flash {
-	0%,
-	100% {
-		background: transparent;
-	}
-	50% {
-		background: rgba(34, 197, 94, 0.1);
-	}
-}
-@keyframes loss-flash {
-	0%,
-	100% {
-		background: transparent;
-	}
-	50% {
-		background: rgba(239, 68, 68, 0.1);
-	}
-}
 @keyframes gradient-x {
 	0%,
 	100% {
@@ -655,6 +552,54 @@
 	}
 	50% {
 		background-position: 100% 50%;
+	}
+}
+@keyframes animate-message-slide-in {
+	0% {
+		transform: translateX(20px) translateY(10px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0) translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes animate-float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes animate-gradient-x {
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+}
+@keyframes zoom-in-95 {
+	0% {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
 	}
 }
 
@@ -738,46 +683,6 @@
 	@apply relative overflow-hidden before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:transition-all before:duration-500 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent hover:before:left-full;
 }
 
-/* === Sidebar Animation Utilities migrated from sidebar-animations.css === */
-@utility game-category-glow {
-	@apply transition-shadow duration-300 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)];
-}
-
-@utility provider-shimmer {
-	@apply bg-[linear-gradient(90deg,rgba(255,255,255,0.1)_25%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.1)_75%)] bg-[length:200%_100%] animate-[var(--animate-shimmer)];
-}
-
-@utility hover-card-animate {
-	@apply animate-[var(--animate-hover-card-enter)];
-}
-
-@utility game-card-bg-animate {
-	@apply relative overflow-hidden;
-}
-@utility game-card-bg-animate-before {
-	@apply before:content-[''] before:absolute before:top-0 before:left-[-100%] before:w-full before:h-full before:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent)] before:animate-[var(--animate-bg-shimmer)];
-}
-
-@utility game-card-enter {
-	@apply opacity-0 animate-game-card-slide-in;
-}
-
-@utility play-button-pulse {
-	@apply animate-[var(--animate-play-pulse)];
-}
-
-@utility glass-effect {
-	@apply backdrop-blur-[20px] bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.2)] shadow-[0_8px_32px_rgba(0,0,0,0.3)];
-}
-
-@utility game-card-bg-gradient {
-	@apply bg-[linear-gradient(45deg,rgba(99,102,241,0.1),rgba(236,72,153,0.1),rgba(139,92,246,0.1))] bg-[length:300%_300%] animate-[var(--animate-gradient-shift)];
-}
-
-@utility float-animation {
-	@apply animate-[var(--animate-float)];
-}
-
 /* Custom scrollbar hide utility */
 @utility scrollbar-hide {
 	/* IE and Edge */
@@ -825,7 +730,6 @@
 		animation: gradient-shift 3s ease infinite;
 	}
 }
-
 @utility casino-sidebar-glass {
 	backdrop-filter: blur(16px) saturate(1.5);
 	background: linear-gradient(
@@ -841,7 +745,6 @@
 		)
 		1;
 }
-
 @utility casino-heading {
 	background: linear-gradient(135deg, var(--primary), var(--chart-1));
 	background-clip: text;
@@ -849,15 +752,9 @@
 	-webkit-text-fill-color: transparent;
 	font-weight: 600;
 }
-
 @utility casino-text-glow {
 	text-shadow: 0 0 10px oklch(from var(--primary) l c h / 0.3);
 }
-
-@utility casino-time {
-	font-variant-numeric: tabular-nums;
-}
-
 @utility casino-button-glass {
 	backdrop-filter: blur(8px);
 	background: linear-gradient(
@@ -866,7 +763,6 @@
 		oklch(from var(--sidebar-accent) l c h / 0.05) 100%
 	);
 }
-
 @utility casino-dropdown {
 	backdrop-filter: blur(20px) saturate(1.2);
 	background: linear-gradient(
@@ -881,7 +777,6 @@
 		)
 		1;
 }
-
 @utility casino-icon-button {
 	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -890,7 +785,6 @@
 		filter: brightness(1.2);
 	}
 }
-
 @utility casino-close-button {
 	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -898,7 +792,6 @@
 		transform: rotate(90deg) scale(1.1);
 	}
 }
-
 @utility casino-scrollbar {
 	&::-webkit-scrollbar {
 		width: 6px;
@@ -927,7 +820,6 @@
 		);
 	}
 }
-
 @utility casino-reply-preview {
 	position: relative;
 
@@ -943,59 +835,6 @@
 		animation: pulse-glow 2s ease-in-out infinite;
 	}
 }
-
-@utility casino-message-text {
-	line-height: 1.6;
-
-	& a {
-		color: var(--primary);
-		text-decoration: underline;
-		text-decoration-color: oklch(from var(--primary) l c h / 0.5);
-		transition: all 0.2s ease;
-
-		&:hover {
-			color: var(--chart-1);
-			text-decoration-color: var(--chart-1);
-			text-shadow: 0 0 5px oklch(from var(--primary) l c h / 0.5);
-		}
-	}
-}
-
-@utility casino-win-text {
-	animation: neon-glow 2s ease-in-out infinite alternate;
-}
-
-@utility casino-amount {
-	font-variant-numeric: tabular-nums;
-	text-shadow: 0 0 10px oklch(from var(--chart-5) l c h / 0.5);
-}
-
-@utility casino-emoji {
-	filter: drop-shadow(0 0 5px oklch(from var(--primary) l c h / 0.3));
-}
-
-@utility casino-action-button {
-	position: relative;
-	overflow: hidden;
-
-	&::before {
-		content: "";
-		position: absolute;
-		inset: 0;
-		background: radial-gradient(
-			circle at center,
-			oklch(from var(--primary) l c h / 0.1) 0%,
-			transparent 70%
-		);
-		opacity: 0;
-		transition: opacity 0.3s ease;
-	}
-
-	&:hover::before {
-		opacity: 1;
-	}
-}
-
 @utility casino-input {
 	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -1005,7 +844,6 @@
 		transform: translateY(-1px);
 	}
 }
-
 @utility casino-input-button {
 	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -1013,7 +851,6 @@
 		transform: scale(1.1) rotate(5deg);
 	}
 }
-
 @utility casino-send-button {
 	position: relative;
 	background: linear-gradient(135deg, var(--primary), var(--chart-1));
@@ -1030,7 +867,6 @@
 		}
 	}
 }
-
 @utility casino-picker {
 	backdrop-filter: blur(20px) saturate(1.3);
 	border-image: linear-gradient(
@@ -1040,179 +876,15 @@
 		)
 		1;
 }
-
-/* Enhanced Animations for Casino Theme */
-@keyframes animate-casino-win {
-	0% {
-		transform: scale(0.95);
-		opacity: 0.8;
-	}
-	50% {
-		transform: scale(1.02);
-		opacity: 1;
-	}
-	100% {
-		transform: scale(1);
-		opacity: 1;
-	}
-}
-
-@keyframes animate-message-slide-in {
-	0% {
-		transform: translateX(20px) translateY(10px);
-		opacity: 0;
-	}
-	100% {
-		transform: translateX(0) translateY(0);
-		opacity: 1;
-	}
-}
-
-@keyframes animate-zoom-in {
-	0% {
-		transform: scale(0.8);
-		opacity: 0.8;
-	}
-	100% {
-		transform: scale(1);
-		opacity: 1;
-	}
-}
-
-@keyframes animate-float {
-	0%,
-	100% {
-		transform: translateY(0px);
-	}
-	50% {
-		transform: translateY(-10px);
-	}
-}
-
-@keyframes animate-spin-slow {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-/* Animation utility classes */
-@utility animate-casino-win {
-	animation: animate-casino-win 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 @utility animate-message-slide-in {
 	animation: animate-message-slide-in 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-@utility animate-zoom-in {
-	animation: animate-zoom-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 @utility animate-float {
 	animation: animate-float 3s ease-in-out infinite;
 }
-
-@utility animate-spin-slow {
-	animation: animate-spin-slow 3s linear infinite;
+@utility fade-in-up {
+	animation: fadeInUp 0.6s ease-out forwards;
 }
-
-@utility casino-send-button-enhanced {
-	position: relative;
-	background: linear-gradient(135deg, var(--primary), var(--chart-1));
-
-	&:not(:disabled) {
-		box-shadow: 0 4px 15px oklch(from var(--primary) l c h / 0.3),
-			0 0 20px oklch(from var(--primary) l c h / 0.1);
-
-		&::before {
-			content: "";
-			position: absolute;
-			inset: -2px;
-			background: linear-gradient(
-				45deg,
-				var(--chart-1),
-				var(--chart-2),
-				var(--primary)
-			);
-			border-radius: inherit;
-			z-index: -1;
-			opacity: 0;
-			transition: opacity 0.3s ease;
-		}
-
-		&:hover::before {
-			opacity: 0.7;
-			animation: gradient-shift 2s ease infinite;
-		}
-
-		&:hover {
-			box-shadow: 0 6px 20px oklch(from var(--primary) l c h / 0.4),
-				0 0 30px oklch(from var(--primary) l c h / 0.2);
-		}
-
-		&:active {
-			box-shadow: 0 2px 10px oklch(from var(--primary) l c h / 0.5);
-		}
-	}
-}
-
-@utility casino-input-enhanced {
-	background: linear-gradient(
-		135deg,
-		oklch(from var(--background) l c h / 0.8),
-		oklch(from var(--card) l c h / 0.6)
-	);
-
-	&:focus {
-		background: linear-gradient(
-			135deg,
-			oklch(from var(--background) l c h / 0.9),
-			oklch(from var(--card) l c h / 0.8)
-		);
-		box-shadow: 0 0 0 2px oklch(from var(--primary) l c h / 0.3),
-			0 0 20px oklch(from var(--primary) l c h / 0.1),
-			inset 0 1px 3px oklch(from var(--primary) l c h / 0.1);
-		transform: translateY(-1px);
-	}
-
-	&::placeholder {
-		background: linear-gradient(
-			45deg,
-			oklch(from var(--muted-foreground) l c h / 0.7),
-			oklch(from var(--primary) l c h / 0.3)
-		);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-}
-
-/* Enhanced animations for live chat */
-@keyframes animate-gradient-x {
-	0%,
-	100% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-}
-
-@keyframes zoom-in-95 {
-	0% {
-		opacity: 0;
-		transform: scale(0.95);
-	}
-	100% {
-		opacity: 1;
-		transform: scale(1);
-	}
-}
-
-/* Enhanced scrollbar for emoji and GIF sections - This is a duplicate, using the one above */
 
 /* Enhanced heading visibility */
 @utility casino-heading-enhanced {
@@ -1224,31 +896,19 @@
 	text-shadow: 0 0 10px oklch(from var(--primary) l c h / 0.3);
 	filter: drop-shadow(0 1px 2px oklch(from var(--background) l c h / 0.5));
 }
-
-/* Fix for transparent text issues */
-@utility text-fix {
-	color: var(--foreground) !important;
-	-webkit-text-fill-color: var(--foreground) !important;
-	opacity: 1 !important;
-}
-
 @utility animate-gradient-x {
 	background-size: 400% 400%;
 	animation: animate-gradient-x 6s ease infinite;
 }
-
 @utility zoom-in-95 {
 	animation: zoom-in-95 0.2s ease-out;
 }
-
-/* Custom gradient animation for profile component */
 
 /* Custom scrollbar styles for the betting table */
 @utility scrollbar-thin {
 	scrollbar-width: thin;
 	scrollbar-color: oklch(from var(--primary) l c h / 0.3) transparent;
 }
-
 @layer utility {
 	.scrollbar-thin::-webkit-scrollbar {
 		width: 6px;
@@ -1275,47 +935,20 @@
 	.scrollbar-thumb-border::-webkit-scrollbar-thumb:hover {
 		background: oklch(from var(--border) l c h / 0.8);
 	}
-	.chat-scrollbar::-webkit-scrollbar {
-		width: 4px;
-	}
-	.chat-scrollbar::-webkit-scrollbar-track {
-		background: var(--sidebar);
-	}
-	.chat-scrollbar::-webkit-scrollbar-thumb {
-		background: var(--sidebar-border);
-		border-radius: 2px;
-	}
-	.chat-scrollbar::-webkit-scrollbar-thumb:hover {
-		background: var(--sidebar-accent);
-	}
 }
-
-@utility data-stream-animate {
-	@apply animate-[data-stream_0.3s_ease-out];
-}
-
-@utility neon-glow-animate {
-	@apply animate-[neon-glow_2s_ease-in-out_infinite];
-}
-
-@utility profit-flash-animate {
-	@apply animate-[profit-flash_0.5s_ease-in-out];
-}
-
-@utility message-enter-animate {
-	@apply animate-message-slide-in;
-}
-
-@utility loss-flash-animate {
-	@apply animate-[loss-flash_0.5s_ease-in-out];
-}
-
 @layer base {
 	* {
 		@apply border-border;
 	}
 	body {
 		@apply bg-background text-foreground;
+	}
+	html,
+	body,
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: oklch(from var(--primary) l c h / 0.4)
+			oklch(from var(--sidebar) l c h / 0.2);
 	}
 }
 
@@ -1328,18 +961,6 @@
 [dir="rtl"] .flex-row {
 	flex-direction: row-reverse;
 } */
-
-/* Custom scrollbar styles that apply to all scrollable elements */
-@layer base {
-	/* Firefox global scrollbar (applies to html viewport; non-inheritable, so set on common containers too) */
-	html,
-	body,
-	* {
-		scrollbar-width: thin;
-		scrollbar-color: oklch(from var(--primary) l c h / 0.4)
-			oklch(from var(--sidebar) l c h / 0.2);
-	}
-}
 
 /* WebKit global scrollbar */
 ::-webkit-scrollbar {
@@ -1364,22 +985,6 @@
 		oklch(from var(--primary) l c h / 0.8),
 		oklch(from var(--chart-1) l c h / 0.8)
 	);
-}
-
-/* Explore Section Animations */
-@keyframes fadeInUp {
-	from {
-		opacity: 0;
-		transform: translateY(30px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-.animate-fadeInUp {
-	animation: fadeInUp 0.8s ease-out forwards;
 }
 
 /* iOS Safari Mobile Web Fixes */
@@ -1465,56 +1070,4 @@
 		hsl(var(--primary) / 0.6),
 		hsl(var(--primary) / 0.7)
 	) !important;
-}
-
-/* Rich Text Editor Overrides */
-.ql-toolbar {
-	border-top-left-radius: var(--radius);
-	border-top-right-radius: var(--radius);
-	background-color: hsl(var(--muted));
-	border-color: hsl(var(--border)) !important;
-}
-.ql-container {
-	border-bottom-left-radius: var(--radius);
-	border-bottom-right-radius: var(--radius);
-	background-color: hsl(var(--background));
-	border-color: hsl(var(--border)) !important;
-	font-family: var(--font-sans);
-	font-size: 1rem;
-}
-.ql-editor {
-	min-height: 200px;
-}
-.dark .ql-toolbar .ql-stroke {
-	stroke: hsl(var(--foreground));
-}
-.dark .ql-toolbar .ql-fill {
-	fill: hsl(var(--foreground));
-}
-.dark .ql-toolbar .ql-picker {
-	color: hsl(var(--foreground));
-}
-
-/* Tiptap Editor Styles */
-.tiptap {
-	min-height: 300px;
-}
-
-.tiptap p.is-editor-empty:first-child::before {
-	color: hsl(var(--muted-foreground));
-	content: attr(data-placeholder);
-	float: left;
-	height: 0;
-	pointer-events: none;
-}
-
-.tiptap img {
-	max-width: 100%;
-	height: auto;
-	border-radius: var(--radius);
-}
-
-.tiptap a {
-	color: hsl(var(--primary));
-	text-decoration: underline;
 }

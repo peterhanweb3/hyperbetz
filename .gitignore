@@ -55,3 +55,6 @@ WEBSOCKET_LIVE_CHAT_INTEGRATION.md
 uploads/*
 prompts/
 optimize-backgrounds.js
+package-lock.json
+yarn.lock
+scripts/optimize-footer-logos.mjs

@@ -7,14 +7,13 @@ import {
 	getUniqueValuesByKey,
 } from "@/lib/utils/games/games.utils";
 import { GameCarouselSection } from "./game-carousel-section"; // Still using the dumb component for rendering
-import { ExploreSection } from "./explore-section"; // New Explore section component
-import { Skeleton } from "@/components/ui/skeleton"; // Using ShadCN Skeleton for a better loading state
 // import { Crown, Gamepad2, Spade } from "lucide-react";
 import {
 	faCards,
 	faFutbol,
 	faSlotMachine,
 } from "@fortawesome/pro-light-svg-icons";
+import DynamicGameCarouselListSkeleton from "../skeletons/games/games-by-category-section-skeleton";
 
 /**
  * This "smart" component is the new, truly modular "Lego brick".
@@ -23,34 +22,39 @@ import {
  *
  * It can now be dropped onto any page (home, promotions, etc.) and will "just work".
  */
-export const DynamicGameCarouselList = () => {
+interface DynamicGameCarouselListProps {
+	isLoading?: boolean;
+}
+export const DynamicGameCarouselList = ({
+	isLoading,
+}: DynamicGameCarouselListProps) => {
 	// 1. All data fetching and state access happens HERE.
 	const allGames = useAppStore((state) => state.game.list.games);
 	const status = useAppStore((state) => state.game.list.status);
 
 	const t = useTranslations("games");
 	// 2. It handles its own loading and error states.
-	if (status === "loading" || status === "idle") {
-		// A better UX using skeletons. Render 3 placeholder sections.
-		return (
-			<div className="space-y-12">
-				{[...Array(3)].map((_, i) => (
-					<div key={i} className="w-full">
-						<Skeleton className="h-8 w-48 mb-4" />
-						<div className="flex space-x-4">
-							<Skeleton className="h-48 w-full" />
-							<Skeleton className="h-48 w-full" />
-							<Skeleton className="h-48 w-full" />
-							<Skeleton className="h-48 w-full" />
-							<Skeleton className="h-48 w-full" />
-						</div>
-					</div>
-				))}
-			</div>
-		);
+	if (typeof isLoading !== "undefined") {
+		if (isLoading) {
+			return (
+				<DynamicGameCarouselListSkeleton
+					totalRows={3}
+					totalColumns={5}
+				/>
+			);
+		}
 	}
 
-	if (status === "error") {
+	// Priority 2 → fallback to Zustand status only if isLoading is absent
+	if (
+		typeof isLoading === "undefined" &&
+		(status === "loading" || status === "idle")
+	) {
+		return (
+			<DynamicGameCarouselListSkeleton totalRows={3} totalColumns={5} />
+		);
+	}
+	if (typeof isLoading === "undefined" && status === "error") {
 		return (
 			<p className="text-center p-10 text-destructive">
 				{t("errorLoading")}
@@ -80,7 +84,6 @@ export const DynamicGameCarouselList = () => {
 	return (
 		<>
 			{/* Add Explore Section */}
-			<ExploreSection />
 
 			{finalCategories.map((category) => {
 				const gamesForCategory = getGamesByCategory(

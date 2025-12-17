@@ -29,7 +29,7 @@ type ThemeColorProviderState = {
 };
 
 const initialState: ThemeColorProviderState = {
-	theme: "casino", // Default theme
+	theme: "green", // Default theme
 	setTheme: () => null,
 };
 
@@ -38,7 +38,7 @@ const ThemeColorProviderContext =
 
 export function ThemeColorProvider({
 	children,
-	defaultTheme = "poker",
+	defaultTheme = "green",
 	storageKey = "ui-theme-color",
 	...props
 }: ThemeColorProviderProps) {

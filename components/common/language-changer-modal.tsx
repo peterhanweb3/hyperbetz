@@ -19,8 +19,9 @@ import {
 } from "@fortawesome/pro-light-svg-icons";
 import { cn } from "@/lib/utils";
 import { useLocaleContext } from "@/lib/locale-provider";
-import { locales, type Locale } from "@/lib/i18n";
 import { languages } from "@/constants/features/live-chat/live-chat.constants";
+import { locales } from "@/constants/features/i18n/i18n.constants";
+import { Locale } from "@/types/i18n/i18n.types";
 
 interface LanguageChangerModalProps {
 	open: boolean;

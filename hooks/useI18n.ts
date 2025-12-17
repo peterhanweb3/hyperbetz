@@ -7,7 +7,7 @@ import {
 import type { I18nKeys } from "@/types/i18n/keys";
 
 export function useT(namespace?: string) {
-  const t = useNextIntlTranslations(namespace);
-  return (key: I18nKeys | string, values?: TranslationValues) =>
-    t(key as any, values as TranslationValues);
+	const t = useNextIntlTranslations(namespace);
+	return (key: I18nKeys | string, values?: TranslationValues) =>
+		t(key as string, values as TranslationValues);
 }
