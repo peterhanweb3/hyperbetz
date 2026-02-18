@@ -18,10 +18,9 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 2222 
           script: |
-            cd /var/www/html/production/Live/hyperbetzv2/hyperbetz
-            GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_leon -o IdentitiesOnly=yes' \
+            cd /var/www/html/hyperbetz/
             git pull origin main
             npx prisma generate
             npm i
             npm run build
-            pm2 restart web_hyperbetzv2
+            pm2 restart web_hyperbetz
