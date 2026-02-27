@@ -1,4 +1,5 @@
-import { io, Socket } from "socket.io-client";
+import { io } from "socket.io-client";
+import type { Socket } from "socket.io-client";
 import {
 	AutoDepoWdStatusPayload,
 	TransactionNotificationData,
@@ -248,7 +249,7 @@ class WebSocketService {
 	};
 
 	private handleChatConnectError = (error: Error) => {
-		// console.error("Chat WebSocket Connection Error:", error);
+		console.error("Chat WebSocket Connection Error:", error);
 		this.chatStatus = "error";
 		this.onChatStatusChange("error");
 		this.handleChatDisconnect("connect_error"); // Trigger reconnect logic

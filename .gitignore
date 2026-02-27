@@ -58,3 +58,5 @@ optimize-backgrounds.js
 package-lock.json
 yarn.lock
 scripts/optimize-footer-logos.mjs
+error-logs/
+Screenshot from 2026-02-27 16-39-50.png

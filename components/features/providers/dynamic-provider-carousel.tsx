@@ -14,6 +14,8 @@ interface DynamicProviderCarouselProps {
 	searchKeyword?: string;
 	customTitle?: string;
 	isLoading?: boolean;
+	firstRowFilter?: string;
+	secondRowFilter?: string;
 }
 
 export const DynamicProviderCarousel = ({
@@ -23,6 +25,8 @@ export const DynamicProviderCarousel = ({
 	searchKeyword,
 	customTitle,
 	isLoading,
+	firstRowFilter = "live casino",
+	secondRowFilter = "slot",
 }: DynamicProviderCarouselProps) => {
 	// Check loading status for the store data
 	const status = useAppStore((state) => state.game.list.status);
@@ -82,8 +86,8 @@ export const DynamicProviderCarousel = ({
 			viewAllUrl="/providers"
 			maxProviders={maxProviders}
 			Icon={Icon}
-			firstRowFilter="live casino"
-			secondRowFilter="slot"
+			firstRowFilter={firstRowFilter}
+			secondRowFilter={secondRowFilter}
 			providers={filteredProviders}
 			isSingleRow={Boolean(searchKeyword?.trim())}
 		/>

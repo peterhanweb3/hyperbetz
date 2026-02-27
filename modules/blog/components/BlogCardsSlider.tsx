@@ -14,7 +14,6 @@ export function BlogCardsSlider({
 	posts: any[];
 	isLoading?: boolean;
 }) {
-	console.log(isLoading);
 	if (!posts || posts.length === 0) return null;
 
 	if (typeof isLoading !== "undefined" && isLoading)

@@ -7,11 +7,13 @@ import {
 	AffiliateRate,
 	GetDownlineResponse,
 } from "@/types/affiliate/affiliate.types";
+import { AffiliateLoadingStatus } from "@/store/slices/affiliate/manager.slice";
 
 export interface UseAffiliateDashboardResult {
 	downlineData: GetDownlineResponse | null;
 	affiliateRates: AffiliateRate[];
 	isLoading: boolean;
+	managerStatus: AffiliateLoadingStatus;
 	isClaiming: boolean;
 	isClaimDisabled: boolean;
 	handleClaim: () => Promise<void>;
@@ -32,7 +34,9 @@ export default function useAffiliateDashboard(): UseAffiliateDashboardResult {
 	const initializeManager = useAppStore(
 		(state) => state.affiliate.manager.initialize
 	);
-	const refreshAll = useAppStore((state) => state.affiliate.manager.refreshAll);
+	const refreshAll = useAppStore(
+		(state) => state.affiliate.manager.refreshAll
+	);
 
 	// Initialize manager on mount or when auth status changes
 	useEffect(() => {
@@ -42,7 +46,11 @@ export default function useAffiliateDashboard(): UseAffiliateDashboardResult {
 
 	const downlineData = downlineSlice.data;
 	const affiliateRates = ratesSlice.data;
-	const isLoading = managerSlice.status === "loading";
+	const managerStatus = managerSlice.status;
+	const hasRates = affiliateRates.length > 0;
+	const isLoading =
+		managerStatus === "loading" ||
+		((managerStatus === "error" || managerStatus === "idle") && !hasRates);
 	const isClaiming = claimSlice.isClaiming;
 	const handleClaim = claimSlice.claimBonus;
 
@@ -60,6 +68,7 @@ export default function useAffiliateDashboard(): UseAffiliateDashboardResult {
 		downlineData,
 		affiliateRates,
 		isLoading,
+		managerStatus,
 		isClaiming,
 		isClaimDisabled,
 		handleClaim,

@@ -49,9 +49,9 @@ export default async function BlogPage({
 	return (
 		<div className="min-h-screen bg-background">
 			{/* Hero Section */}
-			<div className="relative overflow-hidden border-b bg-gradient-to-br from-background via-primary/5 to-background py-24">
-				<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background" />
-				<div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+			<div className="relative overflow-hidden border-b bg-linear-to-br from-background via-primary/5 to-background py-24">
+				<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-primary/20 via-background to-background" />
+				<div className="absolute inset-0 bg-grid-white/[0.02] bg-size-[50px_50px]" />
 
 				<div className="container relative mx-auto px-4 text-center">
 					<div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 mb-6">

@@ -8,7 +8,6 @@ import {
 	faTrophy,
 } from "@fortawesome/pro-light-svg-icons";
 import { GameCarouselSection } from "../../../components/features/games/game-carousel-section";
-import { Skeleton } from "@/components/ui/skeleton";
 import {
 	getUniqueValuesByKey,
 	getGamesByCategory,
@@ -17,6 +16,7 @@ import { useAppStore } from "@/store/store";
 import { useTranslations } from "next-intl";
 import { useMemo, useEffect, useState } from "react";
 import { Game, GameType } from "@/types/games/gameList.types";
+import DynamicGameCarouselListSkeleton from "@/components/features/skeletons/games/games-by-category-section-skeleton";
 
 export const SpecificCategoryCarousel = ({
 	type,
@@ -89,16 +89,7 @@ export const SpecificCategoryCarousel = ({
 
 	if (status === "loading" || status === "idle" || !isClient) {
 		return (
-			<div className="w-full">
-				<Skeleton className="h-8 w-48 mb-4" />
-				<div className="flex space-x-4">
-					<Skeleton className="h-48 w-full" />
-					<Skeleton className="h-48 w-full" />
-					<Skeleton className="h-48 w-full" />
-					<Skeleton className="h-48 w-full" />
-					<Skeleton className="h-48 w-full" />
-				</div>
-			</div>
+			<DynamicGameCarouselListSkeleton totalRows={1} totalColumns={5} />
 		);
 	}
 

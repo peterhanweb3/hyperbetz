@@ -58,6 +58,7 @@ export const RatesTable = ({
 	context = "affiliate",
 }: RatesTableProps) => {
 	const t = useTranslations(`${context}.rates`);
+	const showSkeleton = isLoading || affiliateRates.length === 0;
 
 	// Tier name mapping for bonus context
 	const commissionLevel: Record<number, string> = {
@@ -90,7 +91,7 @@ export const RatesTable = ({
 			</CardHeader>
 
 			<CardContent className="p-0">
-				{isLoading ? (
+				{showSkeleton ? (
 					<div className="p-6">
 						<TableSkeleton />
 					</div>

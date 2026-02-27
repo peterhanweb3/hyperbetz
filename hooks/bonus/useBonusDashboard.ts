@@ -7,11 +7,13 @@ import {
 	GetMemberBonusSuccessResponse,
 	BonusRate,
 } from "@/types/bonus/bonus.types";
+import { BonusLoadingStatus } from "@/store/slices/bonus/manager.slice";
 
 export interface UseBonusDashboardResult {
 	bonusData: GetMemberBonusSuccessResponse | null;
 	bonusRates: BonusRate[];
 	isLoading: boolean;
+	managerStatus: BonusLoadingStatus;
 	isClaiming: boolean;
 	isClaimDisabled: boolean;
 	handleClaim: () => Promise<number | null>;
@@ -43,7 +45,11 @@ export default function useBonusDashboard(): UseBonusDashboardResult {
 
 	const bonusData = dashboardSlice.bonusData;
 	const bonusRates = ratesSlice.data;
-	const isLoading = managerSlice.status === "loading";
+	const managerStatus = managerSlice.status;
+	const hasRates = bonusRates.length > 0;
+	const isLoading =
+		managerStatus === "loading" ||
+		((managerStatus === "error" || managerStatus === "idle") && !hasRates);
 	const isClaiming = claimSlice.isClaiming;
 	const handleClaim = claimSlice.claimBonus;
 	const lastClaimAmount = claimSlice.lastClaimAmount;
@@ -62,6 +68,7 @@ export default function useBonusDashboard(): UseBonusDashboardResult {
 		bonusData,
 		bonusRates,
 		isLoading,
+		managerStatus,
 		isClaiming,
 		isClaimDisabled,
 		handleClaim,

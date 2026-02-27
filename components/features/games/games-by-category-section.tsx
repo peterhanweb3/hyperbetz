@@ -39,7 +39,15 @@ export const DynamicGameCarouselList = ({
 			return (
 				<DynamicGameCarouselListSkeleton
 					totalRows={3}
-					totalColumns={5}
+					totalColumns={{
+						base: 2,
+						sm: 3,
+						md: 4,
+						lg: 4,
+						xl: 5,
+						"2xl": 6,
+						"3xl": 7,
+					}}
 				/>
 			);
 		}
@@ -51,7 +59,18 @@ export const DynamicGameCarouselList = ({
 		(status === "loading" || status === "idle")
 	) {
 		return (
-			<DynamicGameCarouselListSkeleton totalRows={3} totalColumns={5} />
+			<DynamicGameCarouselListSkeleton
+				totalRows={3}
+				totalColumns={{
+					base: 2,
+					sm: 3,
+					md: 4,
+					lg: 4,
+					xl: 5,
+					"2xl": 6,
+					"3xl": 7,
+				}}
+			/>
 		);
 	}
 	if (typeof isLoading === "undefined" && status === "error") {

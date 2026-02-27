@@ -17,7 +17,7 @@ import confetti from "canvas-confetti";
 import pandaABI from "@/abi/pandaByteCore.json";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 import TransactionService from "@/services/walletProvider/TransactionService";
-import { ethers } from "ethers";
+import { parseUnits as ethersParseUnits } from "ethers";
 
 // --- HOOK'S "CONTRACT" (What it needs to receive) ---
 interface UseWithdrawTransactionProps {
@@ -238,7 +238,7 @@ export const useWithdrawTransaction = ({
 
 				const decimals = data.decimal || 6;
 
-				const finalWdAmountFun = ethers.parseUnits(
+				const finalWdAmountFun = ethersParseUnits(
 					withdrawAmount.toString(),
 					decimals
 				);

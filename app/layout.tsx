@@ -104,11 +104,7 @@ export default async function RootLayout({
 					href="https://fonts.gstatic.com"
 					crossOrigin="anonymous"
 				/> */}
-				<link
-					rel="preconnect"
-					href="https://cdn.jsdelivr.net"
-					crossOrigin="anonymous"
-				/>
+
 				<link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 				<link rel="dns-prefetch" href="https://assets.coingecko.com" />
 				<link rel="dns-prefetch" href="https://tokens.1inch.io" />
@@ -120,6 +116,14 @@ export default async function RootLayout({
 				/>
 
 				{/* Preload critical fonts */}
+				<link
+					rel="preload"
+					href="/fonts/dm-sans/dm-sans-latin-400-normal.woff2"
+					as="font"
+					type="font/woff2"
+					crossOrigin="anonymous"
+					fetchPriority="high"
+				/>
 
 				{/* Preload critical logo for LCP */}
 				<link

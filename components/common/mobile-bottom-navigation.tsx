@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 import { useTranslations } from "@/lib/locale-provider";
 import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
-import { useState } from "react";
+import { useEffect, useMemo, useState, useTransition } from "react";
 import MobileLoginDropdown from "./header/mobile-login-dropdown";
 import { EmailVerificationModal } from "../features/auth/email-verification-modal";
 
@@ -32,38 +32,49 @@ export function MobileBottomNavigation() {
 	const { isLoggedIn } = useDynamicAuth();
 	const { setShowAuthFlow } = useDynamicContext();
 	const [emailModalOpen, setEmailModalOpen] = useState(false);
+	const [, startTransition] = useTransition();
 
-	const navigationItems: NavigationItem[] = [
-		{
-			id: isLoggedIn ? "lobby" : "home",
-			label: isLoggedIn ? tNav("lobby") : tNav("home"),
-			icon: faHouse,
-			path: isLoggedIn ? "/lobby" : "/",
-		},
-		{
-			id: "games",
-			label: tNav("games"),
-			icon: faGamepad,
-			path: "/games",
-		},
-		{
-			id: "providers",
-			label: "Providers",
-			icon: faChartLineUp,
-			path: "/providers",
-		},
-	];
+	const navigationItems: NavigationItem[] = useMemo(() => {
+		const items: NavigationItem[] = [
+			{
+				id: isLoggedIn ? "lobby" : "home",
+				label: isLoggedIn ? tNav("lobby") : tNav("home"),
+				icon: faHouse,
+				path: isLoggedIn ? "/lobby" : "/",
+			},
+			{
+				id: "games",
+				label: tNav("games"),
+				icon: faGamepad,
+				path: "/games",
+			},
+			{
+				id: "providers",
+				label: "Providers",
+				icon: faChartLineUp,
+				path: "/providers",
+			},
+		];
 
-	// Only add profile item when logged in
-	if (isLoggedIn) {
-		navigationItems.push({
-			id: "profile",
-			label: tNav("profile"),
-			icon: faUser,
-			path: "/profile",
-			requiresAuth: true,
+		if (isLoggedIn) {
+			items.push({
+				id: "profile",
+				label: tNav("profile"),
+				icon: faUser,
+				path: "/profile",
+				requiresAuth: true,
+			});
+		}
+
+		return items;
+	}, [isLoggedIn, tNav]);
+
+	// Prefetch likely destinations to make navigation instantaneous on mobile
+	useEffect(() => {
+		navigationItems.forEach((item) => {
+			void router.prefetch(item.path);
 		});
-	}
+	}, [navigationItems, router]);
 
 	const handleNavigation = (item: NavigationItem) => {
 		if (item.requiresAuth && !isLoggedIn) {
@@ -73,11 +84,11 @@ export function MobileBottomNavigation() {
 
 		// Special handling for home button - redirect to lobby if logged in
 		if (item.id === "home") {
-			router.push(isLoggedIn ? "/lobby" : "/");
+			startTransition(() => router.push(isLoggedIn ? "/lobby" : "/"));
 			return;
 		}
 
-		router.push(item.path);
+		startTransition(() => router.push(item.path));
 	};
 
 	const isActive = (path: string) => {
@@ -213,7 +224,7 @@ export function MobileBottomNavigation() {
 
 								{/* Ripple effect overlay */}
 								<div className="absolute inset-0 rounded-lg overflow-hidden">
-									<div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/5 opacity-0 transition-opacity duration-200 hover:opacity-100" />
+									<div className="absolute inset-0 bg-linear-to-t from-transparent via-transparent to-white/5 opacity-0 transition-opacity duration-200 hover:opacity-100" />
 								</div>
 							</button>
 						);

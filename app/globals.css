@@ -2,6 +2,15 @@
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
 
+/* Local DM Sans for third-party components that request the family name directly */
+@font-face {
+	font-family: "DM Sans";
+	src: url("/fonts/dm-sans/dm-sans-latin-400-normal.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
 /* Sidebar stability optimizations */
 @layer base {
 	/* Prevent layout shifts during route transitions */
@@ -680,7 +689,7 @@
 }
 
 @utility shimmer-effect {
-	@apply relative overflow-hidden before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:transition-all before:duration-500 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent hover:before:left-full;
+	@apply relative overflow-hidden before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:transition-all before:duration-500 before:bg-linear-to-r before:from-transparent before:via-white/20 before:to-transparent hover:before:left-full;
 }
 
 /* Custom scrollbar hide utility */

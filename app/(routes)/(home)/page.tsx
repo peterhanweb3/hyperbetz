@@ -17,6 +17,7 @@ import { LiveBettingTableSkeleton } from "@/components/features/skeletons/bettin
 import BlogCardsSliderSkeleton from "@/modules/blog/components/BlogCardsSliderSkeleton";
 import ProviderCarouselSectionSkeleton from "@/components/features/skeletons/providers/provider-carousel-section-skeleton";
 import DynamicGameCarouselListSkeleton from "@/components/features/skeletons/games/games-by-category-section-skeleton";
+import { ExploreSectionSkeleton } from "@/components/features/skeletons/games/explore-section-skeleton";
 
 const LazyExploreSection = dynamic(
 	() =>
@@ -25,9 +26,7 @@ const LazyExploreSection = dynamic(
 		})),
 	{
 		ssr: false,
-		loading: () => (
-			<DynamicGameCarouselListSkeleton totalRows={3} totalColumns={5} />
-		),
+		loading: () => <ExploreSectionSkeleton />,
 	}
 );
 const LazyGameCarouselList = dynamic(
@@ -38,7 +37,18 @@ const LazyGameCarouselList = dynamic(
 	{
 		ssr: false,
 		loading: () => (
-			<DynamicGameCarouselListSkeleton totalRows={3} totalColumns={5} />
+			<DynamicGameCarouselListSkeleton
+				totalRows={3}
+				totalColumns={{
+					base: 2,
+					sm: 3,
+					md: 4,
+					lg: 4,
+					xl: 5,
+					"2xl": 6,
+					"3xl": 7,
+				}}
+			/>
 		),
 	}
 );

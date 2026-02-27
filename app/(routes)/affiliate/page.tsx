@@ -82,9 +82,14 @@
 // }
 
 "use client";
-import { Suspense, useState, useRef, useEffect } from "react";
+import {
+	// Suspense,
+	useState,
+	useRef,
+	useEffect,
+} from "react";
 import { DashboardTab } from "@/components/features/affiliate/dashboard-tab/dashboard-tab";
-import { AffiliateFallback } from "@/components/features/affiliate/affiliate-fallback";
+import { AffiliateFallback } from "@/components/features/skeletons/affiliate/affiliate-fallback";
 import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
@@ -226,17 +231,19 @@ export default function AffiliatePage() {
 	// Loading state placeholder (reuse primary skeleton theme but lighter here)
 	if (isLoading) {
 		return (
-			<div className="container mx-auto py-8">
-				<div className="h-8 w-56 bg-muted rounded-lg animate-pulse mb-6" />
-				<AffiliateFallback />
+			<div className="bg-background flex flex-col">
+				<main className="flex-1 container mx-auto py-8">
+					<div className="h-8 w-56 bg-muted rounded-lg animate-pulse mb-6" />
+					<AffiliateFallback />
+				</main>
 			</div>
 		);
 	}
 
 	if (!primaryWallet) {
 		return (
-			<div className="min-h-screen bg-background">
-				<div className="py-4 sm:py-6 space-y-6 sm:space-y-8 px-4 sm:px-6 lg:px-8">
+			<div className="flex flex-col bg-background">
+				<div className="flex-1 py-4 sm:py-6 space-y-6 sm:space-y-8">
 					{/* Header Section */}
 					<div className="flex items-center justify-between flex-wrap gap-4">
 						<div className="space-y-2 sm:space-y-4">
@@ -246,80 +253,75 @@ export default function AffiliatePage() {
 						</div>
 					</div>
 
-					<Suspense fallback={<AffiliateFallback />}>
-						<Tabs
-							value={activeTab}
-							onValueChange={setActiveTab}
-							className="w-full"
-						>
-							{/* Tab Navigation - Only show Rates and Calculator */}
-							<div className="flex mb-6 sm:mb-8 overflow-x-auto">
+					{/* <Suspense fallback={<AffiliateFallback />}> */}
+					<Tabs
+						value={activeTab}
+						onValueChange={setActiveTab}
+						className="w-full"
+					>
+						{/* Tab Navigation - Only show Rates and Calculator */}
+						<div className="flex mb-6 sm:mb-8 overflow-x-auto">
+							<div
+								ref={tabsRef}
+								className="relative inline-flex p-1 bg-muted/50 rounded-lg border border-border/50 min-w-full sm:min-w-0"
+							>
+								{/* Sliding background indicator */}
 								<div
-									ref={tabsRef}
-									className="relative inline-flex p-1 bg-muted/50 rounded-lg border border-border/50 min-w-full sm:min-w-0"
-								>
-									{/* Sliding background indicator */}
-									<div
-										className="absolute h-[calc(100%-8px)] top-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
-										style={{
-											width: indicatorStyle.width,
-											transform: `translateX(${indicatorStyle.left}px)`,
-										}}
-									/>
+									className="absolute h-[calc(100%-8px)] top-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
+									style={{
+										width: indicatorStyle.width,
+										transform: `translateX(${indicatorStyle.left}px)`,
+									}}
+								/>
 
-									{/* Tab buttons - Only Rates and Calculator visible */}
-									<div className="relative z-10 flex w-full sm:w-auto">
-										<button
-											data-value="rates"
-											onClick={() =>
-												setActiveTab("rates")
-											}
-											className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-												activeTab === "rates"
-													? "text-foreground"
-													: "text-muted-foreground hover:text-foreground"
-											}`}
-										>
-											{t("affiliate.tabs.rates")}
-										</button>
-										<button
-											data-value="calculator"
-											onClick={() =>
-												setActiveTab("calculator")
-											}
-											className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-												activeTab === "calculator"
-													? "text-foreground"
-													: "text-muted-foreground hover:text-foreground"
-											}`}
-										>
-											{t("affiliate.tabs.calculator")}
-										</button>
-									</div>
+								{/* Tab buttons - Only Rates and Calculator visible */}
+								<div className="relative z-10 flex w-full sm:w-auto">
+									<button
+										data-value="rates"
+										onClick={() => setActiveTab("rates")}
+										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+											activeTab === "rates"
+												? "text-foreground"
+												: "text-muted-foreground hover:text-foreground"
+										}`}
+									>
+										{t("affiliate.tabs.rates")}
+									</button>
+									<button
+										data-value="calculator"
+										onClick={() =>
+											setActiveTab("calculator")
+										}
+										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+											activeTab === "calculator"
+												? "text-foreground"
+												: "text-muted-foreground hover:text-foreground"
+										}`}
+									>
+										{t("affiliate.tabs.calculator")}
+									</button>
 								</div>
 							</div>
+						</div>
 
-							{/* Tab Content */}
-							<div className="min-h-[400px] sm:min-h-[600px]">
-								<TabsContent value="rates" className="mt-0">
-									<RatesTab />
-								</TabsContent>
-								<TabsContent
-									value="calculator"
-									className="mt-0"
-								>
-									<CalculatorTab />
-								</TabsContent>
-							</div>
-						</Tabs>
-					</Suspense>
+						{/* Tab Content */}
+						<div className="min-h-[400px] sm:min-h-[600px]">
+							<TabsContent value="rates" className="mt-0">
+								<RatesTab />
+							</TabsContent>
+							<TabsContent value="calculator" className="mt-0">
+								<CalculatorTab />
+							</TabsContent>
+						</div>
+					</Tabs>
+					{/* </Suspense> */}
 				</div>
 			</div>
 		);
 	}
 	return (
-		<div className="min-h-screen bg-background">
-			<div className="py-4 sm:py-6 space-y-6 sm:space-y-8 px-4 sm:px-6 lg:px-8">
+		<div className="flex flex-col bg-background">
+			<div className="flex-1 py-4 sm:py-6 space-y-6 sm:space-y-8">
 				{/* Header Section with Refresh Button */}
 				<div className="flex items-center justify-between flex-wrap gap-4">
 					<div className="space-y-2 sm:space-y-4">
@@ -352,86 +354,82 @@ export default function AffiliatePage() {
 					</Button>
 				</div>
 
-				<Suspense fallback={<AffiliateFallback />}>
-					<Tabs
-						value={activeTab}
-						onValueChange={setActiveTab}
-						className="w-full"
-					>
-						{/* Clean Tab Navigation with sliding indicator */}
-						<div className="flex mb-6 sm:mb-8 overflow-x-auto">
+				{/* <Suspense fallback={<AffiliateFallback />}> */}
+				<Tabs
+					value={activeTab}
+					onValueChange={setActiveTab}
+					className="w-full"
+				>
+					{/* Clean Tab Navigation with sliding indicator */}
+					<div className="flex mb-6 sm:mb-8 overflow-x-auto">
+						<div
+							ref={tabsRef}
+							className="relative inline-flex p-1 bg-muted/50 rounded-lg border border-border/50 min-w-full sm:min-w-0"
+						>
+							{/* Sliding background indicator */}
 							<div
-								ref={tabsRef}
-								className="relative inline-flex p-1 bg-muted/50 rounded-lg border border-border/50 min-w-full sm:min-w-0"
-							>
-								{/* Sliding background indicator */}
-								<div
-									className="absolute h-[calc(100%-8px)] top-1 left-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
-									style={{
-										width: `calc(${indicatorStyle.width}px - 8px)`,
-										transform: `translateX(${
-											indicatorStyle.left - 4
-										}px)`,
-									}}
-								/>
+								className="absolute h-[calc(100%-8px)] top-1 left-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
+								style={{
+									width: `calc(${indicatorStyle.width}px - 8px)`,
+									transform: `translateX(${
+										indicatorStyle.left - 4
+									}px)`,
+								}}
+							/>
 
-								{/* Tab buttons */}
-								<div className="relative z-10 flex w-full sm:w-auto">
-									<button
-										data-value="dashboard"
-										onClick={() =>
-											setActiveTab("dashboard")
-										}
-										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-											activeTab === "dashboard"
-												? "text-foreground"
-												: "text-muted-foreground hover:text-foreground"
-										}`}
-									>
-										{t("affiliate.tabs.dashboard")}
-									</button>
-									<button
-										data-value="rates"
-										onClick={() => setActiveTab("rates")}
-										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-											activeTab === "rates"
-												? "text-foreground"
-												: "text-muted-foreground hover:text-foreground"
-										}`}
-									>
-										{t("affiliate.tabs.rates")}
-									</button>
-									<button
-										data-value="calculator"
-										onClick={() =>
-											setActiveTab("calculator")
-										}
-										className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-											activeTab === "calculator"
-												? "text-foreground"
-												: "text-muted-foreground hover:text-foreground"
-										}`}
-									>
-										{t("affiliate.tabs.calculator")}
-									</button>
-								</div>
+							{/* Tab buttons */}
+							<div className="relative z-10 flex w-full sm:w-auto">
+								<button
+									data-value="dashboard"
+									onClick={() => setActiveTab("dashboard")}
+									className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+										activeTab === "dashboard"
+											? "text-foreground"
+											: "text-muted-foreground hover:text-foreground"
+									}`}
+								>
+									{t("affiliate.tabs.dashboard")}
+								</button>
+								<button
+									data-value="rates"
+									onClick={() => setActiveTab("rates")}
+									className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+										activeTab === "rates"
+											? "text-foreground"
+											: "text-muted-foreground hover:text-foreground"
+									}`}
+								>
+									{t("affiliate.tabs.rates")}
+								</button>
+								<button
+									data-value="calculator"
+									onClick={() => setActiveTab("calculator")}
+									className={`px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+										activeTab === "calculator"
+											? "text-foreground"
+											: "text-muted-foreground hover:text-foreground"
+									}`}
+								>
+									{t("affiliate.tabs.calculator")}
+								</button>
 							</div>
 						</div>
+					</div>
 
-						{/* Tab Content */}
-						<div className="min-h-[400px] sm:min-h-[600px]">
-							<TabsContent value="dashboard" className="mt-0">
-								<DashboardTab />
-							</TabsContent>
-							<TabsContent value="rates" className="mt-0">
-								<RatesTab />
-							</TabsContent>
-							<TabsContent value="calculator" className="mt-0">
-								<CalculatorTab />
-							</TabsContent>
-						</div>
-					</Tabs>
-				</Suspense>
+					{/* Tab Content */}
+					<div className="min-h-[400px] sm:min-h-[600px]">
+						<TabsContent value="dashboard" className="mt-0">
+							<DashboardTab />
+						</TabsContent>
+						<TabsContent value="rates" className="mt-0">
+							<RatesTab />
+						</TabsContent>
+						<TabsContent value="calculator" className="mt-0">
+							<CalculatorTab />
+						</TabsContent>
+					</div>
+				</Tabs>
+				{/* </Suspense> */}
 			</div>
 		</div>
 	);

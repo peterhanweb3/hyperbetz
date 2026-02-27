@@ -1,13 +1,13 @@
 import type { NextConfig } from "next";
 // import path from "path";
+import bundleAnalyzer from "@next/bundle-analyzer";
 
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
+const withBundleAnalyzer = bundleAnalyzer({
 	enabled: process.env.ANALYZE === "true",
 });
 const nextConfig: NextConfig = {
 	// Re-enable strict mode for better development experience and catching bugs
 	reactStrictMode: true,
-
 	// Production optimizations
 	compiler: {
 		// Remove console.logs in production but keep error/warn
@@ -217,4 +217,5 @@ const nextConfig: NextConfig = {
 	// },
 };
 
+// export default nextConfig;
 export default withBundleAnalyzer(nextConfig);

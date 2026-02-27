@@ -13,6 +13,7 @@ import { useTranslations } from "@/lib/locale-provider";
  */
 export const RatesTab = () => {
 	const { affiliateRates, isLoading } = useAffiliateDashboard();
+	const showSkeleton = isLoading || affiliateRates.length === 0;
 	const t = useTranslations("affiliate.rates");
 
 	return (
@@ -55,7 +56,10 @@ export const RatesTab = () => {
 			</div>
 
 			{/* Rates Table */}
-			<RatesTable affiliateRates={affiliateRates} isLoading={isLoading} />
+			<RatesTable
+				affiliateRates={affiliateRates}
+				isLoading={showSkeleton}
+			/>
 		</div>
 	);
 };

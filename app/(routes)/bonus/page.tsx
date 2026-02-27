@@ -1,8 +1,13 @@
 "use client";
-import { Suspense, useState, useRef, useEffect } from "react";
+import {
+	//  Suspense,
+	useState,
+	useRef,
+	useEffect,
+} from "react";
 import { BonusDashboardTab } from "@/components/features/bonus/dashboard-tab/bonus-dashboard-tab";
 import { BonusClaimsTab } from "@/components/features/bonus/claims-tab/bonus-claims-tab";
-import { BonusFallback } from "@/components/features/bonus/bonus-fallback";
+// import { BonusFallback } from "@/components/features/bonus/bonus-fallback";
 import { useDynamicAuth } from "@/hooks/useDynamicAuth";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
@@ -16,7 +21,10 @@ import useBonusClaims from "@/hooks/bonus/useBonusClaims";
 
 export default function BonusPage() {
 	const t = useT();
-	const { user, isLoading } = useDynamicAuth();
+	const {
+		user,
+		//  isLoading
+	} = useDynamicAuth();
 	const [isRefreshing, setIsRefreshing] = useState(false);
 	const [refreshCooldown, setRefreshCooldown] = useState(0);
 	const [activeTab, setActiveTab] = useState<string>(
@@ -142,18 +150,20 @@ export default function BonusPage() {
 	};
 
 	// Loading state placeholder
-	if (isLoading) {
-		return (
-			<div className="container mx-auto py-8">
-				<div className="h-8 w-56 bg-muted rounded-lg animate-pulse mb-6" />
-				<BonusFallback />
-			</div>
-		);
-	}
+	// if (isLoading) {
+	// 	return (
+	// 		<div className="bg-background flex flex-col">
+	// 			<main className="flex-1 container mx-auto py-8">
+	// 				<div className="h-8 w-56 bg-muted rounded-lg animate-pulse mb-6" />
+	// 				<BonusFallback />
+	// 			</main>
+	// 		</div>
+	// 	);
+	// }
 	if (!user) {
 		return (
-			<div className="min-h-screen bg-background">
-				<div className="py-4 sm:py-6 space-y-6 sm:space-y-8">
+			<div className="flex flex-col bg-background">
+				<div className="flex-1 py-4 sm:py-6 space-y-6 sm:space-y-8">
 					{/* Header Section */}
 					<div className="flex items-center justify-between flex-wrap gap-4">
 						<div className="space-y-2 sm:space-y-4">
@@ -163,119 +173,13 @@ export default function BonusPage() {
 						</div>
 					</div>
 
-					<Suspense fallback={<BonusFallback />}>
-						<Tabs
-							value={activeTab}
-							onValueChange={setActiveTab}
-							className="w-full"
-						>
-							{/* Tab Navigation - Only show Rates and Calculator */}
-							<div className="flex mb-6 sm:mb-8 overflow-x-auto">
-								<div
-									ref={tabsRef}
-									className="relative inline-flex p-1 bg-muted/50 rounded-lg border border-border/50 min-w-full sm:min-w-0"
-								>
-									{/* Sliding background indicator */}
-									<div
-										className="absolute h-[calc(100%-8px)] top-1 left-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
-										style={{
-											width: `calc(${indicatorStyle.width}px - 8px)`,
-											transform: `translateX(${
-												indicatorStyle.left - 4
-											}px)`,
-										}}
-									/>
-
-									{/* Tab buttons - Only Rates and Calculator visible */}
-									<div className="relative z-10 flex w-full sm:w-auto">
-										<button
-											data-value="rates"
-											onClick={() =>
-												setActiveTab("rates")
-											}
-											className={`px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-												activeTab === "rates"
-													? "text-foreground"
-													: "text-muted-foreground hover:text-foreground"
-											}`}
-										>
-											{t("bonus.tabs.rates")}
-										</button>
-										<button
-											data-value="calculator"
-											onClick={() =>
-												setActiveTab("calculator")
-											}
-											className={`px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-												activeTab === "calculator"
-													? "text-foreground"
-													: "text-muted-foreground hover:text-foreground"
-											}`}
-										>
-											{t("bonus.tabs.calculator")}
-										</button>
-									</div>
-								</div>
-							</div>
-
-							{/* Tab Content */}
-							<div className="min-h-[400px] sm:min-h-[600px]">
-								<TabsContent value="rates" className="mt-0">
-									<BonusRatesTab />
-								</TabsContent>
-								<TabsContent
-									value="calculator"
-									className="mt-0"
-								>
-									<CalculatorTab context="bonus" />
-								</TabsContent>
-							</div>
-						</Tabs>
-					</Suspense>
-				</div>
-			</div>
-		);
-	}
-
-	return (
-		<div className="min-h-screen bg-background">
-			<div className="py-4 sm:py-6 space-y-6 sm:space-y-8">
-				{/* Header Section with Refresh Button */}
-				<div className="flex items-center justify-between flex-wrap gap-4">
-					<div className="space-y-2 sm:space-y-4">
-						<h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground">
-							{t("bonus.title")}
-						</h1>
-					</div>
-					<Button
-						onClick={handleRefresh}
-						disabled={isRefreshing || refreshCooldown > 0}
-						variant="outline"
-						size="sm"
-						className="flex items-center gap-2 hover:bg-primary/10 hover:border-primary/30 transition-colors disabled:opacity-50"
-					>
-						<FontAwesomeIcon
-							icon={faRefresh}
-							fontSize={16}
-							className={` ${isRefreshing ? "animate-spin" : ""}`}
-						/>
-						<span className="hidden xs:inline">
-							{isRefreshing
-								? t("bonus.refreshing")
-								: refreshCooldown > 0
-								? `${refreshCooldown}s`
-								: t("bonus.refresh")}
-						</span>
-					</Button>
-				</div>
-
-				<Suspense fallback={<BonusFallback />}>
+					{/* <Suspense fallback={<BonusFallback />}> */}
 					<Tabs
 						value={activeTab}
 						onValueChange={setActiveTab}
 						className="w-full"
 					>
-						{/* Clean Tab Navigation with sliding indicator */}
+						{/* Tab Navigation - Only show Rates and Calculator */}
 						<div className="flex mb-6 sm:mb-8 overflow-x-auto">
 							<div
 								ref={tabsRef}
@@ -292,32 +196,8 @@ export default function BonusPage() {
 									}}
 								/>
 
-								{/* Tab buttons */}
+								{/* Tab buttons - Only Rates and Calculator visible */}
 								<div className="relative z-10 flex w-full sm:w-auto">
-									<button
-										data-value="dashboard"
-										onClick={() =>
-											setActiveTab("dashboard")
-										}
-										className={`px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-											activeTab === "dashboard"
-												? "text-foreground"
-												: "text-muted-foreground hover:text-foreground"
-										}`}
-									>
-										{t("bonus.tabs.dashboard")}
-									</button>
-									<button
-										data-value="claims"
-										onClick={() => setActiveTab("claims")}
-										className={`px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
-											activeTab === "claims"
-												? "text-foreground"
-												: "text-muted-foreground hover:text-foreground"
-										}`}
-									>
-										{t("bonus.tabs.claims")}
-									</button>
 									<button
 										data-value="rates"
 										onClick={() => setActiveTab("rates")}
@@ -348,12 +228,6 @@ export default function BonusPage() {
 
 						{/* Tab Content */}
 						<div className="min-h-[400px] sm:min-h-[600px]">
-							<TabsContent value="dashboard" className="mt-0">
-								<BonusDashboardTab />
-							</TabsContent>
-							<TabsContent value="claims" className="mt-0">
-								<BonusClaimsTab />
-							</TabsContent>
 							<TabsContent value="rates" className="mt-0">
 								<BonusRatesTab />
 							</TabsContent>
@@ -362,7 +236,134 @@ export default function BonusPage() {
 							</TabsContent>
 						</div>
 					</Tabs>
-				</Suspense>
+					{/* </Suspense> */}
+				</div>
+			</div>
+		);
+	}
+
+	return (
+		<div className="flex flex-col bg-background">
+			<div className="flex-1 py-4 sm:py-6 space-y-6 sm:space-y-8">
+				{/* Header Section with Refresh Button */}
+				<div className="flex items-center justify-between flex-wrap gap-4">
+					<div className="space-y-2 sm:space-y-4">
+						<h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground">
+							{t("bonus.title")}
+						</h1>
+					</div>
+					<Button
+						onClick={handleRefresh}
+						disabled={isRefreshing || refreshCooldown > 0}
+						variant="outline"
+						size="sm"
+						className="flex items-center gap-2 hover:bg-primary/10 hover:border-primary/30 transition-colors disabled:opacity-50"
+					>
+						<FontAwesomeIcon
+							icon={faRefresh}
+							fontSize={16}
+							className={` ${isRefreshing ? "animate-spin" : ""}`}
+						/>
+						<span className="hidden xs:inline">
+							{isRefreshing
+								? t("bonus.refreshing")
+								: refreshCooldown > 0
+								? `${refreshCooldown}s`
+								: t("bonus.refresh")}
+						</span>
+					</Button>
+				</div>
+
+				{/* <Suspense fallback={<BonusFallback />}> */}
+				<Tabs
+					value={activeTab}
+					onValueChange={setActiveTab}
+					className="w-full"
+				>
+					{/* Clean Tab Navigation with sliding indicator */}
+					<div className="flex mb-6 sm:mb-8 overflow-x-auto">
+						<div
+							ref={tabsRef}
+							className="relative inline-flex p-1 bg-muted/50 rounded-lg border border-border/50 min-w-full sm:min-w-0"
+						>
+							{/* Sliding background indicator */}
+							<div
+								className="absolute h-[calc(100%-8px)] top-1 left-1 rounded-md bg-background shadow-sm border border-border/50 z-0 transition-all duration-300 ease-out"
+								style={{
+									width: `calc(${indicatorStyle.width}px - 8px)`,
+									transform: `translateX(${
+										indicatorStyle.left - 4
+									}px)`,
+								}}
+							/>
+
+							{/* Tab buttons */}
+							<div className="relative z-10 flex w-full sm:w-auto">
+								<button
+									data-value="dashboard"
+									onClick={() => setActiveTab("dashboard")}
+									className={`px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+										activeTab === "dashboard"
+											? "text-foreground"
+											: "text-muted-foreground hover:text-foreground"
+									}`}
+								>
+									{t("bonus.tabs.dashboard")}
+								</button>
+								<button
+									data-value="claims"
+									onClick={() => setActiveTab("claims")}
+									className={`px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+										activeTab === "claims"
+											? "text-foreground"
+											: "text-muted-foreground hover:text-foreground"
+									}`}
+								>
+									{t("bonus.tabs.claims")}
+								</button>
+								<button
+									data-value="rates"
+									onClick={() => setActiveTab("rates")}
+									className={`px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+										activeTab === "rates"
+											? "text-foreground"
+											: "text-muted-foreground hover:text-foreground"
+									}`}
+								>
+									{t("bonus.tabs.rates")}
+								</button>
+								<button
+									data-value="calculator"
+									onClick={() => setActiveTab("calculator")}
+									className={`px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-md relative flex-1 sm:flex-initial ${
+										activeTab === "calculator"
+											? "text-foreground"
+											: "text-muted-foreground hover:text-foreground"
+									}`}
+								>
+									{t("bonus.tabs.calculator")}
+								</button>
+							</div>
+						</div>
+					</div>
+
+					{/* Tab Content */}
+					<div className="min-h-[400px] sm:min-h-[600px]">
+						<TabsContent value="dashboard" className="mt-0">
+							<BonusDashboardTab />
+						</TabsContent>
+						<TabsContent value="claims" className="mt-0">
+							<BonusClaimsTab />
+						</TabsContent>
+						<TabsContent value="rates" className="mt-0">
+							<BonusRatesTab />
+						</TabsContent>
+						<TabsContent value="calculator" className="mt-0">
+							<CalculatorTab context="bonus" />
+						</TabsContent>
+					</div>
+				</Tabs>
+				{/* </Suspense> */}
 			</div>
 		</div>
 	);

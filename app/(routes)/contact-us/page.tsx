@@ -1,16 +1,15 @@
-"use client";
-
-import { Suspense, lazy } from "react";
-import { ContactPageSkeleton } from "@/components/features/contact/contact-skeleton";
-
-const ContactContent = lazy(
-	() => import("@/components/features/contact/contact-content")
+import dynamic from "next/dynamic";
+import { ContactPageSkeleton } from "@/components/features/skeletons/contact/contact-skeleton";
+const ContactContent = dynamic(
+	() =>
+		import("@/components/features/contact/contact-content").then((mod) => ({
+			default: mod.default,
+		})),
+	{
+		loading: () => <ContactPageSkeleton />,
+	}
 );
 
 export default function ContactPage() {
-	return (
-		<Suspense fallback={<ContactPageSkeleton />}>
-			<ContactContent />
-		</Suspense>
-	);
+	return <ContactContent />;
 }

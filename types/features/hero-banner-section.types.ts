@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Game } from "@/types/games/gameList.types";
 
 // --- Data Shape Definitions ---

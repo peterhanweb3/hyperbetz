@@ -64,26 +64,23 @@ const ProviderGridCardSkeleton = ({ className }: { className?: string }) => {
 export default function ProviderCarouselSectionSkeleton({
 	className,
 	isSingleRow = false,
-	totalItems = 8,
+	totalItems = 6,
 }: ProviderCarouselSkeletonProps) {
-	// Generate skeleton providers (8 items duplicated 4 times = 32 total)
+	// Generate a base set of skeleton providers (default 6)
 	const skeletonProviders = Array.from({ length: totalItems }, (_, i) => ({
 		id: `skeleton-${i}`,
 	}));
 
-	const displayFirstRow = [
-		...skeletonProviders,
-		...skeletonProviders,
-		...skeletonProviders,
-		...skeletonProviders,
-	];
-
-	const displaySecondRow = [
-		...skeletonProviders,
-		...skeletonProviders,
-		...skeletonProviders,
-		...skeletonProviders,
-	];
+	// Duplicate each base set twice to keep a seamless loop without ballooning DOM nodes
+	const repeatCount = 2;
+	const displayFirstRow = Array.from(
+		{ length: repeatCount },
+		() => skeletonProviders
+	).flat();
+	const displaySecondRow = Array.from(
+		{ length: repeatCount },
+		() => skeletonProviders
+	).flat();
 
 	return (
 		<>

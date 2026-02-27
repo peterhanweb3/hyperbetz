@@ -12,6 +12,7 @@ import { useTranslations } from "@/lib/locale-provider";
  */
 export const BonusRatesTab = () => {
 	const { bonusRates, isLoading } = useBonusDashboard();
+	const showSkeleton = isLoading || bonusRates.length === 0;
 	const t = useTranslations("bonus.rates");
 
 	return (
@@ -56,7 +57,7 @@ export const BonusRatesTab = () => {
 			{/* Rates Table - Reusing from affiliate */}
 			<RatesTable
 				affiliateRates={bonusRates}
-				isLoading={isLoading}
+				isLoading={showSkeleton}
 				context="bonus"
 			/>
 		</div>
