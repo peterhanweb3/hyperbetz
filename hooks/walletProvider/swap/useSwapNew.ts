@@ -156,6 +156,8 @@ const useSwap = (options: UseSwapOptions = {}): UseSwapReturn => {
 		transactionSuccess,
 		successPop,
 		txHash,
+		isPending,
+		timeLeft,
 		completedExchangeAmount,
 		completedReceivedAmount,
 		completedFromToken,
@@ -273,10 +275,10 @@ const useSwap = (options: UseSwapOptions = {}): UseSwapReturn => {
 	 */
 	const showGasFee = Boolean(
 		exchangeAmount &&
-			receivedAmount &&
-			fromToken &&
-			toToken &&
-			parseFloat(exchangeAmount) > 0
+		receivedAmount &&
+		fromToken &&
+		toToken &&
+		parseFloat(exchangeAmount) > 0
 	);
 
 	/**
@@ -397,6 +399,8 @@ const useSwap = (options: UseSwapOptions = {}): UseSwapReturn => {
 		transactionSuccess,
 		successPop,
 		txHash,
+		isPending,
+		timeLeft,
 		completedExchangeAmount,
 		completedReceivedAmount,
 		completedFromToken,

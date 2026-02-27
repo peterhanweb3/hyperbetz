@@ -2,9 +2,8 @@
 import { Button } from "@/components/ui/button";
 import { Loader2, CheckCircle, XCircle } from "lucide-react";
 import { useAppStore } from "@/store/store";
-import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
-import { useEffect, useState } from "react";
 import { useTranslations } from "@/lib/locale-provider";
+import { useBlockExplorerUrl } from "@/hooks/walletProvider/useBlockExplorerUrl";
 
 interface TransactionPendingProps {
 	transactionHash: string | null;
@@ -25,25 +24,15 @@ export const DepositTransactionPending = ({
 		)
 	);
 
-	const [blockExplorerUrl, setBlockExplorerUrl] = useState<string | null>(
-		null
-	);
-
-	const { primaryWallet } = useDynamicContext();
+	const { getTransactionUrl } = useBlockExplorerUrl();
 
 	const isConfirmed = tx?.status === "confirmed";
 	const isFailed = tx?.status === "failed";
 	const showFailedMessage = isFailed || timeLeft === 0;
 
-	useEffect(() => {
-		primaryWallet?.connector
-			.getBlockExplorerUrlsForCurrentNetwork()
-			.then((urls) => {
-				if (urls && urls.length > 0) {
-					setBlockExplorerUrl(urls[0]);
-				}
-			});
-	}, [primaryWallet]);
+	const explorerTxUrl = transactionHash
+		? getTransactionUrl(transactionHash)
+		: null;
 
 	return (
 		<div className="text-center space-y-4">
@@ -59,16 +48,16 @@ export const DepositTransactionPending = ({
 				{showFailedMessage
 					? t("failedTitle")
 					: isConfirmed
-					? t("confirmedTitle")
-					: t("submittedTitle")}
+						? t("confirmedTitle")
+						: t("submittedTitle")}
 			</h4>
 
 			<p className="text-sm text-muted-foreground">
 				{showFailedMessage
 					? t("failedDesc")
 					: isConfirmed
-					? t("confirmedDesc")
-					: t("submittedDesc")}
+						? t("confirmedDesc")
+						: t("submittedDesc")}
 			</p>
 
 			{/* Countdown timer is only shown while pending */}
@@ -76,9 +65,9 @@ export const DepositTransactionPending = ({
 				<p className="text-2xl font-semibold">{timeLeft}s</p>
 			)}
 
-			{transactionHash && (
+			{explorerTxUrl && (
 				<a
-					href={`${blockExplorerUrl}/tx/${transactionHash}`}
+					href={explorerTxUrl}
 					target="_blank"
 					rel="noopener noreferrer"
 					className="text-xs text-primary underline break-all block"
@@ -96,8 +85,8 @@ export const DepositTransactionPending = ({
 				{showFailedMessage
 					? t("newDepositFailed")
 					: isConfirmed
-					? t("newDepositConfirmed")
-					: t("newDepositPending")}
+						? t("newDepositConfirmed")
+						: t("newDepositPending")}
 			</Button>
 		</div>
 	);

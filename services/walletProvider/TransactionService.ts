@@ -1,4 +1,4 @@
-import { ethers } from "ethers";
+import { parseUnits as ethersParseUnits } from "ethers";
 import abiErc20 from "@/abi/erc20.json";
 import { getAuthToken } from "@dynamic-labs/sdk-react-core";
 
@@ -53,7 +53,6 @@ import {
 	TipWalletResponse,
 } from "@/types/walletProvider/transaction-service.types";
 import { parseAbi, parseUnits } from "viem";
-import { SendTransactionParameters } from "viem/zksync";
 import { toast } from "sonner";
 
 interface ApiResponse<T> {
@@ -157,7 +156,7 @@ class TransactionService {
 		try {
 			const maxAmount = unlimited
 				? "115792089237316195423570985008687907853269984665640564039457584007913129639935"
-				: ethers.parseUnits("1000000", 18);
+				: ethersParseUnits("1000000", 18);
 
 			const walletClient = await this.primaryWallet?.getWalletClient();
 
@@ -248,7 +247,10 @@ class TransactionService {
 			primaryWallet, // Use the primary wallet for authentication
 		} = params;
 
-		if (!primaryWallet) {
+		// Use passed primaryWallet parameter, fall back to stored singleton
+		const wallet = primaryWallet || this.primaryWallet;
+
+		if (!wallet) {
 			throw new Error("Primary wallet is not set");
 		}
 
@@ -277,28 +279,36 @@ class TransactionService {
 				);
 			}
 
-			// Execute transaction
+			// Check if the response contains the necessary transaction data
 			const txDetails = swapResponse.data;
+			if ("error" in txDetails) {
+				throw new Error(
+					`Transaction Failed: ${txDetails.description?.replace(/\b\w/g, (char) => char.toUpperCase())}`
+				);
+			}
 
-			const tx = {
-				to: txDetails.to,
-				data: txDetails.data,
-				value: txDetails.value,
-				from: walletAddress,
-			};
+			//  Check if walletClient is available before sending transaction
+			const walletClient = await wallet.getWalletClient();
+			if (!walletClient) {
+				throw new Error(
+					"Failed to get wallet client from connected wallet"
+				);
+			}
 
-			const walletClient = await this.primaryWallet?.getWalletClient();
-			const hash = await walletClient?.sendTransaction(
-				tx as unknown as SendTransactionParameters
-			);
+			// Execute transaction only if txDetails contains the required fields
+			const hash = await walletClient.sendTransaction({
+				to: txDetails.to as `0x${string}`,
+				data: txDetails.data as `0x${string}`,
+				value: BigInt(txDetails.value || "0"),
+				account: walletAddress as `0x${string}`,
+			});
 
 			return {
 				success: true,
-				txHash: hash || "tempHash",
+				txHash: hash,
 				error: null,
 			};
 		} catch (error) {
-			console.error("Swap execution failed:", error);
 			return {
 				success: false,
 				txHash: null,

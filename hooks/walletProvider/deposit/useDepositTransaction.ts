@@ -378,7 +378,6 @@ export const useDepositTransaction = ({
 				network: chainId,
 			});
 		} catch (error) {
-			console.error("Deposit transaction failed:", error);
 			console.error("Error details:", {
 				message: (error as Error)?.message,
 				shortMessage: (error as { shortMessage?: string })

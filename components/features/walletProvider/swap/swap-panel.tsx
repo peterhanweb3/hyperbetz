@@ -6,8 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { toast } from "sonner";
-import confetti from "canvas-confetti";
 import { selectNativeToken } from "@/store/selectors/blockchain/blockchain.selectors";
 
 import {
@@ -122,6 +120,8 @@ export const SwapPanel = memo(
 			// UI state
 			transactionSuccess,
 			txHash,
+			isPending,
+			timeLeft,
 			completedExchangeAmount,
 			completedReceivedAmount,
 			completedFromToken,
@@ -150,44 +150,8 @@ export const SwapPanel = memo(
 		// const toolTipText = t("maxButtonToolTipText", {
 		// 	gasReservationAmount,
 		// 	selectedTokenSymbol: fromToken?.symbol as string,
-		// });
-		// Effect to handle confetti and toast on transaction success
-		useEffect(() => {
-			if (transactionSuccess && txHash) {
-				// Trigger confetti
-				confetti({
-					particleCount: 100,
-					spread: 70,
-					origin: { y: 0.6 },
-					colors: [
-						"#10b981",
-						"#3b82f6",
-						"#f59e0b",
-						"#ef4444",
-						"#8b5cf6",
-					],
-				});
-
-				// Show success toast
-				toast.success(`Swap successful! `, {
-					description:
-						"Your transaction has been confirmed on the blockchain",
-					duration: 5000,
-				});
-				// toast.success(
-				// 	`Swap successful! ${formatAmount(
-				// 		completedExchangeAmount
-				// 	)} ${fromToken?.symbol} → ${formatAmount(
-				// 		completedReceivedAmount
-				// 	)} ${toToken?.symbol}`,
-				// 	{
-				// 		description:
-				// 			"Your transaction has been confirmed on the blockchain",
-				// 		duration: 5000,
-				// 	}
-				// );
-			}
-		}, [transactionSuccess, txHash]);
+		// Confetti and toast now handled inside useSwapTransaction hook
+		// after on-chain confirmation is received
 
 		useEffect(() => {
 			if (chainId) {
@@ -371,8 +335,111 @@ export const SwapPanel = memo(
 					<NetworkSelector />
 				</div>
 
-				{/* Transaction Success State */}
-				{transactionSuccess && txHash ? (
+				{/* Transaction Pending State */}
+				{isPending && txHash && !transactionSuccess ? (
+					<div className="p-6 space-y-4 text-center">
+						{/* Pending Spinner */}
+						<Loader2 className="mx-auto h-12 w-12 animate-spin text-primary" />
+
+						<h4 className="font-semibold text-lg">
+							{t("transactionSubmitted")}
+						</h4>
+
+						<p className="text-sm text-muted-foreground">
+							{t("waitingForConfirmation")}
+						</p>
+
+						{/* Countdown timer */}
+						{timeLeft > 0 && (
+							<p className="text-2xl font-semibold">
+								{timeLeft}s
+							</p>
+						)}
+
+						{/* Swap Details */}
+						{completedFromToken && completedToToken && (
+							<div className="bg-muted/30 rounded-lg p-3 border border-border/40 space-y-2 md:w-80 mx-auto">
+								<div className="flex items-center justify-between gap-2">
+									<div className="flex items-center gap-2 flex-1">
+										<div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-border/50">
+											<Image
+												src={completedFromToken.icon}
+												alt={completedFromToken.symbol}
+												width={24}
+												height={24}
+												className="w-6 h-6 object-cover"
+											/>
+										</div>
+										<div className="flex flex-col min-w-0">
+											<span className="text-xs text-muted-foreground">
+												{completedFromToken.symbol}
+											</span>
+											<span className="font-semibold text-sm truncate">
+												{formatAmount(
+													completedExchangeAmount ||
+														exchangeAmount
+												)}
+											</span>
+										</div>
+									</div>
+									<div className="flex-shrink-0 rotate-90">
+										<ArrowDownUp className="h-4 w-4 text-muted-foreground" />
+									</div>
+									<div className="flex items-center gap-2 flex-1 justify-end">
+										<div className="flex flex-col items-end min-w-0">
+											<span className="text-xs text-muted-foreground">
+												{completedToToken.symbol}
+											</span>
+											<span className="font-semibold text-sm truncate">
+												{formatAmount(
+													completedReceivedAmount ||
+														receivedAmount
+												)}
+											</span>
+										</div>
+										<div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-border/50">
+											<Image
+												src={completedToToken.icon}
+												alt={completedToToken.symbol}
+												width={24}
+												height={24}
+												className="w-6 h-6 object-cover"
+											/>
+										</div>
+									</div>
+								</div>
+							</div>
+						)}
+
+						{/* Explorer link */}
+						{getTransactionUrl(txHash) && (
+							<a
+								href={getTransactionUrl(txHash) || "#"}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-xs text-primary underline break-all block"
+							>
+								{t("viewOnExplorer")}
+							</a>
+						)}
+
+						{/* Timeout state */}
+						{timeLeft === 0 && (
+							<div className="space-y-2">
+								<p className="text-sm text-destructive">
+									{t("confirmationTimeout")}
+								</p>
+								<Button
+									onClick={resetSwapState}
+									variant="outline"
+									size="sm"
+								>
+									{t("newSwap")}
+								</Button>
+							</div>
+						)}
+					</div>
+				) : transactionSuccess && txHash ? (
 					<div className="p-6 space-y-3">
 						{/* Success Icon with Gradient Background */}
 						<div className="relative">
@@ -811,9 +878,9 @@ export const SwapPanel = memo(
 																	? "< $0.01"
 																	: `$${parseFloat(
 																			estimatedGas
-																	  ).toFixed(
+																		).toFixed(
 																			2
-																	  )}`}
+																		)}`}
 															</span>
 														</div>
 													</div>
@@ -857,9 +924,9 @@ export const SwapPanel = memo(
 																? "< $0.01"
 																: `$${parseFloat(
 																		estimatedGas
-																  ).toFixed(
+																	).toFixed(
 																		2
-																  )}`}
+																	)}`}
 														</span>
 													</div>
 												</div>

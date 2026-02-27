@@ -161,6 +161,8 @@ export interface UseSwapTransactionReturn {
 	transactionSuccess: boolean;
 	successPop: boolean;
 	txHash: string;
+	isPending: boolean;
+	timeLeft: number;
 	// Completed transaction amounts and tokens (stored before reset)
 	completedExchangeAmount: string;
 	completedReceivedAmount: string;
@@ -199,6 +201,8 @@ export interface UseSwapReturn {
 	transactionSuccess: boolean;
 	successPop: boolean;
 	txHash: string;
+	isPending: boolean;
+	timeLeft: number;
 	// Completed transaction amounts and tokens (stored before reset)
 	completedExchangeAmount: string;
 	completedReceivedAmount: string;

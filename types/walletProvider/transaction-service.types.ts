@@ -3,8 +3,8 @@
  * Contains all request/response types for blockchain transaction operations
  */
 
-import { Wallet } from "ethers";
-import { WalletClient, Transport, Chain, Account } from "viem";
+import type { Wallet } from "ethers";
+import type { WalletClient, Transport, Chain, Account } from "viem";
 
 export type PrimaryWalletWithClient = Wallet & {
 	getWalletClient(
@@ -100,6 +100,7 @@ export interface SwapTransactionData {
 	value: string;
 	gas: number;
 	gasPrice: string;
+	description?:string;
 }
 
 export interface SwapApiRequest {
