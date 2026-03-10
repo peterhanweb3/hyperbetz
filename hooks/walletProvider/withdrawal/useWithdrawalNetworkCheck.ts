@@ -1,35 +1,49 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import {
 	useDynamicContext,
 	dynamicEvents,
 	getNetwork,
+	getAuthToken,
 } from "@dynamic-labs/sdk-react-core";
-
-/**
- * An array of chain IDs where withdrawal functionality is supported.
- */
-export const SUPPORTED_WITHDRAWAL_NETWORKS: number[] = [42161, 137, 56,10];
+import TransactionService from "@/services/walletProvider/TransactionService";
 
 /**
  * A specialized, self-contained hook that actively listens for network changes
  * and determines if the current network is supported for withdrawals.
  *
- * This hook is a faithful and robust implementation of the original reference logic.
+ * Supported networks are fetched dynamically from the backend via /api/getWithdrawNetwork.
  *
  * @returns An object containing a boolean flag `isNetworkSupported`.
  */
+/**
+ * Map of chain IDs to human-readable network names.
+ */
+const CHAIN_ID_TO_NAME: Record<number, string> = {
+	1: "Ethereum",
+	10: "Optimism",
+	56: "BNB Smart Chain",
+	137: "Polygon",
+	8453: "Base",
+	42161: "Arbitrum",
+	43114: "Avalanche",
+	324: "zkSync Era",
+	59144: "Linea",
+	534352: "Scroll",
+};
+
 export const useWithdrawalNetworkCheck = () => {
 	const { primaryWallet } = useDynamicContext();
 	const [isNetworkSupported, setIsNetworkSupported] = useState(true); // Default to true to prevent initial UI flicker
+	const [supportedNetworks, setSupportedNetworks] = useState<number[]>([]);
+	const supportedNetworksRef = useRef<number[]>([]);
+	const hasFetchedRef = useRef(false);
 
-	useEffect(() => {
-		// This is the core logic, directly translated from your reference code.
-		const checkNetworkSupport = async () => {
+	const checkNetworkSupport = useCallback(
+		async (networks: number[]) => {
 			try {
 				if (!primaryWallet?.connector) {
-					// If there's no wallet, we can consider it unsupported for now.
 					setIsNetworkSupported(false);
 					return;
 				}
@@ -42,40 +56,72 @@ export const useWithdrawalNetworkCheck = () => {
 					return;
 				}
 
-				// The check is now against our centralized configuration.
 				setIsNetworkSupported(
-					SUPPORTED_WITHDRAWAL_NETWORKS.includes(Number(networkId))
+					networks.includes(Number(networkId))
 				);
 			} catch (error) {
 				console.error("Error checking network support:", error);
 				setIsNetworkSupported(false);
 			}
+		},
+		[primaryWallet]
+	);
+
+	// Fetch supported networks from the backend
+	useEffect(() => {
+		let cancelled = false;
+
+		const fetchSupportedNetworks = async () => {
+			try {
+				const authToken = getAuthToken();
+				const transactionService = TransactionService.getInstance();
+				const response = await transactionService.fetchWithdrawNetworks(
+					authToken || undefined
+				);
+
+				if (!cancelled && !response.error && response.data) {
+					const networks = response.data.map(Number);
+					supportedNetworksRef.current = networks;
+					setSupportedNetworks(networks);
+					hasFetchedRef.current = true;
+					checkNetworkSupport(networks);
+				}
+			} catch (error) {
+				console.error("Error fetching supported withdrawal networks:", error);
+			}
 		};
 
-		// --- Lifecycle Management ---
+		fetchSupportedNetworks();
 
-		// 1. Initial check when the wallet is available.
-		checkNetworkSupport();
+		return () => {
+			cancelled = true;
+		};
+	}, [checkNetworkSupport]);
 
-		// 2. Set up the event listener to react to network changes in real-time.
+	// Listen for network changes
+	useEffect(() => {
 		const handleNetworkChange = () => {
-			checkNetworkSupport();
+			if (hasFetchedRef.current) {
+				checkNetworkSupport(supportedNetworksRef.current);
+			}
 		};
 
 		dynamicEvents.on("primaryWalletNetworkChanged", handleNetworkChange);
 
-		// 3. The crucial cleanup function to prevent memory leaks.
 		return () => {
 			dynamicEvents.off(
 				"primaryWalletNetworkChanged",
 				handleNetworkChange
 			);
 		};
+	}, [checkNetworkSupport]);
 
-		// This effect correctly re-runs only when the primary wallet object itself changes.
-	}, [primaryWallet]);
+	const supportedNetworkNames = supportedNetworks
+		.map((id) => CHAIN_ID_TO_NAME[id] || `Chain ${id}`)
+		.join(", ");
 
 	return {
 		isNetworkSupported,
+		supportedNetworkNames,
 	};
 };

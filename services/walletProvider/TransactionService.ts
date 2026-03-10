@@ -942,8 +942,19 @@ class TransactionService {
 	}
 
 	/**
-	 * Fetch available withdrawal tokens from API
+	 * Fetch supported withdrawal networks from API
 	 */
+	async fetchWithdrawNetworks(
+		jwtToken?: string
+	): Promise<ApiResponse<string[]>> {
+		return this.makeRequest<string[]>(
+			"/api/getWithdrawNetwork",
+			"POST",
+			{ api_key: this.apiKey, jwt_type: this.jwtType },
+			jwtToken
+		);
+	}
+
 	/**
 	 * Fetch available withdrawal tokens from API
 	 */

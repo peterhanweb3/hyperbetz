@@ -50,6 +50,7 @@ export const WithdrawPanel = memo(
 			isBalanceInsufficient,
 			isBelowMinimum,
 			isNetworkSupported,
+			supportedNetworkNames,
 			minWithdrawAmount,
 			showSuccessModal,
 			isFetchingMinWithdrawAmount,
@@ -173,8 +174,13 @@ export const WithdrawPanel = memo(
 										<AlertTitle>
 											<AlertTriangle className="mx-auto" />
 										</AlertTitle>
-										<AlertDescription className="mx-auto">
-											{t("networkNotSupported")}
+										<AlertDescription className="mx-auto text-center">
+											{/* {t("networkNotSupported")} */}
+											{supportedNetworkNames && (
+												<span className="block mt-1 text-xs">
+													Withdrawals are only supported on: {supportedNetworkNames}
+												</span>
+											)}
 										</AlertDescription>
 									</Alert>
 								)}

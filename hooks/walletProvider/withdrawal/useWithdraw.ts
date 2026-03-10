@@ -93,7 +93,7 @@ export const useWithdraw = () => {
 
 	// A. Get Global Context and Source State
 	const { user, refreshUserData } = useDynamicAuth();
-	const { isNetworkSupported } = useWithdrawalNetworkCheck();
+	const { isNetworkSupported, supportedNetworkNames } = useWithdrawalNetworkCheck();
 
 	// B. Initialize the SELF-SUFFICIENT Form State and Token Fetching Hook
 	const {
@@ -261,6 +261,7 @@ export const useWithdraw = () => {
 		isBalanceInsufficient,
 		isBelowMinimum,
 		isNetworkSupported,
+		supportedNetworkNames,
 		showReservedModal,
 		availableTokens,
 		isLoadingTokens,
