@@ -40,7 +40,7 @@ export default async function RootLayout({
 		const host = headersList.get("host") || "hyperholaholah.xyz";
 		const tld = host.split(".").slice(-1)[0];
 		if (tld === "games") gId = "G-CM98Y8Y7K3";
-		else if (tld === "com") gId = "G-KFL77EFTYF";
+		else if (tld === "com") gId = "G-CM98Y8Y7K3";
 		else if (tld === "io") gId = "G-GP5JC4P9J3";
 		else if (tld === "xyz") gId = "G-FSYDFS0LM6";
 	} catch {
