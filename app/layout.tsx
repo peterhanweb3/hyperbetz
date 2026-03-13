@@ -65,10 +65,10 @@ export default async function RootLayout({
 
 				<Script
 					src={`https://www.googletagmanager.com/gtag/js?id=${gId}`}
-					strategy="afterInteractive"
+					strategy="beforeInteractive"
 					defer
 				/>
-				<Script id="google-analytics" strategy="afterInteractive" defer>
+				<Script id="google-analytics" strategy="beforeInteractive" defer>
 					{`
 						window.dataLayer = window.dataLayer || [];
 						function gtag(){dataLayer.push(arguments);}
