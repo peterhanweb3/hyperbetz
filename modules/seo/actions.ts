@@ -38,15 +38,33 @@ export async function createSeoPage(data: {
 }) {
 	const { carousels, published, ...restData } = data;
 
-	await prisma.seoPage.create({
-		data: {
-			...restData,
-			carousels: normalizeCarousels(carousels),
-			published: published ?? false,
-		},
-	});
-	revalidatePath("/admin/seo");
-	return { success: true };
+	try {
+		await prisma.seoPage.create({
+			data: {
+				...restData,
+				carousels: normalizeCarousels(carousels),
+				published: published ?? false,
+			},
+		});
+		revalidatePath("/admin/seo");
+		return { success: true };
+	} catch (error) {
+		// Prisma unique constraint error check
+		if (error instanceof Prisma.PrismaClientKnownRequestError) {
+			if (error.code === "P2002") {
+				return {
+					success: false,
+					error: "This slug is already in use. Please choose a different one.",
+				};
+			}
+		}
+
+		console.error("Error creating SEO page:", error);
+		return {
+			success: false,
+			error: "An unexpected error occurred while saving the page.",
+		};
+	}
 }
 
 export async function updateSeoPage(
@@ -62,26 +80,54 @@ export async function updateSeoPage(
 		published?: boolean;
 	}
 ) {
-	const { carousels, ...restData } = data;
+	const { carousels, published, ...restData } = data;
 
-	await prisma.seoPage.update({
-		where: { id },
-		data: {
-			...restData,
-			...(carousels !== undefined && {
+	try {
+		await prisma.seoPage.update({
+			where: { id },
+			data: {
+				...restData,
 				carousels: normalizeCarousels(carousels),
-			}),
-		},
-	});
-	revalidatePath("/admin/seo");
-	revalidatePath(`/${data.slug}`);
-	return { success: true };
+				published: published ?? false,
+			},
+		});
+
+		revalidatePath("/admin/seo");
+		revalidatePath(`/${data.slug}`);
+		return { success: true, error: null };
+	} catch (error) {
+		// P2002 error: Duplicate slug during update
+		if (error instanceof Prisma.PrismaClientKnownRequestError) {
+			if (error.code === "P2002") {
+				return {
+					success: false,
+					error: "This slug is already in use by another page.",
+				};
+			}
+		}
+
+		console.error("Error updating SEO page:", error);
+		return {
+			success: false,
+			error: "Failed to update the page. Please try again.",
+		};
+	}
 }
 
 export async function deleteSeoPage(id: string) {
-	await prisma.seoPage.delete({
-		where: { id },
-	});
-	revalidatePath("/admin/seo");
-	return { success: true };
+	try {
+		await prisma.seoPage.delete({
+			where: { id },
+		});
+
+		revalidatePath("/admin/seo");
+		return { success: true, error: null };
+	} catch (error) {
+		// P2025 error: Record to delete does not exist
+		console.error("Error deleting SEO page:", error);
+		return {
+			success: false,
+			error: "Could not delete the page. It might have been already removed.",
+		};
+	}
 }

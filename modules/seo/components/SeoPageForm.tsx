@@ -48,6 +48,7 @@ export interface CarouselsState {
 
 export function SeoPageForm({ initialData }: SeoPageFormProps) {
 	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState<string | null>(null);
 	const [content, setContent] = useState(initialData?.content || "");
 
 	const defaultCarouselConfig: CarouselConfig = {
@@ -175,6 +176,7 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 	async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
 		event.preventDefault();
 		setIsLoading(true);
+		setError(null);
 
 		const formData = new FormData(event.currentTarget);
 		const data = {
@@ -195,10 +197,19 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 
 			if (result?.success) {
 				window.location.href = "/admin/seo";
+			} else {
+				setError(result?.error || "Something went wrong");
+				setIsLoading(false);
 			}
 		} catch (error) {
 			console.error("Failed to save SEO page:", error);
+			setError("A network error occurred. Please try again.");
 			setIsLoading(false);
+		}finally{
+			 setIsLoading(false);
+			 setTimeout(() =>{
+				setError(null);
+			 }, 5000);
 		}
 	}
 
@@ -231,6 +242,7 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 						/>
 						<Label htmlFor="published">Published</Label>
 					</div>
+					
 					<Button type="submit" disabled={isLoading}>
 						{isLoading && (
 							<Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -307,6 +319,11 @@ export function SeoPageForm({ initialData }: SeoPageFormProps) {
 										required
 									/>
 								</div>
+								{error && (
+    <div className="bg-destructive/15 text-destructive text-sm p-3 rounded-md border border-destructive/20 mb-4">
+        {error}
+    </div>
+)}
 							</div>
 
 							<div className="space-y-2">
