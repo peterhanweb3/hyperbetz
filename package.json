@@ -11,7 +11,8 @@
 		"i18n:add": "node scripts/dictionary/generateTranslation.mjs",
 		"i18n:sync": "node scripts/sync-translations.js",
 		"i18n:sync-manual": "node scripts/sync-translations-manual.js",
-		"i18n:check": "node scripts/sync-translations-manual.js --dry-run"
+		"i18n:check": "node scripts/sync-translations-manual.js --dry-run",
+		"sync": "node sync-i18n.mjs"
 	},
 	"dependencies": {
 		"@dicebear/collection": "^9.2.4",
