@@ -1157,8 +1157,8 @@
 	},
 	"hero": {
 		"guest": {
-			"title": "Unisciti all'Azione",
-			"subtitle": "Registrati ora e ottieni un bonus di benvenuto esclusivo!",
+			"title": "Gioca subito al casinò crypto",
+			"subtitle": "Collega il tuo wallet e inizia a giocare in pochi secondi.\nPrelievi istantanei. Equità verificabile.",
 			"cta": "Registrati Ora"
 		},
 		"welcome": {
@@ -1208,8 +1208,8 @@
 			"slider2Badge": "In Tendenza",
 			"featuredGameLabel": "Gioco in Evidenza"
 		},
-		"ctaExploreGames": "Esplora Giochi",
-		"ctaJoinAffiliate": "Unisciti all'Affiliazione"
+		"ctaExploreGames": "Collega wallet",
+		"ctaJoinAffiliate": "Gioca ora"
 	},
 	"betting": {
 		"live": {

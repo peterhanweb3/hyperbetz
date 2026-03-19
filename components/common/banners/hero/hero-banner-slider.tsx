@@ -15,9 +15,11 @@ import { useTranslations } from "@/lib/locale-provider";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 
 // --- Enhanced Hero Slider Component ---
 export default function HeroSlider({ slides }: { slides: HeroSlideData[] }) {
+	const { setShowAuthFlow, primaryWallet } = useDynamicContext();
 	const tHero = useTranslations("hero");
 	const tGames = useTranslations("games");
 	const router = useRouter();
@@ -89,14 +91,14 @@ export default function HeroSlider({ slides }: { slides: HeroSlideData[] }) {
 										{/* Localize known slides via i18nKey, else fallback to provided title */}
 										{slide.i18nKey === "guest" && (
 											<>
-												<span className="text-destructive">
+												<span className="text-destructive text-2xl md:text-4xl lg:text-6xl">
 													{tHero("guest.title")}
 												</span>
 											</>
 										)}
 										{slide.i18nKey === "welcome" && (
 											<>
-												<span className="text-destructive">
+												<span className="text-destructive text-2xl md:text-4xl lg:text-6xl">
 													{tHero("welcome.title1")}
 												</span>
 												<br />
@@ -118,36 +120,37 @@ export default function HeroSlider({ slides }: { slides: HeroSlideData[] }) {
 												: slide.title)}
 									</h2>
 									<p
-										className="mt-3 text-lg text-white/90 drop-shadow-lg 
+										className="mt-3 max-w-md text-sm md:text-lg text-white/90 drop-shadow-lg 
                       animate-in slide-in-from-bottom-4 delay-150"
 									>
 										{slide.i18nKey
 											? tHero(`${slide.i18nKey}.subtitle`)
 											: slide.game
-											? tGames("byProvider", {
-													name: slide.game
-														.provider_name,
-											  })
-											: slide.subtitle}
+												? tGames("byProvider", {
+														name: slide.game
+															.provider_name,
+													})
+												: slide.subtitle}
 									</p>
 
 									{/* Two Buttons Container */}
-									<div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
-										<Button
-											size="lg"
-											className="shadow-2xl shadow-primary/20 
+									<div className="flex flex-col sm:flex-row gap-1 sm:gap-4 mt-6 justify-center">
+										{!primaryWallet && ( // Show "Connect Wallet" if not connected
+											<Button
+												size="lg"
+												className="shadow-2xl shadow-primary/20 
                           bg-primary/90 hover:bg-primary backdrop-blur-sm
                           border border-primary/20 hover:border-primary/40
                           transition-all duration-200 ease-out
                           hover:scale-105 hover:shadow-2xl hover:shadow-primary/30
                           animate-in slide-in-from-bottom-4"
-											onClick={() =>
-												router.push("/games")
-											}
-										>
-											{tHero("ctaExploreGames")}
-										</Button>
-
+												onClick={() =>
+													setShowAuthFlow(true)
+												}
+											>
+												{tHero("ctaExploreGames")}
+											</Button>
+										)}
 										<Button
 											size="lg"
 											variant="outline"
@@ -158,7 +161,7 @@ export default function HeroSlider({ slides }: { slides: HeroSlideData[] }) {
                           hover:scale-105 hover:shadow-2xl hover:shadow-destructive/30
                           animate-in slide-in-from-bottom-4 "
 											onClick={() =>
-												router.push("/affiliate")
+												router.push("/games")
 											}
 										>
 											{tHero("ctaJoinAffiliate")}

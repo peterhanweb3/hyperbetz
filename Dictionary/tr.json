@@ -1157,8 +1157,8 @@
 	},
 	"hero": {
 		"guest": {
-			"title": "Aksiyona Katıl",
-			"subtitle": "Şimdi kaydolun ve özel bir hoş geldin bonusu kazanın!",
+			"title": "Hemen kripto kumarhanede oyna",
+			"subtitle": "Cüzdanını bağla ve saniyeler içinde oynamaya başla.\nAnında çekim. Kanıtlanabilir adil.!",
 			"cta": "Şimdi Kaydol"
 		},
 		"welcome": {
@@ -1208,8 +1208,8 @@
 			"slider2Badge": "Trend Olan",
 			"featuredGameLabel": "Öne Çıkan Oyun"
 		},
-		"ctaExploreGames": "Oyunları Keşfet",
-		"ctaJoinAffiliate": "Ortaklığa Katıl"
+		"ctaExploreGames": "Cüzdan bağla",
+		"ctaJoinAffiliate": "Şimdi oyna"
 	},
 	"betting": {
 		"live": {

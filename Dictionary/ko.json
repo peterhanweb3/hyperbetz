@@ -1157,8 +1157,8 @@
 	},
 	"hero": {
 		"guest": {
-			"title": "액션에 참여하세요",
-			"subtitle": "지금 가입하고 독점 웰컴 보너스를 받으세요!",
+			"title": "즉시 크립토 카지노 플레이",
+			"subtitle": "지갑을 연결하고 몇 초 안에 라이브 게임을 시작하세요.\n즉시 출금. 공정성 보장.",
 			"cta": "지금 가입하기"
 		},
 		"welcome": {
@@ -1208,8 +1208,8 @@
 			"slider2Badge": "트렌딩",
 			"featuredGameLabel": "주목할 만한 게임"
 		},
-		"ctaExploreGames": "게임 탐색",
-		"ctaJoinAffiliate": "제휴 가입"
+		"ctaExploreGames": "지갑 연결",
+		"ctaJoinAffiliate": "지금 플레이"
 	},
 	"betting": {
 		"live": {

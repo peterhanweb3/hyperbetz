@@ -1157,8 +1157,8 @@
   },
   "hero": {
     "guest": {
-      "title": "アクションに参加",
-      "subtitle": "今すぐサインアップして限定ウェルカムボーナスをゲット！",
+      "title": "今すぐ暗号カジノをプレイ",
+      "subtitle": "ウォレットを接続して数秒でライブゲームを開始。\n即時出金。公平性保証。",
       "cta": "今すぐ登録"
     },
     "welcome": {
@@ -1208,8 +1208,8 @@
       "slider2Badge": "トレンド",
       "featuredGameLabel": "注目のゲーム"
     },
-    "ctaExploreGames": "ゲームを探索",
-    "ctaJoinAffiliate": "アフィリエイトに参加"
+    "ctaExploreGames": "ウォレット接続",
+    "ctaJoinAffiliate": "今すぐプレイ"
   },
   "betting": {
     "live": {

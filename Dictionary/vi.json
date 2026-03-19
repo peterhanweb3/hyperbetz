@@ -1157,8 +1157,8 @@
 	},
 	"hero": {
 		"guest": {
-			"title": "Tham gia Hành động",
-			"subtitle": "Đăng ký ngay và nhận phần thưởng chào mừng độc quyền!",
+			"title": "Chơi casino crypto ngay lập tức",
+			"subtitle": "Kết nối ví và bắt đầu chơi trong vài giây.\nRút tiền ngay lập tức. Công bằng có thể kiểm chứng!",
 			"cta": "Đăng ký Ngay"
 		},
 		"welcome": {
@@ -1208,8 +1208,8 @@
 			"slider2Badge": "Thịnh hành",
 			"featuredGameLabel": "Trò chơi Nổi bật"
 		},
-		"ctaExploreGames": "Khám phá Trò chơi",
-		"ctaJoinAffiliate": "Tham gia Đại lý"
+		"ctaExploreGames": "Kết nối ví",
+		"ctaJoinAffiliate": "Chơi ngay"
 	},
 	"betting": {
 		"live": {

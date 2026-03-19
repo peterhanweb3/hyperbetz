@@ -1157,8 +1157,8 @@
 	},
 	"hero": {
 		"guest": {
-			"title": "Gå med i spelet",
-			"subtitle": "Registrera dig nu och få en exklusiv välkomstbonus!",
+			"title": "Spela på kryptocasino direkt",
+			"subtitle": "Anslut din plånbok och börja spela på sekunder.\nOmedelbara uttag. Bevisad rättvisa.",
 			"cta": "Registrera dig nu"
 		},
 		"welcome": {
@@ -1208,8 +1208,8 @@
 			"slider2Badge": "Trendar",
 			"featuredGameLabel": "Utvalt spel"
 		},
-		"ctaExploreGames": "Utforska spel",
-		"ctaJoinAffiliate": "Gå med som Partner"
+		"ctaExploreGames": "Anslut plånbok",
+		"ctaJoinAffiliate": "Spela nu"
 	},
 	"betting": {
 		"live": {

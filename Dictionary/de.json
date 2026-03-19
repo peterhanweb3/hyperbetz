@@ -1157,8 +1157,8 @@
 	},
 	"hero": {
 		"guest": {
-			"title": "Treten Sie der Action bei",
-			"subtitle": "Melden Sie sich jetzt an und erhalten Sie einen exklusiven Willkommensbonus!",
+			"title": "Spiele sofort im Krypto-Casino",
+			"subtitle": "Verbinde deine Wallet und starte in Sekunden mit Live-Spielen.\nSofortige Auszahlungen. Nachweislich fair.",
 			"cta": "Jetzt registrieren"
 		},
 		"welcome": {
@@ -1208,8 +1208,8 @@
 			"slider2Badge": "Trending",
 			"featuredGameLabel": "Vorgestelltes Spiel"
 		},
-		"ctaExploreGames": "Spiele erkunden",
-		"ctaJoinAffiliate": "Partner werden"
+		"ctaExploreGames": "Wallet verbinden",
+		"ctaJoinAffiliate": "Jetzt spielen"
 	},
 	"betting": {
 		"live": {

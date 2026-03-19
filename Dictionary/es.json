@@ -1157,8 +1157,8 @@
 	},
 	"hero": {
 		"guest": {
-			"title": "Únete a la Acción",
-			"subtitle": "¡Regístrate ahora y obtén un bono de bienvenida exclusivo!",
+			"title": "Juega al casino cripto al instante",
+			"subtitle": "Conecta tu billetera y comienza a jugar en segundos.\nRetiros instantáneos. Juego justo verificable.",
 			"cta": "Regístrate Ahora"
 		},
 		"welcome": {
@@ -1208,8 +1208,8 @@
 			"slider2Badge": "Tendencia",
 			"featuredGameLabel": "Juego Destacado"
 		},
-		"ctaExploreGames": "Explorar Juegos",
-		"ctaJoinAffiliate": "Unirse a Afiliados"
+		"ctaExploreGames": "Conectar billetera",
+		"ctaJoinAffiliate": "Jugar ahora"
 	},
 	"betting": {
 		"live": {

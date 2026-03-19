@@ -1157,8 +1157,8 @@
 	},
 	"hero": {
 		"guest": {
-			"title": "Join the Action",
-			"subtitle": "Sign up now and get an exclusive welcome bonus!",
+			"title": "Play Crypto Casino Instantly",
+			"subtitle": "Connect your wallet and start playing live games in seconds.\nInstant withdrawals. Provably fair.",
 			"cta": "Register Now"
 		},
 		"welcome": {
@@ -1208,8 +1208,8 @@
 			"slider2Badge": "Trending",
 			"featuredGameLabel": "Featured Game"
 		},
-		"ctaExploreGames": "Explore Games",
-		"ctaJoinAffiliate": "Join Affiliate"
+		"ctaExploreGames": "Connect Wallet",
+		"ctaJoinAffiliate": "Play Now"
 	},
 	"betting": {
 		"live": {

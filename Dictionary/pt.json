@@ -1157,8 +1157,8 @@
 	},
 	"hero": {
 		"guest": {
-			"title": "Junte-se à Ação",
-			"subtitle": "Registre-se agora e receba um bônus de boas-vindas exclusivo!",
+			"title": "Jogue no cassino cripto instantaneamente",
+			"subtitle": "Conecte sua carteira e comece a jogar em segundos.\nSaques instantâneos. Comprovadamente justo!",
 			"cta": "Registrar Agora"
 		},
 		"welcome": {
@@ -1208,8 +1208,8 @@
 			"slider2Badge": "Em Alta",
 			"featuredGameLabel": "Jogo em Destaque"
 		},
-		"ctaExploreGames": "Explorar Jogos",
-		"ctaJoinAffiliate": "Juntar-se ao Afiliado"
+		"ctaExploreGames": "Conectar carteira",
+		"ctaJoinAffiliate": "Jogar agora"
 	},
 	"betting": {
 		"live": {

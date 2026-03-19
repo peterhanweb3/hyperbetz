@@ -1157,8 +1157,8 @@
 	},
 	"hero": {
 		"guest": {
-			"title": "Rejoignez l'Action",
-			"subtitle": "Inscrivez-vous maintenant et obtenez un bonus de bienvenue exclusif !",
+			"title": "Jouez au casino crypto instantanément",
+			"subtitle": "Connectez votre portefeuille et commencez à jouer en quelques secondes.\nRetraits instantanés. Équité prouvée.",
 			"cta": "S'inscrire Maintenant"
 		},
 		"welcome": {
@@ -1208,8 +1208,8 @@
 			"slider2Badge": "Tendance",
 			"featuredGameLabel": "Jeu en Vedette"
 		},
-		"ctaExploreGames": "Explorer les Jeux",
-		"ctaJoinAffiliate": "Rejoindre l'Affiliation"
+		"ctaExploreGames": "Connecter le portefeuille",
+		"ctaJoinAffiliate": "Jouer maintenant"
 	},
 	"betting": {
 		"live": {

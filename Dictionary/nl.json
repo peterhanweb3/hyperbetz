@@ -1157,8 +1157,8 @@
 	},
 	"hero": {
 		"guest": {
-			"title": "Doe mee met de Actie",
-			"subtitle": "Meld je nu aan en ontvang een exclusieve welkomstbonus!",
+			"title": "Speel direct in het crypto casino",
+			"subtitle": "Verbind je wallet en begin binnen seconden met spelen.\nDirecte uitbetalingen. Aantoonbaar eerlijk.!",
 			"cta": "Registreer Nu"
 		},
 		"welcome": {
@@ -1208,8 +1208,8 @@
 			"slider2Badge": "Trending",
 			"featuredGameLabel": "Uitgelicht Spel"
 		},
-		"ctaExploreGames": "Verken Spellen",
-		"ctaJoinAffiliate": "Word Affiliate"
+		"ctaExploreGames": "Wallet verbinden",
+		"ctaJoinAffiliate": "Speel nu"
 	},
 	"betting": {
 		"live": {

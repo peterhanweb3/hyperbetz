@@ -1157,8 +1157,8 @@
 	},
 	"hero": {
 		"guest": {
-			"title": "Dołącz do akcji",
-			"subtitle": "Zarejestruj się teraz i odbierz ekskluzywny bonus powitalny!",
+			"title": "Graj w kasynie krypto natychmiast",
+			"subtitle": "Połącz portfel i zacznij grać w kilka sekund.\nNatychmiastowe wypłaty. Uczciwość potwierdzona!",
 			"cta": "Zarejestruj się teraz"
 		},
 		"welcome": {
@@ -1208,8 +1208,8 @@
 			"slider2Badge": "Na czasie",
 			"featuredGameLabel": "Wyróżniona gra"
 		},
-		"ctaExploreGames": "Odkryj gry",
-		"ctaJoinAffiliate": "Dołącz do programu partnerskiego"
+		"ctaExploreGames": "Połącz portfel",
+		"ctaJoinAffiliate": "Graj teraz"
 	},
 	"betting": {
 		"live": {

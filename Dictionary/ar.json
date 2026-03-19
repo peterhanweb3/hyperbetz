@@ -1157,8 +1157,8 @@
 	},
 	"hero": {
 		"guest": {
-			"title": "انضم إلى الإثارة",
-			"subtitle": "سجل الآن واحصل على مكافأة ترحيبية حصرية!",
+			"title": "العب كازينو العملات الرقمية فورًا",
+			"subtitle": "اربط محفظتك وابدأ اللعب في ألعاب مباشرة خلال ثوانٍ.\nسحوبات فورية. نزاهة مثبتة.",
 			"cta": "سجل الآن"
 		},
 		"welcome": {
@@ -1208,8 +1208,8 @@
 			"slider2Badge": "رائج",
 			"featuredGameLabel": "لعبة مميزة"
 		},
-		"ctaExploreGames": "استكشف الألعاب",
-		"ctaJoinAffiliate": "انضم للشركاء"
+		"ctaExploreGames": "ربط المحفظة",
+		"ctaJoinAffiliate": "العب الآن"
 	},
 	"betting": {
 		"live": {
